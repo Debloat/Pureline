@@ -1,0 +1,221 @@
+quest forked_road begin
+	state start begin
+	function enter_level (vnum1,vnum2)
+		lv_range={}
+		lv_range[1] ={15,39}
+		lv_range[2] ={40,64}
+		lv_range[3] ={65,84}
+		lv_range[4] ={85,105}
+		return lv_range [vnum1][vnum2]
+	end 
+		when login with forked.isforkedmapindex( pc.get_map_index() ) == true begin
+			if game.get_event_flag("threeway_war") == 0 then
+				warp_to_village()
+			else
+				local noticeShow = false
+
+				if forked.is_registered_user() == false then
+					forked.register_user()
+					forked.setdeadcount()
+					pc.remove_item(50089)
+					noticeShow = true
+				end
+
+				if forked.getdeadcount() <= 0 then
+					warp_to_village()
+				elseif true == noticeShow then
+					if forked.issungzimapindex( pc.get_map_index() ) == true then
+						say( locale.forked_condition2 )
+						say( locale.NOTICE_COLOR..locale.forked_rule_sungzi )
+					else
+						say( locale.forked_condition )
+						say( locale.NOTICE_COLOR..locale.forked_rule )
+					end
+				end
+			end
+		end
+
+		when 11001.chat.locale.forked_man_chat or 11003.chat.locale.forked_man_chat or 11005.chat.locale.forked_man_chat begin
+			if game.get_event_flag("threeway_war") == 0 then
+				say(locale.forked_man_say_cant)
+			else
+				say(locale.forked_man_say)
+
+				local s = select(locale.forked_enter, locale.forked_no_enter)
+				local min = game.get_event_flag("threeway_war_level_min")
+				local max = game.get_event_flag("threeway_war_level_max")
+
+				if s == 1 then
+					if pc.level < min or pc.level > max then
+						say_title(gameforge.forked_road._10_sayTitle)
+						say_reward(string.format(gameforge.forked_road._20_sayReward, min, max))
+						return
+					end
+
+					local canJoin = false
+
+					if (pc.getempire() == 1 and game.get_event_flag("threeway_war_open_gate1" ) != 0) or
+						(pc.getempire() == 2 and game.get_event_flag("threeway_war_open_gate2" ) != 0) or
+						(pc.getempire() == 3 and game.get_event_flag("threeway_war_open_gate3" ) != 0) then
+						canJoin = true
+					else
+						say( locale.forked_man_say_you_cant2 )
+					end
+
+					if true == canJoin then
+						pc.warp( forked.get_pass_start_pos() )
+					else
+						if pc.getempire() == 1 then
+							say_title(gameforge.buy_fishrod._210_sayTitle)
+							say(gameforge.forked_road._30_say)
+						elseif pc.getempire() == 2 then
+							say_title(gameforge.buy_fishrod._210_sayTitle)
+							say(gameforge.forked_road._40_say)
+						elseif pc.getempire() == 3 then
+							say_title(gameforge.buy_fishrod._210_sayTitle)
+							say(gameforge.forked_road._50_say)
+						else
+							say(locale.forked_man_say_you_cant2 )
+						end
+					end	
+				end
+			end
+		end
+
+		when 1306.kill or 1308.kill or 1309.kill or 1310.kill with forked.isforkedmapindex(pc.get_map_index()) == true begin
+			game.drop_item(50089, 1)
+
+            if pc.getempire() == 1 then
+                say_title(gameforge.buy_fishrod._210_sayTitle)
+                say(gameforge.forked_road._30_say)
+            elseif pc.getempire() == 2 then
+                say_title(gameforge.buy_fishrod._210_sayTitle)
+                say(gameforge.forked_road._40_say)
+            elseif pc.getempire() == 3 then
+                say_title(gameforge.buy_fishrod._210_sayTitle)
+                say(gameforge.forked_road._50_say)
+            end
+		end  
+
+		when 1902.kill or 1904.kill or 1905.kill or 1906.kill with forked.issungzimapindex(pc.get_map_index()) == true begin
+			if 0 == game.get_event_flag("threeway_war") then
+				return
+			end
+
+			local remainBossCount = game.get_event_flag("threeway_war_boss_count") - 1
+
+			game.set_event_flag("threeway_war_boss_count", remainBossCount)
+
+			if remainBossCount > 1 then
+				return
+			end
+
+			game.set_event_flag("threeway_war", 0)
+
+			local nation = { "Shinsoo","Chunjo","Jinno" }
+			notice_all(string.format(gameforge.forked_road._70_notice_all, nation[pc.getempire()] ))
+
+			warp_all_to_village(forked.getsungzimapindex(), 30)
+			warp_all_to_village(forked.getpassmapindexbyempire(1), 30)
+			warp_all_to_village(forked.getpassmapindexbyempire(2), 30)
+			warp_all_to_village(forked.getpassmapindexbyempire(3), 30)
+		end
+
+		when 20081.take with item.vnum == 50089 begin
+			say_in_map(pc.get_map_index(), locale.forked_open_gate)
+			npc.purge()
+			item.remove()
+
+			forked.initkillcount()
+
+			if pc.getempire() == 1 then
+				game.set_event_flag("threeway_war_open_gate1", 0)
+                notice_multiline(gameforge.forked_road._80_notice_all,notice_all)
+			elseif pc.getempire() == 2 then
+				game.set_event_flag("threeway_war_open_gate2", 0)
+				notice_multiline(gameforge.forked_road._90_notice_all,notice_all)
+			elseif pc.getempire() == 3 then
+				game.set_event_flag("threeway_war_open_gate3", 0)
+				notice_multiline(gameforge.forked_road._100_notice_all,notice_all)
+			else
+				say(locale.forked_man_say_you_cant2 )
+			end
+
+			local x, y = forked.get_sungzi_start_pos()
+			forked.warp_all_in_map( pc.get_map_index(), forked.getsungzimapindex(), x, y, 10)
+		end
+
+		when 11001.chat.gameforge.forked_road._110_npcChat or 11003.chat.gameforge.forked_road._110_npcChat or 11005.chat.gameforge.forked_road._110_npcChat with pc.get_gm_level()== 5 begin
+			local s = select(gameforge.forked_road._120_select, gameforge.forked_road._130_select, gameforge.locale.cancel)
+
+			if s == 1 then
+				say("1> min "..forked_road.enter_level(1,1).." max "..forked_road.enter_level(1,2))
+				say("2> min "..forked_road.enter_level(2,1).." max "..forked_road.enter_level(2,2))
+				say("3> min "..forked_road.enter_level(3,1).." max "..forked_road.enter_level(3,2))
+				say("4> min "..forked_road.enter_level(4,1).." max "..forked_road.enter_level(4,2))
+				say("input number")
+				local choice = input_number("select  player's level  who will join ")
+                
+                if choice > 4 or choice == 0 then
+                    say("Invalid number only 1 - 4 are allowed")
+                    return
+                end
+                
+                say(string.format(gameforge.forked_road._170_say, forked_road.enter_level(choice,1).." max level: "..forked_road.enter_level(choice,2)))
+				local t = select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
+
+				if 1 == t then
+					game.set_event_flag("threeway_war_choice", choice)
+					game.set_event_flag("threeway_war_level_min",forked_road.enter_level(choice,1))
+					game.set_event_flag("threeway_war_level_max",forked_road.enter_level(choice,2))
+
+					forked.purge_all_monsters()
+					forked.initforked()
+
+					game.set_event_flag("threeway_war", 1)
+
+					--
+					game.set_event_flag("threeway_war_dead_count", 25)
+
+					if true == is_test_server() then
+						game.set_event_flag("threeway_war_kill_count", 5)
+					else
+						game.set_event_flag("threeway_war_kill_count", 250)
+					end
+
+					game.set_event_flag("threeway_war_boss_count", 5)
+
+					game.set_event_flag("threeway_war_open_gate1", 1)
+					game.set_event_flag("threeway_war_open_gate2", 1)
+					game.set_event_flag("threeway_war_open_gate3", 1)
+
+					say("Event Started !!")
+					say("")
+
+					wait()
+
+					--
+					regen_in_map( forked.getpassmapindexbyempire(1), forked.getpasspathbyempire(1) .."regen00_"..choice..".txt" )
+					regen_in_map( forked.getpassmapindexbyempire(1), forked.getpasspathbyempire(1) .."npc00.txt" )
+					regen_in_map( forked.getpassmapindexbyempire(2), forked.getpasspathbyempire(2) .."regen00_"..choice..".txt" )
+					regen_in_map( forked.getpassmapindexbyempire(2), forked.getpasspathbyempire(2) .."npc00.txt" )
+					regen_in_map( forked.getpassmapindexbyempire(3), forked.getpasspathbyempire(3) .."regen00_"..choice..".txt" )
+					regen_in_map( forked.getpassmapindexbyempire(3), forked.getpasspathbyempire(3) .."npc00.txt" )
+
+					notice_multiline(gameforge.forked_road._180_notice_all,notice_all)
+				end
+			elseif 2 == s then
+				game.set_event_flag("threeway_war", 0)
+
+				notice_multiline(gameforge.forked_road._190_notice_all,notice_all)
+
+				forked.purge_all_monsters()
+
+				warp_all_to_village(forked.getsungzimapindex(), 1)
+				warp_all_to_village(forked.getpassmapindexbyempire(1), 1)
+				warp_all_to_village(forked.getpassmapindexbyempire(2), 1)
+				warp_all_to_village(forked.getpassmapindexbyempire(3), 1)
+			end
+		end
+	end
+end

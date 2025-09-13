@@ -1,0 +1,25 @@
+quest main_quest_mgr begin
+    state start begin
+	when 20354.chat."GM: From Main 1" with pc.is_gm() begin
+	    set_quest_state("main_quest_lv1", "gotoinfomation")
+	    set_quest_state("main_quest_lv2", "start")
+	    set_quest_state("main_quest_lv3", "start")
+	    set_quest_state("main_quest_lv6", "start")
+	end
+	when 20354.chat."GM: From Main 2" with pc.is_gm() begin
+	    set_quest_state("main_quest_lv2", "gototeacher")
+	    set_quest_state("main_quest_lv3", "start")
+	    set_quest_state("main_quest_lv6", "start")
+	end
+	when 20354.chat."GM: From Main 3" with pc.is_gm() begin
+	    set_quest_state("main_quest_lv3", "gototeacher")
+	    set_quest_state("main_quest_lv6", "start")
+	end
+	when 20354.chat."GM: From Main 6" with pc.is_gm() begin
+	    set_quest_state("main_quest_lv6", "gototeacher")
+	end
+	when 20354.chat."GM: Searching for Square Guard" with pc.is_gm() begin
+	    set_quest_state("find_squareguard", "find")
+	end
+    end
+end

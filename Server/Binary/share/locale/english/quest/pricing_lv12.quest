@@ -1,0 +1,27 @@
+quest pricing_lv12 begin
+	state start begin
+		when login or levelup with pc.get_level() == 12  begin -- Quest for level 12
+			if pc_has_even_account_id() then
+				set_state("mailorder")
+			else
+				set_state(__COMPLETE__)
+			end
+		end
+	end
+	
+	state mailorder begin
+		when login or enter begin
+				send_letter(gameforge.pricing_lv12._10_send_letter)
+		end
+		when button or info begin
+			say_title(gameforge.pricing_lv12._20_say_title)
+			say(gameforge.pricing_lv12._30_say)
+		wait()
+			say(gameforge.pricing_lv12._40_say)
+			say_reward(gameforge.pricing_lv12._50_say_reward)
+			set_state(__COMPLETE__)
+		end
+	end
+	state __COMPLETE__ begin
+	end
+end

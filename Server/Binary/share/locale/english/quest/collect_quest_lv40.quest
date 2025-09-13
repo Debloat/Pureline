@@ -1,0 +1,220 @@
+quest collect_quest_lv40  begin
+	state start begin
+	end
+	state run begin
+		when login or levelup with pc.level >= 40 begin
+			set_state(information)
+		end
+	end
+
+	state information begin
+		when letter begin
+			local v = find_npc_by_vnum(20084)
+			if v != 0 then
+				target.vid("__TARGET__", v, gameforge.collect_herb_lv10._150_sayTitle)
+			end
+			send_letter(gameforge.collect_quest_lv40._10_sendLetter)
+		end
+
+		when button or info begin
+			say_title(gameforge.collect_quest_lv40._20_sayTitle)
+			say(gameforge.collect_quest_lv40._30_say)
+		end
+
+		when __TARGET__.target.click or	20084.chat.gameforge.collect_quest_lv40._40_npcChat begin
+			target.delete("__TARGET__")
+			say_title(gameforge.collect_herb_lv10._50_sayTitle)
+			say(gameforge.collect_quest_lv40._50_say)
+			wait()
+			say_title(gameforge.collect_herb_lv10._50_sayTitle)
+			say(gameforge.collect_quest_lv40._60_say)
+			wait()
+			say_title(gameforge.collect_herb_lv10._50_sayTitle)
+			say(gameforge.collect_quest_lv40._70_say)
+			set_state(go_to_disciple)
+			pc.setqf("duration",0)  -- Die Versuchszeit
+			pc.setqf("collect_count",0)--Die Zahl der gesammelten Artikel
+			pc.setqf("drink_drug",0) --Wenn man das Verwirrungsswasser trinkt, 1
+		end
+	end
+
+	state go_to_disciple begin
+		when letter begin
+			send_letter(gameforge.collect_quest_lv30._70_sendLetter)
+
+		end
+		when button or info begin
+			say_title(gameforge.collect_quest_lv40._80_sayTitle)
+			say(gameforge.collect_quest_lv40._90_say)
+			say_item_vnum(30047)
+			say_reward(string.format(gameforge.collect_quest_lv40._100_sayReward, pc.getqf("collect_count")))
+					end
+
+		when 71035.use begin --Das Verwirrungswasser
+			if get_time() < pc.getqf("duration") then
+				say(gameforge.collect_quest_lv40._110_say)
+				return
+			end
+			if pc.getqf("drink_drug")==1 then
+				say(gameforge.collect_quest_lv40._120_say)
+				return
+			end
+			if pc.count_item(30047)==0 then
+				say_title(gameforge.collect_herb_lv10._50_sayTitle)
+				say(gameforge.collect_quest_lv40._130_say)
+				return
+			end
+
+			pc.remove_item(71035, 1)
+			pc.setqf("drink_drug",1)
+		end
+
+
+
+
+		when 20084.chat.gameforge.collect_quest_lv40._140_npcChat with pc.count_item(30047) >0   begin
+			if get_time() > pc.getqf("duration") then
+				if  pc.count_item(30047) >0 then
+					say_title(gameforge.collect_herb_lv10._50_sayTitle)
+					say(gameforge.collect_quest_lv40._150_say)
+					pc.remove_item(30047, 1)
+					pc.setqf("duration",get_time()+60*60*22)--------------22Stunde
+					wait()
+
+					local pass_percent
+					if pc.getqf("drink_drug")==0 then
+						pass_percent=60
+					else
+						pass_percent=90
+					end
+
+					local s= number(1,100)
+					if s<= pass_percent  then
+						if pc.getqf("collect_count")< 14 then     --nicht mehr als 15
+							local index =pc.getqf("collect_count")+1
+							pc.setqf("collect_count",index)     --Da du eins besorgt hast, mache ich +1
+							say_title(gameforge.collect_herb_lv10._50_sayTitle)
+							say(string.format(gameforge.collect_quest_lv40._160_say, 15-pc.getqf("collect_count")))
+							pc.setqf("drink_drug",0)	 --Anfang mit dem Wunderwasser
+							return
+						end
+						say_title(gameforge.collect_herb_lv10._50_sayTitle)
+						say(gameforge.collect_quest_lv40._170_say)
+						pc.setqf("collect_count",0)
+						pc.setqf("drink_drug",0)
+						pc.setqf("duration",0)
+						set_state(key_item)
+						return
+					else
+						say_title(gameforge.collect_herb_lv10._50_sayTitle)
+						say(gameforge.collect_quest_lv40._180_say)
+						pc.setqf("drink_drug",0)	 --Anfang mit dem Geheimwasser
+						return
+					end
+				else
+					say_title(gameforge.collect_herb_lv10._50_sayTitle)
+					--say(string.format(gameforge.collect_quest_lv40._190_say, item_name(30080)))
+					say(gameforge.collect_quest_lv40._190_say)
+					return
+				end
+			else
+				say_title(gameforge.collect_herb_lv10._50_sayTitle)
+				say(gameforge.collect_quest_lv40._200_say)
+				return
+			end
+
+		end
+	end
+
+
+	state key_item begin
+		when letter begin
+			send_letter(gameforge.collect_quest_lv30._210_sendLetter)
+
+			if pc.count_item(30221)>0 then
+				local v = find_npc_by_vnum(20084)
+				if v != 0 then
+					target.vid("__TARGET__", v, gameforge.collect_quest_lv40._210_targetVid)
+				end
+			end
+
+		end
+		when button or info begin
+			if pc.count_item(30221) >0 then
+				say_title(gameforge.collect_quest_lv40._220_sayTitle)
+				say(gameforge.collect_quest_lv40._230_say)
+				return
+			end
+
+			say_title(gameforge.collect_quest_lv40._240_sayTitle)
+			say(gameforge.collect_quest_lv40._250_say)
+			say_item_vnum(30221)----------Der Seelenstein der geheimen Sekte
+			say(gameforge.collect_quest_lv40._260_say)
+		end
+
+
+
+
+		when 731.kill or 732.kill or 733.kill or 734.kill or 735.kill or 736.kill or 737.kill or 701.kill or 702.kill or 703.kill or 704.kill or 705.kill or 706.kill or 707.kill  begin
+			local s = number(1, 500)
+			if s == 1 and pc.count_item(30221)==0 then
+				pc.give_item2(30221, 1)
+				send_letter(gameforge.collect_quest_lv40._270_sendLetter)
+			end
+		end
+
+
+		when __TARGET__.target.click  or	20084.chat.gameforge.collect_quest_lv40._280_npcChat with pc.count_item(30221) > 0  begin
+			target.delete("__TARGET__")
+			if pc.count_item(30221) > 0 then 
+				say_title(gameforge.collect_herb_lv10._50_sayTitle)
+				say(gameforge.collect_quest_lv40._290_say)
+				pc.remove_item(30221,1)
+				set_state(__reward)
+			else
+				say_title(gameforge.collect_herb_lv10._50_sayTitle)
+				--say(string.format(gameforge.collect_quest_lv30._290_say, item_name(30221)))
+				 say(gameforge.collect_quest_lv40._295_say)
+				return
+			end
+		end
+
+	end
+
+	state __reward begin
+		when letter begin
+			send_letter(gameforge.collect_quest_lv40._300_sendLetter)
+
+			local v = find_npc_by_vnum(20018)
+			if v != 0 then
+				target.vid("__TARGET__", v, gameforge.collect_quest_lv30._310_targetVid)
+			end
+
+		end
+		when button or info begin
+			say_title(gameforge.collect_quest_lv40._310_sayTitle)
+			say(gameforge.collect_quest_lv40._320_say)
+		end
+
+		when __TARGET__.target.click  or	20018.chat.gameforge.collect_quest_lv40._330_npcChat  begin
+		    target.delete("__TARGET__")
+			say_title(gameforge.collect_quest_lv30._340_sayTitle)
+			say(gameforge.collect_quest_lv40._340_say)
+			say_reward(gameforge.collect_quest_lv40._350_sayReward)
+
+			affect.add_collect(apply.ATT_SPEED,5,60*60*24*365*60) --60Jahre
+			pc.give_item2(50110)
+			clear_letter()
+			set_quest_state("collect_quest_lv50", "run")
+			set_state(__complete)
+		end
+
+	end
+
+
+	state __complete begin
+	end
+end
+
+
+

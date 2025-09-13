@@ -1,0 +1,261 @@
+quest new_quest_premium_lv4 begin
+-- General notes for changes on 08Oct09, Arne
+-- Fixes according to mantis 0028608
+-- Unified the quest title to gameforge.new_quest_premium_lv4._40_qSetTitle, setting it as title for all dialogue boxes and chat triggers
+-- Added several say_title elements to keep text coloring more consistent
+-- Added send_letters. Important: Only when the send_letter is issued BEFORE the q.set_title will it allow to set unified quest title with varying letters as send_letter seems to overwrite q.set_title
+-- Changed variable scope, adding new_quest_premium_lv4_* prefix -> ususal fix for global variable scope issue
+-- made some loca edits according to mantis 0033359
+    state start begin
+        when login or levelup with pc.get_level() >= 4 begin
+            set_state(information)
+        end
+    end
+    -------------- the trade wants to know, why her lover doesn't visit her anymore ----	--------------------------------------------------
+    state information begin
+        when login or enter begin
+            local v=find_npc_by_vnum(9003) -- Gemischtwarenhändlerin
+            if 0==v then
+            else
+                target.vid("__TARGET__", v, gameforge.new_quest_premium_lv4._10_targetVid)
+            end
+        end
+        when __TARGET__.target.click begin
+            target.delete("__TARGET__")
+            say_title(gameforge.new_quest_premium_lv4._40_qSetTitle) -- yellow text headline
+            say(gameforge.new_quest_premium_lv4._30_say )
+            set_state(ask_trader)
+        end
+    end
+    -------------- player asks the weapon_trader why he doesn't visit the trader anymore, and gets the quest to farm items for the weapon_trader ------------------------------------------------------
+    state ask_trader begin
+        when enter or login begin
+            --send_letter(gameforge.new_quest_premium_lv4._35_qSetTitle)--added08Oct09by Arne, Reason: no letter
+            send_letter(gameforge.new_quest_premium_lv4._40_qSetTitle)--added08Oct09by Arne, Reason: no letter
+            pc.setqf("amountYang", 500) 
+            pc.setqf("amountXp", 1000)
+            pc.setqf("neededAmountDrop1", 2)
+            pc.setqf("neededAmountDrop2", 1)
+            pc.setqf("dropProb1", 40)
+            pc.setqf("mob1",104) -- Blau-Wolf
+            pc.setqf("drop1", 50705) -- lilac
+            pc.setqf("drop2", 30177) -- Vielfarbtrank  
+            pc.setqf("new_quest_premium_lv4_collect_count_1", 0) --Arne08Oct09, needed initializing
+            q.start()
+            q.set_title(gameforge.new_quest_premium_lv4._40_qSetTitle)
+            local v=find_npc_by_vnum(9001) -- Waffenhändler
+            if 0==v then
+            else
+                target.vid("__TARGET2__", v, gameforge.new_quest_premium_lv4._50_targetVid)
+            end
+        end
+        when __TARGET2__.target.click begin
+            target.delete("__TARGET2__")
+            say_title(gameforge.new_quest_premium_lv4._40_qSetTitle) -- yellow text headline
+            say(gameforge.new_quest_premium_lv4._70_say)
+        wait()
+            say(gameforge.new_quest_premium_lv4._80_say)
+        wait()
+            say(gameforge.new_quest_premium_lv4._90_say)
+            say_reward(string.format("%s x", pc.getqf("neededAmountDrop1")))
+            say_item_vnum(pc.getqf("drop1")) -- icon of item
+            say_reward(gameforge.new_quest_premium_lv4._100_say_reward)
+            say(mob_name(pc.getqf("mob1")))
+            set_state(hunting)
+        end
+        when info or button begin
+            say_title(gameforge.new_quest_premium_lv4._40_qSetTitle)
+            say(gameforge.new_quest_premium_lv4._110_say)
+        end
+    end
+    -------------- the player has to kill alpha wolves to get lilac ------------------------------------------------------
+    state hunting begin
+        when enter begin
+            --send_letter(gameforge.new_quest_premium_lv4._45_qSetTitle) --added08Oct09by Arne, Reason: no letter
+            send_letter(gameforge.new_quest_premium_lv4._40_qSetTitle) --added08Oct09by Arne, Reason: no letter
+            q.start()
+            q.set_title(gameforge.new_quest_premium_lv4._40_qSetTitle)
+        end
+        -------------- Flieder ------------------------------------------------------
+        -- kill a 104#blue wolf
+        when 104.kill begin
+            if pc.getqf("new_quest_premium_lv4_collect_count_1") < pc.getqf("neededAmountDrop1") then
+                if math.random(1,100) <= pc.getqf("dropProb1") then -- probability if s.th. drops
+                    drop = true
+                    local index =pc.getqf("new_quest_premium_lv4_collect_count_1") + 1
+                    pc.setqf("new_quest_premium_lv4_collect_count_1",index) --you got one, so you would get +1
+                    pc.give_item2(pc.getqf("drop1"))
+                    notice_multiline(gameforge.new_quest_premium_lv4._130_notice, notice) --changed 08Oct09 Arne, Reason: mantis 0033359
+                    if pc.getqf("neededAmountDrop1") ==  pc.getqf("new_quest_premium_lv4_collect_count_1")  then
+                        notice_multiline(gameforge.new_quest_premium_lv4._140_notice, notice)
+                        q.done() --added 08Oct09, Reason: solve qest in proper state 
+                        set_state(backto_trader)
+                    end		
+                else
+                    notice_multiline(gameforge.new_quest_premium_lv4._150_notice, notice)--changed 08Oct09 Arne, Reason: mantis 0033359
+                end
+            end
+        end
+        when info or button begin
+            if pc.getqf("neededAmountDrop1") !=  pc.getqf("new_quest_premium_lv4_collect_count_1") then
+                say_title(gameforge.new_quest_premium_lv4._40_qSetTitle)
+                say(string.format(gameforge.new_quest_premium_lv4._160_say, pc.getqf("neededAmountDrop1")-pc.getqf("new_quest_premium_lv4_collect_count_1"))) --changed 08Oct09 Arne, Reason: mantis 0033359
+                say_reward(gameforge.new_quest_premium_lv4._100_say_reward)
+                say(mob_name(pc.getqf("mob1")))
+            else
+                say_title(gameforge.new_quest_premium_lv4._40_qSetTitle)
+                say(gameforge.new_quest_premium_lv4._140_notice)
+            end
+        end
+        when 9001.chat.gameforge.new_quest_premium_lv4._40_qSetTitle begin --was gameforge.new_quest_premium_lv4._350_npcChat
+            say_title(gameforge.new_quest_premium_lv4._40_qSetTitle)
+            say(gameforge.new_quest_premium_lv4._170_say)
+        end
+        
+        when 9001.chat.gameforge.new_quest_premium_lv4._100_npcChat begin
+            setskin(NOWINDOW)
+            npc.open_shop()
+        end
+        
+    end
+    -------------- player brings lilac to the weapon_trader ------------------------------------------------------
+    state backto_trader begin
+        --BEGIN EDIT Added by Arne 08Oct09, Reason: no quest entry
+        when enter or login begin
+            --send_letter(gameforge.new_quest_premium_lv4._55_qSetTitle)
+            send_letter(gameforge.new_quest_premium_lv4._40_qSetTitle)
+            q.start()
+            q.set_title(gameforge.new_quest_premium_lv4._40_qSetTitle)
+            local v=find_npc_by_vnum(9001) -- Waffenhändler
+            if 0==v then
+            else
+                target.vid("__TARGET2__", v, gameforge.new_quest_premium_lv4._50_targetVid)
+            end
+        end
+        --END EDIT
+        
+        when 9001.chat.gameforge.new_quest_premium_lv4._40_qSetTitle begin --was gameforge.new_quest_premium_lv4._350_npcChat
+            if pc.count_item(pc.getqf("drop1")) >= pc.getqf("neededAmountDrop1") then 
+                say_title(gameforge.new_quest_premium_lv4._40_qSetTitle) 
+                target.delete("__TARGET2__")
+    --				say_title(item_name(new_quest_premium_lv4_drop1))
+                say(gameforge.new_quest_premium_lv4._180_say)
+            wait()
+                say_title(gameforge.new_quest_premium_lv4._40_qSetTitle)
+                say(gameforge.new_quest_premium_lv4._190_say)
+                pc.remove_item(pc.getqf("drop1"), pc.getqf("neededAmountDrop1"))
+                set_state(give_trader_premiumitem)
+            else
+                -- this happens, if the player sold or dropped needed items:
+                say_title(gameforge.new_quest_premium_lv4._40_qSetTitle)
+                say(gameforge.new_quest_premium_lv4._170_say)
+                say_reward(string.format(gameforge.new_quest_premium_lv4._200_say_reward, pc.getqf("neededAmountDrop1")))
+                say(gameforge.new_quest_premium_lv4._210_say) --changed 08Oct09 Arne, Reason: mantis 0033359
+                pc.setqf("new_quest_premium_lv4_collect_count_1", pc.count_item(pc.getqf("drop1")))
+                set_state(hunting)
+            end
+        end
+        
+        when 9001.chat.gameforge.new_quest_premium_lv4._100_npcChat begin
+            setskin(NOWINDOW)
+            npc.open_shop()
+        end
+        
+        when info or button begin
+            say_title(gameforge.new_quest_premium_lv4._40_qSetTitle)
+            say(gameforge.new_quest_premium_lv4._220_say)
+        end
+    end
+    -------------- player has to buy multicolorpotion in the cash shop for the weapon_trader ------------------------------------------------------
+    state give_trader_premiumitem begin
+        when enter or login begin -- Arne 08Oct09 changed to enter or login, Reason: would not remind player otherwise
+            --send_letter(gameforge.new_quest_premium_lv4._65_qSetTitle)--added08Oct09by Arne, Reason: no letter
+            send_letter(gameforge.new_quest_premium_lv4._40_qSetTitle)--added08Oct09by Arne, Reason: no letter
+            q.start()
+            q.set_title(gameforge.new_quest_premium_lv4._40_qSetTitle)
+            local v=find_npc_by_vnum(9001) -- Waffenhändler
+            if 0==v then
+            else
+                target.vid("__TARGET2__", v, gameforge.new_quest_premium_lv4._50_targetVid)
+            end
+        end
+        when 9001.chat.gameforge.new_quest_premium_lv4._40_qSetTitle begin --was gameforge.new_quest_premium_lv4._350_npcChat
+            if pc.count_item(pc.getqf("drop2")) >= pc.getqf("neededAmountDrop2") then
+                target.delete("__TARGET2__")
+                say_title(gameforge.new_quest_premium_lv4._40_qSetTitle)
+                say(gameforge.new_quest_premium_lv4._240_say)
+            wait()
+                say_title(gameforge.new_quest_premium_lv4._40_qSetTitle)
+                say(gameforge.new_quest_premium_lv4._250_say)	
+            wait()
+                say_title(gameforge.new_quest_premium_lv4._40_qSetTitle)
+                say(gameforge.new_quest_premium_lv4._260_say)
+                say_reward(string.format(gameforge.new_quest_premium_lv4._270_say_reward, pc.getqf("amountYang") ))
+                pc.change_money(pc.getqf("amountYang") )
+                pc.give_item2(rewardVnum)
+                pc.remove_item(pc.getqf("drop2"), pc.getqf("neededAmountDrop2"))
+                local v=find_npc_by_vnum(9003) -- Gemischtwarenhändlerin
+                if 0==v then
+                else
+                    target.vid("__TARGET3__", v, gameforge.new_quest_premium_lv4._10_targetVid)
+                end
+                set_state(goto_trader_happy)
+            else
+                say_title(gameforge.new_quest_premium_lv4._40_qSetTitle)
+                -- this happens, if the player sold or dropped needed items:
+                say(gameforge.new_quest_premium_lv4._280_say) --changed 08Oct09 Arne, Reason: mantis 0033359
+                say_reward(string.format(gameforge.new_quest_premium_lv4._290_say_reward, pc.getqf("neededAmountDrop2")))
+            end
+        end
+        
+        when 9001.chat.gameforge.new_quest_premium_lv4._100_npcChat begin
+            setskin(NOWINDOW)
+            npc.open_shop()
+        end
+        
+        when info or button begin
+            say_title(gameforge.new_quest_premium_lv4._40_qSetTitle)
+            say(gameforge.new_quest_premium_lv4._300_say)
+        end
+    end
+    -------------- player has to tell the trader, that her lover will meet her this night and everything is ok ------------------------------------------------------
+    state goto_trader_happy begin
+    when enter begin
+            --send_letter(gameforge.new_quest_premium_lv4._75_qSetTitle)--added08Oct09by Arne, Reason: no letter
+            send_letter(gameforge.new_quest_premium_lv4._40_qSetTitle)--added08Oct09by Arne, Reason: no letter
+            q.start()
+            q.set_title(gameforge.new_quest_premium_lv4._40_qSetTitle)
+        end
+        when __TARGET3__.target.click begin
+            target.delete("__TARGET3__")
+            say_title(gameforge.new_quest_premium_lv4._40_qSetTitle) -- yellow text headline
+            say(gameforge.new_quest_premium_lv4._320_say)
+        wait()
+            say_reward(string.format(gameforge.new_quest_premium_lv4._330_say_reward, pc.getqf("amountXp")))
+            pc.give_exp2(pc.getqf("amountXp"))
+            set_state(__COMPLETE__)
+        end
+        when info or button begin
+            say_title(gameforge.new_quest_premium_lv4._40_qSetTitle)
+            say(gameforge.new_quest_premium_lv4._340_say)
+        end
+    end
+
+    state __COMPLETE__ begin
+        when enter begin
+        --attempting to set flags for cleanup
+            pc.setqf("amountYang", 0) 
+            pc.setqf("amountXp", 0)
+            pc.setqf("neededAmountDrop1", 0)
+            pc.setqf("neededAmountDrop2", 0)
+            pc.setqf("dropProb1", 0)
+            pc.setqf("mob1",0)
+            pc.setqf("drop1", 0)
+            pc.setqf("drop2", 0)
+            pc.setqf("new_quest_premium_lv4_collect_count_1", 0)
+        end
+        when button or info begin
+            return
+        end
+    end
+end 

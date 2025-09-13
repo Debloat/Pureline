@@ -1,0 +1,67 @@
+quest ride_mystery_boxes begin
+	state start begin
+		function Ride( vnum, remain_time )
+			ride_info = {
+				[71124] = { 20114,	item.get_socket(2)*60,	apply.MOV_SPEED,	0,	1,	false	},
+				[71125] = { 20115,	item.get_socket(2)*60,	apply.ATTBONUS_MONSTER,	20,		20,	false	},
+				[71126] = { 20116,	item.get_socket(2)*60,	apply.CRITICAL_PCT, 10,	20,	false	},
+				[71127] = { 20117,	item.get_socket(2)*60,	apply.CRITICAL_PCT,	10,	20,	false	},
+				[71128] = { 20118,	item.get_socket(2)*60,	apply.MALL_DEFBONUS,	10,	20,	false	},
+				[71137] = { 20120,	item.get_socket(2)*60,	apply.MOV_SPEED, 0,	1,	false,	false,	false},
+				[71138] = { 20121,	item.get_socket(2)*60,	apply.MOV_SPEED, 0,	1,	false,	false,	false},
+				[71139] = { 20122,	item.get_socket(2)*60,	apply.MOV_SPEED, 0,	1,	false,	false,	false},
+				[71140] = { 20123,	item.get_socket(2)*60,	apply.MOV_SPEED, 0,	1,	false,	false,	false},
+				[71141] = { 20124,	item.get_socket(2)*60,	apply.MOV_SPEED, 0,	1,	false,	false,	false},
+				[71142] = { 20125,	item.get_socket(2)*60,	apply.MOV_SPEED, 0,	1,	false,	false,	false},
+				}
+
+			if pc.level < ride_info[vnum][5] then
+				say("")
+				say(gameforge.ride._010_say)
+				say("")
+			else
+				if 112 == pc.get_map_index() then
+					return
+				end
+				if ride_info[vnum][2] == 0 and remain_time != 0 then
+					pc.mount( ride_info[vnum][1], remain_time*60 )
+					pc.mount_bonus( ride_info[vnum][3], ride_info[vnum][4], remain_time*60 )
+				else
+					pc.mount( ride_info[vnum][1], ride_info[vnum][2] )
+					pc.mount_bonus( ride_info[vnum][3], ride_info[vnum][4], ride_info[vnum][2] )
+				end
+
+				if true == ride_info[vnum][6] then
+					pc.remove_item(vnum, 1)
+				end	
+			end	
+		end
+
+		when login begin
+			local vnum, remain_time = pc.get_special_ride_vnum()
+			if  vnum != 71124 and vnum != 71125 and vnum != 71126 and vnum != 71127 and vnum != 71128 and vnum != 71137 and vnum != 71138 and vnum !=71139 and vnum !=71140 and vnum !=71141 and vnum !=71142  then
+				return
+			end
+			if 0 != vnum then
+				ride_mystery_boxes.Ride(vnum, remain_time)
+			end
+		end
+
+		when 71124.use or 71125.use or 71126.use or 71127.use or 71128.use or 71137.use or 71138.use or 71139.use or 71140.use  or 71141.use or 71142.use begin
+			 if pc.is_polymorphed() then
+				 say("")
+				 say(gameforge.ride._020_say)
+				 say("")
+			elseif false == pc.is_riding() then
+			 	if true == horse.is_summon() then
+					horse.unsummon()
+				end
+				 ride_mystery_boxes.Ride(item.vnum, 0)
+			 else
+				say("")
+				 say(gameforge.ride._030_say)
+				 say("")
+			 end
+		end
+	end
+end

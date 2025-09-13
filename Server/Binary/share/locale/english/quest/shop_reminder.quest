@@ -1,0 +1,22 @@
+quest shop_reminder begin
+        state start begin
+	
+		function valid_account_id(frequency)
+			return math.mod(pc.get_account_id(), frequency) == 0
+		end
+		
+when 30316.use begin
+			frequency = game.get_event_flag("shop_frequency")
+			
+			if game.get_event_flag("shop_reminder") == 1 then
+				say("hallo")
+				local c =  select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
+				if 1 == c then
+					game.open_web_mall()
+				else
+					return	
+				end
+			end -- endif shop_reminder flag
+		end -- endif login
+        end -- endbegin state start
+end -- endbegin quest

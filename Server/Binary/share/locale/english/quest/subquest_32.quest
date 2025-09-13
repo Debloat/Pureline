@@ -1,0 +1,314 @@
+
+quest subquest_32 begin
+	state start begin
+		when login  or levelup with pc.level >= 41 and pc.level <= 43 begin
+			set_state(information)
+		end
+	end
+
+	state information begin
+		when letter begin
+			
+			local v = find_npc_by_vnum(20010)
+
+			if v != 0 then
+				target.vid("__TARGET__", v, gameforge.subquest_32._10_targetVid)
+			end
+		end
+
+				
+		when __TARGET__.target.click or	20010.chat.gameforge.subquest_32._20_npcChat with pc.level >= 41 begin
+			target.delete("__TARGET__")
+
+			say_title(gameforge.main_quest_lv32._120_sayTitle)
+			say(gameforge.subquest_32._30_say)
+			wait()
+			say_title(gameforge.main_quest_lv32._120_sayTitle)
+			say(gameforge.subquest_32._40_say)
+			wait()
+			say_title(gameforge.main_quest_lv32._120_sayTitle)
+			say(gameforge.subquest_32._50_say)
+		
+			
+			local s= select(gameforge.subquest_01._50_select, gameforge.subquest_01._60_select)
+			if 2==s then
+				say(gameforge.subquest_32._60_say)
+				local a= select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
+				if  2==a then
+					say_title(gameforge.main_quest_lv32._120_sayTitle)
+					say(gameforge.subquest_32._70_say)
+					return
+				end
+				say_title(gameforge.main_quest_lv32._120_sayTitle)
+				say(gameforge.subquest_32._80_say)
+				set_state(__GIVEUP__)
+				return
+			end	
+			say_title(gameforge.main_quest_lv32._120_sayTitle)
+
+			say(gameforge.subquest_32._90_say)
+			set_state(gogogo)
+		end
+	end
+	state gogogo begin
+		
+		when letter begin
+			send_letter(gameforge.subquest_32._100_sendLetter)
+			if pc.getqf("sil_done") == 0 or pc.getqf("sil_done") ==2  then
+				local v=find_npc_by_vnum(20021)
+				if 0!=v then
+					target.vid("__TARGET1__",v, gameforge.subquest_17._340_targetVid)
+				end
+			end
+			
+				
+			if pc.getqf("sil_done")== 1  then
+
+				local v=find_npc_by_vnum(20003)
+				if 0!=v then
+					target.vid("__TARGET3__",v, gameforge.subquest_32._110_targetVid)
+				end
+			end
+
+		
+			if pc.count_item(30144) >=100 and pc.count_item(30143)>0  then	
+				
+				local v=find_npc_by_vnum(9003)
+				if 0==v then
+					target.vid("__TARGET2__",v, gameforge.subquest_32._120_targetVid)
+				end
+
+			end 
+		
+				if  pc.count_item(30139)>=100 and pc.count_item(30140)>0 and   pc.count_item(30141)>0  then
+					set_state(all_item_done)
+			end
+
+			
+		end
+		
+		when info or button begin
+			say_title(gameforge.subquest_32._130_sayReward)
+			say(gameforge.subquest_32._140_sayReward)
+		end
+		
+		when 20021.chat.gameforge.subquest_32._150_npcChat with pc.getf("subquest_32","sil_done")==0 begin
+			target.delete("__TARGET1__")
+
+				say_title(gameforge.hair_shop._20_sayTitle)
+				say(gameforge.subquest_32._160_say)
+				wait()
+				say_title(gameforge.hair_shop._20_sayTitle)
+				say(gameforge.subquest_32._170_say)
+						
+  			local s= select(gameforge.subquest_01._50_select, gameforge.subquest_01._60_select)
+  			if 2==s then
+				say_title(gameforge.hair_shop._20_sayTitle)
+				say(gameforge.subquest_32._180_say)
+  				local a= select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
+					if  2==a then
+						say_title(gameforge.hair_shop._20_sayTitle)
+						say(gameforge.subquest_32._190_say)
+						return
+					end
+					say_title(gameforge.hair_shop._20_sayTitle)
+					say(gameforge.subquest_32._200_say)
+					set_state(__GIVEUP__)
+					return
+				end
+				say_title(gameforge.hair_shop._20_sayTitle)
+				say(gameforge.subquest_32._210_say)
+				pc.give_item2(30159)
+				pc.setqf("sil_done",1)
+
+		end
+		when 20021.chat.gameforge.subquest_32._150_npcChat with  pc.getf("subquest_32","sil_done") == 1 begin	
+				say_title(gameforge.subquest_32._220_sayTitle)
+				say(gameforge.subquest_32._230_say)
+				return
+		end	
+		when 20021.chat.gameforge.subquest_32._150_npcChat with  pc.getqf("subquest_32","sil_done") == 2 begin	
+				target.delete("__TARGET1__")
+				say_title(gameforge.subquest_32._220_sayTitle)
+				say(gameforge.subquest_32._240_say)
+				pc.give_item2(30140)
+				pc.setqf("sil_done",3)
+				if  pc.count_item(30141)>0 and  pc.count_item(30139)>=100 then
+					set_state(all_item_done)
+				return
+				end
+		end
+		when 20021.chat.gameforge.subquest_32._150_npcChat with  pc.getqf("subquest_32","sil_done") == 3 begin	
+				say_title(gameforge.subquest_32._220_sayTitle)
+				say(gameforge.subquest_32._250_say)
+				
+     		end
+
+		when 20003.chat.gameforge.subquest_32._260_npcChat with pc.count_item(30159)>0 begin
+			target.delete("__TARGET3__")
+			say_title(gameforge.subquest_32._270_sayTitle)
+			say(gameforge.subquest_32._280_say)
+			pc.remove_item(30159)
+			pc.setqf("sil_done",2)
+		end
+
+
+		when 9003.chat.gameforge.subquest_32._290_npcChat with pc.getf("subquest_32","jewel_done")==0  begin
+			target.delete("__TARGET2__")
+			say_title(gameforge.find_squareguard._130_sayTitle)
+			say(gameforge.subquest_32._300_say)
+			wait()
+			say_title(gameforge.subquest_27._160_sayTitle)
+			say(gameforge.subquest_32._310_say)
+			say_item_vnum(30143)
+			say_item_vnum(30144)
+			say(gameforge.subquest_32._320_say)
+			wait()
+			say_title(gameforge.subquest_27._160_sayTitle)
+			say(gameforge.subquest_32._330_say)
+  			local s= select(gameforge.subquest_01._50_select, gameforge.subquest_01._60_select)
+  			if 2==s then
+  				say(gameforge.subquest_32._60_say)
+  				local a= select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
+					if  2==a then
+						say_title(gameforge.subquest_27._160_sayTitle)
+						say(gameforge.subquest_32._340_say)
+						return
+					end
+					say_title(gameforge.subquest_27._160_sayTitle)
+					say(gameforge.subquest_32._350_say)
+					set_state(__GIVEUP__)
+					return
+				end
+				say_title(gameforge.subquest_27._160_sayTitle)
+				say(gameforge.subquest_32._360_say)
+				pc.setqf("jewel_done",1)
+		end
+	
+		when 9003.chat.gameforge.subquest_32._370_npcChat with pc.getqf("subquest_32","jewel_done")==1 and  pc.count_item(30143)>=1 and pc.count_item(30144)>=100 begin
+				target.delete("__TARGET2__")				
+				say_title(gameforge.subquest_27._160_sayTitle)
+				say(gameforge.subquest_32._380_say)
+				
+				pc.give_item2(30141)
+				
+				pc.remove_item(30143 ,1) 
+				pc.remove_item(30144 ,100) 
+				pc.setqf("jewel_done",2)
+				
+				
+				if pc.count_item(30140)>0  and  pc.count_item(30139)>=100 then
+					set_state(all_item_done)
+					return
+				end
+		end			
+	
+	
+	when 114.kill or 115.kill  begin 
+				local s = number(1, 100)
+				if s <= 7 and pc.count_item(30144)<100  then 
+					pc.give_item2(30144, 2)
+				end
+
+				local a = number(1, 100)
+				if a <= 5 and pc.count_item(30143)== 0  then 
+					pc.give_item2(30143, 1)
+				end	
+
+					end
+
+
+	 when 634.kill  begin		
+			
+			local s = number(1, 100)
+			if s <= 7 and pc.count_item(30139)<100  then 
+				pc.give_item2(30139, 2)
+			
+				if pc.count_item(30139)>=100 and pc.count_item(30140)>0 and   pc.count_item(30141)>0 then
+					set_state(all_item_done)
+					return
+				end
+			end 
+		end
+
+	end	
+	state all_item_done begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.subquest_32._130_sayReward)
+			q.set_title(gameforge.subquest_32._390_qSetTitle)
+			q.start()
+			
+			local v=find_npc_by_vnum(20010)
+			if 0==v then
+			else
+				target.vid("__TARGET__",v, gameforge.subquest_32._400_targetVid)
+			end
+		end
+		when info or button begin
+			say(gameforge.subquest_32._410_sayReward)
+			say(gameforge.subquest_32._420_sayReward)
+		end
+		
+		when __TARGET__.target.click or	20010.chat.gameforge.subquest_32._430_npcChat begin 
+			if pc.count_item(30140)>=1 and pc.count_item(30141)>=1 and  pc.count_item(30139) >= 100 then
+			    target.delete("__TARGET__")
+				say_title(gameforge.subquest_32._440_sayTitle)
+				say(gameforge.subquest_32._450_say)
+				
+				pc.remove_item(30140,1)
+				pc.remove_item(30141,1)
+				pc.remove_item(30139,100)
+				
+				pc.setqf("jewel_done",0)
+				pc.setqf("sil_done",0)
+				
+				say_reward(gameforge.subquest_32._460_sayReward)
+				pc.give_exp2(1100000)
+				set_quest_state("levelup","run")
+				
+				say_reward(gameforge.subquest_32._470_sayReward)
+				pc.give_item2(14060)
+				pc.give_item2(16060)
+				pc.give_item2(17060)
+
+				set_state(THEEND)
+				clear_letter()
+				return
+			end
+			    target.delete("__TARGET__")
+				say_title(gameforge.subquest_32._440_sayTitle)
+				say(gameforge.subquest_32._480_say)
+				local s= select(gameforge.subquest_01._50_select, gameforge.subquest_01._60_select)
+				if 2==s then
+  				say(gameforge.subquest_32._490_say)
+  				local a= select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
+					if  2==a then
+						say_title(gameforge.subquest_32._440_sayTitle)
+						say(gameforge.subquest_32._500_say)
+						set_state(gogogo)
+						return
+					end
+					say_title(gameforge.subquest_32._440_sayTitle)
+					say(gameforge.subquest_32._510_say)
+					set_state(__GIVEUP__)
+					return
+				end
+				say_title(gameforge.subquest_32._440_sayTitle)
+				say(gameforge.subquest_32._520_say)
+				set_state(gogogo)
+
+		end
+	end
+	
+	
+	
+	state __GIVEUP__ begin
+	end
+    state THEEND begin
+		when enter begin
+			q.done()
+		end
+	end
+end
+			

@@ -1,0 +1,377 @@
+quest new_quest_lv22 begin
+    state start begin
+		function npc_chat()
+	        target.delete("__TARGET__")
+	        say_title(gameforge.new_quest_lv22._017_say_title) -- yellow text headline
+	        say(gameforge.new_quest_lv22._021_say) -- white font text
+			wait()
+			say_title(gameforge.new_quest_lv22._017_say_title) -- yellow text headline
+	        say(gameforge.new_quest_lv22._022_say)
+    	end	
+
+		when login or levelup with pc.get_level() >= 22 begin
+			q.done()
+			set_state(information)
+		end
+	end
+	-- get information from the cityguard about his sick brother----------------------------------------
+	state information begin
+		when login or enter begin
+		-- edit Rui, adding a letter and questmark in the quest menu --
+			send_letter(gameforge.new_quest_lv22._015_npcChat)
+			q.start()
+			q.set_title(gameforge.new_quest_lv22._015_npcChat)
+		-- finished the edit --
+			local find_npc_vnum = 0
+			if pc.get_empire()==1 then
+				find_npc_vnum = 11000
+			elseif pc.get_empire()==2 then
+				find_npc_vnum = 11002
+			elseif pc.get_empire()==3 then
+				find_npc_vnum = 11004
+			end
+			local v=find_npc_by_vnum(find_npc_vnum) -- Wächter des Dorfplatzes
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, gameforge.new_quest_lv22._010_target)
+			end
+		end
+		-- edit Rui, added the text that should be shown when opening the letter or pressing the quest button in the quest menu --
+		when button or info begin
+			say_title(gameforge.new_quest_lv22._015_npcChat)
+			say("")
+			say(gameforge.new_quest_lv22._011_say)
+		end
+	
+		when 11000.chat.gameforge.new_quest_lv22._015_npcChat or 11002.chat.gameforge.new_quest_lv22._015_npcChat or 11004.chat.gameforge.new_quest_lv22._015_npcChat  begin
+			target.delete("__TARGET__")
+	        say_title(gameforge.new_quest_lv22._017_say_title) -- yellow text headline
+	        say(gameforge.new_quest_lv22._021_say) -- white font text
+			wait()
+			say_title(gameforge.new_quest_lv22._017_say_title) -- yellow text headline
+	        say(gameforge.new_quest_lv22._022_say)
+			q.done()
+			local doquest = select(gameforge.new_quest_lv22._024_select, gameforge.subquest_12._50_select, gameforge.new_quest_lv75._290_2_select)
+			if doquest ==1 then 
+				set_state(ask_beakgo)
+			elseif doquest == 3 then
+				say(gameforge.subquest_06._60_say)
+				local abortquest = select(gameforge.subquest_06._70_select, gameforge.subquest_06._80_select)
+				if abortquest == 1 then
+					set_state(__GIVEUP__)
+				else
+					say(gameforge.subquest_11._80_say)
+					return
+				end
+			else
+				say(gameforge.subquest_11._80_say)
+				return
+			end
+		end
+	end
+	-- ask baek-go for medicine ------------------------------------------------------------------------
+	state ask_beakgo begin
+		when enter or login begin
+			new_quest_lv22_neededAmountDrop1 = 1
+			new_quest_lv22_neededAmountDrop2 = 1
+			new_quest_lv22_dropProb1 = 30
+			new_quest_lv22_dropProb2 = 30
+			new_quest_lv22_mob1 = 115 -- white tiger
+			new_quest_lv22_mob2 = 114 -- tiger
+			new_quest_lv22_drop1 = 35000 -- med. wheat
+			new_quest_lv22_drop2 = 35001 -- tiger liver
+			--BEGIN EDIT by Arne 21Sept09, accoridng to manits26067, Reason: missing quest, letter
+			send_letter(gameforge.new_quest_lv22._016_send_letter)
+			q.start()
+			q.set_title(gameforge.new_quest_lv22._016_send_letter)
+			
+			local v=find_npc_by_vnum(20018)
+			if 0!=v then
+					target.vid("__TARGET2__", v, gameforge.new_quest_lv22._030_target)
+			end
+			--END EDIT
+		end
+		
+		--BEGIN EDIT by Arne 21Sept09, accoridng to manits26067, Reason: missing quest, letter
+		when info or button begin
+			say_title(gameforge.new_quest_lv22._025_say_title)
+			say(gameforge.new_quest_lv22._026_say)
+			say("")
+			say(string.format(gameforge.new_quest_lv22._027_say, get_map_name_by_number(1)))
+		end
+		--END EDIT
+		
+		
+		when 20018.chat.gameforge.new_quest_lv22._016_send_letter begin
+			target.delete("__TARGET2__")
+			say_title(gameforge.new_quest_lv22._018_say_title)
+			say(gameforge.new_quest_lv22._031_say)
+			local b= select(gameforge.new_quest_lv22._032_1_select, gameforge.new_quest_lv22._032_2_select, gameforge.new_quest_lv22._032_3_select)
+			if b==1 then
+				say_title(gameforge.new_quest_lv22._018_say_title)
+				say(gameforge.new_quest_lv22._035_say)
+			wait()
+				say_title(gameforge.new_quest_lv22._018_say_title)
+				say(gameforge.new_quest_lv22._040_say)
+				say_reward(string.format("%s x", new_quest_lv22_neededAmountDrop1))
+				say_item_vnum(new_quest_lv22_drop1) -- icon of item
+				say_reward(gameforge.new_quest_lv22._041_say_reward)
+				say(mob_name(new_quest_lv22_mob1))
+			wait()
+				say_title(gameforge.new_quest_lv22._018_say_title)
+				say(gameforge.new_quest_lv22._042_say)
+				say_reward(string.format("%s x",  new_quest_lv22_neededAmountDrop2))
+				say_item_vnum(new_quest_lv22_drop2) -- icon of item
+				say_reward(gameforge.new_quest_lv22._041_say_reward)
+				say(mob_name(new_quest_lv22_mob2))
+				q.done()
+				set_state(hunting)
+			elseif b==2 then
+				say_title(gameforge.new_quest_lv22._018_say_title)
+				say(gameforge.new_quest_lv22._043_say)
+				q.done()
+				set_state(information)
+			else
+				say_title(gameforge.new_quest_lv22._018_say_title)
+				say(gameforge.new_quest_lv22._044_say)
+				q.done()
+				set_state(information)
+			end
+		end
+	end
+	-- hunt tigers and white tiger for ingrediences for the medicine -----------------------------------
+	state hunting begin
+		when enter begin
+			local hunting_count = pc.getqf("hunting_count") + 1
+			pc.setqf("hunting_count", hunting_count)
+		end
+	
+		when enter or login begin
+			local hunting_count = pc.getqf("hunting_count")
+			new_quest_lv22_neededAmountDrop1 = 1
+			new_quest_lv22_neededAmountDrop2 = 1
+			new_quest_lv22_dropProb1 = 90
+			new_quest_lv22_dropProb2 = 90
+			
+			for probabilityCounter = 1, hunting_count, 1 do
+				-- the probability drops per hunting. First time is: 30, then 10, then 3.
+				new_quest_lv22_dropProb1 = new_quest_lv22_dropProb1 / 3
+				new_quest_lv22_dropProb2 = new_quest_lv22_dropProb2 / 3
+			end
+			-- notice(new_quest_lv22_dropProb1)
+			
+			new_quest_lv22_mob1 = 115 -- white tiger
+			new_quest_lv22_mob2 = 114 -- tiger
+			new_quest_lv22_drop1 = 35000 -- med. wheat
+			new_quest_lv22_drop2 = 35001 -- tiger liver
+		--BEGIN EDIT by Arne 21Sept09, accoridng to manits26067, Reason: missing quest, letter
+			send_letter(gameforge.new_quest_lv22._016_send_letter)
+			q.start()
+			q.set_title(gameforge.new_quest_lv22._016_send_letter)
+		--END EDIT
+		end
+		-------------- medical wheat ------------------------------------------------------
+		-- kill a 8504#Weisser Tiger
+		when 115.kill begin
+			if pc.count_item(new_quest_lv22_drop1) < new_quest_lv22_neededAmountDrop1 then
+				if math.random(1,100) <= new_quest_lv22_dropProb1 then -- probability if s.th. drops
+					drop = true
+					pc.give_item2(new_quest_lv22_drop1) -- medical wheat
+					if new_quest_lv22_neededAmountDrop1 == pc.count_item(new_quest_lv22_drop1) and new_quest_lv22_neededAmountDrop2 ==  pc.count_item(new_quest_lv22_drop2) then
+						-- collected everything
+						notice_multiline(gameforge.new_quest_lv22._057_notice, notice)
+						q.done()
+						set_state(back_to_baekgo)
+					else
+						if new_quest_lv22_neededAmountDrop1 == pc.count_item(new_quest_lv22_drop1) then
+							-- collected all wheat, still need livers
+							notice_multiline(string.format(gameforge.new_quest_lv22._058_notice, new_quest_lv22_neededAmountDrop2-pc.count_item(new_quest_lv22_drop2)), notice)
+						else
+							-- need more wheat
+							notice_multiline(string.format(gameforge.new_quest_lv22._056_notice , new_quest_lv22_neededAmountDrop1-pc.count_item(new_quest_lv22_drop1)), notice)
+						end
+					end
+				else
+				end
+			end
+		end
+		-------------- Tigerleber ------------------------------------------------------
+		-- kill a 114#Tiger
+		when 114.kill begin
+			if pc.count_item(new_quest_lv22_drop2) <  new_quest_lv22_neededAmountDrop2 then
+				if math.random(1,100) <= new_quest_lv22_dropProb2 then -- probability if s.th. drops
+					drop = true
+					pc.give_item2(new_quest_lv22_drop2) -- tigerleber
+					
+					if new_quest_lv22_neededAmountDrop1 == pc.count_item(new_quest_lv22_drop1) and  new_quest_lv22_neededAmountDrop2 == pc.count_item(new_quest_lv22_drop2) then
+						-- collected everything
+						notice_multiline(gameforge.new_quest_lv22._061_notice, notice)
+						q.done()
+						set_state(back_to_baekgo)
+					else
+						if new_quest_lv22_neededAmountDrop2 == pc.count_item(new_quest_lv22_drop2) then
+							-- collected all livers, still need wheat
+							notice_multiline(string.format(gameforge.new_quest_lv22._056_notice , new_quest_lv22_neededAmountDrop1-pc.count_item(new_quest_lv22_drop1)), notice)
+						else
+							-- still need livers
+							notice_multiline(string.format(gameforge.new_quest_lv22._060_notice,  new_quest_lv22_neededAmountDrop2-pc.count_item(new_quest_lv22_drop2)), notice)
+						end
+					end
+				else
+					notice_multiline(gameforge.new_quest_lv22._062_notice, notice)
+				end
+			end
+		end
+		when info or button begin
+			if new_quest_lv22_neededAmountDrop1 !=  pc.count_item(new_quest_lv22_drop1) or  new_quest_lv22_neededAmountDrop2 !=  pc.count_item(new_quest_lv22_drop2) then
+				say_title(gameforge.new_quest_lv22._016_send_letter)
+				say(gameforge.new_quest_lv22._066_say)
+				if new_quest_lv22_neededAmountDrop1 !=  pc.count_item(new_quest_lv22_drop1) then
+					say_reward(string.format(gameforge.new_quest_lv22._063_say, new_quest_lv22_neededAmountDrop1-pc.count_item(new_quest_lv22_drop1), mob_name(new_quest_lv22_mob1)))
+				end
+				if  new_quest_lv22_neededAmountDrop2 !=  pc.count_item(new_quest_lv22_drop2) then
+					say_reward(string.format(gameforge.new_quest_lv22._064_say,  new_quest_lv22_neededAmountDrop2-pc.count_item(new_quest_lv22_drop2), mob_name(new_quest_lv22_mob2)))
+				end
+			else
+                say_title(gameforge.new_quest_lv22._025_say_title)
+				say(gameforge.new_quest_lv22._065_say)
+			end
+		end
+	end
+	-- bring the ingrediences back to baek-go ----------------------------------------------------------
+	state back_to_baekgo begin
+		when enter or login begin
+			new_quest_lv22_neededAmountDrop1 = 1
+			new_quest_lv22_neededAmountDrop2 = 1
+			new_quest_lv22_drop1 = 35000 -- med. wheat
+			new_quest_lv22_drop2 = 35001 -- tiger liver
+			new_quest_lv22_timeToFind = 1200
+			--BEGIN EDIT by Arne 21Sept09, accoridng to manits26067, Reason: missing quest, letter
+			send_letter(gameforge.new_quest_lv22._016_send_letter)
+			q.set_title(gameforge.new_quest_lv22._016_send_letter)			
+			local timeLeft = new_quest_lv22_timeToFind-(get_time()-pc.getqf("new_quest_lv22_startTime"))
+			displayTime = timeLeft / 60
+			q.set_clock(gameforge.new_quest_lv22._082_set_clock, timeLeft)
+			q.start()
+			local v=find_npc_by_vnum(20018) -- Baek-Go
+			if 0==v then
+			else
+				target.vid("__TARGET3__", v, gameforge.new_quest_lv22._030_target)
+			end
+			--END EDIT
+		end
+		
+		--BEGIN EDIT by Arne 21Sept09, accoridng to manits26067, Reason: missing quest, letter
+		when info or button begin
+		say_title(gameforge.new_quest_lv22._016_send_letter)
+		say(gameforge.new_quest_lv22._065_say)
+		say("")
+		say(string.format(gameforge.new_quest_lv22._027_say, get_map_name_by_number(1)))
+		end
+		--END EDIT
+		
+		when 20018.chat.gameforge.new_quest_lv22._016_send_letter begin
+			target.delete("__TARGET3__")
+			say_title(gameforge.new_quest_lv22._018_say_title)
+			if  pc.count_item(new_quest_lv22_drop1) >= new_quest_lv22_neededAmountDrop1 and pc.count_item(new_quest_lv22_drop2) >=  new_quest_lv22_neededAmountDrop2 then
+				say(gameforge.new_quest_lv22._070_say)
+				pc.remove_item(new_quest_lv22_drop1, new_quest_lv22_neededAmountDrop1)
+				pc.remove_item(new_quest_lv22_drop2,  new_quest_lv22_neededAmountDrop2)
+			wait()
+				say_title(gameforge.new_quest_lv22._018_say_title)
+				say(string.format(gameforge.new_quest_lv22._071_say, new_quest_lv22_timeToFind / 60))
+				say(gameforge.new_quest_lv22._072_say)
+				pc.give_item2(30009, 1)
+				pc.setqf("new_quest_lv22_startTime", get_time())
+				q.done()
+				set_state(find_brother)
+				return
+			else
+				-- this happens, if the player sold or dropped needed items:
+				say(gameforge.new_quest_lv22._073_say)
+				q.done()
+				set_state(hunting)
+			end
+		end
+	end
+	-- bring the medicine to the sick brother in the hwang temple (entrance of the demon tower) 20min time limit --
+	state find_brother begin
+        when enter or login begin
+			new_quest_lv22_timeToFind = 1200
+			new_quest_lv22_MoneyReward = 12000
+			new_quest_lv22_MoneyReward_Low = 8000
+			send_letter(gameforge.new_quest_lv22._016_send_letter)--EDIT by Arne 21Sept09, accoridng to manits26067, Reason: missing letter
+			
+			q.set_title(gameforge.new_quest_lv22._016_send_letter)
+			local timeLeft = new_quest_lv22_timeToFind-(get_time()-pc.getqf("new_quest_lv22_startTime"))
+			displayTime = timeLeft / 60
+			q.set_clock(gameforge.new_quest_lv22._082_set_clock, timeLeft)
+			q.start()
+			if is_destination_village(65) then -- 
+				local v=find_npc_by_vnum(20348) -- Wächter des Dämonenturms
+				if 0!=v then
+					target.vid("__TARGET4__", v, gameforge.new_quest_lv22._080_target)
+				end
+			end
+		end
+		when button or info begin
+			say_title(gameforge.new_quest_lv22._016_send_letter)
+			if get_time() - pc.getqf("new_quest_lv22_startTime") <= new_quest_lv22_timeToFind then
+				say(gameforge.new_quest_lv22._083_say)
+			else
+				say(gameforge.new_quest_lv22._084_say)
+			end
+		end
+		when 20348.chat.gameforge.new_quest_lv22._016_send_letter begin
+			target.delete("__TARGET4__")
+			say_title(gameforge.new_quest_lv22._019_say_title)
+			q.done()
+			-- player succeeded in bringing the medicine in time
+			if pc.count_item(30009) >= 1 and get_time() - pc.getqf("new_quest_lv22_startTime") <= new_quest_lv22_timeToFind then
+				say(gameforge.new_quest_lv22._085_say)
+				say(gameforge.new_quest_lv22._086_say)
+				say(gameforge.new_quest_lv22._087_say)
+				say_reward(gameforge.new_quest_lv22._088_say_reward)
+				pc.give_item2(15064, 1)
+				pc.give_item2(27105, 5)
+				pc.remove_item(30009, 1)
+				pc.change_money(new_quest_lv22_MoneyReward)
+				pc.give_exp2(50000)
+				set_state(__COMPLETE__)
+				return
+			-- player failed in bringing the medicine in time
+			elseif pc.count_item(30009) >= 1 and get_time() - pc.getqf("new_quest_lv22_startTime") > new_quest_lv22_timeToFind then
+				say(gameforge.new_quest_lv22._085_say)
+				say(gameforge.new_quest_lv22._089_say)
+			wait()
+				say_title(gameforge.new_quest_lv22._019_say_title)
+				say(gameforge.new_quest_lv22._090_say)
+				say_reward(gameforge.new_quest_lv22._095_say_reward)
+				pc.remove_item(30009, 1)
+				pc.change_money(new_quest_lv22_MoneyReward_Low)
+				pc.give_exp2(50000)
+				set_state(__COMPLETE__)
+				return
+			-- player lost the medicine ----------------------------
+			elseif (pc.getqf("hunting_count") <= 2) then
+				say(gameforge.new_quest_lv22._091_say)
+				set_state(hunting)
+			else
+				-- player lost the medicine more than once
+				say(gameforge.new_quest_lv22._098_say)
+				say_reward(gameforge.new_quest_lv22._100_say_reward)
+				pc.give_exp2(25000)
+				set_state(__COMPLETE__)
+			end	
+		end
+	end
+	------  give up ------------------------------------------------------------------------------------------------------
+	state __GIVEUP__ begin
+	end
+	------  complete ------------------------------------------------------------------------------------------------------
+	state __COMPLETE__ begin
+		when enter begin
+			pc.setqf("new_quest_lv22_startTime",0)
+		end
+	end
+end 

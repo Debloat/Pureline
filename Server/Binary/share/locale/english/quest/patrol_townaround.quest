@@ -1,0 +1,1231 @@
+quest patrol_townaround begin
+	state patrol1_blue_step5 begin
+		when letter begin
+			target.pos("__TARGET__", 500, 580, 1, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._10_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._10_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._10_makequestbutton)
+			say(gameforge.patrol_townaround._20_sayReward)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._30_say)
+			setstate(reward)
+		end
+	end
+	state patrol1_blue_step4 begin
+		when letter begin
+			target.pos("__TARGET__", 545, 840, 1, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._40_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._40_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._40_makequestbutton)
+			say(gameforge.patrol_townaround._60_say)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._70_sayReward)
+			setstate(patrol1_blue_step5)
+		end
+	end
+	state patrol1_blue_step3 begin
+		when letter begin
+			target.pos("__TARGET__", 760, 985, 1, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._80_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._80_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._80_makequestbutton)
+			say(gameforge.patrol_townaround._90_say)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._100_sayReward)
+			setstate(patrol1_blue_step4)
+		end
+	end
+	state patrol1_blue_step2 begin
+		when letter begin
+			target.pos("__TARGET__", 720, 855, 1, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._110_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._110_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._110_makequestbutton)
+			say(gameforge.patrol_townaround._120_say)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._130_sayReward)
+			setstate(patrol1_blue_step3)
+		end
+	end
+	state patrol1_blue_step1 begin
+		when letter begin
+			target.pos("__TARGET__", 670, 720, 1, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._140_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._140_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._140_makequestbutton)
+			say(gameforge.patrol_townaround._150_say)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._160_sayReward)
+			setstate(patrol1_blue_step2)
+		end
+	end
+	state patrol1_yellow_step5 begin
+		when letter begin
+			target.pos("__TARGET__", 720, 700, 1, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._10_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._10_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._10_makequestbutton)
+			say(gameforge.patrol_townaround._20_sayReward)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._30_say)
+			setstate(reward)
+		end
+	end
+	state patrol1_yellow_step4 begin
+		when letter begin
+			target.pos("__TARGET__", 900, 930, 1, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._40_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._40_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._40_makequestbutton)
+			say(gameforge.patrol_townaround._60_say)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._70_sayReward)
+			setstate(patrol1_yellow_step5)
+		end
+	end
+	state patrol1_yellow_step3 begin
+		when letter begin
+			target.pos("__TARGET__", 875, 725, 1, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._80_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._80_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._80_makequestbutton)
+			say(gameforge.patrol_townaround._90_say)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._100_sayReward)
+			setstate(patrol1_yellow_step4)
+		end
+	end
+	state patrol1_yellow_step2 begin
+		when letter begin
+			target.pos("__TARGET__", 890, 610, 1, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._110_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._110_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._110_makequestbutton)
+			say(gameforge.patrol_townaround._120_say)
+
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._130_sayReward)
+			setstate(patrol1_yellow_step3)
+		end
+	end
+	state patrol1_yellow_step1 begin
+		when letter begin
+			target.pos("__TARGET__", 730, 590, 1, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._110_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._110_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._110_makequestbutton)
+			say(gameforge.patrol_townaround._150_say)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._160_sayReward)
+			setstate(patrol1_yellow_step2)
+
+		end
+	end
+	state patrol1_gray_step5 begin
+		when letter begin
+			target.pos("__TARGET__", 715, 390, 1, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._250_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._10_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._10_makequestbutton)
+			say(gameforge.patrol_townaround._20_sayReward)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._30_say)
+			setstate(reward)
+		end
+	end
+	state patrol1_gray_step4 begin
+		when letter begin
+			target.pos("__TARGET__", 765, 190, 1, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._40_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._40_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._40_makequestbutton)
+			say(gameforge.patrol_townaround._60_say)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._70_sayReward)
+			setstate(patrol1_gray_step5)
+		end
+	end
+	state patrol1_gray_step3 begin
+		when letter begin
+			target.pos("__TARGET__", 790, 400, 1, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._80_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._80_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._80_makequestbutton)
+			say(gameforge.patrol_townaround._90_say)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._100_sayReward)
+			setstate(patrol1_gray_step4)
+		end
+	end
+	state patrol1_gray_step2 begin
+		when letter begin
+			target.pos("__TARGET__", 890, 610, 1, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._110_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._110_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._110_makequestbutton)
+			say(gameforge.patrol_townaround._120_say)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._130_sayReward)
+			setstate(patrol1_gray_step3)
+		end
+	end
+	state patrol1_gray_step1 begin
+		when letter begin
+			target.pos("__TARGET__", 730, 590, 1, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._140_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._140_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._140_makequestbutton)
+			say(gameforge.patrol_townaround._150_say)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._160_sayReward)
+			setstate(patrol1_gray_step2)
+		end
+	end
+	state patrol1_purple_step5 begin
+		when letter begin
+			target.pos("__TARGET__", 500, 580, 1, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._10_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._10_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._10_makequestbutton)
+			say(gameforge.patrol_townaround._20_sayReward)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._30_say)
+			setstate(reward)
+		end
+	end
+	state patrol1_purple_step4 begin
+		when letter begin
+			target.pos("__TARGET__", 490, 230, 1, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._40_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._40_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._40_makequestbutton)
+			say(gameforge.patrol_townaround._60_say)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._70_sayReward)
+			setstate(patrol1_purple_step5)
+		end
+	end
+	state patrol1_purple_step3 begin
+		when letter begin
+			target.pos("__TARGET__", 665, 130, 1, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._80_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._80_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._80_makequestbutton)
+			say(gameforge.patrol_townaround._90_say)
+
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._100_sayReward)
+			setstate(patrol1_purple_step4)
+		end
+	end
+	state patrol1_purple_step2 begin
+		when letter begin
+			target.pos("__TARGET__", 765, 190, 1, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._110_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._110_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._110_makequestbutton)
+			say(gameforge.patrol_townaround._120_say)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._130_sayReward)
+			setstate(patrol1_purple_step3)
+		end
+	end
+	state patrol1_purple_step1 begin
+		when letter begin
+			target.pos("__TARGET__", 715, 390, 1, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._140_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._140_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._140_makequestbutton)
+			say(gameforge.patrol_townaround._150_say)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._160_sayReward)
+			setstate(patrol1_purple_step2)
+		end
+	end
+	state patrol2_blue_step5 begin
+		when letter begin
+			target.pos("__TARGET__", 760, 640, 21, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._10_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._10_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._10_makequestbutton)
+			say(gameforge.patrol_townaround._20_sayReward)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._30_say)
+			setstate(reward)
+		end
+	end
+	state patrol2_blue_step4 begin
+		when letter begin
+			target.pos("__TARGET__", 830, 630, 21, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._40_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._40_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._40_makequestbutton)
+			say(gameforge.patrol_townaround._60_say)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._70_sayReward)
+			setstate(patrol2_blue_step5)
+		end
+	end
+	state patrol2_blue_step3 begin
+		when letter begin
+			target.pos("__TARGET__", 770, 440, 21, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._80_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._80_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._80_makequestbutton)
+			say(gameforge.patrol_townaround._90_say)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._100_sayReward)
+			setstate(patrol2_blue_step4)
+		end
+	end
+	state patrol2_blue_step2 begin
+		when letter begin
+			target.pos("__TARGET__", 650, 370, 21, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._110_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._110_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._110_makequestbutton)
+			say(gameforge.patrol_townaround._120_say)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._130_sayReward)
+			setstate(patrol2_blue_step3)
+		end
+	end
+	state patrol2_blue_step1 begin
+		when letter begin
+			target.pos("__TARGET__", 640, 510, 21, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._140_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._140_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._140_makequestbutton)
+			say(gameforge.patrol_townaround._150_say)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._160_sayReward)
+			setstate(patrol2_blue_step2)
+		end
+	end
+	state patrol2_yellow_step5 begin
+		when letter begin
+			target.pos("__TARGET__", 650, 900, 21, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._10_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._10_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._10_makequestbutton)
+			say(gameforge.patrol_townaround._20_sayReward)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._30_say)
+			setstate(reward)
+		end
+	end
+	state patrol2_yellow_step4 begin
+		when letter begin
+			target.pos("__TARGET__", 780, 930, 21, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._40_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._40_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._40_makequestbutton)
+			say(gameforge.patrol_townaround._60_say)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._70_sayReward)
+			setstate(patrol2_yellow_step5)
+		end
+	end
+	state patrol2_yellow_step3 begin
+		when letter begin
+			target.pos("__TARGET__", 880, 820, 21, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._80_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._80_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._80_makequestbutton)
+			say(gameforge.patrol_townaround._90_say)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._100_sayReward)
+			setstate(patrol2_yellow_step4)
+		end
+	end
+	state patrol2_yellow_step2 begin
+		when letter begin
+			target.pos("__TARGET__", 830, 630, 21, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._110_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._110_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._110_makequestbutton)
+			say(gameforge.patrol_townaround._120_say)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._130_sayReward)
+			setstate(patrol2_yellow_step3)
+		end
+	end
+	state patrol2_yellow_step1 begin
+		when letter begin
+			target.pos("__TARGET__", 760, 640, 21, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._140_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._140_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._140_makequestbutton)
+			say(gameforge.patrol_townaround._150_say)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._160_sayReward)
+			setstate(patrol2_yellow_step2)
+		end
+	end
+	state patrol2_gray_step5 begin
+		when letter begin
+			target.pos("__TARGET__", 485, 640, 21, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._10_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._10_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._10_makequestbutton)
+			say(gameforge.patrol_townaround._20_sayReward)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._30_say)
+			setstate(reward)
+		end
+	end
+	state patrol2_gray_step4 begin
+		when letter begin
+			target.pos("__TARGET__", 390, 830, 21, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._40_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._40_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._40_makequestbutton)
+			say(gameforge.patrol_townaround._60_say)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._70_sayReward)
+			setstate(patrol2_gray_step5)
+		end
+	end
+	state patrol2_gray_step3 begin
+		when letter begin
+			target.pos("__TARGET__", 480, 950, 21, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._80_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._80_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._80_makequestbutton)
+			say(gameforge.patrol_townaround._90_say)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._100_sayReward)
+			setstate(patrol2_gray_step4)
+		end
+	end
+	state patrol2_gray_step2 begin
+		when letter begin
+			target.pos("__TARGET__", 650, 900, 21, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._110_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._110_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._110_makequestbutton)
+			say(gameforge.patrol_townaround._120_say)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._130_sayReward)
+			setstate(patrol2_gray_step3)
+		end
+	end
+	state patrol2_gray_step1 begin
+		when letter begin
+			target.pos("__TARGET__", 640, 765, 21, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._140_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._140_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._140_makequestbutton)
+			say(gameforge.patrol_townaround._150_say)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._160_sayReward)
+			setstate(patrol2_gray_step2)
+		end
+	end
+	state patrol2_purple_step5 begin
+		when letter begin
+			target.pos("__TARGET__", 485, 640, 21, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._10_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._10_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._10_makequestbutton)
+			say(gameforge.patrol_townaround._20_sayReward)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._30_say)
+			setstate(reward)
+		end
+	end
+	state patrol2_purple_step4 begin
+		when letter begin
+			target.pos("__TARGET__", 650, 900, 21, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._40_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._40_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._40_makequestbutton)
+			say(gameforge.patrol_townaround._60_say)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._70_sayReward)
+			setstate(patrol2_purple_step5)
+		end
+	end
+	state patrol2_purple_step3 begin
+		when letter begin
+			target.pos("__TARGET__", 830, 630, 21, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._80_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._80_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._80_makequestbutton)
+			say(gameforge.patrol_townaround._90_say)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._100_sayReward)
+			setstate(patrol2_purple_step4)
+		end
+	end
+	state patrol2_purple_step2 begin
+		when letter begin
+			target.pos("__TARGET__", 640, 510, 21, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._110_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._110_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._110_makequestbutton)
+			say(gameforge.patrol_townaround._120_say)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._130_sayReward)
+			setstate(patrol2_purple_step3)
+		end
+	end
+	state patrol2_purple_step1 begin
+		when letter begin
+			target.pos("__TARGET__", 485, 640, 21, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._140_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._140_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._140_makequestbutton)
+			say(gameforge.patrol_townaround._150_say)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._160_sayReward)
+			setstate(patrol2_purple_step2)
+		end
+	end
+	state patrol3_blue_step4 begin
+		when letter begin
+			target.pos("__TARGET__", 355, 530, 41, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._40_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._40_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._40_makequestbutton)
+			say(gameforge.patrol_townaround._60_say)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._70_sayReward)
+			setstate(reward)
+		end
+	end
+	state patrol3_blue_step3 begin
+		when letter begin
+			target.pos("__TARGET__", 665, 510, 41, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._80_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._80_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._80_makequestbutton)
+			say(gameforge.patrol_townaround._90_say)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._100_sayReward)
+			setstate(patrol3_blue_step4)
+		end
+	end
+	state patrol3_blue_step2 begin
+		when letter begin
+			target.pos("__TARGET__", 610, 780, 41, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._110_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._110_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._110_makequestbutton)
+			say(gameforge.patrol_townaround._120_say)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._130_sayReward)
+			setstate(patrol3_blue_step3)
+		end
+	end
+	state patrol3_blue_step1 begin
+		when letter begin
+			target.pos("__TARGET__", 480, 640, 41, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._140_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._140_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._140_makequestbutton)
+			say(gameforge.patrol_townaround._150_say)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._160_sayReward)
+			setstate(patrol3_blue_step2)
+		end
+	end
+	state patrol3_yellow_step5 begin
+		when letter begin
+			target.pos("__TARGET__", 210, 710, 41, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._10_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._10_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._10_makequestbutton)
+			say(gameforge.patrol_townaround._20_sayReward)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._30_say)
+			setstate(reward)
+		end
+	end
+	state patrol3_yellow_step4 begin
+		when letter begin
+			target.pos("__TARGET__", 180, 580, 41, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._40_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._40_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._40_makequestbutton)
+			say(gameforge.patrol_townaround._60_say)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._70_sayReward)
+			setstate(patrol3_yellow_step5)
+		end
+	end
+	state patrol3_yellow_step3 begin
+		when letter begin
+			target.pos("__TARGET__", 200, 350, 41, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._80_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._80_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._80_makequestbutton)
+			say(gameforge.patrol_townaround._90_say)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._100_sayReward)
+			setstate(patrol3_yellow_step4)
+		end
+	end
+	state patrol3_yellow_step2 begin
+		when letter begin
+			target.pos("__TARGET__", 360, 450, 41, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._110_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._110_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._110_makequestbutton)
+			say(gameforge.patrol_townaround._120_say)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._130_sayReward)
+			setstate(patrol3_yellow_step3)
+		end
+	end
+	state patrol3_yellow_step1 begin
+		when letter begin
+			target.pos("__TARGET__", 355, 530, 41, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._140_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._140_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._140_makequestbutton)
+			say(gameforge.patrol_townaround._150_say)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._160_sayReward)
+			setstate(patrol3_yellow_step2)
+		end
+	end
+	state patrol3_gray_step5 begin
+		when letter begin
+			target.pos("__TARGET__", 610, 780, 41, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._10_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._10_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._10_makequestbutton)
+			say(gameforge.patrol_townaround._20_sayReward)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._30_say)
+			setstate(reward)
+		end
+	end
+	state patrol3_gray_step4 begin
+		when letter begin
+			target.pos("__TARGET__", 645, 1010, 41, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._40_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._40_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._40_makequestbutton)
+			say(gameforge.patrol_townaround._60_say)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._70_sayReward)
+			setstate(patrol3_gray_step5)
+		end
+	end
+	state patrol3_gray_step3 begin
+		when letter begin
+			target.pos("__TARGET__", 450, 930, 41, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._80_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._80_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._80_makequestbutton)
+			say(gameforge.patrol_townaround._90_say)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._100_sayReward)
+			setstate(patrol3_gray_step4)
+		end
+	end
+	state patrol3_gray_step2 begin
+		when letter begin
+			target.pos("__TARGET__", 420, 820, 41, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._110_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._110_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._110_makequestbutton)
+			say(gameforge.patrol_townaround._120_say)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._130_sayReward)
+			setstate(patrol3_gray_step3)
+		end
+	end
+	state patrol3_gray_step1 begin
+		when letter begin
+			target.pos("__TARGET__", 380, 690, 41, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._140_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._140_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._110_makequestbutton)
+			say(gameforge.patrol_townaround._150_say)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._160_sayReward)
+			setstate(patrol3_gray_step2)
+		end
+	end
+	state patrol3_purple_step4 begin
+		when letter begin
+			target.pos("__TARGET__", 445, 845, 41, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._40_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._40_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._40_makequestbutton)
+			say(gameforge.patrol_townaround._60_say)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._70_sayReward)
+			setstate(reward)
+		end
+	end
+	state patrol3_purple_step3 begin
+		when letter begin
+			target.pos("__TARGET__", 210, 710, 41, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._80_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._80_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._80_makequestbutton)
+			say(gameforge.patrol_townaround._90_say)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._100_sayReward)
+			setstate(patrol3_purple_step4)
+		end
+	end
+	state patrol3_purple_step2 begin
+		when letter begin
+			target.pos("__TARGET__", 360, 410, 41, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._110_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._110_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._110_makequestbutton)
+			say(gameforge.patrol_townaround._120_say)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._130_sayReward)
+			setstate(patrol3_purple_step3)
+		end
+	end
+	state patrol3_purple_step1 begin
+		when letter begin
+			target.pos("__TARGET__", 545, 645, 41, "")
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._140_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._140_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.patrol_townaround._140_makequestbutton)
+			say(gameforge.patrol_townaround._150_say)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say_reward(gameforge.patrol_townaround._160_sayReward)
+			setstate(patrol3_purple_step2)
+		end
+	end
+	state start begin
+		when 20300.chat.gameforge.patrol_townaround._360_npcChat
+			or 20301.chat.gameforge.patrol_townaround._360_npcChat
+			with pc.get_empire()==1 and pc.job==0 and pc.level<=5 begin
+			setstate(accept)
+		end
+		when 20302.chat.gameforge.patrol_townaround._360_npcChat
+			or 20303.chat.gameforge.patrol_townaround._360_npcChat
+			with pc.get_empire()==1 and pc.job==1 and pc.level<=5 begin
+			setstate(accept)
+		end
+		when 20304.chat.gameforge.patrol_townaround._360_npcChat
+			or 20305.chat.gameforge.patrol_townaround._360_npcChat
+			with pc.get_empire()==1 and pc.job==2 and pc.level<=5 begin
+			setstate(accept)
+		end
+		when 20306.chat.gameforge.patrol_townaround._360_npcChat
+			or 20307.chat.gameforge.patrol_townaround._360_npcChat
+			with pc.get_empire()==1 and pc.job==3 and pc.level<=5 begin
+			setstate(accept)
+		end
+		when 20320.chat.gameforge.patrol_townaround._360_npcChat
+			or 20321.chat.gameforge.patrol_townaround._360_npcChat
+			with pc.get_empire()==2 and pc.job==0 and pc.level<=5 begin
+			setstate(accept)
+		end
+		when 20322.chat.gameforge.patrol_townaround._360_npcChat
+			or 20323.chat.gameforge.patrol_townaround._360_npcChat
+			with pc.get_empire()==2 and pc.job==1 and pc.level<=5 begin
+			setstate(accept)
+		end
+		when 20324.chat.gameforge.patrol_townaround._360_npcChat
+			or 20325.chat.gameforge.patrol_townaround._360_npcChat
+			with pc.get_empire()==2 and pc.job==2 and pc.level<=5 begin
+			setstate(accept)
+		end
+		when 20326.chat.gameforge.patrol_townaround._360_npcChat
+			or 20327.chat.gameforge.patrol_townaround._360_npcChat
+			with pc.get_empire()==2 and pc.job==3 and pc.level<=5 begin
+			setstate(accept)
+		end
+		when 20340.chat.gameforge.patrol_townaround._360_npcChat
+			or 20341.chat.gameforge.patrol_townaround._360_npcChat
+			with pc.get_empire()==3 and pc.job==0 and pc.level<=5 begin
+			setstate(accept)
+		end
+		when 20342.chat.gameforge.patrol_townaround._360_npcChat
+			or 20343.chat.gameforge.patrol_townaround._360_npcChat
+			with pc.get_empire()==3 and pc.job==1 and pc.level<=5 begin
+			setstate(accept)
+		end
+		when 20344.chat.gameforge.patrol_townaround._360_npcChat
+			or 20345.chat.gameforge.patrol_townaround._360_npcChat
+			with pc.get_empire()==3 and pc.job==2 and pc.level<=5 begin
+			setstate(accept)
+		end
+		when 20346.chat.gameforge.patrol_townaround._360_npcChat
+			or 20347.chat.gameforge.patrol_townaround._360_npcChat
+			with pc.get_empire()==3 and pc.job==3 and pc.level<=5 begin
+			setstate(accept)
+		end
+	end
+	state accept begin
+		function get_title()
+			if pc.get_empire() == 1 then
+				return gameforge.patrol_townaround._370_makequestbutton
+			elseif pc.get_empire() == 2 then
+				return gameforge.patrol_townaround._400_makequestbutton
+			elseif pc.get_empire() == 3 then
+				return gameforge.patrol_townaround._410_makequestbutton
+			end
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			local title = patrol_townaround.get_title()
+			makequestbutton(title)
+			q.set_title(title)
+
+			q.start()
+		end
+		when button or info begin
+			if pc.get_empire() == 1 then
+				say_title(gameforge.patrol_townaround._370_makequestbutton)
+				if is_test_server() then
+					local s= select(gameforge.patrol_townaround._380_select, gameforge.patrol_townaround._385_select, gameforge.patrol_townaround._390_select, gameforge.patrol_townaround._395_select)
+					if 1==s then
+						setstate(patrol1_blue_step1)
+					elseif 2==s then
+						setstate(patrol1_yellow_step1)
+					elseif 3==s then
+						setstate(patrol1_gray_step1)
+					elseif 4==s then
+						setstate(patrol1_purple_step1)
+					end
+				else
+					local s=number(1, 4)
+					if 1>=s then -- 80.00% (1/4)
+						setstate(patrol1_blue_step1)
+					elseif 2>=s then --80,00% (1/4)
+						setstate(patrol1_yellow_step1)
+					elseif 3>=s then --80,00% (1/4)
+						setstate(patrol1_gray_step1)
+					elseif 4>=s then -- 80.00% (1/4)
+						setstate(patrol1_purple_step1)
+					end
+				end
+			elseif pc.get_empire() == 2 then
+				say_title(gameforge.patrol_townaround._400_makequestbutton)
+				if is_test_server() then
+					local s= select(gameforge.patrol_townaround._380_select, gameforge.patrol_townaround._385_select, gameforge.patrol_townaround._390_select, gameforge.patrol_townaround._395_select)
+					if 1==s then
+						setstate(patrol2_blue_step1)
+					elseif 2==s then
+						setstate(patrol2_yellow_step1)
+					elseif 3==s then
+						setstate(patrol2_gray_step1)
+					elseif 4==s then
+						setstate(patrol2_purple_step1)
+					end
+				else
+					local s=number(1, 4)
+					if 1>=s then -- 80.00% (1/4)
+						setstate(patrol2_blue_step1)
+					elseif 2>=s then --80,00% (1/4)
+						setstate(patrol2_yellow_step1)
+					elseif 3>=s then --80,00% (1/4)
+						setstate(patrol2_gray_step1)
+					elseif 4>=s then -- 80.00% (1/4)
+						setstate(patrol2_purple_step1)
+					end
+				end
+			elseif pc.get_empire() == 3 then
+				say_title(gameforge.patrol_townaround._410_makequestbutton)
+				if is_test_server() then
+					local s= select(gameforge.patrol_townaround._380_select, gameforge.patrol_townaround._385_select, gameforge.patrol_townaround._390_select, gameforge.patrol_townaround._395_select)
+					if 1==s then
+						setstate(patrol3_blue_step1)
+					elseif 2==s then
+						setstate(patrol3_yellow_step1)
+					elseif 3==s then
+						setstate(patrol3_gray_step1)
+					elseif 4==s then
+						setstate(patrol3_purple_step1)
+					end
+				else
+					local s=number(1, 4)
+					if 1>=s then -- 80.00% (1/4)
+						setstate(patrol3_blue_step1)
+					elseif 2>=s then --80,00% (1/4)
+						setstate(patrol3_yellow_step1)
+					elseif 3>=s then --80,00% (1/4)
+						setstate(patrol3_gray_step1)
+					elseif 4>=s then -- 80.00% (1/4)
+						setstate(patrol3_purple_step1)
+					end
+				end
+			end
+		end
+	end
+	
+	state reward begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.patrol_townaround._420_makequestbutton)
+			q.set_title(gameforge.patrol_townaround._420_makequestbutton)
+			q.start()
+		end
+		when button begin
+			say_title(gameforge.patrol_townaround._420_makequestbutton)
+			say_reward(gameforge.patrol_townaround._430_sayReward)
+			pc.give_exp2(135)
+			set_quest_state("levelup", "run")
+			setstate(__COMPLETE__)
+			q.done()
+		end
+	end
+	state __COMPLETE__ begin
+		when enter begin
+			q.done()
+		end
+	end
+end
+

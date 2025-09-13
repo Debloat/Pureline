@@ -1,0 +1,81 @@
+quest cube_opener_list begin
+    state start begin
+		when 20378.take begin
+			-- special case 
+			local vnum = item.get_vnum()
+			local upgrade_list = {
+				[11299] = 20000,
+				[11499] = 20250,
+				[11699] = 20500,
+				[11899] = 20750,
+			}
+
+			local material_list = { 
+				{
+					["vnum"] = 70031,
+					["count"] = 3,
+				},
+				{
+					["vnum"] = 51001,
+					["count"] = 100,
+				},
+				{
+					["vnum"] = 25040,
+					["count"] = 2,
+				},
+			}
+
+			
+			local can_change = true 
+
+			if 11299 == vnum or 11499 == vnum or 11699 == vnum or 11899  == vnum then
+				say_title(mob_name(20378))
+				say(string.format(gameforge.cube_opener_list._010_say, item_name(vnum)))
+				say_title(gameforge.cube_opener_list._020_sayTitle)
+				for i, material in ipairs(material_list) do
+					say("  " .. item_name(material.vnum) .. " " .. locale.count_prefix .. material.count .. " " .. locale.count_postfix .. "")
+					can_change = can_change and (material.count <= pc.count_item(material.vnum)) 
+				end
+
+				say("")
+				say_title(gameforge.cube_opener_list._030_say)
+				say_item_vnum(upgrade_list[vnum])
+				say("")
+				wait()
+
+				if true == can_change then
+					say_title(mob_name(20378))
+					say(string.format(gameforge.cube_opener_list._040_say, item_name(vnum),item_name(upgrade_list[vnum])))
+					say_reward(locale.reward)
+					say_item_vnum(upgrade_list[vnum])
+					say("")
+					
+					local s = select(locale.yes, locale.no)
+					if s == 1 then
+						item.copy_and_give_before_remove(upgrade_list[vnum])
+						for i, material in ipairs(material_list) do
+							pc.remove_item(material.vnum, material.count)
+						end
+					end
+					return
+				else
+					say_title(mob_name(20378))
+					say(gameforge.cube_opener_list._050_say)	
+					return
+				end
+
+			end
+		end
+		
+        when
+            20383.take or
+            20018.take or
+            20017.take or
+            20015.take
+        begin
+
+            command("cube open")
+        end
+    end
+end
+

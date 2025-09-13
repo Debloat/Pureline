@@ -1,0 +1,148 @@
+
+quest subquest_34 begin
+	state start begin
+		when login or levelup or enter with pc.get_level() >=40  and pc.get_level() <= 42 begin
+			set_state( information )
+		end
+	end
+
+	state information begin
+		when letter begin
+					
+			local v = find_npc_by_vnum(20355)
+
+			if v != 0 then
+				target.vid("__TARGET__", v, gameforge.subquest_16._320_makequestbutton)
+			end
+		end
+
+				
+		when __TARGET__.target.click or	20355.chat.gameforge.subquest_34._10_npcChat with pc.level >= 40  begin
+			target.delete("__TARGET__")
+			say_title(gameforge.subquest_34._20_sayTitle)
+			say(gameforge.subquest_34._30_say)
+			wait()
+			say_title(gameforge.subquest_34._20_sayTitle)
+			say(gameforge.subquest_34._40_say)
+			local s= select(gameforge.subquest_31._50_select, gameforge.locale.cancel)
+			if 2==s then
+				say(gameforge.subquest_34._50_say)
+				local a= select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
+				if  2==a then
+					say_title(gameforge.main_quest_lv10._30_sayTitle)
+					say(gameforge.subquest_34._60_say)
+					return
+				end
+				say_title(gameforge.main_quest_lv10._30_sayTitle)
+				say(gameforge.subquest_34._70_say)
+				set_state(__GIVEUP__)
+				return
+			end
+			say_title(gameforge.main_quest_lv10._30_sayTitle)
+			say(gameforge.subquest_34._80_say)
+			set_state(bye_blackwind)
+		end	
+	end
+	state bye_blackwind begin
+		when letter begin
+			send_letter(gameforge.subquest_34._90_sendLetter)
+		end
+
+		when info or button begin
+			say_title(gameforge.subquest_34._90_sendLetter)
+			say(gameforge.subquest_34._100_say)
+		end
+		when 20355.chat.gameforge.subquest_34._90_sendLetter with pc.level >=32 begin
+			say_title(gameforge.subquest_34._20_sayTitle)
+			say(gameforge.subquest_34._110_say)
+			local s= select(gameforge.subquest_34._120_select, gameforge.subquest_31._180_select)
+			if 2==s then
+				say(gameforge.subquest_34._130_say)
+				local a= select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
+				if  2==a then
+					say_title(gameforge.main_quest_lv10._30_sayTitle)
+					say(gameforge.subquest_34._140_say)
+					return
+				end
+				say_title(gameforge.main_quest_lv10._30_sayTitle)
+				say(gameforge.subquest_34._150_say)
+				set_state(__GIVEUP__)
+				return
+			end
+			say_title(gameforge.main_quest_lv10._30_sayTitle)
+			say(gameforge.subquest_34._160_say)
+		end
+		
+	
+		when 404.kill begin
+			pc.setqf("kill_m1",1)
+				
+			if	pc.getqf("kill_m1")==1	and	pc.getqf("kill_m2")==1 and	pc.getqf("kill_m3")==1	then
+				set_state(hunt_reward)
+			end
+			return
+		end
+		when 405.kill begin
+				pc.setqf("kill_m2",1)
+			
+				if	pc.getqf("kill_m1")==1	and	pc.getqf("kill_m2")==1 and	pc.getqf("kill_m3")==1	then
+					set_state(hunt_reward)
+				end
+				return
+
+		end
+
+		when 406.kill begin
+			pc.setqf("kill_m3",1)
+			
+			if	pc.getqf("kill_m1")==1	and	pc.getqf("kill_m2")==1 and	pc.getqf("kill_m3")==1	then
+				set_state(hunt_reward)
+			end
+			return
+				
+		end
+	
+			
+	end
+	
+	state hunt_reward begin
+		when letter begin
+			send_letter(gameforge.subquest_34._170_targetVid)
+		
+			local v = find_npc_by_vnum(20355)
+
+			if v != 0 then
+				target.vid("__TARGET__", v, gameforge.subquest_34._170_targetVid)
+			end
+		end
+
+		when info or button begin
+			say_title(gameforge.subquest_34._170_targetVid)
+			say(gameforge.subquest_34._180_say)
+		end
+		
+		when __TARGET__.target.click or	20355.chat.gameforge.subquest_34._185_npcChat begin
+			target.delete("__TARGET__")
+			say_title(gameforge.subquest_34._20_sayTitle)
+			say(gameforge.subquest_34._190_say)
+			say_reward(gameforge.subquest_34._200_sayReward)
+			pc.give_item2(71007)
+			
+			say_reward(gameforge.subquest_34._210_sayReward)
+			pc.give_exp2(1000000)
+			
+			set_state(__COMPLETE__)
+			clear_letter()	
+
+			pc.setqf("kill_m1",0)
+			pc.setqf("kill_m2",0)
+			pc.setqf("kill_m3",0)
+		end
+
+		end
+	state __GIVEUP__ begin
+	end
+	state __COMPLETE__ begin
+	end
+end
+

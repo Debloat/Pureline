@@ -1,0 +1,28 @@
+quest horse_guard begin
+	state start begin
+		when 20349.chat.gameforge.horse_guard._10_npcChat begin
+			say_title(gameforge.horse_levelup._240_sayTitle)
+			local s=number(1, 7)
+			if 1>=s then -- 14.29% (1/7)
+				say(gameforge.horse_guard._20_say)
+			elseif 2>=s then -- 14.29% (1/7)
+				say(gameforge.horse_guard._30_say)
+			elseif 3>=s then -- 14.29% (1/7)
+				say(gameforge.horse_guard._40_say)
+			elseif 4>=s then -- 14.29% (1/7)
+				say(gameforge.horse_guard._50_say)
+			elseif 5>=s then -- 14.29% (1/7)
+				say(gameforge.horse_guard._60_say)
+			elseif 6>=s then -- 14.29% (1/7)
+				say(gameforge.horse_guard._70_say)
+			elseif 7>=s then -- 14.29% (1/7)
+				say(gameforge.horse_guard._80_say)
+			end
+		end
+	end
+	state __COMPLETE__ begin
+		when enter begin
+			q.done()
+		end
+	end
+end

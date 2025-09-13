@@ -1,0 +1,57 @@
+quest ride_mount_change begin
+	
+	state start begin
+		when 20090.chat.gameforge.ride_mount_change._010_npcChat with pc.get_map_index() == 72 begin 
+			say_pc_name()
+			say (gameforge.ride_mount_change._020_say)
+			
+			say_title(gameforge.ride_mount_change._030_sayTitle)
+			say(gameforge.ride_mount_change._040_say)
+			
+			local answer = select(gameforge.ride_mount_change._050_select, gameforge.ride_mount_change._060_select)
+			
+			if answer == 2 then
+				return
+			
+			else
+				local pclevel = pc.level
+				
+				local aVnum = pc.count_item(71114) 
+				local bVnum = pc.count_item(71116) 
+				local cVnum = pc.count_item(71118) 
+				local dVnum = pc.count_item(71120) 
+				
+				if pclevel < 85 then
+					if pclevel >= 75 and pclevel < 80 then
+						
+						if bVnum >= 1 or cVnum >=1 or dVnum >=1 then
+							pc.remove_item(71116, bVnum) 
+							pc.remove_item(71118, cVnum) 
+							pc.remove_item(71120, dVnum) 
+							pc.give_item2(71114, dVnum+cVnum+bVnum)
+						else 
+							return
+						end
+						
+						
+					else 
+						local a = number(1,2)
+						
+						if cVnum >=1 or dVnum >=1 then
+							if a == 1 then
+								pc.remove_item(71118, cVnum) 
+								pc.remove_item(71120, dVnum) 
+								pc.give_item2(71114, dVnum+cVnum)
+							else
+								pc.remove_item(71118, cVnum) 
+								pc.remove_item(71120, dVnum) 
+								pc.give_item2(71116, dVnum+cVnum)
+							end
+						end
+					end
+				end
+			end
+		end
+	end
+end
+

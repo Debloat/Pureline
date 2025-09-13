@@ -1,0 +1,145 @@
+quest main_quest_lv30 begin
+	state start begin
+	end
+	state run begin
+		when login or levelup or enter begin
+			if pc.get_level() >= 30 then 				
+				setstate( gotoeUriel )		
+			end
+		end
+	end
+	state gotoeUriel begin
+		when letter begin
+			local v=find_npc_by_vnum(20011)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, gameforge.main_quest_lv30._10_targetVid)
+			end
+		end
+		when letter begin
+			send_letter(gameforge.main_quest_lv30._20_sendLetter)
+		end
+		when info or  button begin
+			say_title(gameforge.main_quest_lv30._20_sendLetter)
+			say(gameforge.main_quest_lv30._30_say)
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+			say_title(gameforge.main_quest_lv30._40_sayTitle)
+			say(gameforge.main_quest_lv30._50_say)
+   			wait()
+			say_title(gameforge.main_quest_lv30._40_sayTitle)
+			say(gameforge.main_quest_lv30._60_say)
+			
+			setstate( clickstone )
+			q.done()
+		end
+	end
+	state clickstone begin
+		when letter begin
+			local v=find_npc_by_vnum(20352)
+			if 0==v then
+			else
+				target.vid("__TARGET1__", v, gameforge.main_quest_lv30._80_targetVid)
+			end
+		end
+		when letter begin
+			send_letter(gameforge.main_quest_lv30._20_sendLetter)
+		end
+		when info or  button begin
+			say_title(gameforge.main_quest_lv30._20_sendLetter)
+			say(gameforge.main_quest_lv30._90_say)
+		end
+		when __TARGET1__.target.click begin
+			target.delete("__TARGET1__")
+			say_title(gameforge.main_quest_lv30._20_sendLetter)
+			say(gameforge.main_quest_lv30._100_say)
+			setstate(gotoeUriel2)
+		end
+	end
+	state gotoeUriel2 begin
+		when letter begin
+			local v=find_npc_by_vnum(20011)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, gameforge.main_quest_lv30._10_targetVid)
+			end
+		end
+		when letter begin
+			send_letter(gameforge.main_quest_lv30._20_sendLetter)
+		end
+		when info or button begin
+			say_title(gameforge.main_quest_lv30._20_sendLetter)
+			say(gameforge.main_quest_lv30._110_say)
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+			say_title(gameforge.main_quest_lv30._40_sayTitle)
+		   	say(gameforge.main_quest_lv30._120_say)
+			wait()
+			say_title(gameforge.main_quest_lv30._40_sayTitle)
+			say(gameforge.main_quest_lv30._130_say)
+
+			set_state (clickplace)
+		end
+	end
+	state clickplace begin
+		when letter begin
+			local v=find_npc_by_vnum(20353)
+			if 0==v then
+			else
+				target.vid("__TARGET2__", v, gameforge.main_quest_lv30._140_targetVid)
+			end
+		end
+		when letter begin
+           		send_letter(gameforge.main_quest_lv30._20_sendLetter)
+		end
+		when info or  button begin
+			say_title(gameforge.main_quest_lv30._20_sendLetter)
+			say(gameforge.main_quest_lv30._150_say)
+		end
+		when __TARGET2__.target.click begin
+			target.delete("__TARGET2__")
+			say_title(gameforge.main_quest_lv30._20_sendLetter)
+			say(gameforge.main_quest_lv30._100_say)
+			setstate(gotoeUriel3)
+			q.done()
+		end
+	end
+	state gotoeUriel3 begin
+		when letter begin
+			local v=find_npc_by_vnum(20011)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, gameforge.main_quest_lv30._10_targetVid)
+			end
+		end
+		when letter begin
+			send_letter(gameforge.main_quest_lv30._20_sendLetter)
+		end
+		when info or  button begin
+			say_title(gameforge.main_quest_lv30._20_sendLetter)
+			say(gameforge.main_quest_lv30._110_say)
+		end
+		when __TARGET__.target.click begin
+			pc.give_exp2( 420000 )
+			pc.change_money( 20000 )
+			target.delete("__TARGET__")
+			say_title(gameforge.main_quest_lv30._40_sayTitle)
+			say(gameforge.main_quest_lv30._160_say)
+			say_title(gameforge.locale.reward)
+			say_reward(gameforge.main_quest_lv30._70_sayReward)
+			clear_letter()
+			set_state (__COMPLETE__)
+			set_quest_state("main_quest_lv32","run")
+			q.done()
+		end
+	end
+	state __COMPLETE__ begin
+		when enter begin
+			q.done()
+		end
+	end
+end
+
+

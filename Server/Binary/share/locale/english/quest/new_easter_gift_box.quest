@@ -1,0 +1,74 @@
+quest new_easter_gift_box begin
+	state start begin
+		function gift ()
+--			local pct_table = {2, 9, 16, 18, 25, 36, 42, 48, 54, 60, 66, 77, 86, 94, 100}
+--			local gift_table = {72308, 71085, 70024, 71026, 71084, 71108, 70003, 72723, 72727, 71004, 71094, 70102, 27982, 27983, 27984}
+--			local gift_cont = {1,1,1,1,1,5,1,1,1,5,1,1,1,1,1}
+			local n = number (1,100)
+			if n <= 1 then
+				pc.give_item2(72308,1)
+			elseif n <= 5 then
+				pc.give_item2(71085,1)
+			elseif n <= 9 then
+				pc.give_item2(70024,1)
+			elseif n <= 10 then
+				pc.give_item2(71026,1)
+			elseif n <= 14 then
+				pc.give_item2(71084,1)
+			elseif n <= 20 then
+				pc.give_item2(71108,5)
+			elseif n <= 23 then
+				pc.give_item2(70003,1)
+			elseif n <= 26 then
+				pc.give_item2(72723,1)
+			elseif n <= 29 then
+				pc.give_item2(72727,1)
+			elseif n <= 32 then
+				pc.give_item2(71004,5)
+			elseif n <= 35 then
+				pc.give_item2(71094,1)
+			elseif n <= 40 then
+				pc.give_item2(70102,1)
+			elseif n <= 46 then
+				pc.give_item2(27992,1)
+			elseif n <= 51 then
+				pc.give_item2(27993,1)
+			elseif n <= 55 then
+				pc.give_item2(27994,1)
+			elseif n <= 66 then
+				pc.changegold (10000)
+			elseif n <= 76 then
+				pc.changegold (20000)
+			elseif n <= 85 then
+				pc.changegold (30000)
+			elseif n <= 93 then
+				pc.changegold (50000)
+			else
+				pc.changegold (100000)
+			end
+
+		end
+
+		-- ¸¶¹ýÀÇ ´Þ°¿: 71150
+		when 71150.use begin
+			-- local t = get_global_time() - item.get_socket(1)
+			-- local n = item.get_socket (0)
+			-- if t >= 1800 then
+			-- --if t >= 60 then
+				 new_easter_gift_box.gift()
+				-- item.set_socket(1, get_global_time())
+				-- if n == 9 then
+				 item.remove()
+				-- else
+					-- item.set_socket(0, n + 1)
+				-- end
+				-- syschat (string.format (locale.remain_count_in_max_count, 10, 9 - n))
+			-- else
+				-- syschat (string.format (locale.remain_count_in_max_count, 10, 10 - n))
+				-- chat(string.format (locale.item_can_reuse_time, 31 - t / 60))
+			-- end
+		end
+
+	end
+end
+

@@ -1,0 +1,346 @@
+1	1	Czy plecak Domokr¹¿cy posiada zamek?
+1	2	Czy w Krainie Gigantów mo¿na zdobyæ Kulê Polimorfii?
+1	3	Czy z Przekl. Nieb. Alfa Wilka mo¿na wydropiæ Futro Wilka?
+1	4	Czy z potwora Yeti mo¿na wydropiæ Futro Yeti?
+1	5	Czy lodowe kulki mo¿na zdobyæ jedynie przy Górze Sohan?
+1	6	Czy £zê Bogini mo¿na znaleŸæ wy³¹cznie w skrzyniach?
+1	7	Czy Kamieñ Duszy Przysp. na poziomie 3 zwiêksza szybkoœæ ruchu o 30?
+1	8	Czy Per³y zazwyczaj przydzielaj¹ bonus INT?
+1	9	Czy istnieje zbroja od poziomu 12?
+1	10	Czy w Œwi¹tyni Hwang mo¿na natrafiæ na ¯y³y Jadeitu?
+1	11	Czy Dolina Seungryong posiada 22 mosty?
+1	12	Czy Metin2 posiada osiem klas?
+1	13	Czy w Metin2 wystêpuje Dykta?
+1	14	Czy istnieje przedmiot o nazwie Ozdobny Diament?
+1	15	Czy istnieje umiejêtnoœæ o nazwie Sza³ Aury?
+1	16	Czy istnieje bonus o nazwie Uzdrawianie?
+1	17	Czy istnieje przedmiot o nazwie Koreañskie Fajerwerki?
+1	18	Czy istnieje œrednia Ksiêga Misji?
+1	19	Czy istnieje ¯y³a Ametystu?
+1	20	Czy istnieje specjalna mapa do walk treningowych?
+1	21	Czy na prawym ramieniu teleportera siedzi ptak?
+1	22	Czy istnieje Drewniana Zbroja?
+1	23	Czy istnieje Ognisty Feniks?
+1	24	Czy istnieje Nauczyciel Fechtunku?
+1	25	Czy istniej¹ orki?
+1	26	Czy na drugiej mapie znajduje siê Rybak?
+1	27	Czy w ka¿dy królestwie jest tylko jeden Stajenny?
+1	28	Czy w Metin2 mo¿na mieæ zwierzaki?
+1	29	Czy w Metin2 s¹ psy?
+1	30	Czy w ka¿dym królestwie jest po tyle samo rybaków?
+1	31	Czy w Metin2 s¹ Ciastka Ry¿owe?
+1	32	Czy na drugiej mapie jest rynek?
+1	33	Czy w Metin2 jest Mleczny Sok?
+1	34	Czy tylko na obszarze gildii s¹ przeklête zwierzêta?
+1	35	Czy Bera atakuje bez prowokacji?
+1	36	Czy Beran-Setaou zabi³ swoj¹ siostrê?
+1	37	Czy ekwipunek posiada 90 slotów?
+1	38	Czy wartoœæ ataku Bambusowej Strza³y wynosi 10?
+1	39	Czy Bestialski Arahan posiada poziom 53?
+1	40	Czy G³odny Zab³¹kany Pies posiada poziom 1?
+1	41	Czy dozorca magazynu nosi niebiesk¹ wstêgê na w³osach?
+1	42	Czy kowal nosi fartuch?
+1	43	Czy Umar³y Rozpruwacz posiada poziom Boss?
+1	44	Czy Elit. Ork Genera³ nosi ³añcuch z szeœcioma wisiorkami?
+1	45	Czy Starsza Pani ma siostrê?
+1	46	Czy Metin2 posiada swoje forum?
+1	47	Czy Mirine ma czarne oczy?
+1	48	Czy Umar³y Rozpruwacz mieszka w Wie¿y Demonów?
+1	49	Czy duch Sury w drugiej grocie ma na imiê Akuma?
+1	50	Czy Bahar-Taraji jest najm³odsza z rodzeñstwa bogów?
+1	51	Czy Bahar-Taraji jest bogini¹ równowagi?
+1	52	Czy Baljit-Elvedin jest najstarszy z rodzeñstwa bogów?
+1	53	Czy Baljit-Elvedin jest bogiem równowagi?
+1	54	Czy potwór o nazwie Hae-Tae jest bossem?
+1	55	Czy Elit. Ezot. Wojownik posiada poziom 54?
+1	56	Czy Przeklêtego Czerw. Dzika mo¿na napotkaæ w siedmiu ró¿nych obszarach??
+1	57	Czy w Miedziany Dzwon mo¿na wyposa¿yæ siê od poziomu 5?
+1	58	Czy Czerw. Zbroja Hwang jest dla wojowników?
+1	59	Czy na pustyni jest jasno tak¿e w nocy?
+1	60	Czy Soon jest molem ksi¹¿kowym?
+1	61	Czy Kowal mo¿e zniszczyæ przedmioty podczas próby ulepszenia?
+1	62	Czy Olbrzymi ¯ó³w mo¿e ukazaæ siê na drugiej mapie?
+1	63	Czy mo¿na wydobywaæ diamenty?
+1	64	Czy w Metin2 mo¿na wzi¹æ œlub?
+1	65	Czy w Metin2 mo¿na tañczyæ?
+1	66	Czy maj¹c 16 lat mo¿na zostaæ GM?
+1	67	Czy od poziomu 15 mo¿na wo³aæ na czacie?
+1	68	Czy maj¹c poziom 17 mo¿na osi¹gn¹æ swojego pierwszego mistrza?
+1	69	Czy maj¹c poziom 52 mo¿na mieæ trzech mistrzów?
+1	70	Czy maj¹c poziom 55 mo¿na wydropiæ cokolwiek z Metina o poziomie 5?
+1	71	Czy maj¹c poziom konia 9 mo¿na u¿ywaæ umiejêtnoœci konnych?
+1	72	Czy mo¿na zostawiæ swojego zwierzaka w hotelu dla zwierz¹t?
+1	73	Czy mo¿na zawiesiæ na drzewie skarpetki?
+1	74	Czy mo¿na ulepszyæ Kamienie Duszy?
+1	75	Czy z ka¿dego potwora mo¿na wydropiæ Kulê Polimorfii?
+1	76	Czy mo¿na w grze wydropiæ ka¿dy rodzaj Zielonych Mikstur?
+1	77	Czy Grzyby Tue mo¿e potrafi przygotowywaæ tylko Huahn-So?
+1	78	Czy GMi leveluj¹ graczy?
+1	79	Czy w Dolinie Seungryong le¿¹ zw³oki?
+1	80	Czy w misji 'Pamiêtnik Legendy' trzeba zebraæ 16 Stronic Ksiêgi?
+1	81	Czy Pas Króla+5 daje 6 slotów w ekwipunku?
+1	82	Czy Heuk-Young posiada wygl¹d wojownika?
+1	83	Czy Krêtymi Kluczami mo¿na handlowaæ?
+1	84	Czy w Krainie Gigantów le¿¹ 42 zw³oki?
+1	85	Czy na obszarze gildii znajduje siê Teleporter?
+1	86	Czy w Krainie Gigantów znajduje siê Teleporter?
+1	87	Czy gracz z negatywn¹ rang¹ zu¿ywa przy pomyœlnym przeczytaniu Kamienia Duchowego z G5 na G6 4500 punktów rangi?
+1	88	Czy gracz z pozytywn¹ rang¹ zu¿ywa przy pomyœlnym przeczytaniu Kamienia Duchowego z G5 na G6 3000 punktów rangi?
+1	89	Czy Handlarz Broni¹ sprzedaje stalowe strza³y?
+1	90	Czy mosty w Dolinie Orków zmieniaj¹ swoj¹ pozycjê?
+1	91	Czy jednostronny rozwód wymaga op³aty w wysokoœci 1kk Yang?
+1	92	Czy ¯urawi Wachlarz dropi z wilków?
+1	93	Czy aby wzi¹æ œlub, trzeba mieæ sukniê œlubn¹?
+1	94	Czy bonus 'Si³a w walce z diab³ami' dzia³a w walce z Podziemnymi Yeti?
+1	95	Czy Dziewiêæ Ogonów posiada poziom 73?
+1	96	Czy Bakra to wioska w królestwie Jinno?
+1	97	Czy Taurean znajduje siê w pierwszej wiosce?
+1	98	Czy ³owiæ ryby mo¿na dopiero od poziomu 30?
+1	99	Czy wziêcie œlubu wymaga co najmniej poziomu 30?
+1	100	Czy u Yang-Shin mo¿na kupiæ motykê?
+1	101	Czy Per³owej Bransoletki mo¿na u¿ywaæ od poziomu 28?
+1	102	Czy wszystkie postacie powy¿ej poziomu 40 maj¹ dostêp do Wie¿y Demonów?
+1	103	Czy Bokjung nale¿y do królestwa Shinsoo?
+1	104	Czy Wê¿owe Pole jest map¹ neutraln¹?
+1	105	Czy w Dolinie Seungryong mo¿na napotkaæ bossa o poziomie 55?
+1	106	Czy postaæ o poziomie 51 mo¿e wydropiæ z potworów Zwoje B³ogos³awieñstwa?
+1	107	Czy w Lesie Duchów mo¿na napotkaæ bossa o poziomie 80?
+1	108	Czy mo¿na upuœciæ Zbrojê z Niebieskiej Stali+9?
+1	109	Czy Szatê Smoka mo¿na wykonaæ ze Zbroi z Czarnej Stali+9?
+1	110	Czy mo¿na upuœciæ 1000 Yang?
+1	111	Czy Szatê Smoka mo¿na wykonaæ z Czarnej Szaty+9?
+1	112	Czy Czerwonego Smoka mo¿na zawsze napotkaæ w œwiecie Metin2?
+1	113	Czy w misji 'Badania Biologa 8' otrzymuje siê sta³y bonus do obra¿eñ 8%% w walce z innymi graczami?
+1	114	Czy w misji 'Badania Biologa 6' trzeba przynieœæ Chaegirabowi 30 Certyfikatów Tugyisa?
+1	115	Czy mo¿na w grze kupiæ zbrojê Hwang?
+1	116	Czy Zbrojê Z Nieb. Stali mo¿na wykonaæ ze Zbroi Z Czarnej Stali+9?
+1	117	Czy na Wê¿owym Polu znajduje siê Teleporter?
+1	118	Czy w Krainie Gigantów mo¿na napotkaæ Kamienie Metin o poziomach 75 i 80?
+1	119	Czy wejœcie do Krainy Gigantów znajduje siê na Wê¿owym Polu?
+1	120	Czy z Tysiêcznego Wojownika mo¿na wydropiæ broñ o nazwie Z³odziej Dusz?
+1	121	Czy Kraina Gigantów graniczy z Wê¿owym Polem?
+1	122	Czy Pustynne Lataj¹ce Oko posiada w³asne oko?
+1	123	Czy Tarcza Tytanów+9 posiada wy¿sz¹ wartoœæ obronn¹ ni¿ tarcze+9 o poziomie 61?
+1	124	Czy Sokola Tarcza+9 posiada wartoœæ obronn¹ w wysokoœci 153?
+1	125	Czy Drewniane Kolczyki daj¹ bonus P¯?
+1	126	Czy Ezoteryczny Przewodnik+ dropi jedynie z Ezot. Arahana i Ezot. Przyzywacza?
+1	127	Czy Miecz Nimfy posiada wy¿sz¹ szybkoœæ ataku ni¿ Miecz Bojowy?
+1	128	Czy z Silnej Lodowej WiedŸmy dropi¹ Krwiste Kamienie?
+1	129	Czy Beran-Setaou to NPC?
+1	130	Czy Lew w roli wierzchowca podwy¿sza wartoœæ ataku o 200 punktów?
+1	131	Czy mo¿na teleportowaæ siê do swojego ma³¿onka, podczas gdy ten znajduje siê w Lochu Paj¹ków 2?
+1	132	Czy Huahn-So wytwarza Rosê?
+1	133	Czy za Pierœcionek Zarêczynowy trzeba pokonaæ 30 Jin-Hee?
+1	134	Czy Obr¹czk¹ Œlubn¹ mo¿na handlowaæ?
+1	135	Czy Kowal w Wie¿y Demonów ¿¹da Yang za ulepszanie przedmiotów?
+1	136	Czy z Hae-Tae mo¿e dropn¹æ Kamieñ Duchowy?
+1	137	Czy Hae-Tae mo¿na zawsze napotkaæ w œwiecie Metin2?
+1	138	Czy Hae-Tae pojawia siê podczas konkretnego eventu?
+1	139	Czy potwory w Grocie Wygnañców 2 s¹ agresywne?
+1	140	Czy Taurean to NPC?
+1	141	Czy Zio³o z Trudnych Ma³p dropi z Lorda Ma³p?
+1	142	Czy jeœli podczas czytania Kamienia Duchowego ma siê negatywn¹ rangê, to ta czynnoœæ zu¿yje dwa razy wiêcej punktów rangi?
+1	143	Czy za ukoñczenie misji 'Zabij Duchy Drzewa' mo¿na otrzymaæ Kamieñ Duchowy?
+1	144	Czy za ukoñczenie misji 'Tajemnica Lasu Duchów' mo¿na otrzymaæ Kamieñ Duchowy?
+1	145	Czy z Metina Morderstwa w Wie¿y Demonów dropi¹ Kamienie Duszy?
+1	146	Czy z Kamieni Metin o poziomach 75 i 80 dropi¹ Ksiêgi Umiejêtnoœci?
+1	147	Czy z Kamieni Metin o poziomach 75 i 80 dropi¹ Kamienie Duszy?
+1	148	Czy z Kamieni Metin poni¿ej poziomu 40 dropi¹ Kamienie Duchowe?
+1	149	Czy od poziomu 60 mo¿na siê bezpoœrednio teleportowaæ do Wie¿y Demonów?
+1	150	Czy Zbroja Z Nieb. Stali+5 zwiêksza wartoœæ obrony o 184 i zmniejsza szybkoœæ ruchu o 6?
+1	151	Czy w Metin2 mo¿na wydropiæ Ma³¿e?
+1	152	Czy w Grocie Wygnañców mo¿na wydropiæ Przepustkê?
+1	153	Czy z Jin-Hee mo¿na wydropiæ Miecz Pe³ni Ksiê¿yca?
+1	154	Czy Wojownik Mocy Duchowej mo¿e u¿yæ umiejêtnoœci B³yskawiczny Rzut?
+1	155	Czy Dzik Wojenny podwy¿sza wartoœæ obrony o 500?
+1	156	Czy z Metina Czerni mo¿na wydropiæ Kamienie Duszy+4?
+1	157	Czy do ulepszenia Zbr. P³yt. Tygrysa potrzebny jest Czarny Uniform+?
+1	158	Czy przedmiotem Zaczarowanie Przedmiotu mo¿na handlowaæ?
+1	159	Czy w Lochu Paj¹ków mo¿na wydropiæ Niebiesk¹ Miksturê (M)?
+1	160	Czy Nosiciela Plagi mo¿na zawsze napotkaæ w œwiecie Metin2?
+1	161	Czy w Z³otej Szkatu³ce mo¿na znaleŸæ ¯ó³æ NiedŸwiedzia?
+1	162	Czy u ¯y³y Jadeitu mo¿na wydobywaæ uszlachetniony Ebonit?
+1	163	Czy podczas eventów pojawia siê Metin Diab³a?
+1	164	Czy z Orków dropi Bransol. Z Bia³. Z³ota?
+1	165	Czy w Piekielnych Katakumbach trzeba pokonaæ wszystkich przeciwników?
+1	166	Czy Azrael mo¿e w walce zadaæ cios krytyczny?
+1	167	Czy Naszyjnik Krysz. Duszy mo¿na kupiæ w ItemShopie?
+1	168	Czy Starsza Pani jest uczulona na kurz?
+1	169	Czy Handlarz Broni¹ jest zakochany w Handlarce Ró¿noœci?
+1	170	Czy dozorca magazynu posiada Z³ote Sztaby?
+1	171	Czy Uriel jest kobiet¹?
+1	172	Czy Handlarka Ró¿noœciami krêci z Handlarzem Zbrojami?
+1	173	Czy zmiotka do kurzu Starszej Pani jest wykonana z futra Niebieskich Wilków?
+1	174	Czy Olbrzymiego ¯ó³wia mo¿na trafiæ jedynie mieczem oburêcznym?
+1	175	Czy Miecza Lat. Maga mo¿na u¿ywaæ od poziomu 50?
+1	176	Czy Beran-Setaou zabi³ Bahar-Taraji?
+1	177	Czy Beran-Setaou pojawia siê wy³¹cznie na jednej mapie w grze?
+1	178	Czy Czerwona Mikstura (D) regeneruje 650 P¯?
+1	179	Czy Eliksir S³oñca (M) zawiera 2.000.000 P¯?
+1	180	Czy wytrzyma³oœæ mo¿na regenerowaæ za pomoc¹ ¯ó³tych Mikstur?
+1	181	Czy trucizna jest œmiertelna?
+1	182	Czy Woda Sim natychmiastowo regeneruje 100 PE?
+1	183	Czy Czerwona Rosa zwiêksza prêdkoœæ ataku o 2%% do 8%%?
+1	184	Czy efekt Rosy trwa maks. 20 minut?
+1	185	Czy efekt Soku z Kwiatu Brzoskwini trwa piêæ minut?
+1	186	Czy Niebieska Rosa podnosi wartoœæ ataku?
+1	187	Czy Chuk-Sal nosi maskê?
+1	188	Czy Runiczny Pal mo¿na znaleŸæ na czwartym poziomie Piekielnych Katakumb?
+1	189	Czy Metin Odwetu posiada poziom 80?
+1	190	Czy w Œwi¹tyni Smoka znajduje siê Duch Sura?
+1	191	Czy ma³¿onkowie po œlubie otrzymuj¹ Czerwone Mikstury (Œ)?
+1	192	Czy w cieniu drzewa lub budynku mo¿na ujrzeæ swój w³asny cieñ? 
+1	193	Czy od poziomu 84 mo¿na nosiæ Szatê Smoka+6?
+1	194	Czy do Antycznego Dzwonu mo¿na w³o¿yæ maks. dwa Kamienie Duszy?
+1	195	Czy peleryna maskuj¹ca zwabia potwory?
+1	196	Czy wszystkich wierzchowców w grze mo¿na u¿ywaæ od poziomu 1?
+1	197	Czy Niebieski Smok dropi Per³y?
+1	198	Czy 'x obra¿eñ bêdzie dodanych do PE' jest domyœlnym bonusem Kapelusza Duszy?
+1	199	Czy przeklête potwory pojawiaj¹ siê wy³¹cznie na obszarze gildii?
+1	200	Czy jeœli u¿yjesz podpalenia na konaj¹cym przeciwniku, to zachowa on jeden P¯?
+1	201	Czy misjê na Konia Wojskowego mo¿na zakoñczyæ od poziomu 45?
+1	202	Czy gracz o poziomie 82 mo¿e zaprosiæ do swojej grupy gracza o poziomie 53?
+1	203	Czy Ninja mo¿e u¿ywaæ czterech umiejêtnoœci konnych?
+1	204	Czy ¯y³y Srebra mo¿na znaleŸæ tylko w pierwszej wiosce?
+1	205	Czy Metin Pung-Ma jest tylko w Lungsam?
+1	206	Czy za pomoc¹ Zasuszonych G³ów mo¿na wejœæ do Œwi¹tyni Smoka?
+1	207	Czy Krêty Klucz dropi z Genera³a Huashina?
+1	208	Czy na Górze Sohan znajduje siê boss?
+1	209	Czy Buty Wyszywane Z³otem mo¿na nosiæ od poziomu 20?
+1	210	Czy eventowa pomocniczka nosi rêkawiczki?
+1	211	Czy Baek-Go nosi okulary?
+1	212	Czy Pomnik Moka jest prostok¹tny?
+1	213	Czy Organizator Œlubu ma na sobie zielon¹ sukienkê?
+1	214	Czy Seon-Hae trzyma w swojej prawej rêce kij?
+1	215	Czy Yang-Shin ma trzy strza³y w swoim ko³czanie?
+1	216	Czy Metin Zemsty jest koloru b³êkitnego?
+1	217	Czy Metin Odwetu jest Metinem o najwy¿szym poziomie?
+1	218	Czy Metin Duszy mo¿na znaleŸæ w Dolinie Seungryong?
+1	219	Czy u Œwi¹tyni Ciemnoœci mo¿na znaleŸæ ¯y³ê Jadeitu? 
+1	220	Czy na Górze Sohan mo¿na wydobywaæ Rudê Ametystu?
+1	221	Czy Beran-Setaou posiada poziom 97?  
+1	222	Czy Azrael posiada wy¿szy poziom ni¿ Beran-Setaou?
+1	223	Czy Silna Lodowa WiedŸma posiada ten sam poziom co Tartar?
+1	224	Czy Szybki Atak jest umiejêtnoœci¹ klasy Ninja?
+1	225	Czy Czerwona Mikstura (Œ) regeneruje 500 P¯?
+1	226	Czy Wojownik mo¿e za³o¿yæ Zbrojê P³yt. Yin-Yang?
+1	227	Czy Rêkawica Króla Przepowiedni podwaja w przypadku zwyciêstwa w walce z potworem otrzymane punkt rangi?
+1	228	Czy Pamiêtnik Uriela ma 20 stron?
+1	229	Czy do Groty Wygnañców prowadzi gracza Chuk-Sal?
+1	230	Czy aby wkroczyæ do Groty Wygnañców, trzeba posiadaæ poziom 75?
+1	231	Czy Kowal ma brodê?
+1	232	Czy w zagrodzie Stajennego znajduj¹ siê cztery konie?
+1	233	Czy do Szaty Baronów nale¿¹ fioletowe skarpetki? 
+1	234	Czy M³ody Cz³owiek Skorpion posiada broñ?
+1	235	Czy Dziewiêæ Ogonów posiada rzeczywiœcie dok³adnie dziewiêæ ogonów?
+1	236	Czy na Górze Sohan znajduje siê ¯y³a Niebiañskich £ez?
+1	237	Czy Ezoteryczny Przywódca posiada bonus 'Szansa na Omdlenie'?
+1	238	Czy Pomnik Gum znajduje siê za Wie¿¹ Demonów?
+1	239	Czy g³owa Ognistego Króla p³onie?
+1	240	Czy Ognisty Król nosi sanda³y?
+1	241	Czy Hae-Tae jest potworem?
+1	242	Czy Zara¿ony Cz³owiek nosi szal?
+1	243	Czy Lord Ma³p ma ogon?
+1	244	Czy Lord Ma³p posiada ber³o?
+1	245	Czy Straszyd³o ma na czole róg?
+1	246	Czy Olbrzymie Drzewo Duchów posiada korzenie?
+1	247	Czy rêce Driady s¹ koloru czerwonego?
+1	248	Czy Tysiêczny Wojownik trzyma w d³oniach dwa topory? 
+1	249	Czy Mistyk Setaou posiada poziom 88?
+1	250	Czy Beran-Setaou jest koloru b³êkitnego?
+1	251	Czy Aranyo jest ¿on¹ Soona?
+1	252	Czy Ariyoung znajduje siê w pierwszej wiosce?
+1	253	Czy Baek-Go warzy mikstury?
+1	254	Czy Duchowy Mistrz Miecza jest koloru niebieskiego? 
+1	255	Czy Lodowy Robak posiada dziesiêæ nóg? 
+1	256	Czy Pieczony Rzeczny Pstr¹g regeneruje 250 PE?
+1	257	Czy Handu-Up nosi fioletowy, spiczasty kapelusz?
+1	258	Czy Nakajima podró¿uje po mapie?
+1	259	Czy Czer. Ubranie Mrówki+9 daje bonus do obrony w wysokoœci 101?
+1	260	Czy Harang ma w³osy spiête w kucyki?
+1	261	Czy Deokbae trzyma w d³oni z³oty topór?
+1	262	Czy misja 'Konie maj¹ k³opoty' zaczyna siê od poziomu 49?
+1	263	Czy Uriel ma z przodu skrzy¿owane rêce?
+1	264	Czy Lorda Ma³p mo¿na znaleŸæ w Hasun Dong?
+1	265	Czy za pomoc¹ kombinacji Ctrl+B mo¿na nakarmiæ swojego konia?
+1	266	Czy Handlarz Zbrojami ma w¹sy?
+1	267	Czy Jungsun Dong jest znany równie¿ jako Trudny Loch Ma³p?
+1	268	Czy Œwiêta Zbroja zwiêksza szansê na zadanie przeszywaj¹cego ciosu?
+1	269	Czy Aranyo trzyma w rêce skrzyniê z owocami?
+1	270	Czy Lodowy Robak posiada 6 nóg?
+1	271	Czy w Krainie Gigantów mo¿na spotkaæ szeœæ ró¿nych rodzajów potworów?
+1	272	Czy Ostrza z Czerwonej Stali mo¿na u¿ywaæ jedynie, maj¹c poziom 30?
+1	273	Czy Kuahlo Dong znajduje siê na pustyni?
+1	274	Czy Teleporter ma znamiê na czole? 
+1	275	Czy Metin Walki posiada poziom 15?
+1	276	Czy Chaegirab nosi okulary?
+1	277	Czy Kawa³ek Klejnotu jest potrzebny do ulepszenia zbroi na poziom 26 do +4?
+1	278	Czy mo¿na kupiæ zbrojê na 26 poziom u NPC?
+1	279	Czy Zara¿ony Pies drapie siê za uchem? 
+1	280	Czy Z³y Zara¿ony £ucznik ma 2 g³owy?  
+1	281	Czy istnieje Kamieñ Chunjo? 
+1	282	Czy istnieje Kamieñ Yongbi? 
+1	283	Czy zbroja na poziom 42 +7 ma obronê +97?
+1	284	Czy zbroja na poziom 42 +7 ma obronê -97?
+1	285	Czy £owca Setaou posiada 89 poziom, Stopieñ 2? 
+1	286	Czy To-Su Czarnego Wiatru posiada 33 poziom, Stopieñ 2?
+1	287	Czy w Metin2 wystêpuje glina?
+1	288	Czy za ogrodzeniem ko³o Stajennego stoj¹ 4 Kucyki?
+1	289	Czy Baek-Go nosi okulary? 
+1	290	Czy Wonda-Rim jest bratankiem Biologa Chaegirab? 
+1	291	Czy Chaegirab to wujek Wonda-Rim?  
+1	292	Czy Chaegirab jest ojcem Wonda-Rim?
+1	293	Czy na drugiej mapie wystêpuje jakiœ Bóg Zwierz¹t?
+1	294	Czy na drugiej mapie znajduje siê trzech rybaków? 
+1	295	Czy cz³onek Zespo³u Metin2 mo¿e zapytaæ o login i has³o?
+1	296	Czy Mistrza Gry w grze mo¿na rozpoznaæ po prefixie [GM]?
+1	297	Czy NiepokaŸny Pieszy wystêpuje na drugiej mapie?
+1	298	Czy Oko Paj¹ka jest przedmiotem misji?
+1	299	Czy w Metin2 wystêpuje 5 Farb do W³osów?
+1	300	Czy mo¿na handlowaæ Olejkiem Pi¿mowym?  
+1	301	Czy Aranyo ma coœ na plecach? 
+1	302	Czy Aranyo jest ¿on¹ Octavio? 
+1	303	Czy Aranyo jest ¿on¹ Soon?
+1	304	Czy w Metin2 wystêpuj¹ Szkielety?
+1	305	Czy znajduj¹ siê w Kuahlo Dong pomniki? 
+1	306	Czy w Metin2 znajduje siê arena do walk?
+1	307	Czy Skórzane Buty mo¿e nosiæ ka¿dy? 
+1	308	Czy Miecz Egzorcysty ma Szybkoœæ Ataku wynosz¹c¹ 20%%? 
+1	309	Czy Eun-Jung nosi wachlarz? 
+1	310	Czy Eun-Jung nosi broñ? 
+1	311	Czy mo¿na wyrzucaæ Z³ote i Srebrne Sztabki na ziemiê? 
+1	312	Czy Szybkoœæ Ataku Magnetycznego Ostrza zmniejsza siê na wy¿szym stopniu ulepszania? 
+1	313	Czy Szybkoœæ Ataku Magnetycznego Ostrza zwiêksza siê na wy¿szym stopniu ulepszania? 
+1	314	Czy istnieje Posêpna Drewniana Maska?  
+1	315	Czy w Metin2 mo¿na coœ upiec nad ogniskiem?
+1	316	Czy Koe-Pung nosi maskê?
+1	317	Czy Kamieñ Duchowy Lasu to przedmiot do misji? 
+1	318	Czy Ogr Szaleniec ma w swojej lewej rêce broñ?  
+1	319	Czy p³eæ mo¿na zmieniæ tylko raz na ka¿dym poziomie postaci?
+1	320	Czy Imha to obszar gildii Królestwa Chunjo? 
+1	321	Czy Imha to obszar gildii Królestwa Shinsoo? 
+1	322	Czy Imha to obszar Gildii Królestwa Jinno?  
+1	323	Czy w Metin2 wystêpuje NPC Jungrang?
+1	324	Czy Yayang jest córk¹ Soon? 
+1	325	Czy wnêtrze Jungsun Dong jest wysadzane zielonkawymi kamieniami?
+1	326	Czy Yang jest walut¹ w Metin2? 
+1	327	Czy Kamieñ Duchowy Jinunggyi potrzebny jest do misji z poziomu 30?
+1	328	Czy istniej¹ przedmioty przeznaczone wy³¹cznie do badañ?
+1	329	Czy mo¿na u Seon-Hae sporz¹dzaæ mikstury? 
+1	330	Czy w Metin2 wystêpuj¹ Dynie?
+1	331	Czy w Metin2 wystêpuj¹ Skarpetki?
+1	332	Czy ogieñ w Mrocznym O³tarzu jest czerwony?  
+1	333	Czy Ma³pi Genera³ posiada 40 poziom, Stopieñ 4?
+1	334	Czy ka¿da klasa mo¿e u¿ywaæ miecza? 
+1	335	Czy w Metin2 wystêpuje NPC Nakajima?
+1	336	Czy Przepustkê mo¿na wydropiæ z potworów? 
+1	337	Czy Handlarka Ró¿noœci sprzedaje 200 Czerwonych Mikstur(D) za 33.000 Yang? 
+1	338	Czy Ninja mog¹ nosiæ Rozrzutnie Ozdobiony £uk? 
+1	339	Czy Chuong stoi na pierwszej mapie?
+1	340	Czy Kamieñ Metin Cierpienia posiada 10 poziom, Stopieñ 5?
+1	341	Czy w grze wystêpuj¹ Œwi¹teczne Ogniste Petardy?
+1	342	Czy Chiñska Ognista Petarda zwiêksza Szybkoœæ Ruchu?  
+1	343	Czy Chiñska Ognista Petarda zwiêksza Szybkoœæ Ataku? 
+1	344	Czy Chiñska Ognista Petarda zwiêksza Szansê na Omdlenie? 
+1	345	Czy Pieczony £osoœ przywraca 350 Punktów ¯ycia? 
+1	346	Czy Pieczony £osoœ przywraca 350 Punktów Energii?

@@ -1,0 +1,223 @@
+quest event_halloween_hair begin
+	state start begin
+		function is_running()
+			return (game.get_event_flag("halloween_hair") > 0)    --npc spawn
+		end
+
+		function setting()
+			return {  
+			["pumpkin"]	= 30321,		-- Halloween Pumpkin
+			["wand"]	= 30322,		-- Halloween magic wand 
+			["coupon"]	= 30323,		-- Hair coupon
+			["box"]		= 50215,		-- Halloween giftbox
+			["pumpkin_head"]= 33008		-- Pumpkin head NPC
+			}
+		end
+
+		function get_hair_option(index)
+			local option_list = {
+				{ 
+					["apply"]		= apply.ATTBONUS_MONSTER,
+					["value"]		= 10,
+					["duration"]	= 604800,	-- 7 days
+				},
+				{ 
+					["apply"]		= apply.ATTBONUS_SURA,
+					["value"]		= 10,
+					["duration"]	= 604800,	-- 7 days
+				},
+				{ 
+					["apply"]		= apply.ATTBONUS_SHAMAN,
+					["value"]		= 10,
+					["duration"]	= 604800,	-- 7 days
+				},
+				{ 
+					["apply"]		= apply.ATTBONUS_WARRIOR,
+					["value"]		= 10,
+					["duration"]	= 604800,	-- 7 days
+				},
+				{ 
+					["apply"]		= apply.ATTBONUS_ASSASSIN,
+					["value"]		= 10,
+					["duration"]	= 604800,	-- 7 days
+				},
+				{ 
+					["apply"]		= apply.MAX_HP_PCT,
+					["value"]		= 1,
+					["duration"]	= 21600,	-- 6 hours
+				},
+				{ 
+					["apply"]		= apply.MAX_SP_PCT,
+					["value"]		= 1,
+					["duration"]	= 86400,	-- 24 hours
+				},
+			}
+
+			return option_list[index]
+		end
+
+		function get_random_hair_option_index()
+			local index = 1
+
+			-- hair_option[1] ~ [5] : 5%
+			-- hair_option[6] : 15%
+			-- hair_option[7] ~ 80%
+
+			local rand = number(1, 100)
+			if rand <= 5 then
+				index = rand
+			elseif rand <= 85 then
+				index = 7
+			else
+				index = 6
+			end
+
+			return index
+		end
+
+		function get_hair_info_by_race(race)
+			hair_info_by_race = {
+			--    VNUM, SHAPE
+				{ 74020, 1018 },		-- 1 : Warrior(M)
+				{ 74270, 2018 },		-- 2 : Assassin(W)
+				{ 74520, 3018 },		-- 3 : Sura(M)
+				{ 74770, 4018 },		-- 4 : Shaman(W)
+				{ 75020, 1018 },		-- 5 : Warrior(W)
+				{ 75220, 2018 },		-- 6 : Assassin(M)
+				{ 75420, 3018 },		-- 7 : Sura(W)
+				{ 75620, 4018 },		-- 8 : Shaman(M)
+			}
+
+			return hair_info_by_race[race]
+		end
+			
+		when login or enter with game.get_event_flag("halloween_hair") > 0 begin
+			local setting = event_halloween_hair.setting()
+			local mapIndex = pc.get_map_index()
+			if mapIndex == 1 or mapIndex == 21 or mapIndex == 41 then
+				if find_npc_by_vnum(setting.pumpkin_head) == 0 then  
+					if mapIndex == 1 then
+						mob.spawn(setting.pumpkin_head, 608, 617, 1, 1, 1)
+					elseif mapIndex == 21 then
+						mob.spawn(setting.pumpkin_head, 596, 610, 1, 1, 1)
+					elseif mapIndex == 41 then
+						mob.spawn(setting.pumpkin_head, 357, 743, 1, 1, 1)
+					end
+				end
+			end
+
+		end
+
+		when 33008.chat.gameforge.event_halloween_hair._10_npcChat with pc.getqf("first_notice") < 1 begin
+			local setting = event_halloween_hair.setting()
+
+			say_title(gameforge.event_halloween_hair._20_sayTitle)
+			say(gameforge.event_halloween_hair._30_say)
+			wait()
+
+			say_title(gameforge.event_halloween_hair._20_sayTitle)
+			say(gameforge.event_halloween_hair._40_say)
+			wait()
+
+			say_title(gameforge.event_halloween_hair._20_sayTitle)
+			say(gameforge.event_halloween_hair._50_say)
+
+			pc.setqf("first_notice", 1)
+
+			if not event_halloween_hair.is_running() then
+				npc.purge()
+			end
+		end  
+
+		when 33008.chat.gameforge.event_halloween_hair._60_npcChat with pc.getqf("first_notice") == 1 begin
+			local setting = event_halloween_hair.setting()
+
+			say_title(gameforge.event_halloween_hair._20_sayTitle)
+			say(gameforge.event_halloween_hair._70_say)
+			wait()
+
+			say_title(gameforge.event_halloween_hair._20_sayTitle)
+			say(gameforge.event_halloween_hair._80_say)
+			wait()
+
+			if pc.count_item(setting.coupon) == 0 then
+				say_title(gameforge.event_halloween_hair._20_sayTitle)
+				say(gameforge.event_halloween_hair._90_say)
+				wait()
+
+				say_title(gameforge.event_halloween_hair._20_sayTitle)
+				say(gameforge.event_halloween_hair._100_say)
+				wait()
+			else
+				say_title(gameforge.event_halloween_hair._20_sayTitle)
+				say(gameforge.event_halloween_hair._110_say)
+				wait()
+
+				say_title(gameforge.event_halloween_hair._20_sayTitle)
+				say(gameforge.event_halloween_hair._120_say)
+				wait()
+				say(gameforge.event_halloween_hair._130_say)
+				local s = select(gameforge.event_halloween_hair._140_select_1, gameforge.event_halloween_hair._140_select_2)
+				if s == 2 then
+					return
+				end
+				-- remove a hair coupon
+				pc.remove_item(setting.coupon, 1)
+
+				-- Give a hair item to user, and prepare for setting random options to it
+				local race	= pc.get_race() + 1
+				local index	= event_halloween_hair.get_random_hair_option_index()		-- 
+				local option= event_halloween_hair.get_hair_option(index)				-- hair option (apply, value, duration)
+				local hair_info = event_halloween_hair.get_hair_info_by_race(race)		
+				local vnum, shape = hair_info[1], hair_info[2]
+
+				pc.give_item2_select(vnum)
+				item.set_socket(0, option.duration)
+				item.set_value(0, option.apply, option.value)
+			end -- if
+
+			if not event_halloween_hair.is_running() then
+				npc.purge()
+			end
+		end	  --when
+
+
+		-- When using 'Halloween magic wand'
+		when 30322.use begin
+			local setting = event_halloween_hair.setting()
+			if pc.count_item(setting.pumpkin) > 0 then
+				pc.remove_item(setting.pumpkin, 1)
+				pc.remove_item(setting.wand, 1)
+				pc.give_item2(setting.box, 1)
+			end
+		end
+
+		when 74020.use or 74270.use or 74520.use or 74770.use or 75020.use or 75220.use or 75420.use or 75620.use begin
+
+			local index = item.get_socket(1)
+
+			-- If this item was created by command(ex: /i 74020) then socket value is zero. Thus, give a random option.
+			if 0 == index then
+				index = event_halloween_hair.get_random_hair_option_index()
+			end
+
+			local option = event_halloween_hair.get_hair_option(index)
+			local hair_info = event_halloween_hair.get_hair_info_by_race(pc.get_race() + 1)
+			local vnum, shape = hair_info[1], hair_info[2]
+
+			pc.set_part(PART_HAIR, shape)
+			affect.remove_hair()
+			affect.add_hair(option.apply, option.value, option.duration)
+
+			pc.setf("hair", "limit_time", get_time() + option.duration)
+
+			-- Copied from "hair.leave_log" function in "hair.quest" file
+			char_log(0, "CHANGE_HAIR", string.format("USE_ITEM(%d)", vnum)) 
+			char_log(0, "CHANGE_HAIR", string.format("END_SEC(%d)", get_time() + option.duration))
+			char_log(0, "CHANGE_HAIR", "CHANGE_HAIR_END")
+
+			item.remove()
+		end
+	end  --state
+end		--quest
+

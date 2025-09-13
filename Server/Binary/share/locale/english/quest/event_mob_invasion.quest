@@ -1,0 +1,113 @@
+--[[
+	Different invasion types can be definied with different mobs (devil, undead, milygo, ...)
+	When you introduce a new type you must create the correspending regen.txt in the 
+	locale/_master/map/mob_invasion/mobs_regen_MAPID_ file
+	The file must be created and named:
+	mobs_regen_[MAP_ID (1,21,41)]_TYPE_WAVE.txt
+	
+	An Event have 3 different waves. A wave means spawning from one kind of mobs
+	The idea behind:
+	1 wave = low level mobs
+	2 wave = aggro mobs from the same type
+	3 wave = Boss from the mob type
+--]]
+quest event_mob_invasion begin
+	state start begin
+		function is_running()
+			return (game.get_event_flag("mob_invasion") > 0)
+		end
+
+		
+		--[[
+			We can adjust the time how long the waves should run
+		--]]
+		function get_wave_duration()
+			local wave_duration = game.get_event_flag("mob_invasion_wave_duration")
+			if (wave_duration  == 0) then
+				-- default will be one hour
+				wave_duration = 3600
+			else
+				-- the wave_time is a multiplicator in this case for hours ;-)
+				wave_duration = wave_duration*3600
+			end
+			-- Return value is hardcodet for prototyping
+			return 10
+--			return wave_duration
+		end
+		
+		
+		
+		function spawn_mobs(invasion_type, wave, target_map)
+			
+			if invasion_type == 0 then
+				return
+			end
+			
+			if target_map == 1 then
+				regen_in_map(1,  "locale/_master/map/mob_invasion/mobs_regen_1_" .. invasion_type .. "_" .. wave ..".txt")
+				-- For prototyping only one map is enough :-D
+				--regen_in_map(21, "locale/_master/map/mob_invasion/mobs_regen_21_" .. invasion_type .. "_" .. wave ..".txt")
+				--regen_in_map(41, "locale/_master/map/mob_invasion/mobs_regen_41_" .. invasion_type .. "_" .. wave ..".txt")
+			elseif target_map == 2 then
+				regen_in_map(3,  "locale/_master/map/mob_invasion/mobs_regen_3_" .. invasion_type .. "_" .. wave ..".txt")
+				-- For prototyping only one map is enough :-D
+				--regen_in_map(23, "locale/_master/map/mob_invasion/mobs_regen_23_" .. invasion_type .. "_" .. wave ..".txt")
+				--regen_in_map(43, "locale/_master/map/mob_invasion/mobs_regen_43_" .. invasion_type .. "_" .. wave ..".txt")
+			else
+				regen_in_map(target_map,  "locale/_master/map/mob_invasion/mobs_regen_" .. target_map .. "_" .. invasion_type .. "_" .. wave ..".txt")
+			end
+		end
+		
+		--[[ not clearified till now
+		when info or button begin
+		
+		end
+		--]]
+		
+		when login or enter with  event_mob_invasion.is_running() begin
+			
+			local wave = game.get_event_flag("mob_invasion_wave")
+			local wave_duration =  event_mob_invasion.get_wave_duration()
+			
+			if (wave == 0) then
+				game.set_event_flag("mob_invasion_wave_time",get_time()+60*30)--------- in 10 seconds will the next player activate the spawn
+				game.set_event_flag("mob_invasion_wave", wave+1)
+				
+				--[[ premium feature prepare
+				
+				if pc.count_item(71124) > 1 then
+					notice ("hier geht gleich was AB")
+				end
+				--]]
+			elseif (wave == 1) then 
+			
+			elseif (wave == 2) then 
+			
+			elseif (wave == 3) then 
+			
+			else (wave > 3) then
+				return
+			end
+			
+			if get_time() > game.get_event_flag("mob_invasion_wave_time") then
+				game.set_event_flag("mob_invasion_wave_time",get_time()+wave_duration)---------1 hour default
+				game.set_event_flag("mob_invasion_wave", wave+1)
+				event_mob_invasion.spawn_mobs(game.get_event_flag("mob_invasion_type"), wave, game.get_event_flag("mob_invasion_target_map"))
+			end
+		end
+		
+		--[[
+			We will clean up if the event is not running and reset all needed flags to 0
+		--]]
+		when login or enter with not event_mob_invasion.is_running() begin
+			if (game.get_event_flag("mob_invasion_wave") == 4) then
+				game.set_event_flag("mob_invasion_wave", 0)
+				game.set_event_flag("mob_invasion_wave_duration", 0)
+				game.set_event_flag("mob_invasion_type", 0)
+				game.set_event_flag("mob_invasion_target_map", 0)
+			else 
+				return
+			end
+		end
+	end
+end

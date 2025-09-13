@@ -1,0 +1,181 @@
+quest subquest_10 begin
+	state start begin
+		when login or levelup with pc.level >= 18 and pc.level <= 23 begin
+			set_state(information)
+		end
+
+	end
+
+	state information begin
+		when letter begin
+			local v = find_npc_by_vnum(9003)
+
+			if v != 0 then
+				target.vid("__TARGET__", v, gameforge.subquest_10._10_targetVid)
+			end
+		end
+
+
+		when __TARGET__.target.click or	9003.chat.gameforge.subquest_10._10_targetVid with pc.level >= 18 begin
+			target.delete("__TARGET__")
+
+			say_title(gameforge.find_squareguard._130_sayTitle)
+			say(gameforge.subquest_10._20_say)
+			say_item_vnum("30017")
+						wait()
+                        say_title(gameforge.find_squareguard._130_sayTitle)
+			say(gameforge.subquest_10._30_say)
+		  	local s= select(gameforge.subquest_10._40_select, gameforge.subquest_05._80_select)
+			if 2==s then
+				say(gameforge.subquest_10._50_say)
+				local a= select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
+				if  2==a then
+					say_title(gameforge.find_squareguard._130_sayTitle)
+					say(gameforge.subquest_10._60_say)
+					return
+				end
+				say_title(gameforge.find_squareguard._130_sayTitle)
+				say(gameforge.subquest_10._70_say)
+				set_state(__GIVEUP__)
+				return
+			end
+			say_title(gameforge.find_squareguard._130_sayTitle)
+			say(gameforge.subquest_10._80_say)
+			set_state(go_to_blacksmith)
+
+		end
+	end
+
+	state go_to_blacksmith begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.subquest_10._10_targetVid)
+			q.set_title(gameforge.subquest_10._10_targetVid)
+			q.start()
+
+			local v = find_npc_by_vnum(20016)
+
+			if v == 0 then
+			else
+				target.vid("__TARGET__", v, gameforge.subquest_10._90_targetVid)
+			end
+		end
+
+		when info or button begin
+			say_title(gameforge.subquest_10._90_targetVid)
+                        			say_reward(gameforge.subquest_10._100_sayReward)
+			say_item_vnum("30017")
+					end
+
+		when __TARGET__.target.click or	20016.chat.gameforge.subquest_10._110_npcChat begin
+			target.delete("__TARGET__")
+			say_title(gameforge.blacksmith._20_sayTitle)
+			say(gameforge.subquest_10._120_say)
+
+			set_state(ask_to_weaponshop)
+		end
+	end
+
+	state ask_to_weaponshop begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.subquest_10._130_makequestbutton)
+			q.set_title(gameforge.subquest_10._130_makequestbutton)
+			q.start()
+
+			local v= find_npc_by_vnum(9001)
+			if v == 0 then
+			else
+				target.vid("__TARGET__", v, gameforge.subquest_08._90_targetVid)
+			end
+		end
+
+		when info or button begin
+			say_title(gameforge.subquest_08._90_targetVid)
+            say(gameforge.subquest_10._140_sayReward)
+			say_item_vnum("30017")
+		end
+
+		when __TARGET__.target.click or	9001.chat.gameforge.subquest_10._130_makequestbutton begin
+			target.delete("__TARGET__")
+			say_title(gameforge.subquest_08._120_sayTitle)
+			say(gameforge.subquest_10._150_say)
+
+			set_state(hunt_for_shoes)
+		end
+	end
+
+	state hunt_for_shoes begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.subquest_10._130_makequestbutton)
+			q.set_title(gameforge.subquest_10._130_makequestbutton)
+			q.start()
+		end
+
+		when info or button begin
+			say_title(gameforge.subquest_10._130_makequestbutton)
+			say(gameforge.subquest_10._160_sayReward)
+			say_item_vnum("30017")
+		end
+
+		when 302.kill begin
+			local s = number(1, 100)
+			if s <= 5 and pc.count_item("30017")==0  then
+				pc.give_item2("30017", 1)
+				send_letter(gameforge.subquest_10._170_sendLetter)
+				local v=find_npc_by_vnum(9003)
+				if 0== v then
+				else
+					target.vid("__TARGET__",v, gameforge.subquest_10._180_targetVid)
+				end
+			end
+
+		end
+
+		when __TARGET__target.click or	9003.chat.gameforge.subquest_10._190_npcChat begin
+			target.delete("__TARGET__")
+			if pc.count_item("30017") >= 1 then
+				say_title(gameforge.find_squareguard._130_sayTitle)
+				say(gameforge.subquest_10._200_say)
+				wait()
+                                say_title(gameforge.collect_herb_lv4._130_sayTitle)
+                                				say_reward(gameforge.subquest_10._210_sayReward)
+								pc.remove_item("30017", 1)
+				pc.give_exp2(60000)
+				pc.change_money(10000)
+				pc.give_item2("50083", 1)
+				clear_letter()
+				set_state(__COMPLETE__)
+			else
+				say_title(gameforge.find_squareguard._130_sayTitle)
+				say(gameforge.subquest_10._220_say)
+				say_item_vnum("30017")
+								local s= select(gameforge.locale.levelup.prev_quest_go, gameforge.subquest_10._230_select)
+				if 2==s then
+					say(gameforge.subquest_10._240_say)
+					local a= select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
+					if  2==a then
+						say_title(gameforge.find_squareguard._130_sayTitle)
+						say(gameforge.subquest_10._250_say)
+						set_state(information)
+						return
+					end
+					say_title(gameforge.find_squareguard._130_sayTitle)
+					say(gameforge.subquest_10._260_say)
+					set_state(__GIVEUP__)
+					return
+				end
+				say_title(gameforge.find_squareguard._130_sayTitle)
+				say(gameforge.subquest_10._270_say)
+			end
+		end
+	end
+	state __GIVEUP__ begin
+	end
+	state __COMPLETE__ begin
+		when enter begin
+			q.done()
+		end
+	end
+end

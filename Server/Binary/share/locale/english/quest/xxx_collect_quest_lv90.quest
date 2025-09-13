@@ -1,0 +1,299 @@
+----------------------------------------------------
+--COLLECT QUEST_lv90
+--METIN2 수집 퀘스트  
+----------------------------------------------------
+quest collect_quest_lv90  begin
+	state start begin
+	end
+	state run begin
+		when login or levelup with pc.level >= 90  begin
+			set_state(information)
+		end	
+	end
+
+	state information begin
+		when letter begin
+			local v = find_npc_by_vnum(20084)
+			if v != 0 then
+				target.vid("__TARGET__", v, "채기랍")
+			end
+			send_letter("채기랍의 부탁")
+		end
+
+		when button or info begin
+			say("")
+			say("을두지의 제자 채기랍이")
+			say("당신을 또 애타게 찾고있습니다")
+			say("가서 무슨 일인지 알아보고 도와주시길 바랍니다.")
+			say("")
+		end
+		
+		when __TARGET__.target.click or	20084.chat."내 말좀 들어주오" begin
+			target.delete("__TARGET__")
+			---                                                   l
+			say("채기랍:")
+			say("이제까지 내 부탁을 들어주기위해")
+			say("험한 역경을 이겨내고 죽을고비를 넘기면서")
+			say("여기까지 와준 당신에게 정말로 감사하오")
+			say("당신같은 용사들이 있기때문에")
+			say("나의 연구도 거의 고지에 이른듯 하오")
+			say("이번 부탁은 나의 연구의 마지막이라고")
+			say("보면 되오")
+			wait()
+			say("채기랍")
+			say("이제 내가 필요한것은 영웅의 표식!")
+			say("내 연구의 유종의 미를 ")
+			say("꼭 당신이 장식해줬음 하오")
+			say("가짜는 받을수 없으니 이해해주길 바라오..")
+			say("연구에 필요한 수는 50개라오...")
+			say("마지막연구인 만큼 보상은 후하게 드리겠소")
+			say("부탁하겠소~!")
+			say("")																																						  
+			set_state(go_to_disciple)
+			pc.setqf("duration",0)  -- 시도 할수 있는 시간
+			pc.setqf("collect_count",0)--이제껏 모은 아이템 수
+			pc.setqf("drink_drug",0) --현혹의 물약을 먹으면 1
+		end
+	end
+
+	state go_to_disciple begin
+		when letter begin
+			send_letter("채기랍의 연구")
+			
+		end
+		when button or info begin
+			say_title("보스몬스터에 대해 알고싶다")
+			---                                                   l
+			say("")
+			say("을두지의 제자인 채기랍은")
+		    say("보스몬스터에 대해 조사중이다")
+			say("보스몬스터에게서 얻을수있는 패왕의표식을")
+			say("50개 구해 채기랍에게 가져다 주자")
+			say("")
+			say_item_vnum(30168) 
+			say_reward("  현재".." "..pc.getqf("collect_count").."개를 모았습니다")
+			say("")
+		end
+		
+		when 71035.use begin --현혹의 물약
+			if get_time() < pc.getqf("duration") then
+				say("아직 물약을 쓸수 없습니다")
+				return
+			end
+			if pc.getqf("drink_drug")==1 then
+				say("이미 한번 드셨습니다")
+				return
+			end
+			if pc.count_item(30168)==0 then
+				say("채기랍:")
+				say("패왕의표식 부터 구한다음에 ")
+				say("물약을 사용해도 늦지 않네")
+				say("")
+				return
+			end
+
+			item.remove()	
+			pc.setqf("drink_drug",1)
+		end
+
+		when 691.kill or 792.kill or 791.kill or 1093.kill or  1304.kill or 2091.kill or 2191.kill or 2206.kill or 1901.kill  begin
+			local s = number(1, 100)
+			if s <= 30 and pc.count_item(30168)==0 then
+				pc.give_item2(30168, 1)
+				send_letter("패왕의표식을 획득하셨습니다")		
+			end	
+		end
+
+		
+    	when 20084.chat."패왕의표식을 가져온건가? " with pc.count_item(30168) >0   begin
+			if get_time() > pc.getqf("duration") then
+				say("채기랍")
+				---                                                   l
+				say("오!! 가져왔군...")
+				say("내가 한번 이것을 검토 해봐야겠군...")
+				say("잠시만 기다리게...")
+				say("")
+				pc.remove_item(30168, 1)
+				if  is_test_server()  then 
+					pc.setqf("duration",get_time()+2) 
+				else
+					pc.setqf("duration",get_time()+60*60*22) -----------------------------------22시간
+				end
+				wait()
+				
+				local pass_percent
+				if pc.getqf("drink_drug")==0 then
+					pass_percent=60
+				else		
+					pass_percent=90
+				end
+				
+				local s= number(1,100)
+				if s<= pass_percent  then
+				   if pc.getqf("collect_count")< 49 then     --50개미만 
+						local index =pc.getqf("collect_count")+1 
+						pc.setqf("collect_count",index)     --하나 구했으니 +1 해준다
+						say("채기랍:")
+						say("오오~!! 훌륭하구먼! 수고했네...")
+						say("앞으로".." "..50-pc.getqf("collect_count").. " 개만 더 가져오면 되겠구먼~!!")
+						say("수고해주게~!")
+						say("")
+						pc.setqf("drink_drug",0)	 --물약 초기화
+						return
+					end
+					say("채기랍:")
+					say("50개를 다모았구만!!")
+					say("이젠 이 연구의  key item인")
+					say("패왕영혼석 1개만 있으면 되겠어")
+					say("패왕영혼석을 구해오시오~")
+					say("패왕영혼석을~~")
+					say("")
+					pc.setqf("collect_count",0)
+					pc.setqf("drink_drug",0)	
+					pc.setqf("duration",0) 
+					set_state(key_item)
+					return
+				else								
+				say("채기랍:")
+				say("미안하지만 이것은 가짜네 ..")
+				say("다시하나 구해오게")
+				say("")				   
+				pc.setqf("drink_drug",0)	 --물약 초기화
+				return
+				end
+		  else
+		  say("채기랍:")
+		  say("이런 이런 미안하네....")
+		  say("저번에 준 패왕의표식도 아직 분석하지")
+		  say("못했다네.....")
+		  say("흠 미안하네....나중에 가져다 주지 않겠나?")
+		  say("")
+		  return
+		end
+
+	end
+end
+
+
+	state key_item begin
+		when letter begin
+			send_letter("채기랍의 연구")
+			
+			if pc.count_item(30227)>0 then	
+				local v = find_npc_by_vnum(20084)
+				if v != 0 then
+					target.vid("__TARGET__", v, "채기랍")
+				end
+			end
+
+		end
+		when button or info begin
+			if pc.count_item(30227) >0 then
+				say_title("패왕영혼석 획득")
+				say("")
+				---                                                   l
+				say("드디어 패왕영혼석을 획득하였다")
+				say("이를 채기랍에게 가져다주자")
+				say("")
+				return
+			end
+
+			say_title("패왕영혼석이 필요해")
+			say("")
+			---                                                   l
+			say("을두지의 제자인 채기랍의 연구를 위해")
+			say("패왕의표식 50개를 가져다 주었다")
+			say("마지막으로 필요한것은 패왕영혼석!")
+			say_item_vnum(30227)----------패왕영혼석
+			say("이것은"..mob_name(1092)..","..mob_name(1093)..",")
+			say(""..mob_name(1304)..","..mob_name(1901).."에게서 구할수있다")
+			say("")
+		end
+		when 1093.kill or  1304.kill or 1901.kill  begin
+			local s = number(1, 100)
+			if s <= 30 and pc.count_item(30227)==0 then
+				pc.give_item2(30227, 1)
+				send_letter("패왕영혼석을 획득하셨습니다")		
+			end	
+		end
+
+
+
+		
+		when __TARGET__.target.click  or	20084.chat."패왕영혼석을 가져왔습니다" with pc.count_item(30227) > 0  begin
+		    target.delete("__TARGET__")
+			say("채기랍")
+			say("오오오~!!! 수고 했네..")
+			say("보상으로 자네의 내공을 높여 주도록 하지..")
+			say("여기 내공을 높이는 약들에 대한 정보가 적힌")
+			say("약방문이네...")
+			say("백고에게 가면 만들어 줄것일세..")
+			say("그럼 즐거운 하루되게나~!")
+			say("자네 덕분에 나의연구가 잘 마무리될듯하네")
+			say("고맙네")
+			say("")
+			pc.remove_item(30227,1)
+			set_state(__reward)
+		end
+		
+	end
+	
+	state __reward begin
+		when letter begin
+			send_letter("채기랍의 보상")
+			
+			local v = find_npc_by_vnum(20018)
+			if v != 0 then
+				target.vid("__TARGET__", v, "백고")
+			end
+
+		end
+		when button or info begin
+			say_title("채기랍의 보상을 받자")
+			---                                                   l
+			say("채기랍의  보스몬스터 연구를 위해 패왕의표식50개와")
+			say("패왕영혼석까지 구해다준 보상으로 ")
+			say("채기랍은 내공을 높이는 약들에 대한 정보가 적힌")
+			say("약방문을 주었다")
+			say("약물을 받기위해 백고에게 가보자")
+			say("")
+		end
+		
+		when __TARGET__.target.click  or	20018.chat."이 약방문을 보세요"  begin
+		    target.delete("__TARGET__")
+			say("백고:")
+			say("어디보자..")
+			say("채기랍이 보낸 약방문이라고?")
+			say("음...무사에게 강함 10%")
+			say("자객에게 강함 10%")
+			say("수라에게 강함 10%")
+			say("무당에게 강함 10%")
+			say("추가로구만")
+			say("여기있네~")
+			say("")
+			wait()
+			say("백고:")
+			say("그리고 이번엔 파란색 흑단상자구먼")
+			say("궁금하지?얼른 열어보게")
+			say("")
+			say_reward("채기랍의 부탁을 들어준 보상으로")
+			say_reward("모든캐릭터에 추가공격+10%를 받았습니다")
+			say_reward("이 효과는 일시적이 아니라 영구적으로 적용됩니다")
+			affect.add_collect_point(POINT_ATTBONUS_WARRIOR,8,60*60*24*365*60)	
+			affect.add_collect_point(POINT_ATTBONUS_ASSASSIN,8,60*60*24*365*60) 	
+			affect.add_collect_point(POINT_ATTBONUS_SURA,8,60*60*24*365*60) 	
+			affect.add_collect_point(POINT_ATTBONUS_SHAMAN,8,60*60*24*365*60) 	
+			pc.give_item2(50114)
+			clear_letter()
+			set_quest_state("collect_quest_lv92", "run")
+			set_state(__complete)
+		end
+			
+	end
+
+	
+	state __complete begin
+	end
+end
+
+

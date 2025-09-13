@@ -1,0 +1,346 @@
+1	1	Besitzt der Rucksack des Fahrenden Händlers ein Schloss?
+1	2	Kann man im Land der Riesen Verwandlungskugeln erbeuten?
+1	3	Droppt der Verfl. Alpha-Blauwolf Wolfsfell? 
+1	4	Droppt der Yeti Yetifell?
+1	5	Kann man Eiskugeln nur beim Berg Sohan erbeuten?
+1	6	Erhält man die Träne der Göttin nur aus Truhen?
+1	7	Erhöht der Stein der Hast auf Stufe 3 die Bewegungsgeschwindigkeit um 30?
+1	8	Geben Perlen standardmäßig den Bonus INT?
+1	9	Gibt es eine Rüstung ab Level 12?
+1	10	Gibt es im Hwang-Tempel Jadeadern?
+1	11	Gibt es im OT 22 Brücken?
+1	12	Gibt es in Metin2 acht Klassen?
+1	13	Gibt es Sperrholz in Metin2?
+1	14	Gibt es ein Item namens Schmuckstück?
+1	15	Gibt es die Fertigkeit Aurarausch?
+1	16	Existiert der Bonus Heilen?
+1	17	Gibt es ein Koreanisches Feuerwerk?
+1	18	Gibt es ein mittleres Missionsbuch?
+1	19	Gibt es eine Quarzader?
+1	20	Gibt es eine Spezialmap für Übungskämpfe?
+1	21	Sitzt ein Vogel auf der rechten Schulter des Teleporters?
+1	22	Gibt es eine Holzrüstung?
+1	23	Gibt es einen Feuerphönix?
+1	24	Gibt es einen Lehrer der Fechtkunst?
+1	25	Gibt es Orks?
+1	26	Gibt es auf Map2 Fischer?
+1	27	Gibt es pro Reich immer nur einen Stallburschen?
+1	28	Kann man in Metin2 Haustiere halten?
+1	29	Gibt es Hunde in Metin2?
+1	30	Gibt es in jedem Reich die gleiche Anzahl Fischer?
+1	31	Gibt es Reiskuchen in Metin2?
+1	32	Gibt es auf Map2 einen Marktplatz?
+1	33	Gibt es in Metin2 Milchsaft?
+1	34	Gibt es verfluchte Tiere nur in der Gildenzone?
+1	35	Greift Bera von alleine an?
+1	36	Hat Beran-Setaou seine Schwester umgebracht?
+1	37	Besitzt das Inventar 90 Slots?
+1	38	Hat der Bambuspfeil einen Angriffswert von 10?
+1	39	Besitzt der Brutale Arahan das Level 53? 
+1	40	Hat der Hungrige Wildhund die Stufe 1?
+1	41	Trägt der Lagerverwalter ein blaues Haarband?
+1	42	Trägt der Schmied eine Schürze?
+1	43	Hat der Sensenmann die Stufe Boss?
+1	44	Trägt der Stolze Ork-General eine Kette mit sechs Anhängern?
+1	45	Hat die Alte Frau eine Schwester?
+1	46	Hat Metin2 ein Forum?
+1	47	Hat Mirine schwarze Augen?
+1	48	Haust der Sensenmann im Dämonenturm?
+1	49	Heißt der Surageist in der Grotte2 Akuma?
+1	50	Ist Bahar-Taraji die Jüngste der Göttergeschwister?
+1	51	Ist Bahar-Taraji die Göttin des Gleichgewichts?
+1	52	Ist Baljit-Elvedin der Älteste der Göttergeschwister?
+1	53	Ist Baljit-Elvedin der Gott des Gleichgewichts?
+1	54	Ist das Monster Hae-Tae ein BOSS?
+1	55	Besitzt der Stolze dunkl. Kämpfer das Level 54?
+1	56	Ist der Verfl. rote Keiler in sieben verschiedenen Gebieten anzutreffen?
+1	57	Ist die Kupferglocke ab Level 5 ausrüstbar?
+1	58	Ist die Rote Hwang Rüstung für Krieger?
+1	59	Ist es in der Wüste auch in der Nacht hell?
+1	60	Ist Soon ein Bücherwurm?
+1	61	Kann der Schmied Gegenstände beim Verbessern zerstören?
+1	62	Kann die Große Wüstenschildkröte auf Map2 erscheinen?
+1	63	Kann man Diamanten abbauen?
+1	64	Kann man in Metin2 heiraten?
+1	65	Kann man in Metin2 tanzen?
+1	66	Kann man mit 16 Jahren GM werden?
+1	67	Kann man ab Level 15 den Ruf-Chat nutzen?
+1	68	Kann man mit Level 17 seinen ersten Meister erreichen?
+1	69	Kann man mit Level 52 drei Meister haben?
+1	70	Kann man mit Level 55 etwas aus einem Metin mit dem Level 5 droppen?
+1	71	Kann man mit Pferdelevel 9 Pferdefertigkeiten nutzen?
+1	72	Kann man sein Haustier in einer Tierpension abgeben?
+1	73	Kann man Socken an einen Baum hängen?
+1	74	Kann man Geiststeine verbessern?
+1	75	Droppt jedes Monster Verwandlungskugeln?
+1	76	Können alle Grünen Tränke im Spiel gedroppt werden?
+1	77	Können Tue-Pilze ausschließlich von Huahn-So verarbeitet werden?
+1	78	Leveln GMs Spieler?
+1	79	Liegt im Tal von Seungryong eine Leiche?
+1	80	Muss man bei der Quest 'Tagebuch einer Legende' 16 Buchseiten sammeln?
+1	81	Gibt der Königsgürtel+5 6 Slots im Inventar?
+1	82	Hat Heuk-Young das Aussehen eines Kriegers?
+1	83	Sind Gewundene Schlüssel handelbar?
+1	84	Gibt es im Land der Riesen 42 Leichen?
+1	85	Steht im Gildenland ein Teleporter?
+1	86	Steht im Land der Riesen ein Teleporter?
+1	87	Verbraucht ein Spieler mit negativem Rang beim erfolgreichen Lesen eines Seelensteins von G5 auf G6 4500 Rangpunkte?
+1	88	Verbraucht ein Spieler mit positiven Rang beim erfolgreichen Lesen eines Seelensteins von G5 auf G6 3000 Rangpunkte?
+1	89	Verkauft der Waffenhändler Stahlpfeile?
+1	90	Wechseln die Brücken im Orktal ihre Position?
+1	91	Werden bei einer einseitigen Scheidung 1kk Yang benötigt?
+1	92	Wird der Kranichflügelfächer von Wölfen gedroppt?
+1	93	Wird ein Brautkleid zum Heiraten benötigt?
+1	94	Wirkt der Bonus 'Stark gegen Teufel' bei Unterwelt-Yetis?
+1	95	Besitzt der Neunschwanz Level 73?
+1	96	Ist Bakra ein Dorf im Jinno-Reich?
+1	97	Befindet sich Taurean im ersten Dorf?
+1	98	Benötigt man mindestens Level 30, um Fischen zu können?
+1	99	Benötigt man mindestens Level 30, um heiraten zu können?
+1	100	Kann man bei Yang-Shin eine Spitzhacke kaufen?
+1	101	Kannst du das Perlenarmband ab Level 28 verwenden?
+1	102	Dürfen alle Charaktere über Level 40 den Dämonenturm betreten? 
+1	103	Gehört Bokjung zum Shinsoo-Reich?
+1	104	Ist das Schlangenfeld eine neutrale Map?
+1	105	Gibt es im Tal von Seungryong einen Level 55 Boss?
+1	106	Kann ein Charakter mit Level 51 Segensschriftrollen bei Monstern erbeuten?
+1	107	Gibt es im Geisterwald einen Level 80 Boss?
+1	108	Kann man den Blaustahl-Panzer+9 fallen lassen?
+1	109	Wird die Kleidung des Drachen aus dem Schwarzstahl-Panzer+9 hergestellt?
+1	110	Kann man 1000 Yang fallen lassen?
+1	111	Wird die Kleidung des Drachen aus der Schwarzen Kleidung+9 hergestellt?
+1	112	Spawnt der Rote Drache regulär in der Welt von Metin2?
+1	113	Erhält man bei der Quest 'Forschung des Biologen 8' einen permanenenten Bonus von 8 %% mehr Schaden gegen andere Spieler?
+1	114	Muss man Chaegirab für die Quest 'Forschung des Biologen 6' 30 Tugyis Tafeln bringen?
+1	115	Ist die Hwang Rüstung im Spiel käuflich?
+1	116	Wird der Blaustahl-Panzer aus dem Schwarzstahl-Panzer+9 hergestellt?
+1	117	Gibt es im Schlangenfeld einen Teleporter?
+1	118	Gibt es im Land der Riesen Metinsteine des Levels 75 und 80?
+1	119	Befindet sich der Eingang zum Land der Riesen im Schlangenfeld?
+1	120	Kann man von einem Tausendkämpfer die Halbmenschklinge erbeuten?
+1	121	Grenzt das Land der Riesen am Schlangenfeld?
+1	122	Verfügt das Wüstenflugauge selbst über ein Auge?
+1	123	Besitzt das Titanenschild+9 eine höhere Verteidigung als Schilde+9 mit Level 61?
+1	124	Hat das Falkenschild+9 einen Verteidigungswert von 153?
+1	125	Verleihen Holzohrringe einen TP-Bonus?
+1	126	Kann man die Esoterikfibel+ nur beim Dunklen Arahan und Dunklen Beschwörer erbeuten?
+1	127	Hat das Nymphenschwert eine höhere Angriffsgeschwindigkeit als das Schlachtschwert?
+1	128	Droppt die Große Eishexe Blutsteine?
+1	129	Ist Beran-Setaou ein NPC?
+1	130	Erhöht der Löwe als Reittier den Angriffswert um 200 Punkte?
+1	131	Kann man sich zu seinem Ehepartner teleportieren, der sich im Spinnendungeon 2 befindet?
+1	132	Stellt Huahn-So Tau her?
+1	133	Muss man für einen Verlobungsring 30 Jin-Hees besiegen?
+1	134	Ist der Ehering handelbar?
+1	135	Nimmt der Schmied im Dämonenturm Yang für die Verbesserung von Gegenständen?
+1	136	Kann man von Hae-Tae einen Seelenstein erbeuten?
+1	137	Spawnt Hae-Tae regulär in der Welt von Metin2?
+1	138	Erscheint Hae-Tae zu einem bestimmten Event?
+1	139	Sind die Monster in der Grotte der Verbannung 2 aggressiv?
+1	140	Ist Taurean ein NPC?
+1	141	Kann man das Kraut des schweren Affen vom Affen-Lord erbeuten?
+1	142	Werden doppelt so viele Rangpunkte abgezogen, wenn man beim Lesen eines Seelensteins einen negativen Rang hat?
+1	143	Kann man für die Mission 'Untersuche die Geisterbäume' einen Seelenstein als Belohnung erhalten?
+1	144	Kann man für die Mission 'Das Geheimnis des Geisterwaldes' einen Seelenstein als Belohnung erhalten?
+1	145	Kann man von dem Metin des Mordes im Dämonenturm Geiststeine erbeuten?
+1	146	Kann man von Metinsteinen der Level 75 und 80 Fertigkeitsbücher erbeuten? 
+1	147	Droppen Metinsteine mit Level 75 und 80 Geiststeine?
+1	148	Droppen Metinsteine unter Level 40 Seelensteine?
+1	149	Kann man sich ab Level 60 direkt in den Dämonenturm teleportieren?
+1	150	Erhöht der Blaustahl-Panzer+5 den Verteidigungswert um 184 und senkt die Bewegungsgeschwindigkeit um -6?
+1	151	Kann man in Metin2 Muscheln droppen?
+1	152	Ist es möglich, in der Grotte der Verbannung einen Passierschein zu droppen?
+1	153	Kann man von Jin-Hee das Vollmondschwert erbeuten?
+1	154	Kann der Mentalkrieger die Fertigkeit Blitzwurf nutzen?
+1	155	Erhöht der Kriegskeiler den Verteidigungswert um 500?
+1	156	Droppt der Metin der Schwärze Geiststeine+4?
+1	157	Benötigt man zur Verbesserung des Tiger-Plattenpanzers eine Schwarze Uniform+?
+1	158	Ist das Item Gegenstand verzaubern handelbar?
+1	159	Kann man im Spinnendungeon den Blauen Trank (K) erbeuten?
+1	160	Gibt es den Plagenträger regulär in der Welt von Metin2?
+1	161	Kann man in der Goldenen Schatztruhe eine Bärengalle finden?
+1	162	Kann man an einer Jadeader veredeltes Ebenholz abbauen? 
+1	163	Spawnt der Metin des Teufels bei Events?
+1	164	Droppen Orks das Weißgoldarmband?
+1	165	Muss man in der Devil's Catacomb alle Gegner besiegen?
+1	166	Kann Azrael im Kampf einen kritischen Treffer landen?
+1	167	Kann man die Seelenkristallkette im Item-Shop kaufen?
+1	168	Hat die Alte Frau eine Stauballergie?
+1	169	Ist der Waffenhändler in die Gemischtwarenhändlerin verliebt?
+1	170	Hat der Lagerverwalter Goldbarren?
+1	171	Ist Uriel eine Frau?
+1	172	Hat die Gemischtwarenhändlerin eine Beziehung mit dem Rüstungshändler?
+1	173	Besteht der Staubwedel der Alten Frau aus dem Pelz von Blauwölfen?
+1	174	Kann man die Große Wüstenschildkröte nur mit einem Zweihandschwert treffen?
+1	175	Kann das Zaubererschwert ab Level 50 genutzt werden?
+1	176	Hat Beran-Setaou Bahar-Taraji getötet?
+1	177	Ist Beran-Setaou nur auf einer Map im Spiel zu finden?
+1	178	Füllt der Rote Trank (G) 650 TP auf?
+1	179	Enthält das Elixier der Sonne (K) 2.000.000 TP?
+1	180	Kann Ausdauer mit Gelben Tränken aufgeladen werden?
+1	181	Wirkt Gift tödlich?
+1	182	Stellt Sim-Wasser 100 MP sofort wieder her?
+1	183	Erhöht Roter Tau die Angriffsgeschwindigkeit um 2%% bis 8%%?
+1	184	Hält die Wirkung von Tau maximal 20 Minuten an?
+1	185	Hält die Wirkung von Pfirsichblütensaft fünf Minuten an?
+1	186	Erhöht Blauer Tau den Angriffswert?
+1	187	Trägt Chuk-Sal eine Maske?
+1	188	Findet man den Runenpfahl auf der vierten Ebene der Devil's Catacomb?
+1	189	Hat der Metin der Vergeltung das Level 80?
+1	190	Befindet sich im Drachenraum der Geist eines Sura?
+1	191	Erhalten die Ehepartner am Ende der Hochzeit Rote Tränke (M)?
+1	192	Kann man im Schatten eines Baumes oder Gebäudes seinen eigenen Schatten sehen?
+1	193	Kann man ab Level 84 die Kleidung des Drachen+6 tragen?
+1	194	Kann man maximal zwei Geiststeine in einer Antiken Glocke einsetzen?
+1	195	Zieht der Tarnumhang Monster an?
+1	196	Können alle Mounts im Spiel ab Level 1 genutzt werden?
+1	197	Droppt der Blaue Drache Perlen?
+1	198	Ist 'Schaden wird von MP absorbiert' der Standardbonus des Seelensplitterhuts?
+1	199	Tauchen verfluchte Monster nur im Gildenland auf?
+1	200	Wenn man Verbrennen auf seinen sterbenden Gegner anwendet, behält er dann einen TP?
+1	201	Kann die Militärpferdequest ab Level 45 abgeschlossen werden?
+1	202	Kann ein Spieler mit dem Level 82 jemanden mit dem Level 53 in seine Gruppe einladen?
+1	203	Können Ninjas vier Pferdefertigkeiten anwenden?
+1	204	Gibt es Silberadern nur im ersten Dorf?
+1	205	Gibt es den Metin Pung-Ma nur in Lungsam?
+1	206	Kann man mit Schrumpfköpfen den Drachenraum betreten?
+1	207	Wird der Gewundene Schlüssel von General Huashin gedroppt?
+1	208	Gibt es am Berg Sohan einen Bossgegner?
+1	209	Können Goldverzierte Schuhe ab Level 20 getragen werden?
+1	210	Trägt die Eventhelferin Handschuhe?
+1	211	Trägt Baek-Go eine Brille?
+1	212	Hat das Mok Denkmal eine rechteckige Form?
+1	213	Trägt die Hochzeitsplanerin ein grünes Kleid?
+1	214	Hält Seon-Hae einen Stock in seiner rechten Hand?
+1	215	Hat Yang-Shin drei Pfeile in seinem Köcher?
+1	216	Ist der Metin der Rache himmelblau?
+1	217	Ist der Metin der Vergeltung der Metinstein mit dem höchsten Level?
+1	218	Findet man den Metin der Seele im Tal von Seungryong?
+1	219	Kann man beim Dunklen Tempel eine Jadeader entdecken?
+1	220	Kann man am Berg Sohan Amethysterz abbauen?
+1	221	Besitzt Beran-Setaou Level 97? 
+1	222	Besitzt Azrael ein höheres Level als Beran-Setaou?
+1	223	Besitzt die Große Eishexe das gleiche Level wie Tartaros?
+1	224	Ist der Blitzangriff die Fertigkeit eines Ninjas?
+1	225	Füllt der Rote Trank (M) 500 TP wieder auf?
+1	226	Kann der YinYang-Plattenpanzer von Kriegern getragen werden?
+1	227	Verdoppelt der Handschuh weiser Kaiser beim Sieg über Monster die erhaltenen Rangpunkte?
+1	228	Hat Uriels Tagebuch 20 Seiten?
+1	229	Wird man von Chuk-Sal in die Grotte der Verbannung geführt?
+1	230	Muss man Level 75 sein, um die Grotte der Verbannung betreten zu dürfen?
+1	231	Hat der Schmied einen Bart?
+1	232	Sind vier Pferde im Gehege des Stallburschen?
+1	233	Gehören zur Kleidung der Baronin violette Socken?
+1	234	Besitzt der Junge Skorpionmann eine Waffe?
+1	235	Hat der Neunschwanz tatsächlich genau neun Schwänze?
+1	236	Gibt es auf Berg Sohan eine Himmelstränenader?
+1	237	Besitzt der Dunkle Anführer den Bonus Ohnmachtschance?
+1	238	Befindet sich das Gum-Denkmal hinter dem Dämontenturm?
+1	239	Brennt der Kopf des Flammenkönigs?
+1	240	Trägt der Flammenkönig Sandalen?
+1	241	Handelt es sich bei Hae-Tae um ein Monster?
+1	242	Trägt der Plagenmann einen Schal?
+1	243	Hat der Affen-Lord einen Schwanz?
+1	244	Besitzt der Affen-Lord ein Zepter?
+1	245	Hat der Buhmann ein Horn auf der Stirn?
+1	246	Besitzt der Riesige Geisterbaum Wurzeln?
+1	247	Sind die Hände der Dryade rot?
+1	248	Hält der Tausendkämpfer zwei Äxte in den Händen?
+1	249	Hat die Setaou-Seherin das Level 88?
+1	250	Ist Beran-Setaou himmelblau?
+1	251	Ist Aranyo Soons Ehefrau?
+1	252	Befindet sich Ariyoung im ersten Dorf?
+1	253	Braut Baek-Go Tränke?
+1	254	Ist der Geist Schwertmeister blau?
+1	255	Hat das Eisinsekt zehn Beine?
+1	256	Regeneriert die gegrillte Flussforelle 250 MP?
+1	257	Trägt Handu-Up einen violetten Spitzhut?
+1	258	Wandert Nakajima auf der Map umher?
+1	259	Gibt der Rote Ameisenanzug+9 einen Verteidigungsbonus von 101?
+1	260	Trägt Harang ihre Haare zu Zöpfen gebunden?
+1	261	Hat Deokbae eine goldene Axt in der Hand?
+1	262	Beginnt die Quest 'Die Ställe haben Ärger' ab Level 49?
+1	263	Hat Uriel seine Arme vor sich verschränkt?
+1	264	Hält sich der Affen-Lord im Hasun Dong auf?
+1	265	Kannst du mit dem Standardkommando Strg+B dein Pferd füttern?
+1	266	Hat der Rüstungshändler einen Schnurrbart?
+1	267	Wird Jungsun Dong auch der schwere Affendungeon genannt?
+1	268	Erhöht Wut des Drachengotts die Wahrscheinlichkeit, einen durchbohrenden Treffer zu landen?
+1	269	Hat Aranyo eine Obstkiste in der Hand?
+1	270	Hat das Eisinsekt 6 Beine?
+1	271	Gibt es im Land der Riesen sechs verschiedene Arten von Monstern?
+1	272	Kann die Roteisenklinge nur mit Level 30 verwendet werden?
+1	273	Liegt Kuahlo Dong in der Wüste?
+1	274	Hat der Teleporter ein Mal auf der Stirn?
+1	275	Besitzt der Metin des Kampfs das Level 15?
+1	276	Trägt Chaegirab eine Brille?
+1	277	Benötigt man beim Verbessern der Level 26 Rüstung auf +4 einen Edelstein?
+1	278	Kann man die Level 26 Rüstung beim NPC kaufen?
+1	279	Kratzt sich der Plagenhund hinter dem Ohr?
+1	280	Hat der W. Plagenbogenschütze 2 Köpfe?
+1	281	Gibt es einen Chunjo-Felsen?
+1	282	Gibt es ein Yongbi-Felsen?
+1	283	Hat die Level 42 Rüstung auf +7 eine Verteidigung von +97?
+1	284	Hat die Level 42 Rüstung auf +7 eine Verteidigung von -97?
+1	285	Ist der Setaou-Jäger Level 89, Stufe 2?
+1	286	Ist der Schwarzwind-To-Su Level 33, Stufe 2?
+1	287	Gibt es Lehm in Metin2? 
+1	288	Stehen im Gatter beim Stallburschen 4 Ponys?
+1	289	Trägt Baek-Go eine Brille?
+1	290	Ist Wonda-Rim der Neffe von Chaegirab?
+1	291	Ist Chaegirab der Onkel von Wonda-Rim?
+1	292	Ist Chaegirab der Vater von Wonda-Rim?
+1	293	Gibt es auf Map2 einen Tiergott?
+1	294	Gibt es auf Map2 drei Fischer?
+1	295	Fragen Teamler nach ID und Passwort?
+1	296	Erkennt man einen GameMaster an [GM]?
+1	297	Steht der Betrunkene Bürger in Map2? 
+1	298	Ist das Auge einer Spinne ein Quest-Item?
+1	299	Gibt es 5 Haarfärbemittel in Metin2?
+1	300	Ist Moschusöl handelbar?
+1	301	Hat Aranyo etwas auf dem Rücken? 
+1	302	Ist Aranyo die Frau von Octavio?
+1	303	Ist Aranyo die Frau von Soon?
+1	304	Gibt es Skelette in Metin2?
+1	305	Gibt es im Kuahlo Dong Denkmäler?
+1	306	Gibt es eine Arena für Übungskämpfe in Metin2?
+1	307	Können Lederschuhe von jedem getragen werden?
+1	308	Hat das Exorzismusschwert eine Angriffsgeschwindigkeit von 20%%?
+1	309	Trägt Eun-Jung einen Fächer?
+1	310	Trägt Eun-Jung eine Waffe?
+1	311	Kann man Gold- und Silberbarren auf den Boden werfen?
+1	312	Sinkt die Angriffsgeschwindigkeit der Magnetischen Klinge bei höheren Upgradestufen?
+1	313	Steigt die Angriffsgeschwindigkeit der Magnetischen Klinge bei höheren Upgradestufen?
+1	314	Gibt es eine Düstere Holzmaske?
+1	315	Kann man in Metin2 grillen?
+1	316	Trägt Koe-Pung eine Maske?
+1	317	Ist der Waldgeist-Seelenstein ein Quest-Item?
+1	318	Trägt der Oger Berserker eine Waffe in seiner linken Hand?
+1	319	Kann das Geschlecht mit jedem Level gewechselt werden?
+1	320	Ist Imha die Gildenzone des Reiches Chunjo?
+1	321	Ist Imha die Gildenzone des Reiches Shinsoo?
+1	322	Ist Imha die Gildenzone des Reiches Jinno?
+1	323	Ist Jungrang ein NPC in Metin2?
+1	324	Ist Jayang die Tochter von Soon?
+1	325	Ist das Innere von Jungsun Dong aus grünlichem Stein?
+1	326	Ist Yang die Währung von Metin2?
+1	327	Wird für die Level30-Quest Jinunggyis Seelenstein benötigt?
+1	328	Gibt es Items vom Typ Forschung?
+1	329	Kann man bei Seon-Hae Tränke brauen?
+1	330	Gibt es Kürbisse in Metin2?
+1	331	Gibt es Socken in Metin2?
+1	332	Ist das Feuer im Dunklen Schrein rot?
+1	333	Ist der Affengeneral Level 40, Stufe 4?
+1	334	Kann jede Klasse das Schwert benutzen?
+1	335	Ist Nakajima ein NPC von Metin2?
+1	336	Kann der Passierschein von Monstern erbeutet werden?
+1	337	Kosten 200 Rote Tränke(G) 33.000 Yang bei der Gemischtwarenhändlerin?
+1	338	Kann der Verzierte Bogen von Ninjas getragen werden?
+1	339	Steht Chuong auf Map1?
+1	340	Ist der Metin des Kummers Level 10, Stufe 5?
+1	341	Gibt es Weihnachtsfeuerwerk?
+1	342	Erhöht Chinesisches Feuerwerk die Bewegungsgeschwindigkeit?
+1	343	Erhöht Chinesisches Feuerwerk die Angriffsgeschwindigkeit?
+1	344	Erhöht Chinesisches Feuerwerk die Ohnmachtschance?
+1	345	Stellt gegrillter Lachs 350 Trefferpunkte wieder her?
+1	346	Stellt gegrillter Lachs 350 Manapunkte wieder her?

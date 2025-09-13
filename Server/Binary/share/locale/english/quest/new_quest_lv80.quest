@@ -1,0 +1,546 @@
+quest new_quest_lv80 begin
+	state start begin
+		when login or levelup with pc.get_level() >= 80 begin
+			new_quest_lv80_mob1 = 2202 -- Flammengeist
+			new_quest_lv80_mob2 = 1106 -- Yeti
+			new_quest_lv80_amountIce = 10 -- we want x ice
+			new_quest_lv80_ice = 30146 -- the ice
+			new_quest_lv80_figure = 30183 -- scary wooden figure
+			new_quest_lv80_ember =	30184 -- enchanted ember
+			new_quest_lv80_blackice = 30185 -- black ice
+			pc.setqf("notenchanted", 1)
+			pc.setqf("spawnsleft", 10)
+			pc.setqf("gotreward", 1)
+			new_quest_lv80_dropProb = 80 -- drop probability; value/10 = percent
+			new_quest_lv80_spawninterval = 120 -- 60sec * 60min * 1,5 = 1,5 hours = 5400sec
+			new_quest_lv80_spawnlocationx = 99999 -- default value
+			new_quest_lv80_spawnlocationy = 99999 -- default value
+			set_state(gotoinformation)
+		end
+	end
+	
+	state gotoinformation begin
+		when enter or login begin
+			new_quest_lv80_mob1 = 2202 -- Flammengeist
+			new_quest_lv80_mob2 = 1106 -- Yeti
+			new_quest_lv80_amountIce = 10 -- we want x ice
+			new_quest_lv80_ice = 30146 -- the ice
+			new_quest_lv80_figure = 30183 -- scary wooden figure
+			new_quest_lv80_ember =	30184 -- enchanted ember
+			new_quest_lv80_blackice = 30185 -- black ice
+			local goto_npc = 20023 -- Soon
+			local v=find_npc_by_vnum(goto_npc)
+			if 0!=v then
+				target.vid("__TARGET__", v, gameforge.new_quest_lv80._010_target) -- place questarrow on Soon
+			end
+		end
+		when __TARGET__.target.click begin -- when Soon is clicked
+			q.start()
+			q.set_title(gameforge.new_quest_lv80._020_set_title)
+			target.delete("__TARGET__") -- delete questarrow
+			say_title(gameforge.new_quest_lv80._020_set_title)
+			say(gameforge.new_quest_lv80._030_say)
+			say(gameforge.new_quest_lv80._040_say)
+			wait()
+			if pc.get_sex() == 0 then
+				say(gameforge.new_quest_lv80._050_1_say)
+			else
+				say(gameforge.new_quest_lv80._050_2_say)
+			end
+			say(string.format(gameforge.new_quest_lv80._060_say, mob_name(2232)))
+			say(gameforge.new_quest_lv80._070_say)
+			say(gameforge.new_quest_lv80._080_say)
+			wait()
+			say(string.format(gameforge.new_quest_lv80._090_say,new_quest_lv80_amountIce, item_name(30146)))
+			say(string.format(gameforge.new_quest_lv80._100_say, mob_name(new_quest_lv80_mob2), item_name(new_quest_lv80_ice)))
+			pc.give_item2(new_quest_lv80_figure)
+			-- add giveup
+			-- add asking questions
+			set_state(collectstuff)
+		end
+	end
+	
+	state collectstuff begin
+		when enter or login begin
+			new_quest_lv80_dropProb = 80 -- drop probability; value/10 = percent
+			new_quest_lv80_mob1 = 2202 -- Flammengeist
+			new_quest_lv80_mob2 = 1106 -- Yeti
+			new_quest_lv80_amountIce = 10 -- we want x ice
+			new_quest_lv80_ice = 30146 -- the ice
+			new_quest_lv80_figure = 30183 -- scary wooden figure
+			new_quest_lv80_ember =	30184 -- enchanted ember
+			new_quest_lv80_blackice = 30185 -- black ice
+			send_letter(gameforge.new_quest_lv80._020_set_title)
+			
+		end
+		
+		when button or info begin
+			say_title(gameforge.new_quest_lv80._110_say_title)
+			say(gameforge.new_quest_lv80._120_say)
+			if pc.count_item(new_quest_lv80_ice) >= 10 then
+				say(string.format(gameforge.new_quest_lv80._130_say, item_name(new_quest_lv80_ice)))
+			else
+				say(gameforge.new_quest_lv80._140_say)
+				say_reward(string.format("%s x", new_quest_lv80_amountIce - pc.count_item(new_quest_lv80_ice)))
+				say_item_vnum(new_quest_lv80_ice) -- icon of item: ice
+				say_reward(string.format(gameforge.new_quest_lv80._150_say_reward, mob_name(new_quest_lv80_mob2)))
+				wait()
+			end
+			if pc.count_item(new_quest_lv80_ember) == 1 then
+				say(string.format(gameforge.new_quest_lv80._160_say, item_name(new_quest_lv80_figure), item_name(new_quest_lv80_ember)))
+			else
+				say(gameforge.new_quest_lv80._170_say)
+				say_reward("1 x")
+				say_item_vnum(new_quest_lv80_ember) -- icon of item: enchanted ember
+				say_reward(gameforge.new_quest_lv80._180_say_reward)
+				say_item_vnum(new_quest_lv80_figure) -- icon of item: scary wooden figure
+				say_reward(string.format(gameforge.new_quest_lv80._190_say_reward, item_name(new_quest_lv80_figure), mob_name(new_quest_lv80_mob1)))
+			end
+		end
+		
+		when 20023.chat.gameforge.new_quest_lv80._020_set_title begin -- player talks to Soon
+			if pc.getqf("notenchanted") == 0 then -- has the enchanted ember
+				if pc.count_item(new_quest_lv80_ice) >= new_quest_lv80_amountIce and pc.count_item(new_quest_lv80_figure) == 0 and pc.count_item(new_quest_lv80_ember) == 1 then 
+					say(string.format(gameforge.new_quest_lv80._200_say, item_name(new_quest_lv80_ember), item_name(new_quest_lv80_ice)))
+					wait()
+					say(gameforge.new_quest_lv80._210_say)
+					say(string.format(gameforge.new_quest_lv80._220_say, item_name(new_quest_lv80_blackice)))
+					say(gameforge.new_quest_lv80._230_say)
+					say(string.format(gameforge.new_quest_lv80._240_say, item_name(new_quest_lv80_blackice), mob_name(30123)))
+					pc.remove_item(new_quest_lv80_ember, 1)
+					pc.remove_item(new_quest_lv80_ice, new_quest_lv80_amountIce)
+					pc.give_item2(new_quest_lv80_blackice)
+					set_state(findshrine)
+				elseif pc.count_item(new_quest_lv80_ice) < new_quest_lv80_amountIce and pc.count_item(new_quest_lv80_figure) == 0 and pc.count_item(new_quest_lv80_ember) == 1 then
+					say(string.format(gameforge.new_quest_lv80._250_say, new_quest_lv80_amountIce - pc.count_item(new_quest_lv80_ice), item_name(new_quest_lv80_ice)))
+				else
+					notice(gameforge.new_quest_lv80._260_notice)
+				end
+			else -- has no ember or not the correct one
+				if pc.count_item(new_quest_lv80_ice) >= new_quest_lv80_amountIce and pc.count_item(new_quest_lv80_figure) == 1 and pc.count_item(new_quest_lv80_ember) == 0 then
+					say(gameforge.new_quest_lv80._270_say)
+				elseif pc.count_item(new_quest_lv80_ice) == 0 and pc.count_item(new_quest_lv80_figure) == 1 and pc.count_item(new_quest_lv80_ember) == 0 then
+					-- has done nothing yet
+					say(gameforge.new_quest_lv80._280_say)
+				else
+					say(gameforge.new_quest_lv80._290_say)
+				end
+			end
+		end
+		
+		when 2202.kill begin -- fire
+			if pc.count_item(new_quest_lv80_figure) >= 1 and math.random(1,1000) <= new_quest_lv80_dropProb then
+				pc.remove_item(new_quest_lv80_figure, 1)
+				pc.give_item2(new_quest_lv80_ember)
+				send_letter(gameforge.new_quest_lv80._110_say_title)
+				pc.setqf("notenchanted", 0)
+			else
+			end
+		end
+		
+		when 1106.kill begin -- ice
+			if pc.count_item(new_quest_lv80_ice) < new_quest_lv80_amountIce and math.random(1,1000) <= new_quest_lv80_dropProb*4 then
+				pc.give_item2(new_quest_lv80_ice)
+				send_letter(gameforge.new_quest_lv80._110_say_title)
+			else
+			end
+		end
+	end
+	
+	state findshrine begin
+		function is_heavens_cave()
+			local map_num = pc.get_map_index()
+			local in_heavens_cave = 0
+			if map_num == 72 or 73 then -- 72 = heavens cave first level, 73 = second level
+				in_heavens_cave = 1 
+			end
+			return in_heavens_cave
+		end
+		
+		when login begin -- when the player arrives on the right map this event is triggered
+			new_quest_lv80_mob1 = 2202 -- Flammengeist
+			new_quest_lv80_mob2 = 1106 -- Yeti
+			new_quest_lv80_amountIce = 10 -- we want x ice
+			new_quest_lv80_ice = 30146 -- the ice
+			new_quest_lv80_figure = 30183 -- scary wooden figure
+			new_quest_lv80_ember =	30184 -- enchanted ember
+			new_quest_lv80_blackice = 30185 -- black ice
+			if 1 == new_quest_lv80.is_heavens_cave() then -- 
+				local v=find_npc_by_vnum(30123) -- dark shrine
+				if 0!=v then
+					target.vid("__TARGET3__", v, gameforge.new_quest_lv80._300_target) -- place questarrow on dark shrine
+					q.start()
+					q.set_title(gameforge.new_quest_lv80._310_set_title) --for quest-journal
+				end
+			end
+		end
+		
+		when button or info begin
+			say_title(gameforge.new_quest_lv80._310_set_title)
+			say(string.format(gameforge.new_quest_lv80._320_say, item_name(new_quest_lv80_blackice)))
+		end
+		
+		when 30123.chat.gameforge.new_quest_lv80._330_npcChat begin
+			target.delete("__TARGET3__") -- delete questarrow
+			say_title(gameforge.new_quest_lv80._310_set_title)
+			say(string.format(gameforge.new_quest_lv80._340_say, item_name(new_quest_lv80_blackice)))
+			local sacrifice = select(gameforge.new_quest_lv80._350_1_select, gameforge.new_quest_lv80._350_2_select)
+			if sacrifice == 1 and new_quest_lv80.is_heavens_cave() == 1 then
+				pc.remove_item(new_quest_lv80_blackice, 1)
+				-- pc.change_alignment(-8000)
+				say(gameforge.new_quest_lv80._360_say)
+				next_time_set(10, 10)
+				set_state(aftermath)
+			elseif new_quest_lv80.is_heavens_cave() == 1 then
+				say(gameforge.new_quest_lv80._370_say)
+				set_state(denial)
+			else
+				say(gameforge.new_quest_lv80._380_say)
+			end
+		end
+	end
+	
+	state aftermath begin
+		when enter or login begin 
+			new_quest_lv80_mob1 = 2202 -- Flammengeist
+			new_quest_lv80_mob2 = 1106 -- Yeti
+			new_quest_lv80_amountIce = 10 -- we want x ice
+			new_quest_lv80_ice = 30146 -- the ice
+			new_quest_lv80_figure = 30183 -- scary wooden figure
+			new_quest_lv80_ember =	30184 -- enchanted ember
+			new_quest_lv80_blackice = 30185 -- black ice
+			if pc.getqf("gotreward") == 1 then
+				send_letter(gameforge.new_quest_lv80._390_send_letter)
+				local goto_npc = 20023 -- Soon
+				local v=find_npc_by_vnum(goto_npc)
+				if 0!=v then
+					target.vid("__TARGET__", v, gameforge.new_quest_lv80._010_target) -- place questarrow on Soon
+				end
+			else
+				q.set_title(gameforge.new_quest_lv80._400_set_title)
+			end
+			new_quest_lv80_dropProb = 25 -- drop probability; value/5 = percent
+			new_quest_lv80_spawnlocationx = 99999 -- default value
+			new_quest_lv80_spawnlocationy = 99999 -- default value
+			new_quest_lv80_spawninterval = 21600 -- 60sec * 60min * 4 = 4 hours = 14400sec
+			if next_time_is_now() then -- checking if it is time
+				next_time_set(new_quest_lv80_spawninterval, 10)
+				pc.setqf("spawnmob", 0)
+				if math.random(1,500) <= new_quest_lv80_dropProb then -- checking against chance if a mob is spawning
+					local mobtype = math.random(1, 9) -- which mob should it be?
+					local spawningmob = 1902 -- vnum of the mob to be spawned Kitsune is default
+					local spawnamount = 1 -- how many foes do we want?
+					local spawndistancex = 1 -- in wich x distance around the pawnpoint
+					local spawndistancey = 1 -- in wich y distance around the pawnpoint
+					local spawntrue = 1 -- as long this value is 1 the mobs will spawn
+					if pc.get_map_index() == 3 then -- checking if we are on Jayang map in Shinsoo
+						local spawnpoint = math.random(1,9) -- finding the a spawnpoint
+						if spawnpoint == 1 or spawnpoint == 2 then
+							new_quest_lv80_spawnlocationx = 685
+							new_quest_lv80_spawnlocationy = 654
+							mobtype = math.random(1, 4)
+						elseif spawnpoint == 3 or spawnpoint == 4 then
+							new_quest_lv80_spawnlocationx = 512
+							new_quest_lv80_spawnlocationy = 930
+							mobtype = math.random(1, 4)
+						elseif spawnpoint == 5 or spawnpoint == 6 then
+							new_quest_lv80_spawnlocationx = 315
+							new_quest_lv80_spawnlocationy = 528
+							mobtype = math.random(1, 4)
+						elseif spawnpoint == 7 then
+							new_quest_lv80_spawnlocationx = 92
+							new_quest_lv80_spawnlocationy = 318
+						elseif spawnpoint == 8 then
+							new_quest_lv80_spawnlocationx = 414
+							new_quest_lv80_spawnlocationy = 60
+						else
+							new_quest_lv80_spawnlocationx = 948
+							new_quest_lv80_spawnlocationy = 466
+						end
+					elseif pc.get_map_index() == 23 then-- checking if we are on Bokjung map in Chunjo
+						local spawnpoint = math.random(1,9) -- finding the a spawnpoint
+						if spawnpoint == 1 or spawnpoint == 2 then
+							new_quest_lv80_spawnlocationx = 341
+							new_quest_lv80_spawnlocationy = 202
+							mobtype = math.random(1, 4)
+						elseif spawnpoint == 3 or spawnpoint == 4 then
+							new_quest_lv80_spawnlocationx = 594
+							new_quest_lv80_spawnlocationy = 346
+							mobtype = math.random(1, 4)
+						elseif spawnpoint == 5 or spawnpoint == 6 then
+							new_quest_lv80_spawnlocationx = 257
+							new_quest_lv80_spawnlocationy = 368
+							mobtype = math.random(1, 4)
+						elseif spawnpoint == 7 then
+							new_quest_lv80_spawnlocationx = 431
+							new_quest_lv80_spawnlocationy = 503
+						elseif spawnpoint == 8 then
+							new_quest_lv80_spawnlocationx = 383
+							new_quest_lv80_spawnlocationy = 91
+						else
+							new_quest_lv80_spawnlocationx = 891
+							new_quest_lv80_spawnlocationy = 469
+						end
+					elseif pc.get_map_index() == 43 then -- checking if we are on Bakra map in Jinno
+						local spawnpoint = math.random(1,9) -- finding the a spawnpoint
+						if spawnpoint == 1 or spawnpoint == 2 then
+							new_quest_lv80_spawnlocationx = 658
+							new_quest_lv80_spawnlocationy = 342
+							mobtype = math.random(1, 4)
+						elseif spawnpoint == 3 or spawnpoint == 4 then
+							new_quest_lv80_spawnlocationx = 354
+							new_quest_lv80_spawnlocationy = 233
+							mobtype = math.random(1, 4)
+						elseif spawnpoint == 5 or spawnpoint == 6 then
+							new_quest_lv80_spawnlocationx = 372
+							new_quest_lv80_spawnlocationy = 643
+							mobtype = math.random(1, 4)
+						elseif spawnpoint == 7 then
+							new_quest_lv80_spawnlocationx = 124
+							new_quest_lv80_spawnlocationy = 142
+						elseif spawnpoint == 8 then
+							new_quest_lv80_spawnlocationx = 924
+							new_quest_lv80_spawnlocationy = 599
+						else
+							new_quest_lv80_spawnlocationx = 461
+							new_quest_lv80_spawnlocationy = 608
+						end
+					elseif pc.get_map_index() == 4 then -- checking if we are on Jungrang map in Shinsoo
+						new_quest_lv80_spawnlocationx = 113
+						new_quest_lv80_spawnlocationy = 57
+					elseif pc.get_map_index() == 24 then -- checking if we are on Waryong map in Chunjo
+						new_quest_lv80_spawnlocationx = 477
+						new_quest_lv80_spawnlocationy = 179
+					elseif pc.get_map_index() == 44 then -- checking if we are on Imha map in Jinno
+						new_quest_lv80_spawnlocationx = 378
+						new_quest_lv80_spawnlocationy = 157
+					else
+						-- notice("The chances are good and the time is up for a new Monster but you are not in the right map!") -- tbd
+						spawntrue = 0
+					end
+					if mobtype <= 4 then
+						spawnamount = mobtype
+						if mobtype == 1 then
+							spawningmob = 2191 -- Grosse Wüstenschildkröte
+						else
+							spawningmob = 993 -- Riesiger Plagenträger
+							spawndistancex = mobtype *2
+							spawndistancey = mobtype *2
+						end
+					elseif mobtype == 5 then
+						spawningmob = 1902 -- Kitsune
+					elseif mobtype == 6 or mobtype == 7 then
+						spawningmob = 1191 -- Eishexe
+					else
+						spawningmob = 8025 -- Metin Ma-An (Level 80) no drop
+						mob.spawn(8104, new_quest_lv80_spawnlocationx, new_quest_lv80_spawnlocationy, 10, 10, mobtype -3)
+						mob.spawn(8104, new_quest_lv80_spawnlocationx, new_quest_lv80_spawnlocationy, 20, 20, mobtype -1)
+						mob.spawn(8104, new_quest_lv80_spawnlocationx, new_quest_lv80_spawnlocationy, 30, 30, mobtype +1)
+						mob.spawn(8104, new_quest_lv80_spawnlocationx, new_quest_lv80_spawnlocationy, 30, 30, mobtype +1)
+						spawndistancex = 15
+						spawndistancey = 20
+						spawnamount = mobtype -4
+					end
+					if spawntrue == 1 then
+						local spawntimes = pc.getqf("spawnsleft")
+						-- notice(string.format("Spawning %s %s at %s x and %s y! %s monsters left to spawn.", spawnamount, mob_name(spawningmob), spawnlocationx, spawnlocationy, spawntimes -1)) -- tbd
+						mob.spawn(spawningmob, new_quest_lv80_spawnlocationx, new_quest_lv80_spawnlocationy, spawndistancex, spawndistancey, spawnamount)
+						pc.setqf("spawnsleft", spawntimes -1)
+						pc.setqf("spawnmob", spawningmob)
+					end
+					if pc.getqf("spawnsleft") < 1 and pc.getqf("gotreward") == 0 then 
+						-- notice("New_quest_lv80 Quest is Finished!") -- tbd
+						pc.setqf("spawnmob", 0)
+						set_state(__COMPLETE__)
+					end
+				end
+			end
+		end
+		
+		when button or info begin
+			if pc.getqf("gotreward") == 1 then
+				say_title(gameforge.new_quest_lv80._310_set_title)
+				say(gameforge.new_quest_lv80._410_say)
+			else
+				say_title(gameforge.new_quest_lv80._400_set_title)
+				say(gameforge.new_quest_lv80._420_say)
+				say(string.format(gameforge.new_quest_lv80._430_say, item_name(new_quest_lv80_blackice)))
+			end
+		end
+
+		when __TARGET__.target.click begin -- when Soon is clicked
+			target.delete("__TARGET__") -- delete questarrow
+			say_title(gameforge.new_quest_lv80._310_set_title)
+			say(gameforge.new_quest_lv80._440_say)
+			pc.setqf("gotreward", 0)
+			pc.change_money(3000000)
+			pc.give_exp2(120000000)
+		end
+		
+		when 20023.chat.gameforge.new_quest_lv80._450_npcChat with pc.getqf("spawnmob") > 0 begin
+			say_title(gameforge.new_quest_lv80._450_npcChat)
+			say(string.format(gameforge.new_quest_lv80._460_say, mob_name(pc.getqf("spawnmob"))))
+		end
+	end
+	
+	state denial begin
+		when login or enter begin
+			send_letter(gameforge.new_quest_lv80._310_set_title)
+			if pc.get_map_index() == 1 or 21 or 41 then
+				local goto_npc = 20023 -- Soon
+				local v=find_npc_by_vnum(goto_npc)
+				if 0!=v then
+					target.vid("__TARGET__", v, gameforge.new_quest_lv80._010_target) -- place questarrow on Soon
+				end
+			end
+		end
+		
+		when button or info begin
+			say_title(gameforge.new_quest_lv80._310_set_title)
+			say(gameforge.new_quest_lv80._470_say)
+		end
+		
+		when 20023.chat.gameforge.new_quest_lv80._475_npcChat begin -- when Soon is clicked
+			q.start()
+			q.set_title(gameforge.new_quest_lv80._310_set_title)
+			target.delete("__TARGET__") -- delete questarrow
+			if pc.count_item(30185) < 1 then
+				say_title(gameforge.new_quest_lv75._320_say)
+				say(gameforge.new_quest_lv80._476_say)
+				wait()
+				say_pc_name()
+				say(gameforge.new_quest_lv80._477_say)
+			else
+				say_title(gameforge.new_quest_lv75._320_say)
+				say(gameforge.new_quest_lv80._480_say)
+				wait()
+				say_pc_name() 
+				say(gameforge.new_quest_lv80._490_say)
+				wait()
+				say(gameforge.new_quest_lv75._320_say)
+				say(gameforge.new_quest_lv80._495_say)
+				wait()
+				say_pc_name() 
+				say(gameforge.new_quest_lv80._500_say)
+				local give_blackice = select(gameforge.new_quest_lv80._510_1_select, gameforge.new_quest_lv80._510_2_select)
+				if give_blackice == 1 then
+					say_pc_name() 
+					say(gameforge.new_quest_lv80._520_say)
+					wait()
+					say_title(gameforge.new_quest_lv75._320_say)
+					say(gameforge.new_quest_lv80._530_say)
+					pc.remove_item(30185, pc.countitem(30185))
+					say_title(gameforge.main_quest_lv27._120_sayTitle)
+					say_reward(gameforge.new_quest_lv80._535_sayReward)
+					pc.give_exp2(70000000)
+					set_state(__COMPLETE__)
+				else
+					say_pc_name() 
+					say(gameforge.new_quest_lv80._540_say)
+					wait()
+					say_title(gameforge.new_quest_lv75._320_say)
+					say(gameforge.new_quest_lv80._550_say)
+					wait()
+					say_pc_name() 
+					say(gameforge.new_quest_lv80._560_say)
+					set_state(dispose)
+				end
+			end
+		end
+	end
+	
+	state dispose begin
+		when login or enter begin
+			if pc.get_map_index() == 1 and pc.countitem(30185) > 0 then
+				target.pos("__DISPOSE__", 591, 1196, 1, gameforge.new_quest_lv80._570_target_pos)
+			elseif pc.get_map_index() == 21 and pc.countitem(30185) > 0 then
+				target.pos("__DISPOSE__", 167, 772, 21, gameforge.new_quest_lv80._580_target_pos)
+			elseif pc.get_map_index() == 41 and pc.countitem(30185) > 0 then
+				target.pos("__DISPOSE__", 851, 299, 41, gameforge.new_quest_lv80._590_target_pos)
+			else
+				send_letter(gameforge.new_quest_lv80._599_set_title)
+			end
+		end
+		
+		when button or info begin
+			local mapname
+			say_title(gameforge.new_quest_lv80._599_set_title)
+			if pc.get_empire() == 1 then -- finding out which map (map1) the player has to go to meet his or her first contact
+				say(gameforge.new_quest_lv80._600_say)
+			elseif pc.get_empire() == 2 then 
+				say(gameforge.new_quest_lv80._610_say)
+			elseif pc.get_empire() == 3 then
+				say(gameforge.new_quest_lv80._620_say)
+			end
+		end
+		
+		when __DISPOSE__.target.arrive begin		
+			if pc.countitem(30185) >= 1 then
+				target.delete("__DISPOSE__")
+				pc.remove_item(30185, pc.countitem(30185))
+				-- command("effect 5")
+				say_title(gameforge.new_quest_lv80._599_set_title)
+				say_reward(gameforge.new_quest_lv80._630_say_reward)
+				set_state(blessing)
+			else
+				target.delete("__DISPOSE__")
+				set_state(forgot)
+			end
+		end
+	end
+	
+	state forgot begin
+		when login or enter begin
+			say_pc_name() 
+			say(gameforge.new_quest_lv80._660_say)
+			wait()
+			set_state(dispose)
+		end
+	end
+	
+	state blessing begin
+		when login begin
+			local dragonreward = 71020 -- item: blessing of the dragon
+			local r = math.random(1,25)
+			local dragonamount = math.random(3, 5)
+			say_title(gameforge.new_quest_lv80._599_set_title)
+			say(gameforge.new_quest_lv80._640_say)
+			if r <= 4 then
+				say_title(string.format("%sx", dragonamount))
+				dragonreward = 71020
+			elseif r > 4 and r <= 8 then
+				dragonamount = dragonamount +3
+				say_title(string.format("%sx", dragonamount))
+				dragonreward = 71004  -- dragon god medal
+			elseif r > 8 and r <= 12 then
+				say_title(string.format("%sx", dragonamount))
+				dragonreward = 71027 -- Drachengott-Leben
+			elseif r > 12 and r <= 16 then
+				dragonamount = dragonamount +1
+				say_title(string.format("%sx", dragonamount))
+				dragonreward = 71028 -- Drachengott-Angriff
+			elseif r > 16 and r <= 20 then
+				dragonamount = dragonamount +3
+				say_title(string.format("%sx", dragonamount))
+				dragonreward = 71029 -- Drachengott-Intelligenz
+			elseif r > 20 and r <= 24 then
+				dragonamount = dragonamount +1
+				say_title(string.format("%sx", dragonamount))
+				dragonreward = 71030  -- Drachengott-Verteidigung
+			else
+				dragonamount = 1
+				say_title(string.format("%sx", dragonamount))
+				dragonreward = 71032 -- Schriftrolle des Drachen
+			end
+			say_item_vnum(dragonreward) -- icon of item: blessing of the dragon
+			say(gameforge.new_quest_lv80._650_say)
+			say_reward(gameforge.new_quest_lv80._670_sayReward)
+			pc.give_item2(dragonreward, dragonamount)
+			pc.give_exp2(120000000)
+			set_state(__COMPLETE__)
+		end
+	end
+	
+	state __COMPLETE__ begin
+	end
+end

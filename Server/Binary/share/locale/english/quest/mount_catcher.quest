@@ -1,0 +1,10 @@
+quest mount_catcher begin
+  state start begin
+		when 20216.take with 50068 == item.vnum begin
+			say("you catch it")
+			pc.give_item2_select(52706,1)
+			pc.remove_item(50068,1)
+			npc.purge()
+		end
+end
+end

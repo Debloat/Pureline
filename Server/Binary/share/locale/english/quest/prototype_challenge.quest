@@ -1,0 +1,354 @@
+quest prototoype_challenge begin
+-- a simple prototype for a challenge quest functionality, Arne 12Oct09
+-- What it does:
+-- It offers the player dialogue choices to select paramters for a simple killquest, type of enemy, amount and time to kill them
+-- Based on the type/amount/time selections, there is a challenge rating assigned to the quest which determines rewards and an entry fee
+-- still needs proper rewards and some more validations i guess ... and explanations for the player :)
+-- it bases on Seon Ha as quest npc, just spawn him (20095) and talk to him
+	state start begin
+		when login or enter begin
+--			notice("Debug: challenge prototype script running")
+			set_state(menu)
+		end
+	end
+		
+		
+	state menu begin     
+	-- this function essentially saves some script nesting
+	-- it generates a selection menu and returns the selected value. 
+	-- It only processes 6 entries, but if the input list is larger it will still try to display it and possibly generate ugly menus, so beware
+	-- SelectionList should be a table with strings that represent the desired menu choices
+	function challenge_main_menu_proto(SelectionList)
+		local selected = 0
+		local s = select_table (SelectionList) -- good thing about select_table is, that it takes inputs of varying sizes
+		-- 6 deep currently, just add more ifs if needed
+		if s == 1 then
+				selected = 1
+			else
+				if s == 2 then
+					selected = 2
+				else
+					if s == 3 then
+						selected = 3
+					else
+						if s == 4 then
+							selected = 4
+						else
+							if s == 5 then
+								selected = 5
+							else
+								selected = 6
+							end
+						end
+					end
+				end
+			end
+		return selected
+	end
+
+-- this is set to calculate the new challenge score of the quest and look up the rewards and required entry fee from a table
+-- its not very smart and the rewards do not really make sense, just basic functionality
+-- returns a table with the fee and rewards for the current quest challenge score as calculated below
+function challenge_calculate_rewards(TargetChallenge, AmountChallenge, TimeChallenge)
+	local NewChallenge
+	local BetMoney
+	local Reward
+	local XP
+	local NewRewards = {1,2,3}
+	-- The entry fee/reward lookup table, enter proper rewards here
+	-- Per row: 1 the needed entry fee, 2 the reward in yang, 3 the reward in XP (mind: the entry fee is never returned)
+	-- Simply add rows for finer reward granularity :)
+	local	BetRewardTable= {
+				[1] = {[1] = 50, [2] = 100, [3] = 100,},
+				[2] = {[1] = 250, [2] = 500, [3] = 500,},
+				[3] = {[1] = 300, [2] = 1200, [3] = 1200,},
+				[4] = {[1] = 400, [2] = 5000,	[3] = 5000,},
+				}
+	
+	-- basic challenge scoring formula weighting time over amount over target type
+	-- rough, please reconsider, especially if tougher mobs are added (and my, Metin has some mean mofos)
+	NewChallenge = (TargetChallenge + (2*AmountChallenge))*TimeChallenge
+	
+		if NewChallenge >= 30 then -- these if's need to be balanced to reflect the proper difficulty steps, add more if you have more rows in BetRewardTable
+			BetMoney = BetRewardTable[4][1]
+			Reward = BetRewardTable[4][2]
+			XP = BetRewardTable[4][3]
+			NewRewards = {NewChallenge, BetMoney, Reward, XP}
+		else
+			if NewChallenge >= 15 then -- see above
+				BetMoney = BetRewardTable[3][1]
+				Reward = BetRewardTable[3][2]
+				XP = BetRewardTable[3][3]
+				NewRewards = {NewChallenge, BetMoney, Reward, XP}
+			else
+				if NewChallenge >= 8 then -- see above
+					BetMoney = BetRewardTable[2][1]
+					Reward = BetRewardTable[2][2]
+					XP = BetRewardTable[2][3]
+					NewRewards = {NewChallenge, BetMoney, Reward, XP}
+				else
+						BetMoney = BetRewardTable[1][1]
+						Reward = BetRewardTable[1][2]
+						XP = BetRewardTable[1][3]
+						NewRewards = {NewChallenge, BetMoney, Reward, XP}
+				end
+			end
+		end 
+	return NewRewards 
+end
+
+		when login or enter begin
+		
+			-- initializing main variables
+			pc.setqf("kill_count_1", 0)
+			pc.setqf("collect_count", 0)
+			pc.setqf("cooldown", 86400) -- 24h
+			pc.setqf("FinalTarget",0)	
+			pc.setqf("FinalAmount",0)	
+			pc.setqf("FinalTime",0)
+			pc.setqf("Payment", 0)
+			pc.setqf("RewardYang", 0)
+			pc.setqf("RewardXP", 0)				
+			
+		end
+					
+			  
+		when 20095.Chat."Herausforderung" begin
+		  
+		 if get_time() - pc.getqf("cooldown_timestamp") >= pc.getqf("cooldown") then
+			-- The following stuff would need loca keys, Mind the correlation of values ("select" seems to only take strings...)
+		  local MainMenuList = 
+		  	{
+		  		"Ziele Wählen",
+		  		"Menge Wählen",
+		  		"Zeit Wählen",
+		  		"Herausforderung Starten",
+		  		"Abbruch",
+		  	}
+		  local TargetMenuList =
+		  	{
+		  		"Wildhunde",
+		  		"Wölfe",
+		  		"Tiger",
+		  	}
+		  local AmountMenuList =
+		  	{
+		  		"10",
+		  		"30",
+		  		"50",
+		  	}
+		  local TimeMenuList =
+		  	{
+		  		"60 min",
+		  		"30 min",
+		  		"10 min",
+		  	}  
+		  	
+		  -- These are the actual values that need to correlate to the menu strings given above
+		  TargetList =
+		  	{
+		  		101,
+		  		102,
+		  		114,
+		  	}
+		  AmountList =
+		  	{
+		  		10,
+		  		30,
+		  		50,
+		  	}
+		  TimeList =
+		  	{
+		  		3600,
+		  		1800,
+		  		600,
+		  	} 
+		  
+		  -- initialize once per dialogue session
+		  local Selected = 0 		 
+			local TargetChallenge = 0
+			local AmountChallenge = 0
+			local TimeChallenge = 0
+			local TargetSelector = 0
+			local AmountSelector = 0
+			local TimeSelector = 0
+			
+			-- Challenge dialogue begins here --
+			repeat -- stay in the menu loop until player submits a quest start or cancels
+				Selected = prototoype_challenge.challenge_main_menu_proto(MainMenuList) -- paint the main menu
+				if Selected == 1 then
+					TargetSelector = prototoype_challenge.challenge_main_menu_proto(TargetMenuList) -- navigate to target menu
+					TargetChallenge = TargetSelector
+				end
+				if Selected == 2 then
+					AmountSelector = prototoype_challenge.challenge_main_menu_proto(AmountMenuList) -- navigate to amount menu
+					AmountChallenge = AmountSelector
+				end
+				if Selected == 3 then
+					TimeSelector = prototoype_challenge.challenge_main_menu_proto(TimeMenuList) -- navigate to time menu
+					TimeChallenge = TimeSelector
+				end
+				if Selected == 4 then -- quest start menu,
+					if AmountSelector ~= 0 and TargetSelector ~= 0 and TimeSelector ~= 0 then -- validate if params have been values
+						local NewRewardsTable = {}
+						-- getting the reward and payment values for the current type/amount/time settings
+						NewRewardsTable = prototoype_challenge.challenge_calculate_rewards(TargetChallenge, AmountChallenge, TimeChallenge)					
+						say_title("Herausforderung starten")                                                                              
+						say("Herausforderung mit folgenden Parametern starten?")                                                          
+						say(string.format("Jage %s x %s in %s Minuten",AmountList[AmountSelector],mob_name(TargetList[TargetSelector]),TimeList[TimeSelector]/60))
+						say(string.format("Schwierigkeit: %s  Einsatz: %s Yang", NewRewardsTable[1], NewRewardsTable[2]))  
+						say(string.format("Belohnung: %s Yang %s XP", NewRewardsTable[3], NewRewardsTable[4]))  
+						local x = select("Ja", "Nein")                                                                          
+						if x == 1 then 
+							if pc.get_gold() >= NewRewardsTable[2] then                                                                                                                                            
+								pc.setqf("challenge_timestamp", get_time())
+								local payment = 0 - NewRewardsTable[2] -- get the payment amount into negative
+								pc.change_gold(payment) -- this can take negative values, change_money is documented to be only positive
+								-- rendering into questflags for storage	
+								pc.setqf("FinalTarget",TargetList[TargetSelector])	
+								pc.setqf("FinalAmount",AmountList[AmountSelector])	
+								pc.setqf("FinalTime",TimeList[TimeSelector])
+								pc.setqf("Payment", NewRewardsTable[2])
+								pc.setqf("RewardYang", NewRewardsTable[3])
+								pc.setqf("RewardXP", NewRewardsTable[4])				
+								set_state(start_quest)
+								Selected = 5 -- this is needed or metin stays inside the menu loop, even with the set_state
+							else
+								say_title("Herausforderung")
+								say("Du hast nicht genug Yang um deinen Wetteinsatz zu bezahlen.")
+								-- drops back to main menu here
+							end                                                      
+						else                                                                                                    
+							Selected = 5
+							set_state(bounceback)                                                               
+						end
+					else
+					say_title("Herausforderung")
+					say("Du hast noch nicht alle Parameter ausgewählt.")
+					-- drops back to main menu here
+					end
+				end
+			until Selected == 5
+	
+		else
+			local sec = pc.getqf("cooldown") - (get_time() - pc.getqf("cooldown_timestamp"))
+			local h = math.floor(sec/3600)
+			local m = math.ceil(((sec/3600)-h)*60)
+			say_title("Herausforderung")
+			say("Schon wieder eine Wette? Willst du mich an den Bettelstab bringen? Du musst dich etwas gedulden.")
+			say("")
+			if sec >= 7200 then
+				say(string.format("Warte noch %s Stunden.", h))
+			else
+				if sec >= 3660 then
+					say(string.format("Warte noch eine Stunde und %s Minuten.", m))
+				else
+					say(string.format("Warte noch %s Minuten.", m))
+				end
+			end
+		end
+		
+	end
+	-- Challenge dialogue ends here --
+end
+
+
+
+	state bounceback begin -- basically aborts dialogue and reinitializes dialogue state
+		when enter or login begin
+---			notice("Debug: bounceback entered")
+			set_state(menu)
+		end      
+	end
+
+state start_quest begin
+		when enter or login begin
+--			notice("Debug: Start_Quest entered")
+			q.start()
+			local timeLeft = pc.getqf("FinalTime") - (get_time() - pc.getqf("challenge_timestamp")) -- getting a proper time integer
+			send_letter("Herausforderung")
+			q.set_title("Herausforderung")
+			q.set_clock("Zeit:", timeLeft)	
+			if get_time() - pc.getqf("challenge_timestamp") >= pc.getqf("FinalTime") then
+				q.done()
+				set_state(challenge_failed)
+			end
+		end
+		
+		when button or info begin
+			say_title("Herausforderung")
+			local timeLeft = pc.getqf("FinalTime") - (get_time() - pc.getqf("challenge_timestamp")) -- getting current value
+			local m = math.floor(timeLeft/60) -- conversion to minutes, use math.ceil if you prefer more optimism :)
+			say(string.format("Jage %s x %s in %s Minuten",pc.getqf("FinalAmount"),mob_name(pc.getqf("FinalTarget")),pc.getqf("FinalTime")/60))
+			say_reward(string.format("Ziele zu jagen: %s", pc.getqf("FinalAmount")-pc.getqf("kill_count_1")))
+			if m > 0 then
+				say_reward(string.format("Verbleibende Zeit in Minuten: %s", m))
+			else
+			-- doing a bit of a dance here, as a seconds display will only update on window open, looks faulty versus q.set_clock
+				if m == 0 then
+					say_reward("Dir bleibt weniger als eine Minute!") 
+				else
+					say_reward("Zeit abgelaufen!")
+				end				
+			end
+		end
+	
+		-- unfortunately, we seem to need kill events for each possible target as Variable.kill does not seem to work *sniff
+		-- maybe there is a way to resolve this
+		when 101.kill begin   
+			if pc.getqf("FinalTarget") == 101 and pc.getqf("kill_count_1") < pc.getqf("FinalAmount") then                                      
+				local index =pc.getqf("kill_count_1") + 1                                        
+				pc.setqf("kill_count_1",index)                                                                       
+				if pc.getqf("FinalAmount") == pc.getqf("kill_count_1") and get_time() - pc.getqf("challenge_timestamp") < pc.getqf("FinalTime") then                                   
+					q.done()                                                                       					
+					set_state(challenge_success)                                                         
+				end                                                                              
+			end
+		end 
+			
+		when 102.kill begin   
+			if pc.getqf("FinalTarget") == 102 and pc.getqf("kill_count_1") < pc.getqf("FinalAmount") then                                      
+				local index =pc.getqf("kill_count_1") + 1                                        
+				pc.setqf("kill_count_1",index)                                                                       
+				if pc.getqf("FinalAmount") == pc.getqf("kill_count_1") and get_time() - pc.getqf("challenge_timestamp") < pc.getqf("FinalTime") then                                   
+					q.done()                                                                       
+					set_state(challenge_success)                                                         
+				end                                                                              
+			end
+		end 
+	
+		when 114.kill begin   
+			if pc.getqf("FinalTarget") == 114 and pc.getqf("kill_count_1") < pc.getqf("FinalAmount") then                                      
+				local index =pc.getqf("kill_count_1") + 1                                        
+				pc.setqf("kill_count_1",index)                                                                       
+				if pc.getqf("FinalAmount") == pc.getqf("kill_count_1") and get_time() - pc.getqf("challenge_timestamp") < pc.getqf("FinalTime") then                                   
+					q.done()                                                                          
+					set_state(challenge_success)                                                         
+				end                                                                              
+			end
+		end 
+
+	end
+	
+	-- maybe fork inot this after each kill when time over
+	state challenge_failed begin -- state is not really needed, but we might want to initialize something here, sometime ...
+		when enter or login begin
+			notice(string.format("Eine Herausforderung ist fehlgeschlagen! Dein Einsatz von %s Yang ist verloren!", pc.getqf("Payment"))) 
+			set_state(menu)
+		end
+		
+	end
+	
+	state challenge_success begin
+		when enter or login begin
+			pc.setqf("cooldown_timestamp", get_time())
+			notice("Herausforderung erfolgreich abgeschlossen!")      
+			notice(string.format("Du erhälst %s Yang und %s XP", pc.getqf("RewardYang"),pc.getqf("RewardXP")))
+			pc.change_money(pc.getqf("RewardYang"))
+			pc.give_exp2(pc.getqf("RewardXP"))
+			set_state(menu)
+		end
+		
+	end
+
+end

@@ -1,0 +1,1858 @@
+1	Iedereen zal spoedig naar de stad geteleporteerd worden.
+2	Dit voorwerp bestaat niet.
+3	The doos explodeert plotseling! Je hebt Levenspunten (LP) verloren.
+4	[Gilde] De verkoop van het gildegebied is mislukt.
+5	[Gilde] De verkoop van het gildegebied kan niet voltooid worden omdat er niet voldoende Yang op de gildebank staat.
+6	[Gilde] Je kunt het gilde niet verlaten terwijl er een stemming gaande is.
+7	[Gilde] De speler is offline of bevindt zich op een andere kaart.
+8	[Gilde] Je kunt geen strijders selecteren terwijl dit gilde in oorlog is.
+9	[Gilde] Je kunt geen nieuwe stemming starten als er al een stemming loopt.
+10	[Gilde] Deze actie is niet mogelijk tijdens een oorlog.
+11	[Gilde] Kan niet verbeterd worden omdat de gildebank vol is.
+12	[Gilde] Je kunt het Gilde Warenhuis niet gebruiken terwijl er een stemming gaande is.
+13	Wanneer je de groene rook die zich vanuit de box verspreidt inademt, zal het gif zich verspreiden door je lichaam!
+14	[Gilde] Je kunt deze actie niet uitvoeren terwijl het Gilde Warenhuis geopend is.
+15	[Gilde] Je kunt niet van gildeleider veranderen in staat van oorlog.
+16	[Gilde] %s heeft %s gebruikt.
+17	[Gilde] Je bent niet gemachtigd om Gilde Vaardigheden te gebruiken.
+18	[Gilde] Je bent nu in waarnemingsmodus omdat je de respawn-limiet bereikt hebt.
+19	[Gilde] Controleer a.u.b. leden en leiders.
+20	[Gilde] Controleer a.u.b. vijandelijke leden en leiders.
+21	[Gilde] Bepaalde leden zijn offline of bevinden zich op een andere kaart.
+22	[Gilde] Bepaalde leden van het vijandelijke gilde zijn offline of bevinden zich op een andere kaart.
+23	[Gilde] Er zijn niet genoeg deelnemers online.
+24	Je hebt %s, %d eenheden ontvangen.
+25	[Gilde] Je kunt deze actie niet uitvoeren tijdens een oorlog.
+26	[Gilde] Je kunt het over 10 seconden gebruiken.
+27	[Gilde] Het karakter moet minstens level 40 zijn om het gildeleiderschap te mogen ontvangen.
+28	[Gilde] %s heeft gewonnen.
+29	[Gilde] Quitte
+30	[Gilde] Je kunt niemand verwijderen uit het gilde tijdens een oorlog.
+31	[Gilde] Je kunt geen stemming starten om de gildeleider te verwijderen.
+32	[Gilde] Je kunt geen stemming starten om jezelf uit het gilde te verwijderen.
+33	[Gilde] Je hebt de Ring van Opvolging nodig om het gilde over te dragen.
+34	[Gilde] Niet genoeg ruimte in de gildebank.
+35	Er zit %s in de doos.
+36	[Gilde] Je moet minimaal 12 wachten na het gebruik van het Gilde Warenhuis voordat je het gilde verlaat.
+37	Gilde [%s]! Het laatste doelwit is verschenen. Vernietig alle doelwitten om deze oorlog te winnen!
+38	[Gilde] De oorlog eindigt over 5 minuten.
+39	[Gilde] De oorlog eindigt over 1 minuut.
+40	[Gilde] Geen gilde aanwezig met een gildeadvertentie.
+41	[Gilde] Geen gilde heeft de draak nog verslagen.
+42	[Gilde] Ranglijst update.
+43	[Gilde] Het gevecht tegen Drakenkoningin Meley gaat beginnen.
+44	[Gilde] De poorten naar het hol van Meley zijn geopend. De tijdslimiet in deze kerker is één uur.
+45	[Gilde] Je hebt Meley de Drakenkoningin verslagen!
+46	Deze sleutel past niet op het slot.
+47	[Gilde] Vereiste tijd: %d min. %d sec.
+48	[Gilde] Voor jouw eigen veiligheid, word je van het nest weggeteleporteerd over 10 minuten.
+49	[Gilde] De tijd is om.
+50	[Gilde] De poorten naar het hol zijn weer gesloten.
+51	[Gilde] Voor jouw eigen veiligheid, wordt je van het nest weggeteleporteerd over 1 minuut.
+52	[Gilde] Het hol sluit over %d min.
+53	[Gilde] Je hebt het gevecht in Meley's Hol geannuleerd.
+54	[Gilde] Je kunt geen gildeoorlog verklaren terwijl je aan het vechten bent in de drakengrot.
+55	[Gilde] Het vijandelijke gilde is momenteel aan het vechten in de drakengrot.
+56	Je hebt niets ontvangen.
+57	[Gilde] Succesvol aangemeld voor Meley's Hol.
+58	[Gilde] Bezoek Draken Kijker Dolnarr om de drakengrot te betreden.
+59	Het zomerevenement is begonnen. Bezoek Summer in de stad. Ze zal je wat smakelijke verfrissingen geven.
+60	Het zomerevenement zal spoedig aflopen.
+61	Dit effect is al actief.
+62	[Gilde] Je kunt slechts één transactie per 10 seconden uitvoeren.
+63	[Gilde] Een ander lid gebruikt momenteel de gildebank.
+64	[Gilde] Gilde [%s] heeft de oorlog tegen [%s] verloren.
+65	Je kunt deze kist niet openen omdat dit je maximale hoeveelheid Yang zou overschrijden.
+66	[Gilde] Jouw gilde heeft niet genoeg Yang op het account staan. Stort a.u.b. meer Yang en probeer het opnieuw.
+67	Je hebt niet genoeg Yang om dit voorwerp te gebruiken.
+68	[Gilde] Object succesvol verplaatst.
+69	[Gilde] Je kunt dit gildelogo niet gebruiken. Probeer het opnieuw a.u.b.
+70	[Transmutatie] Je kunt dit getransmuteerde item niet gebruiken omdat het niet overeenkomt met jouw geslacht.
+71	[Transmutatie] Je kunt dit getransmuteerde item niet gebruiken omdat het niet overeenkomt met jouw klasse.
+72	[Monsterkaart] Opdracht level: %d. Je hebt het monster verslagen: %s
+73	[Monsterkaart] Je hebt je monsteropdracht volbracht. Verzamel nu je Monsterkaart.
+74	[Monsterkaart] Je hebt niet genoeg ruimte in je inventaris.
+75	[Monsterkaart] [%s] Levelstijging voltooid.
+76	[Monsterkaart] Je kunt nu de bewegingsanimatie van het monster bekijken.
+77	[Monsterkaart] Je kunt nu in het monster transformeren.
+78	Je hebt je vaardigheid niveau verlaagd.
+79	[Monsterkaart] Je kunt nu naar de locatie van het monster teleporteren.
+80	[Gilde] Als deelnemer kun je niet toekijken bij je eigen gildeoorlog.
+81	[Gilde] Het gilde heeft een minimum level ingesteld voor aanmeldingen (min. level: %d).
+82	[Gilde] Je kunt slechts één transactie per 10 seconden uitvoeren.
+83	[Gilde] Gilde %s heeft het gebied gekocht.
+84	[Gilde] Er loopt een Draken Tempel-gevecht op een ander kanaal.
+85	[Gilde] De logoserver is momenteel in onderhoud.
+86	[Gilde] De logoserver is momenteel in onderhoud.
+87	[Gilde] Dit land is van een andere speler.
+88	Je kunt je vaardigheids niveau niet verlagen.
+89	Je moet level %d zijn om de Strijd Zone te betreden.
+90	Je kunt de Strijd Zone niet betreden vanuit deze kaart.
+91	Je moet alle vensters sluiten voordat je de Strijd Zone betreedt of verlaat.
+92	Je kunt de Strijd Zone niet verlaten als je dood bent.
+93	Je gaat de Strijd Zone binnen! Even wachten a.u.b.
+94	Je gaat de Strijd Zone verlaten. Even wachten a.u.b.
+95	Volgende toegang beschikbaar over %d minu(u)t(en).
+96	Volgende toegang beschikbaar over %d seconde(n).
+97	Je kunt dit item hier niet gebruiken.
+98	Je kunt dit item hier niet gebruiken.
+99	Dit effect is al geactiveerd.
+100	Je hebt een reïncarnatie-item nodig om direct tot leven gewekt te kunnen worden.
+101	De Strijd Zone is nu geopend.
+102	De Strijd Zone is nu gesloten.
+103	De Strijd Zone zal over %d minu(u)t(en) openen.
+104	De Strijd Zone zal over %d minu(u)t(en) sluiten.
+105	Er loopt een evenement en je ontvangt daarom dubbel zoveel punten.
+106	Het evenement in de Strijd Zone is afgelopen.
+107	Je hebt je terugtrekking uit de Strijd Zone aangekondigd en kunt over %d minuten vertrekken.
+108	Een speler heeft zijn terugtrekking aangekondigd. Dood ze om meer punten te verdienen!
+109	De aankondiging van jouw terugtrekking in geannuleerd.
+110	Je inventaris is te vol om de beloning te accepteren.
+111	Dit voorwerp kan alleen gebruikt worden in een Internet Café.
+112	De aankondiging van jouw terugtrekking is actief.
+113	Je kunt de Strijd Zone momenteel niet betreden.
+114	Goed gedaan! Voor het bereiken van rang %d in de Strijd Zone-ranglijst, zul je een speciaal eerbetoon ontvangen.
+115	Je hebt momenteel %d punt(en). Jouw totale score is %d.
+116	Je kunt dit item niet gebruiken tijdens je terugtrekking uit de Strijd Zone.
+117	Je kunt geen oorlogen verklaren in de Strijd Zone.
+118	Deze actie is niet mogelijk op deze kaart.
+119	Resterend aantal: %d
+120	[Gilde] De schatkamer van het gilde heeft het maximum bereikt.
+121	[Gilde] Je kunt niet meer Yang opnemen omdat je meer dan 2 miljard Yang hebt.
+122	Dat is over het limiet heen.
+123	[Gilde] Je kunt geen Yang opnemen als er een ander venster openstaat.
+124	De gildeoorlogsverklaring verloopt over 3 minuten.
+125	Je gaat de Strijd Zone betreden over %d seconden.
+126	Je gaat de Strijd Zone verlaten over %d seconden.
+127	Je bent %d punten verloren. Resterende punten: %d
+128	Helaas, je hebt niet genoeg ruimte in je inventaris.
+129	Voor deze speler ontvang je geen punten.
+130	Je hebt je terugtrekking uit de Strijd Zone aangekondigd en kunt over %d seconden vertrekken.
+131	Het evenement is begonnen!
+132	Gebruik Maan Taart of Zaad.
+133	Verwijder %s uit je vriendenlijst om door te gaan.
+134	%s is nu geblokkeerd.
+135	%s is niet langer geblokkeerd.
+136	%s wordt momenteel al geblokkeerd.
+138	Deblokkeer %s om door te gaan.
+139	%s heeft jou geblokkeerd.
+140	Het monster van het huidige evenement is verschenen.
+141	Je hebt niet genoeg Jubileum Vlaggen.
+142	Het Jubileum Evenement is begonnen!
+143	Je kunt geen Trouw Ring dragen als je niet getrouwd bent.
+144	Het Jubileum Evenement eindigt over %d minu(u)t(en).
+145	Je kunt dit item niet gebruiken als je een ander kostuum draagt.
+146	Je kunt dit item niet dragen wanneer je een Trouwjurk of Smoking draagt.
+147	Je kunt dit niet doen wanneer je een item draagt.
+148	[Gilde] Je kunt geen Yang storten of opnemen bij het gildeaccount als er een ander venster openstaat.
+149	[Gilde] Deze actie kun je niet uitvoeren wanneer je Yang aan het storten of opnemen bent bij het gildeaccount.
+150	[Gilde] Het Yang storten- of Yang opnemen-scherm is al geopend.
+151	[Gilde] Je kunt geen Yang storten of opnemen bij het gildeaccount wanneer je huisdier opgeroepen is.
+152	%s zal hier verschijnen: %s
+153	Vallei van Seungryong
+154	Je kunt de Gebeurtenis Detector niet gebruiken vanuit deze positie.
+155	Berg Sohan
+156	Yongbi Woestijn
+157	Doyyumhwan
+158	Het Ramadan Evenement is begonnen!
+159	Het Ramadan Evenement is afgelopen.
+160	Je kunt niet van kanaal veranderen.
+161	Wacht een moment alsjeblieft. Van kanaal wisselen...
+162	Dit item kan niet geabsorbeerd worden.
+163	Dit item kan niet getransmuteerd worden.
+164	Het Betover Voorwerp kan niet gebruikt worden op dit item.
+165	De Gebeurtenis Detector is met een mysterieus licht verdwenen.
+166	Het Versterk Voorwerp kan niet gebruikt worden op dit item.
+167	Items kunnen alleen op dezelfde kaart verhandeld worden.
+168	Er kan momenteel geen verbinding gemaakt worden met het kanaal. Probeer het later opnieuw a.u.b.
+169	[Groep] Je kunt dit niet doen als de groepszoekfunctie actief is.
+170	[Gaya] Je hebt niet genoeg Glinsterstenen.
+171	[Gaya] Je hebt niet genoeg Yang om Glinsterstenen te slijpen.
+172	[Gaya] Je hebt het maximale aantal Gems al.
+173	[Gaya] Slijpen gelukt.
+174	[Gaya] Slijpen mislukt.
+175	[Gaya] De itemlijst is ververst.
+176	De Gebeurtenis Detector is verdwenen.
+179	[Gaya] Je Inventaris is vol.
+180	[Gaya] Je hebt geen Ververs Gaya Markt-item.
+181	[Gaya] Je moet de Gaya Markt eerst openen.
+182	[Gaya] Je kunt geen plaatsen meer ontgrendelen op de Gaya Markt.
+183	[Gaya] Je hebt niet genoeg %s. Je hebt %d meer nodig om een extra plaats te ontgrendelen.
+184	[Gaya] De Gaya Markt is momenteel niet beschikbaar.
+185	[Gaya] De Gaya Markt is al geopend.
+186	[Gaya] Je kunt de Gaya Markt alleen openen zodra je de andere vensters gesloten hebt.
+187	De Metin Steen Kompas kan niet gebruikt worden in kerkers.
+188	[Groep] Het gevecht is begonnen.
+189	[Groep] Je hebt 1 uur om de kerker te voltooien.
+190	[Groep] Je hebt je taak met klasse voltooid!
+191	[Groep] Tijd tot teleportatie: %d min. %d sec.
+192	[Groep] Je zal over 10 minuten uit de kerker getransporteerd worden.
+193	[Groep] Je bent nu geregistreerd voor Meley's Hol.
+194	[Groep] Praat a.u.b. met de relevante NPC om binnen te gaan.
+195	[Groep] Je hebt ingestemd.
+196	[Groep] Je zal over 1 minuut naar de stad geteleporteerd worden.
+197	Bezoek %s om je beloningen te innen.
+198	De Metin Steen Kompas is in het mysterieuze licht verdwenen.
+199	[Groep] De ranglijst voor groepen in Meley's Hol wordt samengesteld.
+200	[Groep] Je kunt de kerker op dit moment niet verlaten.
+201	[Groep] Je tijd in de kerker is voorbij.
+202	[Groep] Je hebt de kerker verlaten.
+203	[Groep] De kerker sluit over %d min.
+204	Ontvang: %s - %d
+205	Je kunt geen warenhuis openen wanneer je in steen veranderd bent.
+206	Je kunt geen items gebruiken wanneer je in steen veranderd bent.
+207	Dit commando kan alleen gebruikt worden in de Zodiac Tempel.
+208	Je hebt niet genoeg emblemen.
+209	De Metin Steen Kompas is verdwenen.
+210	Je hebt nog niet alle missies volbracht.
+211	Je hebt meer Aventurine en Aureolin Schatten nodig om je beloning te ontvangen.
+212	Je hebt %s tot leven gewekt.
+213	Je bent tot leven gewekt door %s.
+214	Je hebt niet genoeg items om iemand tot leven te wekken.
+215	Je bent tot leven gewekt.
+216	Je kunt dat niet gebruiken op deze locatie.
+217	Je kunt het op dit moment niet gebruiken.
+218	%s is tot leven gewekt.
+219	Eerste level uitgespeeld. Keer terug naar Monnik Milbon.
+220	Je hebt %s voorwerpen gewonnen.
+221	Er zit een stuk steen in de  schelp.
+222	Alle groepsleden zijn in steen veranderd. Missie mislukt.
+223	Alle levels uitgespeeld. Je wordt nu geteleporteerd naar het bonuslevel.
+224	Missie volbracht. Zodra de groepsleider op de knop drukt wordt je direct naar level %d geteleporteerd.
+225	De missie is niet geslaagd.
+226	Totale vernietiging! Als er niemand tot leven gewekt wordt binnen één minuut, dan is je kerkeravontuur voorbij.
+227	Tijd voorbij.
+228	De poorten van deze tempel openen zich op een andere dag.
+229	Alle groepsleden moeten op dezelfde kaart zijn om binnen te gaan.
+230	Je bent niet de groepsleider.
+231	Er zijn %d Zodiac Tempel(s) in het gebied. Voer het relevante commando in om er naar een te teleporteren (1-%d).
+232	De schelp is verdwenen.
+233	Er bevindt zich geen Zodiac Tempel op deze kaart.
+234	Vernietig Metin stenen.
+235	Bonuslevel: Vernietig Metin stenen.
+236	Vernietig Metin stenen.
+237	Vernietig Metin stenen.
+238	Versla 5 Zodiac-bazen.
+239	Bonuslevel: Je hebt 5 minuten om te handelen met de handelaar en benodigdheden in te slaan.
+240	Vernietig Metin stenen.
+241	Vernietig Metin stenen.
+242	Vernietig alle Metin Stenen.
+243	Er zit een Witte Parel in de schelp.
+244	Vernietig alle Metin Stenen en versla de Zodiac-baas.
+245	Vernietig alle Metin Stenen.
+246	Versla alle monsters.
+247	Versla alle monsters.
+248	Versla monsters.
+249	Versla monsters.
+250	Versla alle monsters.
+251	Je hebt zojuist het bonuslevel gemist.
+252	Versla alle Zodiac-bazen.
+253	Er zit een Blauwe Parel in de schelp.
+254	Versla de Zodiac-baas.
+255	Versla de Zodiac-baas.
+256	Versla de Zodiac-baas zonder zelf te sterven.
+257	Versla alle monsters zonder zelf te sterven.
+258	Tijd voorbij. Volgende keer beter.
+259	Versla de Zodiac-baas.
+260	Versla alle vijanden!
+261	Bonuslevel: Vernietig een Metin Steen.
+262	Vernietig een Metin Steen. Als je succesvol bent ontvang je een bonus-buff.
+263	%d minuten resterend om te registreren voor het PvP-toernooi!
+264	Er zit een bloedrode parel in de schelp.
+265	Je kunt de strijdarena van het PvP-toernooi niet binnengaan.
+266	Je kunt niet transformeren tijdens het PvP-toernooi.
+267	%d meer voordat het gevecht losbarst!
+268	Het gevecht is begonnen.
+269	Winnaar: %s / Verliezer: %s
+270	%s heeft de arena verlaten. %s wint.
+271	Registratie voor het PvP-toernooi voltooid.
+272	Het PvP-toernooi begint over %d min.
+273	Finale
+274	Het is niet gemakkelijk om dit boek te begrijpen.
+275	Halve finale
+276	Ronde %u
+277	Geen winnaar
+278	Het PvP-toernooi is voorbij.
+279	%s is de winnaar van het toernooi!
+280	Deelnemers: %s
+281	Overgebleven deelnemers: %u
+282	Huidige deelnemers: %u
+283	Je hebt je geregistreerd voor het PvP-toernooi.
+284	Dit boek zal je niet helpen.
+285	Je hebt je niet geregistreerd voor het PvP-toernooi.
+286	Dit commando kan alleen gebruikt worden op de kaart van het PvP-toernooi.
+287	Yut Nori is begonnen!
+288	Verzamel Berken Takken, maak er Yut Nori Borden van en speel de spannende minigame.
+289	Fantastisch prijzen wachten op je!
+290	Yut Nori is afgelopen.
+291	Ga naar de Yut Nori Tafel om je beloning op te halen.
+293	[Zielensysteem] Gebruik %s om het effect te ontvangen.
+294	[Zielensysteem] %s is al op het hoogste level.
+295	Je moet tenminste Level 30 zijn om dit boek te begrijpen.
+296	[Zielensysteem] De ziel is actief.
+297	
+298	[Monster Mep Evenement] Kaart %s meldt verschijningen van %s.
+299	Yayang Gebied
+300	Bokjung Gebied
+301	Bakra Gebied
+302	Hwang Tempel
+303	Kuahlo Dong (Spinnen Kerker)
+304	Spinnenkerker 2
+305	Je moet tenminste Level 50 zijn om dit boek te begrijpen.
+306	Gautama Klif
+307	Baai van Nefriet
+308	Donder Gebergte
+309	Betoverd Woud
+310	Grot der Verbanning
+311	Grot der Verbanning 2
+312	Je kunt niet meedoen wanneer je aan het rijden bent.
+313	Dit kan niet gebruikt worden op gedragen items.
+314	Rode Bos
+315	Slangenveld
+316	Je kunt geen Combo's meer trainen.
+317	Je hebt nog %d %s(en).
+318	Het evenement is voorbij. Je kunt dit item niet meer gebruiken.
+319	Het maximale level is al bereikt.
+320	Succes! Het %s effect is gestegen naar level %d.
+321	Mislukt! De poging om het %s effect te verbeteren naar level %d is mislukt.
+322	Succes! Het %s effect is nu actief.
+323	Mislukt! De poging om te veranderen naar het %s effect is mislukt.
+324	Succes! Het %s effect is nu actief.
+325	Mislukt! Het %s effect is niet geactiveerd.
+326	Het Flower Power-evenement is begonnen.
+327	%s veroverde de vlag van %s !
+328	Je verstaat deze taal al.
+329	Het Flower Power-evenement is afgelopen.
+330	Je moet even wachten voordat je je brievenbus weer kunt openen.
+331	Sluit alsjeblieft alle andere vensters om je brievenbus te kunnen openen.
+332	Je brievenbus is vol.
+333	Maak alsjeblieft ruimte in je brievenbus om weer berichten te kunnen ontvangen.
+334	Je kunt dat op dit moment niet gebruiken.
+335	[Gilde] Je kunt geen gildevaardigheden gebruiken in veldgildeoorlogen.
+336	[Gilde] Dat kan alleen gebruikt worden in gildeoorlogen.
+337	Je hebt %d Won ontvangen.
+338	[Gilde] Gestort: %d Yang
+339	Je kunt deze vaardigheid niet verder verhogen.
+340	[Gilde] De aankoop is geannuleerd omdat je al in bezit bent van gildegebied.
+341	[Gilde] De aankoop is geannuleerd omdat jouw gilde al in bezit bent is van gildegebied.
+342	[Vang de Koning] Jouw score is niet hoog genoeg voor een prijs.
+343	[Vang de Koning] Speel nu een potje Vang de Koning!
+344	[Okey Evenement] Versla monsters, verzamel kaarten en speel een potje Okey.
+345	[Okey Evenement] Geweldige prijzen liggen voor het oprapen!
+346	[Vang de Koning] Vang de Koning is afgelopen.
+349	[Vang de Koning] %s heeft %d verdiend met Vang de Koning.
+350	Je moet je level verhogen om dit Boek te begrijpen.
+351	Je hebt het Onderzoeker's Elixer al gebruikt.
+352	De kerker 'Schip Verdediging' is gereed. De visser zal je nu aan boord laten.
+353	We worden aangevallen door zeemonsters! Maak je klaar voor het gevecht!
+354	Ze vallen weer aan! Houd je wapens in de aanslag!
+355	Land in zicht! Je bent erin geslaagd de mast te beschermen en hebt een nieuw continent weten te bereiken na een lang, zware overtocht. Ga door naar het portaal.
+356	Jouw mast werd verpulverd. Je hebt dapper gestreden maar de slag is verloren.
+357	Je moet het schip verlaten over %d sec.
+358	Je moet het schip verlaten over %d min.
+359	De zeeslag begint over %d sec.
+360	Met dit boek kun je moeilijk oefenen
+361	Schiet op! Je hebt nog maar %d minuten om door het portaal heen te reizen naar het vasteland.
+362	Je moet het schip nu verlaten omdat je de zeeslag niet gestart hebt.
+363	Als je de zeeslag niet binnen één minuut start zal je het schip moeten verlaten.
+364	%s's resterende LP: %d%%
+365	S.O.S! Je mast is verpulverd en je schip is aan het zinken. Je wordt nu geteleporteerd naar Cape Drakenvuur.
+366	Golf %d: Gedurende %d sec. moet je de %s beschermen met al je kracht.
+367	Golf %d: Terwijl je de %s beschermt moet je %s verslaan.
+368	Je hebt de mast met succes weten te beschermen. Ga zo door! Maak je klaar voor de volgende golf.
+369	De volgende golf begint over %d sec.
+370	%s
+371	Je kunt niet verder trainen met dit boek.
+372	Je kunt je alleen terugtrekken uit het gevecht over %d sec.
+373	Je kunt deze actie momenteel niet uitvoeren.
+374	Na het openen van de Brievenbus moet je %d sec. wachten voordat je weer kunt wisselen van kanaal of teleporteren.
+375	Belastingen zijn ingesteld op %d %%.
+376	Je hebt voor ruiter training een minimum level van 50 of hoger nodig.
+377	Je hebt de boze geest vloek ontweken met de hulp van het Exorcisme Geschrift.
+378	Je kunt niet meer Ruiter Handleidingen lezen.
+379	Je hebt de Ruiter Handleiding gelezen en een Ruiter Punt ontvangen.
+380	Je kunt dit punt gebruiken om je ruiter vaardigheden te verhogen!
+381	De Gilde %s's vlag was veroverd door %s.
+382	Je hebt de Ruiter Handleiding niet begrepen.
+383	Je verstand is helder. Je kunt je nu goed concentreren.
+384	Je Rank is verhoogt met %d punten.
+385	Je kunt je huidige Kapsel niet verven of bleken.
+386	Je hebt Level %d nodig om je haar weer te verven.
+387	Dit Voorwerp kan alleen door het andere Geslacht geopend worden.
+388	Je kunt dit niet gebruiken vanuit je huidige positie.
+389	Je bent gereed om te teleporteren, dus je kunt het Terugkeer Geschrift niet gebruiken.
+390	Je bent terug gebracht naar de plek van herkomst.
+391	%s%s kan niet gebruikt worden in een kerker.
+392	[Quest] Je hebt je beloning al ontvangen.
+393	den
+394	de
+395	Er zijn geen gebroken stenen aanwezig die verwijderd moeten worden.
+396	Je kunt de upgrade van dit voorwerp niet veranderen.
+397	Je hebt geen upgrade die je kan veranden.
+398	Je kunt dit alleen %d minuten na een upgrade doen. (%d minuten over)
+399	Je hebt de upgrade veranderd.
+400	Upgrade is succesvol toegevoegd.
+401	Geen upgrade toegevoegd.
+402	Je moet een Gezegend bol gebruiken om een nieuwe bonus toe te voegen aan dit voorwerp.
+403	Je kunt dit niet in de arena gebruiken.
+404	Dit voorwerp kan niet nog meer verbeterd worden. Het maximum aantal bonussen is bereikt.
+405	Je kunt een Gezegend Bol alleen gebruiken met een voorwerp dat al 4 bonussen heeft.
+406	Fitting successvol toegevoegd.
+407	Fitting kon niet toegevoegd worden.
+408	Je kon aan dit voorwerp geen fittingen meer toevoegen.
+409	Je kunt geen Fitting toevoegen aan dit Voorwerp.
+410	Uitrusting successvol.
+411	Uitrusting gefaald.
+412	Je moet eerst een fitting toevoegen. Gebruik hiervoor een diamant.
+413	Er zijn geen Fittingen omuit te rusten met Edelstenen.
+414	Je kunt dit doen wanneer je een Emotiemasker draagt.
+415	Je moet een Fitting toevoegen als je een Diamant wilt gebruiken.
+416	Er kunnen niet meer Edelstenen toegevoegd worden.
+417	Deze voorwerpen kunnen niet samen gebruikt worden.
+418	Je kunt niet van Aas wisselen tijdens het vissen.
+419	Je hebt het huidige Aas vervangen met %s.
+420	Je hebt %s aan de haak gedaan als aas.
+421	Je hebt niet alle materialen om het brouwsel te maken.
+422	Je hebt niet genoeg materiaal (%s).
+423	Je hebt niet genoeg lege flessen.
+424	Het brouwsel maken is niet geslaagd.
+425	Alleen vrouwen kunnen dit doen.
+426	Je kunt niet meerdere zielenstenen van het zelfde type toevoegen.
+427	Je kunt deze Geestensteen niet toevoegen in dit soort voorwerp.
+428	Je kunt deze Geestensteen niet toevoegen aan een wapen.
+429	Je hebt de Geestensteen succesvol toegevoegd.
+430	De Geestensteen is gebroken tijdens het aanbrengen.
+431	Geen vrije Opening.
+432	Je bent niet in staat om je partner te teleporteren op dit moment.
+433	Je kunt geen Terugkeer Geschrift gebruiken tijdens een keizerrijk gevecht.
+434	Je kunt geen Terugkeer Geschrift gebruiken gedurende %d seconden na het openen van een Warenhuis.
+435	Je kunt geen Terugkeer Geschrift gebruiken zolang er een ander venster open is.
+436	Dit persoon bestaat niet.
+437	Na een handel kun je een geschrift %d seconden niet gebruiken.
+438	Na openen van een Warenhuis kun je een Terugkeer Geschrift gebruiken gedurende %d seconden.
+439	Je kunt geen Terugkeer Geschrift gebruiken omdat de afstand te klein is.
+440	Na een handel kun je een Terugkeer Geschrift gedurende %d seconden niet gebruiken.
+441	Je kunt geen opslag openen als een andere Venster al open is.
+442	Je kunt dit Voorwerp niet laten vallen.
+443	Het gevallen item zal over 5 minuten verdwijnen.
+444	%s ontvangen.
+445	Je hebt teveel Voorwerpen in je Inventory.
+446	%s ontvangt %s.
+447	Alle mensen zullen geteleporteerd worden naar een gekozen stad over een korte tijd.
+448	Je bent te vlakbij.
+449	Voorwerp Handel: %s, %s
+450	Je kunt gedragen voorwerpen niet veranderen terwijl je getransformeerd bent.
+451	Je moet stilstaan om het Voorwerp te dragen.
+452	Apen kruiden kunnen niet gevoerd worden aan levende paarden. Het is nodig om dode paarden weer levend te maken.
+453	Je kunt een dood Paard niet voeren.
+454	Je hebt het Paard Kruiden gevoerd.
+455	Je hebt het Paard gevoerd.
+456	Je Level is te laag om dit Kapsel te dragen.
+457	Je hebt dit Kapsel al.
+458	Je bent al getransformeerd.
+459	Je bent te ver weg.
+460	Dat is de verkeerde handels Voorwerp.
+461	Je kunt niet in een monster transformeren die een hoger Level heeft dan jij.
+462	Je level is te laag om dit voorwerp te kunnen dragen.
+463	Je bent niet sterk genoeg om dit voorwerp te dragen.
+464	Je intelligentie is te laag om dit voorwerp te kunnen dragen.
+465	Je behendigheid is te laag om dit te kunnen dragen.
+466	Je vitaliteit is te laag om dit voorwerp te kunnen dragen.
+467	Je kunt dit voorwerp niet dragen als je niet getrouwd bent.
+468	Je kunt dit Voorwerp niet twee keer dragen.
+469	%s tijd over totdat Fitting weggehaald word: %d.
+470	Deze actie kan alleen gedaan worden met het andere geslacht.
+471	Een edelsteen ingelegd in de %s is verdwenen.
+472	[Gilde] De Gilde naam is ongeldig.
+473	[Gilde] Deze Gilde naam is al bezet.
+474	[Gilde] Je kunt geen Gilde starten.
+475	De %s Gilde heeft oorlog verklaard aan %s
+476	[Gilde] %s heeft  de Gilde oorlog afgeslagen.
+477	De gildeoorlog tussen %s en %s begint over een paar seconden!
+478	De Oorlog tussen %s en %s is begonnen!
+479	De Oorlog tussen %s en %s is geïndigd in een gelijkstand.
+480	%s heeft de gilde oorlog tegen %s gewonnen!
+481	Je hebt toestemming van je partner nodig voor dit.
+482	[Gilde] De Gilde oorlog is geannuleerd.
+483	De gilde oorlog tussen %s en %s is geannuleerd.
+484	Sluit
+485	Actie geannuleerd. Je bent het gevecht binnengegaan.
+486	Iemand heeft ingelogd met jouw account. De verbinding wordt verbroken.
+487	Een mysterieus licht komt van de boom af.
+488	%d Speeltijd toegevoegd aan je account. (Betalings nummer %d)
+489	Je kunt mee doen met het Gilde Gevecht in Toeschouwer Modus.
+490	Tijdens het kiezen van een karakter <kijken afronden> verschijnt een icoon.
+491	Er zijn geen vijanden.
+492	Het Gevecht met %s is begonnen!
+493	Als er geen Vijand gevonden kan worden zal de Gilde Oorlog automatisch beëindigd worden.
+494	Omdat de gilde oorlog voortijdig is afgelopen, zal het als gelijkstand geteld worden.
+495	De energie wordt weerkaatst door de Zegening van de  Keizer.
+496	Na %d seconden kun je de Zegening van de Keizer gebruiken.
+497	Niet genoeg Belasting Inkomsten: %d
+498	[TEST_ONLY]Belasting: %d
+499	Fout tijdens transformeren.
+500	Je hebt de transformatie compleet geleerd.
+501	Roep eerst je Paard.
+502	Je hebt je paard teruggestuurd.
+503	%s heeft je uitgedaagd voor een gevecht!
+504	Je moet eerst van je Paard afstijgen.
+505	Je kunt je Paard niet voeren als je erop zit.
+506	Je hebt %s%s aan het paard gevoerd.
+507	Je hebt %s nodig.
+508	%d Seconden tot afsluiten.
+509	Het Spel wordt na %d Seconden gesloten.
+510	%d Seconden tot afsluiten.
+511	Het Uitloggen is geannuleerd.
+512	Terug naar Login Scherm. Even geduld aub.
+513	De verbinding met de server is verbroken. Even geduld aub.
+514	Je hebt %s uitgedaagd voor een gevecht.
+515	Je bent van karakter gewisseld. Even geduld aub.
+516	Nog steeds geen herstart mogelijk. (%d Seconden over)
+517	Nog steeds geen herstart mogelijk. (%d Seconden over)
+518	Nog steeds geen herstart mogelijk. (%d Seconden over)
+519	Nog steeds geen herstart mogelijk in de stad. (%d Seconden over)
+520	De wachttijd is verlopen. Je zult herrijzen in de stad.
+521	Je kunt je status niet veranderen zo lang je getransformeerd bent.
+522	De speler is op dit moment aan het vechten.
+523	[Gilde] Het behoort niet tot de Gilde.
+524	[Gilde] Je kan niet het Level van Gilde Vaardigheden veranderen.
+525	Je keuze is verkeerd.
+526	[Opslag] Je hebt een verkeerd wachtwoord ingevoerd.
+527	[Opslag] De Opslag is al open.
+528	[Opslag] Je moet 10 seconden wachten om de Opslag weer te openen.
+529	[Opslag] De afstand tussen jou en de Opslag is te groot om het te openen.
+530	[Groep] De Server kan het Groeps verzoek niet uitvoeren.
+531	[Groep] Je kunt de Groep niet verlaten wanneer je in een Kerker bent.
+532	[Groep] Je hebt de Groep verlaten.
+533	[Gilde] Je gilde doet al mee met een andere oorlog.
+534	[Gilde] Niemand komt in aanmerking voor een Gilde Oorlog.
+535	[Gilde] Deze Gilde bestaat niet.
+536	Er is al een kandidaat.
+537	[Gilde] Deze Gilde doet al mee in een Oorlog.
+538	[Gilde] Er is niet genoeg Yang om mee te doen met een Gilde Oorlog.
+539	[Gilde] De Gilde heeft niet genoeg Yang om mee te doen aan een Gilde Oorlog.
+540	[Gilde] De Gilde staat al genoteerd voor een andere Gilde Oorlog.
+541	[Gilde] De Gilde doet al mee aan een andere Oorlog.
+542	[Gilde] Rank is te laag om me te doen in een Gilde Oorlog.
+543	[Gilde] Tenminste %d spelers moeten mee doen aan een Gilde Oorlog.
+544	[Gilde] De Gilde heeft niet genoeg Rank Punten om mee te doen aan een Gilde Oorlog.
+545	[Gilde] De Gilde heeft niet genoeg leden om mee te doen aan een Gilde Oorlog.
+546	Je moet Level 20 of hoger zijn om een mobiele telefoon nummer te registeren.
+547	Heeft niet de Kwalificaties om een Keizer te zijn.
+549	Je kunt de uitnodiging niet aan nemen omdat je al lid van een Groep bent.
+550	Alleen de Keizer kan dit gebruiken.
+551	Cooldown tijd is ongeveer %d seconden.
+552	Tekort aan Belastingen. Huidig Kapitaal: %u Ontbrekend Kapitaal: %u
+553	Order: warpto <character name>
+554	Je kunt niet transporteren naar een onbekende speler.
+555	Speler %d toevoegen in het Kanaal. (Huidig Kanaal %d)
+556	Transport naar %s.
+557	Je kunt onbekende spelers niet bellen.
+558	[Gilde] Er zijn geen ervarings punten voor hunten tijdens een Gilde Oorlog.
+559	Wanneer de Zegening van de Keizer wordt gebruikt word %s LP en TP hersteld.
+560	Mijn Keizer Informatie
+561	[%sMonarch] : %s Yang in eigendom %lld
+562	[%sMonarch] : %s
+563	Keizer Informatie
+564	Alleen een Keizer kan dit gebruiken.
+565	Kies een nummer tussen 1 en 50.
+566	Belastingen zijn gezet op %d %%.
+567	De Monster kan niet geroepen worden. Controleer het Bende Nummer.
+568	Levenspunten +%d
+569	Tover Punten +%d
+570	De Zegening van de Keizer is actief.
+571	Uithoudingsvermogen +%d
+572	Intelligentie +%d
+573	Kracht +%d
+574	Behendigheid +%d
+575	Aanvals Snelheid +%d
+576	Beweeg Snelheid %d
+577	Uitrust tijd -%d
+578	Energie Herstel +%d
+579	Tover Punten Herstel +%d
+580	Gif Aanval %d
+581	Het is gereed, te gebruiken na %d.
+582	Ster +%d
+583	Snelheid Vermindering +%d
+584	Kritieke Aanval met een kans van %d%%
+585	Kans op een Speer Aanval %d%%
+586	Speler Aanvals Kracht tegen Monster +%d%%
+587	Paard aanvals Kracht tegen Monster +%d%%
+588	Aanvals Prikkel tegen Wonggui + %d%%
+589	Aanvals Prikkel tegen Milgyo +%d%%
+590	Aanvals prikkel tegen zombies + %d%%
+591	Aanvals prikkel tegen duivels + %d%%
+592	Door de Keizer Sa-Za-Hu krijgt de speler %s 10%% meer aanvals kracht voor 3 minuten.
+593	Leven Absorberen %d%% tijdens aanval.
+594	Absorberen van Tover Punten %d%% tijdens aanvallen.
+595	Met een kans van %d%% dat Tover Punten (TP) bij de vijand weggenomen zullen worden.
+596	Tover Punten (TP) absorberen met een kans van %d%%
+597	%d%% kans om een korte afstand aanval te blokkeren.
+598	%d%% kans om een lange afstand aanval te blokkeren.
+599	Zwaard Verdediging %d%%
+600	Twee-Handig Zwaard Verdediging %d%%
+601	Twee-Handig Zwaard Verdediging %d%%
+602	Bel Verdediging %d%%
+603	Door de Keizer Geum-Gang-Gwon krijgt de speler %s 10%% meer pantser voor 3 minuten.
+604	Waaier Verdediging %d%%
+605	Lange Afstands Aanval Weerstand %d%%
+606	Vuur Weerstand %d%%
+607	Bliksem Weerstand %d%%
+608	Magie Weerstand %d%%
+609	Wind Weerstand %d%%
+610	Directe Slag Weerkaatsen: %d%%
+611	Vloek Weerkaatsen: %d%%
+612	Gif Weerstand %d%%
+613	Tover Punten (TP) zal verhoogd tot %d%% worden als je wint.
+614	De Gebeurtenis is al bezig. (Flag: %d)
+615	Ervaring verhoogt naar %d%% als je wint.
+616	Verhoging van Yang tot %d%% als je wint.
+617	Verhoging van ontvangen Voorwerpen tot %d%% als je wint.
+618	Verhoging van Kracht tot %d%% wanneer je een Brouwsel neemt.
+619	%d%% kans om levenspunten te vullen nadat je wint.
+620	Geen duizeligheid %d%%
+621	Geen Langzaam worden %d%%
+622	Geen Neervallen %d%%
+623	Aanvals Kracht + %d
+624	Pantser + %d
+625	OX Quiz Script kon niet geladen worden.
+626	Magische Aanval + %d
+627	Magische Verdediging + %d
+628	Maximale Uithoudingsvermogen + %d
+629	Sterk tegen Krijgers + %d%%
+630	Sterk tegen Ninja + %d%%
+631	Sterk tegen Sura + %d%%
+632	Sterk tegen Sjamaan + %d%%
+633	Sterk tegen Monster + %d%%
+634	Aanval + %d%%
+635	Verdediging + %d%%
+636	OX Quiz Script geladen.
+637	Ervaring %d%%
+638	Kans om een Voorwerp te vinden %.1f
+639	Kans om Yang te vinden %.1f
+640	Energie Bovenste Limiet +%d%%
+641	Energie Bovenste Limiet +%d%%
+642	Vaardigheden Schade %d%%
+643	Slag Schade %d%%
+644	Weerstand tegen Vaardigheden Schade %d%%
+645	Weerstand tegen Slagen %d%%
+646	%d%% Weerstand tegen Krijger Aanvallen
+647	Welkom bij Metin2.
+648	%d%% Weerstand tegen Ninja Aanvallen
+649	%d%% Weerstand tegen Sura Aanvallen
+650	%d%% Weerstand tegen Sjamaan Aanvallen
+651	(Procedure: %d y- %d m - %d d)
+652	Je Chat is geblokkeerd.
+653	Je hebt een hoger level nodig om te kunnen roepen.
+654	Je hebt level %d nodig om te kunnen roepen.
+655	Je zit niet in deze Groep.
+656	Je bent niet aangesloten bij deze Gilde.
+657	De speler wijst toegevoegd te worden aan je vriendenlijst af.
+658	Ox Gebeurtenis is gestart.
+659	[Vrienden] Je kunt een GM niet aan je vriendenlijst toevoegen.
+660	%s is niet in het spel.
+661	Nadat je hebt gehandeld kun je een Warenhuis openen na %d seconden.
+662	Je kunt na %d seconden weer handelen.
+663	Je hebt meer dan 2 miljard Yang. Je kunt niet handelen.
+664	Je kunt geen Privé Warenhuis openen als er een ander venster geopend is.
+665	Je kunt niet handelen omdat dit anders de maximale hoeveelheid van twee miljoen Yang zou overschrijden.
+666	[Opslag] Geen Bewegingen mogelijk.
+667	[Opslag] Voorwerp kan niet opgeslagen worden.
+668	[Groep] De Speler die uitgenodigd is is niet online.
+669	De Gilde Gevecht kan niet starten omdat de server niet online is.
+670	Door Uriel's toestemming is toegang verleend.
+671	[Groep] Alleen de Groepsleider kan dit veranderen.
+672	[Groep] Het doelwit is niet een lid van je Groep.
+673	[Groep] Je kunt niet een speler eruit gooien terwijl je in een Kerker zit.
+674	[Groep] Je kunt niet een speler eruit gooien wanneer je in een Kerker bent.
+675	[Groep] Je bent uit de Groep gegooid.
+676	[Groep] Je kunt de Groep niet verlaten wanneer je in een Kerker bent.
+677	[Groep] Je kunt Groepsleden niet eruit gooien.
+678	[Gilde] Nadat je een Gilde hebt verwijderd, kun je geen nieuwe starten voor %d dagen.
+679	[Gilde] Nadat je een Gilde hebt verlaten, kun je geen nieuwe starten voor %d dagen.
+680	Deze Gilde Naam is ongeldig.
+681	We vragen de medewerking van vele spelers.
+682	[Gilde] [%s] Guilde is aangemaakt.
+683	[Gilde] Aanmaken van Gilde gefaald.
+684	[Groep] Alleen de Groepsleider kan de Groeps Vaardigheden gebruiken.
+685	[Groep] Het doelwit is niet gevonden.
+686	[Gilde] Dat is niet het correcte som Yang.
+687	[Gilde] Je hebt niet genoeg Yang.
+688	[Gilde] De gezochte persoon kan niet gevonden worden.
+689	[Gilde] Dit persoon zit niet in dezelfde Gilde.
+690	[Gilde] Je kunt geen Gilde Leden eruit gooien.
+691	[Gilde] Het Gilde Lid %s is uit de Gilde gegooid.
+692	OX event is not niet geëindigd. Een error heeft plaats gevonden. (Flag: %d)
+693	[Gilde] Je hebt een Gilde Lid eruit gegooid.
+694	[Gilde] Je kunt niet je Rang naam veranderen.
+695	[Gilde] De Rechten van de Gildeleider kan niet veranderd worden.
+696	[Gilde] Deze Rank Naam is ongeldig.
+697	[Gilde] Je kunt je positie niet veranderen.
+698	[Gilde] De Rechten van de Gildeleider kan niet veranderd worden.
+699	[Gilde] %u  Ervaring gegeven.
+700	[Gilde] Ervarings gebruik gefaald.
+701	[Gilde] Onvoldoende Yang in de gildeschatkamer.
+702	[Gilde] Drakengeest werd niet hersteld.
+703	De OX Gebeurtenis zal binnenkort hersteld worden.
+704	[Gilde] Je kunt geen Aankondiging maken.
+705	[Gilde] Je kunt de positie niet veranderen.
+706	[Gilde] De Positie van de  Gildeleider kan niet veranderd worden.
+707	[Gilde] Je kunt jezelf niet Gilde Leider maken.
+708	[Gilde] Je hebt niet genoeg rechten om de Gildeleider te kiezen.
+709	[Gilde] Je kunt niet méér Gildeleiders kiezen.
+710	Je kunt dit Voorwerp niet verhandelen.
+711	Illegale software gedetecteerd. Het Spel word afgesloten.
+712	Je hebt meer dan 2 miljard Yang. Je kunt niet handelen.
+713	Ongeldige Yang.
+714	Het Huidige Gebeurtenis is gelimiteerd naar één gebied.
+715	Start Voorwerpen Roulette.
+716	Start Yang Roulette.
+717	De Speler is online. Gebruik fluisteren om te chatten.
+718	Het Mobiele nummer is niet geregistreerd.
+719	Je moet tenminste level 20 zijn om smsjes te versturen.
+720	Je hebt 2000 Yang nodig om een sms te versturen.
+721	Je sms is verstuurd.
+722	%s van de Gilde %s verhoogt tot %d%%!
+723	%s van de Gilde %s is weer normaal.
+724	%s: %s is verhoogd met %d%%!
+725	OX event wordt afgesloten.
+726	%s 's %s is weer normaal.
+727	Je mijnbouw punten hebben het maximum behaald. (%d)
+728	Je Mijnbouw Punten zijn verhoogd  tot de hoogste Level.
+729	Je kunt je pikhouweel upgraden bij Deokbae.
+730	Je Mijnbouw Punten zijn verhoogd! (%d/%d)
+731	Zonder een Pikhouweel kun je niet mijnen.
+732	Niets om te mijnen hier.
+733	Het mijnen was succesvol
+734	Het mijnen heeft gefaald.
+735	[Vrienden] Je hebt %s toegevoegd als vriend.
+736	De Speler zal binnenkort naar de stad geteleporteerd worden.
+737	[Vrienden] Je hebt %s verwijderd van je lijst.
+738	Kritieke server error. De server zal automatisch herstarten.
+739	Je verbinding wordt verbroken in 10 seconden.
+740	Je kunt verbinding maken na 5 minuten.
+741	(%s) Gilde aangemaakt. [Tijdelijk]
+742	Deze Gilde is Oorlog aan het voeren.
+743	%s: Gilde bestaat niet.
+744	Een Gilde met deze naam of nummer bestaat niet.
+745	Gebouw bestaat niet.
+746	Dit soort Gebouw kan maar één keer gebouwd worden.
+747	Sluit eerst de Ox event Map. (Flag: %d)
+748	Het Basis Gebouw moet eerst gebouwd worden.
+749	Gebouw is niet gebouwd door incorrecte prijzen.
+750	Je gilde heeft niet genoeg Yang om dit gebouw te plaatsen.
+751	Je hebt niet genoeg grondstoffen voor dit Gebouw.
+752	Je kunt hier geen Gebouw bouwen.
+753	Dit karakter bestaat niet.
+754	Duel niet geannuleerd.
+755	Duel succesvol geannuleerd.
+756	Het Duel is succesvol begonnen.
+757	Er is een probleem met het beginnen van het duel.
+758	Geen errors hebben zich voorgedaan.
+759	Geen Tegenstanders hier.
+760	Geen Staat Punten over.
+761	Overige Staat Punten zijn te laag.
+762	Je hebt een incorrecte waarde ingevoerd.
+763	Subbevel van het Bevel  is incorrect.
+764	Contract tussen Speler %d en Speler %d verbroken.
+765	Draai de Roulette voor %d Yang.
+766	De Voorwerp log is geplaatst in de syslog.
+767	Informatie over de Koninkrijken.
+768	Kies de Map Informatie van het Heilig Land %d Toegang %d %d %d
+769	Een fout heeft zich voorgedaan.
+770	%s killcount %d mobkillcount %d bosskillcount %d Number Holy Land %d
+771	Informatie over het Keizerrijk Gevecht
+772	Je verzoek is aan het laden. Even geduld aub.
+773	Je kunt geen Opslag openen als er een ander venster geopend is.
+774	[Opslag] Opslag wachtwoord is veranderd.
+775	[Opslag] Je hebt een verkeerd wachtwoord ingevoerd.
+776	Je Speeltijd is voorbij in %d Minuten.
+777	Regelmatig gestemd.
+778	Reeds gestemd.
+779	Speler %s zit al in de stemming
+780	Je hebt oorlog verklaar aan deze Gilde.
+781	OX event is afgelopen, geen fouten hebben zich voorgedaan. (Flag: %d)
+782	Kan niet gestemd worden.
+783	%s heeft nog %u Yang.
+784	%s heeft nog %d Yang.
+785	Je hebt niet genoeg Yang.
+786	%s is verwijderd als Keizer Kandidaat.
+787	%s is niet een Kandidaat om Keizer te worden.
+788	%s is genomineerd als Keizer.
+789	%s kan niet genomineerd worden als Keizer.
+790	De %s Keizer word uitgezet.
+791	De %s Keizer kan niet uitgezet worden.
+792	OX Gebeurtenis accepteert  geen spelers meer.
+793	Shinsoo Koninkrijk
+794	Chunjo Koninkrijk
+795	Jinno Koninkrijk
+796	Je Vis Punten zijn verhoogd! (%d/%d)
+797	Je hebt het maximum aan vis punten bereikt.
+798	Ga naar de Visser en laat je hengel upgraden.
+799	Je hebt je Aas verloren aan de vis.
+800	Je hebt een Vis gevangen! (%s)
+801	De lengte van de gevangen Vis is %.2fcm.
+802	Vis Gebeurtenis 'Grote Snoekbaars'
+803	OX De andere deelnemers in de Gebeurtenis staan genoteerd.
+804	Vis Gebeurtenis 'Karper'
+805	%s: %d
+806	Je hebt %d van %d gevangen.
+807	De Vis is in diep water verdwenen.
+808	Er zit een Schelp in de Vis.
+809	Er zit een Worm in de Vis.
+810	Je bent %s aan het roosteren boven het vuur.
+811	Je kunt niet handelen want je hebt meer dan 2 miljard Yang.
+812	Je kun je Warenhuis geen individuele naam geven.
+813	Je kunt geen Voorwerpen-Winkel Voorwerpen in een privé Warenhuis verkopen.
+814	OX De andere deelnemers in de Gebeurtenis staan niet genoteerd.
+815	Mijnen klaar.
+817	Kies een Hengel.
+818	Plaats eerst Aas op de Haak.
+819	Je kunt niet gaan vissen zonder een Hengel!
+820	[Groep] Je kunt geen verzoek maken omdat de  Groeps Leider niet online is.
+821	[Groep] Je kunt geen Groep vormen met Spelers uit een andere Keizerrijk.
+822	[Groep] Je kunt geen Spelers uitnodigen wanneer je in een Kerker bent.
+823	[Groep] Je kunt geen Speler uitnodigen wanneer je in Observatie Mode bent.
+824	[Groep] Alleen Spelers met een Level verschil van -30 naar +30 kunnen uitgenodigd worden.
+825	Andere deelnemers: %d
+826	[Groep] Je kunt deze Speler niet uitnodigen, hun Level is the laag.
+827	[Groep] Je kunt deze Speler niet uitnodigen, hun Level is te hoog.
+828	[Groep] Je kunt geen Spelers meer uitnodigen voor je Groep.
+829	Wil je bij de Groep van %s aansluiten?
+830	De Speler zit niet in deze Groep.
+831	[Groep] Je kunt je niet bij deze Groep aansluiten want die is vol.
+832	[Groep] Je hebt geen rechten om iemand uit te nodigen.
+833	[Groep] %s slaat de uitnodiging voor jouw Groep af.
+834	[Groep] %s zit al in de Groep.
+835	[Groep] Je kunt geen uitnodiging accepteren in een Kerker.
+836	OX Gebeurtenis afgelopen.
+837	[Groep] Je kunt de uitnodiging niet accepteren.
+838	[Groep] %s heeft je uitnodiging afgeslagen.
+839	[Groep] %s heeft zich bij je Groep aangesloten.
+840	[Groep] %s heeft zich bij je Groep aangesloten.
+841	Je kunt nu geen privé Warenhuis gebruiken.
+842	Deze Speler is al aan het handelen met een andere Speler.
+843	Metin2 Confirmatie Nummer: %s
+844	Je Confirmatie Nummer is niet correct. Probeer opnieuw.
+845	De Mobiele Nummer is geregistreerd.
+846	Je kunt de Speler niet teleporteren.
+847	OX De Prijs is weggegeven. Id: %d Hoeveelheid: %d
+848	De Speler is niet online.
+849	De Speler is in kanaal %d. (Jij bent in kanaal %d.)
+850	Je kunt niet ergens anders heen gaan voor %d seconden nadat je een Warenhuis hebt geopend.
+851	Je kunt niet ergens anders heen gaan voor een tijdje na het handelen.
+852	Je kunt niet ergens anders heen gaan voor %d seconden na handelen.
+853	Duel afgelopen, je tegenstander is verdwenen.
+854	Er is geen limiet voor Brouwsels.
+855	Je kunt tot %d Brouwsels gebruiken.
+856	Het gevecht begint in 10 seconden.
+857	Het duel is begonnen.
+858	TRUE
+859	Het duel is beëindigd omdat er een probleem is met de arena.
+860	Het duel is beëindigd vanwege de timeout.
+861	Over 10 seconden word je verplaatst naar de stad.
+862	Het duel is beëindigd omdat er een probleem is met de arena.
+863	Je Tegenstander heeft problemen. Het duel is beëindigd.
+864	Het duel is beëindigd omdat er een probleem is met de Tegenstander.
+865	%s heeft het duel gewonnen.
+866	%s heeft gewonnen.
+867	Je wordt over 10 seconden naar de Stad geteleporteerd.
+868	De volgende ronde begint over 10 seconden.
+869	FALSE
+870	De Tegenstanders werden opgesplits. Het duel is beëindigd.
+876	Je kunt niet handelen in de shop als er een ander venster geopend is.
+877	Je bent te ver van het Warenhuis af om te kunnen kopen.
+878	Je bent te ver van het Warenhuis af om te kunnen verkopen.
+879	Je kunt niet handelen want je hebt meer dan 2 miljard Yang.
+880	Totale nummer vande Quiz: %d
+881	De Verkoop wordt belast met %d%% belasting.
+882	Je kunt geen Paard rijden zolang je getransformeerd bent.
+883	Je kunt geen Paard rijden wanneer je een Trouwjurk of Smoking draagt.
+884	Je hebt geen Paard.
+885	Je Paard is dood.
+886	De Uithoudingsvermogen van je Paard is te laag.
+887	Een Paard roepen heeft gefaald.
+888	Paard
+889	De Bruiloft zal spoedig afgelopen zijn.
+890	Zal automatisch verlaten worden.
+891	De Oorlog is reeds over.
+892	Het resultaat volgt in 10 seconden.
+893	Je kunt niet handelen terwijl je observeert.
+894	Als het venster geopend is kun je niet handelen met anderen.
+895	De andere spelers is momenteel bezet, dus kun je momenteel niet handelen.
+896	De andere Speler heeft het handelen geannuleerd.
+897	Niet genoeg Yang of er is geen plaats in de Inventaris.
+898	De andere Speler heeft niet genoeg Yang of er is geen plek in hun Inventaris.
+899	De andere Speler heeft geen plek in hun Inventaris.
+900	De Handel met %s was succesvol.
+901	Je hebt geen Ervaring verloren door de Zegening van de Draken God.
+902	Huidige Score: Shinsoo %d, Chunjo %d, Jinno %d
+903	Het juiste antwoord was:
+904	%s deadcount %d Empire %d killcount %d(Purpose %d) killmobcount %d, RegenFlag %d
+905	De Duivel van de Heilige Plaats: [ENTER][ENTER]
+906	, je hebt geen recht om hier te zijn! De leden van je koninkrijk zullen deze heilige grond over 10 seconden verlaten.
+907	%sis verslagen en verlaat het Koninkrijk Gevecht.
+908	Aantal Monsters in het Keizerrijk Gevecht:
+909	Als je de Wachter van de Heilige Plaats verslaat word je de eigenaar.
+910	Je bent geen rangpunten verloren want jij wordt beschermd door de Draken God.
+911	Toegevoegde Stoot Schade %d
+912	%s blokkeert! (%d%%)
+913	%s ontwijkt! (%d%%)
+914	Ja (O)
+915	%s[%d]s Aanvals Positie: %d %d
+916	Voer het Bevel volledig in.
+917	Je kunt dit niet doen terwijl je op een Paard zit.
+918	Je kunt dit niet doen terwijl je op de grond ligt.
+919	In mijn Dromen? Wat?
+920	Sta eerst op.
+921	Dit Bevel bestaat niet.
+922	[Groep] Groep is verwijderd.
+923	[Groep] Je kan het doelwit niet roepen.
+924	[Groep] Je kunt geen Groeps Leden naar je huidige positie roepen.
+925	Nee (X)
+926	Jouw groep werkt goed samen en groepsleden die in de buurt zijn van de groepsleider zullen een ervaringsbonus ontvangen.
+927	Leider
+928	Lid
+929	[Gilde] Aangeboden Ervaring is groter dan de overgebleven Ervaring.
+930	[Gilde] Het Bericht kan niet verwijderd worden.
+931	[Gilde] Niet genoeg Drakengeest. (%d, %d)
+932	[Gilde] Je kunt geen Gilde Vaardigheden gebruiken.
+933	[Gilde] %d Vaardigheden gebruikt (%d, %d) op %u.
+934	[Gilde] De Speler is in kanaal %d. (Huidig kanaal: %d)
+935	[Gilde] De Speler is niet online
+936	Ieder die een fout antwoord heeft gegeven wordt na 5 sec. verwijderd.
+937	[Gilde] Deze Gilde Vaardigheid kan alleen tijdens Oorlog gebruikt worden.
+938	[Gilde] %u Drakengeest punten zijn hersteld.
+939	[Gilde] Alleen de Gildeleider kan Yang eruit halen.
+940	[Gilde] De Speler slaat de Gilde uitnodiging af.
+941	[Gilde] Je kunt niet iemand uitnodigen voor de Gilde.
+942	[Gilde] Je kunt geen Spelers van een andere Koninkrijk uitnodigen voor de Gilde.
+943	[Gilde] Deze speler kan opnieuw uitgenodigd worden na %d dag(en).
+944	[Gilde] Na de herindeling kun je leden uitnodigen na %d dagen.
+945	[Gilde] Deze Speler is al lid van een andere Gilde.
+946	[Gilde] De Gilde capaciteit heeft zijn bovenste limiet bereikt.
+947	Klaar voor de volgende vraag?
+948	Je kunt deze Vaardigheid niet trainen.
+949	Je kunt deze Vaardigheid niet trainen tot grootmeester.
+950	Je bent al een Meester in deze Vaardigheid. Je kunt het niet trainen.
+951	Je Vaardigheid is niet hoog genoeg om een grootmeester te worden.
+952	Het heeft niet gewerkt! Verdikkeme!
+953	Training gefaald. Probeer het later opnieuw.
+954	Mijn lichaam is vol met kracht!
+955	De training schijnt al te werken...
+956	Je hebt je training met het Boek succesvol afgerond.
+957	Je kunt dit niet lezen want je hebt niet genoeg Ervaring.
+958	Vraag.
+959	Je kunt deze Vaardigheid niet trainen met een Boek.
+960	Deze Vaardigheid is niet hoog genoeg om getrained te kunnen worden met een Boek.
+961	Ik maak vooruitgang, maar ik heb nog steeds niet alles begrepen.
+962	Deze instructies zijn moeilijk om te begrijpen. Ik moet blijven studeren.
+963	Ik begrijp dit hoofdstuk. Maar ik moet door blijven gaan met hard werken.
+964	Je hebt je training met het Boek succesvol afgerond.
+965	Teleportatie gefaald.
+966	Geen Paard hier. Vraag aan de Jongen.
+967	Gebruik een Voorwerp om een Paard te roepen.
+968	%s FP Gebruik: %d
+969	Als het juist is, ga dan naar O, als het verkeerd is, ga dan naar X.
+970	Ik brand van binnen maar het kalmeert mijn lichaam.
+971	Langzaam, maar gestaag... zonder te stoppen.
+972	Ja dat voelt goed. Mijn lichaam zit vol Chi.
+973	Ik heb het gelezen! Nu moet de Chi door mijn lichaam vloeien.
+974	De training is afgelopen.
+975	Ik ben op de laatste pagina! De training is bijna klaar!
+976	Bijna klaar! Nog maar een klein beetje!
+977	Ik ben verlicht! Ik heb het bijna helemaal gelezen!
+978	Nog maar een paar pagina's en dan heb ik alles gelezen.
+979	Ik voel me verfrist.
+980	Correct!
+981	Nu begrijp ik het!
+982	Okee, ik moet geconcentreerd blijven!
+983	Ik heb dezelfde zin steeds opnieuw gelezen.
+984	Ik wil niet meer leren.
+985	Dit is veel moeilijker dan ik dacht.
+986	Ik kan me moeilijk concentreren. Ik zou een pauze moeten nemen.
+987	Je chat is tijdelijk geblokkeerd door spam.
+988	Je chat block is opgeheven.
+989	Het Bouw Venster is al geopened.
+990	Je kunt niet iets bouwen wanneer er een andere Handel / Opslag Venster geopend is.
+991	Geen verdere verbeteringen mogelijk.
+992	Het Bouw Venster is niet open.
+993	Je hebt niet de juiste materiaal.
+994	[Gilde] Probeer het later opnieuw.
+995	Je moet %d verder Vaardigh. Boeken lezen, om deze Vaard. te verbeteren
+996	[Gilde] Probeer het later opnieuw.
+997	Je kunt deze functie alleen gebruiken wanneer je bij het kasteel bent.
+998	TEST: De Goudstaven zijn terugbetaald aan de kluis van je Koninkrijk.
+999	TEST: In de kluis van je Koninkrijk zijn er: %d
+1000	TEST: Je bent niet in staat om de goudstaven terug te betalen aan de kluis van je Koninkrijk.
+1001	[Gilde]Gilde heeft %d Punten bereikt.
+1002	Dit Voorwerp kan niet beter gemaakt worden.
+1003	De gratis wapen toevoegingen kan alleen gebruikt worden bij wapens tot Level 20.
+1004	Je bent niet in staat om dit Voorwerp te gebruiken omdat je niet alle kwalificaties hebt.
+1005	Je bent niet in staat om dit Voorwerp te gebruiken omdat je het verkeerde geslacht hebt.
+1006	Gebruik: transfer <name>
+1007	Deze functie kan alleen gebruikt worden door de Keizer.
+1008	Je kunt geen Spelers van een ander Koninkrijk recruteren.
+1009	De Speler %s is op het Kanaal %d op dit moment. (Jouw Kanaal: %d)
+1010	Je hebt %s spelers gerecruteerd.
+1011	Er is geen gebruiker met deze naam.
+1012	Je kunt niet jezelf recruteren.
+1013	Je Level is lager dan het Level van het Voorwerp na de verbetering.
+1014	Je kunt niets verbeteren als er nog een ander venster geopend is.
+1015	De Keizer van %s is veranderd naar %s.
+1016	Er zijn %s oorlogen om te kampvuren te laten branden.
+1017	%s heeft succesvol verdedigd.
+1018	Speler %s kan tot 30 minuten van nu een beloning krijgen omdat hij/zij de kampvuren heeft vernietigd.
+1020	Een kampvuur was in brand gezet voor %s om te waarschuwen voor een gevecht.
+1021	%s heeft het kampvuur vernietigd.
+1022	%s heeft de oorlog verloren omdat ze het kasteel niet konden verdedigen.
+1023	%s heeft het kampvuur vernietigd.
+1024	Niet genoeg Yang voor een verbetering.
+1025	Je kunt alleen een winkel openen wanneer je jezelf uitkleedt.
+1026	Je kunt dat niet gebruiken terwijl je paard rijdt.
+1027	Voor deze actie heb je %s nodig.
+1028	%d uren %d minutesn %d seconden over voor je chatblok.
+1029	%d uren %d seconden over op je chatblock
+1030	%d minuten %d seconden over op je chatblok
+1031	Yang Regen Drop-kans
+1032	Er is geen Steen, die gelost kon worden.
+1033	Kan nog niet gebruikt worden.
+1034	Tijdlimiet op Testserver overschreden.
+1035	Niet genoeg materiaal voor een verbetering.
+1036	De rangpunten kunnen niet verder verhoogd worden.
+1037	Alle rijken
+1038	Item Drop-kans
+1039	Yang Drop-kans
+1040	Ervaring percentage
+1041	Je kunt geen boek lezen wanneer je getransformeerd bent.
+1042	%d seconden over op je chatblock
+1043	Je kunt geen emoties tonen wanneer je een paard rijdt.
+1044	Je kunt geen emoties tonen aan een speler die paard rijdt.
+1045	Het Oorlogs Geschrift werkt niet op voorwerpen van +4 en hoger.
+1046	%s heeft geworpen. hij/zij heeft %d (%d-%d) gekregen.
+1047	Je hebt geworpen. Je hebt %d (%d-%d) gekregen.
+1048	[Gilde] De tegenstanders gildeleider is offline
+1049	Je kunt je paard niet bestijgen wanneer je op de grond ligt.
+1050	[Gilde] Deze gilde neem deel aan een gevecht op dit moment
+1051	Je kunt hier niet vissen.
+1052	[Gilde] Je Gilde heeft al de maximum level behaald.
+1053	Je kunt niet transformeren terwijl je rijdt.
+1054	Je bent al aan het rijden. Stijg eerst af.
+1055	Je kunt een tegenstander niet toevoegen aan je vriendenlijst.
+1056	Je kunt niet verbeteren met dit Geschrift.
+1057	Het gevallen voorwerp zal in %d minuten verdwijnen.
+1058	[Guild] Je tegenstander kan geen uitnodiging ontvangen.
+1059	Je kunt geen voorwerpen die je draagt verkopen.
+1060	Gedragen voorwerpen kunnen niet verkocht worden in een privé Warenhuis.
+1061	[Opslag] Je kunt dit voorwerp niet verplaatsen naar je opslagruimte.
+1062	Je kunt het Goud nog niet weggooien.
+1063	Je inventaris is vol. Voorwerp kan niet opgepakt worden.
+1064	Het level van jouw item is te hoog.
+1065	Kan alleen gebruikt worden op wapens en pantsers.
+1066	Je kan deze Drakensteen niet opnieuw opladen.
+1067	Je kunt maar één keer beloond worden voor de Demonen Toren Quest.
+1068	Drakensteen is verwijderd.
+1069	Je kan het voorwerp niet uit het verbeteringsvenster slepen.
+1071	Er is op dit moment geen metinsteen op deze kaart.
+1072	Drakensteen overgebleven tijd is onttrokken.
+1073	Onttrekken van overgebleven tijd is mislukt.
+1074	Verwijderen van de Drakensteen is mislukt. Maar je hebt het volgende ontvangen: %s
+1075	Verwijderen van de Drakensteen mislukt.
+1076	Dit voorwerp is niet noodzakelijk voor het verbeteren van de kwaliteit.
+1077	Dit Voorwerp kan zo niet verbeterd worden.
+1078	Verbeteren van kwaliteit gelukt.
+1079	Verbetering van 1 level mislukt.
+1080	Dit voorwerp is niet noodzakelijk voor verbetering.
+1081	Deze Drakensteen kan niet gebruikt worden voor verbetering.
+1082	Verbetering van 1 level is gelukt.
+1083	Verbeteren van kwaliteit mislukt.
+1084	Je hebt niet de materialen die nodig zijn voor het versterken van de Drakensteen.
+1085	Deze Drakensteen kan niet gebruikt worden voor het verbeteren.
+1086	Je kunt identieke Verbetering Geschriften niet combineren.
+1087	Versterken is gelukt.
+1088	Versterken mislukt.
+1089	De Drakensteen is niet geactiveerd.
+1090	Je draagt al een Drakensteen van dit type.
+1091	De Drakensteen kan niet worden verwijderd.
+1092	Je bent al uitgerust met een Drakensteen van dit soort.
+1093	%d seconden zijn toegevoegd.
+1094	Voor je de Cor Draconis kan openen, moet je de Dragensteen missie hebben voltooid en de Drakensteen Alchemie worden geactiveerd.
+1095	Je kan alleen de riem weg doen als er niets meer in zijn inventaris zit.
+1096	Je kunt het zegenings geschrift combineren met de magische ijzererts.
+1097	Je kan dit voorwerp niet in de inventaris van je riem doen.
+1098	Je kan niet rijden in deze kerker
+1099	Je kunt maximaal 200 ingrediënten tegelijkertijd gebruiken.
+1100	Je kan zielsgebonden voorwerpen niet verkopen in je prive winkel.
+1101	Je kan de attributen van een zielsgebonden voorwerp niet veranderen.
+1102	Je kan een zielsgebonden voorwerp niet gebruiken.
+1103	Je kan een zielsgebonden voorwerp niet laten vallen.
+1104	Je kan een zielsgebonden voorwerp niet weggeven.
+1105	Je kan op deze server geen voorwerpen aan je ziel binden.
+1106	Dit voorwerp kan je niet aan je ziel binden.
+1107	Je hebt %d Yang geinvesteerd.
+1108	Er is geen Steen om uitgehaald te worden.
+1109	Dit voorwerp is al zielsgebonden.
+1110	De band tussen dit voorwerp en je ziel wordt al verwijderd.
+1111	Dit voorwerp is niet zielsgebonden.
+1112	Je kan een zielsgebonden voorwerp niet verbeteren.
+1113	Je kan een zielsgebonden voorwerp niet verkopen.
+1114	Je kunt deze kist niet openen omdat je niet genoeg ruimte hebt in je inventaris.
+1115	Je kunt geen privé Warenhuis openen zolang je aan het handelen bent met anderen.
+1116	Je kunt dit item niet gebruiken wanneer je aan het handelen bent.
+1117	Je kunt geen Terugkeer Geschrift gebruiken terwijl het venster van de Schoudergordel open is.
+1118	Je kunt niet handelen als er een ander venster open is.
+1119	Je kunt deze positie niet bewaren.
+1120	Je kunt alleen Schoudergordels, wapens en pantserstukken gebruiken.
+1121	Sleep de items naar het venster.
+1122	Dit is al aangepast.
+1123	Deze gordel kan geen verdere bonussen aan.
+1124	Je kunt alleen Schoudergordels gebruiken.
+1125	Deze gordels kunnen niet gecombineerd worden.
+1126	Mislukt!
+1127	Succes!
+1128	Je hebt niet genoeg geld voor de combinatie.
+1129	Je kunt dit voorwerp niet gebruiken zolang de vensters voor absorptie en combinatie open zijn.
+1130	Er is niet genoeg ruimte in je Inventaris.
+1131	%s was succesvol! Een absorberingswaarde van %d%% op hun nieuwe %s. Gefeliciteerd!
+1132	Je kunt geen zielsgebonden items gebruiken.
+1133	Je kunt geen items verkopen die je momenteel gebruikt in een privé warenhuis.
+1134	Je kunt deze bundel niet gebruiken onder het rijden.
+1135	Tijd is om. Eerste ronde voorbij.
+1136	Tijd is om. Tweede ronde voorbij.
+1137	Tijd resterend om eerste ronde af te ronden: %d minuten.
+1138	Tijd resterend om tweede ronde af te ronden: %d minuten.
+1139	Veilige zone is nu gedeactiveerd.
+1140	Tijd resterend totdat veilige zonde gedeactiveerd wordt: %d minuten.
+1141	Je kunt niet teleporteren naar een veilige positie in een andere Koninkrijk.
+1142	Het antwoord verschijnt over 20 seconden.
+1143	Over 15 sec. wordt iedereen die een verkeerd antwoord gaf verwijderd.
+1144	Je level is te laag om het huisdier op te roepen.
+1145	Geen item gekozen voor de combinatie.
+1146	Je hebt %s opgeroepen.
+1147	Je hebt %s weggestuurd.
+1148	%s heeft level %d bereikt!
+1149	%s is momenteel diep in slaap.
+1150	%s is uitgekomen!
+1151	Je huisdier slokt de Proteïne Snack enthousiast op.
+1152	Je hebt niet genoeg LP.
+1153	%s wordt wakker en duikt enthousiast op het smakkelijke maal.
+1154	%s zit nu in een Transporteer Doos.
+1155	%s komt uit de Transporteer Doos gekropen.
+1156	%s is geëvolueerd tot %s! Uitstekend!
+1157	%s weigert ook maar iets te eten!
+1158	Het evenement is voorbij omdat geen van de koninkrijken meedoet.
+1159	Je hebt de bonussen succesvol overgedragen.
+1160	Je hebt niet genoeg Yang om boeken de verhandelen met me.
+1161	Kies a.u.b. een andere naam.
+1162	Je hebt niet  genoeg Tover Punten (TP) om dit te gebruiken.
+1163	Je kunt niet handelen als je handelspartner zijn Broedmachine open heeft.
+1164	Je kunt de Broedmachine niet gebruiken tijdens het handelen of terwijl je jouw Opslag of Privé Warenhuis open hebt.
+1165	Je kunt geen Privé Warenhuis openen tijdens het oproepen van je huisdier.
+1166	Je kunt niet handelen tijdens het oproepen van je huisdier.
+1167	Je kunt niet handelen wanneer je handelspartner zijn huisdier oproept.
+1168	Je huisdier heeft genoeg ervaring opgedaan. Het heeft nu Item EXP nodig om het volgende level in evolutie te bereiken.
+1169	Je huisdier is klaar om te evolueren. Gebruik Huisdieren Boeken om dit te bereiken.
+1170	Je huisdier heeft het hoogste level van evolutie al bereikt.
+1171	De ingevoerde naam is te kort.
+1172	Je zult je bestemming in %d seconden bereiken.
+1173	Je hebt niet genoeg Yang.
+1174	Je hebt je huisdier goed opgevoed! Hij leert zijn nieuwe vaardigheden erg snel!
+1175	Ervaring is verhoogd tot %d punten.
+1176	Je huisdier heeft deze vaardigheid al geleerd en weigert dit verder te oefenen.
+1177	%s vaardigheid geactiveerd. LP hersteld met %d.
+1178	Bemachtig het Moedige Huisdieren Boek voor de heldentraining van jouw huisdier.
+1179	Je huisdier moet level %d zijn om te trainen en promoveren naar het volgende level van evolutie.
+1180	Je huisdier moet %d dagen oud zijn om te trainen en promoveren naar het volgende level van evolutie.
+1181	Je huisdier moet 100% ervaring hebben om te trainen en promoveren naar het volgende level van evolutie.
+1182	%s effect geactiveerd.
+1183	Je Level is lager dan het Level van het Voorwerp na de verbetering.
+1184	%s effect niet geactiveerd.
+1185	%s vaardigheid geactiveerd. Je zal nu geen schade meer ontvangen.
+1186	%s vaardigheid geactiveerd. De effecten langzaam, gif en bloeden zijn verwijderd.
+1187	Je ontvangt je bonussen.
+1188	Het venster is al geopend.
+1189	Magiepenetratie van %d%%.
+1190	%s herstelt van de uitputting.
+1191	Je kan dit item hier niet gebruiken.
+1192	Je kunt je huisdier niet oproepen tijdens het handelen.
+1193	Je kunt geen Privé Warenhuis openen.
+1194	Je kunt een Maan Taart slechts elke 5 seconden gebruiken.
+1195	%s is onvoldoende. Je hebt %d nodig voor het volgende level van evolutie.
+1196	Het level van het huisdier kan niet hoger zijn dan dat van de speler.
+1197	het level Jong
+1198	het level Wild
+1199	het level Moedig
+1200	het level Heroïsch
+1201	@*** Er wordt geworpen voor het volgende item: %s ***
+1202	@*** ->%*s - Dobbelscore: %4d ***
+1203	$*** De winnaar van het item %s is: %s ***
+1204	Nieuwe absorberingswaarde: %d
+1205	Je kunt dit Voorwerp niet in een Duel gebruiken.
+1206	Maximale absorberingswaarde bereikt.
+1207	Je hebt deze vaardigheid al geleerd.
+1208	Er zijn geen items die aan je zoekcriteria voldoen.
+1209	Er zijn genoeg Pompoen Lantaarns verzameld.
+1210	Vraag Sam Pumpkin of je een beloning verdiend hebt.
+1211	Het Halloween Evenement is begonnen!
+1212	Ga en praat met Sam Pumpkin!
+1213	Het Halloween Evenement is voorbij. Vergeet niet je beloningen op te halen!
+1214	Bezorgde Pompoen Lantaarns: %d
+1215	Pompen Lantaarns Totaal: %d
+1216	Je hebt %d Yang gewonnen.
+1217	Je kunt hier geen kampvuur maken.
+1218	Deze spelers handelt al met iemand anders.
+1219	Je moet eerst een wapen dragen.
+1220	Je moet eerst een wapen dragen.
+1221	Als je van wapen wil veranderen, moet je eerst de wapen-skin verwijderen.
+1224	Je spelletje Okey is begonnen!
+1225	Je kunt geen kaarten meer trekken.
+1226	Je kunt geen kaarten afleggen als je er al een paar geselecteerd hebt.
+1227	Je kunt geen kaarten meer trekken als je er al een paar geselecteerd hebt.
+1228	Je kunt geen kampvuur onder water maken.
+1229	Je inventaris is vol.
+1230	Je kunt je prijs pas in ontvangst nemen als je plaats gemaakt hebt in je inventaris.
+1231	%s heeft %d punten gescoord met een potje Okey.
+1233	Het Okey Evenement is begonnen!
+1234	Het Okey Evenement is voorbij!
+1235	[Okey Evenement] Als je de bovenste regionen van de ranglijst weet te bereiken heb je zeven dagen om je prijs op te halen.
+1236	Je kunt dit niet doen tijdens een spelletje Okey.
+1237	Gesloten. Je zou naar een Sleutel moeten zoeken.
+1238	De Rituelensteen werkt alleen met items boven level 80.
+1239	Je kunt niet handelen omdat het maximale aantal van %d Won overschreden is.
+1240	Je hebt niet genoeg Yang.
+1241	Je hebt niet genoeg Won.
+1242	Je kunt niet handelen omdat de maximale hoeveelheid Won overschreden wordt.
+1243	Je kunt niet handelen omdat de maximale hoeveelheid Yang overschreden wordt.
+1244	Je kunt geen privéwarenhuis openen omdat dit de maximale hoeveelheid van %d Won zou overschrijden.
+1245	Je kunt je inventaris niet uitbreiden tijdens het handelen.
+1246	Het Okey Evenement is begonnen!
+1247	Het Okey Evenement is voorbij!
+1248	Dit Voorwerp kan niet geopenend worden met een Sleutel.
+1249	Monsters zijn verschenen in de Vallei van Seungryong, Berg Sohan, Doyyumhwan en in de Yongbi Woestijn!
+1250	Kam de gebieden uit en elimineer ze. Verzamel trefferspunten en ruil ze in voor kisten.
+1251	Het Bazenslachter Evenement eindigt over %d minu(u)t(en).
+1252	Mr. B. en de baasmonsters verdwijnen over %d minu(u)t(en).
+1253	Je hebt je dagelijkse quotum bereikt - claim je beloning.
+1254	Je kunt geen gebruik maken van wapen-skins wanneer je een Trouwjurk of Smoking draagt.
+1255	De andere spelers is momenteel bezet, dus kun je momenteel niet handelen.
+1256	Je kunt geen Trouwjurk of Smoking dragen als je al een wapen-skin draagt.
+1257	Ronde %d gaat beginnen
+1258	Dit is de juiste Sleutel.
+1259	[Gilde] Je hebt de maximale hoeveelheid ERV al gedoneerd.
+1260	[Gilde] Gildeadvertentie gelanceerd.
+1261	[Gilde] Gildeadvertentie verlengd.
+1262	[Gilde] De lijst wordt bijgewerkt. Probeer het later opnieuw a.u.b.
+1263	[Gilde] Geen gilde gevonden.
+1264	[Gilde] Je hebt je al aangemeld voor dit gilde.
+1265	[Gilde] Jouw aanmelding is geregistreerd.
+1266	[Gilde] Speler %s heeft zich aangemeld om toe te reden bij jou.
+1267	[Gilde] De lijst wordt bijgewerkt. Probeer het later opnieuw a.u.b.
+1268	[Gilde] Geen gildeadvertenties beschikbaar.
+1269	Je hebt %d Yang ontvangen.
+1270	[Gilde] No aanmeldingen beschikbaar.
+1271	[Gilde] De gildeadvertentie loopt gedurende %s.
+1272	[Gilde] Jouw gildeadvertentie verloopt spoedig.
+1273	[Gilde] %d Yang ontvangen.
+1274	[Gilde] Na aftrek van %d%% belastingen ontvang je %d Yang.
+1275	[Gilde] Je kunt geen oorlog starten zolang er een stemming gaande is.
+1276	[Gilde] Je kunt het gilde niet opheffen terwijl er een stemming loopt.
+1277	[Gilde] Je kunt niemand uitnodigen voor het gilde zolang er een stemming loopt.
+1278	[Gilde] Je kunt maar één Gilde Warenhuis bouwen.
+1279	Een mysterieus licht komt uit de doos.
+1280	[Gilde] Probeer het a.u.b. opnieuw over 10 seconden.
+1281	[Gilde] Een ander lid gebruikt dit momenteel.
+1282	[Gilde] Er zijn nog steeds items in het Gilde Warenhuis.
+1283	[Gilde] Je hebt 'tegen' gestemd.
+1284	[Gilde] Je hebt 'voor' gestemd.
+1285	[Gilde] Dit lid is momenteel offline.
+1286	[Gilde] Er lopen momenteel geen stemmingen.
+1287	[Gilde] 'Gildeleider Overdracht'-stemming gaat van start.
+1288	[Gilde] 'Lid Verwijdering'-stemming gaat van start.
+1289	[Gilde] 'Gildegebiedsverkoop'-stemming gaat van start.
+1290	Je hebt %d Ervarings Punten ontvangen.
+1291	[Gilde] 'Gildegebiedsverlating'-stemming gaat van start.
+1292	[Gilde] 'Gildeleider Overdracht'-stemming is nu bezig.
+1293	[Gilde] 'Lid Verwijdering'-stemming is nu bezig.
+1294	[Gilde] 'Gildegebiedsverkoop'-stemming is nu bezig.
+1295	[Gilde] 'Gildegebiedsverlating'-stemming is nu bezig.
+1296	[Gilde] Het Gilde Warenhuis is momenteel in gebruik.
+1297	[Gilde] Je moet 10 seconden wachten voor het heropenen van het Gilde Warenhuis.
+1298	[Gilde] Jouw gilde heeft geen warenhuis.
+1299	Kijk wat er uit de doos komt!
+1300	[Gilde] De stemming aangaande deze speler is mislukt. Probeer het nog eens over %d maanden, %d dagen, %d uren en %d minuten.
+1301	[Gilde] Het gildelid is uit het gilde verwijderd vanwege inactiviteit.
+1302	[Gilde] Je hebt meegedaan aan de huidige stemming.
+1303	[Gilde] Je kunt geen stemming starten voor je eigen karakter.
+1304	[Gilde] Je kunt geen stemming starten tijdens een oorlog.
+1305	[Gilde] Je kunt het gildegebied niet aan jezelf verkopen.
+1306	[Gilde] Dit gild bestaat niet.
+1307	[Gilde] Je kunt geen stemming starten tijdens een oorlog.
+1308	[Gilde] Het gildelevel is te laag.
+1309	[Gilde] Je leden hebben de laatste stemming afgewezen. Probeer het nog eens over %d maanden, %d dagen, %d uren en %d minuten.
+1310	Als je de rode rook inhaleert die uit de doos komt, ben je sneller!
+1311	[Gilde] Je kunt geen stemming starten tijdens een oorlog.
+1312	[Gilde] Je leden hebben de laatste stemming afgewezen. Probeer het nog eens over %d maanden, %d dagen, %d uren en %d minuten.
+1313	[Gilde] Je moet een stemming raadplegen voordat je jouw gildegebied verkoopt.
+1314	[Gilde] Dit gilde is niet het gilde dat meedoet aan de gildegebiedsverkoop.
+1315	[Gilde] Je leden hebben de laatste stemming om te verkopen afgewezen. Probeer opnieuw.
+1316	[Gilde] Je kunt het gildegebied niet aan jezelf verkopen.
+1317	[Gilde] De gildeleider is offline of bevindt zich op een andere kaart.
+1318	[Gilde] Het gilde bezit al gildegebied.
+1319	[Gilde] Geen gildegebied gevonden.
+1320	[Gilde] De verkoop van het gildegebied is voltooid.
+1321	Je kunt dit item alleen gebruiken tijdens het huidige evenement.
+1322	Er is een fout opgetreden. De bonussen konden niet gewijzigd worden.
+1323	Je kunt je rijdier/huisdier nu niet oproepen.
+1330	Je kunt geen gordel met een bonus gebruiken als doel.
+1331	Je kunt geen gordel met een bonus gebruiken als bron.
+1332	Je kunt de bonussen niet overdragen omdat de gordels andere absorberingswaardes hebben.
+1333	Je kunt de bonussen niet overdragen omdat de gordels van andere kwaliteit zijn.
+1334	Mislukt! De absorberingswaarde is met 1% verminderd.
+1335	Gedeeltelijk succes! De absorberingswaarde is met 1% verminderd.
+1336	Succes! De bonus is met succes overgedragen.
+1337	Je kunt geen items laten vallen tijdens de bonusoverdracht.
+1338	Je kunt geen items verplaatsen tijdens de bonusoverdracht.
+1339	Je kunt geen items verkopen tijdens de bonusoverdracht.
+1340	Niet mogelijk tijdens het overdragen van bonussen.
+1341	Dit is niet mogelijk wanneer de andere speler bonussen aan het overdragen is.
+1342	Om het lot van een huisdier te bepalen heb je een Huisdierenlot Bol nodig.
+1343	Activeer eerst je huisdier.
+1344	Tijdens het aanpassen van de statistieken van je huisdier kun je niet handelen, items verkopen, de opslag gebruiken etc.
+1345	Je kunt geen items gebruiken tijdens het aanpassen van je huisdier's statistieken.
+1346	Je kunt geen items laten vallen tijdens het aanpassen van je huisdier's statistieken.
+1347	Je kunt geen items verplaatsen tijdens het aanpassen van je huisdier's statistieken.
+1348	Je kunt niet handelen wanneer je handelspartner de statistieken van zijn/haar huisdier aanpast.
+1349	Je kunt niet met een NPC praten wanneer je de statistieken van je huisdier aan het aanpassen bent.
+1350	De statistieken van je huisdier zijn aangepast.
+1351	Je kunt het drie seconden nadat je het menu voor het aanpassen van je huisdier's statistieken hebt gesloten weer openen.
+1352	Alle posities zijn bezet.
+1399	De speler kan je uitnodiging momenteel niet accepteren.
+1400	Na het gebruik van de Kleur der Keizerrijken kun je in dit koninkrijk geen uitnodigingen meer accepteren.
+1401	%s's huisdiervaardigheid is geactiveerd. %s gebruikt Vederlicht Lopen.
+1403	Er is al een naam geregistreerd.
+1404	Verwijder alsjeblieft eerst de Drakensteen die je draagt voordat je dit item gebruikt.
+1409	Helaas is het je niet gelukt de Apocalyps te stoppen. Je wordt dadelijk teruggeteleporteerd naar de Zodiac Tempel.
+1411	Je kunt niet met NPC's praten zolang de Gelukskist geopend is.
+1412	Je kunt geen items gebruiken wanneer de Gelukskist geopend is.
+1413	Je kunt geen items laten vallen wanneer de Gelukskist geopend is.
+1414	Je kunt geen items verplaatsen wanneer de Gelukskist geopend is.
+1415	Je kunt niet handelen wanneer de Gelukskist geopend is.
+1416	Je kunt niet handelen wanneer jouw partner's Gelukskist geopend is.
+1420	De bonus van jouw Drakensteen is veranderd.
+1421	[Vang de Koning] Versla monsters om Koningskaarten te verzamelen. Je hebt 25 kaarten nog om een Koningsstok te vormen.
+1422	[Vang de Koning] Talloze prijzen wachten op jou!
+1423	[Vang de Koning] Als je de bovenste regionen van de ranglijst weet te bereiken ontvang je jouw prijs van de speltafel.
+1426	Je hebt een opslagbonus van %d%% ERV ontvangen.
+1427	Je hebt een opslagbonus van %d verdediging ontvangen.
+1428	Je hebt een opslagbonus van %d%% LP ontvangen.
+1429	Je hebt een opslagbonus van %d%% kracht tegen monsters ontvangen.
+1430	Zorg ervoor dat je genoeg ruimte hebt in je inventaris voordat je gaat vissen.
+1431	Je kunt geen items verplaatsen wanneer het bonusaanpassingsvenster geopend is.
+1432	Pech gehad, er zat helaas geen schat in de buik van de vis.
+1433	Je kunt niet vissen wanneer je huisdier uitgekomen is.
+1434	Je kunt niet vissen terwijl je je huisdier aan het oproepen bent.
+1435	Je kunt niet vissen wanneer het aanpassingsvenster voor huisdierbonussen geopend is.
+1436	Je kunt deze actie niet uitvoeren wanneer het venster voor het combineren of absorberen van Schoudergordels geopend is.
+1437	Je kunt deze actie niet uitvoeren wanneer het venster voor het overdagen van Schoudergordelbonussen geopend is.
+1438	Je kunt deze actie niet uitvoeren wanneer het venster voor bonusoverdrachten geopend is.
+1439	Je kunt niet vissen zolang er nog andere vensters open staan.
+1440	Je kunt deze actie niet uitvoeren zolang je aan het vissen bent.
+1441	Resterende tijd: %.2f | Vismoeilijkheidsgraad: %u | Moeilijkheidsgraadvermindering: %d
+1442	Alle Strijd Zone-ranglijsten zijn gereset.
+1443	Gedragen wapen-skin leveren.
+1444	Je inventaris is vol.
+1450	%s verbetering mislukt.
+1451	%s verbetering succesvol.
+1452	Het Altaar van Bloed is verschenen.
+1453	Je hebt een ziel gevangen genomen.
+1454	[Ritueel van Bloed] Je hebt niet genoeg ruimte in je inventaris.
+1455	[Ritueel van Bloed] Je hebt niet genoeg zielen.
+1456	[Ritueel van Bloed] Je hebt niet genoeg Yang.
+1457	Het Ritueel van Bloed is begonnen. Koop speciale items om betere beloningen in de wacht te slepen.
+1458	Het Ritueel van Bloed is voorbij. Probeer het een andere keer opnieuw.
+1459	Wijziging van verbetering mislukt.
+1460	Dit item is alleen beschikbaar in Balathor's Crypte.
+1461	Het Kompas is gebruikt maar de Wachter kon niet gevonden worden.
+1462	Je kunt dit niet doen terwijl je een andere actie uitvoert.
+1463	Je kunt dit niet doen terwijl je een andere actie uitvoert.
+1464	Je kunt je wapen niet verbeteren wanneer je huisdier opgeroepen is.
+1465	Je hebt %d haakse sloten nodig in je inventaris om de kist te openen.
+1466	Je hebt niet genoeg ruimte in je inventaris.
+1467	[Opslag] Een item dat momenteel gebruikt wordt kan niet opgeslagen worden.
+1468	[Aura] Werkt niet met zielsgebonden items.
+1469	[Aura] Werkt niet met een Aura Outfit waarop al een item is overgedragen.
+1470	[Aura] Jouw Aura Outfit heeft het maximale level bereikt.
+1471	[Aura] Je kunt je Aura Outfit niet evolueren totdat je het verbeterd hebt.
+1472	[Aura] Alleen een Aura Outfit kan ingevoegd worden.
+1473	[Aura] Alleen een Aura Outfit, Schild, Ketting, Oorbel of Armband kan ingevoegd worden.
+1474	[Aura] Kan niet verbeterd worden.
+1475	[Aura] Kan alleen gedaan worden zodra een Aura Outfit ingevoegd is.
+1476	[Aura] Het aantal ingevoegde materialen is aangepast naar het vereiste aantal.
+1477	[Aura] Kan niet geëvolueerd worden.
+1478	[Aura] Je kunt je Aura Outfit niet evolueren totdat je het verbeterd hebt.
+1479	[Aura] Je moet items invoegen.
+1480	[Aura] Verbetering succesvol. Evolutie is nu mogelijk.
+1481	[Aura] Verbetering succesvol.
+1482	[Aura] Je hebt niet genoeg geld om je Aura Outfit te evolueren.
+1483	[Aura] Evolutie succesvol!
+1484	[Aura] Succesvol!
+1485	[Gilde] Er is %d ERV gedoneerd.
+1486	Je kunt je huisdier niet voeren wanneer het verbeteringsscherm geopend is.
+1487	De Slag om de Vijf Altaren is begonnen! Het zal %d dagen duren.
+1488	De Slag om de Vijf Altaren is voorbij. De volgende slag begint over %d uur.
+1489	De interface kan niet geopend worden wanneer je aan het rijden bent.
+1490	Het evenement is momenteel niet actief.
+1491	Je kunt geen items verhandelen of verplaatsen noch verkopen, laten vallen of opslaan terwijl je een rijdier aan het oproepen bent.
+1492	De slag is stopgezet als gevolg van een onverwachte fout.
+1493	De Slag om de Vijf Altaren eindigt over %d min(u)t(en).
+1494	Je hebt nog %s x %d meer nodig.
+1495	Er is een level-%d Drakenportaal geopend. Bestorm de kerker en neem hem in!
+1496	Een level-%d Drakenportaal kan nu betreden worden.
+1497	We hebben de baas gedood!
+1498	%d gilde-ERV ontvangen!
+1499	De tijd om de Drakenportaal te betreden is verlopen.
+1500	De kerker zal sluiten als je het gevecht niet aangaat binnen %d min(u)t(en).
+1501	Gevecht niet gestart. Kerkers gesloten.
+1502	%s heeft %s bezet!
+1503	Je kunt niet doneren wanneer je huisdier opgeroepen is.
+1504	Dit karakter is niet beschikbaar om mee te duelleren.
+1505	Totaal %d: Je kunt nog %d uitpakken.
+1506	Pak het volgende geschenk uit over %d minuten.
+1507	%s valt %s aan!
+1508	%s heeft een persoonlijke score van %d behaald!
+1509	Beloning voor het Ritueel van Bloed
+1510	Onvoldoende ruimte in je inventaris. De beloning zal verstuurd worden naar je brievenbus.
+1511	De groepsleden zijn te ver weg om het item te ontvangen.
+1512	Maximaal gildelevel bereikt. Geen donaties meer mogelijk.
+1513	[Duel van de Zieners] Het Duel van de Zieners is begonnen!
+1514	[Duel van de Zieners] Je ontvangt een quest voor de minigame.
+1515	[Duel van de Zieners] Waardevolle schatten wachten op jou!
+1516	[Duel van de Zieners] Het Duel van de Zieners is voorbij.
+1517	[Duel van de Zieners] Bekijk je rang en neem je beloning in ontvangst.
+1518	[Duel van de Zieners] Je hebt niet genoeg Ziener Munten.
+1519	[DS] Jouw rangbeloning
+1520	[Duel van de Zieners] Je hebt je aantal donaties verhoogt met 1.
+1521	Je kunt dit item niet gebruiken op zielsgebonden items.
+1522	Je kunt niet deelnemen aan de Battle Royale.
+1524	Je moet eerst je groep verlaten.
+1525	Je kunt niet meer meedoen omdat het aftellen al begonnen is.
+1527	Dit is de winnaar van de Battle Royale: %s
+1528	%s heeft %s gedood.
+1529	Het aftellen is begonnen. De Battle Royale start over %d seconden.
+1530	De Battle Royale kan niet van start gaan omdat er te weinig deelnemers zijn.
+1531	De Battle Royale is begonnen. Het eerste gebied wordt getoond over %d seconden.
+1532	De Strijd Zone is aangepast. Het wordt afgesloten over %d seconden.
+1533	De Strijd Zone wordt afgesloten over %d seconden.
+1534	Het elektrische veld is gestopt. De volgende Strijd Zone wordt getoond over %d seconden.
+1535	De Battle Royale eindigt over %d seconden.
+1536	Je kunt dat niet doen tijdens een Battle Royale.
+1537	Je kunt je daarvoor niet registreren op deze kaart.
+1538	Je kunt je daarvoor niet registreren op de Battle Royale-server.
+1540	Je kunt dit niet annuleren op de Battle Royale-server.
+1541	De Battle Royale is begonnen!!
+1542	De Battle Royale is afgelopen!!
+1543	Er zijn geen Strijd Zones meer. Het hele gebied wordt afgesloten over %d seconden.
+1544	Je hebt op dit moment geen debuff.
+1545	Je hebt een Battle Royale Ticket nodig om mee te kunnen doen.
+1546	Een speciaal voorraadpakket is ergens gedropt.
+1547	[Relikwie Bonus] Je draagt momenteel al een Ziel Relikwie.
+1548	Je kunt dat hier niet gebruiken.
+1549	Teleporteren naar het Plateau der Oerkrachten is mislukt.
+1550	Je kunt dat niet meer gebruiken.
+1551	Je hebt niet genoeg Gaya.
+1552	Battle Royale-deelnemerstatus: (%u/%u)
+1553	De registratie voor de Battle Royale is gesloten.
+1554	Probeer het later opnieuw a.u.b.
+1555	Je kunt dit niet doen terwijl je een andere actie uitvoert.
+1556	PvP Toernooi
+1557	Beloning voor het winnen van een ronde
+1558	Beloning voor het winnen van een toernooi
+1559	Duel van de Zieners Prijzen
+1560	Je inventaris is vol. Jouw beloning zal bezorgd worden via de post.
+1561	De beloning van het Duel van de Zieners wordt bezorgd via de post omdat je inventaris vol was.
+1562	Je hebt %u ERV ontvangen voor jouw Kampioenslevel.
+1574	Probeer het later opnieuw a.u.b.
+1575	Battle Royale
+1576	Battle Royale Seizoensbeloning. Seizoensrang: %d
+1577	Battle Royale Algemene Beloning.
+1578	Battle Royale Spelbeloning. Rang: %d
+1579	Battle Royale Gevechtsbeloning. %d of meer tegenstanders gedood
+1580	Je kunt momenteel geen prestatie opeisen.
+1581	Je kunt op dit moment geen emoties gebruiken.
+1582	Yongan
+1583	Het gilde %s heeft het gebied in de %s-regio op %d,%d gekocht voor %d Won.
+1584	Jouw gildeleider heeft geregistreerd voor de veiling van het gebied in de %s-regio op %d,%d.
+1585	Je hebt jouw bod al ingediend.
+1586	Je kunt het aantal Won dat je geboden hebt terugnemen.
+1587	Er is niets om te innen.
+1588	Je hebt al de maximale hoeveelheid Won.
+1589	Je hebt de %d Won die je geboden hebt teruggenomen.
+1590	Alleen de gildeleider of een lid met banktoegang kan de huur betalen.
+1591	Er hoeft geen huur betaald te worden.
+1592	Het gilde heeft niet genoeg Yang.
+1593	[Gilde Gebied] Ga naar de wachter en betaal de huur van %d Yang voor jouw gildegebied.
+1594	Je hebt de huur van %u Yang betaald voor het gildegebied.
+1595	Je kunt dat niet doen terwijl de veiling voor gildegebieden bezig is.
+1596	Je hebt je niet geregistreerd voor gebiedsveilingen.
+1597	Je bent niet lid van een gilde.
+1598	Je hebt je al geregistreerd voor de gebiedsveiling.
+1599	Alleen de gildeleider kan registreren voor de gebiedsveiling.
+1600	Alleen gildes van level %d of hoger kunnen zich registreren.
+1601	Jouw gilde heeft al een gildegebied.
+1602	Er zijn momenteel geen gebiedsveilingen.
+1603	Het maximale bod is %d Won.
+1604	Je hebt niet genoeg Won.
+1605	Jouw gilde is niet geregistreerd voor de gebiedsveiling.
+1606	Je kunt alleen bieden als je langer dan 24 uur lid bent van het gilde.
+1607	De huur van het gildegebied is niet betaald. Het gildegebied is verlaten.
+1608	Er hebben zich geen gildes geregistreerd voor de gebiedsveiling.
+1609	Je hebt %d Won geboden.
+1610	Dit gilde bestaat niet.
+1611	Dong Gwang Vlakte
+1612	Je kunt het aantal Won dat je geboden hebt terugkrijgen bij de wachter in het dorp.
+1613	Perfect! Je hebt de Geestensteen succesvol toegevoegd en je ontvangt zelfs een dubbele statistiekenbonus.
+1614	Joan
+1615	Pyungmoo
+1616	Jungrang
+1617	Waryong
+1618	Imha
+1619	Miryang
+1620	Songpa
+1621	Daeyami
+1622	[Wereldbaas] Evenement is begonnen
+1623	[Wereldbaas] Evenement is beëindigd
+1624	[Wereldbaas] In Kanaal %d is %s verschenen en die terroriseert nu het %s-gebied. Laten we op jacht gaan!
+1625	[Wereldbaas] De wereldbaas in Kanaal %d is aangevallen. Doe nu mee met de jacht!
+1626	[Wereldbaas] Goed gedaan: %s is verslagen en de rust is teruggekeerd... voor nu.
+1627	[Wereldbaas] De Wereldbaas is ontsnapt! Volgende keer beter.
+1628	[Wereldbaas] Je kunt nu geen beloning ontvangen.
+1629	[Wereldbaas] Goed gedaan! Hier is jouw beloning. Doe de volgende keer ook mee!
+1630	[Wereldbaas] Je kunt nu geen beloning ontvangen omdat je niet genoeg ruimte hebt in je inventaris.
+1631	[Wereldbaas] Beloning voor Buit Level I in de ranglijst: %d
+1632	[Wereldbaas] Beloningen voor Buit Level II in de ranglijst: %d
+1633	[Wereldbaas] Beloningen voor Buit Level III in de ranglijst: %d
+1634	[Wereldbaas] Beloningen voor Buit Level IV in de ranglijst: %d
+1635	[Flower Power] Je hebt niet genoeg scheutjes.
+1636	[Flower Power] Er is niet genoeg ruimte in je inventaris.
+1637	[Flower Power] Je hebt Bloem Zaadjes ontvangen.
+1638	[Flower Power] Je hebt niet genoeg Bloem Zaadjes.
+1639	[Flower Power] Je hebt een Chrysanten Scheutje ontvangen.
+1640	[Flower Power] Je hebt een Meiklokje Scheutje ontvangen.
+1641	[Flower Power] Je hebt een Narcissen Scheutje ontvangen.
+1642	[Flower Power] Je hebt een Lelie Scheutje ontvangen.
+1643	[Flower Power] Je hebt een Zonnebloemen Scheutje ontvangen.
+1644	[Wereldbaas] Pas op: de wereldbaas zal spoedig verschijnen!
+1645	[Flower Power] Dit item kan niet langer gebruikt worden.
+1646	Je kunt op dit moment niet transformeren.
+1647	Dood alle monsters binnen de tijdslimiet!
+1648	Het portaal naar de volgende ruimte is geopend.
+1649	Ontwijk alle aanvallen!
+1650	Het portaal naar het volgende niveau is geopend.
+1651	%s heeft niveau %u voltooid in Sung Mahi's Hellentoren!
+1652	De buit uit Sung Mahi's Helletoren is naar je brievenbus gestuurd.
+1653	Sung Mahi's Hellet. Nv. %d
+1654	Buit voor het voltooien van Sung Mahi's Helletoren
+1655	Het gevecht begint over %d seconden.
+1656	Je neemt het op tegen level %d.
+1657	Dood een paar monsters die niet bij elkaar horen!
+1658	Je hebt het verkeerde monster aangevallen. Dood alle monsters!
+1659	Dood alle monsters binnen de tijdslimiet!
+1660	Je hebt de verkeerde Metin Steen vernietigd. Versla alle monsters!
+1661	Vernietig de juiste Metin Steen!
+1662	Vind de juiste sleutel om te kunnen ontsnappen!
+1663	Vind een Zegelsteen om het zegel te breken!
+1664	[Sung Mahi's Helletoren] Dood alle monsters binnen de tijdslimiet!
+1665	[Sung Mahi's Helletoren] De huidige ranglijstcyclus is afgelopen.
+1666	[Sung Mahi's Helletoren] Er is een nieuwe ranglijstcyclus begonnen.
+1667	Seizoensbeloning voor de 1ste plaats op niveau %d in Sung Mahi's Helletoren.
+1668	Sung Mahi's Hellentoren Seizoensbeloning
+1669	Je bent niet vervloekt.
+1670	Alle vloeken zijn opgeheven.
+1671	De tijd is om. Je bent naar buiten gebracht.
+1672	[Sung Mahi's Helletoren] Vernietigen de Demonensteen!
+1673	[Sung Mahi's Helletoren] De sleutel past niet. Vind een andere en probeer het opnieuw!
+1674	[Sung Mahi's Helletoren] Verbreek het zegel met Sung Mahi's Zegelsteen!
+1675	[Sung Mahi's Helletoren] Je moet eerst een ander zegel verbreken!
+1676	Je kunt nu handschoenen dragen.
+1677	Je kunt nog geen handschoenen dragen.
+1678	Deze functie is niet beschikbaar omdat er hacksoftware gedetecteerd werd.
+1679	[Sung Mahi's Helletoren] Je hebt dit niveau voltooid in %d seconden.
+1680	Je kunt niet deelnemen aan de gebiedsveiling op de dag dat het gilde is opgericht.
+1681	
+1683	
+1684	
+1685	
+1686	Beklim de treden van Sung Mahi's Helletoren en ga het volgende niveau op.
+1687	[Persoonlijke Premium Shop] Je kunt dat niet gebruiken. Ga naar de Handelsbeheerster van het dorp.
+1688	Je bent een gebied binnengegaan dat onder Sung Mahi's invloed staat en lijdt onder zijn vloek.
+1689	%s heeft nog %d voorposten. (%d/%d)
+1690	%s heeft alle voorposten opgebouwd en Sung Mahi's controle start over %d minuten.
+1691	Sung Mahi's voorposten worden opgebouwd.
+1692	Sung Mahi's voorposten zijn vernietigd.
+1693	Alle voorposten in %s zijn vernietigd en het gebied staat niet langer onder Sung Mahi's invloed.
+1694	Seo Gwang Woestenijen
+1695	Nam Gwang Ravijn
+1696	De verbetering was succesvol!
+1697	De verbetering is helaas mislukt.
+1698	Dankzij de immuniteitszegening wordt jij niet beïnvloedt door Sung Mahi's Aanwezigheid.
+1699	Jouw immuniteit is verlopen en je wordt opnieuw beïnvloedt door Sung Mahi's Aanwezigheid en Vloek.
+1700	Je kunt dit niet doen met een gebruiker van hacksoftware.
+1701	Je hebt niet voldoende materialen voor de verbetering. {Zielsgebonden items kunnen niet gebruikt worden.)
+1702	Jouw gildegebied wordt automatisch opgegeven over %d uur. Items in het gildewarenhuis worden verwijderd.
+1703	[Gilde] Je kunt de gildeleider niet uit het gilde zetten.
+1704	[Gilde] Je kunt jezelf niet uit het gilde zetten.
+1705	[Gilde] Je kunt jezelf niet de gildeleider maken.
+1706	[Gilde] Alleen beschikbaar voor de gildeleider (als een gildegebied opgeheven wordt).
+1707	[Gilde] Je kunt een gildegebied niet opheffen tijdens een gildegevecht.
+1708	Je kunt dit niet omwisselen.
+1709	Het Toren Evenement is geactiveerd.
+1710	Je kunt dit leren na het behalen van het Kampioenslevel.
+1711	[Persoonlijke Premium Shop] Je kunt dit niet openen omdat je nog geld hebt dat je moet innen.
+1712	[Persoonlijke Premium Shop] Je kunt dit niet openen omdat je nog items hebt die je moet innen.
+1713	[Persoonlijke Premium Shop] Je hebt jouw persoonlijke shop al geopend.
+1714	[Persoonlijke Premium Shop] De shop wordt nu voorbereid.
+1715	[Persoonlijke Premium Shop] Je hebt niet genoeg ruimte in je inventaris.
+1716	[Persoonlijke Premium Shop] Je kunt items ophalen in je persoonlijke shop.
+1717	[Persoonlijke Premium Shop] Je kunt geld ophalen in je persoonlijke shop.
+1718	[Persoonlijke Premium Shop] %s is verkocht. Haal alsjeblieft je geld op.
+1719	[Persoonlijke Premium Shop] Je kunt je shop niet opnieuw openen binnen %d seconden nadat je deze gesloten hebt.
+1720	Je kunt dat niet doen wanneer een kerker gecreëerd wordt.
+1721	Je kunt jezelf niet meer tot leven wekken. Je zal uit de kerker getransporteerd worden.
+1722	Je hebt je beloning al ontvangen. Als je het opnieuw wilt proberen, moet je later terugkomen. Resterende tijd: %d u %d m
+1723	Je kunt jezelf nog %d keer opnieuw tot leven wekken.
+1724	Je kunt de Serpententempel nu binnentreden. Gebruik het Serpentenstandbeeld om dit te doen.
+1725	De vernietigde Metin reageert niet. Alle Metins zijn opnieuw verschenen.
+1726	De vernietigde Metin reageert niet. Alle Metins zijn opnieuw verschenen.
+1727	Je hebt de Metin %d vernietigd. Vernietig nu de Metin %d.
+1728	De tijd is om. Je zal uit de kerker getransporteerd worden.
+1729	Dit is nu beschikbaar gedurende %d minuten.
+1730	Je kunt de kerkertimer niet verder verlengen.
+1731	De kerkertimer is met één minuut verlengd.
+1732	Je hebt alle monsters gedood. Je wordt naar niveau %d getransporteerd. Nog %d seconden resterend.
+1733	Je hebt alle Metins vernietigd. Je wordt naar niveau %d getransporteerd. Nog %d seconden resterend.
+1734	Het stuk is toegevoegd aan het Serpentenhoofd. Maar er gebeurt helemaal niets.
+1735	Alle Serpentenpilaren zijn ontgrendeld. %d niveaus in %d seconden.
+1736	De speciale Serpententempel Smid verschijnt!
+1737	De Serpententempel Smid verschijnt!
+1738	Je hebt alle monsters gedood en kunt nu doorgaan naar het niveau van de baas.
+1739	Je hebt de Serpententempel afgerond. Je zal over %d seconden uit de kerker getransporteerd worden.
+1740	Vernietig de Metin Stenen in de juiste volgorde.
+1741	Dood alle monsters.
+1742	Pak de sleutel af van de monsters om de Serpentenpilaar te ontgrendelen.
+1743	Je hebt een stuk toegevoegd aan het Serpentenhoofd.
+1744	Dood de baas.
+1745	Met succes open weten te krijgen!
+1746	Je moet eerst de andere pilaar ontgrendelen.
+1747	De gevangenis is ontgrendeld. De smid lacht naar je.
+1748	Deze sleutel kon de gevangenis niet open krijgen en de smid redden.
+1749	Dit stuk past niet in het Serpentenhoofd.
+1750	
+1751	
+1752	Je moet minimaal één ERV Bol vullen op level 120 om het Kampioenslevel te bereiken.
+1753	Je moet de kerker 'Schip Verdediging' voltooid hebben.
+1754	Je hebt het Kampioenslevel al bereikt.
+1755	[Persoonlijke Premium Shop] Je kunt geen items gebruiken tijdens het openen van je persoonlijke shop.
+1756	[Persoonlijke Premium Shop] Je kunt dat niet doen wanneer je items aan het beheren bent.
+1757	[Persoonlijke Premium Shop] Je kunt de Persoonlijke Premium Shop niet gebruiken wanneer je andere vensters open hebt staan.
+1758	[Persoonlijke Premium Shop] Je kunt dat niet doen wanneer je items aan het beheren bent.
+1759	
+1760	[Relikwie Bonus] Dit is niet mogelijk wanneer het Ziel Relikwie-scherm geopend is.
+1761	%s groepsleden hebben het gevecht verlaten.
+1762	Je hebt nog %d minuten over.
+1763	[Persoonlijke Premium Shop] Je kunt hier niet dueleren.
+1764	[Persoonlijke Premium Shop] Te innen geld wordt niet bijgewerkt wanneer je items aan het beheren bent.
+1765	De eindbaas van de Serpententempel is verschenen.
+1766	[Persoonlijke Premium Shop] Er is hier al een shop geopend. Zoek alsjeblieft een andere locatie om jouw shop te openen.
+1767	Je kunt dat niet verbeteren wanneer je een evolueerbaar huisdier opgeroepen hebt.
+1768	<Noordewind Diepten> Je hebt nog %d minuten over.
+1769	<Noordewind Diepten> Als je het gevecht niet binnen drie minuten start, zal de instantie eindigen.
+1770	<Noordewind Diepten> De tijd is om. Je zal uit de kerker getransporteerd worden.
+1771	
+1772	<Noordewind Diepten> Er is een kerkerinstantie gegenereerd voor de Noordewind Schuilplaats.
+1773	
+1774	
+1775	
+1776	
+1777	
+1778	
+1779	
+1780	
+1781	
+1782	
+1783	
+1784	
+1785	
+1786	
+1787	
+1788	
+1789	
+1790	
+1791	
+1792	
+1793	
+1794	
+1795	
+1796	<Noordewind Diepten> Je hebt Alastor verslagen! Je zal over 20 seconden uit de kerker getransporteerd worden.
+1797	<Noordewind Diepten> Alastor zal spoedig zijn ijzige toorn hoogtij laten vieren!
+1798	<Noordewind Diepten> Alastor laat zijn ijzige woede los vanaf level %d!
+1799	<Noordewind Diepten> Je hebt Alastor's ijzige toorn weten af te weren.
+1800	<Noordewind Diepten> Als je de witte drakeneieren niet binnen %d seconden vernietigt, zal Alastor's dodelijke vrieskou de schuilplaats binnendringen!
+1801	Dat is hier niet beschikbaar.
+1802	Dit zal beschikbaar worden wanneer het gevecht begonnen is.
+1803	<Noordewind Diepten> De instantie is beëindigd omdat je het gevecht niet gestart bent binnen de aangegeven tijdslimiet.
+1804	
+1805	Er wordt geen buit verzameld omdat de buitfilter gedeactiveerd is.
+1806	Er wordt geen buit verzameld omdat de buitfilter van een groepslid gedeactiveerd is.
+1807	
+1808	Je hebt %d Kampioenslevel-ervaringspunten verkregen.
+1809	Je hebt %d ervaringspunten verkregen.
+1810	Je bent %d ervaringspunten verloren.
+1811	Je bent %d Kampioenslevel-ervaringspunten verloren.
+1812	Je kunt dat niet doen tijdens het handelen.
+1813	Het Metin Koorts-evenement is begonnen!
+1814	Voltooi quests op de lijst evenementen-quest-lijst, vernietig Metin Stenen en neem je beloningen in ontvangst.
+1815	Metin Koorts is momenteel niet actief.
+1816	[Drakentempel] Je hebt een instantie gegenereerd voor de Drakentempel.
+1817	[Drakentempel] Als je het gevecht niet binnen drie minuten start, zal jouw instantie eindigen.
+1818	[Drakentempel] Beran-Setaou is verslagen! Je zal over %d seconden uit de kerker geteleporteerd worden.
+1819	[Drakentempel] Je hebt nog %d minuten over.
+1820	[Drakentempel] De instantie is beëindigd omdat het gevecht niet gestart werd.
+1821	[Drakentempel] De tijd is om. Iedereen wordt de kerker uitgetransporteerd.
+1822	[Drakentempel] Je hebt een instantie gegenereerd voor de Drakentempel.
+1823	[Drakentempel] Als je het gevecht niet binnen drie minuten start, zal jouw instantie eindigen.
+1824	[Drakentempel] De instantie is gestart.
+1825	[Drakentempel] Je hebt opgegeven en de instantie werd beëindigd.
+1829	[Drakentempel] De instantie wordt gesloten als er niemand naar binnen gaat binnen %d seconden.
+1830	[Drakentempel] De instantie werd gesloten omdat er niet naar binnen ging in de toegekende tijd.
+1838	Je kunt jezelf niet blokkeren.
+1839	Je kunt jezelf niet toevoegen.
+1840	%s actie werd toegestaan.
+1844	Je hebt je paard %d Veevoeder gevoerd. Het heeft %d ervaring opgedaan.
+1845	Niet genoeg Gaya of Yang
+1846	Je kunt deze paardenvaardigheid niet leren.
+1847	[Enigma Tempel] Je kunt dat hier niet gebruiken.
+1848	[Enigma Tempel] Alleen de groepsleider kan dit geschrift gebruiken.
+1849	[Enigma Tempel] %s is niet binnen bereik.
+1850	[Enigma Tempel] Je kunt dit geschrift niet gebruiken op jouw level.
+1851	[Enigma Tempel] %s is niet het juiste level om binnen te kunnen gaan.
+1852	[Enigma Tempel] %s heeft de toegang afgewezen.
+1853	[Enigma Tempel] De kerker zal over één minuut verdwijnen als je het gevecht niet start.
+1854	[Enigma Tempel] Er is een portaal naar de Enigma Tempel gecreëerd.
+1855	[Enigma Tempel] Vernietig de echte Metin Steen.
+1856	[Enigma Tempel] Dit is geen echte Metin Steen. Vind een echte Metin Steen!
+1857	[Enigma Tempel] Je hebt een schatkist ontvangen van de Metin Steen.
+1858	[Enigma Tempel] Je moet nog steeds een echte Metin Steen zien te vinden. Gebruik het portaal en probeer het opnieuw.
+1859	[Enigma Tempel] Opdracht voltooid. Vind de geheime kamer.
+1860	[Enigma Tempel] Vind een echt monster en versla het! Laat de illusies je niet om de tuin leiden.
+1861	[Enigma Tempel] Je hebt geen echt monster gevonden. Gebruik het portaal en probeer het opnieuw.
+1862	[Enigma Tempel] Kijk naar de schatkist.
+1863	[Enigma Tempel] Welkom in de geheime kamer.
+1864	[Enigma Tempel] Jouw tijd zit erop! Iedereen wordt de kerker uitgeteleporteerd.
+1865	[Enigma Tempel] Je ontvangt de Zegening van de Enigma Tempel als beloning.
+1866	[Enigma Tempel] Je hebt geen beloning ontvangen. Resterende tijd tot volgende beloning: %d uur en %d minu(u)t(en)
+1867	Enigma Tempel Beloning
+1868	[Enigma Tempel] De Enigma Tempel is verdwenen omdat de tijd om is.
+1869	[Enigma Tempel] Je hebt vier minuten om het gevecht te starten bij het Enigma Portaal.
+1870	[Enigma Tempel] De Zegening van de Enigma Tempel heeft je een nieuwe schatkist aangeboden.
+1871	[Enigma Tempel] Je hebt een Enigma Beloning ontvangen. Kijk in je brievenbus om deze te accepteren.
+1872	%s is verwijderd.
+1873	Je hebt %s verkregen. Je kunt je vaardigheden ook bekijken vanuit het vaardighedenmenu.
+1874	Niet genoeg Gaya
+1876	Probeer het later opnieuw a.u.b.
+1878	De tijd is om. Je wordt zo naar de stad getransporteerd.
+1879	Je kunt jezelf niet meer tot leven wekken.
+1880	Je hebt de kerker afgerond en wordt over %d minuten naar buiten geteleporteerd.
+1881	Je hebt alle afgezanten verslagen. Ga naar Wachter Hae-Tae om Verdoemenis te betreden.
+1882	Je kunt niet meer dan het maximale aantal items gebruiken.
+1883	De reis naar de Anderwereld is voorbij en je kunt geen Vlammen des Doods meer vinden.
+1884	De reis naar de Anderwereld is begonnen. Je kunt Vlammen des Doods vinden door monsters te verslaan.
+1885	De reis naar de Anderwereld is voorbij.
+1886	De reis naar de Anderwereld is begonnen. Je kunt nu het Anderwereld Portaal op Cape Drakenvuur gebruiken.
+1887	Je hebt %dx Levenswater gebruikt. Je hebt %dx Levenswater over.
+1888	Je ontvangt %d Vlam(men) des Doods.
+1895	Je hebt de Afgezant van Aarde verslagen.
+1896	Je hebt de Afgezant van Nacht verslagen.
+1897	Je hebt de Afgezant van Donder verslagen.
+1898	Je hebt de Afgezant van Lucht verslagen.
+1899	De kerker sluit over %d minuten.
+1900	Je hebt niet genoeg ruimte voor nog meer Vlammen des Doods.
+1901	Je moet wachten voordat je het opnieuw kunt proberen. Resterende wachttijd: %d uur en %d minu(u)t(en)
+1902	Je kunt de groep niet langer aanpassen als je de Drakentempel eenmaal bent binnengegaan.
+1903	Je kunt geen Huurlingen meer hebben.
+1904	Uithoudingsvermogen uitgeput.
+1905	[Enigma Tempel] Vernietig de Enigma Metin om naar het volgende niveau te gaan.
+1916	Je hebt deze vaardigheid al verkregen.
+1917	Je kunt deze vaardigheid niet leren tot paardenlevel 31.
+1918	Je kunt geen vaardigheden meer verkrijgen.
+1919	Je kunt deze vaardigheid niet leren tot paardenlevel 21.
+1921	[Enigma Tempel] Je kunt niet binnentreden als je niet voldoet aan de levelvereiste.
+1922	Kan niet wisselen tussen uitrustingspagina's omdat wapen en kostuum niet overeen komen.
+1924	Buitfilter geactiveerd.
+1925	Buitfilterduur verlengd.
+1926	[Sung Ma Invasieportaal] Er is ergens in dit gebied een Sung Ma Invasieportaal open gegaan. [ENTER]Open de grote kaart om het te vinden.
+1927	[Sung Ma Invasieportaal] De Invasiebaas is ergens verschenen!
+1930	[Sung Ma Invasieportaal] De kracht van het invasieportaal is afgezwakt en het kan nu vernietigd worden.
+1931	[Sung Ma Invasieportaal] Het gebied is met succes verdedigd. Je wordt spoedig teruggeteleporteerd.
+1932	[Sung Ma Invasieportaal] Het invasieportaal is gesloten.
+1933	[Sung Ma Invasieportaal] Krachtbloemen zijn verschenen rondom het invasieportaal.[ENTER]Gebruik een bloem van hetzelfde elementtype als het gebied om een schadebonus te ontvangen!
+1934	[Sung Ma Invasieportaal] Krachtbloemen zijn verschenen in de buurt van de Invasiebaas.[ENTER]Gebruik een bloem van hetzelfde elementtype als het gebied om een schadebonus te ontvangen!
+1936	[Sung Ma Invasieportaal] Je hebt niet genoeg ruimte in je inventaris om de beloning te accepteren.
+1937	[Sung Ma Invasieportaal] Je moet alle monsters in de buurt van het invasieportaal verslaan om het te vernietigen. 
+1938	[Gilde] %d Yang is opgenomen.
+1939	Goudbesjacht Beloning
+1940	Vernietig %d Primordis Standbeelden. Je kunt niet meerdere standbeelden tegelijkertijd aanvallen.
+1941	Je hebt alle uithoudingsvermogen verkregen van je quests. Haal de beloning op in het quest-venster.
+1942	De bonussen die geabsorbeerd zijn in jouw Schoudergordel zijn met succes verwijderd.
+1943	De bonussen die geabsorbeerd zijn in jouw Aura Outfit zijn met succes verwijderd.
+1944	Je hebt meer ruimte nodig in je inventaris.
+1945	[Land van Goud] Je kunt op dit moment niet transformeren.
+1946	Je kunt de groep niet opheffen zolang je nog actief bent in Meley's Hol.
+1947	Je kunt het gilde niet opheffen zolang er nog een gildegevecht bezig is.
+1948	De speler is momenteel aangemerkt als AFK.
+1949	Je hebt jezelf met succes weten te bevrijden.
+1950	[NPC Vinder] Dit karakter is niet op deze kaart.
+1951	Geheime Schatbeloning
+1952	Je hebt een geheime beloning ontvangen voor %d keer deelnemen aan de Schattenjacht.
+1953	Rang %d Beloning
+1954	Je hebt een beloning ontvangen voor het behalen van rang %d in de Schattenjacht.
+1955	Je kunt geen Vlammen des Doods meer ontvangen omdat je het maximale aantal al hebt ontvangen.
+1956	Je kunt niet meer Yang ontvangen.
+1957	[Sung Ma's Schatkist] Resterende Herworpen: %d
+1958	[Sung Ma's Kist] Openen om een waardevolle beloning te ontvangen.
+1959	Je hebt het maximale aantal zielen verzameld. Bezoek het Altaar van Bloed en voer het ritueel uit!
+1961	%.1Lf%% van de verkoopprijs in Yang wordt ingenomen als vergoeding.
+1962	Sterk tegen Draken +%d%%
+1963	De transactie is geannuleerd omdat het bedrag hoger was dan het maximaal beschikbare bedrag.
+1964	Dit vaardighedenboek is alleen beschikbaar voor gildeleiders of strijders.
+1965	Je kunt geen gilde vaardigheden meer leren.
+1966	Het leren van de gilde vaardigheid is mislukt.
+1967	Je kunt geen groep vormen met iemand wanneer je aan het duelleren bent.
+1968	Verwijder de speler eerst van jouw blokkeerlijst.
+1969	Een groepsuitnodiging is versturd naar %s.
+1970	%s is momenteel op een locatie waar het niet mogelijk is om groepen te vormen.
+1971	Verwijder de speler eerst van jouw blokkeerlijst.
+1972	Je kunt niet meer vrienden hebben (max. %d).
+1973	Verwijder de speler eerst uit jouw vriendschapsverzoeken.
+1974	Je kunt niet meer spelers blokkeren (max. %d).
+1975	Je hebt deze kaart al.
+1976	Je hebt met succes Balathor's Storm geleerd.
+1977	Je hebt met succes Balathor's Testament geleerd.
+1978	Je hebt met succes Balathor's Vastberadenheid geleerd.
+1992	Je hebt geen toegang tot je quests wanneer je een item aan het selecteren bent.
+1993	Je hebt geen toegang tot het gildewarenhuis of handel wanneer je een item aan het selecteren bent.
+1994	Je kunt dat niet doen zolang de andere speler een ander venster open heeft staan.
+1995	Je kunt dat niet gebruiken wanneer je een item aan het selecteren bent.
+2000	Geen vrije plek om te kunnen dragen.
+2006	Ontwaakt
+2007	Krachtig
+2008	Je hebt Heroïsche Huisdieren Boeken nodig voor dit evolutielevel.
+2009	Je hebt Ontwaakte Huisdieren Boeken nodig voor dit stadium van evolutielevel.
+2010	Blokkeerpenetratie +%d%%
+2011	Precisie +%d%%
+2012	Jouw huisdier heeft een potentiële vaardigheid ontgrendeld (%s).
+2013	De potentiële vaardigheid %s is verwijderd.
+2014	Je hebt de eerste positie voor potentiële vaardigheden ontgrendeld.
+2015	%s heeft kampioenslevel %d bereikt.
+2016	Je huisdier is helemaal in zijn nopjes door het smakelijke snoepje.
+2019	Je hebt de tweede positie voor potentiële vaardigheden ontgrendeld.
+2028	Je kunt dit niet doen terwijl je je huisdier aan het oproepen bent.

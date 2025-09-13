@@ -1,0 +1,30 @@
+quest give_basic_weapon begin
+	state start begin
+		when login begin
+			if pc.getqf("basic_weapon") != 0 then -- old version support
+				return
+			end
+
+			local item_vnum = 10
+
+			if pc.job == 3 then 	-- shaman
+				item_vnum = 7000 
+			elseif pc.job == 1 then -- assassin
+				item_vnum = 1000
+			end
+
+			local item_count = pc.countitem(item_vnum)
+			local equip_weapon = pc.weapon
+			if item_count == 0 and equip_weapon != item_vnum then
+				pc.give_item2(item_vnum)	-- jobtype weapon
+				pc.give_item2(27001, 5)	-- red potions 
+				set_state(__COMPLETE__)
+			end
+
+		end
+	end
+	state __COMPLETE__ begin
+	end
+end
+
+

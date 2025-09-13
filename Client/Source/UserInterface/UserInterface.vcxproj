@@ -1,0 +1,496 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Distribute|Win32">
+      <Configuration>Distribute</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E0DC3917-08C3-4F15-A7E7-6CB395EC83F0}</ProjectGuid>
+    <RootNamespace>UserInterface</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Distribute|Win32'">
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)Client\Binary\</OutDir>
+    <TargetName>Metin2_$(Configuration)_$(Platform)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Distribute|Win32'">
+    <OutDir>$(SolutionDir)Client\Binary\</OutDir>
+    <TargetName>Metin2_$(Configuration)_$(Platform)</TargetName>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)Client\Binary\</OutDir>
+    <TargetName>Metin2_$(Configuration)_$(Platform)</TargetName>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>
+      </SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)Extern\Client\include\;$(SolutionDir)Extern\Common\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;USE_LOD;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>$(IntDir)$UserInterface.pch</PrecompiledHeaderOutputFile>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Extern\Client\library;$(SolutionDir)Extern\Common\library;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+      <SubSystem>Windows</SubSystem>
+      <LargeAddressAware>true</LargeAddressAware>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <ProgramDatabaseFile>$(IntDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <AssemblyDebug>true</AssemblyDebug>
+    </Link>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0412</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <SDLCheck>
+      </SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)Extern\Client\include\;$(SolutionDir)Extern\Common\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;USE_LOD;DUNGEON_WORK;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>$(IntDir)$UserInterface.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <BrowseInformation>true</BrowseInformation>
+      <AssemblerOutput>All</AssemblerOutput>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>
+      </EnableCOMDATFolding>
+      <OptimizeReferences>
+      </OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)Extern\Client\library;$(SolutionDir)Extern\Common\library;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+      <ProgramDatabaseFile>$(IntDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>$(IntDir)$(TargetName).map</MapFileName>
+      <SubSystem>Windows</SubSystem>
+      <LargeAddressAware>true</LargeAddressAware>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <ResourceCompile>
+      <Culture>0x0412</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Distribute|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)Extern\Client\include\;$(SolutionDir)Extern\Common\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <WarningLevel>Level3</WarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;USE_LOD;_DISTRIBUTE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeaderOutputFile>$(IntDir)$UserInterface.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <AssemblerOutput>All</AssemblerOutput>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(SolutionDir)Extern\Client\library;$(SolutionDir)Extern\Common\library;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+      <ProgramDatabaseFile>$(IntDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>$(IntDir)$(TargetName).map</MapFileName>
+      <MapExports>true</MapExports>
+      <SubSystem>Windows</SubSystem>
+      <LargeAddressAware>true</LargeAddressAware>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </Link>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <ResourceCompile>
+      <Culture>0x0412</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="AbstractApplication.h" />
+    <ClInclude Include="AbstractCharacterManager.h" />
+    <ClInclude Include="AbstractChat.h" />
+    <ClInclude Include="AbstractPlayer.h" />
+    <ClInclude Include="AbstractSingleton.h" />
+    <ClInclude Include="AccountConnector.h" />
+    <ClInclude Include="AffectFlagContainer.h" />
+    <ClInclude Include="CheckLatestFiles.h" />
+    <ClInclude Include="Discord.h" />
+    <ClInclude Include="GameType.h" />
+    <ClInclude Include="GuildMarkDownloader.h" />
+    <ClInclude Include="GuildMarkUploader.h" />
+    <ClInclude Include="ImguiManager.h" />
+    <ClInclude Include="InstanceBase.h" />
+    <ClInclude Include="InsultChecker.h" />
+    <ClInclude Include="Locale.h" />
+    <ClInclude Include="Locale_inc.h" />
+    <ClInclude Include="Locale_inc_BR.h" />
+    <ClInclude Include="Locale_inc_CA.h" />
+    <ClInclude Include="Locale_inc_dev.h" />
+    <ClInclude Include="Locale_inc_EU.h" />
+    <ClInclude Include="Locale_inc_EU2.h" />
+    <ClInclude Include="Locale_inc_GB.h" />
+    <ClInclude Include="Locale_inc_HK.h" />
+    <ClInclude Include="Locale_inc_JP.h" />
+    <ClInclude Include="Locale_inc_KO.h" />
+    <ClInclude Include="Locale_inc_KO_DEV.h" />
+    <ClInclude Include="Locale_inc_NEWCIBN.h" />
+    <ClInclude Include="Locale_inc_SG.h" />
+    <ClInclude Include="Locale_inc_VI.h" />
+    <ClInclude Include="MarkImage.h" />
+    <ClInclude Include="MarkManager.h" />
+    <ClInclude Include="MovieMan.h" />
+    <ClInclude Include="NetworkActorManager.h" />
+    <ClInclude Include="Packet.h" />
+    <ClInclude Include="ProcessCRC.h" />
+    <ClInclude Include="ProcessScanner.h" />
+    <ClInclude Include="PythonApplication.h" />
+    <ClInclude Include="PythonBackground.h" />
+    <ClInclude Include="PythonCharacterManager.h" />
+    <ClInclude Include="PythonChat.h" />
+    <ClInclude Include="PythonEventManager.h" />
+    <ClInclude Include="PythonExceptionSender.h" />
+    <ClInclude Include="PythonExchange.h" />
+    <ClInclude Include="PythonGuild.h" />
+    <ClInclude Include="PythonIME.h" />
+    <ClInclude Include="PythonItem.h" />
+    <ClInclude Include="PythonLocale.h" />
+    <ClInclude Include="PythonMessenger.h" />
+    <ClInclude Include="PythonMiniMap.h" />
+    <ClInclude Include="PythonNetworkDatagram.h" />
+    <ClInclude Include="PythonNetworkStream.h" />
+    <ClInclude Include="PythonNonPlayer.h" />
+    <ClInclude Include="PythonPlayer.h" />
+    <ClInclude Include="PythonPlayerEventHandler.h" />
+    <ClInclude Include="PythonQuest.h" />
+    <ClInclude Include="PythonSafeBox.h" />
+    <ClInclude Include="PythonShop.h" />
+    <ClInclude Include="PythonSkill.h" />
+    <ClInclude Include="PythonSystem.h" />
+    <ClInclude Include="PythonTextTail.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="ServerStateChecker.h" />
+    <ClInclude Include="ShaderManager.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="Test.h" />
+    <ClInclude Include="YosunAdminPanel.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AccountConnector.cpp" />
+    <ClCompile Include="AffectFlagContainer.cpp" />
+    <ClCompile Include="CameraProcedure.cpp" />
+    <ClCompile Include="CheckLatestFiles.cpp" />
+    <ClCompile Include="GameType.cpp" />
+    <ClCompile Include="GuildMarkDownloader.cpp" />
+    <ClCompile Include="GuildMarkUploader.cpp" />
+    <ClCompile Include="ImguiManager.cpp" />
+    <ClCompile Include="InstanceBase.cpp" />
+    <ClCompile Include="InstanceBaseBattle.cpp" />
+    <ClCompile Include="InstanceBaseEffect.cpp" />
+    <ClCompile Include="InstanceBaseEvent.cpp" />
+    <ClCompile Include="InstanceBaseMotion.cpp" />
+    <ClCompile Include="InstanceBaseMovement.cpp" />
+    <ClCompile Include="InstanceBaseTransform.cpp" />
+    <ClCompile Include="InsultChecker.cpp" />
+    <ClCompile Include="Locale.cpp" />
+    <ClCompile Include="MarkImage.cpp" />
+    <ClCompile Include="MarkManager.cpp" />
+    <ClCompile Include="MovieMan.cpp" />
+    <ClCompile Include="NetworkActorManager.cpp" />
+    <ClCompile Include="ProcessCRC.cpp" />
+    <ClCompile Include="ProcessScanner.cpp" />
+    <ClCompile Include="PythonApplication.cpp" />
+    <ClCompile Include="PythonApplicationCamera.cpp" />
+    <ClCompile Include="PythonApplicationCursor.cpp" />
+    <ClCompile Include="PythonApplicationEvent.cpp" />
+    <ClCompile Include="PythonApplicationLogo.cpp" />
+    <ClCompile Include="PythonApplicationModule.cpp" />
+    <ClCompile Include="PythonApplicationProcedure.cpp" />
+    <ClCompile Include="PythonApplicationWebPage.cpp" />
+    <ClCompile Include="PythonBackground.cpp" />
+    <ClCompile Include="PythonBackgroundModule.cpp" />
+    <ClCompile Include="PythonCharacterManager.cpp" />
+    <ClCompile Include="PythonCharacterManagerModule.cpp" />
+    <ClCompile Include="PythonCharacterModule.cpp" />
+    <ClCompile Include="PythonChat.cpp" />
+    <ClCompile Include="PythonChatModule.cpp" />
+    <ClCompile Include="PythonEffectModule.cpp" />
+    <ClCompile Include="PythonEventManager.cpp" />
+    <ClCompile Include="PythonEventManagerMoudle.cpp" />
+    <ClCompile Include="PythonExceptionSender.cpp" />
+    <ClCompile Include="PythonExchange.cpp" />
+    <ClCompile Include="PythonExchangeModule.cpp" />
+    <ClCompile Include="PythonFlyModule.cpp" />
+    <ClCompile Include="PythonGameEventManagerModule.cpp" />
+    <ClCompile Include="PythonGuild.cpp" />
+    <ClCompile Include="PythonIME.cpp" />
+    <ClCompile Include="PythonIMEModule.cpp" />
+    <ClCompile Include="PythonItem.cpp" />
+    <ClCompile Include="PythonItemModule.cpp" />
+    <ClCompile Include="PythonLocale.cpp" />
+    <ClCompile Include="PythonMessenger.cpp" />
+    <ClCompile Include="PythonMiniMap.cpp" />
+    <ClCompile Include="PythonMiniMapModule.cpp" />
+    <ClCompile Include="PythonNetworkDatagram.cpp" />
+    <ClCompile Include="PythonNetworkDatagramModule.cpp" />
+    <ClCompile Include="PythonNetworkStream.cpp" />
+    <ClCompile Include="PythonNetworkStreamCommand.cpp" />
+    <ClCompile Include="PythonNetworkStreamEvent.cpp" />
+    <ClCompile Include="PythonNetworkStreamModule.cpp" />
+    <ClCompile Include="PythonNetworkStreamPhaseGame.cpp" />
+    <ClCompile Include="PythonNetworkStreamPhaseGameActor.cpp" />
+    <ClCompile Include="PythonNetworkStreamPhaseGameItem.cpp" />
+    <ClCompile Include="PythonNetworkStreamPhaseHandShake.cpp" />
+    <ClCompile Include="PythonNetworkStreamPhaseLoading.cpp" />
+    <ClCompile Include="PythonNetworkStreamPhaseLogin.cpp" />
+    <ClCompile Include="PythonNetworkStreamPhaseOffline.cpp" />
+    <ClCompile Include="PythonNetworkStreamPhaseSelect.cpp" />
+    <ClCompile Include="PythonNonPlayer.cpp" />
+    <ClCompile Include="PythonNonPlayerModule.cpp" />
+    <ClCompile Include="PythonPackModule.cpp" />
+    <ClCompile Include="PythonPlayer.cpp" />
+    <ClCompile Include="PythonPlayerEventHandler.cpp" />
+    <ClCompile Include="PythonPlayerInput.cpp" />
+    <ClCompile Include="PythonPlayerInputKeyboard.cpp" />
+    <ClCompile Include="PythonPlayerInputMouse.cpp" />
+    <ClCompile Include="PythonPlayerModule.cpp" />
+    <ClCompile Include="PythonPlayerSkill.cpp" />
+    <ClCompile Include="PythonProfilerModule.cpp" />
+    <ClCompile Include="PythonQuest.cpp" />
+    <ClCompile Include="PythonSafeBox.cpp" />
+    <ClCompile Include="PythonShop.cpp" />
+    <ClCompile Include="PythonSkill.cpp" />
+    <ClCompile Include="PythonSoundManagerModule.cpp" />
+    <ClCompile Include="PythonSystem.cpp" />
+    <ClCompile Include="PythonSystemModule.cpp" />
+    <ClCompile Include="PythonTextTail.cpp" />
+    <ClCompile Include="PythonTextTailModule.cpp" />
+    <ClCompile Include="ServerStateChecker.cpp" />
+    <ClCompile Include="ServerStateCheckerModule.cpp" />
+    <ClCompile Include="ShaderManager.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Distribute|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="UserInterface.cpp" />
+    <ClCompile Include="YosunAdminPanel.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cursors\cursor.cur" />
+    <None Include="Cursors\cursor_attack.cur" />
+    <None Include="Cursors\cursor_buy.cur" />
+    <None Include="Cursors\cursor_camera_rotate.cur" />
+    <None Include="Cursors\cursor_chair.cur" />
+    <None Include="Cursors\cursor_door.cur" />
+    <None Include="Cursors\cursor_hsize.cur" />
+    <None Include="Cursors\cursor_hvsize.cur" />
+    <None Include="Cursors\cursor_no.cur" />
+    <None Include="Cursors\cursor_pick.cur" />
+    <None Include="Cursors\cursor_sell.cur" />
+    <None Include="Cursors\cursor_talk.cur" />
+    <None Include="Cursors\cursor_vsize.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="metin2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="UserInterface.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CWebBrowser\CWebBrowser.vcxproj">
+      <Project>{2e953487-e73a-4c43-a9b6-174ab7b9a7e2}</Project>
+      <Private>false</Private>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\Discord\Discord.vcxproj">
+      <Project>{034f4297-9df7-47e8-83c3-89df19a09e4a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\EffectLib\EffectLib.vcxproj">
+      <Project>{7f1ec9ec-35da-4332-a339-b68e3c95976f}</Project>
+      <Private>false</Private>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\EterBase\EterBase.vcxproj">
+      <Project>{d8c71073-cdc3-4ab1-a84a-5829f28bff56}</Project>
+      <Private>false</Private>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\EterGrnLib\EterGrnLib.vcxproj">
+      <Project>{935f7b65-3574-41c4-b4f9-1c2ec950463a}</Project>
+      <Private>false</Private>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\EterImageLib\EterImageLib.vcxproj">
+      <Project>{3aa4bfa3-df0e-42b9-a82c-e1be16139af3}</Project>
+      <Private>false</Private>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\EterLib\EterLib.vcxproj">
+      <Project>{634437b1-4b3b-48c5-9220-619fb4d8f99b}</Project>
+      <Private>false</Private>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\EterPack\EterPack.vcxproj">
+      <Project>{eeab8cb2-0891-4579-905e-b37a5f04f1d1}</Project>
+      <Private>false</Private>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\EterPythonLib\EterPythonLib.vcxproj">
+      <Project>{396764a4-9226-4f33-930f-e577a3bf51d4}</Project>
+      <Private>false</Private>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\GameLib\GameLib.vcxproj">
+      <Project>{0c8def2c-f22d-4ad8-9d59-3147604c6b22}</Project>
+      <Private>false</Private>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\MilesLib\MilesLib.vcxproj">
+      <Project>{fe2f4549-76c4-4448-88d7-67d8caf477d2}</Project>
+      <Private>false</Private>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\PackMaker\Metin2PackMaker.vcxproj">
+      <Project>{b7867a3f-5825-4490-8e41-d7586ef505e1}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\ScriptLib\ScriptLib.vcxproj">
+      <Project>{2084d43e-5fee-4540-8ec9-8b159ad9d765}</Project>
+      <Private>false</Private>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\SpeedTreeLib\SpeedTreeLib.vcxproj">
+      <Project>{602ef21f-918b-4678-85ae-44ccf1561db8}</Project>
+      <Private>false</Private>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\SphereLib\SphereLib.vcxproj">
+      <Project>{b1f24bae-61e8-41e9-b2bb-a6905e5d64fd}</Project>
+      <Private>false</Private>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\TerrainLib\TerrainLib.vcxproj">
+      <Project>{a1ed61ac-6324-43b1-bc9b-548208d625cf}</Project>
+      <Private>false</Private>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

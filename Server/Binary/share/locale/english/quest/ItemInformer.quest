@@ -1,0 +1,10 @@
+--2012.10.31 이정우
+-- 독일 선물 기능 테스트
+
+quest ItemInformer begin
+	state start begin		
+		when item_informer with pc.get_informer_type() == "GIFT" begin			
+			command("gift")
+		end
+	end	--say_reward(pc.get_informer_item())
+end

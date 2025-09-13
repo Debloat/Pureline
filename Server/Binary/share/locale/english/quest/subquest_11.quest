@@ -1,0 +1,151 @@
+quest subquest_11 begin
+	state start begin
+		when login or  levelup with pc.level >= 19 and pc.level <= 24 begin
+			set_state(information)
+		end
+
+	end
+
+	state information begin
+		when letter begin
+			local v = find_npc_by_vnum(20006)
+
+			if v != 0 then
+				target.vid("__TARGET__", v, gameforge.subquest_11._10_targetVid)
+			end
+		end
+
+
+		when __TARGET__.target.click or	20006.chat.gameforge.subquest_11._20_npcChat with pc.level >= 19 begin
+			target.delete("__TARGET__")
+
+                        say_title(gameforge.find_brother_article._20_sayTitle)
+                        say(gameforge.subquest_11._30_say)
+			wait()
+                        say_title(gameforge.find_brother_article._20_sayTitle)
+			say(gameforge.subquest_11._40_say)
+
+			local s= select(gameforge.subquest_11._50_select, gameforge.subquest_08._170_select)
+			if 2==s then
+				say(gameforge.subquest_11._60_say)
+				local a= select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
+					if  2==a then
+						say_title(gameforge.find_brother_article._20_sayTitle)
+						say(gameforge.subquest_11._70_say)
+						return
+					end
+					say_title(gameforge.find_brother_article._20_sayTitle)
+					say(gameforge.subquest_11._80_say)
+					set_state(__GIVEUP__)
+					return
+				end
+				say_title(gameforge.find_brother_article._20_sayTitle)
+				say(gameforge.subquest_11._90_say)
+				set_state(find_brother)
+
+		end
+	end
+
+	state find_brother begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.subquest_11._10_targetVid)
+			q.set_title(gameforge.subquest_11._10_targetVid)
+			q.start()
+
+			local v= find_npc_by_vnum(20017)
+			if 0==v then
+			else
+				target.vid("__TARGET__",v, gameforge.subquest_11._100_targetVid)
+			end
+
+		end
+
+		when info or button begin
+			say_title(gameforge.subquest_11._10_targetVid)
+						say_reward(gameforge.subquest_11._100_targetVid)
+					end
+
+		when __TARGET__.target.click or	20017.chat.gameforge.subquest_11._110_npcChat begin
+			target.delete("__TARGET__")
+			say_title(gameforge.arena_manager._20_sayTitle)
+			say(gameforge.subquest_11._120_say)
+
+			set_state(ask_to_hunter)
+		end
+	end
+
+	state ask_to_hunter begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.subquest_11._10_targetVid)
+			q.set_title(gameforge.subquest_11._10_targetVid)
+			q.start()
+
+			local v= find_npc_by_vnum(20019)
+			if 0==v then
+			else
+				target.vid("__TARGET__",v, gameforge.subquest_11._130_targetVid)
+			end
+
+		end
+
+		when info or button begin
+			say_title(gameforge.subquest_11._10_targetVid)
+						say_reward(gameforge.subquest_11._130_targetVid)
+					end
+
+		when  __TARGET__.target.click or	20019.chat.gameforge.subquest_11._110_npcChat begin
+			target.delete("__TARGET__")
+			say_title(gameforge.main_quest_lv32._510_sayTitle)
+			say(gameforge.subquest_11._140_say)
+
+			set_state(back_to)
+		end
+	end
+
+	state back_to begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.subquest_11._10_targetVid)
+			q.set_title(gameforge.subquest_11._10_targetVid)
+			q.start()
+
+			local v= find_npc_by_vnum(20006)
+			if 0==v then
+			else
+				target.vid("__TARGET__",v, gameforge.subquest_11._150_targetVid)
+			end
+
+		end
+
+		when info or button begin
+			say_title(gameforge.subquest_11._10_targetVid)
+                        			say_reward(gameforge.subquest_11._150_targetVid)
+					end
+
+		when __TARGET__.target.click or	20006.chat.gameforge.subquest_11._160_npcChat begin
+			target.delete("__TARGET__")
+			say_title(gameforge.find_brother_article._20_sayTitle)
+			say(gameforge.subquest_11._170_say)
+
+			pc.give_exp2(122000)
+			pc.change_money(5000)
+
+                        say_title(gameforge.collect_herb_lv4._130_sayTitle)
+                        			say_reward(gameforge.subquest_11._180_sayReward)
+			
+			clear_letter()
+			set_state(__COMPLETE__)
+		end
+	end
+
+	state __GIVEUP__ begin
+	end
+
+	state __COMPLETE__ begin
+		when enter begin
+			q.done()
+		end
+	end
+end

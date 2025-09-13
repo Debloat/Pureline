@@ -1,0 +1,16 @@
+quest upgrade_mount begin
+	state start begin
+		when 71115.use with pc.count_item(50156) > 0 begin
+			say("hallo, cooles teil")
+			s = select("ja", "nein")
+			if s == 2 then
+				return
+			else
+				pc.remove_item(50156,1)
+				pc.remove_item(71115,1)
+				pc.give_item2(71124, 1)	
+			end
+				
+		end
+	end
+end

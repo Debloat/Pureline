@@ -1,0 +1,45 @@
+define santa 20126
+quest new_christmas_2012 begin
+	state start begin
+	    function has_santa()
+			return (game.get_event_flag("new_xmas_event") > 0)
+		end
+
+		when 20126.chat.gameforge.new_christmas._010_npcChat  begin
+			say_title(mob_name(20126))
+			say (gameforge.new_christmas._020_say )
+			wait()
+			say_title(mob_name(20126))
+			say (gameforge.new_christmas._030_say )
+			wait()
+			say_title(mob_name(20126))
+			say (gameforge.new_christmas._040_say )
+			wait()
+			set_quest_state("new_christmas_2012_nog", "nog_first_give")
+			set_quest_state("new_christmas_2012_sock", "baby_dear_give")
+			set_state ("__COMPLETE__")
+		end
+          when login or enter with new_christmas_2012.has_santa() begin
+              if pc.get_map_index() == 1 or pc.get_map_index() == 21 or pc.get_map_index() == 41 then
+                  if find_npc_by_vnum(20384) == 0 then
+                      if pc.get_map_index() == 1 then
+                          mob.spawn(20384, 625, 676, 0, 0 )
+                      elseif pc.get_map_index() == 21 then
+                          mob.spawn(20384, 542, 551, 0, 0)
+                      elseif pc.get_map_index() == 41 then
+                          mob.spawn(20384, 442, 717, 0, 0)
+                      end
+                  end
+              end
+          end
+
+	end
+	state __COMPLETE__ begin
+		when santa.chat."init christmas quest" with is_test_server() or pc.is_gm() begin
+			set_state ("start")
+			set_quest_state("new_christmas_2012_nog", "start")
+			set_quest_state("new_christmas_2012_sock", "start")
+			say ("init complete")
+		end
+	end
+end

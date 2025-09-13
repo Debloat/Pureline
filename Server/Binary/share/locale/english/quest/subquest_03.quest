@@ -1,0 +1,106 @@
+
+quest subquest_3 begin
+	state start begin
+		when login or levelup with pc.level >= 8 and pc.level <= 13 begin
+			set_state(information)
+		end	
+	end
+
+	state information begin
+		when letter begin
+			local v = find_npc_by_vnum(20018)
+
+			if v!= 0 then
+				target.vid("__TARGET__", v, gameforge.subquest_03._10_targetVid)
+			end
+		end
+
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+			say_title(gameforge.collect_quest_lv30._340_sayTitle)
+			say(gameforge.subquest_03._20_say)
+			wait()
+
+			say_title(gameforge.collect_quest_lv30._340_sayTitle)
+			say(gameforge.subquest_03._30_say)
+			say_item_vnum(30029)
+			say(gameforge.subquest_03._40_say)
+
+			set_state(hunt_for_wolf)
+		end
+	end
+
+	state hunt_for_wolf begin
+		when letter begin
+			send_letter(gameforge.subquest_03._10_targetVid)
+		end
+		when button or info begin
+			say_title(gameforge.subquest_03._10_targetVid)
+						say_reward(gameforge.subquest_03._50_sayReward)
+			say_item_vnum(30029)
+					end
+
+    	when 20018.chat.gameforge.subquest_03._60_npcChat with pc.count_item(30029) == 0 begin
+			say_title(gameforge.collect_quest_lv30._340_sayTitle)
+			say(gameforge.subquest_03._70_say)
+			say_item_vnum(30029)
+			say(gameforge.subquest_03._80_say)
+		end
+
+		
+		when 104.kill begin
+			local s = number(1, 100)
+			if s <= 5 then
+				pc.give_item2("30029", 1)
+				set_state(go_back_to_doctor)
+			end
+		end
+	
+	end
+
+    state go_back_to_doctor begin
+		when letter begin
+			send_letter(gameforge.subquest_03._90_sendLetter)
+			local v = find_npc_by_vnum(20018)
+
+			if v!= 0 then
+				target.vid("__TARGET__", v, gameforge.subquest_03._90_sendLetter)
+			end
+		end
+		when button or info begin
+			say_title(gameforge.subquest_03._100_sayTitle)
+						say_reward(gameforge.subquest_03._110_sayReward)
+					end
+				
+		when __TARGET__.target.click begin      
+			target.delete("__TARGET__")
+			if pc.count_item(30029) >= 1 then 
+			say_title(gameforge.collect_quest_lv30._340_sayTitle)
+			say(gameforge.subquest_03._120_say)
+			say_item_vnum(30029)
+			say(gameforge.subquest_03._130_say)
+			wait()
+			say_title(gameforge.collect_quest_lv30._340_sayTitle)
+			say(gameforge.subquest_03._140_say)
+			say_item_vnum(30027)
+			
+			say_title(gameforge.locale.reward)
+						say_reward(gameforge.subquest_03._150_sayReward)
+			
+			pc.remove_item(30029)
+			pc.give_exp2(3000)
+			set_quest_state("levelup","run")
+			
+			pc.change_money(5000)
+			pc.give_item2("30027", 1)
+
+			clear_letter()
+			set_state(__COMPLETE__)
+			end
+		end
+	end
+
+	state __COMPLETE__ begin
+	end
+end
+

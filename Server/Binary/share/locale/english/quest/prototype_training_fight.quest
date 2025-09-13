@@ -1,0 +1,242 @@
+quest prototype_training_fight begin
+-- This is a simple prototype for a PvE Arena
+-- What it does: it offers 3 rounds of pve combat in a private instance of a given map
+-- each round can oly be won once, but retried indefinetely
+-- It currently is attached to Seon-Ha, just spawn him (20095)
+-- Issues:
+-- A) Instancing is untested, players might run out of instance ids (server restart fixes this, but still a possible issue)
+-- B) The command("") function is still untested for non-gm chars, might not work at all for them
+-- C) I do not know a way to track player death, so I cannot really have the player loose a round by death, they can only time out, but that is not very precise to catch
+-- D) It sends the player to an instance of 65 currently due to a issue, but the desired map would be 112 (duel map)
+-- E) Repositioning the pc inside of the instance is visible and a bit ugly
+	state start begin
+		when login begin
+			pc.setqf("round",1) -- sorry to all coders :)
+			set_state(menu)
+		end
+	end
+	
+	state menu begin -- quest will loop back here    
+		when login or enter begin
+			-- initializing main variables
+			pc.setqf("killcount", 0)
+			pc.setqf("required_kills", 0)
+			pc.setqf("max_rounds", 3)
+			pc.setqf("max_round_time", 300) -- 10 minutes to catch a round over
+			pc.setqf("round_timestamp", 0)
+			pc.setqf("round_spawned", 0)
+			pc.setqf("victory", 0)
+			pc.setqf("pcx", 0)
+			pc.setqf("pcy", 0)
+		end
+
+		when 20095.Chat."Trainingsk‰mpfe" begin
+			say_title("Trainingsk‰mpfe")
+			if pc.getqf("round") > pc.getqf("max_rounds") then 
+				say("Du hast alle Runden absolviert. Dein Training ist abgeschlossen.")
+				set_state(__COMPLETE__)
+			else
+				say("Mˆchtest du eine Runde in der Tranginsarena versuchen?")
+				say(string.format("Deine aktuelle Runde ist: %s",pc.getqf("round")))
+				say("Du hast 5 Minuten um die Runde abzuschlieﬂen.")
+				local s = select("Ja", "Nein")
+				if s == 1 then
+					-- storing current location of pc for return teleport later
+					pc.setqf("pcx", pc.get_x())
+					pc.setqf("pcy", pc.get_y())
+          set_state(teleport)
+				else
+					return
+				end
+			end
+		end   
+	end		  
+		
+	state teleport begin -- transfering the pc to a private instance
+		when enter or login begin
+--			notice("Debug: state teleport entered")
+			if pc.get_map_index() >= 650000 and pc.get_map_index() <= 659999 then -- this is the range of possible private ids
+--				notice("Debug: Map recognized")
+				set_state(arena_relocate)
+			else
+				command("private 65") -- generating private instance
+				set_state(arena_relocate)
+			end
+		end
+	end
+	
+
+	-- the teleport of the pc seems to need a new state, it just didn't fire when triggered after the private command
+	state arena_relocate begin 	-- getting the pc in position
+		when enter or login begin						
+--			notice("Debug: State relocate entered")
+			if pc.get_map_index() >= 650000 and pc.get_map_index() <= 659999 then
+--			notice("Debug: Map recognized")
+--			command("go 88 88")
+				command("go 160 724") -- using this to keep the player in the private instance, warp might get him back to world
+				pc.setqf("round_timestamp", get_time())
+				set_state(spawn_arena)										
+			end
+		end
+	end
+
+	state spawn_arena begin -- main arena combat state
+	-- This function spawns a varied bunch of mobs as defined by a table
+	-- It should be called with a number that is valid for the RoundMobsTable, maybe someone can add a safety catch sometime...
+	-- The function will then spawn the mobs and set a questflag with the number of mobs in the current round
+	function training_fights_spawn_round(round)
+	local RoundMobs = -- this is the configuartion of the arena round enemies, all vnums in one row are spawned, row = round nr
+		{
+			[1] ={101, 101, 101, 101,}, -- Wild Dogs
+			[2] ={102, 102, 102, 102,}, -- Wolves
+			[3] ={114, 114},						-- Tigers
+		}
+	local ThisRoundMobs = {}
+	
+	training_fights_RoundSize = 0 -- yes, its global, using it for data exchange between functions, is only valid for a second
+	
+	ThisRoundMobs = RoundMobs[round]	-- renders selected table row into own table - sorry, I get issues with the nested stuff, out of time ...	
+	
+	-- foreachi iterates over every entry in ThisRoundMobs with the given function, I know its deprecated but Metin seems not to compile ipairs/pairs	
+	-- also # operator does not work, hence the manual counting of table depth, nice to not catch this in compile... hate=hate+1
+	table.foreachi(ThisRoundMobs, 
+		function(k,v) 
+--			notice(string.format("Debug: Spawning: %s", v))
+			mob.spawn(v, 160, 698, 5, 1, 1) -- this should contain the coordinates of your desired fight location
+			training_fights_RoundSize = training_fights_RoundSize+1 --incrementing to find table depth
+			return nil -- important to let foreachi run through the whole table
+		end
+		)	
+	
+	pc.setqf("required_kills", training_fights_RoundSize) -- this should later help the script determine if a round is won
+	
+	return nil
+end	
+
+		when enter or login begin	
+			if pc.get_map_index() < 650000 or pc.get_map_index() > 659999 then -- checking if player has left the arena mid-round = lose
+					say_title("Trainingskampf")
+					say("Trainingskampf abgebrochen!")
+					q.done()
+					set_state(menu)	
+			else						
+--				notice("Debug: state spawn 1 entered")			
+				if pc.getqf("round_spawned") == 0 then
+					local r = pc.getqf("round")
+--					notice(string.format("Debug: attempting spawn round %s", r))
+					prototype_training_fight.training_fights_spawn_round(r)
+					-- trying to avoid double spawning on pc death, remove this if you have issues with players getting stuck in arenas with no mobs (server restart mid fight etc.)
+					pc.setqf("round_spawned", 1) 
+				else
+--					notice("Debug: already spawned this round")
+				end
+				if get_time() - pc.getqf("round_timestamp") >=	pc.getqf("max_round_time") then
+					pc.setqf("victory", 0) -- lose exit
+					q.done()
+					set_state(return_from_arena)
+				end
+				local timeLeft = pc.getqf("max_round_time")- (get_time() - pc.getqf("round_timestamp"))
+				q.start()
+				q.set_clock(timeLeft)
+				send_letter("Trainingskampf")		
+			end
+		end
+		
+		when button or info begin
+			say_title("Trainingskampf")
+			local timeLeft = pc.getqf("max_round_time")- (get_time() - pc.getqf("round_timestamp"))
+			local m = math.floor(timeLeft/60) -- conversion to minutes, use math.ceil if you prefer more optimism :)
+			say("Besige alle Gegner in der Arena innerhalb von 5 Minuten")
+			say(string.format("Deine aktuelle Runde ist: %s",pc.getqf("round")))
+			say(string.format("Verbleibende Gegner: %s",pc.getqf("required_kills")-pc.getqf("killcount")))
+			if m > 0 then
+				say_reward(string.format("Verbleibende Zeit in Minuten: %s", m))
+			else
+			-- doing a bit of a dance here, as a seconds display will only update on window open, looks faulty versus q.set_clock
+				if m == 0 then
+					say_reward("Dir bleibt weniger als eine Minute!") 
+				else
+					say_reward("Zeit abgelaufen!")
+				end				
+			end
+		end
+		
+		-- this event counts all kills in the arena map. 
+		-- It should not matter what has been killed as long as the proper amount of kills has been achieved, the round is won
+		when kill begin
+			if pc.get_map_index() >= 650000 and pc.get_map_index() <= 659999 then
+				local index = pc.getqf("killcount")+1
+				pc.setqf("killcount", index)
+				if get_time() - pc.getqf("round_timestamp") >=	pc.getqf("max_round_time") then -- checking for another timeout
+					pc.setqf("victory", 0) -- lose exit
+					q.done()
+					set_state(return_from_arena)
+				end	          	
+				if pc.getqf("killcount") >= pc.getqf("required_kills") then
+--					notice("Debug: final kill")
+					pc.setqf("victory", 1) -- win exit
+					q.done()
+					set_state(return_from_arena)
+				end
+			end
+		end
+		
+	end							
+			
+		
+	state return_from_arena begin -- this is used for every exit from the arena, win or lose
+		when enter or login begin
+			-- Add your desired rewards per round to this table
+			-- should correlate with the amount of rounds
+			-- row: Yang, XP
+			local Rewards = 
+			{
+				[1] ={100, 100,},
+				[2] ={200, 200,},
+				[3] ={300, 300,},
+			}
+			
+			local CordX = pc.getqf("pcx")*100 -- weird but needed conversion ... global coords are not stored correctly into integers
+			local CordY = pc.getqf("pcy")*100 
+			local r = pc.getqf("round")
+			if pc.getqf("victory") == 1 then
+				say_title("Trainingsk‰mpfe")
+				say("Du hast diese Runde erfolgreich absolviert.")
+				say(string.format("Du erh‰lst %s Yang und %s XP",Rewards[r][1], Rewards[r][2]))
+				local s = select("OK")
+				if s == 1 then
+					pc.change_money(Rewards[r][1])
+					pc.give_exp2(Rewards[r][2])
+					local RoundUp = pc.getqf("round") + 1
+					pc.setqf("round", RoundUp)
+					pc.warp(CordX, CordY) -- returning to dialogue position
+					set_state(menu)
+				end
+			else
+				say_title("Trainingsk‰mpfe")
+				say("Du konntest diese Runde nicht rechtzeitig abschlieﬂen.")
+				local x = select("OK")
+				if x == 1 then
+					pc.warp(CordX, CordY) -- returning to dialogue position
+					set_state(menu)	
+				end
+			end
+		end
+		
+	end
+	
+	state __COMPLETE__ begin
+		when enter begin
+			pc.setqf("killcount", 0)
+			pc.setqf("required_kills", 0)
+			pc.setqf("max_rounds", 0)
+			pc.setqf("max_round_time", 0)
+			pc.setqf("round_timestamp", 0)
+			pc.setqf("round_spawned", 0)
+			pc.setqf("victory", 0)
+			pc.setqf("pcx", 0)
+		end
+	end
+		
+end	
+	

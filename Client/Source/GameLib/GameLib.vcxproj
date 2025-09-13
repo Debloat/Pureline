@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug-WE|Win32">
+      <Configuration>Debug-WE</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Distribute|Win32">
+      <Configuration>Distribute</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release-WE|Win32">
+      <Configuration>Release-WE</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0C8DEF2C-F22D-4AD8-9D59-3147604C6B22}</ProjectGuid>
+    <RootNamespace>GameLib</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug-WE|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release-WE|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Distribute|Win32'">
+    <PlatformToolset>v145</PlatformToolset>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug-WE|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release-WE|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Distribute|Win32'">
+    <OutDir>$(ProjectDir)$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(ProjectDir)$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug-WE|Win32'">
+    <OutDir>$(ProjectDir)$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(ProjectDir)$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release-WE|Win32'">
+    <OutDir>$(ProjectDir)$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>
+      </SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)Extern\Client\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;BACKGROUND_LOADING;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug-WE|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>
+      </SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)Extern\Client\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;BACKGROUND_LOADING;WORLD_EDITOR;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <SDLCheck>
+      </SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)Extern\Client\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;BACKGROUND_LOADING;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release-WE|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <SDLCheck>
+      </SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)Extern\Client\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;BACKGROUND_LOADING;WORLD_EDITOR;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Distribute|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)Extern\Client\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Distribute|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;USE_LOD;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="ActorInstance.cpp" />
+    <ClCompile Include="ActorInstanceAttach.cpp" />
+    <ClCompile Include="ActorInstanceBattle.cpp" />
+    <ClCompile Include="ActorInstanceBlend.cpp" />
+    <ClCompile Include="ActorInstanceCollisionDetection.cpp" />
+    <ClCompile Include="ActorInstanceData.cpp" />
+    <ClCompile Include="ActorInstanceEvent.cpp" />
+    <ClCompile Include="ActorInstanceFly.cpp" />
+    <ClCompile Include="ActorInstanceMotion.cpp" />
+    <ClCompile Include="ActorInstanceMotionEvent.cpp" />
+    <ClCompile Include="ActorInstancePosition.cpp" />
+    <ClCompile Include="ActorInstanceRender.cpp" />
+    <ClCompile Include="ActorInstanceRotation.cpp" />
+    <ClCompile Include="ActorInstanceSync.cpp" />
+    <ClCompile Include="ActorInstanceWeaponTrace.cpp" />
+    <ClCompile Include="Area.cpp" />
+    <ClCompile Include="AreaLoaderThread.cpp" />
+    <ClCompile Include="AreaTerrain.cpp" />
+    <ClCompile Include="DungeonBlock.cpp" />
+    <ClCompile Include="FlyingData.cpp" />
+    <ClCompile Include="FlyingInstance.cpp" />
+    <ClCompile Include="FlyingObjectManager.cpp" />
+    <ClCompile Include="FlyTarget.cpp" />
+    <ClCompile Include="FlyTrace.cpp" />
+    <ClCompile Include="GameEventManager.cpp" />
+    <ClCompile Include="GameType.cpp" />
+    <ClCompile Include="GameUtil.cpp" />
+    <ClCompile Include="ItemData.cpp" />
+    <ClCompile Include="ItemManager.cpp" />
+    <ClCompile Include="MapBase.cpp" />
+    <ClCompile Include="MapManager.cpp" />
+    <ClCompile Include="MapOutdoor.cpp" />
+    <ClCompile Include="MapOutdoorCharacterShadow.cpp" />
+    <ClCompile Include="MapOutdoorIndexBuffer.cpp" />
+    <ClCompile Include="MapOutdoorLoad.cpp" />
+    <ClCompile Include="MapOutdoorQuadtree.cpp" />
+    <ClCompile Include="MapOutdoorRender.cpp" />
+    <ClCompile Include="MapOutdoorRenderHTP.cpp" />
+    <ClCompile Include="MapOutdoorUpdate.cpp" />
+    <ClCompile Include="MapOutdoorWater.cpp" />
+    <ClCompile Include="MapType.cpp" />
+    <ClCompile Include="MapUtil.cpp" />
+    <ClCompile Include="MonsterAreaInfo.cpp" />
+    <ClCompile Include="PhysicsObject.cpp" />
+    <ClCompile Include="Property.cpp" />
+    <ClCompile Include="PropertyLoader.cpp" />
+    <ClCompile Include="PropertyManager.cpp" />
+    <ClCompile Include="RaceData.cpp" />
+    <ClCompile Include="RaceDataFile.cpp" />
+    <ClCompile Include="RaceManager.cpp" />
+    <ClCompile Include="RaceMotionData.cpp" />
+    <ClCompile Include="SnowEnvironment.cpp" />
+    <ClCompile Include="SnowParticle.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug-WE|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Distribute|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release-WE|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="TerrainDecal.cpp" />
+    <ClCompile Include="TerrainPatch.cpp" />
+    <ClCompile Include="TerrainQuadtree.cpp" />
+    <ClCompile Include="WeaponTrace.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ActorInstance.h" />
+    <ClInclude Include="ActorInstanceInterface.h" />
+    <ClInclude Include="Area.h" />
+    <ClInclude Include="AreaLoaderThread.h" />
+    <ClInclude Include="AreaTerrain.h" />
+    <ClInclude Include="DungeonBlock.h" />
+    <ClInclude Include="FlyHandler.h" />
+    <ClInclude Include="FlyingData.h" />
+    <ClInclude Include="FlyingInstance.h" />
+    <ClInclude Include="FlyingObjectManager.h" />
+    <ClInclude Include="FlyTarget.h" />
+    <ClInclude Include="FlyTrace.h" />
+    <ClInclude Include="GameEventManager.h" />
+    <ClInclude Include="GameType.h" />
+    <ClInclude Include="GameUtil.h" />
+    <ClInclude Include="Interface.h" />
+    <ClInclude Include="ItemData.h" />
+    <ClInclude Include="ItemManager.h" />
+    <ClInclude Include="MapBase.h" />
+    <ClInclude Include="MapManager.h" />
+    <ClInclude Include="MapOutdoor.h" />
+    <ClInclude Include="MapType.h" />
+    <ClInclude Include="MapUtil.h" />
+    <ClInclude Include="MonsterAreaInfo.h" />
+    <ClInclude Include="PhysicsObject.h" />
+    <ClInclude Include="Property.h" />
+    <ClInclude Include="PropertyLoader.h" />
+    <ClInclude Include="PropertyManager.h" />
+    <ClInclude Include="RaceData.h" />
+    <ClInclude Include="RaceManager.h" />
+    <ClInclude Include="RaceMotionData.h" />
+    <ClInclude Include="RaceMotionDataEvent.h" />
+    <ClInclude Include="SnowEnvironment.h" />
+    <ClInclude Include="SnowParticle.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="TerrainDecal.h" />
+    <ClInclude Include="TerrainPatch.h" />
+    <ClInclude Include="TerrainQuadtree.h" />
+    <ClInclude Include="WeaponTrace.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,346 @@
+1	1	Seyyar Satýcý'nýn sýrtçantasýnýn kilidi var mý?
+1	2	Devler Diyarý'nda dönüþüm küreleri ele geçirilebiliyor mu?
+1	3	Lanetli Alfa Mavi Kurt, kurt postu düþürüyor mu?
+1	4	Yeti, yeti postu düþürüyor mu?
+1	5	Buz toplarý sadece Sohan Daðý'ndan mý temin ediliyor?
+1	6	Tanrýçanýn gözyaþlarý sadece sandýklardan mý temin ediliyor?
+1	7	Seviye 3'e sahip hýz taþýyla hareket hýzý 30 oranýnda artýyor mu?
+1	8	Ýnciler genel olarak INT bonusu kazandýrýyor mu?
+1	9	Seviye 12 üstü bir zýrh var mý?
+1	10	Hwang Tapýnaðý'nda yeþim damarlarý var mý?
+1	11	Seungryong Vadisi'nde 22 tane köprü var mý?
+1	12	Metin2'de sekiz tane mi sýnýf var?
+1	13	Metin'de kontrplak var mý?
+1	14	Mücevher parçasý adýnda bir eþya var mý?
+1	15	Aura coþkusu adýnda bir beceri var mý?
+1	16	Ýyileþtirme bonusu var mý?
+1	17	Kore havai fiþeði var mý?
+1	18	Orta kolaylýkta bir görev kitabý var mý?
+1	19	Kuvars damar var mý?
+1	20	Eðitim dövüþlerinin yapýldýðý özel bir harita var mý?
+1	21	Iþýnlayýcýnýn sað omzuna bir kuþ mu tünemiþ?
+1	22	Ahþap zýrh var mý?
+1	23	Ateþ Ankasý var mý?
+1	24	Eskrim sanatý öðretmeni var mý?
+1	25	Ork var mý?
+1	26	Ýkinci haritada Balýkçý var mý?
+1	27	Krallýk baþýna sadece bir Seyis mi var?
+1	28	Metin2'de evcil hayvan bakýlýyor mu?
+1	29	Metin2'de köpek var mý?
+1	30	Her krallýk ayný balýkçý sayýsýna mý sahip?
+1	31	Metin2'de yaþ pasta var mý?
+1	32	Ýkinci haritada Pazar Yeri var mý?
+1	33	Metin2'de süt þerbeti var mý?
+1	34	Sadece lonca alanýnda mý lanetli hayvanlar var?
+1	35	Bera kendiliðinden mi saldýrýyor?
+1	36	Beran-Setaou kýz kardeþini öldürdü mü?
+1	37	Envanterin 90 slotu mu var?
+1	38	Bambu okunun saldýrý deðeri 10 mu?
+1	39	Vahþi Arahan'ýn seviyesi 53 mü?
+1	40	Aç Yabani Köpek'in seviyesi 1 mi?
+1	41	Depocu, mavi saç bandý takýyor mu?
+1	42	Demirci önlük takýyor mu?
+1	43	Lusifer, Patron seviyesinde mi?
+1	44	Elit Ork Generali, altý tane kolye ucu olan bir kolye takýyor mu?
+1	45	Yaþlý Kadýn'ýn kýz kardeþi var mý?
+1	46	Metin2'nin forumu var mý? 
+1	47	Mirine'nin göz rengi siyah mý?
+1	48	Lusifer, Þeytan Kulesi'nde mi kalýyor?
+1	49	Ýkinci maðaradaki sura ruhunun adý Akuma mý?
+1	50	Bahar-Taraji, tanrý kardeþlerin en küçükleri mi?
+1	51	Bahar-Taraji, denge tanrýçasý mý?
+1	52	Baljit-Elvedin, tanrý kardeþlerin en büyükleri mi?
+1	53	Baljit-Elvedin, denge kraliçesi mi?
+1	54	Canavar Hae-Tae bir PATRON mu?
+1	55	Kibirli Karanlýk Savaþçý'nýn seviyesi 54 mü?
+1	56	Lan.Kýrmýzý Yaban Domuzu'na yedi farklý bölgede rastlanýyor mu?
+1	57	Bakýr çan 5. seviyeden itibaren mi giyilebiliyor?
+1	58	Kýrmýzý Hwang zýrhý, Savaþçlýlar için mi?
+1	59	Geceleri çöl de aydýnlýk mý?
+1	60	Soon bir kitap kurdu mu?
+1	61	Demirci'nin eþya geliþtirme iþleminde eþya yok olabiliyor mu?
+1	62	Dev Çöl Kamplumbaðasý ikinci haritada ortaya çýkabilir mi?
+1	63	Elmas madenciliði yapýlýyor mu?
+1	64	Metin2'de evleniliyor mu?
+1	65	Metin2'de dans ediliyor mu?
+1	66	16 yaþýnda GM olunabiliyor mu?
+1	67	Seslenilen sohbet seviye 15 itibariyle kullanýlabiliyor mu?
+1	68	Ýlk mastere 17. seviyede ulaþýlabiliyor mu?
+1	69	52. seviyede üç mastere sahip olunabiliyor mu?
+1	70	55. seviyedeyken, seviye 5'e sahip bir Metin'den eþya düþebilir mi?
+1	71	At seviyesi 9 olduðunda, at becerileri kullanýlabiliyor mu?
+1	72	Evcil hayvaný olan, onu bir at pansiyonuna verebiliyor mu?
+1	73	Bir aðaca çorap asýlabilir mi?
+1	74	Zihin taþlarý geliþtirilebiliyor mu?
+1	75	Her canavar dönüþüm küresi düþürüyor mu?
+1	76	Yeþil iksirlerin tümü oyunda düþürülüyor mu?
+1	77	Tue Mantarlarý sadece Huahn-So tarafýndan mý iþlenebiliyor?
+1	78	OMler oyuncularýn seviyesini yükseltiyor mu?
+1	79	Seungryong Vadisi'nde bir ceset var mý?
+1	80	'Bir Efsanenin Günlüðü' görevinde 16 kitap sayfasý toplanmasý gerekiyor mu?
+1	81	Kral kemeri +5 envanterde 6 boþluk mu verir?
+1	82	Heuk-Young, Savaþçý görünümlü mü?
+1	83	Kývrýk anahtarlarýn ticareti var mý?
+1	84	Devler Diyarý'nda 42 ceset var mý?
+1	85	Lonca bölgesinde bir Iþýnlayýcý var mý?
+1	86	Devler Diyarý'nda bir Iþýnlayýcý var mý?
+1	87	Bir ruh taþý baþarýyla okunup G5'ten G6'ya geçtiðinde netagif rütbeli bir oyuncudan 4.500 rütbe puaný kesiliyor mu?
+1	88	Bir ruh taþý baþarýyla okunup G5'ten G6'ya geçtiðinde pozitif rütbeli bir oyuncudan 3.000 rütbe puaný kesiliyor mu?
+1	89	Silah Satýcýsý çelik ok satýyor mu?
+1	90	Ork Vadisi'ndeki köprüler yer deðiþtiriyor mu?
+1	91	Tek taraflý bir ayrýlýðýn masrafý 1kk mý?
+1	92	Turna kanadý yelpazesini Kurtlar düþürüyor mu?
+1	93	Evlilik için gelinlik gerekiyor mu?
+1	94	'Þeytanlara karþý güçlü' bonusunun Yeraltý Yetileri'nde bir faydasý oluyor mu?
+1	95	Dokuz Kuyruk'un seviyesi 73 mü?
+1	96	Bakra, Jinno Krallýðý'nýn bir köyü mü?
+1	97	Taurean ilk köyde mi?
+1	98	Balýk tutabilmek için en az 30'uncu seviyeye mi sahip olunmalý?
+1	99	Evlenebilmek için en az 30. seviyeye mi sahip olunmalý?
+1	100	Yang-Shin'de kazma satýn alýnabiliyor mu?
+1	101	Ýnci bilezik seviye 28 itibariyle kullanýlabiliyor mu?
+1	102	Tüm seviye 40 üstü karakterler Þeytan Kulesi'ne girebiliyor mu?
+1	103	Bokjung, Shinsoo Krallýðýna mý baðlý?
+1	104	Yýlan Vadisi tarafsýz bir harita mý?
+1	105	Seungryong Vadisi'nde seviyesi 55 olan bir Patron var mý?
+1	106	Seviyesi 51 olan bir karakter canavarlardan kutsama kaðýdý elde edebilir mi?
+1	107	Hayalet Ormaný'nda seviyesi 80 olan bir Patron var mý?
+1	108	Mavi Çelik Plaka Zýrhý +9 düþürülebilir mi?
+1	109	Ejderhanýn kýyafeti, siyah çelik zýrh +9'dan mý yapýlýyor?
+1	110	1.000 Yang düþürülebilir mi?
+1	111	Ejderha elbisesi, siyah elbise+9'dan mý yapýlýyor?
+1	112	Metin2 dünyasýnýn Kýrmýzý Ejderhasý düzenli olarak canavar çaðýrýyor mu?
+1	113	'Biyolog'un araþtýrmasý 8' görevinde diðer oyuncularla savaþýrken kalýcý bonus olarak %%8 daha fazla hasar elde ediliyor mu?
+1	114	'Biyolog'un araþtýrmasý 6' görevi için Chaegirab'e 30 tane tugyis tabelasý götürülmeli mi?
+1	115	Hwang zýrhý oyunda satýn alýnýyor mu?
+1	116	Mavi çelik zýrh, siyah çelik zýrh+9'dan mý yapýlýyor?
+1	117	Yýlan Vadisi'nde bir Iþýnlayýcý var mý?
+1	118	Devler Diyarý'nda seviyeleri 75 ile 80 olan Metin taþlarý var mý?
+1	119	Devler Diyarý'nýn giriþi Yýlan Vadisi'nde mi?
+1	120	Bin Savaþçý'dan yarý insan kýlýcý elde edilebiliyor mu?
+1	121	Devler Diyarý, Yýlan Vadisi'nin sýnýrýnda mý?
+1	122	Çölün Uçan Gözü'nün kendi gözü var mý?
+1	123	Titan kalkaný+9, seviyesi 61 olan kalkan+9'lardan daha yüksek bir savunmaya mý sahip?
+1	124	Þahin kalkaný+9'un savunma deðeri 153 mü?
+1	125	Tahta küpeler bir HP bonusu saðlar mý?
+1	126	Baþlangýç el kitabý+ sadece Karanlýk Arahan ve Karanlýk Haberci'den mi ganimet olarak elde ediliyor?
+1	127	Su perisi kýlýcýnýn saldýrý hýzý, muharebe kýlýcýnýnkinden daha mý yüksek?
+1	128	Güçlü Buz Cadýsý, kan taþý düþürüyor mu?
+1	129	Beran-Setaou bir YZK mý?
+1	130	Aslan binek olarak saldýrý deðerini 200 puan artýrýyor mu?
+1	131	Örümcek Zindaný 2'de bulunan bir eþin yanýna ýþýnlanmak mümkün mü?
+1	132	Huahn-So, þebnem mi üretiyor?
+1	133	Bir söz yüzüðü için 30 Jin-Hees maðlup edilmeli mi?
+1	134	Nikah yüzüðünün ticareti var mý?
+1	135	Þeytan Kulesi'ndeki Demirci nesne geliþtirmek için Yang alýyor mu?
+1	136	Hae-Tae'den ruh taþý elde edilebiliyor mu?
+1	137	Metin2 dünyasýnýn Hae-Tae'si düzenli olarak canavar çaðýrýyor mu?
+1	138	Hae-Tae belli bir etkinlikte mi ortaya çýkýyor?
+1	139	Sürgün Maðarasý 2'deki canavarlar saldýrgan mý?
+1	140	Taurean bir YZK mý?
+1	141	Z.maymun zindaný bitkisi Maymun Lordu'ndan elde ediliyor mu?
+1	142	Negatif rütbeye sahipken bir ruh taþýný okuyunca iki misli rütbe puaný kesiliyor mu?
+1	143	'Hayalet aðaçlarý araþtýr' görevi için ödül olarak bir ruh taþý elde ediliyor mu?
+1	144	'Hayalet ormanýn sýrrý' görevi için ödül olarak bir ruh taþý elde ediliyor mu?
+1	145	Þeytan Kulesi'ndeki Katil Metini'nden zihin taþý elde ediliyor mu?
+1	146	Seviyesi 75 ile 80 olan Metin taþlarýndan beceri kitaplarý elde ediliyor mu?
+1	147	Seviyesi 75 ile 80 olan Metin taþlarý, zihin taþý düþürüyor mu?
+1	148	Seviye 40 altý metin taþlarý, ruh taþý düþürüyor mu?
+1	149	Seviye 60 itibariyle doðrudan Þeytan Kulesi'ne ýþýnlanmak mümkün mü?
+1	150	Mavi çelik zýrh+5, savunma deðerini 184 artýrýrp hareket hýznýý -6 düþürüyor mu?
+1	151	Metin2'de istiridye düþürülüyor mu?
+1	152	Sürgün Maðarasý'nda geçit bileti düþürülüyor mu?
+1	153	Jin-Hee'den dolunay kýlýcý elde ediliyor mu?
+1	154	Zihinsel Savaþçý Þimþek Atma becerisini kullanabiliyor mu?
+1	155	Savaþ Yaban Domuzu savunma deðerini 500 artýrýyor mu?
+1	156	Siyah Metin, +4 zihin taþlarý düþürüyor mu?
+1	157	Kaplan plaka zýrhý geliþtirmek için bir siyah üniforma+ gerekli mi?
+1	158	Efsun nesnesinin ticareti var mý?
+1	159	Örümcek Zindaný'nda mavi iksir (K) elde ediliyor mu?
+1	160	Metin2'de düzenli olarak bir Hastalýk Taþýyýcýsý var mý?
+1	161	Altýn define sandýðýnda ayý safrasý bulunuyor mu?
+1	162	Yeþim damarýndan arýndýlmýþ abanoz elde ediliyor mu?
+1	163	Þeytan Metini etkinliklerde canavar çaðýrýyor mu?
+1	164	Orklar beyaz altýn bilezik düþürüyor mu?
+1	165	Þeytan Katakombu'ndaki bütün rakipler maðlup edilmeli mi?
+1	166	Azrail dövüþ esnasýnda kritik vuruþ yapabiliyor mu?
+1	167	Ruh kristali kolyesi Nesne Market'ten satýn alýnýyor mu?
+1	168	Yaþlý Kadýn'ýn toza karþý alerjisi var mý?
+1	169	Silah Satýcýsý, Satýcý'ya aþýk mý?
+1	170	Depocu'da altýn külçe var mý?
+1	171	Uriel bir bayan mý?
+1	172	Satýcý'nýn Zýrh Satýcýsý'yla bir gönül iliþkisi var mý?
+1	173	Yaþlý Kadýn'ýn toz alma çubuðu mavi kurt derisinden mi?
+1	174	Dev Çöl Kaplumbaðasý sadece çift el kýlýçla mu vuruluyor?
+1	175	Büyücü kýlýcý seviye 50 itibariyle mi kullanýlabiliyor?
+1	176	Beran-Setaou, Bahar-Taraji öldürdü mü?
+1	177	Beran-Setaou oyunda sadece bir haritada mý bulunuyor?
+1	178	Kýrmýzý iksir (B) 650 HP yeniliyor mu?
+1	179	Güneþ özütü (K) 2.000.000 HP içeriyor mu?
+1	180	Dayanýklýlýk sarý iksirlerle yenileniyor mu?
+1	181	Zehirin ölümcül etkisi var mý?
+1	182	Sim suyu anýnda 100 SP yeniliyor mu?
+1	183	Kýrmýzý þebnem saldýrý hýzýný %%2'den %%8'ye çýkarýyor mu?
+1	184	Þebnemin etkisi en fazla 20 dakika mý sürüyor?
+1	185	Þeftali çiçeði suyunun etkisi beþ dakika mý sürüyor?
+1	186	Mavi þebnem saldýrý deðerini artýrýyor mu?
+1	187	Shuk-Sal maske takýyor mu?
+1	188	Runik direk Þeytan Katakombu'nun dördüncü katýnda mý?
+1	189	Misilleme Metini'nin seviyesi 80 mi?
+1	190	Sura Ruhu, Ejderha Tapýnaðý'nda mý?
+1	191	Düðünün sonunda eþlere kýrmýzý iksir (O) veriliyor mu?
+1	192	Bir aðacýn veya binanýn gölgesinde kendi gölgen görülüyor mu?
+1	193	Seviye 84 itibariyle ejderha elbisesi+6 giyilebiliyor mu?
+1	194	Bir antik çana en fazla iki tane zihin taþý mý yerleþtirilebiliyor?
+1	195	Görünmezlik pelerini canavarlarý çeker mi?
+1	196	Oyundaki tüm binekler seviye 1 itibariyle kullanýlabiliyor mu?
+1	197	Mavi Ejderha inci düþürüyor mu?
+1	198	'Hasar, SP ile absorbe edilecek', ruh yongasý þapkasýnýn verdiði standart bonus mu?
+1	199	Lanetli canavarlar sadece Lonca bölgesinde mi ortaya çýkýyor?
+1	200	Ölen rakibe sürekli ateþ uygulanýnca, geride bir HP kalýyor mu? 
+1	201	Asker at görevi seviye 45 itibariyle tamamlanabiliyor mu?
+1	202	Seviyesi 82 olan bir oyuncu grubuna seviyesi 53 olan birini davet edebiliyor mu?
+1	203	Ninjalar dört at becerisi uygulayabiliyor mu?
+1	204	Sadece ilk köyde mi gümüþ damarlar var?
+1	205	Metin Pung-Ma'ya sadece Lungsam'da mý rastlanýyor?
+1	206	Ejderha Tapýnaðý'na küçülen kafalarla girilebiliyor mu?
+1	207	Kývrýk anahtarý General Huashin mi düþürüyor?
+1	208	Sohan Daðý'nda bir Patron var mý?
+1	209	Altýn bezeli ayakkabýlar seviye 20 itibariyle giyilebiliyor mu?
+1	210	Etkinlik yardýmcýsý eldiven takýyor mu?
+1	211	Baek-Go gözlük takýyor mu?
+1	212	Mok anýtý dikdörtgen mi?
+1	213	Evlenme Tasarýmcýsý yeþil bir elbise mi giyiyor?
+1	214	Seon-Hae'nin sað elinde çubuk var mý?
+1	215	Yang-Shin'in ok kýlýfýnda üç tane mi ok var?
+1	216	Ýntikam Metini'nin rengi gökmavisi mi?
+1	217	En yüksek seviyeye sahip Metin taþý Misilleme Metini mi?
+1	218	Ruh Metini Seungryong Vadisi'nde mi?
+1	219	Karanlýk Tapýnak'ta bir yeþim damarý keþfedilebiliyor mu?
+1	220	Sohan Daðý'nda ametist cevheri elde ediliyor mu?
+1	221	Beran-Setaou'nun seviyesi 97 mi?
+1	222	Azrail'in seviyesi Beran-Setaou'nunkinden daha mý yüksek?
+1	223	Güçlü Buz Cadýsý'nýn seviyesiyle Tartaros'un seviyesi ayný mý?
+1	224	Hýzlý saldýrý bir Ninja becerisi mi?
+1	225	Kýrmýzý iksir (O) 500 HP mi yeniliyor?
+1	226	YinYang zýrhýný Savaþçýlar giyebiliyor mu?
+1	227	Bilge kralýn eldiveni canavarlara karþý galip gelindiðinde kazanýlan rütbe puanlarýný ikiye katlýyor mu?
+1	228	Uriel'in günlüðü 20 sayfalýk mý?
+1	229	Shuk-Sal, Sürgün Maðarasý'na mý götürüyor?
+1	230	Sürgün Maðarasý'na girebilmek için 75.seviyede mi olunmalý?
+1	231	Demirci'nin sakalý var mý?
+1	232	Seyis'in otlaðýnda dört tane mi at var?
+1	233	Soylu kadýn elbisesinde mor çorap var mý?
+1	234	Genç Akrep Adam'ýn silahý var mý?
+1	235	Dokuz Kuyruk'un gerçekten de tam dokuz tane kuyruðu mu var?
+1	236	Sohan Daðý'nda bir cennetin gözyaþý damarý var mý?
+1	237	Karanlýk Lider'de bayýlma þansý bonusu var mý?
+1	238	Gum anýtý Þeytan Kulesi'nin arkasýnda mý?
+1	239	Alev Kralý'nýn kafasý yanýyor mu?
+1	240	Alev Kralý sandalet giyiyor mu?
+1	241	Hae-Tae bir canavar mý?
+1	242	Hastalýklý Adam þal takýyor mu?
+1	243	Maymun Lord'un kuyruðu var mý?
+1	244	Maymun Lord'un hükümdarlýk asasý var mý?
+1	245	Gulyabani'nin alnýnda boynuz var mý?
+1	246	Dev Hayalet Aðacý'nýn kökleri var mý?
+1	247	Orman Perisi'nin elleri kýrmýzý mý?
+1	248	Bin Savaþçý'nýn elinde iki tane balta var mý?
+1	249	Setaou Mistik'in seviyesi 88 mi?
+1	250	Beran-Setaou'nun rengi gök mavisi mi?
+1	251	Aranyo, Soon'un hanýmý mý?
+1	252	Ariyoung ilk köyde mi?
+1	253	Baek-Go iksir hazýrlýyor mu?
+1	254	Hayalet Kýlýç Ustasý'nýn rengi gök mavisi mi?
+1	255	Buz Böceði'nin on tane ayaðý mý var?
+1	256	Izgara Nehir Alabalýðý 250 SP yeniliyor mu?
+1	257	Handu-Up mor bir sivri þapka mý takýyor?
+1	258	Nakajima haritada dolanýp duruyor mu?
+1	259	Kýrmýzý karýnca takýmý+9, 101'lik bir savunma bonusu kazandýrýyor mu?
+1	260	Harang'ýn saçlarý toplanmýþ mý?
+1	261	Deokbae'nin elinde bir altýn balta var mý?
+1	262	'Ahýrlarda sorun var' görevi seviye 49 itibariyle mi baþlýyor?
+1	263	Uriel kollarýný baðlamýþ þekilde mi duruyor?
+1	264	Maymun Lordu, Hasun Dong'da mý kalýyor?
+1	265	Standart Strg+b komutuyla atýný besleyebilir misin?
+1	266	Zýrh Satýcýsý'nýn býyýðý var mý?
+1	267	Junsun Dong'un diðer adý aðýr Maymun Zindaný mý?
+1	268	Ejder tanrýnýn gazabý, delici vuruþ þansýný artýrýyor mu?
+1	269	Aranyo'nun elinde bir meyve kasasý var mý?
+1	270	Buz böceði 6 ayaklý mý?
+1	271	Devler Diyarý'nda altý çeþit canavar var mý?
+1	272	Kýrmýzý demir pala sadece 30.seviyede mi kullanýlabiliyor?
+1	273	Kuahlo Dong çölde mi bulunuyor?
+1	274	Iþýnlayýcý'nýn alnýnda ben var mý?
+1	275	Dövüþ Metini'nin seviyesi 15 mi?
+1	276	Chaegirab gözlük takýyor mu?
+1	277	Seviye 26'daki bir zýrhý +4 yükseltmek için herhangi bir deðerli taþa ihtiyaç var mýdýr?
+1	278	NPC'lerden (oyuncusu olmayan karakter) seviye 26 zýrhý alýnabilir mi?
+1	279	Hastalýklý Köpek kulak arkasýný kaþýr mý?
+1	280	Kýzgýn Hastalýklý Okçu çift kafalý mýdýr?
+1	281	Chunjo Kayasý diye birþey var mýdýr?
+1	282	Yongbi Kayasý diye birþey var mýdýr?
+1	283	Seviye 42'deki +7 zýrhýnýn savunmasý +97 midir?
+1	284	Seviye 42'deki +7 zýrhýnýn savunmasý -97 midir?
+1	285	Seviye 89 Setaou Avcýsý'nýn kademesi 2 midir?
+1	286	Seviye 33 Siyah Rüzgar To-Su'nun kademesi 2 midir?
+1	287	Metin2'de kil var mýdýr?
+1	288	Seyis'in çiftliðinde 4 tane midilli bulunur mu?
+1	289	Baek-Go gözlük takar mý?
+1	290	Wonda-Rim, Chaegirab'ýn yeðeni midir?
+1	291	Chaegirab, Wonda-Rim'in amcasý mýdýr?
+1	292	Chaegirab, Wonda-Rim'in babasý mýdýr?
+1	293	Ýkinci haritada bir hayvan tanrý bulunur mu?
+1	294	Ýkinci haritada 3 tane balýkçý var mýdýr?
+1	295	Oyun yöneticilerine kimlik ve þifre sorulabilir mi?
+1	296	Bir Game Master [GM] tanýnabilir mi?
+1	297	Sarhoþ Vatandaþ ikinci haritada mi?
+1	298	Örümcek gözü bir görev eþyasý mýdýr?
+1	299	Metin2'de 5 saç boyasý var mýdýr?
+1	300	Misk Yaðýnýn ticareti var mý?
+1	301	Aranyo'nun sýrtýnda birþey var mý?
+1	302	Aranyo, Octavio'nun karýsý mýdýr?
+1	303	Aranyo, Soon'un karýsý mýdýr?
+1	304	Metin2'de iskeletler var mýdýr?
+1	305	Kuahlo Dong'da anýt var mýdýr?
+1	306	Metin2'de alýþtýrma dövüþleri için bir arena var mýdýr?
+1	307	Herkes Deri Ayakkabý giyebilir mi?
+1	308	Þeytan Çýkarma Kýlýcý'nýn %%20'lik saldýrý hýzý var mýdýr?
+1	309	Eun-Jung'un yelpazesi var mýdýr? 
+1	310	Eun-Jung silah taþýr mý?
+1	311	Altýn ve Gümüþ Barlar yere atýlabilir mi?
+1	312	Seviye yükseldikçe Elektromanyetik Pala'nýn saldýrý hýzý azalýr mý?
+1	313	Seviye yükseldikçe Elektromanyetik Pala'nýn saldýrý hýzý artar mý?
+1	314	Karamsar Ahþap Maske diye birþey var mýdýr? 
+1	315	Metin'de mangal yapýlabilir mi?
+1	316	Koe-Pung maske takar mý?
+1	317	Orman Ruhu Taþý bir görev eþyasý mýdýr?
+1	318	Öcü Berserker'in sol elinde silah var mý?
+1	319	Herhangi bir seviyede cinsiyet deðiþtirilebilir mi?
+1	320	Imha, Chunjo Krallýðý'nýn lonca bölgesi midir?
+1	321	Imha, Shinsoo Krallýðý'nýn lonca bölgesi midir?
+1	322	Imha, Jinno Krallýðý'nýn lonca bölgesi midir?
+1	323	Jungrang, Metin2'de bir NPC midir?
+1	324	Yayang, Soon'un kýzý mýdýr?
+1	325	Jungsun Dong'un içi yeþil taþtan mý?
+1	326	Metin2'nin para birimi Yang midir?
+1	327	Seviye 30 görevi için Jinunggy'nin Ruh Taþý'na ihtiyaç var mýdýr?
+1	328	Araþtýrma türünde eþyalar bulunur mu?
+1	329	Seon-Hae'nde iksir yaptýrýlabilir mi?
+1	330	Metin2'de balkabaðý var mýdýr?
+1	331	Metin2'de çorap bulunur mu?
+1	332	Karanlýk Tapýnak'ýn ateþi kýzýl mýdýr?
+1	333	Maymun General'in seviyesi 40, kademesi 4'müdür?
+1	334	Her kategoride olan kýlýç kullanabilir mi? 
+1	335	Nakajima, Metin2'de bir NPC midir?
+1	336	Geçiþ izni yaratýklardan düþürülebilir mi?
+1	337	Satýcýda 200 Kýrmýzý Ýksir(G)'nin fiyatý 33.000 Yang midir?
+1	338	Ninjalar Aþýrý Süslü Yay taþýyabilir mi?
+1	339	Chuong birinci haritada mý?
+1	340	Üzüntü Metni'nin seviyesi 10, kademesi 5 midir?
+1	341	Yýlbaþý Havai Fiþekleri var mýdýr?
+1	342	Çin Havai Fiþekleri hareket hýzýný arttýrýr mý?
+1	343	Çin Havai Fiþekleri saldýrý hýzýný arttýrýr mý?
+1	344	Çin Havai Fiþekleri bayýlma þansýný artýrýyor mu? 
+1	345	Izgara Som Balýðý, 350 Hayat Puaný kazandýrýr mý?
+1	346	Izgara Som Balýðý 350 Mana Puaný kazandýrýr mý?

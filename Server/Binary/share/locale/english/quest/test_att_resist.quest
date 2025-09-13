@@ -1,0 +1,163 @@
+--Monster Elemental Attack Test Quest.
+--Only For Test Server
+
+define TEST_NPC 20001 -- alchemist
+
+quest test_att_resist begin
+	state start begin
+		when TEST_NPC.chat."ATT_TEST : ITEM - BASIC" with is_test_server() begin
+			say("Test items for basic")
+			say("Check damage with these")
+			
+			local item_armor
+			local item_helmet
+			local item_bracelet
+			
+			local job = pc.get_job()
+			if job == 0 then -- WARRIOR
+				item_armor = 11299
+				item_helmet = 12249
+				item_bracelet = 14109
+			elseif job==1 then -- ASSASSIN
+				item_armor = 11499
+				item_helmet = 12389
+				item_bracelet = 14109
+			elseif job==2 then -- SURA
+				item_armor = 11699
+				item_helmet = 12529
+				item_bracelet = 14109
+			elseif job==3 then -- SHAMAN
+				item_armor = 11899
+				item_helmet = 12669
+				item_bracelet = 14109
+			end
+			
+			pc.give_item2_select(item_armor)
+			pc.give_item2_select(item_helmet)
+			pc.give_item2_select(item_bracelet)
+		end
+		when TEST_NPC.chat."ATT_TEST : ITEM - FIRE" with is_test_server() begin
+			say("Test items for Fire resist")
+			say("Use items and Type /state to check resist stat")
+			
+			local item_armor
+			local item_helmet
+			local item_bracelet
+			
+			local job = pc.get_job()
+			if job == 0 then -- WARRIOR
+				item_armor = 11299
+				item_helmet = 12249
+				item_bracelet = 14109
+			elseif job==1 then -- ASSASSIN
+				item_armor = 11499
+				item_helmet = 12389
+				item_bracelet = 14109
+			elseif job==2 then -- SURA
+				item_armor = 11699
+				item_helmet = 12529
+				item_bracelet = 14109
+			elseif job==3 then -- SHAMAN
+				item_armor = 11899
+				item_helmet = 12669
+				item_bracelet = 14109
+			end
+			
+			pc.give_item2_select(item_armor)
+			item.set_value(0, 35, 15)
+			pc.give_item2_select(item_helmet)
+			item.set_value(0, 35, 15)
+			pc.give_item2_select(item_bracelet)
+			item.set_value(0, 35, 15)
+		end
+		when TEST_NPC.chat."ATT_TEST : ITEM - ELEC" with is_test_server() begin
+			say("Test items for ELEC resist")
+			say("Use items and Type /state to check resist stat")
+			
+			local item_armor
+			local item_helmet
+			local item_bracelet
+			
+			local job = pc.get_job()
+			if job == 0 then -- WARRIOR
+				item_armor = 11299
+				item_helmet = 12249
+				item_bracelet = 14109
+			elseif job==1 then -- ASSASSIN
+				item_armor = 11499
+				item_helmet = 12389
+				item_bracelet = 14109
+			elseif job==2 then -- SURA
+				item_armor = 11699
+				item_helmet = 12529
+				item_bracelet = 14109
+			elseif job==3 then -- SHAMAN
+				item_armor = 11899
+				item_helmet = 12669
+				item_bracelet = 14109
+			end
+			
+			pc.give_item2_select(item_armor)
+			item.set_value(0, 36, 15)
+			pc.give_item2_select(item_helmet)
+			item.set_value(0, 36, 15)
+			pc.give_item2_select(item_bracelet)
+			item.set_value(0, 36, 15)
+				
+		end
+		when TEST_NPC.chat."ATT_TEST : ITEM - WIND" with is_test_server() begin
+			say("Test items for WIND resist")
+			say("Use items and Type /state to check resist stat")
+			
+			local item_armor
+			local item_helmet
+			local item_bracelet
+			
+			local job = pc.get_job()
+			if job == 0 then -- WARRIOR
+				item_armor = 11299
+				item_helmet = 12249
+				item_bracelet = 14109
+			elseif job==1 then -- ASSASSIN
+				item_armor = 11499
+				item_helmet = 12389
+				item_bracelet = 14109
+			elseif job==2 then -- SURA
+				item_armor = 11699
+				item_helmet = 12529
+				item_bracelet = 14109
+			elseif job==3 then -- SHAMAN
+				item_armor = 11899
+				item_helmet = 12669
+				item_bracelet = 14109
+			end
+			
+			pc.give_item2_select(item_armor)
+			item.set_value(0, 38, 15)
+			pc.give_item2_select(item_helmet)
+			item.set_value(0, 38, 15)
+			pc.give_item2_select(item_bracelet)
+			item.set_value(0, 38, 15)
+		end
+		
+		
+		when TEST_NPC.chat."ATT_TEST : MOB - FIRE" with is_test_server() begin
+			say("spawn FIRE monster")
+			say("check damage with basic and resist armors")
+			
+			mob.spawn(2201, pc.get_local_x(), pc.get_local_y(),0,1,1)
+		end
+		when TEST_NPC.chat."ATT_TEST : MOB - ELEC" with is_test_server() begin
+			say("spawn ELEC monster")
+			say("check damage with basic and resist armors")
+			
+			mob.spawn(2401, pc.get_local_x(), pc.get_local_y(),0,1,1)
+		end
+		when TEST_NPC.chat."ATT_TEST : MOB - WIND" with is_test_server() begin
+			say("spawn WIND monster")
+			say("check damage with basic and resist armors")
+			
+			mob.spawn(777, pc.get_local_x(), pc.get_local_y(),0,1,1)
+		end
+	end
+end

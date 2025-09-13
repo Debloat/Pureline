@@ -1,0 +1,346 @@
+1	1	Van a Házaló csomagján lakat?
+1	2	Zsákmányolhatsz Átváltoztató gömböt az Óriások földjén?
+1	3	Az Átkozott alfa kékfarkas dob Farkasszõrt?
+1	4	Dob a Jeti Jetibundát?
+1	5	Csak Sohan-hegyen zsákmányolhatsz Jéggömböt?
+1	6	Istennõi könny csak ládákból kapható?
+1	7	A hármas szintû Sietség köve 30-cal növeli a mozgási sebességed?
+1	8	A Gyöngyök alapértelmezett bónusza az INT?
+1	9	Van 12-es szinttõl kezdõdõ vért?
+1	10	Van Jáde ér a Hwang templomban?
+1	11	22 híd van a Seungryong-völgyben?
+1	12	Nyolc kaszt van a Metin2-ben?
+1	13	Van Furnérlemez a Metin2-ben?
+1	14	Van 'Ékszer' nevû tárgy?
+1	15	Van 'Auraelszívás' nevû készség?
+1	16	Létezik a Gyógyítás bónusz?
+1	17	Van Koreai tûzijáték?
+1	18	Van közepes Missziókönyv?
+1	19	Van Ametiszt ér?
+1	20	Van speciális térkép gyakorlóharcok számára?
+1	21	Ül egy madár a Teleportos jobb vállán?
+1	22	Van Fa vértezet?
+1	23	Van Tûzfõnix?
+1	24	Van vívás oktató?
+1	25	Vannak orkok?
+1	26	Van map2-n Halász?
+1	27	Csak egy Lovászinas van birodalmanként?
+1	28	Tarthatsz kisállatokat a Metin2-ben?
+1	29	Vannak kutyák a Metin2-ben?
+1	30	Ugyanannyi Halász van minden birodalomban?
+1	31	Van Rizs süti a Metin2-ben?
+1	32	Van Piactér map2-n?
+1	33	Van Növényi nedv a Metin2-ben?
+1	34	Csak a céh területen találhatóak átkozott állatok?
+1	35	Bera saját magától támad?
+1	36	Beran-Setaou megölte a saját nõvérét?
+1	37	90 hely van a leltárban?
+1	38	A Bambusznyíl támadóértéke 10?
+1	39	A Brutális Arahan 53-as szintû?
+1	40	1-es szintû az Éhes vadkutya?
+1	41	A Raktáros visel kék fejpántot?
+1	42	Visel a Kovács kötényt?
+1	43	A Kaszás Fõnök szintû?
+1	44	A Büszke ork generálisnak van nyaklánca hat függõvel?
+1	45	Van nõvére az Öregasszonynak?
+1	46	Van a Metin2-nek fóruma? 
+1	47	Fekete szeme van Mirine-nek?
+1	48	A Kaszás a Démon-toronyban él?
+1	49	Van Akuma nevû sura szellem a barlang 2. szintjén?
+1	50	Bahar-Taraji a legfiatalabb isteni testvér?
+1	51	Bahar-Taraji az egyensúly istennõje?
+1	52	Baljit-Elvedin a legidõsebb isteni testvér?
+1	53	Baljit-Elvedin az egyensúly istene?
+1	54	A Hae-Tae nevû szörny fõnök?
+1	55	A Büszke sötét harcos 54-es szintû?
+1	56	Az Átkozott vörös vaddisznó hét különbözõ régióban található?
+1	57	A Réz harangot 5-ös szinttõl lehet felszerelni?
+1	58	A Vörös Hwang Fegyverzet harcosoké?
+1	59	Éjjel is világos van a sivatagban?
+1	60	Soon könyvmoly?
+1	61	Eltörheti a Kovács a fegyvereket fejlesztés közben?
+1	62	Megjelenhet a Nagy sivatagi teknõsbéka map2-n?
+1	63	Bányászható gyémánt?
+1	64	Házasodhatsz a Metin2-ben?
+1	65	Táncolhatsz a Metin2-ben? 
+1	66	Lehetsz GM 16 évesen?
+1	67	15-ös szinttõl használhatod a 'Hívó' chatet?
+1	68	Elérhetõ 17-es szinten az elsõ Mester készség?
+1	69	Lehet 52-es szinten három Mester készség?
+1	70	Dobhat neked valamit az 5-ös szintû Metin, ha 55-ös szintû vagy?
+1	71	Használhatsz ló-képességeket 9-es szintû lovon?
+1	72	Be tudod adni kisállatod állatgondozó helyre?
+1	73	Tudsz Zoknit akasztani fára?
+1	74	Lehetséges fejleszteni Szellemköveket?
+1	75	Minden szörny dob Átváltoztató gömböt?
+1	76	Mindenféle Zöld ital esik a játékban?
+1	77	Kizárólag Huahn-So dolgozik Tue gombával?
+1	78	Felszintelhet játékosokat a GM?
+1	79	Van holttest a Seungryong-völgyben?
+1	80	16 könyvlapot kell összegyûjteni az 'Egy legenda naplója' küldetésben?
+1	81	Biztosít a Királyi öv+5 6 helyet a leltáradban?
+1	82	Heuk-Young kinézete olyan, mint egy harcosé?
+1	83	Átadható a Csavart kulcs?
+1	84	42 holttest van az Óriások földjén?
+1	85	Van Teleportos a Céhterületen?
+1	86	Van Teleportos az Óriások földjén?
+1	87	4500 rangpontot veszít egy negatív rangú játékos, ha sikeresen olvas be egy Lélekkövet G5-rõl G6-ra?
+1	88	3000 rangpontot veszít egy pozitív rangú játékos, ha sikeresen beolvas egy Lélekkövet G5-rõl G6-ra?
+1	89	A Fegyverkereskedõ árul Acél nyilat?
+1	90	Változtatják a hidak a helyüket az Ork-völgyben?
+1	91	1kk Yang szükséges az egyoldalú váláshoz?
+1	92	Farkasok dobják a Daruszárny legyezõt?
+1	93	Kell Esküvõi ruha a házasságkötéshez?
+1	94	Mûködik az 'Ördögök elleni erõ' az Alvilági Jetik ellen?
+1	95	73-as szintû a Kilencfarkú?
+1	96	Bakra a Jinno birodalom faluja?
+1	97	Taurean az elsõ faluban található?
+1	98	Legalább 30-as szintûnek kell lenned, hogy horgászhass?
+1	99	Legalább 30-as szintûnek kell lenned a házasságkötéshez?
+1	100	Vásárolhatsz Csákányt Yang-Shin-tõl?
+1	101	28-as szinttõl kezdve használható a Gyöngy karkötõ?
+1	102	Minden karakternek 40-es szint felettinek kell lennie, hogy belépjen a Démon-toronyba?
+1	103	Bokjung a Shinsoo birodalom része?
+1	104	Kígyórét semleges térkép?
+1	105	Van 55-ös szintû fõnök a Seungryong-völgyben?
+1	106	Az 51-es szintû karakter zsákmányolhat Áldástekercset a szörnyektõl?
+1	107	Van 80-as szintû fõnök a Szellem-erdõben?
+1	108	Eldobható a Kékacél vért +9?
+1	109	A Sárkány ruha elkészíthetõ Feketevas vért+9-bõl?
+1	110	Eldobható 1000 Yang?
+1	111	A Sárkány ruha elkészíthetõ Fekete ruha+9-bõl?
+1	112	Rendszeresen megjelenik a Vörös sárkány normál körülmények között a Metin2 világában?
+1	113	Végleges bónuszként szerzel 8%%-kal több sebzést más játékosok ellen, ha teljesíted az 'A biológus kutatása 8' küldetést?
+1	114	30 db Tugyi tábláját kell vinned Chaegirab-nak az 'A biológus kutatása 6' küldetés részeként?
+1	115	Megvásárolható a játékban a Hwang fegyverzet?
+1	116	A Kékacél vért Feketevas vért+9-bõl készül?
+1	117	Van Teleportos Kígyóréten?
+1	118	Vannak 75-ös és 80-as szintû Metinkövek az Óriások földjén?
+1	119	Kígyóréten található az Óriások földjének bejárata?
+1	120	Zsákmányolható Lélekrabló penge az Ezerharcostól? 
+1	121	Az Óriások földje határos a Kígyóréttel?
+1	122	Van szeme a Sivatagi repülõ szemnek?
+1	123	Nagyobb védelmet ad a Titán pajzs+9, mint egy 61-es szintû pajzs+9?
+1	124	A Sólyom pajzs+9 védelmi értéke 153?
+1	125	A Fa fülbevalók TP bónuszt biztosítanak?
+1	126	Csak Sötét Arahantól és Sötét Idézõtõl zsákmányolható az Ezotéria bevezetõ+?
+1	127	A Tünde kard támadósebessége nagyobb, mint a Csatakardé?
+1	128	A Nagy jég boszorkány dob Vérkövet?
+1	129	Beran-Setaou egy NPC?
+1	130	Hátasként az Oroszlán megnöveli támadóértéked 200 ponttal?
+1	131	Oda tudsz teleportálni az éppen Pók kazamata 2-ben lévõ házastársadhoz?
+1	132	Készít Huahn-So harmatot?
+1	133	30 Jin-Hee-t kell legyõzni egy Eljegyzési gyûrûért?
+1	134	Átadható a Jegygyûrû?
+1	135	Kér Yangot a Démon-toronyban lévõ Kovács a tárgyak fejlesztéséért?
+1	136	Zsákmányolható Lélekkõ Hae-Tae-tól?
+1	137	Rendszeresen megjelenik Hae-Tae normál körülmények között a Metin2 világában?
+1	138	Hae-Tae csak különleges eseménykor jelenik meg?
+1	139	Agresszívek a Számûzött Barlangja 2. szintjén lévõ szörnyek?
+1	140	Taurean egy NPC?
+1	141	Zsákmányolható Nehéz majom növény a Majomfejedelemtõl?
+1	142	Dupla mennyiségû rangpont kerül levonásra, ha negatív rangúként olvasol Lélekkövet?
+1	143	Szerezhetõ Lélekkõ jutalomként az 'A szellemfák vizsgálata' küldetésért?
+1	144	Szerezhetõ Lélekkõ jutalomként az 'A szellem-erdõ titka' küldetésért?
+1	145	Zsákmányolhatók Szellemkövek a Démon-toronyban lévõ Gyilkosság Metinjébõl?
+1	146	Zsákmányolhatók Készségkönyvek 75-ös és 80-as szintû Metinkövekbõl?
+1	147	A 75-ös és 80-as szintû Metinkövek dobnak Szellemköveket?
+1	148	A 40-es szint alatti Metinkövek dobnak Lélekkövet?
+1	149	60-as szinten teleportálhatsz közvetlenül a Démon-toronyba?
+1	150	A Kékacél vért+5 megnöveli a védelmet 184-gyel és csökkenti a mozgási sebességet 6-tal?
+1	151	Szerezhetõ Kagyló a Metin2-ben?
+1	152	Szerezhetõ dropként Belépési engedély a Számûzött Barlangjában?
+1	153	Zsákmányolható Telihold kard Jin-Hee-tõl?
+1	154	Használhatja a Mentális harcos a Villám hajítás készséget?
+1	155	A Harci vadkan megnöveli a védelmet 500-zal?
+1	156	A Fekete Metinje dob szellemkõ+4-et?
+1	157	Kell Fekete egyenruha+ a Tigris lemezvért fejlesztéséhez?
+1	158	Átadható a 'Megbûvölõ tárgy'?
+1	159	Zsákmányolható Kék ital(kicsi) a Pók kazamatában?
+1	160	Rendszeresen megjelennek a Pestishordozók normál körülmények között a Metin2 világában?
+1	161	Található Medveepe az Arany kincsesládában?
+1	162	Lehet bányászni Jáde érbõl finomított Ébenfát?
+1	163	Megidézõdik az Ördög Metinje eseményeken?
+1	164	Dobnak Orkok Fehérarany karkötõt?
+1	165	Az Ördög Katakombájában minden ellenfelet le kell gyõzni?
+1	166	El tud érni Azrael kritikus találattal a csatában?
+1	167	Vásárolható Lélekkristály nyaklánc a Tárgypiacon?
+1	168	Por allergiája van az Öregasszonynak?
+1	169	A Fegyverkereskedõ szerelmes a Vegyeskereskedõ eladónõbe?
+1	170	A Raktárosnál van Aranyrúd?
+1	171	Uriel nõ?
+1	172	A Vegyeskereskedõ eladónõnek viszonya van a Fegyverzet-kereskedõvel?
+1	173	Az Öregasszony porseprûje Kékfarkas szõrébõl készül?
+1	174	Csak kétkezes karddal üthetõ a Nagy sivatagi teknõsbéka?
+1	175	50-es szinttõl használható a Varázslókard?
+1	176	Beran-Setaou megölte Bahar-Tarajit?
+1	177	Beran-Setaou csak egy térképen található meg a játékban?
+1	178	A Vörös ital(nagy) 650 TP-t tölt vissza?
+1	179	A Nap Elixír (kicsi) 2.000.000 TP-t tartalmaz?
+1	180	Újratölthetõ a kitartás Sárga ital használatával?
+1	181	Halálos a méreg?
+1	182	A Sim-víz azonnal visszaállít 100 MP-t?
+1	183	A Vörös harmat növeli a támadósebességet 2%% - 8%%-kal?
+1	184	Maximum 20 percig tartanak a harmat hatásai?
+1	185	Öt percig tart a Barackvirág lé hatása?
+1	186	A Kék harmat növeli a támadóértéket?
+1	187	Chuk-Sal visel maszkot?
+1	188	Található Rúnahalom az Ördög Katakombájának negyedik szintjén?
+1	189	A Megtorlás metinje 80-as szintû?
+1	190	Ott van egy Sura szelleme a Sárkány Templomában?
+1	191	A házasuló felek kapnak az esküvõ végén Vörös ital(közepes)-t?
+1	192	Láthatod a saját árnyékod egy fa vagy épület árnyékában?
+1	193	84-es szinttõl viselhetõ a Sárkány ruha+6?
+1	194	Legfeljebb két Szellemkövet illeszthetsz egy Antik harangba?
+1	195	A Titkolózás köpenye vonzza a szörnyeket?
+1	196	A játékban minden hátast 1-es szinttõl lehet használni?
+1	197	A Kék sárkány dob Gyöngyöket?
+1	198	A 'Veszteség eltûnik az MP-bõl' a Lélekszilánk kalap normál bónusza?
+1	199	Átkozott szörnyek csak a céhterületen jelennek meg?
+1	200	Ha Égetést használsz egy haldokló ellenfeleden, megmarad egy TP-je?
+1	201	45-ös szinttõl teljesíthetõ a Katonai ló küldetés?
+1	202	Meghívhat egy 82-es szintû játékos egy 53 szintû játékost a csoportjába?
+1	203	Négy Ló-képességet használhatnak a Nindzsák?
+1	204	Csak az elsõ faluban vannak Ezüst erek?
+1	205	Csak Lungsamban van Metin Pung-Ma?
+1	206	Beléphetsz a Sárkány Templomába Zsugorított fej használatával?
+1	207	Huashin Tábornok dobja a Csavart kulcsot?
+1	208	Van fõnök ellenség Sohan-hegyen?
+1	209	20-as szinttõl lehet viselni az Aranyozott cipõt?
+1	210	Az Esemény segítõ visel kesztyût?
+1	211	Baek-Go visel szemüveget?
+1	212	A Mok Memorial téglalap alakú?
+1	213	Az Esküvõszervezõ zöld ruhát visel?
+1	214	Seon-Hae tart botot a jobb kezében?
+1	215	Yang-Shin-nek három nyílvesszõ van a tegezében?
+1	216	A Bosszú Metinje égszínkék?
+1	217	A Megtorlás metinje a legnagyobb szintû Metinkõ?
+1	218	A Seungryong-völgyben található a Lélek Metinje?
+1	219	Található Jáde ér a Sötétség templomában?
+1	220	Bányászható Ametiszt érc Sohan-hegyen?
+1	221	Beran-Setaou 97-es szintû?
+1	222	Azrael magasabb szintû, mint Beran-Setaou?
+1	223	A Nagy jég boszorkány ugyanolyan szintû, mint Tartaros?
+1	224	A Villám támadás Nindzsa készség?
+1	225	A Vörös ital(közepes) 500 TP-t tölt vissza?
+1	226	Használhatják a Yin-Yang vértet Harcosok?
+1	227	A Bölcs császár kesztyûje megkétszerezi a szörnyek legyõzésekor kapott rangpontokat?
+1	228	Uriel naplójának 20 oldala van?
+1	229	Chuk-Sal vezet be a Számûzött Barlangjába?
+1	230	75-ös szintûnek kell lenned, hogy beléphess a Számûzött Barlangjába?
+1	231	A Kovácsnak van szakálla?
+1	232	Négy ló van a Lovászinas karámjában?
+1	233	Képezi lila harisnya a részét a Bárónõi ruhának?
+1	234	Van fegyvere a Fiatal skorpióembernek?
+1	235	Tényleg kilenc farka van a Kilencfarkúnak?
+1	236	Van Mennyei Könny ér Sohan-hegyen?
+1	237	A Sötét vezetõnek van ájulási esély bónusza?
+1	238	A Gum emlékmû a Démon-torony mögött van?
+1	239	Ég a Lángkirály feje?
+1	240	A Lángkirály visel szandált?
+1	241	Hae-Tae egy szörny?
+1	242	Visel sálat a Fertõzött ember?
+1	243	Van farka a Majomfejedelemnek?
+1	244	Van jogara a Majomfejedelemnek?
+1	245	A Kísértetnek van szarv a homlokán?
+1	246	Az Óriás szellemfának vannak gyökerei?
+1	247	A Tündérek keze vörös?
+1	248	Két baltát tart az Ezerharcos a kezeiben?
+1	249	A Setaou látnok 88-as szintû?
+1	250	Beran-Setaou égszínkék?
+1	251	Aranyo Soon felesége?
+1	252	Ariyoung az elsõ faluban található?
+1	253	Baek-Go fõz bájitalokat?
+1	254	A Szellem Kardmester kék?
+1	255	Tíz lába van a Jég rovarnak?
+1	256	A Grillezett sebes pisztráng 250 MP-t állít helyre?
+1	257	Handu-Up-nak van hegyes, lila kalapja?
+1	258	Nakajima sétálgat a térképen?
+1	259	A Vöröshangya öltöny+9 101 védelem bónuszt biztosít?
+1	260	Harang lófarkakba kötve viseli a haját?
+1	261	Deokbae-nak van aranyfejsze a kezében?
+1	262	49-es szinten kezdõdik az 'Az istállók gondban vannak' küldetés?
+1	263	Össze vannak fonva Uriel karjai?
+1	264	A Majomfejedelem Hasun Dong-ban található?
+1	265	Meg tudod etetni a lovad az alapértelmezett Ctrl+B paranccsal?
+1	266	A Fegyverzet-kereskedõnek van bajsza?
+1	267	A nehéz Majom kazamata Jungsun Dong-ként is ismert?
+1	268	A Sárkányisten haragja megnöveli az átható találat esélyét?
+1	269	Aranyo gyümölcskosarat tart a kezében?
+1	270	6 lába van a Jég Rovarnak?
+1	271	Hat különféle fajtájú szörny van az Óriások földjén?
+1	272	Csak 30-as szinten használható a Vörösvas penge?
+1	273	Kuahlo Dong a Sivatagban található?
+1	274	Van jel a Teleportos fején?
+1	275	A Harc Metinje 15-ös szintû?
+1	276	Chaegirab visel szemüveget?
+1	277	Szükséged van ékkõre, hogy a 26-os szintû páncélt +4 -re fejleszd?
+1	278	Tudsz vásárolni 26-os szintû páncélt NPC-tõl? 
+1	279	A Kínzott kutya vakarózik a füle mögött?
+1	280	A dühös fertõzött íjásznak 2 feje van?
+1	281	Létezik a Chunjo Szikla?
+1	282	Létezik Yongbi Szikla?
+1	283	A 42-es szintû +7-es páncélnak a védelmi értéke +97?
+1	284	A 42-es szintû +7-es páncélnak a védelmi értéke -97?
+1	285	A Setaou Vadász szintje 89 (szint 2)?
+1	286	A Fekete szél To-Su szintje 33 (szint 2)?
+1	287	A Metin2-ben van agyag?
+1	288	4 Póni van a Lovászinas mellett a kapuban?
+1	289	Baek-Go visel szemüveget?
+1	290	Wonda-Rim Chaegirab biológus unokaöccse?
+1	291	Chaegirab biológus Wonda-Rim nagybácsija?
+1	292	Chaegirab biológus Wonda-Rim apja?
+1	293	Van állat Isten map2-n?
+1	294	3 halász van map2-n?
+1	295	Elkérheti bármelyik Teamtag az ID-d vagy jelszavad?
+1	296	A [GM] a Játék mester (Game Master) Azonosítójele?
+1	297	Van Részeg Map2-n?
+1	298	Az Egy pók szeme küldetéstárgy?
+1	299	5 féle hajfesték van a Metin2-ben?
+1	300	A pézsma olajjal lehet kereskedni?
+1	301	Van Aranyonak a hátán valami?
+1	302	Aranyo Octavio felesége?
+1	303	Aranyo Soon felesége?
+1	304	Vannak csontvázak a Metin2-ben?
+1	305	Vannak emlékmûvek a Kuahlo Dong (Pók kazamata)-ban?
+1	306	Vannak gyakorló harcok a metin2-ben?
+1	307	A bõrcipõ bárki által viselhetõ?
+1	308	Az Ördögûzõ kard+0 +20%% támadósebességet ad?
+1	309	Hord legyezõt Eun-Jung?
+1	310	Van fegyvere Eun-Jung-nak?
+1	311	Le tudod dobni az ezüst illetve aranyrudat a földre?
+1	312	Csökken az Elektromágneses penge támadósebessége szintnöveléskor?
+1	313	Növekszik az Elektromágneses penge támadósebessége szintnöveléskor?
+1	314	Létezik a Komor Fa Maszk?
+1	315	Tudsz Grillezni a Metin2-ben?
+1	316	Koe-Pung visel álarcot/maszkot?
+1	317	Az Erdei Lélekkõ egy küldetés tárgy?
+1	318	A Rettenthetetlen Orknak van fegyver a bal kezében?
+1	319	Minden szintlépéskor változtathatod a nemed?
+1	320	Imha a Chunjo birodalom céhterülete?
+1	321	Imha a Shinsoo birodalom céhterülete?
+1	322	Imha a Jinno birodalom céhterülete?
+1	323	Jungrang egy NPC a Metin2-ben?
+1	324	Yayang Soon lánya?
+1	325	A Jungsun Dong belsejében zöld színûek a kõzetek?
+1	326	A Yang a Metin2 pénzneme?
+1	327	Jinunggyi Lélekköve szükséges a 30-as szintû küldetéshez?
+1	328	Vannak kutatásos tárgyak?
+1	329	Tudsz vásárolni italokat Seon-Hae-nél?
+1	330	Vannak Tökök a Metin2-ben?
+1	331	Van Zokni a Metin2-ben?
+1	332	A Sötét oltárban a tûz lángja piros?
+1	333	A Majomgenerális szintje 40 (szint 4)?
+1	334	Bárki használhat kardot?
+1	335	Nakajima egy NPC?
+1	336	Lehet Belépési engedélyt zsákmányolni Szörnytõl?
+1	337	200 Nagy vörös ital ára 33,000 yang a Vegyeskereskedésben?
+1	338	A díszes íjat tudja a Nindzsa használni?
+1	339	Choung a map1-en van?
+1	340	A bánat metinje szintje 10 (szint 5)?
+1	341	Van Karácsonyi Tüzijáték?
+1	342	A kínai tüzijáték növeli a mozgási sebességet?
+1	343	A kínai tûzijáték növeli a támadósebességet?
+1	344	A kínai tûzijáték növeli az ájulási esélyt?
+1	345	A Grillezett lazac visszaállít 350 Életerõt?
+1	346	A Grillezett lazac visszaállít 350 mana pontot?

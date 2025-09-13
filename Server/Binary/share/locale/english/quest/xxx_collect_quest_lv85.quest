@@ -1,0 +1,309 @@
+----------------------------------------------------
+--COLLECT QUEST_lv85
+--METIN2 수집 퀘스트  
+----------------------------------------------------
+quest collect_quest_lv85  begin
+	state start begin
+	end
+	state run begin
+		when login or levelup with pc.level >= 85  begin
+			set_state(information)
+		end	
+	end
+
+	state information begin
+		when letter begin
+			local v = find_npc_by_vnum(20084)
+			if v != 0 then
+				target.vid("__TARGET__", v, "채기랍")
+			end
+			send_letter("채기랍의 부탁")
+		end
+
+		when button or info begin
+			say_title("채기랍의 부탁")
+			say("")
+			say("을두지의 제자 채기랍이")
+			say("당신을 또 애타게 찾고있습니다")
+			say("가서 무슨 일인지 알아보고 도와주시길 바랍니다.")
+			say("")
+		end
+		
+		when __TARGET__.target.click or	20084.chat."내 말좀 들어주오" begin
+			target.delete("__TARGET__")
+			say("채기랍:")
+			---                                                   l
+		    say("어이쿠~!!! 나좀 봐주시오...")
+			say("이제껏 도와준 당신에게 정말 고맙소")
+			say("이번엔 적귀목림의 대한 도감을 편찬 중인데..")
+			say("내 힘으로는 어림도 없는 듯 하구려..")
+		    say("원래는 내가 직접 나가서 조사를 해야겠지만..")
+			say("보시다시피 문약한 서생이 무슨 힘이 있겠소..")
+			say("부디 날 도와주길 바라오...")
+			say("내 사례는 독톡히 하리다~!")
+			wait()
+			say("채기랍:")
+			say("다름이 아니라 적귀목림에 대해 알고싶소..")
+			say("그곳은 원래 거목으로 이루어진 평화로운 숲이었는데")
+			say("추락한 메틴석의 영향으로 사악한 기운으로 오염되어")
+			say("악령이 깃든 저주 받은 곳으로 변모했다는구만")
+			say("그곳을 알기 위해서는 적귀목가지가 필요한데..")
+			say("")
+			wait()
+			say("채기랍")
+			say("앞으로 몇일간 적귀목가지를 나에게")
+			say("가져올수 있겠소?.")
+			say("너무 가늘거나 부러진 가지는 ")
+			say("받을수 없으니 이해해주길 바라오..")
+			say("연구에 필요한 수는 40개라오...")
+			say("부탁하겠소~!")
+			say("")																																						  
+			set_state(go_to_disciple)
+			pc.setqf("duration",0)  -- 시도 할수 있는 시간
+			pc.setqf("collect_count",0)--이제껏 모은 아이템 수
+			pc.setqf("drink_drug",0) --현혹의 물약을 먹으면 1
+		end
+	end
+
+	state go_to_disciple begin
+		when letter begin
+			send_letter("채기랍의 연구")
+			
+		end
+		when button or info begin
+			say_title("적귀목림에 대해 알고싶다")
+			---                                                   l
+			say("")
+			say("을두지의 제자인 채기랍은 적귀목림에 대해 조사중인데")
+			say("각기 다른힘을 가진 거목들이 있는")
+			say("적귀목림의 적귀목가지가 채기랍의 연구에 필요하다 ")
+			say("채기랍에게 적귀목가지 40개를 가져다 주자")
+			say("")
+			say_item_vnum(30167) 
+			say_reward("  현재".." "..pc.getqf("collect_count").."개를 모았습니다")
+			say("")
+		end
+		
+		when 71035.use begin --현혹의 물약
+			if get_time() < pc.getqf("duration") then
+				say("아직 물약을 쓸수 없습니다")
+				return
+			end
+			if pc.getqf("drink_drug")==1 then
+				say("이미 한번 드셨습니다")
+				return
+			end
+			if pc.count_item(30167)==0 then
+				say("채기랍:")
+				say("적귀목가지부터 구한다음에 ")
+				say("물약을 사용해도 늦지 않네")
+				say("")
+				return
+			end
+
+			item.remove()	
+			pc.setqf("drink_drug",1)
+		end
+		when 2311.kill or  2312.kill or  2313.kill or 2314.kill or 2315.kill begin 
+			local s = number(1, 200)
+			if s == 1  then
+				pc.give_item2(30167)
+				send_letter("적귀목가지를 획득하셨습니다")		
+			end	
+		end
+
+
+		
+    	when 20084.chat."적귀목가지를 가져온건가? " with pc.count_item(30167) >0   begin
+			if get_time() > pc.getqf("duration") then
+				say("채기랍")
+				---                                                   l
+				say("오!! 가져왔군...")
+				say("내가 한번 이것을 검토 해봐야겠군...")
+				say("잠시만 기다리게...")
+				say("")
+				pc.remove_item(30167, 1)
+				if  is_test_server()  then 
+					pc.setqf("duration",get_time()+2) 
+				else
+					pc.setqf("duration",get_time()+60*60*22) -----------------------------------22시간
+				end
+				wait()
+				
+				local pass_percent
+				if pc.getqf("drink_drug")==0 then
+					pass_percent=60
+				else		
+					pass_percent=95
+				end
+				
+				local s= number(1,100)
+				if s<= pass_percent  then
+				   if pc.getqf("collect_count")< 39 then     --40개미만 
+						local index =pc.getqf("collect_count")+1 
+						pc.setqf("collect_count",index)     --하나 구했으니 +1 해준다
+						say("채기랍:")
+						say("오오~!! 훌륭하구먼! 수고했네...")
+						say("앞으로".." "..40-pc.getqf("collect_count").. " 개만 더 가져오면 되겠구먼~!!")
+						say("수고해주게~!")
+						say("")
+						pc.setqf("drink_drug",0)	 --물약 초기화
+						return
+					end
+					say("채기랍:")
+					say("40개를 다모았구만!!")
+					say("이젠 이 연구의  key item인")
+					say("적귀목영혼석 1개만 있으면 되겠어")
+					say("할수 있겠지?")	
+					say("적귀목영혼석은 적귀목림에있는 나무들에게서")
+					say("얻을수 있을껄세")
+					say("")
+					pc.setqf("collect_count",0)
+					pc.setqf("drink_drug",0)	
+					pc.setqf("duration",0) 
+					set_state(key_item)
+					return
+				else								
+				say("채기랍:")
+				say("흠...")
+				say("미안하지만 이 가지는 사용을 못할 것 같구먼..")
+				say("연약하고 부러진 부분이 많은 가지로구만..")
+				say("다시 하나 구해올수있겠는가?")
+				say("")				   
+				pc.setqf("drink_drug",0)	 --물약 초기화
+				return
+				end
+		else
+		  say("채기랍:")
+		  say("이런 이런 미안하네....")
+		  say("저번에 구한 적귀목가지를 아직 분석하지 ")
+		  say("못했다네.....")
+		  say("흠 미안하네....나중에 가져다 주지 않겠나?")
+		  say("")
+		  return
+		end
+
+	end
+end
+
+
+	state key_item begin
+		when letter begin
+			send_letter("채기랍의 연구")
+			
+			if pc.count_item(30226)>0 then	
+				local v = find_npc_by_vnum(20084)
+				if v != 0 then
+					target.vid("__TARGET__", v, "채기랍")
+				end
+			end
+
+		end
+		when button or info begin
+			if pc.count_item(30226) >0 then
+				say_title("적귀목 영혼석 획득")
+				say("")
+				---                                                   l
+				say("드디어 적귀목 영혼석을 획득하였다")
+				say("이를 채기랍에게 가져다주자")
+				say("")
+				return
+			end
+
+			say_title("귀목영혼석이 필요해")
+			say("")
+			---                                                   l
+			say("을두지의 제자인 채기랍의 연구를 위해")
+			say("적귀목가지 40개를 가져다 주었다")
+			say("마지막으로 필요한것은 적귀목영혼석!")
+			say_item_vnum(30226)
+			say("적귀목종족을 잡아 적귀목영혼석을 구하자!")	
+			say("이것을 구하면 채기랍에게 가져다주자")
+			say("")
+		end
+		
+
+	
+		when 2311.kill or  2312.kill or  2313.kill or 2314.kill or 2315.kill  begin
+			
+			 local s = number(1, 500)
+			if s == 1 and pc.count_item(30226)==0 then
+				pc.give_item2(30226)
+				send_letter("적귀목영혼석을 획득하셨습니다")		
+			end	
+		end
+
+
+		
+		when __TARGET__.target.click  or	20084.chat."적귀목영혼석을 가져왔습니다" with pc.count_item(30226) > 0  begin
+		    target.delete("__TARGET__")
+			say("채기랍")
+			say("오오오~!!! 수고 했네..")
+			say("보상으로 자네의 내공을 높여 주도록 하지..")
+			say("여기 내공을 높이는 약들에 대한 정보가 적힌")
+			say("약방문이네...")
+			say("백고에게 가면 만들어 줄것일세..")
+			say("그럼 즐거운 하루되게나~!")
+			say("자네 덕분에 적귀목림에 대해서는 확실히 알 것 같으이~!")
+			say("")
+			pc.remove_item(30226,1)
+			set_state(__reward)
+		end
+		
+	end
+	
+	state __reward begin
+		when letter begin
+			send_letter("채기랍의 보상")
+			
+			local v = find_npc_by_vnum(20018)
+			if v != 0 then
+				target.vid("__TARGET__", v, "백고")
+			end
+
+		end
+		when button or info begin
+			say_title("채기랍의 보상을 받자")
+			---                                                   l
+			say("채기랍의 귀목림 연구를 위해 적귀목가지 40개와")
+			say("적귀목영혼석까지 구해다준 보상으로 ")
+			say("채기랍은 내공을 높이는 약들에 대한 정보가 적힌")
+			say("약방문을 주었다")
+			say("약물을 받기위해 백고에게 가보자")
+			say("")
+		end
+		
+		when __TARGET__.target.click  or	20018.chat."이 약방문을 보세요"  begin
+		    target.delete("__TARGET__")
+			say("백고:")
+			say("어디보자..")
+			say("채기랍이 보낸 약방문이라고?")
+			say("음.. 모든유저에 대한 저항을 10% 올려주라는거군")
+			say("")
+			wait()
+			say("백고:")
+			say("그리고~보라색 흑단상자 ")
+			say("여기있네~")
+			say("")
+			say_reward("채기랍의 부탁을 들어준 보상으로")
+			say_reward("타 유저에 대한 저항이 10% 증가되었습니다.")
+			say_reward("이 효과는 일시적이 아니라 영구적으로 적용됩니다")
+			say("")
+			pc.give_item2(50115) 
+			clear_letter()
+			affect.add_collect_point(POINT_RESIST_WARRIOR,10,60*60*24*365*60) --60년	
+			affect.add_collect_point(POINT_RESIST_ASSASSIN,10,60*60*24*365*60) --60년	
+			affect.add_collect_point(POINT_RESIST_SURA,10,60*60*24*365*60) --60년	
+			affect.add_collect_point(POINT_RESIST_SHAMAN,10,60*60*24*365*60) --60년	
+			set_quest_state("collect_quest_lv90", "run")
+			set_state(__complete)
+		end
+			
+	end
+
+	
+	state __complete begin
+	end
+end
+
+

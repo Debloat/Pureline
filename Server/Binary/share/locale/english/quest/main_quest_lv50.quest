@@ -1,0 +1,202 @@
+
+
+quest main_quest_lv50 begin
+	state start begin
+	end
+	state run begin
+		when login or levelup or enter with pc.get_level()>= 50 begin
+			set_state ( information )
+		end
+	end
+	state information begin
+		when letter begin
+			send_letter(gameforge.main_quest_lv32._110_npcChat)
+
+		end
+		when button or info begin
+			say_title(gameforge.main_quest_lv50._10_sayTitle)
+			say(gameforge.main_quest_lv50._20_say)
+		end
+
+		when 2036.kill begin
+			local s = number(1, 100)
+			if s <= 5 and pc.count_item("30150")==0 then
+				pc.give_item2(30150, 1)
+				set_state ( gototeacher5)
+			end
+		end
+	end
+
+	state gototeacher5 begin
+		when letter begin
+			send_letter(gameforge.main_quest_lv50._30_sendLetter)
+
+			local v=find_npc_by_vnum(20011)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, gameforge.main_quest_lv50._40_targetVid)
+			end
+		end
+		when button or info begin
+			say_title(gameforge.main_quest_lv50._50_sayTitle)
+			say(gameforge.main_quest_lv50._60_say)
+		end
+		when __TARGET__.target.click or	20011.chat.gameforge.main_quest_lv50._30_sendLetter begin
+			target.delete("__TARGET__")
+			say_title(gameforge.main_quest_lv30._40_sayTitle)
+			say(gameforge.main_quest_lv50._70_say)
+			wait()
+			say_title(gameforge.main_quest_lv50._75_sayTitle)
+			say_reward(gameforge.main_quest_lv50._80_sayReward)
+			wait()
+			say_title(gameforge.main_quest_lv30._40_sayTitle)
+			say(gameforge.main_quest_lv50._90_say)
+			wait()
+			say_title(gameforge.main_quest_lv30._40_sayTitle)
+			say(gameforge.main_quest_lv50._100_say)
+			say_reward(gameforge.main_quest_lv50._110_sayReward)
+			pc.give_exp2(5000000)
+
+			say_reward(gameforge.main_quest_lv50._120_sayReward)
+			pc.change_money(125000)
+
+			say_reward(gameforge.main_quest_lv50._130_sayReward)
+			pc.give_item2(70050)
+
+			pc.remove_item(30150)
+
+			set_state ( survey6)
+
+		end
+	end
+	state survey6 begin
+		when letter begin
+			send_letter(gameforge.main_quest_lv50._140_sendLetter)
+			local v=find_npc_by_vnum(20359)
+			if 0==v then
+			else
+				target.vid("__TARGET1__", v, gameforge.main_quest_lv50._150_targetVid)
+			end
+
+		end
+		when button or info begin
+			say_title(gameforge.main_quest_lv50._160_sayTitle)
+			say(gameforge.main_quest_lv50._170_say)
+		end
+
+		when __TARGET1__.target.click or 20359.chat.gameforge.main_quest_lv50._180_npcChat begin
+			say_pc_name()
+			say(gameforge.main_quest_lv50._190_say)
+			pc.give_item2(30150)
+			set_state ( gototeacher6)
+		end
+	end
+
+	state gototeacher6 begin
+		when letter begin
+			send_letter(gameforge.main_quest_lv50._200_sendLetter)
+
+			local v=find_npc_by_vnum(20011)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, gameforge.main_quest_lv47._530_targetVid)
+			end
+		end
+		when button or info begin
+			say_title(gameforge.main_quest_lv50._210_sayTitle)
+			say(gameforge.main_quest_lv50._220_say)
+		end
+		when __TARGET__.target.click or	20011.chat.gameforge.main_quest_lv50._200_sendLetter begin
+			target.delete("__TARGET__")
+			say_title(gameforge.main_quest_lv30._40_sayTitle)
+			say(gameforge.main_quest_lv50._230_say)
+			wait()
+			say_title(gameforge.main_quest_lv50._235_sayTitle)
+			say_reward(gameforge.main_quest_lv50._240_sayReward)
+			wait()
+			say_title(gameforge.main_quest_lv30._40_sayTitle)
+			say(gameforge.main_quest_lv50._250_say)
+			wait()
+			say_title(gameforge.main_quest_lv30._40_sayTitle)
+			say(gameforge.main_quest_lv50._260_say)
+			say_reward(gameforge.main_quest_lv50._270_sayReward)
+			pc.give_exp2(5500000)
+
+			say_reward(gameforge.main_quest_lv50._280_sayReward)
+			pc.change_money(137500)
+
+			say_reward(gameforge.main_quest_lv50._290_sayReward)
+			pc.give_item2(70051)
+
+			pc.remove_item(30150)
+
+			set_state (survey7)
+
+		end
+	end
+
+	state survey7 begin
+		when letter begin
+			send_letter(gameforge.main_quest_lv32._110_npcChat)
+
+		end
+		when button or info begin
+			say_title(gameforge.main_quest_lv50._300_sayTitle)
+			say(gameforge.main_quest_lv50._310_say)
+		end
+
+		when 2034.kill begin
+			pc.give_item2(30150)
+			set_state ( gototeacher7)
+		end
+	end
+
+	state gototeacher7 begin
+		when letter begin
+			send_letter(gameforge.main_quest_lv50._320_sendLetter)
+
+			local v=find_npc_by_vnum(20011)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, gameforge.main_quest_lv50._330_targetVid)
+			end
+		end
+		when button or info begin
+			say_title(gameforge.main_quest_lv50._335_sayTitle)
+			say(gameforge.main_quest_lv50._340_say)
+		end
+		when __TARGET__.target.click or	20011.chat.gameforge.main_quest_lv50._320_sendLetter begin
+			target.delete("__TARGET__")
+			say_title(gameforge.main_quest_lv30._40_sayTitle)
+			say(gameforge.main_quest_lv50._350_say)
+			wait()
+			say_title(gameforge.main_quest_lv50._355_sayTitle)
+			say_reward(gameforge.main_quest_lv50._360_sayReward)
+			wait()
+			say_title(gameforge.main_quest_lv50._365_sayTitle)
+			say_reward(gameforge.main_quest_lv50._370_sayReward)
+			wait()
+			say_title(gameforge.main_quest_lv30._40_sayTitle)
+			say(gameforge.main_quest_lv50._380_say)
+			wait()
+			say_title(gameforge.main_quest_lv30._40_sayTitle)
+			say(gameforge.main_quest_lv50._390_say)
+			wait()
+			say_title(gameforge.main_quest_lv30._40_sayTitle)
+			say(gameforge.main_quest_lv50._400_say)
+			say_reward(gameforge.main_quest_lv50._410_sayReward)
+						
+			pc.give_exp2(6000000)
+			pc.give_item2(71004)
+			pc.remove_item(30150)
+			pc.change_money(150000)
+
+			clear_letter()
+			set_state (__COMPLETE__)
+			set_quest_state("main_quest_lv55", "run")
+		end
+	end
+	state __COMPLETE__ begin
+	end
+end	
+

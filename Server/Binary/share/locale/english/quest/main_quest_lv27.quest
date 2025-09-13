@@ -1,0 +1,116 @@
+quest main_quest_lv27 begin
+	state start begin
+	end
+	state run begin
+		when login or levelup or enter begin
+			if pc.get_level() >= 27 then 				
+				setstate( gotoboss )		
+			end
+		end
+	end
+	state gotoboss begin
+		when letter begin
+			local v=find_npc_by_vnum(20355)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, gameforge.main_quest_lv10._180_targetVid)
+			end
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.main_quest_lv27._10_makequestbutton)
+			q.set_title(gameforge.main_quest_lv27._10_makequestbutton)
+			q.start()
+		end
+		when button begin
+			say_title(gameforge.main_quest_lv27._10_makequestbutton)
+			say(gameforge.main_quest_lv27._20_say)
+
+		end
+		when info begin
+			say_title(gameforge.main_quest_lv27._10_makequestbutton)
+			say(gameforge.main_quest_lv27._30_say)
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+			say_title(gameforge.main_quest_lv10._30_sayTitle)
+			say(gameforge.main_quest_lv27._40_say)
+			wait()
+			say_title(gameforge.main_quest_lv10._30_sayTitle)
+			say(gameforge.main_quest_lv27._50_say)
+			wait()
+			say_title(gameforge.main_quest_lv27._60_sayTitle)
+			say(gameforge.main_quest_lv27._70_say)
+			setstate( killmetinstone )
+			q.done()
+		end
+	end
+
+	state killmetinstone begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.main_quest_lv27._10_makequestbutton)
+			q.set_title(gameforge.main_quest_lv27._10_makequestbutton)
+			q.start()
+		end
+		when button begin
+			say_title(gameforge.main_quest_lv27._10_makequestbutton)
+			say(gameforge.main_quest_lv27._80_say)
+		end
+		when info begin
+			say_title(gameforge.main_quest_lv27._10_makequestbutton)
+			say(gameforge.main_quest_lv27._80_say)
+		end
+		when 8005.kill begin
+			say_title(gameforge.main_quest_lv27._10_makequestbutton)
+			say(gameforge.main_quest_lv27._90_say)
+			setstate(gotoboss2)
+			q.done()
+		end	
+	end
+	state gotoboss2 begin
+		when letter begin
+			local v=find_npc_by_vnum(20355)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, gameforge.main_quest_lv10._180_targetVid)
+			end
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.main_quest_lv27._100_makequestbutton)
+			q.set_title(gameforge.main_quest_lv14._110_sayReward)
+			q.start()
+		end
+		when button begin
+			say_title(gameforge.main_quest_lv27._100_makequestbutton)
+			say(gameforge.main_quest_lv14._110_sayReward)
+		end
+		when info begin
+			say_title(gameforge.main_quest_lv27._100_makequestbutton)
+			say(gameforge.main_quest_lv14._110_sayReward)
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+			say_title(gameforge.main_quest_lv10._30_sayTitle)
+			say(gameforge.main_quest_lv27._110_say)
+			wait()
+			say_title(gameforge.main_quest_lv27._120_sayTitle)
+						say_reward(gameforge.main_quest_lv27._130_sayReward)
+say_reward(string.format(gameforge.main_quest_lv27._140_sayReward, item_name(30018)))
+say_reward(string.format(gameforge.main_quest_lv27._140_sayReward, item_name(30031)))
+			pc.give_exp2( 300000 )
+			pc.change_money( 15000 )
+			pc.give_item2( 30018,1 ) 
+			pc.give_item2( 30031,1 ) 
+			q.done()
+			clear_letter()
+			set_state (__COMPLETE__)
+			set_quest_state("main_quest_lv30","run")
+		end
+	end
+	state __COMPLETE__ begin
+	end
+end
+
+

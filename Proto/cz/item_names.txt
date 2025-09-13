@@ -1,0 +1,5740 @@
+VNUM	LOCALE_NAME
+1	Yang
+2	By Kaptan Yosun
+10	Meè+0
+11	Meè+1
+12	Meè+2
+13	Meè+3
+14	Meè+4
+15	Meè+5
+16	Meè+6
+17	Meè+7
+18	Meè+8
+19	Meè+9
+20	Dlouhı meè+0
+21	Dlouhı meè+1
+22	Dlouhı meè+2
+23	Dlouhı meè+3
+24	Dlouhı meè+4
+25	Dlouhı meè+5
+26	Dlouhı meè+6
+27	Dlouhı meè+7
+28	Dlouhı meè+8
+29	Dlouhı meè+9
+30	Srpovitı meè+0
+31	Srpovitı meè+1
+32	Srpovitı meè+2
+33	Srpovitı meè+3
+34	Srpovitı meè+4
+35	Srpovitı meè+5
+36	Srpovitı meè+6
+37	Srpovitı meè+7
+38	Srpovitı meè+8
+39	Srpovitı meè+9
+40	Bambusovı meè+0
+41	Bambusovı meè+1
+42	Bambusovı meè+2
+43	Bambusovı meè+3
+44	Bambusovı meè+4
+45	Bambusovı meè+5
+46	Bambusovı meè+6
+47	Bambusovı meè+7
+48	Bambusovı meè+8
+49	Bambusovı meè+9
+50	Širokı meè+0
+51	Širokı meè+1
+52	Širokı meè+2
+53	Širokı meè+3
+54	Širokı meè+4
+55	Širokı meè+5
+56	Širokı meè+6
+57	Širokı meè+7
+58	Širokı meè+8
+59	Širokı meè+9
+60	Støíbrnı meè+0
+61	Støíbrnı meè+1
+62	Støíbrnı meè+2
+63	Støíbrnı meè+3
+64	Støíbrnı meè+4
+65	Støíbrnı meè+5
+66	Støíbrnı meè+6
+67	Støíbrnı meè+7
+68	Støíbrnı meè+8
+69	Støíbrnı meè+9
+70	Orchideomeè+0
+71	Orchideomeè+1
+72	Orchideomeè+2
+73	Orchideomeè+3
+74	Orchideomeè+4
+75	Orchideomeè+5
+76	Orchideomeè+6
+77	Orchideomeè+7
+78	Orchideomeè+8
+79	Orchideomeè+9
+80	Jedenapùlruèní meè+0
+81	Jedenapùlruèní meè+1
+82	Jedenapùlruèní meè+2
+83	Jedenapùlruèní meè+3
+84	Jedenapùlruèní meè+4
+85	Jedenapùlruèní meè+5
+86	Jedenapùlruèní meè+6
+87	Jedenapùlruèní meè+7
+88	Jedenapùlruèní meè+8
+89	Jedenapùlruèní meè+9
+90	Barbarskı meè+0
+91	Barbarskı meè+1
+92	Barbarskı meè+2
+93	Barbarskı meè+3
+94	Barbarskı meè+4
+95	Barbarskı meè+5
+96	Barbarskı meè+6
+97	Barbarskı meè+7
+98	Barbarskı meè+8
+99	Barbarskı meè+9
+100	Krvavı meè+0
+101	Krvavı meè+1
+102	Krvavı meè+2
+103	Krvavı meè+3
+104	Krvavı meè+4
+105	Krvavı meè+5
+106	Krvavı meè+6
+107	Krvavı meè+7
+108	Krvavı meè+8
+109	Krvavı meè+9
+110	Velkı meè+0
+111	Velkı meè+1
+112	Velkı meè+2
+113	Velkı meè+3
+114	Velkı meè+4
+115	Velkı meè+5
+116	Velkı meè+6
+117	Velkı meè+7
+118	Velkı meè+8
+119	Velkı meè+9
+120	Meè kouzelníka+0
+121	Meè kouzelníka+1
+122	Meè kouzelníka+2
+123	Meè kouzelníka+3
+124	Meè kouzelníka+4
+125	Meè kouzelníka+5
+126	Meè kouzelníka+6
+127	Meè kouzelníka+7
+128	Meè kouzelníka+8
+129	Meè kouzelníka+9
+130	Pùlmìsíèní meè+0
+131	Pùlmìsíèní meè+1
+132	Pùlmìsíèní meè+2
+133	Pùlmìsíèní meè+3
+134	Pùlmìsíèní meè+4
+135	Pùlmìsíèní meè+5
+136	Pùlmìsíèní meè+6
+137	Pùlmìsíèní meè+7
+138	Pùlmìsíèní meè+8
+139	Pùlmìsíèní meè+9
+140	Bitevní meè+0
+141	Bitevní meè+1
+142	Bitevní meè+2
+143	Bitevní meè+3
+144	Bitevní meè+4
+145	Bitevní meè+5
+146	Bitevní meè+6
+147	Bitevní meè+7
+148	Bitevní meè+8
+149	Bitevní meè+9
+150	Ozubená èepel ducha+0
+151	Ozubená èepel ducha+1
+152	Ozubená èepel ducha+2
+153	Ozubená èepel ducha+3
+154	Ozubená èepel ducha+4
+155	Ozubená èepel ducha+5
+156	Ozubená èepel ducha+6
+157	Ozubená èepel ducha+7
+158	Ozubená èepel ducha+8
+159	Ozubená èepel ducha+9
+160	Meè víly+0
+161	Meè víly+1
+162	Meè víly+2
+163	Meè víly+3
+164	Meè víly+4
+165	Meè víly+5
+166	Meè víly+6
+167	Meè víly+7
+168	Meè víly+8
+169	Meè víly+9
+170	Bodák+0
+171	Bodák+1
+172	Bodák+2
+173	Bodák+3
+174	Bodák+4
+175	Bodák+5
+176	Bodák+6
+177	Bodák+7
+178	Bodák+8
+179	Bodák+9
+180	Jedovatı meè+0
+181	Jedovatı meè+1
+182	Jedovatı meè+2
+183	Jedovatı meè+3
+184	Jedovatı meè+4
+185	Jedovatı meè+5
+186	Jedovatı meè+6
+187	Jedovatı meè+7
+188	Jedovatı meè+8
+189	Jedovatı meè+9
+190	Lví meè+0
+191	Lví meè+1
+192	Lví meè+2
+193	Lví meè+3
+194	Lví meè+4
+195	Lví meè+5
+196	Lví meè+6
+197	Lví meè+7
+198	Lví meè+8
+199	Lví meè+9
+200	Øezná èepel+0
+201	Øezná èepel+1
+202	Øezná èepel+2
+203	Øezná èepel+3
+204	Øezná èepel+4
+205	Øezná èepel+5
+206	Øezná èepel+6
+207	Øezná èepel+7
+208	Øezná èepel+8
+209	Øezná èepel+9
+210	Smrtící èepel+0
+211	Smrtící èepel+1
+212	Smrtící èepel+2
+213	Smrtící èepel+3
+214	Smrtící èepel+4
+215	Smrtící èepel+5
+216	Smrtící èepel+6
+217	Smrtící èepel+7
+218	Smrtící èepel+8
+219	Smrtící èepel+9
+220	Mìsíèní meè+0
+221	Mìsíèní meè+1
+222	Mìsíèní meè+2
+223	Mìsíèní meè+3
+224	Mìsíèní meè+4
+225	Mìsíèní meè+5
+226	Mìsíèní meè+6
+227	Mìsíèní meè+7
+228	Mìsíèní meè+8
+229	Mìsíèní meè+9
+230	Nebeskı meè+0
+231	Nebeskı meè+1
+232	Nebeskı meè+2
+233	Nebeskı meè+3
+234	Nebeskı meè+4
+235	Nebeskı meè+5
+236	Nebeskı meè+6
+237	Nebeskı meè+7
+238	Nebeskı meè+8
+239	Nebeskı meè+9
+240	Meè exorcismu+0
+241	Meè exorcismu+1
+242	Meè exorcismu+2
+243	Meè exorcismu+3
+244	Meè exorcismu+4
+245	Meè exorcismu+5
+246	Meè exorcismu+6
+247	Meè exorcismu+7
+248	Meè exorcismu+8
+249	Meè exorcismu+9
+250	Èepel démonù+0
+251	Èepel démonù+1
+252	Èepel démonù+2
+253	Èepel démonù+3
+254	Èepel démonù+4
+255	Èepel démonù+5
+256	Èepel démonù+6
+257	Èepel démonù+7
+258	Èepel démonù+8
+259	Èepel démonù+9
+260	Meè barona+0
+261	Meè barona+1
+262	Meè barona+2
+263	Meè barona+3
+264	Meè barona+4
+265	Meè barona+5
+266	Meè barona+6
+267	Meè barona+7
+268	Meè barona+8
+269	Meè barona+9
+270	Tritonùv meè+0
+271	Tritonùv meè+1
+272	Tritonùv meè+2
+273	Tritonùv meè+3
+274	Tritonùv meè+4
+275	Tritonùv meè+5
+276	Tritonùv meè+6
+277	Tritonùv meè+7
+278	Tritonùv meè+8
+279	Tritonùv meè+9
+280	Svatı meè+0
+281	Svatı meè+1
+282	Svatı meè+2
+283	Svatı meè+3
+284	Svatı meè+4
+285	Svatı meè+5
+286	Svatı meè+6
+287	Svatı meè+7
+288	Svatı meè+8
+289	Svatı meè+9
+290	Úplòkovı meè+0
+291	Úplòkovı meè+1
+292	Úplòkovı meè+2
+293	Úplòkovı meè+3
+294	Úplòkovı meè+4
+295	Úplòkovı meè+5
+296	Úplòkovı meè+6
+297	Úplòkovı meè+7
+298	Úplòkovı meè+8
+299	Úplòkovı meè+9
+460	Runovı meè +0
+461	Runovı meè +1
+462	Runovı meè +2
+463	Runovı meè +3
+464	Runovı meè +4
+465	Runovı meè +5
+466	Runovı meè +6
+467	Runovı meè +7
+468	Runovı meè +8
+469	Runovı meè +9
+470	Ozubenı draèí meè +0
+471	Ozubenı draèí meè +1
+472	Ozubenı draèí meè +2
+473	Ozubenı draèí meè +3
+474	Ozubenı draèí meè +4
+475	Ozubenı draèí meè +5
+476	Ozubenı draèí meè +6
+477	Ozubenı draèí meè +7
+478	Ozubenı draèí meè +8
+479	Ozubenı draèí meè +9
+1000	Dıka+0
+1001	Dıka+1
+1002	Dıka+2
+1003	Dıka+3
+1004	Dıka+4
+1005	Dıka+5
+1006	Dıka+6
+1007	Dıka+7
+1008	Dıka+8
+1009	Dıka+9
+1010	Kobøí dıka+0
+1011	Kobøí dıka+1
+1012	Kobøí dıka+2
+1013	Kobøí dıka+3
+1014	Kobøí dıka+4
+1015	Kobøí dıka+5
+1016	Kobøí dıka+6
+1017	Kobøí dıka+7
+1018	Kobøí dıka+8
+1019	Kobøí dıka+9
+1020	Nùková dıka+0
+1021	Nùková dıka+1
+1022	Nùková dıka+2
+1023	Nùková dıka+3
+1024	Nùková dıka+4
+1025	Nùková dıka+5
+1026	Nùková dıka+6
+1027	Nùková dıka+7
+1028	Nùková dıka+8
+1029	Nùková dıka+9
+1030	Nù štìstí+0
+1031	Nù štìstí+1
+1032	Nù štìstí+2
+1033	Nù štìstí+3
+1034	Nù štìstí+4
+1035	Nù štìstí+5
+1036	Nù štìstí+6
+1037	Nù štìstí+7
+1038	Nù štìstí+8
+1039	Nù štìstí+9
+1040	Nù koèièího skusu+0
+1041	Nù koèièího skusu+1
+1042	Nù koèièího skusu+2
+1043	Nù koèièího skusu+3
+1044	Nù koèièího skusu+4
+1045	Nù koèièího skusu+5
+1046	Nù koèièího skusu+6
+1047	Nù koèièího skusu+7
+1048	Nù koèièího skusu+8
+1049	Nù koèièího skusu+9
+1050	Dıka d'ábelské tváøe+0
+1051	Dıka d'ábelské tváøe+1
+1052	Dıka d'ábelské tváøe+2
+1053	Dıka d'ábelské tváøe+3
+1054	Dıka d'ábelské tváøe+4
+1055	Dıka d'ábelské tváøe+5
+1056	Dıka d'ábelské tváøe+6
+1057	Dıka d'ábelské tváøe+7
+1058	Dıka d'ábelské tváøe+8
+1059	Dıka d'ábelské tváøe+9
+1060	Dıka d'ábelské pìsti+0
+1061	Dıka d'ábelské pìsti+1
+1062	Dıka d'ábelské pìsti+2
+1063	Dıka d'ábelské pìsti+3
+1064	Dıka d'ábelské pìsti+4
+1065	Dıka d'ábelské pìsti+5
+1066	Dıka d'ábelské pìsti+6
+1067	Dıka d'ábelské pìsti+7
+1068	Dıka d'ábelské pìsti+8
+1069	Dıka d'ábelské pìsti+9
+1070	Krvavá dıka+0
+1071	Krvavá dıka+1
+1072	Krvavá dıka+2
+1073	Krvavá dıka+3
+1074	Krvavá dıka+4
+1075	Krvavá dıka+5
+1076	Krvavá dıka+6
+1077	Krvavá dıka+7
+1078	Krvavá dıka+8
+1079	Krvavá dıka+9
+1080	ebrovanı nù+0
+1081	ebrovanı nù+1
+1082	ebrovanı nù+2
+1083	ebrovanı nù+3
+1084	ebrovanı nù+4
+1085	ebrovanı nù+5
+1086	ebrovanı nù+6
+1087	ebrovanı nù+7
+1088	ebrovanı nù+8
+1089	ebrovanı nù+9
+1090	Chakram+0
+1091	Chakram+1
+1092	Chakram+2
+1093	Chakram+3
+1094	Chakram+4
+1095	Chakram+5
+1096	Chakram+6
+1097	Chakram+7
+1098	Chakram+8
+1099	Chakram+9
+1100	Draèí nù+0
+1101	Draèí nù+1
+1102	Draèí nù+2
+1103	Draèí nù+3
+1104	Draèí nù+4
+1105	Draèí nù+5
+1106	Draèí nù+6
+1107	Draèí nù+7
+1108	Draèí nù+8
+1109	Draèí nù+9
+1110	Svìtelnı nù+0
+1111	Svìtelnı nù+1
+1112	Svìtelnı nù+2
+1113	Svìtelnı nù+3
+1114	Svìtelnı nù+4
+1115	Svìtelnı nù+5
+1116	Svìtelnı nù+6
+1117	Svìtelnı nù+7
+1118	Svìtelnı nù+8
+1119	Svìtelnı nù+9
+1120	Siamskı nù+0
+1121	Siamskı nù+1
+1122	Siamskı nù+2
+1123	Siamskı nù+3
+1124	Siamskı nù+4
+1125	Siamskı nù+5
+1126	Siamskı nù+6
+1127	Siamskı nù+7
+1128	Siamskı nù+8
+1129	Siamskı nù+9
+1130	Chakram køídla d'ábla+0
+1131	Chakram køídla d'ábla+1
+1132	Chakram køídla d'ábla+2
+1133	Chakram køídla d'ábla+3
+1134	Chakram køídla d'ábla+4
+1135	Chakram køídla d'ábla+5
+1136	Chakram køídla d'ábla+6
+1137	Chakram køídla d'ábla+7
+1138	Chakram køídla d'ábla+8
+1139	Chakram køídla d'ábla+9
+1140	Ozubenı nù+0
+1141	Ozubenı nù+1
+1142	Ozubenı nù+2
+1143	Ozubenı nù+3
+1144	Ozubenı nù+4
+1145	Ozubenı nù+5
+1146	Ozubenı nù+6
+1147	Ozubenı nù+7
+1148	Ozubenı nù+8
+1149	Ozubenı nù+9
+1150	Paprskovitı nù+0
+1151	Paprskovitı nù+1
+1152	Paprskovitı nù+2
+1153	Paprskovitı nù+3
+1154	Paprskovitı nù+4
+1155	Paprskovitı nù+5
+1156	Paprskovitı nù+6
+1157	Paprskovitı nù+7
+1158	Paprskovitı nù+8
+1159	Paprskovitı nù+9
+1160	Potùèkovı nù+0
+1161	Potùèkovı nù+1
+1162	Potùèkovı nù+2
+1163	Potùèkovı nù+3
+1164	Potùèkovı nù+4
+1165	Potùèkovı nù+5
+1166	Potùèkovı nù+6
+1167	Potùèkovı nù+7
+1168	Potùèkovı nù+8
+1169	Potùèkovı nù+9
+1170	Èernolistá dıka+0
+1171	Èernolistá dıka+1
+1172	Èernolistá dıka+2
+1173	Èernolistá dıka+3
+1174	Èernolistá dıka+4
+1175	Èernolistá dıka+5
+1176	Èernolistá dıka+6
+1177	Èernolistá dıka+7
+1178	Èernolistá dıka+8
+1179	Èernolistá dıka+9
+1340	Meè Pìti elementù +0
+1341	Meè Pìti elementù +1
+1342	Meè Pìti elementù +2
+1343	Meè Pìti elementù +3
+1344	Meè Pìti elementù +4
+1345	Meè Pìti elementù +5
+1346	Meè Pìti elementù +6
+1347	Meè Pìti elementù +7
+1348	Meè Pìti elementù +8
+1349	Meè Pìti elementù +9
+2000	Luk+0
+2001	Luk+1
+2002	Luk+2
+2003	Luk+3
+2004	Luk+4
+2005	Luk+5
+2006	Luk+6
+2007	Luk+7
+2008	Luk+8
+2009	Luk+9
+2010	Dlouhı luk+0
+2011	Dlouhı luk+1
+2012	Dlouhı luk+2
+2013	Dlouhı luk+3
+2014	Dlouhı luk+4
+2015	Dlouhı luk+5
+2016	Dlouhı luk+6
+2017	Dlouhı luk+7
+2018	Dlouhı luk+8
+2019	Dlouhı luk+9
+2020	Sloenı luk+0
+2021	Sloenı luk+1
+2022	Sloenı luk+2
+2023	Sloenı luk+3
+2024	Sloenı luk+4
+2025	Sloenı luk+5
+2026	Sloenı luk+6
+2027	Sloenı luk+7
+2028	Sloenı luk+8
+2029	Sloenı luk+9
+2030	Bitevní luk+0
+2031	Bitevní luk+1
+2032	Bitevní luk+2
+2033	Bitevní luk+3
+2034	Bitevní luk+4
+2035	Bitevní luk+5
+2036	Bitevní luk+6
+2037	Bitevní luk+7
+2038	Bitevní luk+8
+2039	Bitevní luk+9
+2040	Jezdeckı dlouhı luk+0
+2041	Jezdeckı dlouhı luk+1
+2042	Jezdeckı dlouhı luk+2
+2043	Jezdeckı dlouhı luk+3
+2044	Jezdeckı dlouhı luk+4
+2045	Jezdeckı dlouhı luk+5
+2046	Jezdeckı dlouhı luk+6
+2047	Jezdeckı dlouhı luk+7
+2048	Jezdeckı dlouhı luk+8
+2049	Jezdeckı dlouhı luk+9
+2050	Jezdeckı bitevní luk+0
+2051	Jezdeckı bitevní luk+1
+2052	Jezdeckı bitevní luk+2
+2053	Jezdeckı bitevní luk+3
+2054	Jezdeckı bitevní luk+4
+2055	Jezdeckı bitevní luk+5
+2056	Jezdeckı bitevní luk+6
+2057	Jezdeckı bitevní luk+7
+2058	Jezdeckı bitevní luk+8
+2059	Jezdeckı bitevní luk+9
+2060	Roubovanı mìdìnı luk+0
+2061	Roubovanı mìdìnı luk+1
+2062	Roubovanı mìdìnı luk+2
+2063	Roubovanı mìdìnı luk+3
+2064	Roubovanı mìdìnı luk+4
+2065	Roubovanı mìdìnı luk+5
+2066	Roubovanı mìdìnı luk+6
+2067	Roubovanı mìdìnı luk+7
+2068	Roubovanı mìdìnı luk+8
+2069	Roubovanı mìdìnı luk+9
+2070	Nièivı luk+0
+2071	Nièivı luk+1
+2072	Nièivı luk+2
+2073	Nièivı luk+3
+2074	Nièivı luk+4
+2075	Nièivı luk+5
+2076	Nièivı luk+6
+2077	Nièivı luk+7
+2078	Nièivı luk+8
+2079	Nièivı luk+9
+2080	Rudookı luk+0
+2081	Rudookı luk+1
+2082	Rudookı luk+2
+2083	Rudookı luk+3
+2084	Rudookı luk+4
+2085	Rudookı luk+5
+2086	Rudookı luk+6
+2087	Rudookı luk+7
+2088	Rudookı luk+8
+2089	Rudookı luk+9
+2090	Trnolistovı luk+0
+2091	Trnolistovı luk+1
+2092	Trnolistovı luk+2
+2093	Trnolistovı luk+3
+2094	Trnolistovı luk+4
+2095	Trnolistovı luk+5
+2096	Trnolistovı luk+6
+2097	Trnolistovı luk+7
+2098	Trnolistovı luk+8
+2099	Trnolistovı luk+9
+2100	Luk z bıèího rohu+0
+2101	Luk z bıèího rohu+1
+2102	Luk z bıèího rohu+2
+2103	Luk z bıèího rohu+3
+2104	Luk z bıèího rohu+4
+2105	Luk z bıèího rohu+5
+2106	Luk z bıèího rohu+6
+2107	Luk z bıèího rohu+7
+2108	Luk z bıèího rohu+8
+2109	Luk z bıèího rohu+9
+2110	Luk jednoroce+0
+2111	Luk jednoroce+1
+2112	Luk jednoroce+2
+2113	Luk jednoroce+3
+2114	Luk jednoroce+4
+2115	Luk jednoroce+5
+2116	Luk jednoroce+6
+2117	Luk jednoroce+7
+2118	Luk jednoroce+8
+2119	Luk jednoroce+9
+2120	Luk s gigant. køídly+0
+2121	Luk s gigant. køídly+1
+2122	Luk s gigant. køídly+2
+2123	Luk s gigant. køídly+3
+2124	Luk s gigant. køídly+4
+2125	Luk s gigant. køídly+5
+2126	Luk s gigant. køídly+6
+2127	Luk s gigant. køídly+7
+2128	Luk s gigant. køídly+8
+2129	Luk s gigant. køídly+9
+2130	Meruòkovı luk+0
+2131	Meruòkovı luk+1
+2132	Meruòkovı luk+2
+2133	Meruòkovı luk+3
+2134	Meruòkovı luk+4
+2135	Meruòkovı luk+5
+2136	Meruòkovı luk+6
+2137	Meruòkovı luk+7
+2138	Meruòkovı luk+8
+2139	Meruòkovı luk+9
+2140	Velkı lutı draèí luk+0
+2141	Velkı lutı draèí luk+1
+2142	Velkı lutı draèí luk+2
+2143	Velkı lutı draèí luk+3
+2144	Velkı lutı draèí luk+4
+2145	Velkı lutı draèí luk+5
+2146	Velkı lutı draèí luk+6
+2147	Velkı lutı draèí luk+7
+2148	Velkı lutı draèí luk+8
+2149	Velkı lutı draèí luk+9
+2150	Luk z paroiny+0
+2151	Luk z paroiny+1
+2152	Luk z paroiny+2
+2153	Luk z paroiny+3
+2154	Luk z paroiny+4
+2155	Luk z paroiny+5
+2156	Luk z paroiny+6
+2157	Luk z paroiny+7
+2158	Luk z paroiny+8
+2159	Luk z paroiny+9
+2160	Velkı d'ábelskı luk+0
+2161	Velkı d'ábelskı luk+1
+2162	Velkı d'ábelskı luk+2
+2163	Velkı d'ábelskı luk+3
+2164	Velkı d'ábelskı luk+4
+2165	Velkı d'ábelskı luk+5
+2166	Velkı d'ábelskı luk+6
+2167	Velkı d'ábelskı luk+7
+2168	Velkı d'ábelskı luk+8
+2169	Velkı d'ábelskı luk+9
+2170	Ocelovı luk vran+0
+2171	Ocelovı luk vran+1
+2172	Ocelovı luk vran+2
+2173	Ocelovı luk vran+3
+2174	Ocelovı luk vran+4
+2175	Ocelovı luk vran+5
+2176	Ocelovı luk vran+6
+2177	Ocelovı luk vran+7
+2178	Ocelovı luk vran+8
+2179	Ocelovı luk vran+9
+2180	Modrı draèí luk+0
+2181	Modrı draèí luk+1
+2182	Modrı draèí luk+2
+2183	Modrı draèí luk+3
+2184	Modrı draèí luk+4
+2185	Modrı draèí luk+5
+2186	Modrı draèí luk+6
+2187	Modrı draèí luk+7
+2188	Modrı draèí luk+8
+2189	Modrı draèí luk+9
+2190	Luk duchù+0
+2191	Luk duchù+1
+2192	Luk duchù+2
+2193	Luk duchù+3
+2194	Luk duchù+4
+2195	Luk duchù+5
+2196	Luk duchù+6
+2197	Luk duchù+7
+2198	Luk duchù+8
+2199	Luk duchù+9
+2370	Luk Fénixe +0
+2371	Luk Fénixe +1
+2372	Luk Fénixe +2
+2373	Luk Fénixe +3
+2374	Luk Fénixe +4
+2375	Luk Fénixe +5
+2376	Luk Fénixe +6
+2377	Luk Fénixe +7
+2378	Luk Fénixe +8
+2379	Luk Fénixe +9
+3000	Halapartna+0
+3001	Halapartna+1
+3002	Halapartna+2
+3003	Halapartna+3
+3004	Halapartna+4
+3005	Halapartna+5
+3006	Halapartna+6
+3007	Halapartna+7
+3008	Halapartna+8
+3009	Halapartna+9
+3010	Oštìp+0
+3011	Oštìp+1
+3012	Oštìp+2
+3013	Oštìp+3
+3014	Oštìp+4
+3015	Oštìp+5
+3016	Oštìp+6
+3017	Oštìp+7
+3018	Oštìp+8
+3019	Oštìp+9
+3020	Gilotinová èepel+0
+3021	Gilotinová èepel+1
+3022	Gilotinová èepel+2
+3023	Gilotinová èepel+3
+3024	Gilotinová èepel+4
+3025	Gilotinová èepel+5
+3026	Gilotinová èepel+6
+3027	Gilotinová èepel+7
+3028	Gilotinová èepel+8
+3029	Gilotinová èepel+9
+3030	Pavouèí oštìp+0
+3031	Pavouèí oštìp+1
+3032	Pavouèí oštìp+2
+3033	Pavouèí oštìp+3
+3034	Pavouèí oštìp+4
+3035	Pavouèí oštìp+5
+3036	Pavouèí oštìp+6
+3037	Pavouèí oštìp+7
+3038	Pavouèí oštìp+8
+3039	Pavouèí oštìp+9
+3040	Sudlice+0
+3041	Sudlice+1
+3042	Sudlice+2
+3043	Sudlice+3
+3044	Sudlice+4
+3045	Sudlice+5
+3046	Sudlice+6
+3047	Sudlice+7
+3048	Sudlice+8
+3049	Sudlice+9
+3050	Váleèná kosa+0
+3051	Váleèná kosa+1
+3052	Váleèná kosa+2
+3053	Váleèná kosa+3
+3054	Váleèná kosa+4
+3055	Váleèná kosa+5
+3056	Váleèná kosa+6
+3057	Váleèná kosa+7
+3058	Váleèná kosa+8
+3059	Váleèná kosa+9
+3060	Váleèná vidlice+0
+3061	Váleèná vidlice+1
+3062	Váleèná vidlice+2
+3063	Váleèná vidlice+3
+3064	Váleèná vidlice+4
+3065	Váleèná vidlice+5
+3066	Váleèná vidlice+6
+3067	Váleèná vidlice+7
+3068	Váleèná vidlice+8
+3069	Váleèná vidlice+9
+3070	Pùlmìsíèní halapartna+0
+3071	Pùlmìsíèní halapartna+1
+3072	Pùlmìsíèní halapartna+2
+3073	Pùlmìsíèní halapartna+3
+3074	Pùlmìsíèní halapartna+4
+3075	Pùlmìsíèní halapartna+5
+3076	Pùlmìsíèní halapartna+6
+3077	Pùlmìsíèní halapartna+7
+3078	Pùlmìsíèní halapartna+8
+3079	Pùlmìsíèní halapartna+9
+3080	Obøí sekera+0
+3081	Obøí sekera+1
+3082	Obøí sekera+2
+3083	Obøí sekera+3
+3084	Obøí sekera+4
+3085	Obøí sekera+5
+3086	Obøí sekera+6
+3087	Obøí sekera+7
+3088	Obøí sekera+8
+3089	Obøí sekera+9
+3090	Ledovcová píka+0
+3091	Ledovcová píka+1
+3092	Ledovcová píka+2
+3093	Ledovcová píka+3
+3094	Ledovcová píka+4
+3095	Ledovcová píka+5
+3096	Ledovcová píka+6
+3097	Ledovcová píka+7
+3098	Ledovcová píka+8
+3099	Ledovcová píka+9
+3100	Meè Dvanáct duchù+0
+3101	Meè Dvanáct duchù+1
+3102	Meè Dvanáct duchù+2
+3103	Meè Dvanáct duchù+3
+3104	Meè Dvanáct duchù+4
+3105	Meè Dvanáct duchù+5
+3106	Meè Dvanáct duchù+6
+3107	Meè Dvanáct duchù+7
+3108	Meè Dvanáct duchù+8
+3109	Meè Dvanáct duchù+9
+3110	Èepel spásy+0
+3111	Èepel spásy+1
+3112	Èepel spásy+2
+3113	Èepel spásy+3
+3114	Èepel spásy+4
+3115	Èepel spásy+5
+3116	Èepel spásy+6
+3117	Èepel spásy+7
+3118	Èepel spásy+8
+3119	Èepel spásy+9
+3120	Zabiják lvù+0
+3121	Zabiják lvù+1
+3122	Zabiják lvù+2
+3123	Zabiják lvù+3
+3124	Zabiják lvù+4
+3125	Zabiják lvù+5
+3126	Zabiják lvù+6
+3127	Zabiják lvù+7
+3128	Zabiják lvù+8
+3129	Zabiják lvù+9
+3130	Velká sudlice+0
+3131	Velká sudlice+1
+3132	Velká sudlice+2
+3133	Velká sudlice+3
+3134	Velká sudlice+4
+3135	Velká sudlice+5
+3136	Velká sudlice+6
+3137	Velká sudlice+7
+3138	Velká sudlice+8
+3139	Velká sudlice+9
+3140	Magnetická èepel+0
+3141	Magnetická èepel+1
+3142	Magnetická èepel+2
+3143	Magnetická èepel+3
+3144	Magnetická èepel+4
+3145	Magnetická èepel+5
+3146	Magnetická èepel+6
+3147	Magnetická èepel+7
+3148	Magnetická èepel+8
+3149	Magnetická èepel+9
+3150	Èepel na pololidi+0
+3151	Èepel na pololidi+1
+3152	Èepel na pololidi+2
+3153	Èepel na pololidi+3
+3154	Èepel na pololidi+4
+3155	Èepel na pololidi+5
+3156	Èepel na pololidi+6
+3157	Èepel na pololidi+7
+3158	Èepel na pololidi+8
+3159	Èepel na pololidi+9
+3160	Meè zášti+0
+3161	Meè zášti+1
+3162	Meè zášti+2
+3163	Meè zášti+3
+3164	Meè zášti+4
+3165	Meè zášti+5
+3166	Meè zášti+6
+3167	Meè zášti+7
+3168	Meè zášti+8
+3169	Meè zášti+9
+3170	Zabiják lutıch drakù+0
+3171	Zabiják lutıch drakù+1
+3172	Zabiják lutıch drakù+2
+3173	Zabiják lutıch drakù+3
+3174	Zabiják lutıch drakù+4
+3175	Zabiják lutıch drakù+5
+3176	Zabiják lutıch drakù+6
+3177	Zabiják lutıch drakù+7
+3178	Zabiják lutıch drakù+8
+3179	Zabiják lutıch drakù+9
+3180	Zabiják modrıch drakù+0
+3181	Zabiják modrıch drakù+1
+3182	Zabiják modrıch drakù+2
+3183	Zabiják modrıch drakù+3
+3184	Zabiják modrıch drakù+4
+3185	Zabiják modrıch drakù+5
+3186	Zabiják modrıch drakù+6
+3187	Zabiják modrıch drakù+7
+3188	Zabiják modrıch drakù+8
+3189	Zabiják modrıch drakù+9
+3190	Sluneèní meè+0
+3191	Sluneèní meè+1
+3192	Sluneèní meè+2
+3193	Sluneèní meè+3
+3194	Sluneèní meè+4
+3195	Sluneèní meè+5
+3196	Sluneèní meè+6
+3197	Sluneèní meè+7
+3198	Sluneèní meè+8
+3199	Sluneèní meè+9
+3200	Èepel draèího boha+0
+3201	Èepel draèího boha+1
+3202	Èepel draèího boha+2
+3203	Èepel draèího boha+3
+3204	Èepel draèího boha+4
+3205	Èepel draèího boha+5
+3206	Èepel draèího boha+6
+3207	Èepel draèího boha+7
+3208	Èepel draèího boha+8
+3209	Èepel draèího boha+9
+3210	Èepel z krevele+0
+3211	Èepel z krevele+1
+3212	Èepel z krevele+2
+3213	Èepel z krevele+3
+3214	Èepel z krevele+4
+3215	Èepel z krevele+5
+3216	Èepel z krevele+6
+3217	Èepel z krevele+7
+3218	Èepel z krevele+8
+3219	Èepel z krevele+9
+4000	Amija+0
+4001	Amija+1
+4002	Amija+2
+4003	Amija+3
+4004	Amija+4
+4005	Amija+5
+4006	Amija+6
+4007	Amija+7
+4008	Amija+8
+4009	Amija+9
+4010	Devítièepel+0
+4011	Devítièepel+1
+4012	Devítièepel+2
+4013	Devítièepel+3
+4014	Devítièepel+4
+4015	Devítièepel+5
+4016	Devítièepel+6
+4017	Devítièepel+7
+4018	Devítièepel+8
+4019	Devítièepel+9
+4020	Krátkı nù+0
+4021	Krátkı nù+1
+4022	Krátkı nù+2
+4023	Krátkı nù+3
+4024	Krátkı nù+4
+4025	Krátkı nù+5
+4026	Krátkı nù+6
+4027	Krátkı nù+7
+4028	Krátkı nù+8
+4029	Krátkı nù+9
+4030	Dvojitá mìsíèní dıka+0
+4031	Dvojitá mìsíèní dıka+1
+4032	Dvojitá mìsíèní dıka+2
+4033	Dvojitá mìsíèní dıka+3
+4034	Dvojitá mìsíèní dıka+4
+4035	Dvojitá mìsíèní dıka+5
+4036	Dvojitá mìsíèní dıka+6
+4037	Dvojitá mìsíèní dıka+7
+4038	Dvojitá mìsíèní dıka+8
+4039	Dvojitá mìsíèní dıka+9
+4040	Nù bez duše+0
+4041	Nù bez duše+1
+4042	Nù bez duše+2
+4043	Nù bez duše+3
+4044	Nù bez duše+4
+4045	Nù bez duše+5
+4046	Nù bez duše+6
+4047	Nù bez duše+7
+4048	Nù bez duše+8
+4049	Nù bez duše+9
+5000	Mìdìnı zvon+0
+5001	Mìdìnı zvon+1
+5002	Mìdìnı zvon+2
+5003	Mìdìnı zvon+3
+5004	Mìdìnı zvon+4
+5005	Mìdìnı zvon+5
+5006	Mìdìnı zvon+6
+5007	Mìdìnı zvon+7
+5008	Mìdìnı zvon+8
+5009	Mìdìnı zvon+9
+5010	Støíbrnı zvon+0
+5011	Støíbrnı zvon+1
+5012	Støíbrnı zvon+2
+5013	Støíbrnı zvon+3
+5014	Støíbrnı zvon+4
+5015	Støíbrnı zvon+5
+5016	Støíbrnı zvon+6
+5017	Støíbrnı zvon+7
+5018	Støíbrnı zvon+8
+5019	Støíbrnı zvon+9
+5020	Zlatı zvon+0
+5021	Zlatı zvon+1
+5022	Zlatı zvon+2
+5023	Zlatı zvon+3
+5024	Zlatı zvon+4
+5025	Zlatı zvon+5
+5026	Zlatı zvon+6
+5027	Zlatı zvon+7
+5028	Zlatı zvon+8
+5029	Zlatı zvon+9
+5030	Nefritovı zvon+0
+5031	Nefritovı zvon+1
+5032	Nefritovı zvon+2
+5033	Nefritovı zvon+3
+5034	Nefritovı zvon+4
+5035	Nefritovı zvon+5
+5036	Nefritovı zvon+6
+5037	Nefritovı zvon+7
+5038	Nefritovı zvon+8
+5039	Nefritovı zvon+9
+5040	Studnovı zvon+0
+5041	Studnovı zvon+1
+5042	Studnovı zvon+2
+5043	Studnovı zvon+3
+5044	Studnovı zvon+4
+5045	Studnovı zvon+5
+5046	Studnovı zvon+6
+5047	Studnovı zvon+7
+5048	Studnovı zvon+8
+5049	Studnovı zvon+9
+5050	Meruòkovı zvon+0
+5051	Meruòkovı zvon+1
+5052	Meruòkovı zvon+2
+5053	Meruòkovı zvon+3
+5054	Meruòkovı zvon+4
+5055	Meruòkovı zvon+5
+5056	Meruòkovı zvon+6
+5057	Meruòkovı zvon+7
+5058	Meruòkovı zvon+8
+5059	Meruòkovı zvon+9
+5060	Kouzelnı zvon+0
+5061	Kouzelnı zvon+1
+5062	Kouzelnı zvon+2
+5063	Kouzelnı zvon+3
+5064	Kouzelnı zvon+4
+5065	Kouzelnı zvon+5
+5066	Kouzelnı zvon+6
+5067	Kouzelnı zvon+7
+5068	Kouzelnı zvon+8
+5069	Kouzelnı zvon+9
+5070	Zvon zlatobrouka+0
+5071	Zvon zlatobrouka+1
+5072	Zvon zlatobrouka+2
+5073	Zvon zlatobrouka+3
+5074	Zvon zlatobrouka+4
+5075	Zvon zlatobrouka+5
+5076	Zvon zlatobrouka+6
+5077	Zvon zlatobrouka+7
+5078	Zvon zlatobrouka+8
+5079	Zvon zlatobrouka+9
+5080	Zvon ocelového brouka+0
+5081	Zvon ocelového brouka+1
+5082	Zvon ocelového brouka+2
+5083	Zvon ocelového brouka+3
+5084	Zvon ocelového brouka+4
+5085	Zvon ocelového brouka+5
+5086	Zvon ocelového brouka+6
+5087	Zvon ocelového brouka+7
+5088	Zvon ocelového brouka+8
+5089	Zvon ocelového brouka+9
+5090	Zvon ptáka hromu+0
+5091	Zvon ptáka hromu+1
+5092	Zvon ptáka hromu+2
+5093	Zvon ptáka hromu+3
+5094	Zvon ptáka hromu+4
+5095	Zvon ptáka hromu+5
+5096	Zvon ptáka hromu+6
+5097	Zvon ptáka hromu+7
+5098	Zvon ptáka hromu+8
+5099	Zvon ptáka hromu+9
+5100	Zvon nebe a zemì+0
+5101	Zvon nebe a zemì+1
+5102	Zvon nebe a zemì+2
+5103	Zvon nebe a zemì+3
+5104	Zvon nebe a zemì+4
+5105	Zvon nebe a zemì+5
+5106	Zvon nebe a zemì+6
+5107	Zvon nebe a zemì+7
+5108	Zvon nebe a zemì+8
+5109	Zvon nebe a zemì+9
+5110	Staroitnı zvon+0
+5111	Staroitnı zvon+1
+5112	Staroitnı zvon+2
+5113	Staroitnı zvon+3
+5114	Staroitnı zvon+4
+5115	Staroitnı zvon+5
+5116	Staroitnı zvon+6
+5117	Staroitnı zvon+7
+5118	Staroitnı zvon+8
+5119	Staroitnı zvon+9
+5120	Zvon orchidejí+0
+5121	Zvon orchidejí+1
+5122	Zvon orchidejí+2
+5123	Zvon orchidejí+3
+5124	Zvon orchidejí+4
+5125	Zvon orchidejí+5
+5126	Zvon orchidejí+6
+5127	Zvon orchidejí+7
+5128	Zvon orchidejí+8
+5129	Zvon orchidejí+9
+5130	Zvon s kosou+0
+5131	Zvon s kosou+1
+5132	Zvon s kosou+2
+5133	Zvon s kosou+3
+5134	Zvon s kosou+4
+5135	Zvon s kosou+5
+5136	Zvon s kosou+6
+5137	Zvon s kosou+7
+5138	Zvon s kosou+8
+5139	Zvon s kosou+9
+5140	Draèí zvon+0
+5141	Draèí zvon+1
+5142	Draèí zvon+2
+5143	Draèí zvon+3
+5144	Draèí zvon+4
+5145	Draèí zvon+5
+5146	Draèí zvon+6
+5147	Draèí zvon+7
+5148	Draèí zvon+8
+5149	Draèí zvon+9
+5150	Ibiškovı zvon+0
+5151	Ibiškovı zvon+1
+5152	Ibiškovı zvon+2
+5153	Ibiškovı zvon+3
+5154	Ibiškovı zvon+4
+5155	Ibiškovı zvon+5
+5156	Ibiškovı zvon+6
+5157	Ibiškovı zvon+7
+5158	Ibiškovı zvon+8
+5159	Ibiškovı zvon+9
+5330	Zvon z draèí èelisti +0
+5331	Zvon z draèí èelisti +1
+5332	Zvon z draèí èelisti +2
+5333	Zvon z draèí èelisti +3
+5334	Zvon z draèí èelisti +4
+5335	Zvon z draèí èelisti +5
+5336	Zvon z draèí èelisti +6
+5337	Zvon z draèí èelisti +7
+5338	Zvon z draèí èelisti +8
+5339	Zvon z draèí èelisti +9
+5340	Zvon draèího ducha +0
+5341	Zvon draèího ducha +1
+5342	Zvon draèího ducha +2
+5343	Zvon draèího ducha +3
+5344	Zvon draèího ducha +4
+5345	Zvon draèího ducha +5
+5346	Zvon draèího ducha +6
+5347	Zvon draèího ducha +7
+5348	Zvon draèího ducha +8
+5349	Zvon draèího ducha +9
+7000	Vìjíø+0
+7001	Vìjíø+1
+7002	Vìjíø+2
+7003	Vìjíø+3
+7004	Vìjíø+4
+7005	Vìjíø+5
+7006	Vìjíø+6
+7007	Vìjíø+7
+7008	Vìjíø+8
+7009	Vìjíø+9
+7010	eleznı vìjíø+0
+7011	eleznı vìjíø+1
+7012	eleznı vìjíø+2
+7013	eleznı vìjíø+3
+7014	eleznı vìjíø+4
+7015	eleznı vìjíø+5
+7016	eleznı vìjíø+6
+7017	eleznı vìjíø+7
+7018	eleznı vìjíø+8
+7019	eleznı vìjíø+9
+7020	Vìjíø èerného tygra+0
+7021	Vìjíø èerného tygra+1
+7022	Vìjíø èerného tygra+2
+7023	Vìjíø èerného tygra+3
+7024	Vìjíø èerného tygra+4
+7025	Vìjíø èerného tygra+5
+7026	Vìjíø èerného tygra+6
+7027	Vìjíø èerného tygra+7
+7028	Vìjíø èerného tygra+8
+7029	Vìjíø èerného tygra+9
+7030	Vìjíø jeøabího køídla+0
+7031	Vìjíø jeøabího køídla+1
+7032	Vìjíø jeøabího køídla+2
+7033	Vìjíø jeøabího køídla+3
+7034	Vìjíø jeøabího køídla+4
+7035	Vìjíø jeøabího køídla+5
+7036	Vìjíø jeøabího køídla+6
+7037	Vìjíø jeøabího køídla+7
+7038	Vìjíø jeøabího køídla+8
+7039	Vìjíø jeøabího køídla+9
+7040	Paví vìjíø+0
+7041	Paví vìjíø+1
+7042	Paví vìjíø+2
+7043	Paví vìjíø+3
+7044	Paví vìjíø+4
+7045	Paví vìjíø+5
+7046	Paví vìjíø+6
+7047	Paví vìjíø+7
+7048	Paví vìjíø+8
+7049	Paví vìjíø+9
+7050	Vodní vìjíø+0
+7051	Vodní vìjíø+1
+7052	Vodní vìjíø+2
+7053	Vodní vìjíø+3
+7054	Vodní vìjíø+4
+7055	Vodní vìjíø+5
+7056	Vodní vìjíø+6
+7057	Vodní vìjíø+7
+7058	Vodní vìjíø+8
+7059	Vodní vìjíø+9
+7060	Kamennı vìjíø+0
+7061	Kamennı vìjíø+1
+7062	Kamennı vìjíø+2
+7063	Kamennı vìjíø+3
+7064	Kamennı vìjíø+4
+7065	Kamennı vìjíø+5
+7066	Kamennı vìjíø+6
+7067	Kamennı vìjíø+7
+7068	Kamennı vìjíø+8
+7069	Kamennı vìjíø+9
+7070	Vìjíø oceánu+0
+7071	Vìjíø oceánu+1
+7072	Vìjíø oceánu+2
+7073	Vìjíø oceánu+3
+7074	Vìjíø oceánu+4
+7075	Vìjíø oceánu+5
+7076	Vìjíø oceánu+6
+7077	Vìjíø oceánu+7
+7078	Vìjíø oceánu+8
+7079	Vìjíø oceánu+9
+7080	Bodací vìjíø+0
+7081	Bodací vìjíø+1
+7082	Bodací vìjíø+2
+7083	Bodací vìjíø+3
+7084	Bodací vìjíø+4
+7085	Bodací vìjíø+5
+7086	Bodací vìjíø+6
+7087	Bodací vìjíø+7
+7088	Bodací vìjíø+8
+7089	Bodací vìjíø+9
+7090	Fénickı vìjíø+0
+7091	Fénickı vìjíø+1
+7092	Fénickı vìjíø+2
+7093	Fénickı vìjíø+3
+7094	Fénickı vìjíø+4
+7095	Fénickı vìjíø+5
+7096	Fénickı vìjíø+6
+7097	Fénickı vìjíø+7
+7098	Fénickı vìjíø+8
+7099	Fénickı vìjíø+9
+7100	Trojitı vìjíø+0
+7101	Trojitı vìjíø+1
+7102	Trojitı vìjíø+2
+7103	Trojitı vìjíø+3
+7104	Trojitı vìjíø+4
+7105	Trojitı vìjíø+5
+7106	Trojitı vìjíø+6
+7107	Trojitı vìjíø+7
+7108	Trojitı vìjíø+8
+7109	Trojitı vìjíø+9
+7110	Vìjíø oboèí+0
+7111	Vìjíø oboèí+1
+7112	Vìjíø oboèí+2
+7113	Vìjíø oboèí+3
+7114	Vìjíø oboèí+4
+7115	Vìjíø oboèí+5
+7116	Vìjíø oboèí+6
+7117	Vìjíø oboèí+7
+7118	Vìjíø oboèí+8
+7119	Vìjíø oboèí+9
+7120	Èernı sluneèní Vìjíø+0
+7121	Èernı sluneèní vìjíø+1
+7122	Èernı sluneèní vìjíø+2
+7123	Èernı sluneèní vìjíø+3
+7124	Èernı sluneèní vìjíø+4
+7125	Èernı sluneèní vìjíø+5
+7126	Èernı sluneèní vìjíø+6
+7127	Èernı sluneèní vìjíø+7
+7128	Èernı sluneèní vìjíø+8
+7129	Èernı sluneèní vìjíø+9
+7130	Vìjíø nebeského ptáka+0
+7131	Vìjíø nebeského ptáka+1
+7132	Vìjíø nebeského ptáka+2
+7133	Vìjíø nebeského ptáka+3
+7134	Vìjíø nebeského ptáka+4
+7135	Vìjíø nebeského ptáka+5
+7136	Vìjíø nebeského ptáka+6
+7137	Vìjíø nebeského ptáka+7
+7138	Vìjíø nebeského ptáka+8
+7139	Vìjíø nebeského ptáka+9
+7140	Vìjíø spásy+0
+7141	Vìjíø spásy+1
+7142	Vìjíø spásy+2
+7143	Vìjíø spásy+3
+7144	Vìjíø spásy+4
+7145	Vìjíø spásy+5
+7146	Vìjíø spásy+6
+7147	Vìjíø spásy+7
+7148	Vìjíø spásy+8
+7149	Vìjíø spásy+9
+7150	Vìjíø extáze+0
+7151	Vìjíø extáze+1
+7152	Vìjíø extáze+2
+7153	Vìjíø extáze+3
+7154	Vìjíø extáze+4
+7155	Vìjíø extáze+5
+7156	Vìjíø extáze+6
+7157	Vìjíø extáze+7
+7158	Vìjíø extáze+8
+7159	Vìjíø extáze+9
+7160	Vìjíø podzimního vìtru+0
+7161	Vìjíø podzimního vìtru+1
+7162	Vìjíø podzimního vìtru+2
+7163	Vìjíø podzimního vìtru+3
+7164	Vìjíø podzimního vìtru+4
+7165	Vìjíø podzimního vìtru+5
+7166	Vìjíø podzimního vìtru+6
+7167	Vìjíø podzimního vìtru+7
+7168	Vìjíø podzimního vìtru+8
+7169	Vìjíø podzimního vìtru+9
+7170	Vìjíø osmi triagramù+0
+7171	Vìjíø osmi triagramù+1
+7172	Vìjíø osmi triagramù+2
+7173	Vìjíø osmi triagramù+3
+7174	Vìjíø osmi triagramù+4
+7175	Vìjíø osmi triagramù+5
+7176	Vìjíø osmi triagramù+6
+7177	Vìjíø osmi triagramù+7
+7178	Vìjíø osmi triagramù+8
+7179	Vìjíø osmi triagramù+9
+7180	Vìjíø draka+0
+7181	Vìjíø draka+1
+7182	Vìjíø draka+2
+7183	Vìjíø draka+3
+7184	Vìjíø draka+4
+7185	Vìjíø draka+5
+7186	Vìjíø draka+6
+7187	Vìjíø draka+7
+7188	Vìjíø draka+8
+7189	Vìjíø draka+9
+7190	Démonickı vìjíø+0
+7191	Démonickı vìjíø+1
+7192	Démonickı vìjíø+2
+7193	Démonickı vìjíø+3
+7194	Démonickı vìjíø+4
+7195	Démonickı vìjíø+5
+7196	Démonickı vìjíø+6
+7197	Démonickı vìjíø+7
+7198	Démonickı vìjíø+8
+7199	Démonickı vìjíø+9
+7200	Kopí+0
+7201	Kopí+1
+7202	Kopí+2
+7203	Kopí+3
+7204	Kopí+4
+7205	Kopí+5
+7206	Kopí+6
+7207	Kopí+7
+7208	Kopí+8
+7209	Kopí+9
+7370	Vìjíø draka+0
+7371	Vìjíø draka+1
+7372	Vìjíø draka+2
+7373	Vìjíø draka+3
+7374	Vìjíø draka+4
+7375	Vìjíø draka+5
+7376	Vìjíø draka+6
+7377	Vìjíø draka+7
+7378	Vìjíø draka+8
+7379	Vìjíø draka+9
+8000	Døevìnı šíp
+8001	Bambusovı šíp
+8002	Kamennı šíp
+8003	eleznı šíp
+8004	Ocelovı šíp
+8005	Støíbrnı šíp
+8006	Ohnivı šíp
+8007	Jedovatı šíp
+8008	Ledovı šíp
+8009	Zakletı šíp
+9001	Brnìní Nahan+5
+9002	Brnìní Tanma+5
+9003	Brnìní Jinhon+5
+9004	Brnìní Chung+5
+9501	Meè+5
+9502	Krátkı meè+5
+9503	Krátkı luk+5
+9504	Dlouhı meè+5
+9505	Velkı vìjíø+5
+11000	Brnìní vlka
+11010	Brnìní divoèáka
+11020	Brnìní medvìda
+11030	Brnìní tygra
+11200	Plátové brnìní mnicha+0
+11201	Plátové brnìní mnicha+1
+11202	Plátové brnìní mnicha+2
+11203	Plátové brnìní mnicha+3
+11204	Plátové brnìní mnicha+4
+11205	Plátové brnìní mnicha+5
+11206	Plátové brnìní mnicha+6
+11207	Plátové brnìní mnicha+7
+11208	Plátové brnìní mnicha+8
+11209	Plátové brnìní mnicha+9
+11210	Plátové elezné brnìní+0
+11211	Plátové elezné brnìní+1
+11212	Plátové elezné brnìní+2
+11213	Plátové elezné brnìní+3
+11214	Plátové elezné brnìní+4
+11215	Plátové elezné brnìní+5
+11216	Plátové elezné brnìní+6
+11217	Plátové elezné brnìní+7
+11218	Plátové elezné brnìní+8
+11219	Plátové elezné brnìní+9
+11220	Plátové brnìní tygra+0
+11221	Plátové brnìní tygra+1
+11222	Plátové brnìní tygra+2
+11223	Plátové brnìní tygra+3
+11224	Plátové brnìní tygra+4
+11225	Plátové brnìní tygra+5
+11226	Plátové brnìní tygra+6
+11227	Plátové brnìní tygra+7
+11228	Plátové brnìní tygra+8
+11229	Plátové brnìní tygra+9
+11230	Plátové brnìní lva+0
+11231	Plátové brnìní lva+1
+11232	Plátové brnìní lva+2
+11233	Plátové brnìní lva+3
+11234	Plátové brnìní lva+4
+11235	Plátové brnìní lva+5
+11236	Plátové brnìní lva+6
+11237	Plátové brnìní lva+7
+11238	Plátové brnìní lva+8
+11239	Plátové brnìní lva+9
+11240	Smrtelné plát. brnìní+0
+11241	Smrtelné plát. brnìní+1
+11242	Smrtelné plát. brnìní+2
+11243	Smrtelné plát. brnìní+3
+11244	Smrtelné plát. brnìní+4
+11245	Smrtelné plát. brnìní+5
+11246	Smrtelné plát. brnìní+6
+11247	Smrtelné plát. brnìní+7
+11248	Smrtelné plát. brnìní+8
+11249	Smrtelné plát. brnìní+9
+11250	Plátové brnìní draka+0
+11251	Plátové brnìní draka+1
+11252	Plátové brnìní draka+2
+11253	Plátové brnìní draka+3
+11254	Plátové brnìní draka+4
+11255	Plátové brnìní draka+5
+11256	Plátové brnìní draka+6
+11257	Plátové brnìní draka+7
+11258	Plátové brnìní draka+8
+11259	Plátové brnìní draka+9
+11260	Šupinaté plát.brnìní +0
+11261	Šupinaté plát.brnìní +1
+11262	Šupinaté plát.brnìní +2
+11263	Šupinaté plát.brnìní +3
+11264	Šupinaté plát.brnìní +4
+11265	Šupinaté plát.brnìní +5
+11266	Šupinaté plát.brnìní +6
+11267	Šupinaté plát.brnìní +7
+11268	Šupinaté plát.brnìní +8
+11269	Šupinaté plát.brnìní +9
+11270	Zlaté plátové brnìní+0
+11271	Zlaté plátové brnìní+1
+11272	Zlaté plátové brnìní+2
+11273	Zlaté plátové brnìní+3
+11274	Zlaté plátové brnìní+4
+11275	Zlaté plátové brnìní+5
+11276	Zlaté plátové brnìní+6
+11277	Zlaté plátové brnìní+7
+11278	Zlaté plátové brnìní+8
+11279	Zlaté plátové brnìní+9
+11280	Brnìní draèího boha+0
+11281	Brnìní draèího boha+1
+11282	Brnìní draèího boha+2
+11283	Brnìní draèího boha+3
+11284	Brnìní draèího boha+4
+11285	Brnìní draèího boha+5
+11286	Brnìní draèího boha+6
+11287	Brnìní draèího boha+7
+11288	Brnìní draèího boha+8
+11289	Brnìní draèího boha+9
+11290	Brnìní z èerné oceli+0
+11291	Brnìní z èerné oceli+1
+11292	Brnìní z èerné oceli+2
+11293	Brnìní z èerné oceli+3
+11294	Brnìní z èerné oceli+4
+11295	Brnìní z èerné oceli+5
+11296	Brnìní z èerné oceli+6
+11297	Brnìní z èerné oceli+7
+11298	Brnìní z èerné oceli+8
+11299	Brnìní z èerné oceli+9
+11300	Tvárné brnìní
+11301	Tvárné brnìní
+11302	Dobrá vytrvalost
+11303	Slabé Brnìní
+11304	Zed' proti nepøíteli
+11305	Inteligence
+11306	Vojáci
+11307	Lepší boty
+11308	Vytrvalost nepøítele
+11309	Vıdr jinıch nepøátel
+11400	Karmínovı oblek+0
+11401	Karmínovı oblek+1
+11402	Karmínovı oblek+2
+11403	Karmínovı oblek+3
+11404	Karmínovı oblek+4
+11405	Karmínovı oblek+5
+11406	Karmínovı oblek+6
+11407	Karmínovı oblek+7
+11408	Karmínovı oblek+8
+11409	Karmínovı oblek+9
+11410	Slonovinovı oblek+0
+11411	Slonovinovı oblek+1
+11412	Slonovinovı oblek+2
+11413	Slonovinovı oblek+3
+11414	Slonovinovı oblek+4
+11415	Slonovinovı oblek+5
+11416	Slonovinovı oblek+6
+11417	Slonovinovı oblek+7
+11418	Slonovinovı oblek+8
+11419	Slonovinovı oblek+9
+11420	Nachovı oblek+0
+11421	Nachovı oblek+1
+11422	Nachovı oblek+2
+11423	Nachovı oblek+3
+11424	Nachovı oblek+4
+11425	Nachovı oblek+5
+11426	Nachovı oblek+6
+11427	Nachovı oblek+7
+11428	Nachovı oblek+8
+11429	Nachovı oblek+9
+11430	Èervenı mravenèí oblek+0
+11431	Èervenı mravenèí oblek+1
+11432	Èervenı mravenèí oblek+2
+11433	Èervenı mravenèí oblek+3
+11434	Èervenı mravenèí oblek+4
+11435	Èervenı mravenèí oblek+5
+11436	Èervenı mravenèí oblek+6
+11437	Èervenı mravenèí oblek+7
+11438	Èervenı mravenèí oblek+8
+11439	Èervenı mravenèí oblek+9
+11440	Mravencolví oblek+0
+11441	Mravencolví oblek+1
+11442	Mravencolví oblek+2
+11443	Mravencolví oblek+3
+11444	Mravencolví oblek+4
+11445	Mravencolví oblek+5
+11446	Mravencolví oblek+6
+11447	Mravencolví oblek+7
+11448	Mravencolví oblek+8
+11449	Mravencolví oblek+9
+11450	Oblek ninjù+0
+11451	Oblek ninjù+1
+11452	Oblek ninjù+2
+11453	Oblek ninjù+3
+11454	Oblek ninjù+4
+11455	Oblek ninjù+5
+11456	Oblek ninjù+6
+11457	Oblek ninjù+7
+11458	Oblek ninjù+8
+11459	Oblek ninjù+9
+11460	Oblek mladého draka+0
+11461	Oblek mladého draka+1
+11462	Oblek mladého draka+2
+11463	Oblek mladého draka+3
+11464	Oblek mladého draka+4
+11465	Oblek mladého draka+5
+11466	Oblek mladého draka+6
+11467	Oblek mladého draka+7
+11468	Oblek mladého draka+8
+11469	Oblek mladého draka+9
+11470	Oblek vraedného vìtru+0
+11471	Oblek vraedného vìtru+1
+11472	Oblek vraedného vìtru+2
+11473	Oblek vraedného vìtru+3
+11474	Oblek vraedného vìtru+4
+11475	Oblek vraedného vìtru+5
+11476	Oblek vraedného vìtru+6
+11477	Oblek vraedného vìtru+7
+11478	Oblek vraedného vìtru+8
+11479	Oblek vraedného vìtru+9
+11480	Fuchsiovı oblek+0
+11481	Fuchsiovı oblek+1
+11482	Fuchsiovı oblek+2
+11483	Fuchsiovı oblek+3
+11484	Fuchsiovı oblek+4
+11485	Fuchsiovı oblek+5
+11486	Fuchsiovı oblek+6
+11487	Fuchsiovı oblek+7
+11488	Fuchsiovı oblek+8
+11489	Fuchsiovı oblek+9
+11490	Oblek èerného vìtru+0
+11491	Oblek èerného vìtru+1
+11492	Oblek èerného vìtru+2
+11493	Oblek èerného vìtru+3
+11494	Oblek èerného vìtru+4
+11495	Oblek èerného vìtru+5
+11496	Oblek èerného vìtru+6
+11497	Oblek èerného vìtru+7
+11498	Oblek èerného vìtru+8
+11499	Oblek èerného vìtru+9
+11500	Gang-Ma
+11501	Zung-Seon
+11502	Chung-Zin
+11503	Ho-Young
+11504	Young-Seon
+11505	Su-Sin
+11506	O-Gyo
+11507	Bi-Pung
+11508	Zeok-Hyoun
+11509	Ho-Gu
+11600	Pancéø. brnìní requiem+0
+11601	Pancéø. brnìní requiem+1
+11602	Pancéø. brnìní requiem+2
+11603	Pancéø. brnìní requiem+3
+11604	Pancéø. brnìní requiem+4
+11605	Pancéø. brnìní requiem+5
+11606	Pancéø. brnìní requiem+6
+11607	Pancéø. brnìní requiem+7
+11608	Pancéø. brnìní requiem+8
+11609	Pancéø. brnìní requiem+9
+11610	Plátové brnìní bouøe +0
+11611	Plátové brnìní bouøe +1
+11612	Plátové brnìní bouøe +2
+11613	Plátové brnìní bouøe +3
+11614	Plátové brnìní bouøe +4
+11615	Plátové brnìní bouøe +5
+11616	Plátové brnìní bouøe +6
+11617	Plátové brnìní bouøe +7
+11618	Plátové brnìní bouøe +8
+11619	Plátové brnìní bouøe +9
+11620	Pancéø.brnìní neštìstí+0
+11621	Pancéø.brnìní neštìstí+1
+11622	Pancéø.brnìní neštìstí+2
+11623	Pancéø.brnìní neštìstí+3
+11624	Pancéø.brnìní neštìstí+4
+11625	Pancéø.brnìní neštìstí+5
+11626	Pancéø.brnìní neštìstí+6
+11627	Pancéø.brnìní neštìstí+7
+11628	Pancéø.brnìní neštìstí+8
+11629	Pancéø.brnìní neštìstí+9
+11630	Pancéø. brnìní ducha+0
+11631	Pancéø. brnìní ducha+1
+11632	Pancéø. brnìní ducha+2
+11633	Pancéø. brnìní ducha+3
+11634	Pancéø. brnìní ducha+4
+11635	Pancéø. brnìní ducha+5
+11636	Pancéø. brnìní ducha+6
+11637	Pancéø. brnìní ducha+7
+11638	Pancéø. brnìní ducha+8
+11639	Pancéø. brnìní ducha+9
+11640	Pancéø.brnìní YingYang+0
+11641	Pancéø.brnìní YingYang+1
+11642	Pancéø.brnìní YingYang+2
+11643	Pancéø.brnìní YingYang+3
+11644	Pancéø.brnìní YingYang+4
+11645	Pancéø.brnìní YingYang+5
+11646	Pancéø.brnìní YingYang+6
+11647	Pancéø.brnìní YingYang+7
+11648	Pancéø.brnìní YingYang+8
+11649	Pancéø.brnìní YingYang+9
+11650	Pancéø. brnìní mystika+0
+11651	Pancéø. brnìní mystika+1
+11652	Pancéø. brnìní mystika+2
+11653	Pancéø. brnìní mystika+3
+11654	Pancéø. brnìní mystika+4
+11655	Pancéø. brnìní mystika+5
+11656	Pancéø. brnìní mystika+6
+11657	Pancéø. brnìní mystika+7
+11658	Pancéø. brnìní mystika+8
+11659	Pancéø. brnìní mystika+9
+11660	Pancéø. mlné brnìní+0
+11661	Pancéø. mlné brnìní+1
+11662	Pancéø. mlné brnìní+2
+11663	Pancéø. mlné brnìní+3
+11664	Pancéø. mlné brnìní+4
+11665	Pancéø. mlné brnìní+5
+11666	Pancéø. mlné brnìní+6
+11667	Pancéø. mlné brnìní+7
+11668	Pancéø. mlné brnìní+8
+11669	Pancéø. mlné brnìní+9
+11670	Pancéø masek duchù+0
+11671	Pancéø masek duchù+1
+11672	Pancéø masek duchù+2
+11673	Pancéø masek duchù+3
+11674	Pancéø masek duchù+4
+11675	Pancéø masek duchù+5
+11676	Pancéø masek duchù+6
+11677	Pancéø masek duchù+7
+11678	Pancéø masek duchù+8
+11679	Pancéø masek duchù+9
+11680	Pancéøové brnìní duše+0
+11681	Pancéøové brnìní duše+1
+11682	Pancéøové brnìní duše+2
+11683	Pancéøové brnìní duše+3
+11684	Pancéøové brnìní duše+4
+11685	Pancéøové brnìní duše+5
+11686	Pancéøové brnìní duše+6
+11687	Pancéøové brnìní duše+7
+11688	Pancéøové brnìní duše+8
+11689	Pancéøové brnìní duše+9
+11690	Brnìní èerné magie+0
+11691	Brnìní èerné magie+1
+11692	Brnìní èerné magie+2
+11693	Brnìní èerné magie+3
+11694	Brnìní èerné magie+4
+11695	Brnìní èerné magie+5
+11696	Brnìní èerné magie+6
+11697	Brnìní èerné magie+7
+11698	Brnìní èerné magie+8
+11699	Brnìní èerné magie+9
+11700	Gang-Ryoung-Gab
+11701	Geuk-Hon-Gab
+11702	Ha-An-Gab
+11703	Bi-Sang-Gab
+11704	Ya-Sang-Gab
+11705	Noe-Un-Gab
+11706	Zeok-Sang-Gab
+11707	Heuk-Gui-Gab
+11708	Ma-Sin-Gab
+11709	Ma-Ryoung-Sin-Gab
+11800	Karmínové obleèení+0
+11801	Azurové obleèení+1
+11802	Karmínové obleèení+2
+11803	Karmínové obleèení+3
+11804	Karmínové obleèení+4
+11805	Karmínové obleèení+5
+11806	Karmínové obleèení+6
+11807	Karmínové obleèení+7
+11808	Karmínové obleèení+8
+11809	Karmínové obleèení+9
+11810	Tyrkysové obleèení+0
+11811	Tyrkysové obleèení+1
+11812	Tyrkysové obleèení+2
+11813	Tyrkysové obleèení+3
+11814	Tyrkysové obleèení+4
+11815	Tyrkysové obleèení+5
+11816	Tyrkysové obleèení+6
+11817	Tyrkysové obleèení+7
+11818	Tyrkysové obleèení+8
+11819	Tyrkysové obleèení+9
+11820	Rùové obleèení+0
+11821	Rùové obleèení+1
+11822	Rùové obleèení+2
+11823	Rùové obleèení+3
+11824	Rùové obleèení+4
+11825	Rùové obleèení+5
+11826	Rùové obleèení+6
+11827	Rùové obleèení+7
+11828	Rùové obleèení+8
+11829	Rùové obleèení+9
+11830	Obleèení lásky+0
+11831	Obleèení lásky+1
+11832	Obleèení lásky+2
+11833	Obleèení lásky+3
+11834	Obleèení lásky+4
+11835	Obleèení lásky+5
+11836	Obleèení lásky+6
+11837	Obleèení lásky+7
+11838	Obleèení lásky+8
+11839	Obleèení lásky+9
+11840	Nebeské obleèení+0
+11841	Nebeské obleèení+1
+11842	Nebeské obleèení+2
+11843	Nebeské obleèení+3
+11844	Nebeské obleèení+4
+11845	Nebeské obleèení+5
+11846	Nebeské obleèení+6
+11847	Nebeské obleèení+7
+11848	Nebeské obleèení+8
+11849	Nebeské obleèení+9
+11850	Sluneèní obleèení+0
+11851	Sluneèní obleèení+1
+11852	Sluneèní obleèení+2
+11853	Sluneèní obleèení+3
+11854	Sluneèní obleèení+4
+11855	Sluneèní obleèení+5
+11856	Sluneèní obleèení+6
+11857	Sluneèní obleèení+7
+11858	Sluneèní obleèení+8
+11859	Sluneèní obleèení+9
+11860	Obleèení morálky+0
+11861	Obleèení morálky+1
+11862	Obleèení morálky+2
+11863	Obleèení morálky+3
+11864	Obleèení morálky+4
+11865	Obleèení morálky+5
+11866	Obleèení morálky+6
+11867	Obleèení morálky+7
+11868	Obleèení morálky+8
+11869	Obleèení morálky+9
+11870	Oran. koèièí obleèení+0
+11871	Oran. koèièí obleèení+1
+11872	Oran. koèièí obleèení+2
+11873	Oran. koèièí obleèení+3
+11874	Oran. koèièí obleèení+4
+11875	Oran. koèièí obleèení+5
+11876	Oran. koèièí obleèení+6
+11877	Oran. koèièí obleèení+7
+11878	Oran. koèièí obleèení+8
+11879	Oran. koèièí obleèení+9
+11880	Obleèení baronky+0
+11881	Obleèení baronky+1
+11882	Obleèení baronky+2
+11883	Obleèení baronky+3
+11884	Obleèení baronky+4
+11885	Obleèení baronky+5
+11886	Obleèení baronky+6
+11887	Obleèení baronky+7
+11888	Obleèení baronky+8
+11889	Obleèení baronky+9
+11890	Èerné obleèení+0
+11891	Èerné obleèení+1
+11892	Èerné obleèení+2
+11893	Èerné obleèení+3
+11894	Èerné obleèení+4
+11895	Èerné obleèení+5
+11896	Èerné obleèení+6
+11897	Èerné obleèení+7
+11898	Èerné obleèení+8
+11899	Èerné obleèení+9
+11901	Smoking
+11902	Smoking
+11903	Svatební šaty
+11904	Svatební šaty
+11911	Smoking
+11912	Smoking
+11913	Svatební šaty
+11914	Svatební šaty
+11951	Pancéøové brnìní mnicha
+11952	Karmínovı oblek
+11953	Pancéø. brnìní requiem
+11954	Karmínové obleèení
+11971	Vıstroj Hwang
+11972	Èervená vıstroj Hwang
+11973	Vıstroj Zin-Hwang
+11974	Vıstroj Sang-Hwang
+12000	Aqua obleèení+0
+12001	Aqua obleèení+1
+12002	Aqua obleèení+2
+12003	Aqua obleèení+3
+12004	Aqua obleèení+4
+12005	Aqua obleèení+5
+12006	Aqua obleèení+6
+12007	Aqua obleèení+7
+12008	Aqua obleèení+8
+12009	Aqua obleèení+9
+12010	Brnìní z modré oceli +0
+12011	Brnìní z modré oceli +1
+12012	Brnìní z modré oceli +2
+12013	Brnìní z modré oceli +3
+12014	Brnìní z modré oceli +4
+12015	Brnìní z modré oceli +5
+12016	Brnìní z modré oceli +6
+12017	Brnìní z modré oceli +7
+12018	Brnìní z modré oceli +8
+12019	Brnìní z modré oceli +9
+12020	Oblek modrého draka +0
+12021	Oblek modrého draka +1
+12022	Oblek modrého draka +2
+12023	Oblek modrého draka +3
+12024	Oblek modrého draka +4
+12025	Oblek modrého draka +5
+12026	Oblek modrého draka +6
+12027	Oblek modrého draka +7
+12028	Oblek modrého draka +8
+12029	Oblek modrého draka +9
+12030	Plátové brnìní aury +0
+12031	Plátové brnìní aury +1
+12032	Plátové brnìní aury +2
+12033	Plátové brnìní aury +3
+12034	Plátové brnìní aury +4
+12035	Plátové brnìní aury +5
+12036	Plátové brnìní aury +6
+12037	Plátové brnìní aury +7
+12038	Plátové brnìní aury +8
+12039	Plátové brnìní aury +9
+12040	Obleèení draka +0
+12041	Obleèení draka +1
+12042	Obleèení draka +2
+12043	Obleèení draka +3
+12044	Obleèení draka +4
+12045	Obleèení draka +5
+12046	Obleèení draka +6
+12047	Obleèení draka +7
+12048	Obleèení draka +8
+12049	Obleèení draka +9
+12200	Tradièní pøílba+0
+12201	Tradièní pøílba+1
+12202	Tradièní pøílba+2
+12203	Tradièní pøílba+3
+12204	Tradièní pøílba+4
+12205	Tradièní pøílba+5
+12206	Tradièní pøílba+6
+12207	Tradièní pøílba+7
+12208	Tradièní pøílba+8
+12209	Tradièní pøílba+9
+12220	elezná pøílba+0
+12221	elezná pøílba+1
+12222	elezná pøílba+2
+12223	elezná pøílba+3
+12224	elezná pøílba+4
+12225	elezná pøílba+5
+12226	elezná pøílba+6
+12227	elezná pøílba+7
+12228	elezná pøílba+8
+12229	elezná pøílba+9
+12240	Pøílba s maskou ducha+0
+12241	Pøílba s maskou ducha+1
+12242	Pøílba s maskou ducha+2
+12243	Pøílba s maskou ducha+3
+12244	Pøílba s maskou ducha+4
+12245	Pøílba s maskou ducha+5
+12246	Pøílba s maskou ducha+6
+12247	Pøílba s maskou ducha+7
+12248	Pøílba s maskou ducha+8
+12249	Pøílba s maskou ducha+9
+12260	Maska strachu +0
+12261	Maska strachu +1
+12262	Maska strachu +2
+12263	Maska strachu +3
+12264	Maska strachu +4
+12265	Maska strachu +5
+12266	Maska strachu +6
+12267	Maska strachu +7
+12268	Maska strachu +8
+12269	Maska strachu +9
+12280	Helma mistra války +0
+12281	Helma mistra války +1
+12282	Helma mistra války +2
+12283	Helma mistra války +3
+12284	Helma mistra války +4
+12285	Helma mistra války +5
+12286	Helma mistra války +6
+12287	Helma mistra války +7
+12288	Helma mistra války +8
+12289	Helma mistra války +9
+12340	Koená kapuce+0
+12341	Koená kapuce+1
+12342	Koená kapuce+2
+12343	Koená kapuce+3
+12344	Koená kapuce+4
+12345	Koená kapuce+5
+12346	Koená kapuce+6
+12347	Koená kapuce+7
+12348	Koená kapuce+8
+12349	Koená kapuce+9
+12360	Øetìzová kapuce+0
+12361	Øetìzová kapuce+1
+12362	Øetìzová kapuce+2
+12363	Øetìzová kapuce+3
+12364	Øetìzová kapuce+4
+12365	Øetìzová kapuce+5
+12366	Øetìzová kapuce+6
+12367	Øetìzová kapuce+7
+12368	Øetìzová kapuce+8
+12369	Øetìzová kapuce+9
+12380	Ocelová kapuce+0
+12381	Ocelová kapuce+1
+12382	Ocelová kapuce+2
+12383	Ocelová kapuce+3
+12384	Ocelová kapuce+4
+12385	Ocelová kapuce+5
+12386	Ocelová kapuce+6
+12387	Ocelová kapuce+7
+12388	Ocelová kapuce+8
+12389	Ocelová kapuce+9
+12390	Kukla orkù +0
+12391	Kukla orkù +1
+12392	Kukla orkù +2
+12393	Kukla orkù +3
+12394	Kukla orkù +4
+12395	Kukla orkù +5
+12396	Kukla orkù +6
+12397	Kukla orkù +7
+12398	Kukla orkù +8
+12399	Kukla orkù +9
+12400	Pavouèí kukla +0
+12401	Pavouèí kukla +1
+12402	Pavouèí kukla +2
+12403	Pavouèí kukla +3
+12404	Pavouèí kukla +4
+12405	Pavouèí kukla +5
+12406	Pavouèí kukla +6
+12407	Pavouèí kukla +7
+12408	Pavouèí kukla +8
+12409	Pavouèí kukla +9
+12480	Krvavá pøílba+0
+12481	Krvavá pøílba+1
+12482	Krvavá pøílba+2
+12483	Krvavá pøílba+3
+12484	Krvavá pøílba+4
+12485	Krvavá pøílba+5
+12486	Krvavá pøílba+6
+12487	Krvavá pøílba+7
+12488	Krvavá pøílba+8
+12489	Krvavá pøílba+9
+12500	Posmivající se pøílba+0
+12501	Posmivající se pøílba+1
+12502	Posmivající se pøílba+2
+12503	Posmivající se pøílba+3
+12504	Posmivající se pøílba+4
+12505	Posmivající se pøílba+5
+12506	Posmivající se pøílba+6
+12507	Posmivající se pøílba+7
+12508	Posmivající se pøílba+8
+12509	Posmivající se pøílba+9
+12520	Hradní pøílba+0
+12521	Hradní pøílba+1
+12522	Hradní pøílba+2
+12523	Hradní pøílba+3
+12524	Hradní pøílba+4
+12525	Hradní pøílba+5
+12526	Hradní pøílba+6
+12527	Hradní pøílba+7
+12528	Hradní pøílba+8
+12529	Hradní pøílba+9
+12530	Helma s rohy +0
+12531	Helma s rohy +1
+12532	Helma s rohy +2
+12533	Helma s rohy +3
+12534	Helma s rohy +4
+12535	Helma s rohy +5
+12536	Helma s rohy +6
+12537	Helma s rohy +7
+12538	Helma s rohy +8
+12539	Helma s rohy +9
+12540	Magická helma +0
+12541	Magická helma +1
+12542	Magická helma +2
+12543	Magická helma +3
+12544	Magická helma +4
+12545	Magická helma +5
+12546	Magická helma +6
+12547	Magická helma +7
+12548	Magická helma +8
+12549	Magická helma +9
+12620	Mnišskı klobouk+0
+12621	Mnišskı klobouk+1
+12622	Mnišskı klobouk+2
+12623	Mnišskı klobouk+3
+12624	Mnišskı klobouk+4
+12625	Mnišskı klobouk+5
+12626	Mnišskı klobouk+6
+12627	Mnišskı klobouk+7
+12628	Mnišskı klobouk+8
+12629	Mnišskı klobouk+9
+12640	Fénickı klobouk+0
+12641	Fénickı klobouk+1
+12642	Fénickı klobouk+2
+12643	Fénickı klobouk+3
+12644	Fénickı klobouk+4
+12645	Fénickı klobouk+5
+12646	Fénickı klobouk+6
+12647	Fénickı klobouk+7
+12648	Fénickı klobouk+8
+12649	Fénickı klobouk+9
+12660	Solární klobouk+0
+12661	Solární klobouk+1
+12662	Solární klobouk+2
+12663	Solární klobouk+3
+12664	Solární klobouk+4
+12665	Solární klobouk+5
+12666	Solární klobouk+6
+12667	Solární klobouk+7
+12668	Solární klobouk+8
+12669	Solární klobouk+9
+12670	Kardinálskı klobouk +0
+12671	Kardinálskı klobouk +1
+12672	Kardinálskı klobouk +2
+12673	Kardinálskı klobouk +3
+12674	Kardinálskı klobouk +4
+12675	Kardinálskı klobouk +5
+12676	Kardinálskı klobouk +6
+12677	Kardinálskı klobouk +7
+12678	Kardinálskı klobouk +8
+12679	Kardinálskı klobouk +9
+12680	Klobouk èásti duše +0
+12681	Klobouk èásti duše +1
+12682	Klobouk èásti duše +2
+12683	Klobouk èásti duše +3
+12684	Klobouk èásti duše +4
+12685	Klobouk èásti duše +5
+12686	Klobouk èásti duše +6
+12687	Klobouk èásti duše +7
+12688	Klobouk èásti duše +8
+12689	Klobouk èásti duše +9
+13000	Bitevní štít+0
+13001	Bitevní štít+1
+13002	Bitevní štít+2
+13003	Bitevní štít+3
+13004	Bitevní štít+4
+13005	Bitevní štít+5
+13006	Bitevní štít+6
+13007	Bitevní štít+7
+13008	Bitevní štít+8
+13009	Bitevní štít+9
+13020	Pìtihrannı štít+0
+13021	Pìtihrannı štít+1
+13022	Pìtihrannı štít+2
+13023	Pìtihrannı štít+3
+13024	Pìtihrannı štít+4
+13025	Pìtihrannı štít+5
+13026	Pìtihrannı štít+6
+13027	Pìtihrannı štít+7
+13028	Pìtihrannı štít+8
+13029	Pìtihrannı štít+9
+13040	Èernı kulatı štít+0
+13041	Èernı kulatı štít+1
+13042	Èernı kulatı štít+2
+13043	Èernı kulatı štít+3
+13044	Èernı kulatı štít+4
+13045	Èernı kulatı štít+5
+13046	Èernı kulatı štít+6
+13047	Èernı kulatı štít+7
+13048	Èernı kulatı štít+8
+13049	Èernı kulatı štít+9
+13060	Sokolskı štít+0
+13061	Sokolskı štít+1
+13062	Sokolskı štít+2
+13063	Sokolskı štít+3
+13064	Sokolskı štít+4
+13065	Sokolskı štít+5
+13066	Sokolskı štít+6
+13067	Sokolskı štít+7
+13068	Sokolskı štít+8
+13069	Sokolskı štít+9
+13080	Tygøí štít+0
+13081	Tygøí štít+1
+13082	Tygøí štít+2
+13083	Tygøí štít+3
+13084	Tygøí štít+4
+13085	Tygøí štít+5
+13086	Tygøí štít+6
+13087	Tygøí štít+7
+13088	Tygøí štít+8
+13089	Tygøí štít+9
+13100	Hranatı lví štít+0
+13101	Hranatı lví štít+1
+13102	Hranatı lví štít+2
+13103	Hranatı lví štít+3
+13104	Hranatı lví štít+4
+13105	Hranatı lví štít+5
+13106	Hranatı lví štít+6
+13107	Hranatı lví štít+7
+13108	Hranatı lví štít+8
+13109	Hranatı lví štít+9
+13120	Štít z draèích šupin+0
+13121	Štít z draèích šupin+1
+13122	Štít z draèích šupin+2
+13123	Štít z draèích šupin+3
+13124	Štít z draèích šupin+4
+13125	Štít z draèích šupin+5
+13126	Štít z draèích šupin+6
+13127	Štít z draèích šupin+7
+13128	Štít z draèích šupin+8
+13129	Štít z draèích šupin+9
+13140	Titánskı štít +0
+13141	Titánskı štít +1
+13142	Titánskı štít +2
+13143	Titánskı štít +3
+13144	Titánskı štít +4
+13145	Titánskı štít +5
+13146	Titánskı štít +6
+13147	Titánskı štít +7
+13148	Titánskı štít +8
+13149	Titánskı štít +9
+13160	Štít tøech císaøù+0
+13161	Štít tøech císaøù+1
+13162	Štít tøech císaøù+2
+13163	Štít tøech císaøù+3
+13164	Štít tøech císaøù+4
+13165	Štít tøech císaøù+5
+13166	Štít tøech císaøù+6
+13167	Štít tøech císaøù+7
+13168	Štít tøech císaøù+8
+13169	Štít tøech císaøù+9
+13180	Záøivı štít+0
+13181	Záøivı štít+1
+13182	Záøivı štít+2
+13183	Záøivı štít+3
+13184	Záøivı štít+4
+13185	Záøivı štít+5
+13186	Záøivı štít+6
+13187	Záøivı štít+7
+13188	Záøivı štít+8
+13189	Záøivı štít+9
+13190	Pìtihrannı štít+0
+13191	Pìtihrannı štít+1
+13192	Pìtihrannı štít+2
+13193	Pìtihrannı štít+3
+13194	Pìtihrannı štít+4
+13195	Pìtihrannı štít+5
+13196	Pìtihrannı štít+6
+13197	Pìtihrannı štít+7
+13198	Pìtihrannı štít+8
+13199	Pìtihrannı štít+9
+13200	Èernı kulatı štít+0
+13201	Èernı kulatı štít+1
+13202	Èernı kulatı štít+2
+13203	Èernı kulatı štít+3
+13204	Èernı kulatı štít+4
+13205	Èernı kulatı štít+5
+13206	Èernı kulatı štít+6
+13207	Èernı kulatı štít+7
+13208	Èernı kulatı štít+8
+13209	Èernı kulatı štít+9
+14000	Døevìnı náramek+0
+14001	Døevìnı náramek+1
+14002	Døevìnı náramek+2
+14003	Døevìnı náramek+3
+14004	Døevìnı náramek+4
+14005	Døevìnı náramek+5
+14006	Døevìnı náramek+6
+14007	Døevìnı náramek+7
+14008	Døevìnı náramek+8
+14009	Døevìnı náramek+9
+14020	Mìdìnı náramek+0
+14021	Mìdìnı náramek+1
+14022	Mìdìnı náramek+2
+14023	Mìdìnı náramek+3
+14024	Mìdìnı náramek+4
+14025	Mìdìnı náramek+5
+14026	Mìdìnı náramek+6
+14027	Mìdìnı náramek+7
+14028	Mìdìnı náramek+8
+14029	Mìdìnı náramek+9
+14040	Støíbrnı náramek+0
+14041	Støíbrnı náramek+1
+14042	Støíbrnı náramek+2
+14043	Støíbrnı náramek+3
+14044	Støíbrnı náramek+4
+14045	Støíbrnı náramek+5
+14046	Støíbrnı náramek+6
+14047	Støíbrnı náramek+7
+14048	Støíbrnı náramek+8
+14049	Støíbrnı náramek+9
+14060	Zlatı náramek+0
+14061	Zlatı náramek+1
+14062	Zlatı náramek+2
+14063	Zlatı náramek+3
+14064	Zlatı náramek+4
+14065	Zlatı náramek+5
+14066	Zlatı náramek+6
+14067	Zlatı náramek+7
+14068	Zlatı náramek+8
+14069	Zlatı náramek+9
+14080	Nefritovı náramek+0
+14081	Nefritovı náramek+1
+14082	Nefritovı náramek+2
+14083	Nefritovı náramek+3
+14084	Nefritovı náramek+4
+14085	Nefritovı náramek+5
+14086	Nefritovı náramek+6
+14087	Nefritovı náramek+7
+14088	Nefritovı náramek+8
+14089	Nefritovı náramek+9
+14100	Nefritovı náramek+0
+14101	Ebenovı náramek+1
+14102	Ebenovı náramek+2
+14103	Ebenovı náramek+3
+14104	Ebenovı náramek+4
+14105	Ebenovı náramek+5
+14106	Ebenovı náramek+6
+14107	Ebenovı náramek+7
+14108	Ebenovı náramek+8
+14109	Ebenovı náramek+9
+14120	Perlovı náramek+0
+14121	Perlovı náramek+1
+14122	Perlovı náramek+2
+14123	Perlovı náramek+3
+14124	Perlovı náramek+4
+14125	Perlovı náramek+5
+14126	Perlovı náramek+6
+14127	Perlovı náramek+7
+14128	Perlovı náramek+8
+14129	Perlovı náramek+9
+14140	Náramek z bílého zlata+0
+14141	Náramek z bílého zlata+1
+14142	Náramek z bílého zlata+2
+14143	Náramek z bílého zlata+3
+14144	Náramek z bílého zlata+4
+14145	Náramek z bílého zlata+5
+14146	Náramek z bílého zlata+6
+14147	Náramek z bílého zlata+7
+14148	Náramek z bílého zlata+8
+14149	Náramek z bílého zlata+9
+14160	Køišálovı náramek+0
+14161	Køišálovı náramek+1
+14162	Køišálovı náramek+2
+14163	Køišálovı náramek+3
+14164	Køišálovı náramek+4
+14165	Køišálovı náramek+5
+14166	Køišálovı náramek+6
+14167	Køišálovı náramek+7
+14168	Køišálovı náramek+8
+14169	Køišálovı náramek+9
+14180	Ametystovı náramek+0
+14181	Ametystovı náramek+1
+14182	Ametystovı náramek+2
+14183	Ametystovı náramek+3
+14184	Ametystovı náramek+4
+14185	Ametystovı náramek+5
+14186	Ametystovı náramek+6
+14187	Ametystovı náramek+7
+14188	Ametystovı náramek+8
+14189	Ametystovı náramek+9
+14200	Náramek z nebes. slz+0
+14201	Náramek z nebes. slz+1
+14202	Náramek z nebes. slz+2
+14203	Náramek z nebes. slz+3
+14204	Náramek z nebes. slz+4
+14205	Náramek z nebes. slz+5
+14206	Náramek z nebes. slz+6
+14207	Náramek z nebes. slz+7
+14208	Náramek z nebes. slz+8
+14209	Náramek z nebes. slz+9
+14220	Náramek krystalu duše +0
+14221	Náramek krystalu duše +1
+14222	Náramek krystalu duše +2
+14223	Náramek krystalu duše +3
+14224	Náramek krystalu duše +4
+14225	Náramek krystalu duše +5
+14226	Náramek krystalu duše +6
+14227	Náramek krystalu duše +7
+14228	Náramek krystalu duše +8
+14229	Náramek krystalu duše +9
+14500	Rubínovı náramek +0
+14501	Rubínovı náramek +1
+14502	Rubínovı náramek +2
+14503	Rubínovı náramek +3
+14504	Rubínovı náramek +4
+14505	Rubínovı náramek +5
+14506	Rubínovı náramek +6
+14507	Rubínovı náramek +7
+14508	Rubínovı náramek +8
+14509	Rubínovı náramek +9
+14520	Granátovı náramek +0
+14521	Granátovı náramek +1
+14522	Granátovı náramek +2
+14523	Granátovı náramek +3
+14524	Granátovı náramek +4
+14525	Granátovı náramek +5
+14526	Granátovı náramek +6
+14527	Granátovı náramek +7
+14528	Granátovı náramek +8
+14529	Granátovı náramek +9
+14540	Smaragdovı náramek +0
+14541	Smaragdovı náramek +1
+14542	Smaragdovı náramek +2
+14543	Smaragdovı náramek +3
+14544	Smaragdovı náramek +4
+14545	Smaragdovı náramek +5
+14546	Smaragdovı náramek +6
+14547	Smaragdovı náramek +7
+14548	Smaragdovı náramek +8
+14549	Smaragdovı náramek +9
+14560	Safírovı náramek +0
+14561	Safírovı náramek +1
+14562	Safírovı náramek +2
+14563	Safírovı náramek +3
+14564	Safírovı náramek +4
+14565	Safírovı náramek +5
+14566	Safírovı náramek +6
+14567	Safírovı náramek +7
+14568	Safírovı náramek +8
+14569	Safírovı náramek +9
+15000	Koené støevíce+0
+15001	Koené støevíce+1
+15002	Koené støevíce+2
+15003	Koené støevíce+3
+15004	Koené støevíce+4
+15005	Koené støevíce+5
+15006	Koené støevíce+6
+15007	Koené støevíce+7
+15008	Koené støevíce+8
+15009	Koené støevíce+9
+15020	Bambusové boty+0
+15021	Bambusové boty+1
+15022	Bambusové boty+2
+15023	Bambusové boty+3
+15024	Bambusové boty+4
+15025	Bambusové boty+5
+15026	Bambusové boty+6
+15027	Bambusové boty+7
+15028	Bambusové boty+8
+15029	Bambusové boty+9
+15040	Døevìné boty+0
+15041	Døevìné boty+1
+15042	Døevìné boty+2
+15043	Døevìné boty+3
+15044	Døevìné boty+4
+15045	Døevìné boty+5
+15046	Døevìné boty+6
+15047	Døevìné boty+7
+15048	Døevìné boty+8
+15049	Døevìné boty+9
+15060	Boty se zlatou ozdobou+0
+15061	Boty se zlatou ozdobou+1
+15062	Boty se zlatou ozdobou+2
+15063	Boty se zlatou ozdobou+3
+15064	Boty se zlatou ozdobou+4
+15065	Boty se zlatou ozdobou+5
+15066	Boty se zlatou ozdobou+6
+15067	Boty se zlatou ozdobou+7
+15068	Boty se zlatou ozdobou+8
+15069	Boty se zlatou ozdobou+9
+15080	Koené holínky+0
+15081	Koené holínky+1
+15082	Koené holínky+2
+15083	Koené holínky+3
+15084	Koené holínky+4
+15085	Koené holínky+5
+15086	Koené holínky+6
+15087	Koené holínky+7
+15088	Koené holínky+8
+15089	Koené holínky+9
+15100	Zlaté boty+0
+15101	Zlaté boty+1
+15102	Zlaté boty+2
+15103	Zlaté boty+3
+15104	Zlaté boty+4
+15105	Zlaté boty+5
+15106	Zlaté boty+6
+15107	Zlaté boty+7
+15108	Zlaté boty+8
+15109	Zlaté boty+9
+15120	Bronzové boty+0
+15121	Bronzové boty+1
+15122	Bronzové boty+2
+15123	Bronzové boty+3
+15124	Bronzové boty+4
+15125	Bronzové boty+5
+15126	Bronzové boty+6
+15127	Bronzové boty+7
+15128	Bronzové boty+8
+15129	Bronzové boty+9
+15140	Nefritové boty+0
+15141	Nefritové boty+1
+15142	Nefritové boty+2
+15143	Nefritové boty+3
+15144	Nefritové boty+4
+15145	Nefritové boty+5
+15146	Nefritové boty+6
+15147	Nefritové boty+7
+15148	Nefritové boty+8
+15149	Nefritové boty+9
+15160	Boty extáze+0
+15161	Boty extáze+1
+15162	Boty extáze+2
+15163	Boty extáze+3
+15164	Boty extáze+4
+15165	Boty extáze+5
+15166	Boty extáze+6
+15167	Boty extáze+7
+15168	Boty extáze+8
+15169	Boty extáze+9
+15180	Støevíce Nimbus+0
+15181	Støevíce Nimbus+1
+15182	Støevíce Nimbus+2
+15183	Støevíce Nimbus+3
+15184	Støevíce Nimbus+4
+15185	Støevíce Nimbus+5
+15186	Støevíce Nimbus+6
+15187	Støevíce Nimbus+7
+15188	Støevíce Nimbus+8
+15189	Støevíce Nimbus+9
+15200	Fénické boty+0
+15201	Fénické boty+1
+15202	Fénické boty+2
+15203	Fénické boty+3
+15204	Fénické boty+4
+15205	Fénické boty+5
+15206	Fénické boty+6
+15207	Fénické boty+7
+15208	Fénické boty+8
+15209	Fénické boty+9
+15220	Boty ohnivého ptáka+0
+15221	Boty ohnivého ptáka+1
+15222	Boty ohnivého ptáka+2
+15223	Boty ohnivého ptáka+3
+15224	Boty ohnivého ptáka+4
+15225	Boty ohnivého ptáka+5
+15226	Boty ohnivého ptáka+6
+15227	Boty ohnivého ptáka+7
+15228	Boty ohnivého ptáka+8
+15229	Boty ohnivého ptáka+9
+15240	Boty z draèí kùe+0
+15241	Boty z draèí kùe+1
+15242	Boty z draèí kùe+2
+15243	Boty z draèí kùe+3
+15244	Boty z draèí kùe+4
+15245	Boty z draèí kùe+5
+15246	Boty z draèí kùe+6
+15247	Boty z draèí kùe+7
+15248	Boty z draèí kùe+8
+15249	Boty z draèí kùe+9
+15370	Boty eufórie +0
+15371	Boty eufórie +1
+15372	Boty eufórie +2
+15373	Boty eufórie +3
+15374	Boty eufórie +4
+15375	Boty eufórie +5
+15376	Boty eufórie +6
+15377	Boty eufórie +7
+15378	Boty eufórie +8
+15379	Boty eufórie +9
+15390	Boty vítìzství +0
+15391	Boty vítìzství +1
+15392	Boty vítìzství +2
+15393	Boty vítìzství +3
+15394	Boty vítìzství +4
+15395	Boty vítìzství +5
+15396	Boty vítìzství +6
+15397	Boty vítìzství +7
+15398	Boty vítìzství +8
+15399	Boty vítìzství +9
+15410	Ostnaté boty +0
+15411	Ostnaté boty +1
+15412	Ostnaté boty +2
+15413	Ostnaté boty +3
+15414	Ostnaté boty +4
+15415	Ostnaté boty +5
+15416	Ostnaté boty +6
+15417	Ostnaté boty +7
+15418	Ostnaté boty +8
+15419	Ostnaté boty +9
+15430	Boty krále rybáøù +0
+15431	Boty krále rybáøù +1
+15432	Boty krále rybáøù +2
+15433	Boty krále rybáøù +3
+15434	Boty krále rybáøù +4
+15435	Boty krále rybáøù +5
+15436	Boty krále rybáøù +6
+15437	Boty krále rybáøù +7
+15438	Boty krále rybáøù +8
+15439	Boty krále rybáøù +9
+16000	Døevìnı náhrdelník+0
+16001	Døevìnı náhrdelník+1
+16002	Døevìnı náhrdelník+2
+16003	Døevìnı náhrdelník+3
+16004	Døevìnı náhrdelník+4
+16005	Døevìnı náhrdelník+5
+16006	Døevìnı náhrdelník+6
+16007	Døevìnı náhrdelník+7
+16008	Døevìnı náhrdelník+8
+16009	Døevìnı náhrdelník+9
+16020	Mìdìnı náhrdelník+0
+16021	Mìdìnı náhrdelník+1
+16022	Mìdìnı náhrdelník+2
+16023	Mìdìnı náhrdelník+3
+16024	Mìdìnı náhrdelník+4
+16025	Mìdìnı náhrdelník+5
+16026	Mìdìnı náhrdelník+6
+16027	Mìdìnı náhrdelník+7
+16028	Mìdìnı náhrdelník+8
+16029	Mìdìnı náhrdelník+9
+16040	Støíbrnı náhrdelník+0
+16041	Støíbrnı náhrdelník+1
+16042	Støíbrnı náhrdelník+2
+16043	Støíbrnı náhrdelník+3
+16044	Støíbrnı náhrdelník+4
+16045	Støíbrnı náhrdelník+5
+16046	Støíbrnı náhrdelník+6
+16047	Støíbrnı náhrdelník+7
+16048	Støíbrnı náhrdelník+8
+16049	Støíbrnı náhrdelník+9
+16060	Zlatı náhrdelník+0
+16061	Zlatı náhrdelník+1
+16062	Zlatı náhrdelník+2
+16063	Zlatı náhrdelník+3
+16064	Zlatı náhrdelník+4
+16065	Zlatı náhrdelník+5
+16066	Zlatı náhrdelník+6
+16067	Zlatı náhrdelník+7
+16068	Zlatı náhrdelník+8
+16069	Zlatı náhrdelník+9
+16080	Nefritovı náhrdelník+0
+16081	Nefritovı náhrdelník+1
+16082	Nefritovı náhrdelník+2
+16083	Nefritovı náhrdelník+3
+16084	Nefritovı náhrdelník+4
+16085	Nefritovı náhrdelník+5
+16086	Nefritovı náhrdelník+6
+16087	Nefritovı náhrdelník+7
+16088	Nefritovı náhrdelník+8
+16089	Nefritovı náhrdelník+9
+16100	Ebenovı náhrdelník+0
+16101	Ebenovı náhrdelník+1
+16102	Ebenovı náhrdelník+2
+16103	Ebenovı náhrdelník+3
+16104	Ebenovı náhrdelník+4
+16105	Ebenovı náhrdelník+5
+16106	Ebenovı náhrdelník+6
+16107	Ebenovı náhrdelník+7
+16108	Ebenovı náhrdelník+8
+16109	Ebenovı náhrdelník+9
+16120	Perlovı náhrdelník+0
+16121	Perlovı náhrdelník+1
+16122	Perlovı náhrdelník+2
+16123	Perlovı náhrdelník+3
+16124	Perlovı náhrdelník+4
+16125	Perlovı náhrdelník+5
+16126	Perlovı náhrdelník+6
+16127	Perlovı náhrdelník+7
+16128	Perlovı náhrdelník+8
+16129	Perlovı náhrdelník+9
+16140	Náhrdelník z b. zlata+0
+16141	Náhrdelník z b. zlata+1
+16142	Náhrdelník z b. zlata+2
+16143	Náhrdelník z b. zlata+3
+16144	Náhrdelník z b. zlata+4
+16145	Náhrdelník z b. zlata+5
+16146	Náhrdelník z b. zlata+6
+16147	Náhrdelník z b. zlata+7
+16148	Náhrdelník z b. zlata+8
+16149	Náhrdelník z b. zlata+9
+16160	Køišálovı náhrdelník+0
+16161	Køišálovı náhrdelník+1
+16162	Køišálovı náhrdelník+2
+16163	Køišálovı náhrdelník+3
+16164	Køišálovı náhrdelník+4
+16165	Køišálovı náhrdelník+5
+16166	Køišálovı náhrdelník+6
+16167	Køišálovı náhrdelník+7
+16168	Køišálovı náhrdelník+8
+16169	Køišálovı náhrdelník+9
+16180	Ametystovı náhrdelník+0
+16181	Ametystovı náhrdelník+1
+16182	Ametystovı náhrdelník+2
+16183	Ametystovı náhrdelník+3
+16184	Ametystovı náhrdelník+4
+16185	Ametystovı náhrdelník+5
+16186	Ametystovı náhrdelník+6
+16187	Ametystovı náhrdelník+7
+16188	Ametystovı náhrdelník+8
+16189	Ametystovı náhrdelník+9
+16200	Náhrdelník z nebes.slz+0
+16201	Náhrdelník z nebes.slz+1
+16202	Náhrdelník z nebes.slz+2
+16203	Náhrdelník z nebes.slz+3
+16204	Náhrdelník z nebes.slz+4
+16205	Náhrdelník z nebes.slz+5
+16206	Náhrdelník z nebes.slz+6
+16207	Náhrdelník z nebes.slz+7
+16208	Náhrdelník z nebes.slz+8
+16209	Náhrdelník z nebes.slz+9
+16220	Øetízek krystalu duše +0
+16221	Øetízek krystalu duše +1
+16222	Øetízek krystalu duše +2
+16223	Øetízek krystalu duše +3
+16224	Øetízek krystalu duše +4
+16225	Øetízek krystalu duše +5
+16226	Øetízek krystalu duše +6
+16227	Øetízek krystalu duše +7
+16228	Øetízek krystalu duše +8
+16229	Øetízek krystalu duše +9
+16500	Rubínovı náhrdelník +0
+16501	Rubínovı náhrdelník +1
+16502	Rubínovı náhrdelník +2
+16503	Rubínovı náhrdelník +3
+16504	Rubínovı náhrdelník +4
+16505	Rubínovı náhrdelník +5
+16506	Rubínovı náhrdelník +6
+16507	Rubínovı náhrdelník +7
+16508	Rubínovı náhrdelník +8
+16509	Rubínovı náhrdelník +9
+16520	Granátovı náhrdelník +0
+16521	Granátovı náhrdelník +1
+16522	Granátovı náhrdelník +2
+16523	Granátovı náhrdelník +3
+16524	Granátovı náhrdelník +4
+16525	Granátovı náhrdelník +5
+16526	Granátovı náhrdelník +6
+16527	Granátovı náhrdelník +7
+16528	Granátovı náhrdelník +8
+16529	Granátovı náhrdelník +9
+16540	Smaragdovı náhrdelník +0
+16541	Smaragdovı náhrdelník +1
+16542	Smaragdovı náhrdelník +2
+16543	Smaragdovı náhrdelník +3
+16544	Smaragdovı náhrdelník +4
+16545	Smaragdovı náhrdelník +5
+16546	Smaragdovı náhrdelník +6
+16547	Smaragdovı náhrdelník +7
+16548	Smaragdovı náhrdelník +8
+16549	Smaragdovı náhrdelník +9
+16560	Safírovı náhrdelník +0
+16561	Safírovı náhrdelník +1
+16562	Safírovı náhrdelník +2
+16563	Safírovı náhrdelník +3
+16564	Safírovı náhrdelník +4
+16565	Safírovı náhrdelník +5
+16566	Safírovı náhrdelník +6
+16567	Safírovı náhrdelník +7
+16568	Safírovı náhrdelník +8
+16569	Safírovı náhrdelník +9
+17000	Døevìné náušnice+0
+17001	Døevìné náušnice+1
+17002	Døevìné náušnice+2
+17003	Døevìné náušnice+3
+17004	Døevìné náušnice+4
+17005	Døevìné náušnice+5
+17006	Døevìné náušnice+6
+17007	Døevìné náušnice+7
+17008	Døevìné náušnice+8
+17009	Døevìné náušnice+9
+17020	Mìdìné náušnice+0
+17021	Mìdìné náušnice+1
+17022	Mìdìné náušnice+2
+17023	Mìdìné náušnice+3
+17024	Mìdìné náušnice+4
+17025	Mìdìné náušnice+5
+17026	Mìdìné náušnice+6
+17027	Mìdìné náušnice+7
+17028	Mìdìné náušnice+8
+17029	Mìdìné náušnice+9
+17040	Støíbrné náušnice+0
+17041	Støíbrné náušnice+1
+17042	Støíbrné náušnice+2
+17043	Støíbrné náušnice+3
+17044	Støíbrné náušnice+4
+17045	Støíbrné náušnice+5
+17046	Støíbrné náušnice+6
+17047	Støíbrné náušnice+7
+17048	Støíbrné náušnice+8
+17049	Støíbrné náušnice+9
+17060	Zlaté náušnice+0
+17061	Zlaté náušnice+1
+17062	Zlaté náušnice+2
+17063	Zlaté náušnice+3
+17064	Zlaté náušnice+4
+17065	Zlaté náušnice+5
+17066	Zlaté náušnice+6
+17067	Zlaté náušnice+7
+17068	Zlaté náušnice+8
+17069	Zlaté náušnice+9
+17080	Nefritové náušnice+0
+17081	Nefritové náušnice+1
+17082	Nefritové náušnice+2
+17083	Nefritové náušnice+3
+17084	Nefritové náušnice+4
+17085	Nefritové náušnice+5
+17086	Nefritové náušnice+6
+17087	Nefritové náušnice+7
+17088	Nefritové náušnice+8
+17089	Nefritové náušnice+9
+17100	Ebenové náušnice+0
+17101	Ebenové náušnice+1
+17102	Ebenové náušnice+2
+17103	Ebenové náušnice+3
+17104	Ebenové náušnice+4
+17105	Ebenové náušnice+5
+17106	Ebenové náušnice+6
+17107	Ebenové náušnice+7
+17108	Ebenové náušnice+8
+17109	Ebenové náušnice+9
+17120	Perlové náušnice+0
+17121	Perlové náušnice+1
+17122	Perlové náušnice+2
+17123	Perlové náušnice+3
+17124	Perlové náušnice+4
+17125	Perlové náušnice+5
+17126	Perlové náušnice+6
+17127	Perlové náušnice+7
+17128	Perlové náušnice+8
+17129	Perlové náušnice+9
+17140	Náušnice z b. zlata+0
+17141	Náušnice z b. zlata+1
+17142	Náušnice z b. zlata+2
+17143	Náušnice z b. zlata+3
+17144	Náušnice z b. zlata+4
+17145	Náušnice z b. zlata+5
+17146	Náušnice z b. zlata+6
+17147	Náušnice z b. zlata+7
+17148	Náušnice z b. zlata+8
+17149	Náušnice z b. zlata+9
+17160	Køišálové náušnice+0
+17161	Køišálové náušnice+1
+17162	Køišálové náušnice+2
+17163	Køišálové náušnice+3
+17164	Køišálové náušnice+4
+17165	Køišálové náušnice+5
+17166	Køišálové náušnice+6
+17167	Køišálové náušnice+7
+17168	Køišálové náušnice+8
+17169	Køišálové náušnice+9
+17180	Ametystové náušnice+0
+17181	Ametystové náušnice+1
+17182	Ametystové náušnice+2
+17183	Ametystové náušnice+3
+17184	Ametystové náušnice+4
+17185	Ametystové náušnice+5
+17186	Ametystové náušnice+6
+17187	Ametystové náušnice+7
+17188	Ametystové náušnice+8
+17189	Ametystové náušnice+9
+17200	Náušnice z nebes. slz+0
+17201	Náušnice z nebes. slz+1
+17202	Náušnice z nebes. slz+2
+17203	Náušnice z nebes. slz+3
+17204	Náušnice z nebes. slz+4
+17205	Náušnice z nebes. slz+5
+17206	Náušnice z nebes. slz+6
+17207	Náušnice z nebes. slz+7
+17208	Náušnice z nebes. slz+8
+17209	Náušnice z nebes. slz+9
+17220	Náušnice krystalu duše+0
+17221	Náušnice krystalu duše+1
+17222	Náušnice krystalu duše+2
+17223	Náušnice krystalu duše+3
+17224	Náušnice krystalu duše+4
+17225	Náušnice krystalu duše+5
+17226	Náušnice krystalu duše+6
+17227	Náušnice krystalu duše+7
+17228	Náušnice krystalu duše+8
+17229	Náušnice krystalu duše+9
+17500	Rubínové náušnice  +0
+17501	Rubínové náušnice  +1
+17502	Rubínové náušnice  +2
+17503	Rubínové náušnice  +3
+17504	Rubínové náušnice  +4
+17505	Rubínové náušnice  +5
+17506	Rubínové náušnice  +6
+17507	Rubínové náušnice  +7
+17508	Rubínové náušnice  +8
+17509	Rubínové náušnice  +9
+17520	Granátové náušnice +0
+17521	Granátové náušnice +1
+17522	Granátové náušnice +2
+17523	Granátové náušnice +3
+17524	Granátové náušnice +4
+17525	Granátové náušnice +5
+17526	Granátové náušnice +6
+17527	Granátové náušnice +7
+17528	Granátové náušnice +8
+17529	Granátové náušnice +9
+17540	Smaragdové náušnice +0
+17541	Smaragdové náušnice +1
+17542	Smaragdové náušnice +2
+17543	Smaragdové náušnice +3
+17544	Smaragdové náušnice +4
+17545	Smaragdové náušnice +5
+17546	Smaragdové náušnice +6
+17547	Smaragdové náušnice +7
+17548	Smaragdové náušnice +8
+17549	Smaragdové náušnice +9
+17560	Safírové náušnice +0
+17561	Safírové náušnice +1
+17562	Safírové náušnice +2
+17563	Safírové náušnice +3
+17564	Safírové náušnice +4
+17565	Safírové náušnice +5
+17566	Safírové náušnice +6
+17567	Safírové náušnice +7
+17568	Safírové náušnice +8
+17569	Safírové náušnice +9
+18000	Lnìnı opasek +0
+18001	Lnìnı opasek +1
+18002	Lnìnı opasek +2
+18003	Lnìnı opasek +3
+18004	Lnìnı opasek +4
+18005	Lnìnı opasek +5
+18006	Lnìnı opasek +6
+18007	Lnìnı opasek +7
+18008	Lnìnı opasek +8
+18009	Lnìnı opasek +9
+18010	Koenı opasek +0
+18011	Koenı opasek +1
+18012	Koenı opasek +2
+18013	Koenı opasek +3
+18014	Koenı opasek +4
+18015	Koenı opasek +5
+18016	Koenı opasek +6
+18017	Koenı opasek +7
+18018	Koenı opasek +8
+18019	Koenı opasek +9
+18020	Velkolepı opasek +0
+18021	Velkolepı opasek +1
+18022	Velkolepı opasek +2
+18023	Velkolepı opasek +3
+18024	Velkolepı opasek +4
+18025	Velkolepı opasek +5
+18026	Velkolepı opasek +6
+18027	Velkolepı opasek +7
+18028	Velkolepı opasek +8
+18029	Velkolepı opasek +9
+18030	Opasek moudrosti +0
+18031	Opasek moudrosti +1
+18032	Opasek moudrosti +2
+18033	Opasek moudrosti +3
+18034	Opasek moudrosti +4
+18035	Opasek moudrosti +5
+18036	Opasek moudrosti +6
+18037	Opasek moudrosti +7
+18038	Opasek moudrosti +8
+18039	Opasek moudrosti +9
+18040	Královskı opasek +0
+18041	Královskı opasek +1
+18042	Královskı opasek +2
+18043	Královskı opasek +3
+18044	Královskı opasek +4
+18045	Královskı opasek +5
+18046	Královskı opasek +6
+18047	Královskı opasek +7
+18048	Královskı opasek +8
+18049	Královskı opasek +9
+18050	Opasek stínù +0
+18051	Opasek stínù +1
+18052	Opasek stínù +2
+18053	Opasek stínù +3
+18054	Opasek stínù +4
+18055	Opasek stínù +5
+18056	Opasek stínù +6
+18057	Opasek stínù +7
+18058	Opasek stínù +8
+18059	Opasek stínù +9
+18060	Runovı opasek +0
+18061	Runovı opasek +1
+18062	Runovı opasek +2
+18063	Runovı opasek +3
+18064	Runovı opasek +4
+18065	Runovı opasek +5
+18066	Runovı opasek +6
+18067	Runovı opasek +7
+18068	Runovı opasek +8
+18069	Runovı opasek +9
+18070	Medvìdí opasek +0
+18071	Medvìdí opasek +1
+18072	Medvìdí opasek +2
+18073	Medvìdí opasek +3
+18074	Medvìdí opasek +4
+18075	Medvìdí opasek +5
+18076	Medvìdí opasek +6
+18077	Medvìdí opasek +7
+18078	Medvìdí opasek +8
+18079	Medvìdí opasek +9
+18080	Opasek duší +0
+18081	Opasek duší +1
+18082	Opasek duší +2
+18083	Opasek duší +3
+18084	Opasek duší +4
+18085	Opasek duší +5
+18086	Opasek duší +6
+18087	Opasek duší +7
+18088	Opasek duší +8
+18089	Opasek duší +9
+18900	Kámen Rudého plamene
+20000	Brnìní z ïáblova rohu +0
+20001	Brnìní z ïáblova rohu +1
+20002	Brnìní z ïáblova rohu +2
+20003	Brnìní z ïáblova rohu +3
+20004	Brnìní z ïáblova rohu +4
+20005	Brnìní z ïáblova rohu +5
+20006	Brnìní z ïáblova rohu +6
+20007	Brnìní z ïáblova rohu +7
+20008	Brnìní z ïáblova rohu +8
+20009	Brnìní z ïáblova rohu +9
+20250	Oblek draèího jezdce +0
+20251	Oblek draèího jezdce +1
+20252	Oblek draèího jezdce +2
+20253	Oblek draèího jezdce +3
+20254	Oblek draèího jezdce +4
+20255	Oblek draèího jezdce +5
+20256	Oblek draèího jezdce +6
+20257	Oblek draèího jezdce +7
+20258	Oblek draèího jezdce +8
+20259	Oblek draèího jezdce +9
+20500	Kostìné brnìní +0
+20501	Kostìné brnìní +1
+20502	Kostìné brnìní +2
+20503	Kostìné brnìní +3
+20504	Kostìné brnìní +4
+20505	Kostìné brnìní +5
+20506	Kostìné brnìní +6
+20507	Kostìné brnìní +7
+20508	Kostìné brnìní +8
+20509	Kostìné brnìní +9
+20750	Zlatı oblek +0
+20751	Zlatı oblek +1
+20752	Zlatı oblek +2
+20753	Zlatı oblek +3
+20754	Zlatı oblek +4
+20755	Zlatı oblek +5
+20756	Zlatı oblek +6
+20757	Zlatı oblek +7
+20758	Zlatı oblek +8
+20759	Zlatı oblek +9
+22000	Pergamen návr. do mìsta
+22001	Zpìt do mìsta
+22010	Pergamen lokality
+22011	Pergamen lokality
+22020	Papír
+22030	Pergamen teleportu
+22040	Pergamen ivota
+22050	Pergamen oivení
+25040	Poehnanı pergamen
+25041	Magickı kámen
+25100	Perg. proti kamenu ducha
+27001	Èervenı lektvar (M)
+27002	Èervenı lektvar (S)
+27003	Èervenı lektvar (V)
+27004	Modrı lektvar (M)
+27005	Modrı lektvar (S)
+27006	Modrı lektvar (V)
+27051	Èervenı lektvar (M)
+27052	Modrı lektvar (M)
+27053	Zelenı lektvar (M)
+27054	Fialovı lektvar (M)
+27100	Zelenı lektvar (M)
+27101	Zelenı lektvar (S)
+27102	Zelenı lektvar (V)
+27103	Purpurovı lektvar (M)
+27104	Purpurovı lektvar (S)
+27105	Purpurovı lektvar (V)
+27110	Zelenı lektvar (M)
+27111	Zelenı lektvar (S)
+27112	Zelenı lektvar (V)
+27113	Fialovı lektvar (M)
+27114	Fialovı lektvar (S)
+27115	Fialovı lektvar (V)
+27116	Rùovı lektvar (M)
+27117	Rùovı lektvar (S)
+27118	Rùovı lektvar (V)
+27119	Azurovı lektvar (M)
+27120	Azurovı lektvar (S)
+27121	Azurovı lektvar (V)
+27400	Rybáøskı prut+1
+27410	Rybáøskı prut+2
+27420	Rybáøskı prut+3
+27430	Rybáøskı prut+4
+27440	Rybáøskı prut+5
+27450	Rybáøskı prut+6
+27460	Rybáøskı prut+7
+27470	Rybáøskı prut+8
+27480	Rybáøskı prut+9
+27490	Rybáøskı prut+10
+27500	Rybáøskı prut+11
+27510	Rybáøskı prut+12
+27520	Rybáøskı prut+13
+27530	Rybáøskı prut+14
+27540	Rybáøskı prut+15
+27550	Rybáøskı prut+16
+27560	Rybáøskı prut+17
+27570	Rybáøskı prut+18
+27580	Rybáøskı prut+19
+27590	Rybáøskı prut+20
+27600	Táborák
+27610	Koule na ryby
+27620	Kniha o rybáøství
+27799	Rybí kùstky
+27800	Pasta
+27801	Èerv
+27802	Malá ryba
+27803	Candát
+27804	Mandarínová ryba
+27805	Velkı candát
+27806	Kapr
+27807	Losos
+27808	Amur bílı
+27809	Pstruh
+27810	Úhoø
+27811	Pstruh duhovı
+27812	Pstruh øíèní
+27813	Perlín ostrobøichı
+27814	Okoun
+27815	Tenchi
+27816	Sumec
+27817	Møenka
+27818	Lotosová ryba
+27819	Ayu
+27820	Koruška
+27821	Shiri
+27822	Kapr hladkı
+27823	Zlatá rybka
+27833	Mrtvı candát
+27834	Mrtvá mandarínová ryba
+27835	Mrtvı velkı candát
+27836	Mrtvı kapr
+27837	Mrtvı losos
+27838	Mrtvı amur bílı
+27839	Mrtvı pstruh
+27840	Mrtvı úhoø
+27841	Mrtvı pstruh duhovı
+27842	Mrtvı pstruh øíèní
+27843	Mrtvı perlín ostrobøichı
+27844	Mrtvı okoun
+27845	Mrtvı Tenchi
+27846	Mrtvı sumec
+27847	Mrtvá møenka
+27848	Mrtvá lotosová ryba
+27849	Mrtvı ayu
+27850	Mrtvá koruška
+27851	Mrtvı shiri
+27852	Mrtvı kapr hladkı
+27853	Mrtvá zlatá rybka
+27863	Grilovanı candát
+27864	Grilovaná mandarín. ryba
+27865	Grilovanı velkı candát
+27866	Grilovanı kapr
+27867	Grilovanı losos
+27868	Grilovanı amur bílı
+27869	Grilovanı pstruh
+27870	Grilovanı úhoø
+27871	Grilovanı pstruh duhovı
+27872	Grilovanı pstruh øíèní
+27873	Grilovanı perlín ostrob.
+27874	Grilovanı okoun
+27875	Grilovanı Tenchi
+27876	Grilovanı sumec
+27877	Grilovaná møenka
+27878	Grilovaná lotosová ryba
+27879	Grilovanı ayu
+27880	Grilovaná koruška
+27881	Grilovanı shiri
+27882	Grilovanı kapr hladkı
+27883	Grilovaná zlatá rybka
+27987	Mušle
+27988	Mapa pokladu
+27989	Kompas kamene Metin
+27990	Kousek kamene
+27991	Vodní kámen
+27992	Bílá perla
+27993	Modrá perla
+27994	Krvavì rudá perla
+27995	Prázdná láhev
+27996	Láhev s jedem
+27997	Kulièka vitality
+27998	Taška na alchymii
+27999	Taška na kameny duchù
+28000	Kámen masakru+0
+28004	Paranoidní kámen+0
+28008	Kámen traumatu+0
+28012	Kámen proti Lycanùm +0
+28030	Kámen prùniku+0
+28031	Kámen smrt.rány+0
+28032	Kámen návratu+0
+28033	Kámen proti váleèníkùm+0
+28034	Kámen proti ninjùm+0
+28035	Kámen proti surùm+0
+28036	Kámen proti šamanùm+0
+28037	Kámen nestvùr+0
+28038	Kámen vyhıbání+0
+28039	Kámen schılení+0
+28040	Kámen magie+0
+28041	Kámen vitality+0
+28042	Kámen ochrany+0
+28043	Kámen spìchu+0
+28100	Kámen masakru+1
+28104	Paranoidní kámen+1
+28108	Kámen traumatu+1
+28112	Kámen proti Lycanùm +1
+28130	Kámen prùniku+1
+28131	Kámen smrt.rány+1
+28132	Kámen návratu+1
+28133	Kámen proti váleèníkùm+1
+28134	Kámen proti ninjùm+1
+28135	Kámen proti surùm+1
+28136	Kámen proti šamanùm+1
+28137	Kámen nestvùr+1
+28138	Kámen vyhıbání+1
+28139	Kámen schılení+1
+28140	Kámen magie+1
+28141	Kámen vitality+1
+28142	Kámen ochrany+1
+28143	Kámen spìchu+1
+28200	Kámen masakru+2
+28204	Paranodiní kámen+2
+28208	Kámen traumatu+2
+28212	Kámen proti Lycanùm +2
+28230	Kámen prùniku+1
+28231	Kámen smrt.rány+2
+28232	Kámen návratu+2
+28233	Kámen proti váleèníkùm+2
+28234	Kámen proti ninjùm+2
+28235	Kámen proti surùm+2
+28236	Kámen proti šamanùm+2
+28237	Kámen nestvùr+2
+28238	Kámen vyhıbání+2
+28239	Kámen schılení+2
+28240	Kámen magie+2
+28241	Kámen vitality+2
+28242	Kámen ochrany+2
+28243	Kámen spìchu+2
+28300	Kámen masakru+3
+28304	Paranoidní kámen+3
+28308	Kámen traumatu+3
+28312	Kámen proti Lycanùm +3
+28330	Kámen prùniku+3
+28331	Kámen smrt.rány+3
+28332	Kámen návratu+3
+28333	Kámen proti váleèníkùm+3
+28334	Kámen proti ninjùm+3
+28335	Kámen proti surùm+3
+28336	Kámen proti šamanùm+3
+28337	Kámen nestvùr+3
+28338	Kámen vyhıbání+3
+28339	Kámen schılení+3
+28340	Kámen magie+3
+28341	Kámen vitality+3
+28342	Kámen ochrany+3
+28343	Kámen spìchu+3
+28400	Kámen masakru+4
+28404	Paranoidní kámen+4
+28408	Kámen traumatu+4
+28412	Kámen proti Lycanùm +4
+28430	Kámen prùniku+4
+28431	Kámen smrt.rány+4
+28432	Kámen návratu+4
+28433	Kámen proti váleèníkùm+4
+28434	Kámen proti ninjùm+4
+28435	Kámen proti surùm+4
+28436	Kámen proti šamanùm+4
+28437	Kámen nestvùr+4
+28438	Kámen vyhıbání+4
+28439	Kámen schılení+4
+28440	Kámen magie+4
+28441	Kámen vitality+4
+28442	Kámen ochrany+4
+28443	Kámen spìchu+4
+28500	Kámen masakru+5
+28504	Paranoidní kámen+5
+28508	Kámen traumatu+5
+28512	Kámen hlouposti+5
+28530	Kámen prùniku+5
+28531	Kámen smrt.rány+5
+28532	Kámen návratu+5
+28533	Kámen proti bojovníkùm+5
+28534	Kámen proti ninjùm+5
+28535	Kámen proti surùm+5
+28536	Kámen proti šamanùm+5
+28537	Kámen nestvùr+5
+28538	Kámen vyhıbání+5
+28539	Kámen schılení+5
+28540	Kámen magie+5
+28541	Kámen vitality+5
+28542	Kámen ochrany+5
+28543	Kámen spìchu+5
+28600	Kámen prùniku+6
+28601	Kámen smrt.rány+6
+28602	Kámen návratu+6
+28603	Kámen proti váleèníkùm+6
+28604	Kámen proti ninjùm+6
+28605	Kámen proti surùm+6
+28606	Kámen proti šamanùm+6
+28607	Kámen nestvùr+6
+28608	Kámen vyhıbání+6
+28609	Kámen schılení+6
+28610	Kámen magie+6
+28611	Kámen vitality+6
+28612	Kámen ochrany+6
+28613	Kámen spìchu+6
+28630	Kámen prùniku+5
+28631	Aquakámen smrt.rány+5
+28632	Aquakámen návratu+5
+28633	Aquakámen váleèník+5
+28634	Aquakámen ninja+5
+28635	Aquakámen Sura+5
+28636	Aquakámen šaman+5
+28637	Aquakámen nestvùra+5
+28638	Aquakámen vyhıbaní+5
+28639	Aquakámen schılení+5
+28640	Aquakámen magie+5
+28641	Aquakámen vitality+5
+28642	Aquakámen ochrany+5
+28643	Aquakámen spìchu+5
+28700	Aquakámen prùniku+6
+28701	Aquakámen smrt.rány+7
+28702	Aquakámen návratu+7
+28703	Kámen proti váleèníkùm+7
+28704	Kámen proti ninjùm+7
+28705	Kámen proti surùm+7
+28706	Kámen proti šamanùm+7
+28707	Kámen nestvùr+7
+28708	Kámen vyhıbání+7
+28709	Kámen schılení+7
+28710	Kámen magie+7
+28711	Kámen vitality+7
+28712	Kámen ochrany+7
+28713	Kámen spìchu+7
+28730	Aquakámen prùniku+7
+28731	Aquakámen smrt.rány+7
+28732	Aquakámen návratu+7
+28733	Aquakámen váleèník+7
+28734	Aquakámen ninja+7
+28735	Aquakámen Sura+7
+28736	Aquakámen šaman+7
+28737	Aquakámen nestvùra+7
+28738	Aquakámen vyhıbání+7
+28739	Aquakámen schılení+7
+28740	Aquakámen magie+7
+28741	Aquakámen vitality+7
+28742	Aquakámen ochrany+7
+28743	Aquakámen spìchu+7
+28800	Kámen prùniku+8
+28801	Kámen smrt.rány+8
+28802	Kámen návratu+8
+28803	Kámen proti váleèníkùm+8
+28804	Kámen proti ninjùm+8
+28805	Kámen proti surùm+8
+28806	Kámen proti šamanùm+8
+28807	Kámen nestvùr+8
+28808	Kámen vyhıbání+8
+28809	Kámen schılení+8
+28810	Kámen magie+8
+28811	Kámen vitality+8
+28812	Kámen ochrany+8
+28813	Kámen spìchu+8
+28830	Kámen prùniku+8
+28831	Kámen smrt.rány+8
+28832	Kámen návratu+8
+28833	Aquakámen váleèník+8
+28834	Aquakámen ninja+8
+28835	Aquakámen Sura+8
+28836	Aquakámen šamani+8
+28837	Aquakámen nestvùra+8
+28838	Aquakámen vyhıbání+8
+28839	Aquakámen schılení+8
+28840	Aquakámen magie+8
+28841	Aquakámen vitality+8
+28842	Aquakámen ochrany+8
+28843	Aquakámen spìchu+8
+28900	Aquakámen prùniku+9
+28901	Kámen smrt.rány+9
+28902	Kámen návratu+9
+28903	Kámen proti váleèníkùm+9
+28904	Kámen proti ninjùm+9
+28905	Kámen proti surùm+9
+28906	Kámen proti šamanùm+9
+28907	Kámen nestvùr+9
+28908	Kámen vyhıbání+9
+28909	Kámen schılení+9
+28910	Kámen magie+9
+28911	Kámen vitality+9
+28912	Kámen ochrany+9
+28913	Kámen spìchu+9
+28930	Kámen prùniku+9
+28931	Aquakámen smrt.rány+9
+28932	Aquakámen návratu+9
+28933	Aquakámen váleèník+9
+28934	Aquakámen ninja+9
+28935	Aquakámen Sura+9
+28936	Aquakámen šaman+9
+28937	Aquakámen nestvùra+9
+28938	Aquakámen vyhıbání+9
+28939	Aquakámen schılení+9
+28940	Aquakámen magie+9
+28941	Aquakámen vitality+9
+28942	Aquakámen ochrany+9
+28943	Aquakámen spìchu+9
+28960	Odštìpek z kamene
+29001	Høebenatka
+29002	Modrá høebenatka
+29003	lutá høebenatka
+29004	Èervená høebenatka
+29005	Zelená høebenatka
+29006	Tmavì lutı vinnı kámen
+29007	Tmavì modrı vinnı kámen
+29008	Modrá svatá voda
+29009	lutá svatá voda
+29010	Èervená svatá voda
+29011	Zelená svatá voda
+29012	Tmavì modrá boí ruka
+29013	Svìtle lutá boí voda
+29014	Svìtle èervená boí voda
+29015	Tmavì zelená boí ruka
+29101	Krumpáè+0
+29102	Krumpáè+1
+29103	Krumpáè+2
+29104	Krumpáè+3
+29105	Krumpáè+4
+29106	Krumpáè+5
+29107	Krumpáè+6
+29108	Krumpáè+7
+29109	Krumpáè+8
+29110	Krumpáè+9
+30000	Jeèmen
+30001	Dopis
+30002	Opeèená uzenka
+30003	Praseèí nos
+30004	Kel divoèáka
+30005	Èást rozbitého brnìní
+30006	Zub Orka
+30007	Amulet Orka
+30008	Slabikáø ezoteriky
+30009	Neznámı lék
+30010	Medvìdí luè
+30011	Klubko
+30012	Láhev vína
+30013	Dbán na alkohol
+30014	Koešina Yetiho
+30015	Upomínka na démona
+30016	Démonickı drahokam
+30017	Ozdobná vlásnièka
+30018	Èervená stuha do vlasù
+30019	Ohnivá høíva
+30020	Semínko broskve
+30021	Kus drahokamu
+30022	Hadí ocas
+30023	Bílá tygøí koešina
+30024	Koòskı ohon
+30025	Pavoukùv pytlík s jedem
+30026	Vlèí støeva
+30027	Vlèí koešina
+30028	Vlèí dráp
+30029	Vlèí játra
+30030	Rezavá èepel kordu
+30031	Šperk
+30032	Èerná uniforma
+30033	Rozbitı porcelán
+30034	Bílá stuha do vlasù
+30035	Krém na ple
+30036	Tajemná bylina
+30037	Tygøí dráp
+30038	Tygøí koešina
+30039	Kus látky
+30040	List
+30041	Shuriken
+30042	Tygøí tesák
+30043	Fazole
+30044	Hlína
+30045	Jehla štíra
+30046	Ocas štíra
+30047	Kniha klateb
+30048	Kus ledu
+30049	Roh led. zabij. velryby
+30050	Ledová kulièka
+30051	Neznámı talisman
+30052	Vlajka
+30053	Kùe z medvìdí tlapy
+30054	Snubní prsten
+30055	Klepeta štíra
+30056	Pavuèina
+30057	Oèi pavouka
+30058	Pytlík s pavouè. vajíèky
+30059	Pavouèí nohy
+30060	abí jazyk
+30061	abí stehınka
+30062	Mísa na léky
+30063	Lék na ple
+30064	Ostrı kámen
+30065	Zvoneèek
+30066	Ostrı pepø
+30067	Hadí kùe
+30068	Steak z tofu
+30069	Vlèí dráp+
+30070	Vlèí koešina+
+30071	Medvìdí luè+
+30072	Kùe z medvìdí tlapy+
+30073	Bílá stuha do vlasù+
+30074	Èerná uniforma+
+30075	Shuriken+
+30076	Amulet Orka+
+30077	Zub Orka+
+30078	Slabikáø ezoteriky+
+30079	Neznámı talisman+
+30080	Kniha klateb +
+30081	Ocas štíra+
+30082	Hadí ocas+
+30083	Neznámı lék+
+30084	Neznámı talisman+
+30085	Kus látky+
+30086	Upomínka na démona+
+30087	Démonickı drahokam+
+30088	Kus ledu+
+30089	Koešina Yetiho+
+30090	Ledová kulièka+
+30091	Symbol váleèníka
+30092	Koøist divochù
+30093	Taška pro štìstí
+30094	Taška pro štìstí
+30095	Taška pro štìstí
+30096	Taška pro štìstí
+30097	Penìenka pro štìstí
+30098	Taška pro štìstí
+30099	Taška pro štìstí
+30100	Taška pro štìstí
+30101	Snubní prsten Ariyoung
+30102	Zlatá sekera od kováøe
+30103	Zlatı zub Orka
+30104	Pavuèina v poušti
+30105	Ocas štíra
+30106	Lék pro Yu-Ranga
+30107	Tesák Orka
+30108	Keramickı smalt
+30109	Pavuèina v poušti
+30110	Dopis od Huahn-So
+30111	Osten štíra
+30112	Úhoø
+30113	Ezoterické spisy
+30114	Útrapa
+30115	Zmírnìní útrapy
+30116	abí stehınka
+30117	Dopis
+30118	Šperkovnice démonù
+30119	Zvon
+30120	Èást mapy
+30121	Èást mapy
+30122	Èást mapy
+30123	Èást mapy
+30124	Èást mapy
+30125	Èást mapy
+30126	Èást mapy
+30127	Èást mapy
+30128	Èást mapy
+30129	Pøíkaz od jezdce
+30130	Prázdná láhev
+30131	Dopis od kováøe
+30132	Urielova kniha
+30133	Kytièkované boty
+30134	Urieluv balíèek
+30135	Dopis od Ariyounga
+30136	Krásnì vyøezávanı luk
+30137	Opièí krev
+30138	Pouštní písek
+30139	Tøenovı zub
+30140	Nit na šití
+30141	Šperk
+30142	Dopis
+30143	Léèivé byliny
+30144	Tygøí játra
+30145	Balsosùv Lék
+30146	Hrouda ledu
+30147	Nauka o chrámu
+30148	Chrámovı šál
+30149	Zmrzlina se sirupem
+30150	Stránka z deníku
+30151	Vlèí koešina
+30152	Lék
+30153	Kytky
+30154	Tajná kniha chrámu
+30155	Mirinin pøívìsek
+30156	Tajná kniha chrámu
+30157	Špièka šípu
+30158	Rıové buchty
+30159	Obleèení
+30160	Poznámka
+30161	Manelùv oštìp
+30162	Oko pavouka
+30163	Chomáèek vaty
+30164	Pøeklad Knihy klateb
+30165	Zelkova vìtev
+30166	Tabulka Tugyise
+30167	Vìtev èerv. stromu duchù
+30168	Poznámka vùdce
+30169	Krvavá kvìtina
+30170	Oranová kvìtina
+30171	lutá kvìtina
+30172	Vznešená kytice
+30173	Kùe Mu-Rang
+30174	Medvìdí pracka
+30175	Diamantová harpuna
+30176	Mihotavá tygøí koešina
+30177	Pimovı olej
+30178	Piktogram
+30179	Kroucenı klíè
+30180	Amulet draèího boha
+30181	Stránka
+30182	Legendární diáø
+30183	Ponurá døevìná maska
+30184	Kouzelnı popel
+30185	Èernı led
+30186	Fosilní slza
+30187	Kapka krve
+30188	Obsidián
+30189	Baljit-Elvedinovy slzy
+30190	Krvavı kámen
+30191	Krvavı kámen
+30192	Mléènice
+30193	Prstní kùstky
+30194	Kyj orkù
+30195	Køemennı písek
+30196	Popel démona
+30197	Magická semena
+30198	Vodní krystal
+30199	Modrı krystal
+30201	Prsten pomsty
+30202	Tanakovo ucho
+30203	Køišál
+30204	Kus køišálu
+30205	Látky na vırobu
+30210	Kus drahokamu
+30211	Kus drahokamu
+30212	Kus drahokamu
+30213	Kus drahokamu
+30214	Kus drahokamu
+30215	Kus drahokamu
+30216	Kus drahokamu
+30217	Kus drahokamu
+30218	Kus drahokamu
+30219	Kus drahokamu
+30220	Kámen duší Jinunggisù
+30221	Kámen duše chrámu
+30222	Kámen duše Sagysù
+30223	Kámen duše Aurtumryusù
+30224	Kámen duše Gyimoksù
+30225	Kámen duše Tugyisù
+30226	Kámen duše lesa
+30227	Kámen duše vùdce
+30228	Kámen duše Beran-Setaou
+30251	Zlovolnı drahokam
+30252	Drahokam znalostí
+30253	Drahokam vìrnosti
+30254	NoNAme
+30265	Kus medaile (1)
+30266	Kus medaile (2)
+30267	Kus medaile (3)
+30268	Kus medaile (4)
+30269	Kus medaile (5)
+30270	Úlomek Draèího kamene
+30300	Neznámá stará bedna
+30301	Mapa vìe Sa-Gui
+30302	Mapa sluje Zin
+30303	Klíè k Bong-In
+30304	Klíè k Zin-Bong-In
+30311	Klíè krystalu duše
+30312	Šklebící se totem
+30315	Chléb
+30316	Darovací talíø
+30317	Darování jídla
+30318	Poehnané ovoce
+30319	Vysušená hlava
+30320	Vysušená hlava
+30321	Halloweenská dınì
+30322	Magická hùlka
+30323	Karta Halloweenské masky
+30324	Pavouèí klíè
+30325	Pavouèí klíè
+30326	Jed pavouèí královny
+30327	Pavouèí píšalka
+30329	Zlaté ozubené kolo
+30330	Kámen Maat
+30500	Nù vykládanı rubíny
+30501	Zlatá svorka
+30502	Rubínová dekorace
+30503	Nù vykládanı ametysty
+30504	Støíbrná svorka
+30505	Smaragdová dekorace
+30506	Nù vykládanı safíry
+30507	Bronzová svorka
+30508	Safírová dekorace
+30509	Modrá draèí ocel
+30510	Velká epoleta
+30511	Rudá tkanina
+30512	Èervená draèí ocel
+30513	Noblesní epoleta
+30514	Fialová tkanina
+30515	Rùová draèí ocel
+30516	Starodávná epoleta
+30517	Zlatá tkanina
+30518	Zlatá pøíze
+30519	Zlatı hák
+30520	Zlatá pøezka
+30521	Èást prstenu
+30522	Èlánek øetìzu
+30523	Èást klenotu
+30524	Ohnivı kámen
+30525	Ledovı ohnivı kámen
+30526	NoNAme
+30527	NoNAme
+30528	NoNAme
+30529	NoNAme
+30530	NoNAme
+30531	NoNAme
+30532	NoNAme
+30533	NoNAme
+30534	NoNAme
+30535	NoNAme
+30536	NoNAme
+30537	NoNAme
+30538	NoNAme
+30539	NoNAme
+30540	NoNAme
+30541	NoNAme
+30542	NoNAme
+30543	NoNAme
+30544	NoNAme
+30545	NoNAme
+30546	NoNAme
+30547	NoNAme
+30548	NoNAme
+30549	NoNAme
+30550	Modrı opasek
+30551	NoNAme
+30552	NoNAme
+30553	NoNAme
+30554	NoNAme
+30555	NoNAme
+30556	NoNAme
+30557	NoNAme
+30558	NoNAme
+30559	NoNAme
+30560	NoNAme
+30561	NoNAme
+30562	NoNAme
+30563	NoNAme
+30564	NoNAme
+30565	NoNAme
+30566	NoNAme
+30567	NoNAme
+30568	NoNAme
+30569	NoNAme
+30570	NoNAme
+30571	NoNAme
+30572	NoNAme
+30573	NoNAme
+30574	NoNAme
+30575	NoNAme
+30576	NoNAme
+30577	NoNAme
+30578	NoNAme
+30579	NoNAme
+30580	NoNAme
+30581	NoNAme
+30582	NoNAme
+30583	NoNAme
+30584	NoNAme
+30585	NoNAme
+30586	NoNAme
+31001	Kopie nápisu
+31002	Starı dokument
+31003	Protijed
+31004	Klovatina Svatého stromu
+31005	Esence Modrého krystalu
+31006	Èervenı pekelnı køemen
+31007	Vyvøelina
+31008	Nebeská slza
+31009	Gnollskı dopis
+31010	Dopis Èervenım zlodìjùm
+31011	NoNAme
+31012	NoNAme
+31013	Kus papíru
+31014	NoNAme
+31015	Dopis kapitána Háka
+31016	Dopis Lee Chunga
+31017	Zapeèetìnı dopis
+31018	Carapaxskı rukopis
+31019	Carapaxskı prášek
+31020	Koøen devaterníku
+31021	NoNAme
+31022	Oinova šupina
+31023	NoNAme
+31024	Kùe Mantikóry
+31025	NoNAme
+31026	Crustaceánské brnìní
+31027	Jemnı písek
+31028	Jílová cihla
+31029	Vnitøní svìtlo
+31030	Vnitøní svìtlo
+31031	Esence milénia
+31032	Leviatanské perly
+31033	Šéfovská kápì
+31034	Totem gigantù
+31035	Èernı kámen
+31036	Èerné zlato
+31037	Koenı pytel
+31038	Posvátná zemina
+31039	Pytel penìz
+31040	Zlatá medaile
+31041	Fosilní hlína
+31042	Tritónùv oštìp
+31043	Tabulka Lemurù
+31044	NoNAme
+31045	NoNAme
+31046	NoNAme
+31047	NoNAme
+31048	NoNAme
+31049	NoNAme
+31050	NoNAme
+31051	NoNAme
+31052	NoNAme
+31053	NoNAme
+31054	NoNAme
+31055	NoNAme
+31056	NoNAme
+31057	NoNAme
+31058	NoNAme
+31059	NoNAme
+31060	NoNAme
+31061	NoNAme
+31062	NoNAme
+31063	NoNAme
+31064	NoNAme
+31065	NoNAme
+31066	NoNAme
+31067	NoNAme
+31068	NoNAme
+31069	NoNAme
+31070	NoNAme
+31071	NoNAme
+31072	NoNAme
+31073	Zlatá lovecká páska
+31074	Nıtovanı náhrdelník
+31075	Ostnatı náhrdelník
+31076	Sluneèní byliny
+31077	Prášek ze základ. kamene
+31078	Èisté svìtlo
+31079	Dopis Yak-Hwanovi
+31080	Krev Krále plamenù
+31081	Èerná hmota
+31082	Magmovı prsten
+31083	Samaelùv prsten
+31084	Svìcená voda
+31085	NoNAme
+31086	NoNAme
+31087	NoNAme
+31088	NoNAme
+31089	NoNAme
+31090	NoNAme
+31091	NoNAme
+31092	NoNAme
+35000	Léèivé byliny+
+35001	Tygøí játra+
+38001	VIP-Feature
+38002	Tombola_ticket_today
+38003	Tombola_ticket_tomorrow
+38004	Tombola_reroll
+38005	TombolaPP_spin
+38006	Momo-Reroll
+38010	Balíèek Yangù
+38050	Bedna síly
+38051	Krystal Král. tygra
+38052	Truhla králù
+38053	Truhla vìèné zimy
+38054	Truhla pouštní bouøe
+38055	Truhla s mládìtem
+38056	Prázdninová truhla
+38057	Truhla Severu
+38100	Posilující svaèinka (7)
+38101	Posilující svaèinka (15)
+38102	Posilující svaèinka (30)
+38200	Peèe Rufuse
+38201	Peèe Rufuse
+39001	Magickı kámen
+39002	Prsten zkušeností
+39003	Broskvové víno
+39004	Mramor poehnání
+39005	Magická mìdìná ruda
+39006	Pláš stateènosti
+39007	Pøíruèka o kování
+39008	Pergamen exorcismu
+39009	Reset schopností
+39010	Lektvar útoku +10
+39011	Poehnání ivota
+39012	Poehnání magie
+39013	Poehnání draka
+39014	Pergamen války
+39015	Kámen kováøe
+39016	Magická elezná ruda
+39017	ivot draèího boha
+39018	Útok draèího boha
+39019	Inteligence draèího boha
+39020	Obrana draèího boha
+39021	Podpora draèího boha
+39022	Pergamen draka
+39023	Vızkumníkùv elixír
+39024	Kritickı útok
+39025	Pronikavı útok
+39026	Elixír rychlosti
+39027	Pøíruèka kamenù
+39028	Zaèarovat pøedmìt
+39029	Zesílit pøedmìt
+39030	Soustøedìné ètení
+39031	Lektvar spìchu
+39032	Plod ivota
+39033	Svitek opravy
+39034	Koòskı cukr
+39035	Sklenice porozumìní
+39036	Vìtrné boty
+39037	Elixír Slunce (M)
+39038	Elixír Slunce (S)
+39039	Elixír Slunce (V)
+39040	Elixír Mìsíce (M)
+39041	Elixír Mìsíce (S)
+39042	Elixír Mìsíce (V)
+39043	Pergamen lokality
+40001	Neznámı zlatı prsten
+40002	Levisùv prsten
+40003	Thorùv prsten
+40004	Eeksùv prsten
+40005	Zvonìní
+40006	Dodací list divochù
+40007	Dopis od divochù
+41001	Králièí kostım (hnìdı)
+41002	Zajeèí kostım (hnìdı)
+41003	Pouštní oblek (M)
+41004	Pouštní oblek ()
+41005	Olym. šermíøskı úbor (M)
+41006	Olym. šermíøskı úbor ()
+41007	GER šermíøskı úbor (M)
+41008	GER šermíøskı úbor ()
+41009	TUR šermíøskı úbor (M)
+41010	TUR šermíøskı úbor ()
+41011	BRA šermíøskı úbor (M)
+41012	BRA šermíøskı úbor ()
+41013	Olym. fotbalovı úbor (M)
+41014	Olym. fotbalovı úbor ()
+41015	GER fotbalovı úbor (M)
+41016	GER fotbalovı úbor ()
+41017	TUR fotbalovı úbor (M)
+41018	TUR fotbalovı úbor ()
+41019	BRA fotbalovı úbor (M)
+41020	BRA fotbalovı úbor ()
+41021	Olym. boxerskı úbor (M)
+41022	Olym. boxerskı úbor ()
+41023	GER boxerskı úbor (M)
+41024	GER boxerskı úbor ()
+41025	TUR boxerskı úbor (M)
+41026	TUR boxerskı úbor ()
+41027	BRA boxerskı úbor (M)
+41028	BRA boxerskı úbor ()
+41029	Pouštní oblek (M, Bonus)
+41030	Pouštní oblek (, Bonus)
+41031	Olym. šermíøskı úbor (M)
+41032	Olym. šermíøskı úbor ()
+41033	GER šermíøskı úbor (M)
+41034	GER šermíøskı úbor ()
+41035	TUR šermíøskı úbor (M)
+41036	TUR šermíøskı úbor ()
+41037	BRA šermíøskı úbor (M)
+41038	BRA šermíøskı úbor ()
+41039	Olym. fotbalovı úbor (M)
+41040	Olym. fotbalovı úbor ()
+41041	GER fotbalovı úbor (M)
+41042	GER fotbalovı úbor ()
+41043	TUR fotbalovı úbor (M)
+41044	TUR fotbalovı úbor ()
+41045	BRA fotbalovı úbor (M)
+41046	BRA fotbalovı úbor ()
+41047	Olym. boxerskı úbor (M)
+41048	Olym. boxerskı úbor ()
+41049	GER boxerskı úbor (M)
+41050	GER boxerskı úbor ()
+41051	TUR boxerskı úbor (M)
+41052	TUR boxerskı úbor ()
+41053	BRA boxerskı úbor (M)
+41054	BRA boxerskı úbor ()
+41055	FRA šermíøskı úbor (M)
+41056	FRA šermíøskı úbor ()
+41057	ITA šermíøskı úbor (M)
+41058	ITA šermíøskı úbor ()
+41059	POL šermíøskı úbor (M)
+41060	POL šermíøskı úbor ()
+41061	ROU šermíøskı úbor (M)
+41062	ROU šermíøskı úbor ()
+41063	ESP šermíøskı úbor (M)
+41064	ESP šermíøskı úbor ()
+41065	FRA fotbalovı úbor (M)
+41066	FRA Fotbalovı úbor ()
+41067	ITA Fotbalovı úbor (M)
+41068	ITA Fotbalovı úbor ()
+41069	POL Fotbalovı úbor (M)
+41070	POL Fotbalovı úbor ()
+41071	ROU Fotbalovı úbor (M)
+41072	ROU Fotbalovı úbor ()
+41073	ESP Fotbalovı úbor (M)
+41074	ESP Fotbalovı úbor ()
+41075	FRA Boxerskı úbor (M)
+41076	FRA Boxerskı úbor ()
+41077	ITA Boxerskı úbor (M)
+41078	ITA Boxerskı úbor ()
+41079	POL Boxerskı úbor (M)
+41080	POL Boxerskı úbor ()
+41081	ROU Boxerskı úbor (M)
+41082	ROU Boxerskı úbor ()
+41083	ESP Boxerskı úbor (M)
+41084	ESP Boxerskı úbor ()
+41085	FRA šermíøskı úbor (M)
+41086	FRA šermíøskı úbor ()
+41087	ITA šermíøskı úbor (M)
+41088	ITA šermíøskı úbor ()
+41089	POL šermíøskı úbor (M)
+41090	POL šermíøskı úbor ()
+41091	ROU šermíøskı úbor (M)
+41092	ROU šermíøskı úbor ()
+41093	ESP šermíøskı úbor (M)
+41094	ESP šermíøskı úbor ()
+41095	FRA Fotbalovı úbor (M)
+41096	FRA Fotbalovı úbor ()
+41097	ITA Fotbalovı úbor (M)
+41098	ITA Fotbalovı úbor ()
+41099	POL Fotbalovı úbor (M)
+41100	POL Fotbalovı úbor ()
+41101	ROU Fotbalovı úbor (M)
+41102	ROU Fotbalovı úbor ()
+41103	ESP Fotbalovı úbor (M)
+41104	ESP Fotbalovı úbor ()
+41105	FRA Boxerskı úbor (M)
+41106	FRA Boxerskı úbor ()
+41107	ITA Boxerskı úbor (M)
+41108	ITA Boxerskı úbor ()
+41109	POL Fotbalovı úbor (M)
+41110	POL Fotbalovı úbor ()
+41111	ROU Boxerskı úbor (M)
+41112	ROU Boxerskı úbor ()
+41113	ESP Boxerskı úbor (M)
+41114	ESP Boxerskı úbor ()
+41117	Kostım mušketıra
+41118	Uniforma sluky
+41119	Oblek na salsu
+41120	Šaty na salsu
+41121	Pánskı oblek
+41122	Koktejlky
+41125	Smoking z dınì
+41126	Šaty z dınì
+41129	Kostım mušketıra +
+41130	Uniforma sluky +
+41131	Oblek na salsu +
+41132	Šaty na salsu +
+41133	Pánskı oblek +
+41134	Koktejlky +
+41135	Smoking z dınì (bonus)
+41136	Šaty z dınì (bonus)
+41137	Vánoèní kostım (èervenı)
+41138	Vánoèní šaty (èervené)
+41139	Vánoèní kostım (zelenı)
+41140	Vánoèní šaty (zelené)
+41141	Vánoèní kostım (èernı)
+41142	Vánoèní šaty (èerné)
+41143	Kostım soba (M)
+41144	Kostım soba ()
+41145	Vánoèní kostım+ (èerv.)
+41146	Vánoèní šaty+ (èerv.)
+41147	Vánoèní kostım+ (zelenı)
+41148	Vánoèní šaty+ (zelené)
+41149	Vánoèní kostım+ (èernı)
+41150	Vánoèní šaty+ (èerné)
+41151	Kostım soba+ (M)
+41152	Kostım soba+ ()
+41153	AC Miryang (M)
+41154	AC Miryang ()
+41155	AFC Jayang (M)
+41156	AFC Yayang ()
+41157	RSC Hadí pole (M)
+41158	RSC Hadí pole ()
+41159	Yongan FC (M)
+41160	Yongan FC ()
+41161	FC Bakra (M)
+41162	FC Bakra ()
+41163	FC Bokjung (M)
+41164	FC Bokjung ()
+41165	FC Bavaria Hwang (M)
+41166	FC Bavaria Hwang ()
+41167	Borussia Chunjo (M)
+41168	Borussia Chunjo ()
+41169	SC Doyyum (M)
+41170	SC Doyyum ()
+41171	Hasun Dong FC (M)
+41172	Hasun Dong FC ()
+41173	CFR Draèí oheò 07 (M)
+41174	CFR Draèí oheò 07 ()
+41175	Daeyami FC (M)
+41176	Daeyami FC ()
+41177	GNK Kuahlo Dong (M)
+41178	GNK Kuahlo Dong ()
+41179	1927 Imha (M)
+41180	1927 Imha ()
+41181	FC Ledová zemì (M)
+41182	FC Ledová zemì ()
+41183	FC Gumsan (M)
+41184	FC Gumsan ()
+41185	Galavaryong (M)
+41186	Galavaryong ()
+41187	Juventus Yongbi (M)
+41188	Juventus Yongbi ()
+41189	OSC Lungsam (M)
+41190	OSC Lungsam ()
+41191	Doyyumhwan CF (M)
+41192	Doyyumhwan CF ()
+41193	FC Nefritovı záliv (M)
+41194	FC Nefritovı záliv ()
+41195	Shinsoo United (M)
+41196	Shinsoo United ()
+41197	Draèí údolí SC (M)
+41198	Draèí údolí SC ()
+41199	Bouøné hory FC (M)
+41200	Bouøné hory FC ()
+41201	Pyungmoo Saint Hwang (M)
+41202	Pyungmoo Saint Hwang ()
+41203	Real Sohan (M)
+41204	Real Sohan ()
+41205	FC Jinno 04 (M)
+41206	FC Jinno 04 ()
+41207	FC Sangsun Dong (M)
+41208	FC Sangsun Dong ()
+41209	SL Jungsun Dong (M)
+41210	SL Jungsun Dong ()
+41211	Spartak Jungrang (M)
+41212	Spartak Jungrang ()
+41213	Ohnivá zemì CF (M)
+41214	Ohnivá zemì CF ()
+41215	FC St. Seungryong (M)
+41216	FC St. Seungryong ()
+41217	AC Miryang+ (M)
+41218	AC Miryang+ ()
+41219	AFC Yayang+ (M)
+41220	AFC Yayang+ ()
+41221	RSC Hadí pole+ (M)
+41222	RSC Hadí pole+ ()
+41223	Yongan FC+ (M)
+41224	Yongan FC+ ()
+41225	FC Bakra+ (M)
+41226	FC Bakra+ ()
+41227	FC Bokjung+ (M)
+41228	FC Bokjung+ ()
+41229	FC Bavaria Hwang+ (M)
+41230	FC Bavaria Hwang+ ()
+41231	Borussia Chunjo+ (M)
+41232	Borussia Chunjo+ ()
+41233	SC Doyyum+ (M)
+41234	SC Doyyum+ ()
+41235	Hasun Dong FC+ (M)
+41236	Hasun Dong FC+ ()
+41237	CFR Draèí oheò 07+ (M)
+41238	CFR Draèí oheò 07+ ()
+41239	Daeyami FC+ (M)
+41240	Daeyami FC+ ()
+41241	GNK Kuahlo Dong+ (M)
+41242	GNK Kuahlo Dong+ ()
+41243	1927 Imha+ (M)
+41244	1927 Imha+ ()
+41245	FC Ledová zemì+ (M)
+41246	FC Ledová zemì+ ()
+41247	FC Gumsan+ (M)
+41248	FC Gumsan+ ()
+41249	Galavaryong+ (M)
+41250	Galavaryong+ (F)
+41251	Juventus Yongbi+ (M)
+41252	Juventus Yongbi+ ()
+41253	OSC Lungsam+ (M)
+41254	OSC Lungsam+ ()
+41255	Doyyumhwan CF+ (M)
+41256	Doyyumhwan CF+ ()
+41257	FC Nefritovı záliv+ (M)
+41258	FC Nefritovı záliv+ ()
+41259	Shinsoo United+ (M)
+41260	Shinsoo United+ ()
+41261	Draèí údolí SC+ (M)
+41262	Draèí údolí SC+ ()
+41263	Bouøné hory FC+ (M)
+41264	Bouøné hory FC+ ()
+41265	Pyungmoo Saint Hwang+ (M)
+41266	Pyungmoo Saint Hwang+ ()
+41267	Real Sohan+ (M)
+41268	Real Sohan+ ()
+41269	FC Jinno 04+ (M)
+41270	FC Jinno 04+ ()
+41271	FC Sangsun Dong+ (M)
+41272	FC Sangsun Dong+ ()
+41273	SL Jungsun Dong+ (M)
+41274	SL Jungsun Dong+ ()
+41275	Spartak Jungrang+ (M)
+41276	Spartak Jungrang+ ()
+41277	Ohnivá zemì CF+ (M)
+41278	Ohnivá zemì CF+ ()
+41279	FC St. Seungryong+ (M)
+41280	FC St. Seungryong+ ()
+41291	Králièí kostım (èernı)
+41292	Králièí kostım (modrı)
+41293	Králièí kostım (zelenı)
+41294	Králièí kostım (rùovı)
+41295	Zajeèí kostım (èernı)
+41296	Zajeèí kostım (modrı)
+41297	Zajeèí kostım (zelenı)
+41298	Zajeèí kostım (rùovı)
+41299	Králièí kostım+ (èernı)
+41300	Králièí kostım+ (modrı)
+41301	Králièí kostım+ (zelenı)
+41302	Králièí kostım+ (rùovı)
+41303	Zajeèí kostım+ (èernı)
+41304	Zajeèí kostım+ (modrı)
+41305	Zajeèí kostım+ (zelenı)
+41306	Zajeèí kostım+ (rùovı)
+41307	Oblek kobry (m)
+41308	Oblek kobry ()
+41309	Oblek kobry+ (m)
+41310	Oblek kobry+ ()
+41311	Pouštní váleèník (M, è.)
+41312	Pouštní váleèník (, è.)
+41313	Pouštní váleèník+ (M, è)
+41314	Pouštní váleèník+ (, è)
+41315	Azraelovo brnìní (m)
+41316	Azraelovo brnìní ()
+41317	Azraelovo brnìní+ (m)
+41318	Azraelovo brnìní+ ()
+41319	Èæ»ç°©
+41320	Oblek Dınì Jacka (m)
+41321	Šaty Dınì Jacka ()
+41322	Oblek Dınì Jacka+ (m)
+41323	Šaty Dınì Jacka+ ()
+45001	Zajeèí uši (hnìdé)
+45002	Králièí uši (hnìdé)
+45003	Pokrıvka hlavy (M)
+45004	Pokrıvka hlavy ()
+45005	LotoShosi (M)
+45006	Šermíøskı úèes ()
+45007	Mohikán (M)
+45008	GER Fotbalovı úèes ()
+45009	Dredy (M)
+45010	GER Boxerskı úèes ()
+45011	Pokrıvka hlavy (M)
+45012	Pokrıvka hlavy ()
+45013	LotoShosi (M)
+45014	Šermíøskı úèes ()
+45015	Mohikán (M)
+45016	GER Fotbalovı úèes ()
+45017	Dredy (M)
+45018	GER Boxerskı úèes ()
+45019	TUR Boxerskı úèes ()
+45020	BRA Boxerskı úèes ()
+45021	Olymp. boxerskı úèes ()
+45022	FRA Boxerskı úèes ()
+45023	ITA Boxerskı úèes ()
+45024	POL Boxerskı úèes ()
+45025	ROU Boxerskı úèes ()
+45026	ESP Boxerskı úèes ()
+45027	TUR Fotbalovı úèes ()
+45028	BRA Fotbalovı úèes ()
+45029	Olym. fotbalovı úèes ()
+45030	FRA Fotbalovı úèes ()
+45031	ITA Fotbalovı úèes ()
+45032	POL Fotbalovı úèes ()
+45033	ROU Fotbalovı úèes ()
+45034	ESP Fotbalovı úèes ()
+45035	TUR Boxerskı úèes ()
+45036	BRA Boxerskı úèes ()
+45037	Olym. boxerskı úèes ()
+45038	FRA Boxerskı úèes ()
+45039	ITA Boxerskı úèes ()
+45040	POL Boxerskı úèes ()
+45041	ROU Boxerskı úèes ()
+45042	ESP Boxerskı úèes ()
+45043	TUR Fotbalovı úèes ()
+45044	BRA Fotbalovı úèes ()
+45045	Olym. fotbalovı úèes ()
+45046	FRA Fotbalovı úèes ()
+45047	ITA Fotbalovı úèes ()
+45048	POL Fotbalovı úèes ()
+45049	ROU Fotbalovı úèes ()
+45050	ESP Fotbalovı úèes ()
+45053	Mušketırskı úèes
+45054	Èepièka sluebné
+45055	Mini Mohawk
+45056	Uzel pro salsu
+45057	Bogartùv klobouk
+45058	Kvìtinovı úèes
+45061	Maska dınì
+45062	Maska dınì
+45065	Mušketırskı úèes +
+45066	Èepièka sluebné +
+45067	Mini Mohawk +
+45068	Uzel pro salsu +
+45069	Bogartùv klobouk +
+45070	Kvìtinovı úèes +
+45073	Maska dınì (bonus)
+45074	Maska dınì (bonus)
+45075	Vánoèní klobouk (èerv.)
+45076	Vánoèní klobouk (zelenı)
+45077	Vánoèní klobouk (èernı)
+45078	Elfí èapka
+45079	Hlava soba (M)
+45080	Hlava soba ()
+45081	Vánoèní klobouk+ (èerv.)
+45082	Vánoèní klobouk+ (zel.)
+45083	Vánoèní klobouk+ (èernı)
+45084	Elfí èapka+
+45085	Hlava soba+ (M)
+45086	Hlava soba+ ()
+45087	Šátek (bílı)
+45088	Šátek (bílı)
+45089	Šátek (èernı)
+45090	Šátek (èernı)
+45091	Šátek (lutı)
+45092	Šátek (lutı)
+45093	Šátek (oranovı)
+45094	Šátek (oranovı)
+45095	Šátek (modrı)
+45096	Šátek (modrı)
+45097	Šátek+ (bílı)
+45098	Šátek+ (bílı)
+45099	Šátek+ (èernı)
+45100	Šátek+ (èernı)
+45101	Šátek+ (lutı)
+45102	Šátek+ (lutı)
+45103	Šátek+ (oranovı)
+45104	Šátek+ (oranovı)
+45105	Šátek+ (modrı)
+45106	Šátek+ (modrı)
+45119	Králièí uši (èerné)
+45120	Králièí uši (modré)
+45121	Králièí uši (zelené)
+45122	Králièí uši (rùové)
+45123	Zajeèí uši (èerné)
+45124	Zajeèí uši (modré)
+45125	Zajeèí uši (zelené)
+45126	Zajeèí uši (rùové)
+45127	Králièí uši+ (èerné)
+45128	Králièí uši+ (modré)
+45129	Králièí uši+ (zelené)
+45130	Králièí uši+ (rùové)
+45131	Zajeèí uši+ (èerné)
+45132	Zajeèí uši+ (modré)
+45133	Zajeèí uši+ (zelené)
+45134	Zajeèí uši+ (rùové)
+45135	Úèes kobry (m)
+45136	Úèes kobry ()
+45137	Úèes kobry+ (m)
+45138	Úèes kobry+ ()
+45139	Maska Tengu
+45140	Benátská maska
+45141	Maska Kifwebe
+45142	Mayská maska
+45143	Maska Tengu+
+45144	Benátská maska+
+45145	Maska Kifwebe+
+45146	Mayská maska+
+45147	Èernı turban (M)
+45148	Èernı turban ()
+45149	Èernı turban+ (M)
+45150	Èernı turban+ ()
+45151	Azraelova helma (m)
+45152	Azraelova helma ()
+45153	Azraelova helma+ (m)
+45154	Azraelova helma+ ()
+45155	Èæ»çÅõ±¸
+45156	Hlava Dınì Jacka (m)
+45157	Hlava Dınì Jacka ()
+45158	Hlava Dınì Jacka+ (m)
+45159	Hlava Dınì Jacka+ ()
+50002	Zlatı prsten
+50003	Reset
+50004	Detektor úkolù
+50005	Jezdecká propustka
+50006	Zlatá pokladnice
+50007	Støíbrná pokladnice
+50008	Zlatı klíè
+50009	Støíbrnı klíè
+50010	Ponoka
+50011	Mìsíèní pokladnice
+50012	Zlatá pokladnice+
+50013	Støíbrná pokladnice+
+50014	Zlatı klíè+
+50015	Støíbrnı klíè+
+50016	Fazolová pasta
+50017	Cukrová pasta
+50018	Ovocná pasta
+50019	Sladká rıe
+50020	Fazolové buchty
+50021	Cukrové buchty
+50022	Ovocné buchty
+50023	Váèek s penìzi
+50024	Rùe
+50025	Èokoláda
+50026	Mince
+50028	24-karátovı zlatı prsten
+50029	18-karátovı zlatı prsten
+50030	14-karátovı zlatı prsten
+50031	Rùe
+50032	Bonbon
+50033	Tajemná truhla
+50034	Záhadná truhla
+50035	Dárek (lutı)
+50036	Dárek (fialovı)
+50037	Šestiúhlá pokladnice
+50038	Bronzovı diplom
+50039	Støíbrnı diplom
+50040	Zlatı diplom
+50041	Dárkovı balíèek
+50042	Hrdinova medaile
+50050	Koòská medaile
+50051	Obrázek konì
+50052	Zbrojní kniha koní
+50053	Vojenská kniha koní
+50054	Seno
+50055	Mrkev
+50056	Èervenı enšen
+50057	Bylina lehkıch opic
+50058	Bylina støedních opic
+50059	Bylina tìkıch opic
+50060	Kniha jezdeckého umìní
+50061	Pøíruèka Zkrotit konì
+50062	Pøíruèka jezdectví
+50067	Svitek vıvoje
+50068	Svitek pøemìny
+50070	Truhla náèelníka Orkù
+50071	Truhla temného náèelníka
+50072	Truhla vùdce duchù
+50073	Truhla královny pavoukù
+50074	Truhla obrovsk. pavouka
+50075	Truhla nosièe útrapy
+50076	Truhla pouštní elvy
+50077	Truhla devítiocasu
+50078	Truhla lutého tygra
+50079	Truhla krále plamenù
+50080	Truhla èerveného draka
+50081	Truhla krále démonù
+50082	Truhla zubaté s kosou
+50083	Jezdeckı lístek
+50084	Klíèovı kámen
+50085	Semeno
+50086	Mìsíèní dort
+50087	Rıové buchty s pelyòkem
+50088	Rıové buchty s mungem
+50089	Klíèovı kámen
+50090	Bedna devítiocas. lišky
+50091	Sushi ze zlatıch rybek
+50092	Sushi z kapra
+50093	Sushi z lososa
+50094	Sushi ze sumce
+50095	Dınì
+50096	Fotbalovı míè
+50100	Ohòostroj
+50101	Ohòostroj
+50102	Ohòostroj
+50103	Ohòostroj
+50104	Ohòostroj
+50105	Ohòostroj
+50106	Vánoèní ohòostroj
+50107	Èínskı ohòostroj
+50108	Odstøedivı ohòostroj
+50109	Èervená ebenová bedna
+50110	Honosná ebenová bedna
+50111	lutá ebenová bedna
+50112	Svìtlezel. ebenová bedna
+50113	Zelená ebenová bedna
+50114	Modrá ebenová bedna
+50115	Purpurová ebenová bedna
+50116	Bon na vımìnu zbraní
+50117	Šperkovnice
+50118	NoNAme
+50119	NoNAme
+50120	elezná rakev
+50121	elezná schránka
+50122	elezná truhla
+50123	Zmrzlina
+50124	Stará døevìná bedna
+50125	Tajemná bedna
+50126	Tajemná bedna
+50127	Taj. smaragdová truhla
+50128	Tajemná safírová truhla
+50129	Taj. ametystová truhla
+50130	Tajemná topazová truhla
+50131	Tajemná køemenná truhla
+50132	Tajemná rubínová truhla
+50133	Taj. smaragdová truhla
+50134	Tajemná safírová truhla
+50135	Taj. ametystová truhla
+50136	Tajemná topazová truhla
+50137	Tajemná køemenná truhla
+50150	Rubínovı klíè
+50151	Smaragdovı klíè
+50152	Safírovı klíè
+50153	Ametystovı klíè
+50154	Topazovı klíè
+50155	Køemennı klíè
+50156	Diamantovı klíè
+50160	Velikonoèní vajíèko
+50161	Velikonoèní vajíèko
+50162	Velikonoèní vajíèko
+50163	Velikonoèní vajíèko
+50164	Velikonoèní vajíèko
+50165	Velikonoèní vajíèko
+50166	Velikonoèní vajíèko
+50167	Velikonoèní vajíèko
+50168	Velikonoèní vajíèko
+50169	Velikonoèní vajíèko
+50170	Velikonoèní vajíèko
+50171	Velikonoèní vajíèko
+50172	Velikonoèní vajíèko
+50173	Velikonoèní vajíèko
+50174	Velikonoèní vajíèko
+50175	Velikonoèní vajíèko
+50176	Velikonoèní vajíèko
+50177	Velikonoèní vajíèko
+50178	Velikonoèní vajíèko
+50179	Velikonoèní vajíèko
+50180	Prázdnı košík
+50181	Košík s vajíèky
+50182	Truhla poehnání
+50183	Sladkosti
+50184	NoNAme
+50185	NoNAme
+50186	Azraelova truhla
+50187	Truhla uèedníka I
+50188	Truhla uèedníka II
+50189	Truhla uèedníka III
+50190	Truhla experta I
+50191	Truhla experta II
+50192	Truhla experta III
+50193	Truhla mistra I
+50194	Truhla mistra II
+50195	Truhla mistra III
+50196	Truhla velkého mistra
+50197	NoNAme
+50198	NoNAme
+50199	NoNAme
+50200	Mìšec
+50201	Kytice
+50202	Kytice
+50212	Truhla uèedníka I
+50213	Truhla uèedníka I
+50215	Halloweenská truhla
+50216	Svaøák
+50249	Truhla triumfu
+50252	Cor Draconis
+50253	NoNAme
+50254	Truhla temnoty
+50255	Cor Draconis (surové)
+50256	Cor Draconis (broušené)
+50257	Cor Draconis (vzácné)
+50258	Cor Draconis (starovìké)
+50259	Cor Draconis (legend.)
+50260	Cor Draconis (surové)
+50300	Kniha Schopností
+50301	Váleènické umìní Sun-zi
+50302	Váleènické umìní Wu-zi
+50303	WeiLiao Zi
+50304	Ovládaní kombo
+50305	Kniha mistrù komba
+50306	Vysoké umìní komba
+50307	Kniha misí (lehká)
+50308	Kniha misí (standardní)
+50309	Kniha misí (tìká)
+50310	Kniha misí (expert)
+50311	Jazyky Shinsoo
+50312	Jazyky Chunjo
+50313	Jazyky Jinno
+50314	Kniha promìn
+50315	Kniha promìn pro pokr.
+50316	Kniha promìn pro experty
+50317	Kniha misí (test)
+50318	Kniha misí (lehká)
+50319	Kniha misí (standardní)
+50320	Kniha misí (tìká)
+50321	Kniha misí (expert)
+50322	Role promìny
+50401	Kniha trojcestnı støih
+50402	Kniha víøení meèe
+50403	Kniha bojového zuøení
+50404	Kniha aury meèe
+50405	Kniha uhánìní
+50416	Kniha proraení
+50417	Kniha silnıch úderù
+50418	Kniha dupotu
+50419	Kniha silného tìla
+50420	Kniha rány meèem
+50431	Kniha léèek
+50432	Kniha bleskového útoku
+50433	Kniha víøení dıkou
+50434	Kniha maskování
+50435	Kniha jedovatıch oblakù
+50446	Kniha opakované støely
+50447	Kniha deštì šípù
+50448	Kniha ohnivého šípu
+50449	Kniha našlap. polehouèku
+50450	Kniha jedovatého šípu
+50461	Kniha úderù prstem
+50462	Kniha víøení drakù
+50463	Kniha zaèarované èepeli
+50464	Kniha strachu
+50465	Kniha zaèar. brnìní
+50466	Kniha zrušení kouzla
+50476	Kniha temné rány
+50477	Kniha ohnivé rány
+50478	Kniha plamene ducha
+50479	Kniha temné ochrany
+50480	Kniha rány ducha
+50481	Kniha temného kamene
+50491	Kniha lét. talismanu
+50492	Kniha støílení na draky
+50493	Kniha draèího øevotu
+50494	Kniha poehnání
+50495	Kniha odráení
+50496	Kniha pomoci draka
+50506	Kniha bleskovıch vrhù
+50507	Kniha vyvolávání bleskù
+50508	Kniha bleskového drápu
+50509	Kniha léèení
+50510	Kniha rychlosti
+50511	Kniha útoku
+50512	Duhovı kámen
+50513	Kámen duše
+50600	Kniha tìby
+50601	Diamantovı kámen
+50602	Jantar
+50603	Fosilní kmen
+50604	Mìdìná ruda
+50605	Støíbrná ruda
+50606	Zlatá ruda
+50607	Nefritová ruda
+50608	Ebenová ruda
+50609	Kus perly
+50610	Ruda s bílım zlatem
+50611	Køišálová ruda
+50612	Køemenová ruda
+50613	Ruda nebeskıch slz
+50614	Ruda krystalu duše
+50615	Rubínová ruda
+50616	Granátová ruda
+50617	Smaragdová ruda
+50618	Safírová ruda
+50621	Diamant
+50622	Jantar
+50623	Fosilní døevo
+50624	Mìd'
+50625	Støíbro
+50626	Zlato
+50627	Nefrit
+50628	Ebenové døevo
+50629	Perla
+50630	Bílé zlato
+50631	Køišál
+50632	Ametyst
+50633	Nebeské slzy
+50634	Krystal duše
+50635	Rubín
+50636	Granát
+50637	Smaragd
+50638	Safír
+50701	Broskvovı kvìt
+50702	Zvonek
+50703	Kakikvìt
+50704	Koøen gango
+50705	Šeøík
+50706	Houby tue
+50707	Rododendron
+50708	Moruše
+50709	Smetánka lékaøská
+50710	Bodlák
+50711	Datle
+50712	Rostlina Sam-Zi
+50721	Broskvovı kvìt
+50722	Zvonek
+50723	Kakikvìt
+50724	Koøen gango
+50725	Šeøík
+50726	Houby tue
+50727	Rododendron
+50728	Moruše
+50729	Smetánka lékaøská
+50730	Bodlák
+50731	Datle
+50732	Rostlina Sam-Zi
+50801	Šáva z broskvov. kvìtù
+50802	Zvonková šáva
+50803	Kakikvìtová šáva
+50804	Gangokoøenová šáva
+50805	Šeøíková šáva
+50806	Šáva z hub tue
+50807	Rododendronová šáva
+50808	Morušová šáva
+50809	Šáva ze smetanky lék.
+50810	Šáva z bodláku
+50811	Vıtaek z datlí
+50812	Šáva z rostliny Sam-Zi
+50813	Voda Sim
+50814	Voda Dok
+50815	Voda Bo
+50816	Voda Young
+50817	Voda Zin
+50818	Voda SamBo
+50819	Voda Mong
+50820	Voda Hwal
+50821	Èervená rosa
+50822	Rùová rosa
+50823	lutá rosa
+50824	Zelená rosa
+50825	Modrá rosa
+50826	Bílá rosa
+50901	Prázdná láhev
+50902	Recept pro zaèáteèníky
+50903	Recept
+50904	Recept pro profíky
+50905	Recept na vodu Sim
+50906	Recept na vodu Dok
+50907	Recept na vodu Bo
+50908	Recept na vodu Young
+50909	Recept na vodu Zin
+50910	Recept na vodu Hwal
+51001	Fragment energie
+51002	Energetickı krystal
+51501	Cor Draconis (surové)
+51502	Cor Draconis (surové)
+51503	Cor Draconis (normální)
+51504	Cor Draconis (ušlechtilé)
+51505	Cor Draconis (skvostné)
+51506	Cor Draconis (tajemné)
+51507	Cor Draconis (broušené)
+51508	Cor Draconis (vzácné)
+51509	Cor Draconis (starovìké)
+51510	Cor Draconis (legendární)
+51511	Cor Diamas
+51512	Cor Rubinum
+51513	Cor Jadeit
+51514	Cor Saphirum
+51515	Cor Granatum
+51516	Cor Atrum
+51517	Cor Diamas (normální)
+51518	Cor Rubinum (normální)
+51519	Cor Jadeit (normální)
+51520	Cor Saphirum (normální)
+51521	Cor Granatum (normální)
+51522	Cor Atrum (normální)
+51523	Cor Diamas (ušlechtilé)
+51524	Cor Rubinum (ušlechtilé)
+51525	Cor Jadeit (ušlechtilé)
+51526	Cor Saphirum (ušlechtilé)
+51527	Cor Granatum (ušlechtilé)
+51528	Cor Atrum (ušlechtilé)
+51529	Cor Diamas (skvostné)
+51530	Cor Rubinum (skvostné)
+51531	Cor Jadeit (skvostné)
+51532	Cor Saphirum (skvostné)
+51533	Cor Granatum (skvostné)
+51534	Cor Atrum (skvostné)
+51535	Cor Diamas (dokonalé)
+51536	Cor Rubinum (dokonalé)
+51537	Cor Jadeit (dokonalé)
+51538	Cor Saphirum (dokonalé)
+51539	Cor Granatum (dokonalé)
+51540	Cor Atrum (dokonalé)
+51541	Cor Draconis (hnoucí)
+51542	Cor Diamas (hnoucí)
+51543	Cor Rubinum (hnoucí)
+51544	Cor Jadeit (hnoucí)
+51545	Cor Saphirum (hnoucí)
+51546	Cor Granatum (hnoucí)
+51547	Cor Atrum (hnoucí)
+51548	Cor Draconis (dokonalé)
+51549	Cor Draconis (vìèné)
+51550	Cor Diamas (vìèné)
+51551	Cor Rubinum (vìèné)
+51552	Cor Jadeit (vìèné)
+51553	Cor Saphirum (vìèné)
+51554	Cor Granatum (vìèné)
+51555	Cor Atrum (vìèné)
+51556	Cor Diamas (tajemné)
+51557	Cor Rubinum (tajemné)
+51558	Cor Jadeit (tajemné)
+51559	Cor Saphirum (tajemné)
+51560	Cor Granatum (tajemné)
+51561	Cor Atrum (tajemné)
+51562	Cor Draconis (epické)
+51563	Cor Diamas (epické)
+51564	Cor Rubinum (epické)
+51565	Cor Jadeit (epické)
+51566	Cor Saphirum (epické)
+51567	Cor Granatum (epické)
+51568	Cor Atrum (epické)
+51569	Cor Draconis (boské)
+51570	Cor Diamas (boské)
+51571	Cor Rubinum (boské)
+51572	Cor Jadeit (boské)
+51573	Cor Saphirum (boské)
+51574	Cor Granatum (boské)
+51575	Cor Atrum (boské)
+51576	Cor Draconis+ (normální)
+51577	Cor Diamas+ (normální)
+51578	Cor Rubinum+ (normální)
+51579	Cor Jadeit+ (normální)
+51580	Cor Saphirum+ (normální)
+51581	Cor Granatum+ (normální)
+51582	Cor Atrum+ (normální)
+51583	Cor Draconis+ (ušlecht.)
+51584	Cor Diamas+ (ušlechtilé)
+51585	Cor Rubinum+ (ušlechtilé)
+51586	Cor Jadeit+ (ušlechtilé)
+51587	Cor Saphirum+ (ušlecht.)
+51588	Cor Granatum+ (ušlecht.)
+51589	Cor Atrum+ (ušlechtilé)
+51590	Cor Draconis+ (skvostné)
+51591	Cor Diamas+ (skvostné)
+51592	Cor Rubinum+ (skvostné)
+51593	Cor Jadeit+ (skvostné)
+51594	Cor Saphirum+ (skvostné)
+51595	Cor Granatum+ (skvostné)
+51596	Cor Atrum+ (skvostné)
+51597	Cor Draconis+ (dokonalé)
+51598	Cor Diamas+ (dokonalé)
+51599	Cor Rubinum+ (dokonalé)
+51600	Cor Jadeit+ (dokonalé)
+51601	Cor Saphirum+ (dokonalé)
+51602	Cor Granatum+ (dokonalé)
+51603	Cor Atrum+ (dokonalé)
+51604	Cor Draconis+ (hnoucí)
+51605	Cor Diamas+ (hnoucí)
+51606	Cor Rubinum+ (hnoucí)
+51607	Cor Jadeit+ (hnoucí)
+51608	Cor Saphirum+ (hnoucí)
+51609	Cor Granatum+ (hnoucí)
+51610	Cor Atrum+ (hnoucí)
+51611	Cor Draconis+ (vìèné)
+51612	Cor Diamas+ (vìèné)
+51613	Cor Rubinum+ (vìèné)
+51614	Cor Jadeit+ (vìèné)
+51615	Cor Saphirum+ (vìèné)
+51616	Cor Granatum+ (vìèné)
+51617	Cor Atrum+ (vìèné)
+51618	Cor Draconis+ (tajemné)
+51619	Cor Diamas+ (tajemné)
+51620	Cor Rubinum+ (tajemné)
+51621	Cor Jadeit+ (tajemné)
+51622	Cor Saphirum+ (tajemné)
+51623	Cor Granatum+ (tajemné)
+51624	Cor Atrum+ (tajemné)
+51625	Cor Draconis+ (epické)
+51626	Cor Diamas+ (epické)
+51627	Cor Rubinum+ (epické)
+51628	Cor Jadeit+ (epické)
+51629	Cor Saphirum+ (epické)
+51630	Cor Granatum+ (epické)
+51631	Cor Atrum+ (epické)
+51632	Cor Draconis+ (boské)
+51633	Cor Diamas+ (boské)
+51634	Cor Rubinum+ (boské)
+51635	Cor Jadeit+ (boské)
+51636	Cor Saphirum+ (boské)
+51637	Cor Granatum+ (boské)
+51638	Cor Atrum+ (boské)
+51639	Draèí truhla
+51640	Draèí truhla+
+51641	Draèí truhla+ (vícebar.)
+51642	Draèí truhla (vícebar.)
+51643	Ušlechtilá draèí truhla
+51644	Ušlechtilá draèí truhla+
+51645	Ušl. dr. truhla+ (víceb)
+51646	Ušl. dr. truhla (víceb)
+52001	Mladı divokı kanec (peè)
+52002	Mladı divokı kanec (peè)
+52003	Mladı divokı kanec (peè)
+52004	Mladı divokı kanec (peè)
+52005	Mladı divokı kanec (peè)
+52006	Divokı kanec (peèe)
+52007	Divokı kanec (peèe)
+52008	Divokı kanec (peèe)
+52009	Divokı kanec (peèe)
+52010	Divokı kanec (peèe)
+52011	Odv. divokı kanec (peè)
+52012	Odv. divokı kanec (peè)
+52013	Odv. divokı kanec (peè)
+52014	Odv. divokı kanec (peè)
+52015	Odv. divokı kanec (peè)
+52016	Mladı vlk (peèe)
+52017	Mladı vlk (peèe)
+52018	Mladı vlk (peèe)
+52019	Mladı vlk (peèe)
+52020	Mladı vlk (peèe)
+52021	Divokı vlk (peèe)
+52022	Divokı vlk (peèe)
+52023	Divokı vlk (peèe)
+52024	Divokı vlk (peèe)
+52025	Divokı vlk (peèe)
+52026	Odvánı vlk (peèe)
+52027	Odvánı vlk (peèe)
+52028	Odvánı vlk (peèe)
+52029	Odvánı vlk (peèe)
+52030	Odvánı vlk (peèe)
+52031	Mladı lev (peèe)
+52032	Mladı lev (peèe)
+52033	Mladı lev (peèe)
+52034	Mladı lev (peèe)
+52035	Mladı lev (peèe)
+52036	Divokı lev (peèe)
+52037	Divokı lev (peèe)
+52038	Divokı lev (peèe)
+52039	Divokı lev (peèe)
+52040	Divokı lev (peèe)
+52041	Odvánı lev (peèe)
+52042	Odvánı lev (peèe)
+52043	Odvánı lev (peèe)
+52044	Odvánı lev (peèe)
+52045	Odvánı lev (peèe)
+52046	Mladı tygr (peèe)
+52047	Mladı tygr (peèe)
+52048	Mladı tygr (peèe)
+52049	Mladı tygr (peèe)
+52050	Mladı tygr (peèe)
+52051	Divokı tygr (peèe)
+52052	Divokı tygr (peèe)
+52053	Divokı tygr (peèe)
+52054	Divokı tygr (peèe)
+52055	Divokı tygr (peèe)
+52056	Odvánı tygr (peèe)
+52057	Odvánı tygr (peèe)
+52058	Odvánı tygr (peèe)
+52059	Odvánı tygr (peèe)
+52060	Odvánı tygr (peèe)
+52061	Mladı sob (peèe)
+52062	Mladı sob (peèe)
+52063	Mladı sob (peèe)
+52064	Mladı sob (peèe)
+52065	Mladı sob (peèe)
+52066	Divokı sob (peèe)
+52067	Divokı sob (peèe)
+52068	Divokı sob (peèe)
+52069	Divokı sob (peèe)
+52070	Divokı sob (peèe)
+52071	Odvánı sob (peèe)
+52072	Odvánı sob (peèe)
+52073	Odvánı sob (peèe)
+52074	Odvánı sob (peèe)
+52075	Odvánı sob (peèe)
+52076	Mladı sob (peèe)
+52077	Mladı sob (peèe)
+52078	Mladı sob (peèe)
+52079	Mladı sob (peèe)
+52080	Mladı sob (peèe)
+52081	Divokı sob (peèe)
+52082	Divokı sob (peèe)
+52083	Divokı sob (peèe)
+52084	Divokı sob (peèe)
+52085	Divokı sob (peèe)
+52086	Odvánı sob (peèe)
+52087	Odvánı sob (peèe)
+52088	Odvánı sob (peèe)
+52089	Odvánı sob (peèe)
+52090	Odvánı sob (peèe)
+52091	Peèe mladého Dragora
+52092	Peèe mladého Dragora
+52093	Peèe mladého Dragora
+52094	Peèe mladého Dragora
+52095	Peèe mladého Dragora
+52096	Peèe divokého Dragora
+52097	Peèe divokého Dragora
+52098	Peèe divokého Dragora
+52099	Peèe divokého Dragora
+52100	Peèe divokého Dragora
+52101	Peèe stateèného Dragora
+52102	Peèe stateèného Dragora
+52103	Peèe stateèného Dragora
+52104	Peèe stateèného Dragora
+52105	Peèe stateèného Dragora
+52701	Lví certifikát
+52702	Tygøí certifikát
+52703	Kanèí certifikát
+52704	Vlèí certifikát
+52705	Sobí certifikát (M)
+52706	Sobí certifikát ()
+52707	Certifikát Dragora
+53001	NoNAme
+53002	Peèe mladého soba
+53003	Peèe ledového Fénixe
+53005	Baby Azrael
+53006	Baby Azrael (zlaté)
+53007	Peèe Bambiho
+53008	Peèe Knuuda
+53009	Bao Baova peèe
+53010	Peèe Leonidase
+53011	Peèe Khana
+53012	Peèe Porkyho
+53013	Peèe Rufuse
+53014	Peèe Mini-Exekutora
+53015	Peèe Mini-Exekutora (z)
+53016	Kostìná peèe
+53017	Peèe Nefritového fénixe
+53501	NoNAme
+53502	Truhla mladého soba
+53503	Klec ledového Fénixe
+53504	NoNAme
+53505	Truhla Baby Azraela
+53506	Truhla Baby Azraela(zl.)
+53507	Truhla Bambiho
+53508	Truhla Knuuda
+53509	Truhla Bao Baa
+53510	Truhla Leonidase
+53511	Truhla Khana
+53512	Truhla Porkyho
+53513	Truhla Rufuse
+53514	Truhla Mini-Exekutora
+53515	Truhla Mini-Exekut. (zl)
+53516	Kostìná truhla
+53517	Nefritová klec
+60001	luè
+60002	Dopis od stráce tábora
+60003	Symbol hrdiny
+69000	Tajemství prudké rány
+69010	Tajemství Chi
+69020	Tajemství rány duchù
+69030	Tajemství útoèného úderu
+69040	Tajemství léèky
+69050	Tajemství šípu
+69060	Tajemství lehouè.našlap.
+69070	Tajemství blesk. útoku
+69080	Tajemství temné rány
+69090	Tajemství draèího víøení
+69100	Tajemství nebe a zemì
+69110	Tajemství kouzel. èepele
+69120	Tajemství lét. talismanu
+69130	Tajemství léèení
+69140	Tajemství draèí pomoci
+69150	Tajemství poehnání
+70001	Panenka bohynì
+70002	Tøetí ruka
+70003	Kniha náèelníka
+70004	Medaile za píli
+70005	Prsten zkušeností
+70006	Prsten jazykù
+70007	Prsten Warp
+70008	Bílı prapor
+70009	Pokladnice
+70010	Skladní list
+70011	Zlepšit láhev
+70012	Slza bohynì
+70013	Slza bohynì obrù
+70014	Tableta z krve
+70015	Levnı kartáè
+70016	Indiánskı náramek
+70017	Drahocennı náramek
+70018	Fénické náušnice
+70019	Náhrdelník milionáøe
+70020	Broskvové víno
+70021	Poehnání andìla
+70022	Beraovo srdce
+70023	Mudrcova hùl
+70024	Mramor poehnání
+70025	Prsten úcty
+70026	Zrcadlo neviditelnosti
+70027	Kováøova poznámka
+70028	Mudrcova poznámka
+70029	Èervené psací pero
+70030	Èervenı monokl
+70031	Strategie protiútoku
+70032	Kniha o obouruè. meèích
+70033	Kniha o jednoruè. meèích
+70034	Pøíruèka o dıkách
+70035	Magická mìdìná ruda
+70036	Studentova poznámka
+70037	Kniha zapomínání
+70038	Pláš stateènosti
+70039	Pøíruèka o kování
+70040	Neústupnost Orka
+70041	Apoštolova pìst
+70042	D'ábelskı støep
+70043	Zlodìjské rukavice
+70044	Roh temného kníete
+70045	Zub temného kníete
+70046	Grál draèího boha
+70047	Prsten jazykù (pøíklad)
+70048	Pláš uprchlíkù
+70049	Prsten Lucye
+70050	Symbol moudrého císaøe
+70051	Rukavice moudrého císaøe
+70052	Kouzlo karmy 1
+70053	Kouzlo karmy 2
+70054	Kouzlo karmy 3
+70056	Dus z granát. jablka+
+70057	Pláš stateènosti
+70058	Teleportaèní prsten
+70101	Kniha prozøetelnosti
+70102	Fazole Zen
+70103	Sutra
+70104	Kulièka promìny
+70105	Kulièka promìny
+70106	Kulièka promìny
+70107	Kulièka promìny
+70201	Bìlicí prostøedek
+70202	Bílı prostø.  na vlasy
+70203	Svìtlı prostø. na vlasy
+70204	Èerv. prostø. na vlasy
+70205	Hnìdı prostø. na vlasy
+70206	Èernı prostø. na vlasy
+70207	Bìlicí prostøedek
+70208	Hnìdá barva
+70251	Èervená bylina
+70252	Modrá bylina
+70253	Zelená bylina
+70254	Fialová bylina
+70301	Zásnubní prsten
+70302	Snubní prsten
+71001	Pergamen exorcismu
+71002	Reset vlastností tìla
+71003	Reset schopností
+71004	Medaile draka
+71005	Prsten jazykù
+71006	Prsten jazykù
+71007	Prsten jazykù
+71008	Kniha o rybaøení
+71009	Skladová truhla
+71010	Tøetí ruka
+71011	Maska emocí
+71012	Kniha náèelníka
+71013	Ohòostroj
+71014	Lektvar útoku +10
+71015	Prsten zkušeností
+71016	Zlodìjské rukavice
+71017	Medaile štìstí
+71018	Poehnání ivota
+71019	Poehnání magie
+71020	Poehnání draka
+71021	Pergamen války
+71022	Obnovení inteligence
+71023	Obnovení vitality
+71024	Obnovení síly
+71025	Kámen kováøe
+71026	Magická elezná ruda
+71027	ivot draèího boha
+71028	Útok draèího boha
+71029	Inteligence draèího boha
+71030	Obrana draèího boha
+71031	Podpora draèího boha
+71032	Pergamen draka
+71033	Maska emocí
+71034	Lektvar útoku +15
+71035	Vızkumníkùv elixír
+71036	Perg. volání náèel. Orkù
+71037	Perg. volání náèelníka
+71038	Perg. volání pavou.krále
+71039	Perg. volání elvy
+71040	Perg.volání krále plam.
+71041	Perg. volání Devítiocase
+71042	Perg.volání krále dém.
+71043	Perg.volání tygø. ducha
+71044	Kritickı útok
+71045	Pronikavı útok
+71047	Tinktura kamene ducha
+71048	Kouzlo zmìny
+71049	Hedvábnı raneèek
+71050	Elixír rychlosti
+71054	Tinktura království
+71055	Tinktura jména
+71056	Tinktura nebe
+71057	Kámen fosilního døeva
+71058	Kámen mìdìné íly
+71059	Kámen støíbrné íly
+71060	Kámen zlaté íly
+71061	Kámen nefritové íly
+71062	Kámen eben. nalezištì
+71063	Kámen stohu mušlí
+71064	Kámen íly bílého zlata
+71065	Kámen køišálové íly
+71066	Kámen køemenové íly
+71067	Kámen íly nebeskıch slz
+71068	Peøíèko milencù
+71069	Náušnice harmonie
+71070	Náramek lásky
+71071	Náušnice lásky
+71072	Náramek harmonie
+71073	Náhrdelník lásky
+71074	Náhrdelník harmonie
+71075	Barva na vlasy (bílá)
+71076	Barva na vlasy (blond)
+71077	Barva na vlasy (èervená)
+71078	Barva na vlasy (hnìdá)
+71079	Barva vlasù (èerná)
+71080	Kámen Metin (lehkı)
+71081	Kámen Metin (normální)
+71082	Kámen Metin (tìkı)
+71083	Pøíruèka kamenù
+71084	Zaèarovat pøedmìt
+71085	Zesílit pøedmìt
+71086	Úkol úrovnì (20-29)
+71087	Úkol úrovnì (30-39)
+71088	Kniha misí (lehká)
+71089	Kniha misí (normální)
+71090	Kniha misí (tìká)
+71091	Tinktura obchodování
+71092	Kniha promìn
+71093	Kulièka promìn
+71094	Soustøedìné ètení
+71095	Propustka
+71096	Tabule prùchodu
+71099	Prsten následnictví
+71100	Certifikát zmìny vıcviku
+71101	Lektvar spìchu
+71102	NoNAme
+71103	Svitek znovurozd. (VIT)
+71104	Svitek znovurozd. (INT)
+71105	Znovurozdìlení (SÍLA)
+71106	Svitek znovurozd. (POH)
+71107	Plod ivota
+71108	Dus z granát. jablka
+71109	Svitek opravy
+71110	Koòskı cukr
+71113	Sklenice porozumìní
+71114	Peèe divokého kance ()
+71115	Peèe divokého kance (M)
+71116	Peèe vlka ()
+71117	Peèe vlka (M)
+71118	Peèe tygra ()
+71119	Peèe tygra (M)
+71120	Peèe lva ()
+71121	Peèe lva (M)
+71122	NoNAme
+71123	Draèí šupiny
+71124	Bílı Lev
+71125	Peèe div. boj. kance
+71126	Peèe bojového vlka
+71127	Peèe bouølivého tygra
+71128	Peèe bojového lva
+71129	Draèí èelist
+71130	Propustka
+71131	Peèe Èerného konì
+71132	Peèe Èerného konì
+71133	Peèe Èerného konì
+71134	Peèe Èerného konì
+71135	Prsten pùlmìsíce
+71136	Mocné lízátko
+71137	Peèe Král. tygra (m)
+71138	Peèe Král. tygra (è)
+71139	Peèe Král. tygra (zlat)
+71140	Peèe Král. tygra (z)
+71141	Peèe Král. tygra (š)
+71142	Peèe Král. tygra (b)
+71143	Prsten radosti
+71144	Vánoèní truhla
+71145	Amulet vìèné lásky
+71146	Amorkùv košík (rùovı)
+71147	Amorkùv košík (modrı)
+71148	Prsten síly vùle
+71149	Prsten smrtelné síly
+71150	Kouzelné vejce
+71151	Zelené kouzlo
+71152	Zelená síla
+71153	Lektvar vìdomostí
+71154	Lektvar vzestupu (3h)
+71155	Lektvar vìdomostí (3h)
+71156	Lektvar duše (3h)
+71157	NoNAme
+71158	Medaile hrdiny
+71159	Milónova truhla
+71160	Athénina truhla
+71161	Equus Porphyreus
+71164	Peèe Komety
+71165	Peèe polárního dravce
+71166	Peèe obrnìné pandy
+71171	Peèe Jednoroce
+71172	Peèe Noèního bìsu
+72001	Prsten zkušeností
+72002	Prsten zkušeností
+72003	Prsten zkušeností
+72004	Zlodìjské rukavice
+72005	Zlodìjské rukavice
+72006	Zlodìjské rukavice
+72007	Hedvábnı raneèek
+72008	Hedvábnı raneèek
+72009	Hedvábnı raneèek
+72010	Peøíèko milencù
+72011	Peøíèko milencù
+72012	Peøíèko milencù
+72013	Kniha o rybaøení
+72014	Kniha o rybaøení
+72015	Kniha o rybaøení
+72016	Tøetí ruka
+72017	Tøetí ruka
+72018	Tøetí ruka
+72019	Skladová truhla
+72020	Skladová truhla
+72021	Skladová truhla
+72022	Medaile štìstí
+72023	Medaile štìstí
+72024	Medaile štìstí
+72025	Kritickı útok
+72026	Kritickı útok
+72027	Kritickı útok
+72028	Maska emocí
+72029	Maska emocí
+72030	Maska emocí
+72031	Útok draèího boha
+72032	Útok draèího boha
+72033	Útok draèího boha
+72034	Obrana draèího boha
+72035	Obrana draèího boha
+72036	Obrana draèího boha
+72037	ivot draèího boha
+72038	ivot draèího boha
+72039	ivot draèího boha
+72040	Inteligence draèího boha
+72041	Inteligence draèího boha
+72042	Inteligence draèího boha
+72043	Kniha náèelníka
+72044	Kniha náèelníka
+72045	Kniha náèelníka
+72046	Nástroj dùleité šance
+72047	Nástroj dùleité šance
+72048	Nástroj dùleité šance
+72049	Prsten zkušeností
+72050	Prsten zkušeností
+72301	Poehnanı pergamen
+72302	NoNAme
+72303	NoNAme
+72304	NoNAme
+72305	NoNAme
+72306	NoNAme
+72307	NoNAme
+72308	Magická mìdìná ruda
+72309	NoNAme
+72310	NoNAme
+72311	NoNAme
+72312	NoNAme
+72313	NoNAme
+72314	NoNAme
+72701	Vìtrné boty
+72702	Vìtrné boty+ (obchod.)
+72703	Náušnice z tygøí kosti
+72704	Náušnice z draèí kosti
+72705	Náramek z tygøí kosti
+72706	Náramek z draèí kosti
+72709	Náušnice z tygøí kosti
+72710	Náušnice z draèí kosti
+72711	Náramek z tygøí kosti
+72712	Náramek z draèí kosti
+72723	Elixír Slunce (M)
+72724	Elixír Slunce (S)
+72725	Elixír Slunce (V)
+72726	Elixír Slunce (E)
+72727	Elixír Mìsíce (M)
+72728	Elixír Mìsíce (S)
+72729	Elixír Mìsíce (V)
+72730	Elixír Mìsíce (E)
+73001	Módní úèes (èervenı)
+73002	Módní úèes (svìtlı)
+73003	Módní úèes (modrı)
+73004	Módní úèes (hnìdı)
+73005	Èelenka
+73006	Èelenka
+73007	Èelenka
+73008	Èelenka
+73009	Dlouhé vlasy (èerné)
+73010	Dlouhé vlasy (èervené)
+73011	Dlouhé vlasy (hnìdé)
+73012	Dlouhé vlasy (zelené)
+73251	Koòskı ohon (hnìdı)
+73252	Koòskı ohon (zelenı)
+73253	Koòskı ohon (modrı)
+73254	Koòskı ohon (svìtlı)
+73255	Vlasy na ramena  (èerv.)
+73256	Vlasy na ramena (hnìdé)
+73257	Vlasy na ramena (svìt.)
+73258	Vlasy na ramena (fial.)
+73259	Krátké vlasy (èervené)
+73260	Krátké vlasy (modré)
+73261	Krátké vlasy (èerné)
+73262	Krátké vlasy (svìtlé)
+73501	Sportovní úèes (svìtlı)
+73502	Sportovní úèes (hnìdı)
+73503	Sportovní úèes (blond)
+73504	Sportovní úèes (zelenı)
+73505	Charismatickı úèes(bílı)
+73506	Charismatickı úèes(èerv)
+73507	Charismatickı úèes(èern)
+73508	Charismatickı úèes(fial)
+73509	Dlouhı cop (bílı)
+73510	Dlouhı cop (modrı)
+73511	Dlouhı cop (èernı)
+73512	Dlouhı cop (hnìdı)
+73751	Vznešenı úèes (hnìdı)
+73752	Vznešenı úèes (èernı)
+73753	Vznešenı úèes (modrı)
+73754	Vznešenı úèes (svìtlı)
+73755	Polodlouhé vlasy (hnìdé)
+73756	Polodlouhé vlasy (èerné)
+73757	Polodlouhé vlasy (blond)
+73758	Polodlouhé vlasy (fial.)
+73759	Klasickı úèes (hnìdı)
+73760	Klasickı úèes (svìtlı)
+73761	Klasickı úèes (Fialovı)
+73762	Klasickı úèes (Èervenı)
+74001	Módní úèes (èervenı)
+74002	Módní úèes (svìtlı)
+74003	Módní úèes (Modrı)
+74004	Módní úèes (hnìdı)
+74005	Pirátskı šátek (èervenı)
+74006	Pir.šátek (hnìdì kostk.)
+74007	Pir. šátek (modrı)
+74008	Pir. šátek (zel. kostk.)
+74009	Dlouhé vlasy (èerné)
+74010	Dlouhé vlasy (èervené)
+74011	Dlouhé vlasy (hnìdé)
+74012	Dlouhé vlasy (zelené)
+74013	Váleènické afro (mu)
+74014	Váleènické afro (mu)
+74015	Samurajská helma (M)
+74016	Samurajská helma (M)
+74017	Váleènickı fez (M)
+74018	Váleènickı keffiyeh (M)
+74019	Váleènickı turban
+74020	Maska dınì (váleèník)
+74251	Koòskı ohon (hnìdı)
+74252	Koòskı ocas (zelenı)
+74253	Koòskı ohon (modrı)
+74254	Koòskı ohon (svìtlı)
+74255	Stø.dlouhé vlasy (èerv.)
+74256	Stø.dlouhé vlasy (hnìdé)
+74257	Stø.dlouhé vlasy (svìt.)
+74258	Støed.dlouhé vlasy(fial)
+74259	Krátké vlasy (èervené)
+74260	Krátké vlasy (modré)
+74261	Krátké vlasy (èerné)
+74262	Krátké vlasy (blond)
+74263	Ninja afro (ena)
+74264	Ninja afro (ena)
+74265	Klobouk ninjy ()
+74266	Klobouk ninjy ()
+74267	Šátek pro ninjy ()
+74268	Šála pro ninjy ()
+74269	Turban pro ninjy ()
+74270	Maska dınì (ninja ena)
+74501	Sportovní úèes (svìtlı)
+74502	Sportovní úèes (hnìdı)
+74503	Sportovní úèes (blond)
+74504	Sportovní úèes (zelenı)
+74505	Charismatickı úèes(bílı)
+74506	Charismatickı úèes(èerv)
+74507	Charismatickı úèes(èern)
+74508	Charismatickı úèes(fial)
+74509	Dlouhı cop (bílı)
+74510	Dlouhı cop (modrı)
+74511	Dlouhı cop (èernı)
+74512	Dlouhı cop (hnìdı)
+74513	Afro pro suru (mu)
+74514	Afro pro suru (mu)
+74515	Helma pro Suru (M)
+74516	Helma pro Suru (M)
+74517	Fez pro sury (M)
+74518	Keffiyeh pro sury (M)
+74519	Turban pro sury (M)
+74520	Maska dınì (sura mu)
+74751	Vznešenı úèes (hnìdı)
+74752	Vznešenı úèes (èernı)
+74753	Vznešenı úèes (modrı)
+74754	Vznešenı úèes (svìtlı)
+74755	Polodlouhé vlasy (hnìdé)
+74756	Polodlouhé vlasy (èerné)
+74757	Polodlouhé vlasy (blond)
+74758	Polodlouhé vlasy (fial.)
+74759	Klasickı úèes (hnìdı)
+74760	Klasickı úèes (svìtlı)
+74761	Klasickı úèes (fialovı)
+74762	Klasickı úèes (èervenı)
+74763	Šamanské afro ()
+74764	Šamanské afro ()
+74765	Klobouk pro šamany ()
+74766	Klobouk pro šamany ()
+74767	Šátek pro šamany ()
+74768	Šála pro šamany ()
+74769	Turban pro šamany ()
+74770	Maska dınì (šaman ena)
+75001	Módní úèes (èervenı)
+75002	Módní úèes (svìtlı)
+75003	Módní úèes (modrı)
+75004	Módní úèes (hnìdı)
+75005	Èelenka (hnìdé vlasy)
+75006	Èelenka (blond)
+75007	Èelenka (modrá)
+75008	Èelenka (zelená)
+75009	Dlouhé vlasy (èerné)
+75010	Dlouhé vlasy (èervené)
+75011	Dlouhé vlasy (hnìdé)
+75012	Dlouhé vlasy (zelené)
+75013	Váleènické afro (ena)
+75014	Váleènické afro (ena)
+75015	Váleènickı klobouk ()
+75016	Váleènickı klobouk ()
+75017	Váleènickı šátek ()
+75018	Váleènická šála ()
+75019	Váleènickı turban ()
+75020	Maska dınì (váleènice)
+75201	Koòskı ohon (hnìdı)
+75202	Koòskı ohon (zelenı)
+75203	Koòskı ohon (modrı)
+75204	Koòskı ohon (svìtlı)
+75205	Stø.dlouhé vlasy (èerv.)
+75206	Stø.dlouhé vlasy (hnìdé)
+75207	Stø.dlouhé vlasy (svìt.)
+75208	Støed.dlouhé vlasy(fial)
+75209	Krátké vlasy (èervené)
+75210	Krátké vlasy (modré)
+75211	Krátké vlasy (èerné)
+75212	Krátké vlasy (svìtlé)
+75213	Ninja afro (mu)
+75214	Ninja afro (mu)
+75215	Helma pro Ninju (M)
+75216	Helma pro Ninju (M)
+75217	Fez pro ninjy (M)
+75218	Keffiyeh pro ninjy (M)
+75219	Turban pro ninjy (M)
+75220	Maska dınì (ninja mu)
+75401	Sportovní úèes (svìtlı)
+75402	Sportovní úèes (hnìdı)
+75403	Sportovní úèes (blond)
+75404	Sportovní úèes (zelenı)
+75405	Charismatickı úèes(bílı)
+75406	Charismatickı úèes(èerv)
+75407	Charismatickı úèes(èern)
+75408	Charismatickı úèes(fial)
+75409	Dlouhı cop (bílı)
+75410	Dlouhı cop (modrı)
+75411	Dlouhı cop (èernı)
+75412	Dlouhı cop (hnìdı)
+75413	Afro pro suru (ena)
+75414	Afro pro suru (ena)
+75415	Klobouk pro sury ()
+75416	Klobouk pro sury ()
+75417	Šátek pro sury ()
+75418	Šála pro sury ()
+75419	Turban pro sury ()
+75420	Maska dınì (sura ena)
+75601	Vznešenı úèes (hnìdı)
+75602	Vznešenı úèes (èernı)
+75603	Vznešenı úèes (modrı)
+75604	Vznešenı úèes (svìtlı)
+75605	Polodlouhé vlasy (hnìdé)
+75606	Polodlouhé vlasy (èerné)
+75607	Polodlouhé vlasy (blond)
+75608	Polodlouhé vlasy (fial.)
+75609	Klasickı úèes (hnìdı)
+75610	Klasickı úèes (svìtlı)
+75611	Klasickı úèes (fialovı)
+75612	Klasickı úèes (èervenı)
+75613	Šamanské afro (M)
+75614	Šamanské afro (M)
+75615	Šamanská helma (M)
+75616	Šamanská helma (M)
+75617	Fez pro šamany (M)
+75618	Keffiyeh pro šamany (M)
+75619	Turban pro šamany (M)
+75620	Maska dınì (šaman mu)
+76000	Broskvové víno
+76001	Reset vlastností tìla
+76002	Vysušená hlava
+76003	Lektvar spìchu
+76004	Elixír Mìsíce (M)
+76005	Elixír Mìsíce (S)
+76006	Kompas kamene Metin
+76007	Pláš stateènosti
+76008	Medaile draka
+76009	Pergamen draka
+76010	Krvavı kámen
+76011	Kniha náèelníka
+76012	Elixír rychlosti
+76013	Zesílit pøedmìt
+76014	Zaèarovat pøedmìt
+76015	Mramor poehnání
+76016	Poehnanı pergamen
+76017	Lektvar útoku +10
+76018	Lektvar útoku +15
+76019	Propustka
+76020	Vızkumníkùv elixír
+76021	Elixír Slunce (M)
+76022	Elixír Slunce (S)
+76023	Zelené kouzlo
+76024	Zelená síla
+80001	Váèek s penìzi
+80002	Prázdnı list
+80003	Prut støíbra(50.000Yang)
+80004	Prut støíbra(100000Yang)
+80005	Prut zlata (500.000Yang)
+80006	Prut zlata (1 mil. Yang)
+80007	Prut zlata (2 mil. Yang)
+80008	Hrouda zlata
+80014	DM kupón (100)
+80015	DM kupón (500)
+80016	DM kupón (1000)
+80017	DM kupón (50)
+90001	Prázdná láhev na vodu
+90002	Láhev na vodu
+90003	Køišál
+90004	Drahokam
+90005	Aqua kámen
+90006	Kámen ducha
+90007	Minerál
+90010	Základovı kámen
+90011	Kmen
+90012	Pøeklika
+90013	NoNAme
+100000	Elixír èasu (M)
+100001	Elixír èasu (S)
+100002	Elixír èasu (V)
+100100	Draèí kleštì
+100200	Kleštì èasu
+100300	Zelená draèí fazole
+100400	Modrá draèí fazole
+100500	Rùová draèí fazole
+110000~110099	Surovı draèí diamant
+110100~110199	Surovı draèí diamant
+110200~110299	Surovı draèí diamant
+110300~110399	Surovı draèí diamant
+110400~110499	Surovı draèí diamant
+111000~111099	Broušenı draèí diamant
+111100~111199	Broušenı draèí diamant
+111200~111299	Broušenı draèí diamant
+111300~111399	Broušenı draèí diamant
+111400~111499	Broušenı draèí diamant
+112000~112099	Vzácnı draèí diamant
+112100~112199	Vzácnı draèí diamant
+112200~112299	Vzácnı draèí diamant
+112300~112399	Vzácnı draèí diamant
+112400~112499	Vzácnı draèí diamant
+113000~113099	Starovìkı draèí diamant
+113100~113199	Starovìkı draèí diamant
+113200~113299	Starovìkı draèí diamant
+113300~113399	Starovìkı draèí diamant
+113400~113499	Starovìkı draèí diamant
+114000~114099	Legendární draèí diamant
+114100~114199	Legendární draèí diamant
+114200~114299	Legendární draèí diamant
+114300~114399	Legendární draèí diamant
+114400~114499	Legendární draèí diamant
+120000~120099	Surovı draèí rubín
+120100~120199	Surovı draèí rubín
+120200~120299	Surovı draèí rubín
+120300~120399	Surovı draèí rubín
+120400~120499	Surovı draèí rubín
+121000~121099	Broušenı draèí rubín
+121100~121199	Broušenı draèí rubín
+121200~121299	Broušenı draèí rubín
+121300~121399	Broušenı draèí rubín
+121400~121499	Broušenı draèí rubín
+122000~122099	Vzácnı draèí rubín
+122100~122199	Vzácnı draèí rubín
+122200~122299	Vzácnı draèí rubín
+122300~122399	Vzácnı draèí rubín
+122400~122499	Vzácnı draèí rubín
+123000~123099	Starovìkı draèí rubín
+123100~123199	Surovı draèí rubín
+123200~123299	Starovìkı draèí rubín
+123300~123399	Starovìkı draèí rubín
+123400~123499	Starovìkı draèí rubín
+124000~124099	Legendární draèí rubín
+124100~124199	Legendární draèí rubín
+124200~124299	Legendární draèí rubín
+124300~124399	Legendární draèí rubín
+124400~124499	Legendární draèí rubín
+130000~130099	Surovı draèí nefrit
+130100~130199	Surovı draèí nefrit
+130200~130299	Surovı draèí nefrit
+130300~130399	Surovı draèí nefrit
+130400~130499	Surovı draèí nefrit
+131000~131099	Broušenı draèí nefrit
+131100~131199	Broušenı draèí nefrit
+131200~131299	Broušenı draèí nefrit
+131300~131399	Broušenı draèí nefrit
+131400~131499	Broušenı draèí nefrit
+132000~132099	Vzácnı draèí nefrit
+132100~132199	Vzácnı draèí nefrit
+132200~132299	Vzácnı draèí nefrit
+132300~132399	Vzácnı draèí nefrit
+132400~132499	Vzácnı draèí nefrit
+133000~133099	Starovìkı draèí nefrit
+133100~133199	Starovìkı draèí nefrit
+133200~133299	Starovìkı draèí nefrit
+133300~133399	Starovìkı draèí nefrit
+133400~133499	Starovìkı draèí rubín
+134000~134099	Legendární draèí nefrit
+134100~134199	Legendární draèí nefrit
+134200~134299	Legendární draèí nefrit
+134300~134399	Legendární draèí nefrit
+134400~134499	Legendární draèí nefrit
+140000~140099	Surovı draèí safír
+140100~140199	Surovı draèí safír
+140200~140299	Surovı draèí safír
+140300~140399	Surovı draèí safír
+140400~140499	Surovı draèí safír
+141000~141099	Broušenı draèí safír
+141100~141199	Broušenı draèí safír
+141200~141299	Broušenı draèí safír
+141300~141399	Broušenı draèí safír
+141400~141499	Broušenı draèí safír
+142000~142099	Vzácnı draèí safír
+142100~142199	Vzácnı draèí safír
+142200~142299	Vzácnı draèí safír
+142300~142399	Vzácnı draèí safír
+142400~142499	Vzácnı draèí safír
+143000~143099	Starovìkı draèí safír
+143100~143199	Starovìkı draèí safír
+143200~143299	Starovìkı draèí safír
+143300~143399	Starovìkı draèí safír
+143400~143499	Starovìkı draèí safír
+144000~144099	Legendární draèí safír
+144100~144199	Legendární draèí safír
+144200~144299	Legendární draèí safír
+144300~144399	Legendární draèí safír
+144400~144499	Legendární draèí safír
+150000~150099	Surovı draèí granát
+150100~150199	Surovı draèí granát
+150200~150299	Surovı draèí granát
+150300~150399	Surovı draèí granát
+150400~150499	Surovı draèí granát
+151000~151099	Surovı draèí granát
+151100~151199	Broušenı draèí granát
+151200~151299	Broušenı draèí granát
+151300~151399	Broušenı draèí granát
+151400~151499	Broušenı draèí granát
+152000~152099	Vzácnı draèí granát
+152100~152199	Vzácnı draèí granát
+152200~152299	Vzácnı draèí granát
+152300~152399	Vzácnı draèí granát
+152400~152499	Vzácnı draèí granát
+153000~153099	Starovìkı draèí granát
+153100~153199	Starovìkı draèí granát
+153200~153299	Starovìkı draèí granát
+153300~153399	Starovìkı draèí granát
+153400~153499	Starovìkı draèí granát
+154000~154099	Legendární draèí granát
+154100~154199	Legendární draèí granát
+154200~154299	Legendární draèí granát
+154300~154399	Legendární draèí granát
+154400~154499	Legendární draèí granát
+160000~160099	Surovı draèí onyx
+160100~160199	Surovı draèí onyx
+160200~160299	Surovı draèí onyx
+160300~160399	Surovı draèí onyx
+160400~160499	Surovı draèí onyx
+161000~161099	Broušenı draèí onyx
+161100~161199	Broušenı draèí onyx
+161200~161299	Broušenı draèí onyx
+161300~161399	Broušenı draèí onyx
+161400~161499	Broušenı draèí onyx
+162000~162099	Vzácnı draèí onyx
+162100~162199	Vzácnı draèí onyx
+162200~162299	Vzácnı draèí onyx
+162300~162399	Vzácnı draèí onyx
+162400~162499	Vzácnı draèí onyx
+163000~163099	Starovìkı draèí onyx
+163100~163199	Starovìkı draèí onyx
+163200~163299	Starovìkı draèí onyx
+163300~163399	Starovìkı draèí onyx
+163400~163499	Starovìkı draèí onyx
+164000~164099	Legendární draèí onyx
+164100~164199	Legendární draèí onyx
+164200~164299	Legendární draèí onyx
+164300~164399	Legendární draèí onyx
+164400~164499	Legendární draèí onyx
+71051	Uhranutá vìc
+71052	Poehnaná vìc

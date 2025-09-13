@@ -1,0 +1,49 @@
+quest christmas_tree begin
+    state start begin
+	
+	when login with game.get_event_flag("xmas_tree") == 0 begin
+		test = pc.getqf("put_sock_count")
+		if test != 0 then
+			pc.setqf("put_sock_count", 0)
+		end
+    end
+
+	
+	when xmas_tree.click begin
+	    local SOCK_VNUM = 50010
+	    say_title(locale.christmas_tree.christmas_say_title)
+		say(locale.christmas_tree.greet)
+	    local s =  select(locale.christmas_tree.sel_put_sock, locale.christmas_tree.sel_put_sock_not, locale.christmas_tree.sel_intro_event)
+	    if s==1 then
+		if pc.level >= 10 then
+		    if pc.getqf("put_sock_count") >= 3 then
+			say_title(locale.christmas_tree.christmas_say_title)
+			say(locale.christmas_tree.no_more_sock)
+		    else
+			if pc.countitem(SOCK_VNUM) >= 1 then
+			    pc.setqf("put_sock_count", pc.getqf("put_sock_count") + 1)
+			    pc.removeitem(SOCK_VNUM, 1)
+			    say_title(locale.christmas_tree.christmas_say_title)
+				say(locale.christmas_tree.gain_item_msg)
+
+			    pc.give_item_from_special_item_group(SOCK_VNUM)
+			else
+			    say_title(locale.christmas_tree.christmas_say_title)
+				say(locale.christmas_tree.no_sock)
+			end
+		    end
+		else
+		    say_title(locale.christmas_tree.christmas_say_title)
+			say(locale.christmas_tree.under_level_10)
+		end
+	    elseif s==2 then
+			say_title(locale.christmas_tree.christmas_say_title)
+			say(locale.christmas_tree.greet2)
+		elseif s==3 then
+			say_title(locale.christmas_tree.christmas_say_title)
+			say(locale.christmas_tree.intro_msg)
+	    end
+	end
+    end
+end
+

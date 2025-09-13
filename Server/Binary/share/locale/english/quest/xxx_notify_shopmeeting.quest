@@ -1,0 +1,184 @@
+quest notify_shopmeeting begin
+	state start begin
+		when 9005.chat."Empfange Deine Mission" with pc.level<=4 begin
+			say("Heute findet ein Händlertreffen statt.")
+			say("Wenn Du also Zeit hast,")
+			say ("warum fragst Du nicht die Besitzer des Gemischtwarenladens, des Waffengeschäfts und des Verteidigungsgeschäfts,")
+			say ("ob sie für mich zu dem Treffen gehen?")
+		    local b=select ("Annehmen", "Was gibst Du mir zur Belohnung?")
+			if 1==b then
+				setstate(accept)
+	elseif 2==b then
+		say	 ("(Ha, ha.) Du kennst das Geschäft!")
+				 ("Nun, das ist keine schwierige Aufgabe, wie wäre es mit 500 Yang?")
+				local b=select ("Annehmen", "Ablehnen")
+				if 1==b then
+					setstate(accept)
+				elseif 2==b then
+				else
+					say("UNBEKANNTE TASTE ["..b.."]")
+					end
+				else
+				 ("UNBEKANNTE TASTE ["..b.."]")
+				 end
+				 end
+				 end
+	state accept begin
+		when letter begin
+			local v=find_npc_by_vnum(9001)
+			if 0==v then
+			else
+				target.vid("target1", v, "")
+			end
+			local v=find_npc_by_vnum(9002)
+			if 0==v then
+			else
+				target.vid("target2", v, "")
+			end
+			local v=find_npc_by_vnum(9003)
+			if 0==v then
+			else
+				target.vid("target3", v, "")
+			end
+		end
+		when leave begin
+			target.delete("target1")
+			target.delete("target2")
+			target.delete("target3")
+	 
+			
+			 ("Ziel1")
+			 ("Ziel2")
+			 ("Ziel3")
+			 ("Ziel1")
+			 ("Ziel2")
+			 ("Ziel3")
+		 ("Händler finden")
+			 ("Händler finden")
+		("Händler finden")
+			 ("Frage für den alten Mann im Restaurant Suhpyung jeden Händler und jede Händlerin,")
+			 ("ob er oder sie am Händlertreffen teilnehmen möchte.")
+			 ("Teilnehmerliste")
+			 ("Ziel1")
+				 ("Besitzer des Waffengeschäfts: Kann teilnehmen(o) Kann nicht teilnehmen( )")
+			 ("Ziel1")
+				 ("Besitzer des Waffengeschäfts: Kann teilnehmen( ) Kann nicht teilnehmen(o)")
+			 ("Ziel1")
+				 ("Besitzer des Waffengeschäfts: Kann teilnehmen( ) Kann nicht teilnehmen( )")
+			 ("Ziel2")
+				 ("Besitzer des Verteidigungsgeschäfts: Kann teilnehmen(o) Kann nicht teilnehmen( )")
+		 ("Ziel2")
+				 ("Besitzer des Verteidigungsgeschäfts: Kann teilnehmen( ) Kann nicht teilnehmen(o)")
+			 ("Ziel2")
+				 ("Besitzer des Verteidigungsgeschäfts: Kann teilnehmen( ) Kann nicht teilnehmen( )")
+			 ("Ziel3")
+				 ("Besitzer des Gemischtwarenladens: Kann teilnehmen(o) Kann nicht teilnehmen( )")
+			 ("Ziel3")
+				 ("Besitzer des Gemischtwarenladens: Kann teilnehmen( ) Kann nicht teilnehmen(o)")
+			 ("Ziel3")
+				 ("Besitzer des Gemischtwarenladens: Kann teilnehmen( ) Kann nicht teilnehmen( )")
+			("Händler finden")			 ("Frage für den alten Mann im Restaurant Suhpyung jeden Händler und jede Händlerin,")
+			 ("ob er oder sie am Händlertreffen teilnehmen möchte.")
+			 ("Teilnehmerliste")
+			 ("Ziel1")
+				 ("Besitzer des Waffengeschäfts: Kann teilnehmen(o) Kann nicht teilnehmen( )")
+			 ("Ziel1")
+				 ("Besitzer des Waffengeschäfts: Kann teilnehmen( ) Kann nicht teilnehmen(o)")
+			 ("Ziel1")
+				 ("Besitzer des Waffengeschäfts: Kann teilnehmen( ) Kann nicht teilnehmen( )")
+			 ("Ziel2")
+				 ("Besitzer des Verteidigungsgeschäfts: Kann teilnehmen(o) Kann nicht teilnehmen( )")
+			 ("Ziel2")
+				 ("Besitzer des Verteidigungsgeschäfts: Kann teilnehmen( ) Kann nicht teilnehmen(o)")
+			 ("Ziel2")
+				 ("Besitzer des Verteidigungsgeschäfts: Kann teilnehmen( ) Kann nicht teilnehmen( )")
+			 ("Ziel3")
+				 ("Besitzer des Gemischtwarenladens: Kann teilnehmen(o) Kann nicht teilnehmen( )")
+			 ("Ziel3")
+				 ("Besitzer des Gemischtwarenladens: Kann teilnehmen( ) Kann nicht teilnehmen(o)")
+			 ("Ziel3")
+				 ("Besitzer des Gemischtwarenladens: Kann teilnehmen( ) Kann nicht teilnehmen( )")
+			"Sieh Dir an, wie viele Händler bisher zum Treffen kommen wollen."
+			 ("Frage den Besitzer des Waffengeschäfts, des Verteidigungsgeschäfts und des Gemischtwarenladens,")
+			 ("ob sie zu dem Treffen gehen, und lass es mich wissen.")
+			 ("Weiter", "Verlassen")
+			 ("Nun, da kann ich wohl nichts machen, wenn Du es nicht tun kannst.")
+				 ("Ich werde einfach jemand anderen fragen.")
+				 ("UNBEKANNTE TASTE ["..b.."]")
+				
+			 ("Ziel1")
+			 ("Ein Händlertreffen?")
+				 ("Hmm, mal schauen, wie mein Terminplan aussieht. Einen Moment ... ")
+				 ("Ja, ich kann kommen.")
+				 ("Sag ihm bitte, ich werde dort sein.")
+				 ("Ziel1", 11)
+				 ("Ziel1")!
+					 ("Ziel2")!
+						 ("Ziel3")!
+							
+				 ("Ein Händlertreffen?")
+				 ("Hmm, mal schauen, wie mein Terminplan aussieht. Einen Moment ... ")
+				 ("Tut mir Leid! Ich esse heute mit dem Waldarbeiter David Kim zu Abend!")
+				 ("Sag ihm bitte, dass ich nicht kommen kann.")
+				 ("Ziel1", 10)
+				 ("Ziel1")!
+					 ("Ziel2")!
+						 ("Ziel3")
+						 ("Ziel2")
+			 ("Seit dieser Bastard von Lagerverwalter der Vorsitzende der Händlervereinigung ist,")
+				 ("wird das Händlertreffen zu oft abgehalten.")
+				 ("Nun, wenn die wenigen Mitglieder nicht auftauchen, wird praktisch niemand bei dem Treffen sein!")
+				 ("Sag ihm bitte, ich werde dort sein.")
+				 ("Ziel2"
+				 ("Ziel1")!
+					 ("Ziel2")
+						 ("Ziel3")!
+							 ("Seit dieser Bastard von Lagerverwalter der Vorsitzende der Händlervereinigung ist,")
+				 ("wird das Händlertreffen zu oft abgehalten.")
+				 ("Meine Frau hat mich gebeten, heute früh nach Hause zu kommen.")
+				 ("Es tut mir Leid, aber sag ihm bitte, dass ich nicht kommen kann.")
+				 ("Ziel2"
+				 ("Ziel1")!
+					 ("Ziel2")
+						 ("Ziel3")
+							 ("Ziel3")
+			 ("Ein Händlertreffen?")
+				 ("Es scheint, als gäbe es jeden zweiten Tag ein Händlertreffen!")
+				 ("Es wäre unhöflich,")
+				 ("wenn einer der wichtigen Ladenbesitzer das Treffen verpassen würde.")
+				 ("Sag ihm bitte, ich werde dort sein.")
+				 ("Ziel3"
+			 ("Ziel1")
+					 ("Ziel2")
+						 ("Ziel3")
+							 ("Ein Händlertreffen?")
+				 ("Es scheint, als gäbe es jeden zweiten Tag ein Händlertreffen!")
+				 ("Oh nein! Ich habe Tina Lee versprochen, dass ich")
+				 ("heute mit ihr ein Horoskop erstellen lassen würde.")
+				 ("Es tut mir Leid, aber könntest Du ihm bitte sagen, dass ich nicht kommen kann?")
+				 ("Ziel3"
+				 ("Ziel1")
+					 ("Ziel2")
+						 ("Ziel3")
+					 ("__TARGET__"
+			 ("Kehr zu dem alten Mann im Restaurant Suhpyung zurück")
+			 ("Kehr zu dem alten Mann im Restaurant Suhpyung zurück")
+			"Kehr zu dem alten Mann im Restaurant Suhpyung zurück"
+			 ("Kehr zu dem alten Mann im Restaurant Suhpyung zurück. Berichte ihm, ob die Händler am Treffen teilnehmen werden")
+			 ("und hol Dir eine Belohnung ab.")
+		"Kehr zu dem alten Mann im Restaurant Suhpyung zurück"
+			 ("Kehr zu dem alten Mann im Restaurant Suhpyung zurück. Berichte ihm, ob die Händler am Treffen teilnehmen werden")
+			 ("und hol Dir eine Belohnung ab")
+		 ("__TARGET__")
+			 ("Ziel1") ("Ziel2") ("Ziel3")
+				 ("Es haben also alle gesagt, dass sie kommen werden?")
+				 ("Ich bin guter Laune, daher gebe ich Dir einen Bonus von 1000 Yang!")
+				 ("Ich werde Dich rufen, wenn ich einen weiteren Auftrag für Dich habe.")
+								 ("Du erhälst 1000 Yang von dem alten Mann im Restaurant Suhpyung.")
+				 ("Oh, hervorragend! ")
+				 ("Ich werde Dich rufen, wenn ich einen weiteren Auftrag für Dich habe.")
+				 ("Lass mich Dich wie versprochen belohnen.")
+				 ("Du erhälst 500 Yang von dem alten Mann im Restaurant Suhpyung.")
+				 ("Trank_an_Fischer_liefern", "Fall_Start")
+			
+

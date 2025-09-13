@@ -1,0 +1,290 @@
+quest monkey_dungeon begin
+	state start begin
+		when login begin
+			pc.setqf("clear", 0)
+
+			local i = pc.get_map_index()
+
+			if i == 107 or i == 108 or i == 109 then
+				local warp_to = 
+				{
+					[107] = 
+					{
+						{  3,  979, 564 },
+						{ 23,  575,  97 },
+						{ 43,  535,  66 },
+					},
+					[108] =
+					{
+						{ 63, 1016, 1352 },
+						{ 63, 1016, 1352 },
+						{ 63, 1016, 1352 },
+					},
+					[109] =
+					{
+						{ 63,  831, 549 },
+						{ 63,  831, 549 },
+						{ 63,  831, 549 },
+					},
+				}
+
+				pc.setqf("fail", 0)
+
+				pc.warp_local(warp_to[i][pc.empire][1], warp_to[i][pc.empire][2] * 100, warp_to[i][pc.empire][3] * 100)
+				elseif pc.getqf("level") != 0 then
+
+				if i >= 1070000 and i < 1100000 then
+					-- Set quest (Show to user)
+					q.set_title("Affendungeon")
+					q.set_clock("Verbleibende Zeit:", 20*60)
+					q.start()
+
+
+					timer("failtimer", 20*60)
+
+
+					if pc.getqf("level") >= 2 then
+						timer("regen_middle_boss", 10*60)
+
+					end
+				else
+					pc.setqf("level", 0)
+					q.done()
+					if pc.getqf("fail") != 0 then
+						pc.setqf("fail", 0)
+						pc.polymorph(5003, 3*60)
+
+						makequestbutton("Fluch des Affen")
+						setskin(NOWINDOW)
+					end
+				end
+			end
+		end
+
+		when button begin
+			say("Du wurdest verflucht.")
+		end
+
+		when logout with pc.get_map_index() >= 1070000 and pc.get_map_index() < 1100000 begin
+
+			if pc.getqf("clear") == 0 then 		
+				pc.setqf("fail", 1)
+
+				local map_index, x, y = pc.get_start_location()
+				pc.set_warp_location(map_index, x, y)
+			end
+
+			if pc.getqf("level") != 0 then 
+				d.exit_all()
+				d.purge()
+			end
+		end
+
+		function determine_level()
+			if pc.get_map_index() == 63 then
+				if pc.local_y < 800 then
+					return 3
+				else
+					return 2
+				end
+			else
+				return 1
+			end
+		end
+
+		when 20350.chat."Herausforderung im Affendungeon" begin
+
+			local delay = 3600
+
+			if is_test_server() then
+				delay = 10
+			end
+
+			if get_global_time() - pc.getqf("Zeit") < delay and pc.getqf("Zeit") != 0 then
+
+				say("Jetzt ist nicht der richtige Zeitpunkt, einzutreten.")
+				say("Du kannst nur jede Stunde einmal in den Dungeon")
+				say("gehen.")
+			else
+				--Determine Easy Monkey Dungeon, Normal Monkey Dungeon, Hard Monkey Dungeon
+				local s = monkey_dungeon.determine_level() 
+				local msgs = { 
+					"Eingang zum leichten Affendungeon",
+					"Eingang zum normalen Affendungeon",
+					"Eingang zum schweren Affendungeon",
+				}
+				local maps = { 107, 108, 109 }
+
+--				say_title(msgs[s])
+				---                                                   l
+				say("")
+				say("1. Wenn Du den Affendungeon betretest, musst Du")
+				say("den obersten Affen in 20 Minuten erschlagen und")
+				say("dann entkommen.")
+				say("")
+				say("2. Du darfst keine Schriftrollen `Zurück´ ")
+				say("oder zu anderen Zielen verwenden.")
+				say("")
+				say("Viele, die sich nicht an diese Regeln halten,")
+				say("werden in Affen verwandelt, also nimm Dich in")
+				say("Acht.")
+
+				local r = select("Betreten.", "Nicht betreten.")
+
+				if r == 1 then
+--		pc.setqf("time", get_global_time())
+					pc.setqf("Zeit", get_global_time())
+					d.join(maps[s])
+					monkey_dungeon.spawn_goto_mobs(s)
+
+					d.regen_file("data/dungeon/monkey/monkey"..s..".txt")
+
+					pc.setqf("level", s);
+				end
+			end
+		end
+
+		when regen_middle_boss.timer begin
+			if pc.getqf("level") == 2 then
+				d.spawn_group(5017, 596, 332, 1, true, 1)
+			elseif pc.getqf("level") == 3 then
+				d.spawn_group(5028, 596, 332, 1, true, 1)
+			end
+		end
+
+		when 5116.party_kill with pc.getqf("level") == 2 begin
+
+			d.spawn_goto_mob(595, 335, 601, 560)
+		end
+
+		when 5127.party_kill with pc.getqf("level") == 3 begin
+
+			d.spawn_goto_mob(595, 335, 601, 560)
+		end
+
+		when 5161.party_kill with pc.getqf("level") == 1 begin
+
+			cleartimer('failtimer')
+			timer('successtimer', 30)
+			party.setqf("clear", 1)
+		end
+
+		when 5162.party_kill with pc.getqf("level") == 2 begin
+			cleartimer('failtimer')
+			timer('successtimer', 30)
+			party.setqf("clear", 1)
+		end
+
+		when 5163.party_kill with pc.getqf("level") == 3 begin
+			cleartimer('failtimer')
+			timer('successtimer', 30)
+			party.setqf("clear", 1)
+		end
+
+		when failtimer.timer begin
+			d.exit_all_to_start_position()
+			d.purge()
+		end
+
+		when successtimer.timer begin
+			d.exit_all()
+			d.purge()
+			q.done()
+		end
+
+		function spawn_goto_mobs(level)
+			local t = {
+
+				{
+					{145,	315,	345,	361},
+					{80,	308,	106,	547},
+					{206,	109,	75,	368},
+					{320,	238,	89,	746},
+					{421,	272,	520,	352},
+					{487,	279,	541,	45},
+					{70,	368,	211,	109},
+					{65,	434,	615,	49},
+					{67,	498,	284,	705},
+					{350,	361,	145,	310},
+					{210,	495,	553,	285},
+					{526,	352,	487,	274},
+					{528,	415,	626,	291},
+					{523,	480,	285,	569},
+					{101,	547,	80,	303},
+					{82,	746,	315,	238},
+					{541,	40,	416,	272},
+					{615,	44,	72,	498},
+					{553,	291,	215,	495},
+					{626,	296,	523,	415},
+					{278,	705,	72,	498},
+					{280,	569,	518,	480},
+					{470,	560,	579,	390},
+				},
+
+
+				{
+					{145,	315,	345,	361},
+					{80,	308,	520,	352},
+					{206,	109,	487,	274},
+					{320,	238,	75,	368},
+					{421,	272,	211,	109},
+					{487,	279,	215,	495},
+					{70,	368,	315,	238},
+					{65,	434,	520,	352},
+					{67,	498,	284,	705},
+					{350,	361,	145,	310},
+					{210,	495,	416,	272},
+					{526,	352,	80,	303},
+					{528,	415,	72,	498},
+					{523,	480,	106,	547},
+					{101,	547,	523,	415},
+					{82,	746,	541,	45},
+					{541,	40,	72,	121},
+					{615,	44,	518,	480},
+					{553,	291,	89,	746},
+					{626,	296,	285,	569},
+					{278,	705,	615,	49},
+					{280,	569,	72,	498},
+					{470,	560,	579,	390},
+				},
+
+
+				{
+					{145,	315,	75,	368},
+					{80,	308,	541,	45 },
+					{206,	109,	615,	49 },
+					{320,	238,	284,	705},
+					{421,	272,	520,	352},
+					{487,	279,	553,	285},
+					{70,	368,	145,	310},
+					{65,	434,	345,	361},
+					{67,	498,	523,	415},
+					{350,	361,	72,	498},
+					{210,	495,	626,	291},
+					{526,	352,	487,	274},
+					{528,	415,	72,	498},
+					{523,	480,	106,	547},
+					{101,	547,	518,	480},
+					{82,	746,	285,	569},
+					{541,	40,	80,	303},
+					{615,	44,	211,	109},
+					{553,	291,	416,	272},
+					{626,	296,	215,	495},
+					{278,	705,	315,	238},
+					{280,	569,	89,	746},
+					{470,	560,	579,	390},
+				}
+			}
+
+			if level >= 1 and level <= 3 then
+				table.foreachi(t[level],
+				function(n, p) 
+					d.spawn_goto_mob(p[1], p[2], p[3], p[4]) 
+				end)
+				if level == 1 then
+					d.spawn_goto_mob(581, 395, 595, 565)
+				end
+			end
+		end
+	end
+end

@@ -1,0 +1,39 @@
+define santa 20126
+--define nog_pocket 10
+define nog_pocket 50216
+quest new_christmas_2012_nog begin
+	state start begin
+	end
+	state nog_first_give begin
+		when santa.chat.gameforge.new_christmas._050_npcChat  begin
+			say_title(mob_name(santa))
+			say (gameforge.new_christmas._060_say)
+			wait()
+			say_title(mob_name(santa))
+			say (gameforge.new_christmas._070_say)
+			wait()
+			pc.give_item2 (nog_pocket, 6)
+			pc.setqf ("last_nog_give_time", get_global_time())
+			say_title(mob_name(santa))
+			say (gameforge.new_christmas._080_say)
+			set_state(nog_give)
+		end
+	end
+	state nog_give begin
+		when santa.chat.gameforge.new_christmas._090_npcChat begin
+			say_title(mob_name(santa))
+			say (gameforge.new_christmas._100_say)
+			wait()
+			if get_global_time() - pc.getqf ("last_nog_give_time") >= 86400 then
+				say_title(mob_name(santa))
+				say (gameforge.new_christmas._110_say)
+				pc.setqf ("last_nog_give_time", get_global_time())
+				pc.give_item2 (nog_pocket, 6)
+			else
+				say_title(mob_name(santa))
+				say (gameforge.new_christmas._120_say)
+			end
+		end
+	end
+end
+

@@ -1,0 +1,10 @@
+quest mount_prolongation begin
+  state start begin
+		when 38100.use with 52001 == item.vnum begin
+			select_item()
+
+
+		end
+
+	end
+end

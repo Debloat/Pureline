@@ -1,0 +1,211 @@
+quest training_mount begin
+state start begin
+		function no_level()
+			say_title(""..mob_name(20349).."")
+			say(gameforge.training_mount._01_say)
+		end
+
+		function no_item()
+			say_title(""..mob_name(20349).."")
+			say(gameforge.training_mount._02_say)
+		end	
+		function fail_msg()
+			say_title(""..mob_name(20349).."")
+			say(".............")
+			say(gameforge.training_mount._03_say)
+		end
+
+		when 20349.chat.gameforge.training_mount._04_say begin
+			say_title(""..mob_name(20349).."")
+			say(gameforge.training_mount._05_say)
+			say("")
+			wait()
+			say_title(""..mob_name(20349).."")
+			say(gameforge.training_mount._06_say)
+			say("")
+			wait()
+			say_title(""..mob_name(20349).."")
+			say(gameforge.training_mount._07_say)
+			say("")
+			set_state(main_point)
+		end
+	end
+
+	state main_point begin
+		when 20349.chat.gameforge.training_mount._08_say begin
+			say_title(""..mob_name(20349).."")
+			say(gameforge.training_mount._09_say)
+			say("")
+			wait()
+			say_title(""..mob_name(20349).."")
+			say(gameforge.training_mount._10_say)
+			say("")
+			wait()
+			say_title(""..mob_name(20349).."")
+			say(gameforge.training_mount._11_say)
+
+			local s=select(gameforge.training_mount._12_say,gameforge.training_mount._13_say)
+
+			if 2==s then
+				return
+			end
+			if pc.count_item(50067) >0  or pc.count_item(50068)>0 then 
+				say_title(""..mob_name(20349).."")
+				say(gameforge.training_mount._14_say)
+			else 
+					training_mount.no_item()
+					return
+			end
+
+			local s=select(gameforge.training_mount._15_say,gameforge.training_mount._15_2_say,gameforge.training_mount._16_say)
+			if 1==s  then 
+				if pc.count_item(50067) == 0    then 
+					training_mount.no_item()
+				elseif pc.level <25 then
+					training_mount.no_level()
+				else
+					say_title(""..mob_name(20349).."")
+					say(""..item_name(50067)..gameforge.training_mount._17_say)
+				end
+			elseif 2==s   then
+				if  pc.count_item(50068) == 0 then 
+					training_mount.no_item()
+				elseif pc.level <45 then
+					training_mount.no_level()
+				else
+					say_title(""..mob_name(20349).."")
+					say(gameforge.training_mount._18_say)
+				end
+			elseif 3==s then
+				say_title(""..mob_name(20349).."")
+				say(gameforge.training_mount._19_say)
+				say("")
+				return
+			end
+		end --when
+
+
+		when 20349.take with 52001 == item.vnum or 
+							52016 == item.vnum or 
+							52031 == item.vnum or 
+							52046 == item.vnum or 
+							52061 == item.vnum or
+							52076 == item.vnum begin
+
+				if pc.is_riding() == true then 
+					say (locale.traning_mount_cannot_upgrade)
+					return
+				end
+				if pc.count_item(50067) > 0  then
+					if pc.level <25 then
+						training_mount.no_level(25)
+						return
+					end
+					say_title(""..mob_name(20349).."")
+					say(gameforge.training_mount._20_say)
+					wait()
+					say(gameforge.training_mount._20_1_say)
+					
+					-- here we decide about, which bonus the player whiches for the mount
+					local bonus_selected = select("ATTBONUS_MONSTER","MALL_EXPBONUS","MAX_HP","DEF_GRADE_BONUS","ATT_GRADE_BONUS", "Abort")
+					
+					if 6==bonus_selected  then
+						return
+					else
+						pc.setqf("upgrade_bonus", bonus_selected)
+						pc.setqf("upgrade_level", 1)
+					end
+					
+					local remain_time =item.get_socket(0)
+					pc.give_item2_select(item.get_refine_vnum,1)
+					item.set_socket(0,remain_time)
+					item.set_socket(1,bonus_selected)
+					pc.remove_item (item.get_vnum(),1)
+					pc.remove_item (500675,1)
+				
+				else
+					training_mount.no_item()
+				end
+			end
+			when 20349.take with 52006 == item.vnum  or
+								52021 == item.vnum or 
+								52036 == item.vnum or 
+								52051 == item.vnum or
+								52066 == item.vnum or 
+								52081 == item.vnum begin
+								
+				if pc.is_riding() == true then 
+					say (locale.traning_mount_cannot_upgrade)
+					return
+				end
+
+				if  pc.count_item(50068) > 0 then
+					if pc.level <45 then
+						training_mount.no_level()
+						return
+					end	
+					say_title(""..mob_name(20349).."")
+					say(gameforge.training_mount._21_say)
+					wait()
+					say(gameforge.training_mount._22_say)
+					
+					-- here we save the new upgrade level for mapping in the ride.quest
+					pc.setqf("upgrade_level", 2)
+					
+					local remain_time = item.get_socket(0)
+					local upgrade_bonus = item.get_socket(1)
+					pc.give_item2_select(item.get_refine_vnum,1)
+					item.set_socket(0,remain_time)
+					item.set_socket(1,bonus_selected)
+					pc.remove_item (item.get_vnum(),1)
+					pc.remove_item (50068,1)
+				else
+					training_mount.no_item()
+				end
+			end
+				
+
+
+when 20349.chat.gameforge.training_mount._23_say  begin
+			say_title(""..mob_name(20349).."")
+			say("")
+			say(gameforge.training_mount._24_say)
+			wait()
+			say_title(""..mob_name(20349).."")
+			say("")
+			say(gameforge.training_mount._25_say)
+			wait()
+			say_title(""..mob_name(20349).."")
+			say("")
+			say(gameforge.training_mount._26_say)
+			local s=select(locale.yes,locale.no)
+			if 2==s then
+				return
+			end
+			say_title(""..mob_name(20349).."")
+			say("")
+			say(gameforge.training_mount._27_say)
+			say("")
+			wait()
+			if pc.count_item(50068) >0  then
+				if horse.get_level()>1 then 
+					say_title(""..mob_name(20349).."")
+					say("")
+					say(gameforge.training_mount._28_say)
+					wait()
+					say(gameforge.training_mount._29_say)
+				else 
+					say_title(""..mob_name(20349).."")
+					say("")
+					say(gameforge.training_mount._30_say)
+					return
+				end
+			else
+				say_title(""..mob_name(20349).."")
+				say("")
+				say(gameforge.training_mount._31_say)
+				return
+			end	
+		end
+	end
+end

@@ -1,0 +1,228 @@
+quest huanso_deliverdrag begin
+	state start begin
+		when huanso.chat.locale.huanso.start_huanso_chat begin
+			say(locale.huanso.start_huanso_say)
+		end
+
+		when etc_shop.chat.locale.huanso.start_etc_shop_chat with pc.level>=locale.huanso.start_level_begin and pc.level<=locale.huanso.start_level_end and number(1, locale.huanso.start_probability)==1 begin
+			say(locale.huanso.start_etc_shop_say) 
+			say(locale.huanso.order_text)
+			setstate(order)
+
+			makequestbutton(locale.huanso.order_label)
+			q.set_title(locale.huanso.order_label)
+			q.start()
+	
+		end
+	end
+	state order begin
+		when login begin
+			setskin(NOWINDOW)
+			q.set_title(locale.huanso.order_label)
+			q.start()
+			makequestbutton(locale.huanso.order_label)
+		end
+		when button begin
+			say(locale.huanso.order_text)
+		end
+		when info begin
+			say(locale.huanso.order_text)
+		end
+
+		when huanso.chat.locale.huanso.order_chat  begin
+			
+			say(locale.huanso.order_say1)
+			wait()
+			say(locale.huanso.order_say2)
+			local s=select(locale.huanso.order_accept, locale.huanso.order_refuse)
+			if 1==s then
+				say(locale.huanso.order_accept_answer)
+				say(locale.huanso.find_text)
+				setstate(find)
+				makequestbutton(locale.huanso.find_label)
+				q.set_title(locale.huanso.find_label)
+
+			else
+				say(locale.huanso.order_refuse_answer)
+			end
+		end
+	end
+	state find begin
+		when login begin
+			setskin(NOWINDOW)
+			q.set_title(locale.huanso.find_label)
+			q.start()
+			makequestbutton(locale.huanso.find_label)
+		end
+		when button begin
+			say(locale.huanso.find_text)
+		end
+		when info begin
+			say(locale.huanso.find_text)
+		end
+
+		when huanso.chat.locale.huanso.find_huanso_chat  begin
+			say(locale.huanso.find_huanso_say)
+		end
+
+		when baekgo.chat.locale.huanso.find_baekgo_chat begin
+			say(locale.huanso.find_baekgo_say1)
+			wait()
+			say(locale.huanso.find_baekgo_say2)
+			say(locale.huanso.kill_text)
+			setstate(kill)
+			makequestbutton(locale.huanso.kill_label)
+			q.set_title(locale.huanso.kill_label)
+		end
+	end
+	state kill begin
+		when login begin
+			setskin(NOWINDOW)
+			q.set_title(locale.huanso.kill_label)
+			q.start()
+			makequestbutton(locale.huanso.kill_label)
+		end
+		when button begin
+			say(locale.huanso.kill_text)
+		end
+		when info begin
+			say(locale.huanso.kill_text)
+		end
+		when jeongal_ingan.kill begin
+
+			local kill_count=pc.getqf("Sieg_Anz")
+			pc.setqf("Sieg_Anz", kill_count+1)
+
+			--chat("akt Sieg"..kill_count)
+			--chat("PC Lv"..pc.level)
+			--chat("End Lv"..locale.huanso.end_level)
+			--chat("Anz Sieg"..locale.huanso.kill_count)
+			--chat("such"..pc.getqf("such"))
+			--chat("Ggst-Name"..locale.huanso.kill_count)
+			--chat("Ggst-Anz"..pc.countitem(locale.huanso.event_item))
+
+			local end_level=locale.huanso.end_level
+			local dst_kill_count=locale.huanso.kill_count
+
+			if pc.level>end_level then
+				--chat("Übersteigt Level")
+				if kill_count>dst_kill_count then
+					--chat("Übersteigt Anzahl für erfolgreiches Fangen")
+					say(locale.huanso.kill_giveup_say)
+					setstate(failure)
+					makequestbutton(locale.huanso.failure_label)
+					q.set_title(locale.huanso.failure_label)
+				end
+			else
+				--chat("Level anwenden")
+				if number(1, dst_kill_count)==1 then
+					--chat("Erfolgsrate")
+					--chat("Verdienen")
+					say(pickup_say)
+					setstate(make)
+					makequestbutton(locale.huanso.success_label)
+					q.set_title(locale.huanso.success_label)
+				end
+			end
+		end
+		when huanso.chat.locale.huanso.kill_huanso_chat begin
+			say(locale.huanso.kill_huanso_say)
+		end
+		when baekgo.chat.locale.huanso.kill_baekgo_chat begin
+			say(locale.huanso.kill_baekgo_say)
+		end
+	end
+
+	state make begin
+		when login begin
+			setskin(NOWINDOW)
+			local pickup_label=locale.huanso.make_label
+			makequestbutton(pickup_label)
+			q.set_title(pickup_label)
+			q.start()
+		end
+		when button begin
+			say(locale.huanso.make_text)
+		end
+		when info begin
+			say(locale.huanso.make_text)
+		end
+		when huanso.chat.locale.huanso.make_huanso_chat begin
+			say(locale.huanso.make_huanso_say)
+		end
+		when baekgo.chat.locale.huanso.make_baekgo_chat begin
+			say(locale.huanso.make_baekgo_say1)
+			wait()
+			say(locale.huanso.make_baekgo_say2)
+			say(locale.huanso.deliver_text)
+			setstate(deliver)
+			makequestbutton(locale.huanso.deliver_label)
+			q.set_title(locale.huanso.deliver_label)
+		end
+	end
+	state deliver begin
+		when login begin
+			setskin(NOWINDOW)
+			makequestbutton(locale.huanso.deliver_label)
+			q.set_title(locale.huanso.deliver_label)
+			q.start()
+		end
+		when button begin
+			say(locale.huanso.deliver_text)
+		end
+		when info begin
+			say(locale.huanso.deliver_text)
+		end
+
+		when huanso.chat.locale.huanso.deliver_huanso_chat begin
+			say(locale.huanso.deliver_huanso_say1)
+			wait()
+			say(locale.huanso.deliver_huanso_say2)
+		end
+		when yurang.chat.locale.huanso.deliver_yurang_chat begin
+			say(locale.huanso.deliver_yurang_say1)
+			wait()
+			say(locale.huanso.deliver_yurang_say2)
+			say(locale.huanso.success_text)
+			setstate(success)
+			makequestbutton(locale.huanso.success_label)
+			q.set_title(locale.huanso.success_label)
+		end
+	end
+	state failure begin
+		when button begin
+			say(locale.huanso.failure_text)
+		end
+		when info begin
+			say(locale.huanso.failure_text)
+		end
+		when huanso.chat.locale.huanso.failure_huanso_chat begin
+			say(locale.huanso.failure_huanso_say)
+			setstate(complete)
+		end
+	end
+	state success begin
+		when button begin
+			say(locale.huanso.success_text)
+		end
+		when info begin
+			say(locale.huanso.success_text)
+		end
+		when huanso.chat.locale.huanso.success_huanso_chat begin
+			say(locale.huanso.success_huanso_say)
+			wait()
+			say(locale.huanso.reward)
+			pc.give_item("Belohnung", 70047)
+			setstate(complete)
+			q.done()
+		end
+	end
+	state complete begin
+		when huanso.chat.locale.huanso.complete_huanso_chat begin
+			say(locale.huanso.complete_huanso_say)
+		end
+	end
+end
+	
+
+

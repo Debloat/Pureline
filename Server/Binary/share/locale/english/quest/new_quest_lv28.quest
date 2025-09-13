@@ -1,0 +1,245 @@
+quest new_quest_lv28 begin
+
+	state start begin
+		when login or levelup with pc.get_level() >= 28 begin
+			set_state(information)
+		end
+	end
+	-- yu-hwan is worried about ah-yu, want player to help her -----------------------------------------
+	state information begin
+		when login or enter begin
+			local v=find_npc_by_vnum(20017) -- Yu-Hwan
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, gameforge.new_quest_lv28._010_target)
+			end
+			send_letter(gameforge.new_quest_lv28._024_set_title) 
+			q.start()
+			q.set_title(gameforge.new_quest_lv28._024_set_title)
+		end
+		
+		when button or info begin
+			say_title(gameforge.new_quest_lv28._024_set_title)
+			say(gameforge.new_quest_lv28._011_say)
+		end
+		
+		when 20017.chat.gameforge.new_quest_lv28._015_npcChat begin
+			target.delete("__TARGET__")
+			say_title(gameforge.new_quest_lv28._020_say_title) -- yellow text headline
+			say(gameforge.new_quest_lv28._021_say) -- white font text
+			q.done()
+			local doquest = select(gameforge.new_quest_lv28._018_select, gameforge.subquest_12._50_select, gameforge.new_quest_lv75._290_2_select)
+			if doquest ==1 then 
+				set_state(ask_ahyu)
+			elseif doquest == 3 then
+				say(gameforge.subquest_06._60_say)
+				local abortquest = select(gameforge.subquest_06._70_select, gameforge.subquest_06._80_select)
+				if abortquest == 1 then
+					set_state(__GIVEUP__)
+				else
+					say_title(gameforge.new_quest_lv28._020_say_title) -- yellow text headline
+					say(gameforge.subquest_11._80_say)
+					return
+				end
+			else
+				say_title(gameforge.new_quest_lv28._020_say_title) -- yellow text headline
+				say(gameforge.subquest_11._80_say)
+				return
+			end
+		end
+		
+	end
+	-- ah-yu tells player, that she is blackmailed by yang-shin -----------------------------------------
+	state ask_ahyu begin
+		when enter or login begin
+			send_letter(gameforge.new_quest_lv28._015_npcChat) -- EDIT added by Arne 22sept09, Reason: no quest, no letter
+			q.start() -- EDIT added by Arne 22sept09, Reason: no quest, no letter
+			q.set_title(gameforge.new_quest_lv28._015_npcChat) -- EDIT added by Arne 22sept09, Reason: no quest, no letter
+			local v=find_npc_by_vnum(20003) -- Ah-Yu
+			if 0==v then
+			else
+				target.vid("__TARGET2__", v, gameforge.new_quest_lv28._015_npcChat)
+			end
+			new_quest_lv28_neededAmountDrop1 = 1
+			new_quest_lv28_dropProb1 = 100
+			new_quest_lv28_mob1 = 193 -- bera
+			new_quest_lv28_drop1 = 30174 -- Bärentatze
+		end
+		
+		-- BEGIN EDIT added by Arne 22sept09, Reason: no quest, no letter
+		when button or info begin
+			say_title(gameforge.new_quest_lv28._015_npcChat)
+			say(gameforge.new_quest_lv28._016_say)
+			say("")
+			say(string.format(gameforge.new_quest_lv28._017_say, get_map_name_by_number(1)))		
+		end
+		-- END EDIT
+		
+		when 20003.chat.gameforge.new_quest_lv28._015_npcChat begin
+			target.delete("__TARGET2__")
+			say_title(gameforge.new_quest_lv28._019_say_title)
+			say(gameforge.new_quest_lv28._022_say)
+		wait()
+			say_title(gameforge.new_quest_lv28._019_say_title)
+			say(gameforge.new_quest_lv28._023_say)
+		wait()
+			say_title(gameforge.new_quest_lv28._019_say_title)
+			say(gameforge.new_quest_lv28._030_say)
+			say_reward(string.format("%s x", new_quest_lv28_neededAmountDrop1))
+			say_item_vnum(new_quest_lv28_drop1) -- icon of item
+			say_reward(gameforge.new_quest_lv28._031_say_reward)
+			say(mob_name(new_quest_lv28_mob1))
+			set_state(hunting)
+			q.done()--EDIT added by Arne 22Sept09, Reason: see above
+		end
+	end
+	-- player has to hunt for bearfootskin+ because yang-shin wants it from ah-yu ----------------------
+	state hunting begin
+		when enter or login begin
+			new_quest_lv28_neededAmountDrop1 = 1
+			new_quest_lv28_dropProb1 = 100
+			new_quest_lv28_mob1 = 193 -- bera
+			new_quest_lv28_drop1 = 30174 -- Bärentatze
+			send_letter(gameforge.new_quest_lv28._040_npcChat) -- EDIT added by Arne 22sept09, Reason: no letter
+			q.start()
+			q.set_title(gameforge.new_quest_lv28._040_npcChat)			
+			notice_multiline(gameforge.new_quest_lv28._025_notice, notice)
+		end
+		---------------- bärenfusshaut+ ------------------------------------------------------
+		-- kill a 193#Bera
+		when 193.kill begin
+			if pc.count_item(new_quest_lv28_drop1) < new_quest_lv28_neededAmountDrop1 then
+				if math.random(1,100) <= new_quest_lv28_dropProb1 then -- probability if s.th. drops
+					
+					pc.give_item2(new_quest_lv28_drop1) -- bärenfusshaut+
+					notice(gameforge.new_quest_lv28._026_notice)
+					if new_quest_lv28_neededAmountDrop1 == pc.count_item(new_quest_lv28_drop1) then
+						q.done()
+						notice_multiline(gameforge.new_quest_lv28._027_notice, notice)
+						set_state(goto_yangshin)
+					end		
+				else
+					notice(gameforge.new_quest_lv28._028_notice)
+				end
+			end
+		end
+		-- BEGIN EDIT added by Arne 22sept09, Reason: no quest, no letter
+		when info or button begin
+			say_title(gameforge.new_quest_lv28._040_npcChat)
+			say(gameforge.new_quest_lv28._032_say)
+			if new_quest_lv28_neededAmountDrop1 >  pc.count_item(new_quest_lv28_drop1) then
+				say_reward(string.format(gameforge.new_quest_lv28._032_say_reward, new_quest_lv28_neededAmountDrop1-pc.count_item(new_quest_lv28_drop1), item_name(new_quest_lv28_drop1), mob_name(new_quest_lv28_mob1)))
+			end
+		end
+		--END EDIT
+		
+	end
+	------  bring bearfootskin+ to yangshin ------------------------------------------------------------------------------------------------------
+	state goto_yangshin begin
+		when enter or login begin
+			new_quest_lv28_neededAmountDrop1 = 1
+			new_quest_lv28_dropProb1 = 100
+			new_quest_lv28_mob1 = 193 -- bera
+			new_quest_lv28_drop1 = 30174 -- Bärentatze
+		-- BEGIN EDIT added by Arne 22sept09, Reason: no quest, no letter
+			send_letter(gameforge.new_quest_lv28._040_npcChat)
+			q.start()
+			q.set_title(gameforge.new_quest_lv28._040_npcChat)	
+			local v=find_npc_by_vnum(20019) -- Yang-Shin
+			if 0==v then
+			else
+				target.vid("__TARGET5__", v, gameforge.new_quest_lv28._035_target)
+			end
+		end
+
+		when info or button begin
+		
+			say_title(gameforge.new_quest_lv28._040_npcChat)
+			say(gameforge.new_quest_lv28._036_say)
+			say("")
+			say(string.format(gameforge.new_quest_lv28._037_say, get_map_name_by_number(3)))
+		end
+		--END EDIT
+		
+		when 20019.chat.gameforge.new_quest_lv28._040_npcChat begin
+			target.delete("__TARGET5__")
+			say_title(gameforge.new_quest_lv28._038_say_title)
+			if pc.count_item(new_quest_lv28_drop1) >= new_quest_lv28_neededAmountDrop1 then 
+				say(gameforge.new_quest_lv28._042_say)
+				say(gameforge.new_quest_lv28._043_say)
+				pc.remove_item(new_quest_lv28_drop1, pc.count_item(new_quest_lv28_drop1))
+				set_state(back_to_ahyu)
+				return
+			else
+				-- this happens, if the player sold or dropped needed items:
+				say(gameforge.new_quest_lv28._044_say)
+				say(gameforge.new_quest_lv28._045_say_reward )
+				set_state(hunting)
+			end
+		end
+	end
+	-- tell ah-yu that yang-shin will stop to blackmail her---------------------------------------------
+	state back_to_ahyu begin
+			when login or enter begin
+			new_quest_lv28_neededAmountDrop1 = 1
+			new_quest_lv28_dropProb1 = 100
+			new_quest_lv28_mob1 = 193 -- bera
+			new_quest_lv28_drop1 = 30174 -- Bärentatze
+			-- BEGIN EDIT added by Arne 22sept09, Reason: no quest, no letter
+			send_letter(gameforge.new_quest_lv28._040_npcChat)
+			q.start()
+			q.set_title(gameforge.new_quest_lv28._040_npcChat)			
+			new_quest_lv28_RewardXP=500000
+			new_quest_lv28_RewardXP2=850000
+			new_quest_lv28_RewardCash=40000		
+			-- END EDIT
+			local v=find_npc_by_vnum(20003) -- Ah-Yu
+			if 0==v then
+			else
+				target.vid("__TARGET4__", v, gameforge.new_quest_lv28._015_npcChat)
+			end
+		end
+		
+		-- BEGIN EDIT added by Arne 22sept09, Reason: no quest, no letter
+		when info or button begin
+			say_title(gameforge.new_quest_lv28._040_npcChat)
+			say(gameforge.new_quest_lv28._046_say)
+			say("")
+			say(string.format(gameforge.new_quest_lv28._017_say, get_map_name_by_number(1)))		
+		end
+		
+		when 20003.chat.gameforge.new_quest_lv28._040_npcChat begin
+			target.delete("__TARGET4__")
+			say_title(gameforge.new_quest_lv28._019_say_title) -- yellow text headline
+			say(gameforge.new_quest_lv28._051_say) -- white font text
+			-- select to options buttons:
+			local b= select(gameforge.new_quest_lv28._055_1_select, gameforge.new_quest_lv28._055_2_select)
+			-- option 1: the player takes the money (not much) and gets some xp
+			if b==1 then
+                say_title(gameforge.new_quest_lv28._019_say_title)
+				say(gameforge.new_quest_lv28._056_say)
+				say_reward(string.format(gameforge.new_quest_lv28._059_say_reward, new_quest_lv28_RewardXP))
+				say_reward(string.format(gameforge.new_quest_lv28._058_say_reward, new_quest_lv28_RewardCash))
+				q.done() -- EDIT added by Arne 22Sept09, Reason: see above
+				pc.give_exp2( new_quest_lv28_RewardXP )-- EDIT added by Arne 22Sept09, Reason: keep balance values in variables
+				pc.change_money( new_quest_lv28_RewardCash )-- EDIT added by Arne 22Sept09, Reason: keep balance values in variables
+				set_state(__COMPLETE__)
+			end	
+			-- option 2: the player refuses to take the money, gets more EXP and ah-yus gratitude
+			if b==2 then
+                say_title(gameforge.new_quest_lv28._019_say_title)
+				say(gameforge.new_quest_lv28._057_say)
+				pc.give_exp2(new_quest_lv28_RewardXP2)-- EDIT added by Arne 22Sept09, Reason: keep balance values in variables
+				say_reward(string.format(gameforge.new_quest_lv28._059_say_reward, new_quest_lv28_RewardXP2))
+				q.done() -- EDIT added by Arne 22Sept09, Reason: see above
+				set_state(__COMPLETE__)
+			end
+		end
+	end
+	------  give up ------------------------------------------------------------------------------------------------------
+	state __GIVEUP__ begin
+	end
+	------  complete ------------------------------------------------------------------------------------------------------
+	state __COMPLETE__ begin
+	end
+end 

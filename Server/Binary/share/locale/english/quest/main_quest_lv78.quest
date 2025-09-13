@@ -1,0 +1,247 @@
+define mysterious_man 20369
+define burning_land_soil 31007
+define burning_rake 30019
+define foundation_stone 90010
+define red_bead 31006
+define black_dryad 2315
+define red_dryad 2314
+define sacred_sap 31004
+define sacred_sap_drop_rate 300
+define sacred_sap_num 100
+define soil_giver1 2205
+define soil_giver2 2204
+define soil_giver3 2203
+define soil_drop_rate 500
+define beads_num 20
+define making_term 86400
+define sacred_stone 31008
+define pass_pct 60
+
+quest main_quest_lv78 begin
+	state start begin
+	end
+	state state_0 begin
+		when login or levelup or enter with pc.level >= 78 begin
+			set_state (state_1)
+		end
+	end
+	state state_1 begin
+		when letter begin
+			local v = find_npc_by_vnum (mysterious_man)
+			if v != 0 then
+				target.vid ("__TARGET__",v,"")
+			end
+			send_letter(gameforge.main_quest_lv78._10_sendLetter)
+		end
+		when button or info begin
+			say_title(gameforge.main_quest_lv78._10_sendLetter)
+			say (gameforge.main_quest_lv78._20_say)
+		end
+		when mysterious_man.chat.gameforge.main_quest_lv78._10_sendLetter begin
+			target.delete("__TARGET__")
+			say_title (gameforge.main_quest_lv66._300_sayTitle)
+			say(gameforge.main_quest_lv78._30_say)
+			wait()
+			say_title (gameforge.main_quest_lv66._300_sayTitle)
+			say(gameforge.main_quest_lv78._40_say)
+			set_state (make_red_bead)
+		end
+	end
+	state make_red_bead begin
+		when enter begin
+			pc.setqf ("first_make_time", 0)
+		end
+		when soil_giver1.kill or soil_giver2.kill or soil_giver3.kill begin
+			if number(1, soil_drop_rate) == 1 then
+				pc.give_item2 (burning_land_soil, 1)
+			end
+		end
+		when mysterious_man.chat.gameforge.main_quest_lv78._10_sendLetter begin
+			if pc.count_item (red_bead) >= beads_num then
+				say_title (mob_name(mysterious_man))
+				say(string.format(gameforge.main_quest_lv78._50_say, beads_num))
+				wait()
+				
+				say_title (locale.reward)
+				say_reward(string.format(gameforge.main_quest_lv60._190_sayReward, 36000000))
+				say_reward(string.format(gameforge.main_quest_lv60._210_sayReward, item_name(72725)))
+				say_reward(string.format(gameforge.main_quest_lv60._210_sayReward, item_name(70024)))
+				say_reward(string.format(gameforge.main_quest_lv60._210_sayReward, item_name(70004)))
+
+				pc.give_exp2(36000000)
+				
+				pc.give_item2(72725) -- 수룡의 축복(대)
+				pc.give_item2(70024) -- 축복의 구슬
+				pc.give_item2(70004) -- 근면함의 훈장
+				pc.remove_item (red_bead, pc.count_item (red_bead))
+				set_state (state_2)
+				return
+			end
+			local t = get_global_time()
+			local today = t - math.mod (t, 86400)
+			if pc.getqf ("first_make_time") != today then
+				pc.setqf ("first_make_time", today)
+				pc.setqf ("make_count", 0)
+			end
+			if pc.count_item (foundation_stone) < 1 or pc.count_item (burning_rake) < 1 or 
+					pc.count_item (burning_land_soil) < 1 then
+				say_title (gameforge.main_quest_lv66._300_sayTitle)
+				say (gameforge.main_quest_lv78._60_say)
+				return
+			end
+			local n = pc.getqf ("make_count")
+			if n >= 7 then
+				say_title (gameforge.main_quest_lv66._300_sayTitle)
+				say(gameforge.main_quest_lv78._70_say)
+				return
+			else
+				pc.remove_item(foundation_stone, 1)
+				pc.remove_item(burning_rake, 1)
+				pc.remove_item(burning_land_soil, 1)
+				say_title(gameforge.main_quest_lv66._300_sayTitle)
+				say(gameforge.main_quest_lv78._80_say)
+				wait()
+				pc.setqf ("make_count", n + 1)
+				local n = number (1,100)
+				if n > pass_pct then 
+				say_title (gameforge.main_quest_lv66._300_sayTitle)
+					say(gameforge.main_quest_lv78._90_say)
+					wait()
+				elseif pc.count_item (red_bead) < beads_num then
+					pc.give_item2 (red_bead, 1)
+				say_title (gameforge.main_quest_lv66._300_sayTitle)
+					say(gameforge.main_quest_lv78._100_say)
+					say_item_vnum(red_bead)
+					wait ()
+				else 
+					say_title (mob_name(mysterious_man))
+					say(string.format(gameforge.main_quest_lv78._50_say, beads_num))
+					wait()
+					
+					say_title (locale.reward)
+					say_reward(string.format (gameforge.main_quest_lv60._190_sayReward, 36000000))
+					say_reward(string.format (gameforge.main_quest_lv60._210_sayReward, item_name(72725)))
+					say_reward(string.format (gameforge.main_quest_lv60._210_sayReward, item_name(70024)))
+					say_reward(string.format (gameforge.main_quest_lv60._210_sayReward, item_name(70004)))
+
+					pc.give_exp2(36000000)
+					
+					pc.give_item2(72725) -- 수룡의 축복(대)
+					pc.give_item2(70024) -- 축복의 구슬
+					pc.give_item2(70004) -- 근면함의 훈장
+					pc.remove_item (red_bead, pc.count_item (red_bead))
+					set_state (state_2)
+				end
+			end
+		end
+	end
+	state state_2 begin
+		when letter begin
+			local v = find_npc_by_vnum (mysterious_man)
+			if v != 0 then
+				target.vid ("__TARGET__",v,"")
+			end
+			send_letter (gameforge.main_quest_lv78._110_sendLetter)
+		end
+		when button or info begin
+			say_title (gameforge.main_quest_lv78._110_sendLetter)
+			say(gameforge.main_quest_lv78._120_say)
+		end
+		when mysterious_man.chat.gameforge.main_quest_lv78._110_sendLetter with pc.count_item (sacred_sap) < sacred_sap_num begin
+			target.delete("__TARGET__")
+			say_title (gameforge.main_quest_lv66._300_sayTitle)
+			say(gameforge.main_quest_lv78._130_say)
+			wait()
+			say_title (gameforge.main_quest_lv66._300_sayTitle)
+			say(gameforge.main_quest_lv78._140_say)
+		end
+		when black_dryad.kill or red_dryad.kill begin
+			if number (1, sacred_sap_drop_rate) == 1 then
+				pc.give_item2 (sacred_sap, 1)
+				local n = pc.count_item (sacred_sap)
+				if n < sacred_sap_num then
+					notice (string.format(gameforge.main_quest_lv78._150_say, sacred_sap_num - n))
+				else
+					notice_multiline(gameforge.main_quest_lv78._160_notice, notice)
+				end
+			end
+		end
+		when mysterious_man.chat.gameforge.main_quest_lv78._110_sendLetter with pc.count_item (sacred_sap) >= sacred_sap_num begin
+			say_title (gameforge.main_quest_lv66._300_sayTitle)
+			say(gameforge.main_quest_lv78._170_say)
+			wait()
+			say_title (	pc.getname())
+			say(gameforge.main_quest_lv78._180_say)
+			wait()
+			say_title (gameforge.main_quest_lv66._300_sayTitle)
+			say(gameforge.main_quest_lv78._190_say)
+			wait()
+			say_title (gameforge.main_quest_lv66._300_sayTitle)
+			say(gameforge.main_quest_lv78._200_say)
+			wait()
+			say_title (locale.reward)
+			say_reward(string.format(gameforge.main_quest_lv60._190_sayReward, 48000000))
+			say_reward(string.format(gameforge.main_quest_lv60._200_sayReward, 230000))
+			say_reward(string.format(gameforge.main_quest_lv60._210_sayReward, item_name(72729)))
+			say_reward(string.format(gameforge.main_quest_lv60._210_sayReward, item_name(70035)))
+			say_reward(string.format(gameforge.main_quest_lv60._210_sayReward, item_name(70003)))
+
+			pc.give_exp2(48000000)
+			pc.change_money(230000)
+			
+			pc.give_item2(72729) -- 화룡의 축복(대)
+			pc.give_item2(70035) -- 만년한철
+			pc.give_item2(70003) -- 육도
+			pc.remove_item (sacred_sap, pc.count_item (sacred_sap))
+			set_state (state_3)
+		end
+	end
+	state state_3 begin
+		when letter begin
+			local v = find_npc_by_vnum (20018)
+			if v != 0 then
+				target.vid ("__TARGET__",v,"")
+			end
+			send_letter (gameforge.main_quest_lv78._210_sendLetter)
+		end
+		when button or info begin
+			say_title (gameforge.main_quest_lv78._210_sendLetter)
+			say(gameforge.main_quest_lv78._220_say)
+		end
+		when 20018.chat.gameforge.main_quest_lv78._210_sendLetter begin
+			target.delete("__TARGET__")
+			say_title ( mob_name(20018))
+			say(gameforge.main_quest_lv78._230_say)
+			wait()
+			say_title ( pc.get_name ())
+			say(gameforge.main_quest_lv78._240_say)
+			wait()
+			say_title ( mob_name(20018))
+			say(gameforge.main_quest_lv78._250_say)
+			wait()
+			say_title ( pc.get_name ())
+			say(gameforge.main_quest_lv78._260_say)
+			wait()
+			say_title ( mob_name(20018))
+			say(gameforge.main_quest_lv78._270_say)
+			wait()
+			say_title ( pc.get_name ())
+			say(gameforge.main_quest_lv78._280_say)
+			wait()
+			say_title ( mob_name(20018))
+			say(gameforge.main_quest_lv78._290_say)
+			wait()
+			say_title(locale.reward)
+			say_reward(string.format(gameforge.main_quest_lv60._210_sayReward, item_name(30319).." ".."2"..locale.count_postfix))
+			pc.give_item2(30319,2) 
+			wait()
+			say(gameforge.main_quest_lv78._300_say)
+			set_state (__COMPLETE__)
+			q.done()
+			set_quest_state("main_quest_lv84", "state_0")
+
+		end
+	end
+	state __COMPLETE__ begin
+	end
+end

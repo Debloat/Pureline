@@ -1,0 +1,1858 @@
+1	Minden ember a városba lesz teleportálva hamarosan.
+2	Nincs ilyen eszköz.
+3	A doboz hirtelen felrobban! Életerõt (TP) vesztettél.
+4	[Céh] A céhterület eladása sikertelen volt.
+5	[Céh] A céhterület eladása nem fejezhetõ be, mert nincs elegendõ Yang a céhbankban.
+6	[Céh] Nem hagyhatod el a céhet, amíg szavazás van folyamatban.
+7	[Céh] A játékos offline, vagy másik térképen van.
+8	[Céh] Nem tudsz bajtársakat választani, amíg a céh háborúzik.
+9	[Céh] Nem tudsz új szavazást kezdeni, amíg egy másik folyamatban van.
+10	[Céh] Ez az akció nem lehetséges háború idején.
+11	[Céh] Nem fejleszthetõ, mivel a céhbank tele van.
+12	[Céh] Nem használhatod a Céhraktárat, amíg szavazás van folyamatban.
+13	Ha belélegzed a zöld füstöt a dobozból, méreg fog szétáradni testedben.
+14	[Céh] Nem kivitelezheted ezt az akciót, amíg a Céhraktár nyitva van.
+15	[Céh] Nem válthatsz céhvezért háború idején.
+16	[Céh] %s használt %s-t.
+17	[Céh] Nincs jogosultságod a céh-készségek használatára.
+18	[Céh] Most megfigyelõ módban vagy, mivel elérted az újraéledési korlátot.
+19	[Céh] Ellenõrizd a tagokat és vezéreket!
+20	[Céh] Ellenõrizd az ellenfél tagokat és vezéreket!
+21	[Céh] Bizonyos tagok offline-ok, vagy másik térképen vannak.
+22	[Céh] Az ellenséges céh bizonyos tagjai offline-ok, vagy másik térképen vannak.
+23	[Céh] Nincs elegendõ résztvevõ bejelentkezve.
+24	Kaptál %s, %d egységet.
+25	[Céh] Nem kivitelezheted ezt az akciót háború idején.
+26	[Céh] 10 másodperc múlva használhatod.
+27	[Céh] A karakternek legalább 40-as szintûnek kell lennie, hogy megkaphassa a céhvezérséget.
+28	[Céh] %s nyert.
+29	[Céh] Döntetlen
+30	[Céh] Nem távolíthatsz el senkit a céhbõl háború idején.
+31	[Céh] Nem kezdeményezhetsz szavazást a céhvezér eltávolítására.
+32	[Céh] Nem kezdeményezhetsz szavazást önmagad eltávolítására a céhbõl.
+33	[Céh] A céh átadásához szükséged van az Utód gyûrûjére.
+34	[Céh] Nincs elég hely a céhbankban.
+35	%s van a dobozban.
+36	[Céh] Legalább 12 órát kell várnod a Céhraktár használata után, mielõtt elhagyod a céhet.
+37	[%s] Céh! Megjelent az utolsó cél. A háború megnyeréséhez semmisítsd meg az összes célt!
+38	[Céh] 5 perc múlva véget ér a háború.
+39	[Céh] 1 perc múlva véget ér a háború.
+40	[Céh] Nincs jelen céh céh-hirdetménnyel.
+41	[Céh] Egyetlen céh sem gyõzte még le a sárkányt.
+42	[Céh] Helyezések frissítése.
+43	[Céh] Kezdõdik a csata a Sárkánykirálynõ Meley ellen.
+44	[Céh] Meley barlangjának kapui nyitva vannak. A kazamata idõkorlátja egy óra.
+45	[Céh] Legyõzted a Sárkánykirálynõ Meley-t!
+46	Úgy tûnik, ez a kulcs nem a megfelelõ.
+47	[Céh] Szükséges idõ: %d min. %d sec.
+48	[Céh] Saját biztonságod érdekében 10 perc múlva ki leszel teleportálva a fészekbõl.
+49	[Céh] Lejárt az idõ.
+50	[Céh] A barlangba vezetõ kapuk újra bezárultak.
+51	[Céh] Saját biztonságod érdekében 1 perc múlva ki leszel teleportálva a fészekbõl.
+52	[Céh] A barlang %d perc múlva lezárul.
+53	[Céh] Megszakítottad a harcot Meley barlangjában.
+54	[Céh] Nem hirdethetsz háborút, amíg a sárkánybarlangban küzdesz!
+55	[Céh] Az ellenséges céh jelenleg a sárkánybarlangban küzd.
+56	Nem kaptál semmit.
+57	[Céh] Sikeresen regisztráltál Meley barlangjához.
+58	[Céh] Keresd fel a Sárkányfigyelõ Dolnarr-t, hogy belépj a sárkánybarlangba.
+59	Elkezdõdött a nyári esemény. Keresd fel Summer-t a városban! Adni fog némi ízletes frissítõt.
+60	Hamarosan véget ér a nyári esemény.
+61	Ez a hatás már aktív.
+62	[Céh] Csak 10 másodpercenként végezhetsz tranzakciót.
+63	[Céh] Egy másik tag már használja a céhbankot.
+64	[Céh] [%s] céh elvesztette a háborút [%s] ellen.
+65	Nem nyithatod ki ezt a dobozt, mert a Yang mennyiséged meghaladná a maximumot.
+66	[Céh] A céhnek nincs elég Yangja a számlán. Fizess be több Yangot és próbáld újra!
+67	Nincs nálad elég Yang, hogy ezt a tárgyat használd.
+68	[Céh] Cél sikeresen mozgatva.
+69	[Céh] Nem használhatod ezt a céhlogót. Próbáld újra!
+70	[Átalakítás] Nem szerelheted fel az átalakított tárgyat, mert nem egyezik a nemeddel.
+71	[Átalakítás] Nem szerelheted fel az átalakított tárgyat, mert nem egyezik az osztályoddal.
+72	[Szörnykártya] Megbízás-szint: %d Legyõzted a szörnyet: %s.
+73	[Szörnykártya] Teljesítetted szörny-megbízásod. Gyûjtsd be a Szörnykártyád most!
+74	[Szörnykártya] Nincs elég helyed a leltárban.
+75	[Szörnykártya] [%s] Szintlépés teljesítve.
+76	[Szörnykártya] Most már megnézheted a szörny mozgó animációját.
+77	[Szörnykártya]: Most már átváltozhatsz a szörnnyé.
+78	Csökkentetted készséged szintjét.
+79	[Szörnykártya]: Most már elteleportálhatsz a szörny területére.
+80	[Céh] Bajtársként nem nézheted saját céhháborúd.
+81	[Céh] A céh beállított egy minimális szintet a jelentkezéshez (min. szint: %d).
+82	[Céh] Csak egy tranzakciót végezhetsz 10 másodpercenként.
+83	[Céh] A(z) %s céh területet vásárolt.
+84	[Céh] Sárkány Temploma-küzdelem folyik egy másik csatornán.
+85	[Céh] A logó-szerver jelenleg karbantartás alatt áll.
+86	[Céh] A logó-szerver jelenleg karbantartás alatt áll.
+87	[Céh] Ez a terület másik játékoshoz tartozik.
+88	Nem tudod csökkenteni készséged szintjét.
+89	%d szintûnek kell lenned a Harci övezetbe való belépéshez.
+90	Errõl a térképrõl nem tudsz belépni a Harci övezetbe.
+91	Minden ablakot be kell zárnod, mielõtt a Harci övezetre belépsz, vagy elhagyod azt.
+92	Nem tudod elhagyni a Harci övezetet, ha halott vagy.
+93	Belépsz a Harci övezetbe. Türelmet kérünk!
+94	Elhagyod a Harci övezetet. Türelmet kérünk!
+95	A következõ belépés %d perc múlva válik elérhetõvé.
+96	A következõ belépés %d másodperc múlva válik elérhetõvé.
+97	Ezt a tárgyat nem használhatod itt.
+98	Ezt a tárgyat nem használhatod itt.
+99	Ez a hatás már aktív.
+100	Szükséged van egy Újraélesztõ tárgyra az azonnali újraéledéshez.
+101	A Harci övezet most nyitva áll.
+102	A Harci övezet most zárva van.
+103	A Harci övezet %d perc múlva nyílik meg.
+104	A Harci övezet %d perc múlva zárul.
+105	Zajlik egy esemény, ezért dupla pontokat kapsz.
+106	Befejezõdött az esemény a Harci övezetben.
+107	Bejelentetted visszavonulásod a Harci övezetbõl és %d perc múlva elhagyhatod azt.
+108	Egy játékos bejelentette visszavonulását. Öld meg, hogy több pontot érj el!
+109	Visszavonulási bejelentésed törölve lett.
+110	Nincs elég helyed a tárolódban hogy elfogadd a jutalmat.
+111	Ezt a tárgyat csak egy internet kávézóban lehet használni.
+112	Visszavonulási bejelentésed aktív.
+113	Most nem tudsz belépni a Harci övezetbe.
+114	Jó munka volt! A Harci övezet rangsorban elért %d. helyezésért különleges jutalomban részesülsz.
+115	Jelenleg %d pontod van. Teljes pontszámod ennyi: %d.
+116	Nem használhatod ezt a tárgyat a Harci övezetbõl való visszavonulásod idején.
+117	Nem tudsz háborút hirdetni a Harci övezetben.
+118	Ez az akció nem kivitelezhetõ ezen a térképen.
+119	Maradék mennyiség: %d
+120	[Céh] A céh kincstára elérte a maximumot.
+121	[Céh] Nem tudsz Yangot kivenni, mivel több, mint 2 milliárd Yangod van.
+122	Túl van a határértéken.
+123	[Céh] Nem tudsz Yangot kivenni, amíg másik ablak nyitva van.
+124	3 perc múlva lejár a céhháború kihirdetése.
+125	Belépés a Harci övezetbe %d másodperc múlva.
+126	Harci övezet elhagyása %d másodperc múlva.
+127	Elveszítettél %d pontot. Megmaradt pontok: %d
+128	Sajnos nincs elég hely a leltáradban.
+129	Nem kapsz pontot ezért a játékosért.
+130	Bejelentetted visszavonulásod a Harci övezetbõl és %d másodperc múlva elhagyhatod azt.
+131	Az esemény elkezdõdött!
+132	Használt hold süti vagy mag.
+133	Elõbb töröld %s-t a barátaid közül.
+134	%s mostantól blokkolva van.
+135	%s nincs többé blokkolva.
+136	%s már blokkolva van.
+138	Elõbb oldd fel %s-t.
+139	%s blokkolt téged.
+140	Megjelent az aktuális eseményhez tartozó szörny.
+141	Nincs elég Évfordulós Zászlód.
+142	Az Évfordulós esemény elkezdõdött!
+143	Nem hordhatsz Jegygyûrût, ha nem vagy házas.
+144	Az Évfordulós esemény %d perc múlva véget ér.
+145	Nem használhatod ezt a tárgyat, amíg egy másik öltözéket viselsz.
+146	Nem szerelheted fel ezt a tárgyat, amíg Menyasszonyi ruhát vagy Szmokingot viselsz.
+147	Ezt nem tudod megtenni, amíg a tárgy fel van szerelve.
+148	[Céh] Nem tudsz Yangot betenni vagy kivenni a céh számláról, amíg egy másik ablak nyitva van.
+149	[Céh] Nem tudod ezt megtenni, miközben Yangot teszel be vagy veszel ki a céh számláról.
+150	[Céh] A Yang betét vagy Yang kivét ablak már nyitva van.
+151	[Céh] Nem tudsz Yangot betenni vagy kivenni a céh számláról, amíg kedvenced veled van.
+152	%s megjelenik itt: %s
+153	Seungryong-völgy
+154	Az esemény érzékelõt nem lehet innen irányítani.
+155	Sohan-hegység
+156	Yongbi-sivatag
+157	Doyyumhwan
+158	A Ramadán rendezvény elkezdõdött!
+159	A Ramadán rendezvény véget ért.
+160	Nem válthatsz csatornát.
+161	Kérlek, várj egy pillanatot. Csatorna váltás...
+162	Ez a tárgy nem abszorbeálható.
+163	Ez a tárgy nem használható átalakításhoz.
+164	A Megbûvölõ tárgy nem használható ezen a tárgyon.
+165	Az esemény érzékelõ a misztikus fénnyel eltûnt.
+166	A Tárgy-megerõsítõ nem használható ezen a tárgyon.
+167	Csak akkor tudsz tárgyakkal kereskedni, ha azonos térképen vagytok.
+168	Jelenleg nem lehet ehhez a csatornához csatlakozni. Kérjük, próbáld újra késõbb.
+169	[Csoport] Nem tudod ezt megtenni, miközben a csoport keresés aktív.
+170	[Gaya] Nincs nálad elég Fénylõ kõdarab.
+171	[Gaya] Nincs nálad elég Yang a Fénylõ kõdarabok finomításához.
+172	[Gaya] Nem lehet nálad több Gaya.
+173	[Gaya] A finomítás sikeres volt.
+174	[Gaya] A finomítás sikertelen volt.
+175	[Gaya] A tárgy lista frissítve lett.
+176	Eltûnt az esemény érzékelõ.
+179	[Gaya] A leltárad megtelt.
+180	[Gaya] Nincs nálad Gaya piac frissítõ.
+181	[Gaya] Elõbb nyisd meg a Gaya piacot.
+182	[Gaya] Nem oldható föl több hely a Gaya piacon.
+183	[Gaya] Nincs nálad elég %s. %d darabra van szükséged egy újabb hely feloldásához.
+184	[Gaya] A Gaya piac jelenleg nem elérhetõ.
+185	[Gaya] A Gaya piac már meg van nyitva.
+186	[Gaya] Csak a többi ablak bezárása után tudod megnyitni a Gaya piacot.
+187	A Metinkõ iránytû nem mûködik a kazamatákban.
+188	[Csoport] A csata megkezdõdött.
+189	[Csoport] 1 órátok van a kazamata teljesítésére.
+190	[Csoport] Kiválóan teljesítettétek a feladatot!
+191	[Csoport] Hátralévõ idõ a teleportálásig: %d perc %d mp.
+192	[Csoport] Ki lesztek teleportálva a kazamatából 10 perc múlva.
+193	[Csoport] Sikeresen jelentkeztél a Meley barlangjába.
+194	[Csoport] Kérlek beszélj a megfelelõ NPC-vel a belépéshez.
+195	[Csoport] Feladtátok a küzdelmet.
+196	[Csoport] A városba leszel teleportálva 1 perc múlva.
+197	Látogasd meg %s-t a jutalmad begyûjtéséhez.
+198	A Metinkõ iránytû egy titokzatos fénnyel eltûnt.
+199	[Csoport] A Meley barlangja csoport ranglista feldolgozás alatt van.
+200	[Csoport] Jelenleg nem hagyhatod el a kazamatát.
+201	[Csoport] Lejárt az idõtök a kazamatában.
+202	[Csoport] Kiléptél a kazamatából.
+203	[Csoport] A kazamata %d perc múlva lezárul.
+204	Kaptál: %s - %d
+205	Nem nyithatsz boltot, amíg kõvé vagy változva.
+206	Nem használhatsz tárgyakat, amíg kõvé vagy változva.
+207	Ez a parancs csak a Zodiákus templomban használható.
+208	Nincs nálad elég jelvény.
+209	A Metinkõ iránytû eltûnt.
+210	Még nem teljesítetted az összes feladatot.
+211	Több Aventurin és Aureolin kincsre van szükséged, hogy megkapd a jutalmad.
+212	Felélesztetted %s-t.
+213	%s felélesztett téged.
+214	Nincs nálad elég tárgy, hogy felélessz bárkit.
+215	Felélesztettek téged.
+216	Nem használhatod ezt ezen a helyen.
+217	Jelenleg nem használhatod.
+218	%s fel lett élesztve.
+219	Elsõ szint teljesítve. Menj vissza Milbon szerzeteshez.
+220	%s tárgyat nyertél.
+221	Egy egyszerû kõdarabot találsz a kagylóban.
+222	Minden csoport tag kõvé változott. A küldetés sikertelen.
+223	Minden szint teljesítve. Most a bónusz szintre leszel teleportálva.
+224	Küldetés teljesítve. Amint a csoport vezetõje megnyomja a gombot, közvetlenül a %d. szintre leszel teleportálva.
+225	A küldetés sikertelen volt.
+226	Mindenki meghalt! Ha senki nem éled fel egy percen belül, a kalandod a kazamatában véget ér.
+227	Lejárt az idõ.
+228	Ennek a templomnak a kapui egy másik napon lesznek nyitva.
+229	Minden csoport tagnak ugyanazon a térképen kell lennie a belépéshez.
+230	Nem te vagy a csoport vezetõ.
+231	%d Zodiákus templom van a területen. Írd be a megfelelõ parancsot, hogy teleportálj az egyikükhöz (1-%d).
+232	A kagyló eltûnt.
+233	Nincs Zodiákus templom ezen a térképen.
+234	Pusztítsd el a Metinköveket!
+235	Bónusz szint: Pusztítsd el a Metinköveket!
+236	Pusztítsd el a Metinköveket!
+237	Pusztítsd el a Metinköveket!
+238	Gyõzz le 5 Zodiákus fõszörnyet.
+239	Bónusz szint: 5 perced van vásárolni a kereskedõtõl és feltölteni magad a portékáival.
+240	Pusztítsd el a Metinköveket!
+241	Pusztítsd el a Metinköveket!
+242	Pusztíts el minden Metinkövet.
+243	A kagylóban egy fehér gyöngy van.
+244	Pusztíts el minden Metinkövet és gyõzd le a Zodiákus fõszörnyet.
+245	Pusztíts el minden Metinkövet.
+246	Gyõzz le minden szörnyet.
+247	Gyõzz le minden szörnyet.
+248	Gyõzd le a szörnyeket!
+249	Gyõzd le a szörnyeket!
+250	Gyõzz le minden szörnyet.
+251	Elszalasztottad a bónusz szintet.
+252	Gyõzz le minden Zodiákus fõszörnyet.
+253	A kagylóban egy kék gyöngy van.
+254	Gyõzd le a Zodiákus fõszörnyet.
+255	Gyõzd le a Zodiákus fõszörnyet.
+256	Gyõzd le a Zodiákus fõszörnyet anélkül, hogy meghalnál.
+257	Gyõzz le minden szörnyet anélkül, hogy meghalnál.
+258	Lejárt az idõ. Sok sikert legközelebb!
+259	Gyõzd le a Zodiákus fõszörnyet.
+260	Gyõzz le minden ellenfelet!
+261	Bónusz szint: Pusztíts el egy Metinkövet.
+262	Pusztíts el egy Metinkövet. Ha sikerül, egy bónusz hatást kapsz.
+263	Már csak %d percig lehet jelentkezni a PvP bajnokságra!
+264	A kagylóban egy Vérvörös Gyöngy van.
+265	Nem léphetsz be a PvP bajnokság harcterére.
+266	Nem változhatsz át PvP bajnokság közben.
+267	A harc kezdetéig: %d!
+268	A harc elkezdõdött.
+269	Gyõztes: %s / Vesztes: %s
+270	%s elhagyta az arénát. %s nyert.
+271	A jelentkezés a PvP bajnokságra lezárult.
+272	A PvP bajnokság %d percen belül kezdõdik.
+273	Döntõ
+274	Ezt a könyvet nehéz megérteni.
+275	Elõdöntõ
+276	%u. kör
+277	Nincs gyõztes
+278	A PvP bajnokság véget ért.
+279	A bajnokság nyertese %s!
+280	Résztvevõk: %s
+281	Maradék résztvevõk: %u
+282	Jelenlegi résztvevõk: %u
+283	Jelentkeztél a PvP bajnokságra.
+284	Ez a könyv nem segít neked tovább.
+285	Nem jelentkeztél a PvP bajnokságra.
+286	Ez a parancs csak a PvP bajnokság térképén használható.
+287	A Yut Nori elkezdõdött!
+288	Gyûjts Nyírfa törzseket, készíts Yut Nori táblát és játssz az izgalmas mini-játékkal!
+289	Fantasztikus nyeremények várnak!
+290	A Yut Nori véget ért.
+291	Menj a Yut Nori asztalhoz a jutalmad begyûjtéséhez.
+293	[Lélek rendszer] Használd a %s-t, hogy megkapd a hatást.
+294	[Lélek rendszer] A(z) %s már a legmagasabb szinten van.
+295	Legalább 30-as szintre van szükséged a könyv megértéséhez.
+296	[Lélek rendszer] A lélek aktív.
+297	
+298	[Szörny-vadászat rendezvény] A %s térképen %s megjelenését észlelték!
+299	Yayang terület
+300	Bokjung terület
+301	Bakra terület
+302	Hwang templom
+303	Kuahlo Dong (Pók kazamata)
+304	Pók kazamata 2
+305	Legalább 50-es szintre van szükséged a könyv megértéséhez.
+306	Gautama-szikla
+307	Nefrit-öböl
+308	Mennydörgés-hegység
+309	Elvarázsolt erdõ
+310	A Számûzött barlangja
+311	A Számûzött barlangja 2
+312	Nem léphetsz be, amíg hátason ülsz.
+313	Ezt nem használhatod felszerelt tárgyakon.
+314	Vörös Erdõ
+315	Kígyórét
+316	Nem tudsz további kombót kiképezni.
+317	Még szükséged van %d %sra.
+318	A rendezvénynek vége. Nem használhatod már ezt a tárgyat.
+319	Már elérted a maximális szintet.
+320	Siker! A %s hatása fejlesztve lett a %d. szintre.
+321	Nem sikerült! A %s hatásának fejlesztése a %d. szintre sikertelen volt.
+322	Siker! A %s hatása most már aktív.
+323	Nem sikerült! A %s hatására való átváltás sikertelen volt.
+324	Siker! A %s hatása most már aktív.
+325	Nem sikerült! A %s hatása nem lett aktiválva.
+326	A Virág rendezvény elkezdõdött!
+327	%s megszerezte %s zászlóját.
+328	Már megérted ezt a nyelvet.
+329	A Virág rendezvény véget ért!
+330	Várnod kell egy kicsit, mielõtt ismét megnyithatod a postaládád.
+331	Kérlek, zárj be minden más ablakot a postaládád megnyitásához.
+332	A postaládád tele van.
+333	Kérlek, ürítsd ki a postaládád, hogy fogadhass új üzeneteket.
+334	Jelenleg nem használhatod ezt.
+335	[Céh] Nem használhatsz céh készségeket harcmezõs céh harcokban.
+336	[Céh] Ez csak céh háborúkban használható.
+337	%d Wont kaptál.
+338	[Céh] Betéve: %d Yang
+339	Nem tudod tovább fejleszteni ezt a képességedet.
+340	[Céh] A vásárlás nem valósult meg, mivel már rendelkezel céh területtel.
+341	[Céh] A vásárlás nem valósult meg, mivel a céhed már rendelkezik céh területtel.
+342	[Kapd el a Királyt] Nem értél el elég pontot, hogy jutalmat kapj.
+343	[Kapd el a Királyt] Játssz egy kört a Kapd el a Királyt játékkal most!
+344	[Okey rendezvény] Vadássz szörnyekre, gyûjts kártyákat, és játssz egy kört okeyt!
+345	[Okey rendezvény] Nagyszerû díjak várnak!
+346	[Kapd el a Királyt] A Kapd el a Királyt játék véget ért.
+349	[Kapd el a Királyt] %s %d pontot ért el a Kapd el a Királyt játékban.
+350	Meg kell növelni szintedet, hogy el tudd olvasni ezt a könyvet.
+351	Már használtad a Kutatói elixírt.
+352	A 'Hajó megvédése' kazamata elérhetõ. A halász most már engedni fog felszállni a fedélzetre.
+353	Támadnak minket a tengeri szörnyek! Készüljetek az ütközetre!
+354	Ismét támadnak! Készítsétek a fegyvereiteket!
+355	Föld a láthatáron! Sikeresen megvédtétek az árbócot és elértétek az új kontinenst egy hosszú és fárasztó úton. Menjetek tovább a portálhoz!
+356	Az árbócotokat összezúzták. Bátran küzdöttetek, de a harcot elvesztettétek.
+357	El kell hagynotok a hajót %d másodpercen belül.
+358	El kell hagynotok a hajót %d percen belül.
+359	A tengeri ütközet %d másodpercen belül kezdõdik.
+360	Túl nehéz a könyv a tanuláshoz.
+361	Siessetek! %d percetek van, hogy a portálon keresztül eljussatok a szárazföldre.
+362	Mivel nem indítottátok el a tengeri ütközetet, el kell hagynotok a hajót.
+363	Ha nem indítjátok el a tengeri ütközetet 1 percen belül, el kell hagynotok a hajót.
+364	%s maradék TP-je: %d%%
+365	S.O.S.! Az árbócot összezúzták és a hajó süllyedni kezdett. Most Sárkánytûz-fokra lesztek teleportálva.
+366	%d. hullám: minden erõtökkel meg kell védenetek %d másodpercig az %sot.
+367	%d. hullám: az %s megvédése mellett le kell gyõznötök %s-t.
+368	Sikeresen megvédtétek az árbócot. Csak így tovább! Készüljetek fel a következõ hullámra!
+369	A következõ hullám %d másodperc múlva indul.
+370	%s
+371	Ezzel a könyvvel nem tudsz tovább gyakorolni.
+372	Csak %d másodperc múlva tudsz visszavonulni a harcból.
+373	Jelenleg nem hajthatod végre ezt az akciót.
+374	Várnod kell %d másodpercet a Postaláda megnyitása után, mielõtt csatornát váltanál vagy teleportálnál.
+375	Az adó %d%%-ra lett beállítva.
+376	Legalább 50-es szintûnek kell lenned a lovas kiképzéshez.
+377	Megúsztad a gonosz lélek átkot az ördögûzõ tekercs segítségével.
+378	Nem olvashatsz további lovaglás leírást.
+379	Elolvastad a Lovaglás könyvét, és szereztél egy lovagló pontot.
+380	Ezt a pontot a lovaglási képességed növelésére használhatod.
+381	A %s céh zászlaját ellopta %s játékos.
+382	Nem értetted a lovaglási leírást.
+383	Szellemed tiszta. Jól tudsz koncentrálni.
+384	A rangod ennyi ponttal növekedett: %d
+385	Jelenlegi frizurádat nem tudod festeni vagy szõkíteni.
+386	El kell érned a %d szintet, hogy ismét befesthesd a hajad.
+387	A tárgyat csak a másik nem képviselõje tudja kinyitni.
+388	Jelenlegi pozíciódból nem tudod kihasználni.
+389	Készen állsz a teleportra, ezért nem tudod használni a Visszaszállító tekercset.
+390	Az eredeti helyszínre leszel visszatéve.
+391	%s%s nem használható a kazamatában.
+392	[Quest] Már megkaptad a jutalmad.
+393	a
+394	a
+395	Nincs eltávolítani való kõszilánk.
+396	A tárgy javítását nem tudod megváltoztatni.
+397	Nincs olyan javításod, amit meg tudsz változtatni.
+398	Ezt csak %d perccel a javítás után teheted. (%d perc van hátra)
+399	Megváltoztattad a javítást.
+400	A javítás sikeresen hozzáadódott.
+401	Nincs hozzáadott fejlesztés.
+402	A Megáldó márványt kell használnod, hogy további bónuszt adj ehhez a tárgyhoz.
+403	Nem használhatod ezen a területen.
+404	Ez a tárgy már nem fejleszthetõ. A bónuszok maximális mennyisége el lett érve.
+405	A Megáldó márványt csak olyan tárgyon használhatod, amelynek már van 4 bónusza.
+406	A foglalat sikeresen hozzá lett adva.
+407	Nem lett foglalat hozzáadva.
+408	Ehhez a tárgyhoz nem lehet több foglalatot adni.
+409	Ehhez a tárgyhoz nem adhatsz foglalatot.
+410	Sikeres felszerelés.
+411	Felszerelés nem sikerült.
+412	Elõször egy foglalatot kell hozzáadnod, ehhez használj gyémántot.
+413	Ebben a tartozékban nincs foglalat drágakövek számára.
+414	Akkor teheted meg, ha érzelem maszkot viselsz.
+415	Egy foglalatot kell hozzáadnod, amikor egy gyémántot akarsz használni.
+416	Ehhez a tárgyhoz nem adható több drágakõ.
+417	Ezeket a tárgyakat nem lehet együtt használni.
+418	Horgászat közben nem cserélhetsz csalit.
+419	Kicseréled a jelenlegi csalit. Az új csali: %s.
+420	Egy %s lett csaliként a horogra tûzve.
+421	Anyag hiányzik az italok keveréséhez.
+422	Nincs elég anyagod (%s).
+423	Nincs elég üres üveged.
+424	Nem sikerült az ital elõállítása.
+425	Ezt csak nõk tehetik.
+426	Nem tudsz több azonos fajta szellemkövet felerõsíteni.
+427	Ez a szellemkõ nem erõsíthetõ fel erre a fajta tárgyra.
+428	Ezt a szellemkövet nem szerelheted fel fegyverre.
+429	Sikeresen felszerelted a szellemkövet.
+430	A szellemkõ eltört felszerelés közben.
+431	Nincs szabad nyílás
+432	Ez a funkció itt és most nem elérhetõ.
+433	Birodalmi csata résztvevõjeként nem használhatod a Visszaszállító tekercset.
+434	A raktár megnyitása után %d másodpercig nem használhatod a Visszaszállító tekercset.
+435	Nem használhatod a Visszaszállító tekercset, amíg egy másik ablak nyitva van.
+436	Ez a személy nem létezik.
+437	Kereskedés után nem használhatod a tekercset %d másodpercig.
+438	A raktár megnyitása után nem használhatod a Visszaszállító tekercset további %d másodpercig.
+439	Nem használhatod a Visszaszállító tekercset, mivel túl kicsi a távolság.
+440	Kereskedés után nem használhatsz Visszaszállító tekercset %d másodpercig.
+441	Nem nyithatod ki a raktárat, amíg más ablak nyitva van.
+442	Nem dobhatod el ezt a tárgyat.
+443	Az eldobott tárgy 5 perc múlva eltûnik.
+444	%s kapott
+445	Túl sok tárgyat tartasz magadnál.
+446	%s ezt kapta: %s.
+447	Hamarosan mindenki a városba teleportálódik.
+448	Túl közel vagy.
+449	Tárgy kereskedés: %s, %s
+450	Nem cserélheted le a felszerelt tárgyat, amíg át vagy változtatva.
+451	Nyugton kell maradnod a tárgy felszereléséhez.
+452	Eleven lovakat nem etethetsz majom növénnyel. Ez halott lovak feltámasztására való.
+453	Halott lovat nem etethetsz.
+454	Növényekkel etetted a lovat.
+455	Megetetted a lovat.
+456	Túl alacsony szinten vagy egy ilyen frizura viseléséhez.
+457	Már most is ilyen frizurád van.
+458	Már át vagy változva.
+459	Túl közel vagy.
+460	Nem megfelelõ átváltoztató tárgy.
+461	Nem változhatsz át olyan szörnnyé, aki magasabb szintû nálad.
+462	Túl alacsony a szinted ezen tárgy felszereléséhez.
+463	Nem vagy elég erõs, hogy magadra vedd ezt a tárgyat.
+464	Nem elegendõ az intelligenciád ezen tárgy felszereléséhez.
+465	Nem elegendõ az ügyességed ezen tárgy felszereléséhez.
+466	Nem elegendõ az életerõd ezen tárgy felszereléséhez.
+467	Nem használhatod ezt a tárgyat, mert nem vagy házas.
+468	Nem szerelheted fel ezt a tárgyat kétszer.
+469	A %s idõbõl a foglalat eltávolításáig fennmaradó: %d
+470	Ezt az akciót csak egy másik nemûvel együtt hajthatod végre.
+471	Egy drágakõ eltûnt a(z) %s foglalatából.
+472	[Céh] A céhnév érvénytelen.
+473	[Céh] Ez a céhnév már foglalt.
+474	[Céh] Nem hozhatsz létre céhet.
+475	A(z) %s céh háborút hirdetett %s ellen.
+476	[Céh] %s visszautasította a céhháborút.
+477	A céhháború pillanatokon belül elkezdõdik %s és %s között!
+478	A céhháború elkezdõdött %s és %s között.
+479	A céhháború döntetlennel végzõdött %s és %s között.
+480	%s megnyerte a céhháborút %s ellen.
+481	Ehhez az akcióhoz szükséged van játékostársad beleegyezésére.
+482	[Céh] A céhháború félbeszakadt.
+483	A céhháború %s és %s között törölve lett.
+484	Bezár
+485	Cselekvés visszavonva. Beléptél a harcba.
+486	Valaki belépett a felhasználó neveddel. Lekapcsolunk a szerverrõl.
+487	Egy misztikus fény jelent meg a fáról.
+488	%d játékidõ lett hozzáadva az eddigiekhez.. (Fizetési szám %d)
+489	A céhháborúban megfigyelõként részt vehetsz.
+490	A karakter kiválasztásánál megjelenik egy ikon.
+491	Nincs ellenfél.
+492	A harc %s ellen megkezdõdött.
+493	Ha nincs ellenség, automatikusan véget fog érni a céhharc.
+494	Mivel a céhháború hamarabb befejezõdött, az eredmény döntetlennek számít.
+495	A császár áldása miatt visszaverõdik az energia.
+496	%d másodperc után lehet a császár áldását felhasználni.
+497	Nem elég az adóbevétel: %d
+498	[TEST_ONLY]Adó nagysága: %d
+499	Hiba az átváltozásnál
+500	Teljesen kitanultad az átváltozást.
+501	Elõbb a lovadat hívd kérlek!
+502	Elküldted a lovadat.
+503	%s harcra hívott téged.
+504	Le kell szállnod.
+505	Nem etetheted a lovadat amikor rajta ülsz.
+506	Megetetted a lovad %s%s-val.
+507	Szükséged van %s-re.
+508	%d másodperc a kilépésig.
+509	%d másodperc múlva vége a játéknak.
+510	%d másodperc a kilépésig.
+511	A kijelentkezés félbeszakadt.
+512	Vissza a bejelentkezõ ablakhoz. Kérlek várj!
+513	Lekapcsolódás a szerverrõl. Kérlek várj!
+514	Harcra hívtad %s-t.
+515	Karaktert cserélsz. Kérlek várj!
+516	Pillanatnyilag nem lehet újrakezdeni. Kérünk, várj %d másodpercet.
+517	Még nem lehet újraindítani. Kérünk, várj további %d másodpercet.
+518	Még nem lehet újraindítani. Kérünk, várj további %d másodpercet.
+519	Még nem tudsz újraindulni a városban. Várj további %d másodpercet.
+520	Lejárt a várakozási idõ. A városban leszel újraindítva.
+521	Nem változtathatod meg a státuszod, amíg át vagy változtatva.
+522	A játékos épp párbajozik.
+523	[Céh] Nem tartozik a céhhez.
+524	[Céh] Nincs jogosultságod a céhképességek megváltoztatására.
+525	A kiválasztás hibás.
+526	[Raktár] Rossz jelszót adtál meg.
+527	[Raktár] A raktár már nyitva van.
+528	[Raktár] 10 másodpercet kell várnod, mielõtt újra kinyithatod a raktárt.
+529	[Raktár] Túl messze vagy a raktártól, hogy kinyisd.
+530	[Csoport] A szerver nem tudja feldolgozni a csoport feladatot.
+531	[Csoport] Nem hagyhatsz el csoportot egy kazamatában.
+532	[Csoport] Kiléptél a csoportból.
+533	[Céh] A céhed már egy másik harcban vesz részt.
+534	[Céh] Nincs joga senkinek a céhharchoz.
+535	[Céh] Nincs ilyen nevû céh.
+536	Már van egy jelölés.
+537	[Céh] A céh már harcban áll.
+538	[Céh] Nincs elég Yang a céhharcban való részvételhez.
+539	[Céh] A céhnek nincs elég Yangja, hogy részt vegyen a céhharcban.
+540	[Céh] A céh már egy másik háborúban vesz részt.
+541	[Céh] A céh már háborúban áll.
+542	[Céh] A céh szint túl alacsony egy céhháborúban való részvételhez.
+543	[Céh] Legalább %d játékosnak kell részt vennie a céhháborúban.
+544	[Céh] A céhnek nincs elég pontja ahhoz, hogy részt tudjon venni egy céhháborúban.
+545	[Céh] A céhnek nincs elég tagja, hogy részt tudjon venni egy céhháborúban.
+546	20-nál magasabb szinten kell állnod, hogy mobiltelefonszámod regisztrálni tudd.
+547	Nincs császári kiképzésed.
+549	Nem fogadhatod el a meghívást, mivel már a csoportban vagy.
+550	Csak a császár használhatja.
+551	Újrafelhasználási idõ kb. %d másodperc
+552	Adóhiány. Jelenlegi tõke: %u hiányzó tõke: %u
+553	Rendelés: warpto <character name>
+554	Nem transzportálhatsz egy idegen birodalom játékosához.
+555	Játékos hozzáadása a %d csatornára. (Jelenlegi castorna %d)
+556	Transzport a %s játékoshoz.
+557	Nem hívhatsz ismeretlen játékosokat.
+558	[Céh] A céhháború ideje alatt nincs tapasztalati pont vadászatkor.
+559	Az %s uralkodó áldásának felhasználásánál a TP és MP helyreállítódik.
+560	A császárom információi
+561	[%sMonarch] : %s Yanggal rendelkezik %lld
+562	[%sMonarch] : %s
+563	Császár információk
+564	Csak császárok használhatják.
+565	Válassz egy számot 1 és 50 között.
+566	Az adó %d %%-ra van meghatározva.
+567	A szörny nem hívható, ellenõrizd a Mob-számot.
+568	Életerõ +%d
+569	Mana pontok +%d
+570	A császári áldás aktív.
+571	Kitartás +%d
+572	Intelligencia +%d
+573	Erõ +%d
+574	Ügyesség +%d
+575	Támadósebesség +%d
+576	Mozgási sebesség %d
+577	Várakozási idõ -%d
+578	Energia visszaszerzés +%d
+579	Mana visszanyerés +%d
+580	Méreg támadás %d
+581	Elõ van készítve. Használható %d után.
+582	Csillag +%d
+583	Sebesség csökkenés +%d
+584	Kritikus támadás %d%% eséllyel.
+585	Átható támadás %d%% eséllyel.
+586	A játékos szörnyekkel szembeni támadóereje +%d%%
+587	A ló szörnyekkel szembeni támadóereje +%d%%
+588	Támadó erõsítés Wonggui-val szemben +%d%%
+589	Támadás erõsítés Milgyo-val szemben + %d%%
+590	Élõholtak elleni támadás növelése + %d%%
+591	Ördög elleni támadás növelése + %d%%
+592	Sa-Za-Hu uralkodó által %s játékosnak ezen a területen 3 percen keresztül 10%%-kal nõ a támadó ererje.
+593	Energia elnyelõdés %d%% támadásnál.
+594	Mana elnyelõdés %d%% támadásnál.
+595	%d%% valószínûséggel lesz Mana elvéve az ellenségtõl.
+596	Mana elnyelõdés %d%% eséllyel.
+597	%d%% esély közelharci támadás blokkolására.
+598	%d%% esély távolsági támadás blokkolására.
+599	Egykezes kard védelem %d%%
+600	Kétkezes kard védelem %d%%
+601	Kétkezes kard védelem %d%%
+602	Harang védelem %d%%
+603	Geum-Gang-Gwon uralkodó által a %s játékoshoz ezen a területen 3 percen át 10 %%  felszerelés adódik.
+604	Legyezõ védelem %d%%
+605	Táv támadás ellenállás %d%%
+606	Tûz ellenállás %d%%
+607	Villám ellenállás %d%%
+608	Mágia ellenállás %d%%
+609	Szél ellenállás %d%%
+610	Közvetlen támadás visszaverése: %d%%
+611	Átok visszaverés: %d%%
+612	Méreg ellenállás %d%%
+613	Mana emelkedés %d%%-kal az ellenség feletti gyõzelemnél.
+614	Az esemény már zajlik (Flag: %d)
+615	Tapasztalat növekedés %d%%-kal az ellenség feletti gyõzelemnél.
+616	A zsákmányolt Yang növekedése %d%%-kal az ellenség feletti gyõzelemnél.
+617	A zsákmányolt tárgyak növekedése %d%%-kal az ellenség feletti gyõzelemnél.
+618	A teljesítmény növekedése %d%%-kal az ital által.
+619	%d%% esély az életerõ feltöltésére egy gyõzelem után.
+620	Nincs szédülés %d%%
+621	Nincs lelassulás %d%%
+622	Nincs leesés %d%%
+623	Támadóerõ + %d
+624	Felszerelés + %d
+625	OX Quiz Script nem tölthetõ be.
+626	Mágikus támadás + %d
+627	Mágikus védelem + %d
+628	Maximális kitartás + %d
+629	Harcosok elleni erõ + %d%%
+630	Nindzsák elleni erõ + %d%%
+631	Surák elleni erõ + %d%%
+632	Sámánok elleni erõ + %d%%
+633	Szörnyek elleni erõ + %d%%
+634	Támadás + %d%%
+635	Védekezés + %d%%
+636	OX Quiz Script betöltõdött.
+637	Tapasztalat %d%%
+638	Esély egy tárgy találására %.1f
+639	Esély Yang találására %.1f
+640	Maximális élet +%d%%
+641	Maximális élet +%d%%
+642	Képesség romlás %d%%
+643	Ütés romlás %d%%
+644	Ellenállás képességromlás ellen %d%%
+645	Ellenállás ütéssel szemben %d%%
+646	%d%% ellenállás harcos támadással szemben
+647	Üdvözlünk a Metin2-ben!
+648	%d%% ellenállás nindzsa támadással szemben
+649	%d%% ellenállás Sura támadással szemben
+650	%d%% ellenállás sámán támadással szemben
+651	(Folyamat: %d j- %d m - %d t)
+652	A csetelésed le van tiltva.
+653	Magasabb szintûnek kell lenned, hogy hívni tudj.
+654	Legalább %d szintûnek kell lenned, hogy hívni tudj.
+655	Nem vagy a csoportban.
+656	Nem léptél be a céhbe.
+657	A játékos elutasította a kérésed, hogy hozzáadd a barátlistádhoz.
+658	OX Esemény elkezdõdött.
+659	[Barátok] Nem adhatsz GM-et a listádhoz.
+660	%s nem online.
+661	Kereskedés után %d másodpercet kell várnod, hogy boltot nyithass.
+662	%d másodperc múlva tudsz ismét kereskedni.
+663	Több mint 2 milliárd Yangod van. Nem tudsz kereskedni.
+664	Nem nyithatsz magánboltot, amíg meg van nyitva egy másik ablak.
+665	Nem kereskedhetsz, mert ezzel átlépnéd a maximális, 2 milliárd Yangot.
+666	[Raktár] Mozgás nem lehetséges.
+667	[Raktár] A tárgy nem raktározható.
+668	[Csoport] A játékos aki meghívott, nem online.
+669	A céhháború nem kezdhetõ, mert a szerver nem online.
+670	Uriel engedélyével a belépés megengedett.
+671	[Csoport] Csak a csoportvezetõ változtathatja meg.
+672	[Csoport] A cél nem tagja a csoportodnak.
+673	[Csoport] Egy kazamatában nem zárhatsz ki játékost.
+674	[Csoport] Kazamatában nem zárhatsz ki játékost.
+675	[Csoport] Kizártak a csoportból.
+676	[Csoport] Kazamatában nem hagyhatsz el csoportot.
+677	[Csoport] Nem zárhatod ki csoporttársadat.
+678	[Céh] A céh feloszlatása után %d napig nem csinálhatsz újat.
+679	[Céh] A céh elhagyása után %d napig nem csinálhatsz újat.
+680	A céh neve érvénytelen.
+681	Sok játékos részvételét kérjük.
+682	[Céh] [%s] létre lett hozva.
+683	[Céh] Céh létrehozása nem sikerült.
+684	[Csoport] A csoport képességei csak a csoportvezetõ rendelkezésére állnak.
+685	[Csoport] Nem lett megtalálva a cél.
+686	[Céh] Nem megfelelõ Yang mennyiség.
+687	[Céh] Nincs nálad elég Yang.
+688	[Céh] A keresett ember nem található.
+689	[Céh] A személy nem uganahhoz a céhhez tartozik.
+690	[Céh] Nincs felhatalmazásod céhtagok elküldésére.
+691	[Céh] %s céhtagot kizárták a céhbõl.
+692	OX Az esemény még nem fejezõdött be. Hiba történt. (flag: %d)
+693	[Céh] Elküldtél egy céhtagot.
+694	[Céh] Nincs jogosultságod a rangneved megváltoztatására.
+695	[Céh] A céh vezetõ jogai nem változtathatók meg
+696	[Céh] A rangnév érvénytelen.
+697	[Céh] Nincs jogosultságod a hatalmi pozíciód megváltoztatására.
+698	[Céh] A céh vezetõjének a jogai nem változtathatók meg.
+699	[Céh] %u tapasztalati pont lett felhasználva.
+700	[Céh] Nem sikerült a tapasztalat bevetése.
+701	[Céh] Kevés a Yang a céh-kincstárban.
+702	[Céh] A sárkányszellem nem lett újrateremtve.
+703	Hamarosan újraindul az OX Esemény.
+704	[Céh] Nincs jogod bejelentést tenni.
+705	[Céh] Nem változtathatod meg a pozíciót.
+706	[Céh] A céhmester pozíciója nem változtatható meg.
+707	[Céh] Nem változtathatod rangod céhmesterre.
+708	[Céh] Nincs jogod ahhoz hogy céhvezetõt válassz.
+709	[Céh] Nem választhatsz több céhvezetõt.
+710	Nem adhatod át ezt a tárgyat.
+711	Illegális szoftvert fedeztünk fel. Vége a játékodnak!
+712	Több, mint 2 milliárd Yang van nálad. Nem kereskedhetsz.
+713	Érvénytelen Yang.
+714	Az ajándék esemény egy területre van korlátozva.
+715	Rulett indítása.
+716	Yang rulett indítása
+717	A játékos online. Használd a suttogást.
+718	A telefonszám nincs regisztrálva.
+719	Legalább 20-as szinten kell állnod, hogy sms-t tudj küldeni.
+720	Legalább 2000 DT-re van szükség az sms küldéshez.
+721	El lett küldve az sms-ed.
+722	%s a %s céhnek felment %d%%-ra.
+723	%s a %s céhnek normalizálódott.
+724	%s: %s megnövekedett %d%%-kal!
+725	OX Az esemény lezárult.
+726	%s %s-a normalizálódott.
+727	A bányász pontjaid elérték a maximumot (%d).
+728	A bányász pontjaid elérték a maximumot.
+729	Deokbae favágónál tudod fejleszteni a csákányod.
+730	Bányász pontjaid nõttek. (%d/%d)
+731	Csákány nélkül nem bányászhatsz.
+732	Nincs mit bányászni.
+733	Sikeres volt a bányászat.
+734	A bányászat sikertelen volt.
+735	[Barátok] %s-t felvetted barátaid közé.
+736	A játékos rövidesen teleportálodik a városba.
+737	[Barátok] %s-t törölted a listáról.
+738	Kritikus szerver hiba lépett fel. A szerver automatikusan újraindul.
+739	10 másodperc múlva automatikusan le leszel kapcsolva.
+740	5 perc múlva tudsz csatlakozni.
+741	(%s) létre kett hozva. [Átmenetileg]
+742	Ez a céh harcban áll.
+743	%s: Ez a céh nem létezik.
+744	Nem létezik céh ezzel a névvel vagy számmal.
+745	Nem létezik az épület.
+746	Ezt az épülettípust csak egyszer lehet megépíteni.
+747	Elõször zárd be az OX eseménykártyát. (Flag: %d)
+748	A fõépületet kell elõször megépíteni.
+749	Hibás árazás miatt nem sikerült az építkezés.
+750	Céhednek nincs elég Yangja, hogy felépítse ezt az épületet.
+751	Nincs elég építõanyagod az építkezéshez.
+752	Ezen a helyen nem lehet építkezni.
+753	Nem létezik a karakter.
+754	A párbaj sikertelenül félbeszakadt.
+755	A párbaj sikeresen félbeszakadt.
+756	A párbaj kezdete sikeres volt.
+757	Probléma merült fel a párbaj kezdetével.
+758	Nem lépett fel hiba.
+759	Nincsenek párbajozók.
+760	Nem maradt státuszpont
+761	Túl kevés státuszpont maradt.
+762	Rossz értéket adtál meg.
+763	A parancs egy része hibás.
+764	Felbontott szerzõdés %d játékos és %d játékos között.
+765	Rulett pörgetés %d Yangért.
+766	A tárgylog a syslogba lett helyezve.
+767	Birodalmi információk
+768	Válaszd a Szent föld térkép információit %d átjáró %d %d %d
+769	Hiba történt.
+770	%s killcount %d mobkillcount %d bosskillcount %d szent föld száma %d
+771	Információ a birodalmi csatáról.
+772	A kérés teljesítése folyamatban. Türelmet kérünk!
+773	Nem nyithatod meg a raktárat, amíg meg van nyitva egy másik ablak.
+774	[Raktár] Raktár jelszó megváltoztatva.
+775	[Raktár] Hibás jelszót adtál meg.
+776	A játékidõd %d perc múlva lejár.
+777	Szabályszerûen szavazott.
+778	Már szavazott.
+779	%s játékos már a választásban van.
+780	Háborút hirdettél e céh ellen.
+781	OX Esemény befejezõdött. Nem történt hiba.(Flag: %d)
+782	Nem lehet rá szavazni.
+783	%s-nak még %u Yangja van.
+784	%s-nak még %d Yangja van.
+785	Nincs elég Yangod.
+786	%s-t törölve lett a császár jelöltek közül.
+787	%s nem császár jelölt.
+788	%s császárnak van jelölve.
+789	%s-t nem lehet császárnak jelölni.
+790	A %s császárt eltávolítják.
+791	%s császár nem eltávolítható.
+792	OX esemény nem fogad el több jelentkezést.
+793	Shinsoo birodalom
+794	Chunjo-birodalom
+795	Jinno-birodalom
+796	A horgászpontjaid nõttek! (%d/%d)
+797	Elérted a halászati pontok maximális számát.
+798	Menj a halászhoz, és fejleszd a horgászbotod!
+799	Elveszítetted csalidat.
+800	Halat fogtál. (%s)
+801	A kifogott hal hossza %.2fcm.
+802	Horgászverseny 'Legjobb horgász'
+803	OX Az esemény többi résztvevõje fel van írva.
+804	'Nyugodt erõ' horgászverseny
+805	%s: %d
+806	%d-ból %d-t fogtál.
+807	A hal a víz mélyén eltûnt.
+808	A halban egy kagyló van.
+809	A halban egy Giliszta van.
+810	%s-t sütsz a tûz fölött.
+811	Több mint 2 milliárd Yang van nálad, ezért nem tudsz kereskedni.
+812	Nem adhatsz érvénytelen nevet a boltodnak.
+813	Nem adhatsz el magán boltban Tárgy bolt terméket.
+814	OX A többi esemény résztvevõ nem lett felírva.
+815	A bányászat befejezõdött.
+817	Válassz ki egy horgászbotot.
+818	Elõször a csalit rögzítsd a horogra.
+819	Bot nélkül nem tudsz horgászni.
+820	[Csoport] Nem intézhetsz kérést, mert a csoportvezetõ nem online.
+821	[Csoport] Egy másik birodalom játékosával nem tudsz csoportot alkotni.
+822	[Csoport] Kazamatában nem intézhetsz meghívást.
+823	[Csoport] Megfigyelõ státuszban nem intézhetsz meghívást.
+824	[Csoport] Csak -30 és +30 szint közötti játékosok hívhatóak meg.
+825	A maradék résztvevõk száma: %d
+826	[Csoport] Nem hívhatod meg a játékost, mert túl alacsony szinten van.
+827	[Csoport] Nem hívhatod meg a játékost, mert túl magas szinten van.
+828	[Csoport] Nem hívhatsz több játékost a csoportodba.
+829	Szeretnél %s csoportjába lépni.
+830	A játékos nincs a csoportodban.
+831	[Csoport] Nem léphetsz be a csoportba, mert már tele van.
+832	[Csoport] Nincs jogosultságod meghívót adni.
+833	[Csoport] %s visszautasítja a meghívást a csoportodba.
+834	[Csoport] %s már a csoportodban van.
+835	[Csoport] Kazamatában nem tudsz elfogadni meghívást.
+836	OX Esemény befejezõdik.
+837	[Csoport] Nem fogadhatod el a meghívást.
+838	[Csoport] %s visszautasította a meghívásod.
+839	[Csoport] %s belépett a csoportodba.
+840	[Csoport] %s belépett a csoportodba.
+841	Nem használhatsz magán boltot.
+842	A játékos egy másikkal üzletel.
+843	Metin2 Visszaigazolásszám: %s
+844	A visszaigazolásszámod hibás. Próbáld meg újra!
+845	A telefonszám regisztrálva van.
+846	Nem teleportálhatod magad a játékoshoz.
+847	OX A díjat kiosztották. ID: %d Quantity: %d
+848	Nem online a játékos.
+849	A játékos a %d csatornán van. (Te a %d csatornán vagy).
+850	A raktár megnyitása után %d másodpercig nem mehetsz máshova.
+851	Kereskedés után egy ideig nem mehetsz máshova.
+852	%d másodpercig a kereskedés után nem tudsz máshova menni.
+853	A párbaj befejezõdött, az ellenséged eltûnt.
+854	Az italok nincsenek limitálva.
+855	Legfeljebb %d italt használhatsz.
+856	A harc 10 másodperc múlva kezdõdik.
+857	A párbaj megkezdõdött.
+858	TRUE
+859	A párbaj befejezõdik, probléma van az arénával.
+860	A párbaj idõtúllépés miatt befejezõdik.
+861	10 másodperc múlva a városba teleportálódsz.
+862	A párbajt megállítják, mert probléma van az arénával.
+863	A párbaj ellenfélnek problémái vannak. A párbajnak vége.
+864	A párbaj befejezõdik, mert probléma van a párbajozókkal.
+865	%s megnyerte a párbajt.
+866	%s nyert.
+867	10 másodperc múlva a városba teleportálódsz.
+868	10 másodperc múlva kezdõdik a következõ menet.
+869	FALSE
+870	A párbajozókat szétválasztották. A párbajnak vége.
+876	Nem kereskedhetsz, amíg egy másik ablak nyitva van.
+877	Túl messze vagy a bolttól, hogy vásárolj.
+878	Túl messze vagy a bolttól, hogy eladj.
+879	Több mint 2 milliárd Yang van nálad, ezért nem tudsz kereskedni.
+880	A kvíz összértéke: %d
+881	Az eladás %d%%-kal van megadóztatva.
+882	Nem tudsz lovagolni, amíg át vagy változtatva.
+883	Nem tudsz lovagolni, amíg menyasszonyi ruhát, vagy szmokingot viselsz.
+884	Nincs lovad.
+885	A lovad halott.
+886	A lovad kitartása túl alacsony.
+887	A ló hívása sikertelen.
+888	Ló
+889	Mindjárt vége az esküvõnek.
+890	Automatikusan kilép.
+891	A háborúnak már vége.
+892	Az eredmény 10 másodperc múlva következik.
+893	Megfigyelésnél nem kereskedhetsz.
+894	Amíg az ablak nyitva van, nem kereskedhetsz másokkal.
+895	A másik személy épp elfoglalt, ezért most nem tudsz vele kereskedni.
+896	A másik személy félbehagyta a kereskedést.
+897	Nincs elég Yang, vagy nincs hely a leltárban.
+898	A másik személynek nincs elég Yangja, vagy nincs elég helye a leltárban.
+899	A másik személynek nincs elég helye a leltárban.
+900	Az üzlet %s személlyel sikerült.
+901	A Sárkányisten áldása miatt nem vesztettél tapasztalatot.
+902	Aktuális pontszám: Shinsoo %d, Chunjo %d, Jinno: %d
+903	A helyes válasz:
+904	%s deadcount %d Empire %d killcount %d(Purpose %d) killmobcount %d, RegenFlag %d
+905	A megszentelt hely ördöge: [ENTER][ENTER]
+906	, nincs jogod itt lenni! Birodalmad tagjai 10 másodperc múlva elhagyják ezt a megszentelt helyet.
+907	A %s vereséget szenvedett és kiesik a Birodalmi Csatából.
+908	Szörnyek a birodalmi csatában
+909	Ha legyõzöd a szent hely õrét, te leszel a tulajdonosa.
+910	A Sárkányisten védelme miatt nem veszítettél rangpontot.
+911	További szúrófegyver sérülések %d
+912	%s blokk! (%d%%)
+913	%s kitérés! (%d%%)
+914	Igen (O)
+915	%s[%d] Támadó Pozíciója: %d %d
+916	Teljes hosszában add meg rendelésed.
+917	Nem teheted meg, amíg lovon ülsz.
+918	Nem teheted meg, amíg a földön fekszel.
+919	Az álmaimban? Hogyan?
+920	Elõször állj fel.
+921	Ez a parancs nem létezik.
+922	[Csoport] feloszlott a csoport.
+923	[Csoport] Nem hívhatod a célt.
+924	[Csoport] Nem hívhatod csoporttársaidat az aktuális pozíciódba.
+925	Nem (X)
+926	A csoportod jól dolgozik együtt, és a csoport vezetõ közelében levõ csoport tagok tapasztalat bónuszt kapnak.
+927	Vezetõ
+928	Tag
+929	[Céh] A felkínált tapasztalat nagyobb a megmaradónál.
+930	[Céh] Az üzenet nem törölhetõ.
+931	[Céh] Nincs elég sárkány szellem. (%d, %d)
+932	[Céh] Még nem tudod a céh képességeit használni.
+933	[Céh] %d képesség felhasználódott (%d, %d) %u-ra
+934	[Céh] A játékos %d csatornán van. (Jelenleg a %d csatornán vagy).
+935	[Céh] A játékos nem online.
+936	5 másodperc múlva minden résztvevõ el lesz távolítva, aki rossz választ adott.
+937	[Céh] A céh képesség csak a háborúban használható.
+938	[Céh] %u Sárkányszellem-pont visszaállításra került.
+939	[Céh] Csak a céhvezetõ tud Yangot kivenni.
+940	[Céh] A játékos elutasította a céh meghívását.
+941	[Céh] Nem vagy jogosult, meghívni valakit a céhbe.
+942	[Céh] Más birodalom játékosa nem hívható meg a céhbe.
+943	[Céh] Ezt a játékost csak %d nap múlva hívhatod meg újra.
+944	[Céh] Az átszervezés után csak %d nappal hívhatsz meg új tagokat.
+945	[Céh] A személy már egy másik céhhez tartozik.
+946	[Céh] A maximális céhkapacitás elérve.
+947	Készen állsz a következõ kérdésre?
+948	Nem fejlesztheted ezt a képességet.
+949	Ezt a készséget nem fejlesztheted nagymester szintre.
+950	Már mestere vagy ennek a képességnek. Nem fejlesztheted már.
+951	Készséged nem elég nagy ahhoz, hogy nagymesterré válj.
+952	Ó, nem sikerült! Francba!
+953	A tréning nem sikerült. Próbáld újra késõbb!
+954	A testem tele van erõvel!
+955	Úgy tûnik, már folyik a képzés...
+956	Sikeresen befejezted a tréninget a könyv segítségével.
+957	Hiányos tapasztalat miatt nem tudod elolvasni.
+958	Kérdés.
+959	Nem fejlesztheted többé ezt a képességedet könyv segítségével.
+960	Nem elég jó ez a képességed, hogy könyv segítségével fejleszd.
+961	Elõrébb jutottam, de még mindig nem értettem meg mindent.
+962	Nehéz megérteni ezeket az utasításokat. Folytatnom kell a tanulást.
+963	Értem ezt a fejezetet, de keményen kell dolgoznom.
+964	Sikeresen befejezted a tanfolyamot a könyv segítségével.
+965	A teleportálás sikertelen.
+966	Nincs rendelkezésre álló ló. Kérdezd a Lovászinast!
+967	Használj egy tárgyat a ló hívásához.
+968	%s FP felhasználás: %d
+969	Ha helyes menj erre: O, ha helytelen akkor erre: X.
+970	Belül égek, de ez megnyugtatja a testem. A Chi-met stabilizálni kell.
+971	Kicsit lassan... de folyamatosan... megállás nélkül!
+972	Igen, jó érzés. Tele vagyok Chi-vel.
+973	Olvastam! A Chi-nek most el kell oszlania a testemben.
+974	A tréning lezárult.
+975	A könyv utolsó oldalán járok. Mindjárt vége a tréningnek!
+976	Majdnem sikerült. Még egy picit!
+977	Értem! Majdnem átolvastam!
+978	Már csak néhány oldal, és elolvastam mindent.
+979	Felfrissültem.
+980	Helyes!
+981	Már értem!
+982	Ok, tovább kell koncentrálnom!
+983	Mindig ugyanazokat a sorokat olvasom.
+984	Nem akarok tovább tanulni.
+985	Ez bonyolultabb és nehezebben érthetõ, mint ahogy gondoltam.
+986	Nehéz koncentrálnom. Szünetet kellene tartanom.
+987	A chated ideiglenesen tiltásra került spamelés miatt.
+988	A cseted tiltása fel lett oldva.
+989	A gyártó ablak már nyitva van.
+990	Nem termelhetsz, amíg egy másik kereskedõ/raktárablak nyitva van.
+991	Nem lehetséges további fejlesztés.
+992	Nincs nyitva az elõállítási ablak.
+993	Nincs megfelelõ anyagod.
+994	[Céh] Késõbb próbáld meg újra.
+995	Még %d készségkönyvet kell elolvasnod, hogy fejlõdjön ez a készséged.
+996	[Céh] Próbáld meg újra késõbb.
+997	Ez a funkció csak a kastélyban használható.
+998	TEST: Az aranyrudakat visszafizették a birodalom széfjébe.
+999	TEST: A birodalmad széf tartalma: %d
+1000	TEST: Az aranyrudakat nem tudod visszatenni a birodalom széfjébe.
+1001	[Céh] A Céh %d pontot ért el.
+1002	Ez a tárgy nem javítható.
+1003	Az ingyenes fegyverjavítás csak a 20-as szint alatti fegyverekre alkalmazható.
+1004	Nem használhatod ezt a tárgyat, mert nincsenek meg az elõfeltételek.
+1005	Nem használhatod ezt a tárgyat, mert a nemed nem megfelelõ hozzá.
+1006	Használd: transfer <name>
+1007	Ezt a funkciót csak a császár használhatja.
+1008	Nem választhatsz ki játékost mást birodalomból.
+1009	%s játékos a %d csatornán található. (Te a %d csatornán vagy)
+1010	%s játékost választottad ki.
+1011	Nincs játékos az általad megadott névvel.
+1012	Nem toborozhatod be saját magad.
+1013	Túl alacsony a szinted ahhoz, hogy használd ezt a tárgyat.
+1014	Nem tudsz fejleszteni, amíg egy másik ablak nyitva van.
+1015	%s császárát lecserálták. Az új császár: %s.
+1016	Háború van %s-ben a máglya meggyújtásáért.
+1017	%s sikeresen védekezett.
+1018	Mostantól 30 percen át kaphat %s jutalmat a máglya szétrombolásáért.
+1020	Máglyát gyújtottak %s-nél, hogy csatára figyelmeztessenek.
+1021	%s szétrombolta a máglyát.
+1022	%s elvesztette a háborút, mert nem tudta megvédeni a kastélyt.
+1023	%s minden máglyát szétrombolt.
+1024	Nincs elég Yang a javításhoz.
+1025	Csak akkor tudod kinyitni a boltot, ha leveszed a felszerelésed.
+1026	Nem tudod használni, amíg lovagolsz.
+1027	Ehhez szükséges : %s
+1028	%d óra %d perc %d másodperc van még hátra a chat tiltásodból
+1029	%d óra %d másodperc van még hátra a chat tiltásodból
+1030	%d perc %d másodperc van még hátra a chat tiltásodból
+1031	Yang esõ dobási arány
+1032	Nincs eltávolítható kõ.
+1033	Még nem használható.
+1034	Az idõkorlát a test szerveren meg lett haladva.
+1035	Nincs megfelelõ anyagod, hogy megcsináld.
+1036	A rangpontok nem növelhetõk tovább.
+1037	Összes királyság
+1038	Tárgy dobási arány
+1039	Yang dobási arány
+1040	Tapasztalati pontok százaléka
+1041	Nem olvashatsz könyvet, amíg át vagy változva.
+1042	%d másodperc van hátra a chat tiltásodból
+1043	Nem tudsz érzelmi kifejezéseket mutatni míg lovagolsz.
+1044	Nem tudsz érzelmi kifejezéseket mutatni olyan játékosnak aki lovagol.
+1045	A Harci tekercs nem mûködik +4 vagy afeletti tárgyaknál.
+1046	%s dobott kockával. Dobásának értéke %d (%d-%d).
+1047	Dobtál kockával. Dobásod értéke %d (%d-%d).
+1048	[Céh] Az ellenséges céh vezetõje offline.
+1049	Nem tudsz felszállni a lóra amíg a földön fekszel.
+1050	[Céh] Ez a céh éppen egy csatában vesz részt.
+1051	Itt nem horgászhatsz.
+1052	[Céh] A céhed már elérte a maximum szintet.
+1053	Nem változhatsz át miközben lovagolsz.
+1054	Épp lovagolsz. Elõbb szállj le a hátasról.
+1055	Az ellenfeledet nem adhatod hozzá a barátaidhoz.
+1056	Nem javíthatsz tárgyakat ezzel a tekerccsel.
+1057	Az eldobott tárgy el fog tûnni %d perc múlva.
+1058	[Céh] Az ellenfeled nem tudja fogadni a meghívásod.
+1059	Nem adhatsz el felszelt tárgyakat.
+1060	Felszerelt tárgyakat nem adhatsz el a magánboltodban.
+1061	[Raktár] Nem helyezheted ezt az elemet a raktáradba.
+1062	Még nem tudod eldobni az aranyat.
+1063	Megtelt a leltárad. Nem lehet több tárgyat felvenni.
+1064	A tárgyad szintje túl magas.
+1065	Csak fegyveren és vérten használható.
+1066	Nem tudod újratölteni ezt a Sárkánykövet.
+1067	Csak egyszer kaphatsz jutalmat a Démon-torony megbízatásért.
+1068	A Sárkánykõ el lett távolítva.
+1069	Nem mozdíthatod el a tárgyat a finomítási ablakon belül.
+1071	Pillanatnyilag nincs Metinkõ ezen a térképen.
+1072	A Sárkánykõ fennmaradó idõtartama ki lett nyerve.
+1073	Sikertelen a fennmaradó élettartam meghosszabbítása.
+1074	Nem sikerült a Sárkánykõ eltávolítása, de ezt kaptad: %s
+1075	Nem sikerült a Sárkánykõ eltávolítása.
+1076	Ez a tárgy nem szükséges a csiszolási tisztaság emeléséhez.
+1077	Ez a tárgy ilyen módon nem javítható.
+1078	Sikeres volt a csiszolási tisztaság növelése.
+1079	Nem sikerült egy osztály finomítása.
+1080	Ez a tárgy nem szükséges a finomításhoz.
+1081	Ezt a Sárkánykövet nem lehet finomításhoz használni.
+1082	Egy osztály finomítása volt sikeres.
+1083	Nem sikerült a csiszolási tisztaság emelése.
+1084	Nincsenek nálad a szükséges anyagok a Sárkánykõ erõsítéséhez.
+1085	Ez a Sárkánykõ nem használható erõsítéshez.
+1086	Nem kapcsolhatsz össze azonos javító tekercseket.
+1087	Sikeres volt az erõsítés.
+1088	Nem sikerült az erõsítés.
+1089	Nincs aktiválva a Sárkánykõ.
+1090	Már használsz egy ilyen típusú Sárkánykövet.
+1091	Nem távolítható el a Sárkánykõ.
+1092	Már van felszerelve ilyen fajta Sárkánykõ.
+1093	%d másodperc hozzáadva.
+1094	Mielõtt kinyitsz egy Cor Draconis-t, teljesítened kell a Sárkánykõ-küldetést és aktiválnod kell a Sárkánykõ-alkímiát.
+1095	Az övet csak akkor lehet levenni, ha már semmilyen tárgy nincs a leltárában.
+1096	Egyesíteni tudod az Áldástekercset a Mágikus vasérccel.
+1097	Nem tudod beletenni ezt a tárgyat az öv-leltáradba.
+1098	Nem tudsz lovagolni ebben a kazamatában.
+1099	Egyszerre legfeljebb 200 hozzávalót használhatsz fel.
+1100	Nem adhatsz el lélekhez kötött tárgyat magánboltban.
+1101	Nem változtathatod meg egy lélekhez kötött tárgy tulajdonságait.
+1102	Nem tudod használni a lélekhez kötött tárgyat.
+1103	Nem tudod eldobni a lélekhez kötött tárgyat.
+1104	Nem tudod átadni a lélekhez kötött tárgyat.
+1105	Ezen a szerveren nem tudsz tárgyakat lélekhez kötni.
+1106	Ezt a tárgyat nem tudod a lelkedhez kötni.
+1107	%d Yangot fektettél be.
+1108	Nincs kivehetõ kõ.
+1109	Ez a tárgy már lélekhez kötött.
+1110	Ezen tárgy lélekhez kötésének feloldása már folyamatban van.
+1111	Ez a tárgy nincs lélekhez kötve.
+1112	Nem tudsz fejleszteni lélekhez kötött tárgyat.
+1113	Nem adhatsz el lélekhez kötött tárgyat.
+1114	Nem tudod kinyitni ezt a ládát, mert leltáradban nincs elég hely.
+1115	Nem nyithatsz saját boltot addig, amíg másokkal kereskedsz.
+1116	Nem használhatod ezt a tárgyat addig, amíg kereskedsz.
+1117	Nem használhatsz Visszaszállítót tekercset, amíg a Vállpánt ablaka nyitva van.
+1118	Nem kereskedhetsz, amíg másik ablak nyitva van.
+1119	Nem mentheted ezt a helyszínt.
+1120	Csak úgy használhatod a Vállpántokat is, mint a fegyvereket és a páncéldarabokat.
+1121	Húzd a tárgyakat az ablakba.
+1122	Ez már egyedivé lett téve.
+1123	A pánt nem tud további bónuszokat magába szívni.
+1124	Csak Vállpántokat használhatsz.
+1125	Ezek a pántok nem kombinálhatók.
+1126	Nem sikerült!
+1127	Siker!
+1128	Nincs elegendõ pénzed a kombináláshoz.
+1129	Nem használhatod ezt a tárgyat, amíg az abszorpció és kombináció ablaka nyitva van.
+1130	Nincs elég hely a leltárban.
+1131	%s sikeres volt! %d%% abszorpciós mértéket ért el az új %s. Gratulálunk!
+1132	Nem használhatsz lélekhez kötött tárgyakat.
+1133	Nem adhatsz el magánboltban tárgyakat, melyeket jelenleg használsz.
+1134	Nem használhatod ezt a csomót, amíg lovagolsz.
+1135	Lejárt az idõ. Vége az elsõ fordulónak.
+1136	Lejárt az idõ. Vége a második fordulónak.
+1137	Az elsõ forduló végéig hátralévõ idõ: %d perc.
+1138	A második forduló végéig hátralévõ idõ: %d perc.
+1139	A biztonságos övezet deaktiválva lett.
+1140	A biztonságos övezet deaktiválásáig hátralévõ idõ: %d perc.
+1141	Egy idegen birodalomban nem tudod magad biztonságos helyre teleportálni.
+1142	A válasz megjelenik 20 másodperc múlva.
+1143	15 mp. múlva mindenki el lesz távolítva, aki rossz választ adott.
+1144	Ezen házikedvenc megidézéséhez túl alacsony a szinted.
+1145	Nem választottál tárgyat a kombináláshoz.
+1146	Megidézted %s-t.
+1147	Elküldted %s-t.
+1148	%s elérte ezt a szintet: %d!
+1149	%s jelenleg mélyen alszik.
+1150	%s elõbújt!
+1151	Házikedvenced nagy lelkesedéssel fogyasztja el a Protein Snack-et.
+1152	Nincs elég TP-d.
+1153	%s felébred és ráveti magát az ízletes ételre.
+1154	%s már a Szállító dobozban van.
+1155	%s elõjön a Szállító dobozból.
+1156	%s felfejlõdött erre: %s! Kitûnõ!
+1157	%s semmit sem akar enni!
+1158	Az esemény véget ért, mivel egyik birodalom sem lépett be.
+1159	Sikeresen áthelyezted a bónuszokat.
+1160	Nincs elegendõ Yangod ahhoz, hogy könyvekkel üzletelj velem.
+1161	Kérjük, írj be másik nevet.
+1162	Nincs elég Manád, hogy használd.
+1163	Nem kereskedhetsz, amíg partnered Inkubátora nyitva van.
+1164	Nem használhatod az Inkubátorod képzés idején, sem amíg raktárad vagy magánboltod nyitva van.
+1165	Nem nyithatsz magánboltot, amíg házikedvenced elõ van hívva.
+1166	Nem kereskedhetsz, amíg házikedvenced elõ van hívva.
+1167	Nem nyithatsz magánboltot, amíg partnered házikedvence elõ van hívva.
+1168	Házikedvenced elegendõ tapasztalatot gyûjtött. Most Tárgy EXP-re van szüksége, hogy a fejlõdés következõ szakaszához érjen.
+1169	Házikedvenced kész a fejlõdésre. Ennek eléréséhez használj Házikedvenc-könyveket.
+1170	Házikedvenced már elérte a legmagasabb fejlõdési szakaszt.
+1171	A megadott név túl rövid.
+1172	%d másodperccel az indítás után eléred a célhelyet.
+1173	Nincs elegendõ Yangod.
+1174	Jól tanítottad házikedvenced! Gyorsan megtanulja új készségeit!
+1175	A tapasztalat %d pontra nõtt.
+1176	Házikedvenced már megtanulta ezt a készséget és nem akarja újra gyakorolni.
+1177	A(z) %s készség aktiválódott. %d TP feltöltésre került.
+1178	Szerezed be a Szelíd házikedvenc-könyvet kedvenced hõsi képzéséhez.
+1179	Házikedvencednek %d szintûnek kell lennie képzéséhez és a fejlõdésének következõ szintjére lépéséhez.
+1180	Házikedvencednek %d nap idõsnek kell lennie képzéséhez és a fejlõdésének következõ szintjére lépéséhez.
+1181	Házikedvencednek 100% tapasztalatának kell lennie képzéséhez és a fejlõdésének következõ szintjére lépéséhez.
+1182	%s hatás aktiválva.
+1183	Túl alacsony szinten vagy, hogy használd ezt a tárgyat.
+1184	%s hatás nincs aktiválva.
+1185	%s készség aktiválva. Most nem szerzel sebeket.
+1186	%s készség aktiválva. A lassítás, mérgezés és vérzés hatások eltávolításra kerültek.
+1187	Megkapod bónuszaidat.
+1188	Az ablak már nyitva van.
+1189	Mágikus áthatolás: %d%%.
+1190	%s felépül a kimerültségbõl.
+1191	Itt nem tudod használni ezt a tárgyat.
+1192	Nem idézheted meg házikedvenced kereskedés közben.
+1193	Nem nyithatsz magánboltot.
+1194	Csak 5 másodpercenként használhatsz Hold sütit.
+1195	%s elégtelen. Erre: %d van szükséged a fejlõdés következõ szakaszához.
+1196	A házikedvenc szintje nem lehet magasabb a játékosénál.
+1197	Fiatal szint
+1198	Vad szint
+1199	Szelíd szint
+1200	Hõsies szint
+1201	@*** Dobni a következõ tárgyért: %s ***
+1202	@*** ->%*s - Kocka pontérték: %4d ***
+1203	$*** A(z) %s tárgy nyertese: %s ***
+1204	Új abszorpciós mérték: %d
+1205	A párbajban nem használhatod ezt a tárgyat.
+1206	Maximum abszorpciós mérték elérve.
+1207	Már megtanultad ezt a készséget.
+1208	Nincs a keresésednek megfelelõ tárgy.
+1209	Elegendõ Töklámpás lett összegyûjtve.
+1210	Kérdezd meg Sütõtök Samet, nyertél-e díjat.
+1211	Elkezdõdött a Halloween esemény!
+1212	Menj és beszélj Sütõtök Sammel!
+1213	Véget ért a Halloween esemény. Ne felejtsd el begyûjteni a jutalmad!
+1214	Leszállított Töklámpások: %d
+1215	Összes Töklámpás: %d
+1216	%d Yangot nyertél.
+1217	Itt nem csinálhatsz tábortüzet.
+1218	Ez a játékos már mással kereskedik.
+1219	Elõbb fel kell szerelned egy fegyvert.
+1220	Nem használhatod ezt az öltözéket ehhez a fegyverhez.
+1221	Ha fegyvert akarsz cserélni, elõbb el kell távolítanod a fegyver-kinézetet.
+1224	Okey játékod elkezdõdött!
+1225	Nem húzhatsz több kártyát.
+1226	Nem tudsz kártyákat elutasítani, ha már kiválasztottál néhányat.
+1227	Nem tudsz több kártyát húzni, ha már kiválasztottál néhányat.
+1228	Nem csinálhatsz vízben tábortüzet.
+1229	Leltárad tele van.
+1230	Csak akkor kaphatod meg a nyereményed, ha van üres hely a leltáradban.
+1231	%s elért %d pontot az Okey játékban.
+1233	Elkezdõdött az Okey esemény!
+1234	Véget ért az Okey esemény!
+1235	[Okey rendezvény] Ha bejutsz a helyezettek közé, 7 napod lesz begyûjteni a jutalmad.
+1236	Ezt nem tudod megtenni, amíg Okey-t játszol.
+1237	Zárva. Meg kell keresned a kulcsot.
+1238	A Rituális kõ csak a 80-as szint feletti tárgyakkal mûködik.
+1239	Nem tudsz kereskedni, mert túllépted a maximálisan engedélyezett %d Wont.
+1240	Nincs elegendõ Yangod.
+1241	Nincs elegendõ Wonod.
+1242	Nem tudod beváltani, mivel ez túllépné a Won maximális mennyiségét.
+1243	Nem tudod beváltani, mivel ez túllépné a Yang maximális mennyiségét.
+1244	Nem tudsz magánboltot nyitni, mivel ezzel túllépnéd a maximálisan engedélyezett %d Won mennyiséget.
+1245	Kereskedés közben nem tudod bõvíteni a leltárad.
+1246	Elkezdõdött az Okey esemény!
+1247	Véget ért az Okey esemény!
+1248	Ez a tárgy nem nyitható kulccsal.
+1249	Szörnyek jelentek meg a Seungryong-völgyben, a Sohan-hegységben, Doyyumhwanon és a Yongbi sivatagban.
+1250	Fésüld át a területeket és semmisítsd meg õket! Gyûjts ütéspontokat és váltsd át ládákra!
+1251	%d Perc múlva véget ér a Fõszörny-kaszáló esemény.
+1252	%d Perc múlva eltûnik B. úr és a fõszörnyek.
+1253	Elérted napi célod – gyûjtsd be a jutalmad!
+1254	Nem használhatsz fegyver-kinézetet, amíg menyasszonyi ruhát, vagy szmokingot viselsz.
+1255	A másik személy épp elfoglalt, ezért most nem tudsz vele kereskedni.
+1256	Nem vehetsz fel menyasszonyi ruhát vagy szmokingot, ha már fegyver-kinézetet viselsz.
+1257	Kezdõdik a(z) %d. menet
+1258	Ez a helyes kulcs.
+1259	[Céh] Már beadtad a maximális mennyiségû EXP-et.
+1260	[Céh] Céh-hirdetmény elindítva.
+1261	[Céh] Céh-hirdetmény meghosszabbítva.
+1262	[Céh] A lista frissítés alatt. Próbáld újra késõbb.
+1263	[Céh] Nem található céh.
+1264	[Céh] Már jelentkeztél ebbe a céhbe.
+1265	[Céh] Jelentkezésed regisztrálva lett.
+1266	[Céh] %s játékos csatlakozásra jelentkezett.
+1267	[Céh] A lista frissítés alatt. Próbáld újra késõbb.
+1268	[Céh] Nem érhetõ el céh-hirdetmény.
+1269	%d Yangot kaptál.
+1270	[Céh] Nincs elérhetõ jelentkezés.
+1271	[Céh] A céh-hirdetmény eddig fut: %s.
+1272	[Céh] Hamarosan lejár a céh-hirdetményed.
+1273	[Céh] %d Yang érkezett.
+1274	[Céh] %d%% adó levonása után %d Yangot kapsz.
+1275	[Céh] Nem indíthatsz háborút, amíg szavazás van folyamatban.
+1276	[Céh] Nem oszlathatod fel a céhet, amíg szavazás van folyamatban.
+1277	[Céh] Nem hívhatsz meg valakit a céhbe, amíg szavazás van folyamatban.
+1278	[Céh] Csak egyetlen Céhraktárt építhetsz.
+1279	Misztikus fény jön a ládából.
+1280	[Céh] Próbáld újra 10 másodperc múlva.
+1281	[Céh] Egy másik tag már használja ezt.
+1282	[Céh] Még mindig vannak tárgyak a Céhraktárban.
+1283	[Céh] Ellene szavaztál.
+1284	[Céh] Mellette szavaztál.
+1285	[Céh] A tag jelenleg offline.
+1286	[Céh] Nincs folyamatban lévõ szavazás.
+1287	[Céh] 'Céhvezetés átadása' szavazás kezdése.
+1288	[Céh] 'Céhtag eltávolítása' szavazás kezdése.
+1289	[Céh] 'Céhterület eladása' szavazás kezdése.
+1290	%d tapasztalatot szereztél.
+1291	[Céh] 'Céhterület elhagyása' szavazás kezdése.
+1292	[Céh] 'Céhvezetés átadása' szavazás folyamatban.
+1293	[Céh] 'Céhtag eltávolítása' szavazás folyamatban.
+1294	[Céh] 'Céhterület eladása' szavazás folyamatban.
+1295	[Céh] 'Céhterület elhagyása' szavazás folyamatban.
+1296	[Céh] A Céhraktár jelenleg használatban van.
+1297	[Céh] Várnod kell 10 másodpercet a Céhraktár újranyitása elõtt.
+1298	[Céh] Céhednek nincs raktára.
+1299	Nézd, mi jött elõ a ládából!
+1300	[Céh] Az ezzel a játékossal kapcsolatos szavazás sikertelen. Próbáld újra %d hónap, %d nap, %d óra és %d perc múlva.
+1301	[Céh] A céhtag inaktivitás miatt el lett távolítva a céhbõl.
+1302	[Céh] Részt vettél a jelenlegi szavazáson.
+1303	[Céh] Nem kezdeményezhetsz szavazást a saját karakteredért.
+1304	[Céh] Nem kezdeményezhetsz szavazást háború idején.
+1305	[Céh] Nem adhatod el a céhterületet magadnak.
+1306	[Céh] Ez a céh nem létezik.
+1307	[Céh] Nem kezdeményezhetsz szavazást háború idején.
+1308	[Céh] A céhszint túl alacsony.
+1309	[Céh] Tagjaid elutasították a legutóbbi szavazást. Próbáld újra %d hónap, %d nap, %d óra és %d perc múlva.
+1310	Ha belélegzed a piros füstöt a ládából, növekszik a gyorsaságod.
+1311	[Céh] Nem kezdeményezhetsz szavazást háború idején.
+1312	[Céh] Tagjaid elutasították a legutóbbi szavazást. Próbáld újra %d hónap, %d nap, %d óra és %d perc múlva.
+1313	[Céh] Céhterületed eladása elõtt szavazást kell kezdeményezned.
+1314	[Céh] Nem ez a céh volt megadva a céhterület eladási szavazásban.
+1315	[Céh] Tagjaid elutasították a legutóbbi szavazást az eladásról. Próbáld újra!
+1316	[Céh] Nem adhatod el a céhterületet magadnak.
+1317	[Céh] A céh vezetõje offline, vagy másik térképen van.
+1318	[Céh] A céhnek már van céhterülete.
+1319	[Céh] Nem található céhterület.
+1320	[Céh] A céhterület eladása befejezõdött.
+1321	Ezt a tárgyat csak az aktuális rendezvény során használhatod.
+1322	Hiba történt. A bónuszok nem változtak meg.
+1323	Most nem tudod megidézni hátasod/házikedvenced.
+1330	Nem használhatsz célként egy bónusszal rendelkezõ pántot.
+1331	Nem használhatsz kiindulásként egy bónusz nélküli pántot.
+1332	Nem viheted át a bónuszt, mivel a pántoknak különbözõ az abszorpciós mértékük.
+1333	Nem viheted át a bónuszt, mivel a pántoknak különbözõ a minõségük.
+1334	Nem sikerült! Az abszorpciós mérték 1%-kal csökkent.
+1335	Részleges siker! Az abszorpciós mérték 1%-kal csökkent.
+1336	Siker! A bónusz sikeresen átvitelre került.
+1337	Nem dobhatsz el tárgyakat bónusz átvitel közben.
+1338	Nem mozgathatsz tárgyakat bónusz átvitel közben.
+1339	Nem adhatsz el tárgyakat bónusz átvitel közben.
+1340	Nem lehetséges bónuszok átvitele közben.
+1341	Ez nem lehetséges, miközben a másik játékos bónuszokat visz át.
+1342	Egy házikedvenc életútjának felfedéséhez szükséged van egy Kedvenc életút-gömbre.
+1343	Elõbb hívd elõ a házikedvenced.
+1344	A kereskedés, tárgyak eladása, raktár használata, stb. nem lehetséges, miközben módosítod kedvenced pontértékeit.
+1345	Nem használhatsz tárgyakat, miközben módosítod a kedvenced pontértékeit.
+1346	Nem dobhatsz el tárgyakat, miközben módosítod a kedvenced pontértékeit.
+1347	Nem mozgathatsz tárgyakat, miközben módosítod a kedvenced pontértékeit.
+1348	Nem kereskedhetsz, miközben a partnered a házikedvence pontértékeit módosítja.
+1349	Nem beszélhetsz NPC-vel, miközben módosítod a kedvenced pontértékeit.
+1350	A házikedvenced pontértékei módosultak.
+1351	3 másodperccel a házikedvenc pontérték módosító ablak bezárása után nyithatod meg újra.
+1352	Minden hely foglalt.
+1399	A játékos jelenleg nem tudja elfogadni a meghívásodat.
+1400	A Birodalmak oldata használata után többé már nem tudsz meghívásokat fogadni ebbõl a birodalomból.
+1401	%s házikedvenc készsége aktiválva lett. %s használja a Pehelykönnyû lépéseket.
+1403	Már meg lett adva egy név.
+1404	Kérjük, távolítsd el a felszerelt Sárkánykövet, mielõtt használod ezt a tárgyat.
+1409	Sajnos nem sikerült megállítanod az Apokalipszist. Hamarosan vissza leszel teleportálva a Zodiákus templomba.
+1411	Nem beszélhetsz NPC-vel, amíg a Szerencse-láda nyitva van.
+1412	Nem használhatsz tárgyakat, amíg a Szerencse-láda nyitva van.
+1413	Nem dobhatsz el tárgyakat, amíg a Szerencse-láda nyitva van.
+1414	Nem mozgathatsz tárgyakat, amíg a Szerencse-láda nyitva van.
+1415	Nem kereskedhetsz, amíg a Szerencse-láda nyitva van.
+1416	Nem kereskedhetsz, amíg partnerednél a Szerencse-láda nyitva van.
+1420	A Sárkányköved bónusza megváltozott.
+1421	[Kapd el a Királyt] Vadássz szörnyekre és gyûjts Királykártyákat! Egy Királypaklihoz 25 kártyára van szükséged.
+1422	[Kapd el a Királyt] Rengeteg nagyszerû nyeremény vár!
+1423	[Kapd el a Királyt] Ha bejutsz a helyezettek közé, a játék asztalnál kaphatod meg a jutalmad.
+1426	Raktár bónuszként %d%% EXP-t kaptál.
+1427	Raktár bónuszként %d védelmet kaptál.
+1428	Raktár bónuszként %d%% TP-t kaptál.
+1429	Raktár bónuszként %d%% szörnyek elleni erõt kaptál.
+1430	Mielõtt belevágsz a horgászatba, gyõzõdj meg róla, hogy van elég helyed a leltáradban.
+1431	Nem mozgathatsz tárgyakat, amíg a bónusz váltó ablak nyitva van.
+1432	Sajnos a hal gyomra nem rejtett semmilyen kincset.
+1433	Nem horgászhatsz, amikor épp kikel a házikedvenced.
+1434	Nem horgászhatsz, amíg kedvenced melletted van.
+1435	Nem horgászhatsz, amíg a házikedvenc-bónusz váltó ablak nyitva van.
+1436	Nem tudod ezt megtenni, amíg a Vállpánt kombináló vagy abszorbeáló ablak nyitva van.
+1437	Nem tudod ezt megtenni, amíg a Vállpánt bónusz átvivõ ablak nyitva van.
+1438	Nem tudod ezt megtenni, amíg a bónusz átvivõ ablak nyitva van.
+1439	Nem horgászhatsz, amíg más ablakok nyitva vannak.
+1440	Ezt nem tudod megtenni, miközben horgászol.
+1441	Hátralevõ idõ: %.2f | Hal nehézsége: %u | Nehézség csökkentése: %d
+1442	Az összes ranglista nullázódott a Harci övezetben.
+1443	Felszerelt fegyver-kinézet átadása.
+1444	Megtelt a leltárad.
+1450	A %s fejlesztése nem sikerült.
+1451	A %s fejlesztése sikeres volt.
+1452	Megjelent a Vér oltára.
+1453	Elfogtál egy lelket.
+1454	[Vér rituálé] Nincs elég helyed a leltáradban.
+1455	[Vér rituálé] Nincs nálad elég lélek.
+1456	[Vér rituálé] Nincs nálad elég Yang.
+1457	A Vér rituálé elkezdõdött. Különleges tárgyak vásárlásával jobb jutalmakat kaphatsz.
+1458	A Vér rituálé befejezõdött. Próbáld ki újra máskor!
+1459	A fejlesztés megváltoztatása sikertelen volt.
+1460	Ez a tárgy csak Balathor kriptájában mûködik.
+1461	Használtad az iránytût, de nem találta meg az Õrt.
+1462	Ezt nem tudod megtenni, miközben egy másik mûveletet hajtasz végre.
+1463	Ezt nem tudod megtenni, miközben egy másik mûveletet hajtasz végre.
+1464	Nem fejlesztheted a fegyvered, amíg kedvenced melletted van.
+1465	Szükséged van %d függõlegesen egybefüggõ helyre a leltáradban a láda kinyitásához.
+1466	Nincs elég helyed a leltáradban.
+1467	[Raktár] Nem tudsz eltárolni egy használatban levõ tárgyat.
+1468	[Aura] Nem mûködik lélekhez kötött tárgyakkal.
+1469	[Aura] Nem mûködik olyan Aura öltözékkel, amibe már átvitelre került egy tárgy.
+1470	[Aura] Az Aura öltözéked elérte a maximális szintet.
+1471	[Aura] Nem javíthatod fel az Aura öltözéked, amíg nem fejlesztetted.
+1472	[Aura] Csak Aura öltözék illeszthetõ be.
+1473	[Aura] Csak Aura öltözék, pajzs, nyaklánc, fülbevaló vagy karkötõ illeszthetõ be.
+1474	[Aura] Nem lehetséges a fejlesztés.
+1475	[Aura] Csak egy Aura öltözék beillesztése után teheted meg.
+1476	[Aura] A beillesztett anyagok mennyisége hozzáigazításra került a szükséges anyagok mennyiségéhez.
+1477	[Aura] Nem lehetséges a feljavítás.
+1478	[Aura] Nem javíthatod fel az Aura öltözéked, amíg nem fejlesztetted.
+1479	[Aura] Be kell helyezned tárgyakat.
+1480	[Aura] Sikeres fejlesztés. Most már lehetséges a feljavítása.
+1481	[Aura] Sikeres fejlesztés!
+1482	[Aura] Nincs elég pénzed feljavítani az Aura öltözéked.
+1483	[Aura] Sikeres feljavítás!
+1484	[Aura] Sikeres!
+1485	[Céh] %d EXP került adományozásra.
+1486	Nem etetheted a kedvenced, amíg a fejlesztési ablak nyitva van.
+1487	Az öt szentély csatája elkezdõdött! %d napig fog tartani.
+1488	Az öt szentély csatája véget ért. A következõ harc %d óra múlva kezdõdik.
+1489	A felület nem nyitható meg, amíg hátason ülsz.
+1490	A rendezvény jelenleg nem aktív.
+1491	Nem kereskedhetsz tárgyakkal, illetve nem mozgathatsz, adhatsz el, dobhatsz el vagy tárolhatsz tárgyakat, miközben megidézed a hátasod.
+1492	A csata véget ért egy váratlan hiba következményeképp.
+1493	Az öt szentély csatája %d perc múlva véget ér.
+1494	Még szükséged van a %s tárgyból %d darabra.
+1495	Egy %d. szintû Sárkány portál nyílt meg. Rohand le a kazamatát!
+1496	Megnyílt a belépés egy %d. szintû Sárkány portálba.
+1497	Megöltük a fõszörnyet!
+1498	%d céh EXP került jóváírásra!
+1499	Lejárt az idõ a Sárkány portálba való belépéshez.
+1500	A kazamata lezárásra kerül, ha nem indítod el a csatát %d percen belül.
+1501	A harc nem kezdõdött el. A kazamata bezárult.
+1502	%s megszállta: %s!
+1503	Nem adományozhatsz, amíg kedvenced melletted van.
+1504	Ez a karakter jelenleg nem tud párbajozni.
+1505	Összesen %d: Még kinyitható %d.
+1506	A következõ ajándék %d perc múlva nyitható ki.
+1507	%s támadja: %s!
+1508	%s elérte a következõ egyéni pontszámot: %d!
+1509	Jutalom a Vér rituáléért
+1510	Nincs elég hely a leltáradban. A jutalom a postaládádba kerül kiküldésre.
+1511	A csoport tagok túl messze vannak, hogy megkapják a tárgyat.
+1512	A céh elérte a maximális szintjét. Nem lehetséges többé adományozni.
+1513	[Látók párbaja] A Látók párbaja elkezdõdött!
+1514	[Látók párbaja] Egy küldetést kaptál a minijátékhoz.
+1515	[Látók párbaja] Értékes kincsek várnak!
+1516	[Látók párbaja] A Látók párbaja véget ért.
+1517	[Látók párbaja] Nézd meg a helyezésed, és gyûjtsd be a jutalmad!
+1518	[Látók párbaja] Nincs nálad elég Látók érméje.
+1519	[LP] Helyezés jutalmad
+1520	[Látók párbaja] 1-el növelted az adományaid számát.
+1521	Nem használhatod ezt a tárgyat lélekhez kötött tárgyakon.
+1522	Nem vehetsz részt a Battle Royalen.
+1524	Elõbb ki kell lépned a csoportodból.
+1525	Nem léphetsz be, mert már elkezdõdött a visszaszámlálás.
+1527	A Battle Royale gyõztese: %s
+1528	%s megölte õt: %s.
+1529	A visszaszámlálás elkezdõdött. A Battle Royale %d másodperc múlva indul.
+1530	A Battle Royale nem indul el, mert túl kevés résztvevõ van.
+1531	A Battle Royale elkezdõdött. Az elsõ terület %d másodperc múlva jelenik meg.
+1532	A Harci övezet megváltozott. Lezárásra kerül %d másodperc múlva.
+1533	A Harci övezet %d másodperc múlva lezárásra kerül.
+1534	Az elektromos mezõ megállt. A következõ Harci övezet %d másodperc múlva jelenik meg.
+1535	A Battle Royale %d másodperc múlva véget ér.
+1536	Ezt nem tudod megtenni Battle Royale közben.
+1537	Erre nem jelentkezhetsz ezen a térképen.
+1538	Ezt nem teheted meg a Battle Royale szerveren.
+1540	Ezt nem vonhatod vissza a Battle Royale szerveren.
+1541	A Battle Royale elkezdõdött!
+1542	A Battle Royale véget ért!
+1543	Nincs több Harci övezet. Az egész terület lezárásra kerül %d másodperc múlva.
+1544	Jelenleg nincs rajtad negatív hatás.
+1545	A részvételhez szükséged van egy Battle Royale jegyre.
+1546	Egy ritka ellátmánycsomagot dobtak le valahova.
+1547	[Ereklyebónusz] Már viselsz egy Lélekereklyét.
+1548	Ezt nem tudod itt használni.
+1549	Nem sikerült a teleportálás az Elemi erõk fennsíkjára.
+1550	Nem használhatod már ezt.
+1551	Nincs nálad elég Gaya.
+1552	Battle Royale résztvevõk státusza: (%u/%u)
+1553	A Battle Royalera való jelentkezés lezárásra került.
+1554	Kérjük, próbáld újra késõbb.
+1555	Ezt nem tudod megtenni, miközben egy másik mûveletet hajtasz végre.
+1556	PvP bajnokság
+1557	Jutalom egy kör megnyeréséért
+1558	Jutalom a bajnokság megnyeréséért
+1559	Látók párbaja jutalmak
+1560	Megtelt a leltárad. A jutalmad postán kerül kézbesítésre.
+1561	Mivel a leltárad tele volt, a Látók párbaján szerzett jutalmad postán kerül kézbesítésre.
+1562	Kaptál %u EXP-t a Bajnokszintedhez.
+1574	Kérjük, próbáld újra késõbb.
+1575	Battle Royale
+1576	Battle Royale szezonális jutalom. Helyezés ebben a körben: %d.
+1577	Battle Royale általános jutalom.
+1578	Battle Royale játékért járó jutalom. Helyezés: %d.
+1579	Battle Royale harcért járó jutalom. %d vagy több ellenfelet öltél meg.
+1580	Nem válthatsz be most eredményeket.
+1581	Nem használhatsz most érzelmeket.
+1582	Yongan
+1583	A %s céh megvásárolta a földet a %s területen (%d,%d) %d Wonért.
+1584	A céh vezetõd regisztrált az aukcióra egy földért a %s területen (%d,%d).
+1585	Már beküldted az ajánlatod.
+1586	Visszaveheted az ajánlatként feltett Wont.
+1587	Nincs semmi, amit begyûjthetnél.
+1588	Nem lehet nálad több Won.
+1589	Visszavetted az ajánlatként feltett %d Wont.
+1590	Csak a céh vezetõ vagy egy bank hozzáféréssel rendelkezõ tag tudja kifizetni a bérleti díjat.
+1591	Nincs kifizetetlen bérleti díj.
+1592	A céhnek nincs elég Yangja.
+1593	[Céhterület] Menj az õrhöz, és fizesd be a %d Yang bérleti díjat a céhterületért!
+1594	Befizettél %u Yang bérleti díjat a céhterületért.
+1595	Ezt nem tudod megtenni, miközben folyamatban van a területaukció.
+1596	Nem regisztráltál egyetlen területaukcióra sem.
+1597	Nem vagy egyetlen céh tagja sem.
+1598	Már regisztráltál a területaukcióra.
+1599	Csak a céh vezetõ regisztrálhat a területaukcióra.
+1600	Csak %d. vagy feletti szintû céhek regisztrálhatnak.
+1601	A céhednek már van egy céhterülete.
+1602	Jelenleg nincs folyamatban egyetlen területaukció sem.
+1603	A maximális ajánlat %d Won.
+1604	Nincs nálad elég Won.
+1605	A céhed nincs regisztrálva a területaukcióra.
+1606	Csak akkor tehetsz ajánlatot, ha már legalább 24 órája a céh tagja vagy.
+1607	Nem került befizetésre a bérleti díj a céhterületért. A céhterület elhagyatottá vált.
+1608	Egyetlen céh sem regisztrált a területaukcióra.
+1609	Beküldtél ajánlatként %d Wont.
+1610	Ez a céh nem létezik.
+1611	Dong Gwang síkság
+1612	Az ajánlatodban tett Wont visszakaphatod a faluban található õrtõl.
+1613	Tökéletes! Sikeresen felszerelted a Szellemkövet, és még dupla státusz bónuszt is kaptál.
+1614	Joan
+1615	Pyungmoo
+1616	Jungrang
+1617	Waryong
+1618	Imha
+1619	Miryang
+1620	Songpa
+1621	Daeyami
+1622	[Megafõszörny] A rendezvény elkezdõdött
+1623	[Megafõszörny] A rendezvény befejezõdött
+1624	[Megafõszörny] A %d. csatornán megjelent %s és %s területét tartja félelemben. Vadászatra fel!
+1625	[Megafõszörny] A megafõszörnyet megtámadták a %d. csatornán. Csatlakozz a vadászathoz most!
+1626	[Megafõszörny] Szép munka: %s legyõzésre került és ismét béke uralkodik... egyelõre.
+1627	[Megafõszörny] A megafõszörny elmenekült! Sok szerencsét a következõ alkalomra!
+1628	[Megafõszörny] Most nem kaphatsz jutalmat.
+1629	[Megafõszörny] Szép munka! Itt a jutalmad. Csatlakozz következõ alkalommal is!
+1630	[Megafõszörny] Most nem kaphatsz jutalmat, mert nincs elég helyed a leltáradban.
+1631	[Megafõszörny] I. szintû zsákmány jutalom a ranglistán: %d
+1632	[Megafõszörny] II. szintû zsákmány jutalom a ranglistán: %d
+1633	[Megafõszörny] III. szintû zsákmány jutalom a ranglistán: %d
+1634	[Megafõszörny] IV. szintû zsákmány jutalom a ranglistán: %d
+1635	[Virágok ereje] Nincs nálad elég hajtás.
+1636	[Virágok ereje] Nincs elég hely a leltáradban.
+1637	[Virágok ereje] Virágmagot kaptál.
+1638	[Virágok ereje] Nincs nálad elég Virágmag.
+1639	[Virágok ereje] Krizantém hajtást kaptál.
+1640	[Virágok ereje] Gyöngyvirág hajtást kaptál.
+1641	[Virágok ereje] Nárcisz hajtást kaptál.
+1642	[Virágok ereje] Liliom hajtást kaptál.
+1643	[Virágok ereje] Napraforgó hajtást kaptál.
+1644	[Megafõszörny] Figyelem: a megafõszörny hamarosan megjelenik!
+1645	[Virágok ereje] Ez a tárgy már nem használható.
+1646	Jelenleg nem tudsz átváltozni.
+1647	Öld meg az összes szörnyet a megadott idõn belül!
+1648	A következõ teremhez vezetõ portál megnyílt.
+1649	Verj vissza minden támadást!
+1650	A következõ szinthez vezetõ portál megnyílt.
+1651	%s teljesítette a %u. szintet Sung Mahi tornyában!
+1652	A zsákmány Sung Mahi tornyából a postaládádba került elküldésre.
+1653	Sung Mahi T. %d. szint
+1654	Zsákmány Sung Mahi tornya teljesítéséért
+1655	A harc %d másodpercen belül indul.
+1656	A(z) %d. szinten vagy.
+1657	Ölj meg egy szörnypárost, melyek nem tartoznak össze!
+1658	Rossz szörnyet támadtál meg. Öld meg az összes szörnyet!
+1659	Öld meg az összes szörnyet a megadott idõn belül!
+1660	Rossz Metinkövet semmisítettél meg. Gyõzz le minden szörnyet!
+1661	Pusztítsd el a megfelelõ Metinkövet!
+1662	Találd meg a helyes kulcsot a meneküléshez!
+1663	Találd meg a Pecsétkövet a pecsét feltöréséhez!
+1664	[Sung Mahi tornya] Öld meg az összes szörnyet a megadott idõn belül!
+1665	[Sung Mahi tornya] A jelenlegi versenykör véget ért.
+1666	[Sung Mahi tornya] Egy új versenykör indult.
+1667	Szezonális jutalom a Sung Mahi tornyának %d. szintjén elért 1. helyezésért.
+1668	Szezonális Sung Mahi tornya jutalom
+1669	Nincs rajtad átok.
+1670	Minden átok hatása semlegesítésre került.
+1671	Lejárt az idõ. Ki fogsz teleportálódni innen.
+1672	[Sung Mahi tornya] Pusztítsd el a Démon követ!
+1673	[Sung Mahi tornya] A kulcs nem passzol. Találj egy másikat, és próbáld újra!
+1674	[Sung Mahi tornya] Törd fel a pecsétet Sung Mahi Pecsétkövével!
+1675	[Sung Mahi tornya] Elõbb fel kell törnöd egy másik pecsétet!
+1676	Most már viselhetsz kesztyûket.
+1677	Még nem viselhetsz kesztyûket.
+1678	Ez a funkció nem elérhetõ, mert csaló programot észleltünk.
+1679	[Sung Mahi tornya] Ezt a szintet %d másodperc alatt teljesítetted.
+1680	Nem tudsz részt venni a területaukción azon a napon, amikor a céhet alapították.
+1681	
+1683	
+1684	
+1685	
+1686	Menj fel a lépcsõkön Sung Mahi tornyában, és lépj be a következõ szintre!
+1687	[Prémium magánbolt] Nem használhatod ezt. Menj a faluban a Kereskedésirányítóhoz.
+1688	Olyan területre léptél be, ami Sung Mahi befolyása alatt áll, ezért rád is hatással van az átka.
+1689	%s területén még %d elõõrs áll. (%d/%d)
+1690	%s területén felépült az összes elõõrs és Sung Mahi irányítása alá kerül %d perc múlva.
+1691	Sung Mahi elõõrsei felállításra kerülnek.
+1692	Sung Mahi elõõrseit elpusztították.
+1693	A %s területén minden elõõrs el lett pusztítva, így a terület nincs többé Sung Mahi irányítása alatt.
+1694	Seo Gwang pusztaság
+1695	Nam Gwang szakadék
+1696	A fejlesztés sikeres volt.
+1697	A fejlesztés sajnos nem sikerült.
+1698	Az immunitás-áldásnak köszönhetõen nincs rád hatással Sung Mahi aurája.
+1699	Az immunitásod véget ért, és ismét hatással van rád Sung Mahi aurája és átka.
+1700	Ezt nem teheted meg egy csaló programot használó felhasználóval.
+1701	Nincs megfelelõ anyagod a fejlesztéshez. (Lélekhez kötött tárgyak nem használhatók.)
+1702	A céhterületed automatikusan elhagyatottá válik %d óra múlva. A céhraktárban minden tárgy törlésre fog kerülni.
+1703	[Céh] Nem rúghatod ki a céh vezetõt.
+1704	[Céh] Nem rúghatod ki saját magad.
+1705	[Céh] Nem nevezheted ki magadat céh vezetõnek.
+1706	[Céh] Csak a céh vezetõ részére érhetõ el (ha a céhterület feladásra került).
+1707	[Céh] Nem adhatsz fel egy céhterületet céh harc közben.
+1708	Ezt nem cserélheted.
+1709	A Torony-rendezvény aktiválásra került.
+1710	Ezt a Bajnokszint elérése után tanulhatod meg.
+1711	[Prémium magánbolt] Nem nyithatod meg ezt, mert még van begyûjtésre váró pénzed.
+1712	[Prémium magánbolt] Nem nyithatod meg ezt, mert még van begyûjtésre váró tárgyad.
+1713	[Prémium magánbolt] Már megnyitottad a magánboltod.
+1714	[Prémium magánbolt] A bolt épp elõkészítés alatt áll.
+1715	[Prémium magánbolt] Nincs elég hely a leltáradban.
+1716	[Prémium magánbolt] A magánboltodban begyûjthetsz tárgyakat.
+1717	[Prémium magánbolt] A magánboltodban begyûjthetsz pénzt.
+1718	[Prémium magánbolt] %s eladásra került. Kérjük, gyûjtsd be a pénzed.
+1719	[Prémium magánbolt] Nem tudod újranyitni a boltodat a bezárása után %d másodpercig.
+1720	Ezt nem tudod megtenni a kazamata létrehozása közben.
+1721	Többször már nem tudsz újraéledni. Ki leszel teleportálva a kazamatából.
+1722	Már megkaptad a jutalmad. Ha újra szeretnéd próbálni, gyere vissza késõbb. Hátralevõ idõ: %d ó %d p
+1723	Még %d alkalommal tudsz feléledni.
+1724	Most beléphetsz a Szerpent templomba. Ehhez használd a Szerpent szobrot.
+1725	Ennek a Metinnek az elpusztítása nem segített. Az összes Metin újra megjelent.
+1726	Ennek a Metinnek az elpusztítása nem segített. Az összes Metin újra megjelent.
+1727	Megsemmisítetted a(z) %d. Metint. Most pusztítsd el a(z) %d. Metint.
+1728	Lejárt az idõ. Ki leszel teleportálva a kazamatából.
+1729	Ez most %d percig elérhetõ.
+1730	Nem növelheted tovább az idõt a kazamata visszaszámlálóján.
+1731	A kazamata visszaszámlálójához 1 perc lett hozzáadva.
+1732	Megölted az összes szörnyet. A(z) %d. szintre leszel teleportálva. Addig még %d másodperc van hátra.
+1733	Elpusztítottad az összes Metint. A(z) %d. szintre leszel teleportálva. Addig még %d másodperc van hátra.
+1734	A darabkát beraktad a Szerpent fejbe. De semmi sem történik.
+1735	Az összes Szerpent oszlopot kinyitottad. Tovább a(z) %d. szintre %d másodperc múlva.
+1736	Megjelent a különleges Szerpent templom kovács!
+1737	Megjelent a Szerpent templom kovács!
+1738	Megölted az összes szörnyet, és most továbbmehetsz a fõszörny szintjére.
+1739	Teljesítetted a Szerpent templomot. Ki leszel teleportálva a kazamatából %d másodperc múlva.
+1740	Pusztítsd el a Metinköveket a helyes sorrendben.
+1741	Öld meg az összes szörnyet.
+1742	Szerezd meg a kulcsot a szörnyektõl, és nyisd ki a Szerpent oszlopot.
+1743	Beleraktál egy darabkát a Szerpent fejbe.
+1744	Öld meg a fõszörnyet.
+1745	Sikeresen kinyitottad!
+1746	Elõbb egy másik oszlopot kell kinyitnod.
+1747	Kinyitottad a cellát. A kovács mosolyog rád.
+1748	Ez a kulcs nem nyitotta ki a cellát, így nem szabadult ki a kovács.
+1749	Ez a darabka nem illik a Szerpent fejbe.
+1750	
+1751	
+1752	A Bajnokszint eléréséhez legalább 1 EXP gömböt fel kell töltened a 120-as szinten.
+1753	Teljesítened kell a Hajó megvédése kihívást.
+1754	Már elérted a Bajnokszintet.
+1755	[Prémium magánbolt] Nem tudsz tárgyakat használni a magánboltod megnyitása közben.
+1756	[Prémium magánbolt] Ezt nem tudod megtenni, míg a tárgyakat rendezed.
+1757	[Prémium magánbolt] Ezt nem tudod megtenni, amíg nyitva van egy másik ablak.
+1758	[Prémium magánbolt] Ezt nem tudod megtenni, míg a tárgyakat rendezed.
+1759	
+1760	[Ereklyebónusz] Ezt nem tudod megtenni, míg a Lélekereklye ablak nyitva van.
+1761	A %s nevû csoport tag kilépett a harcból.
+1762	%d perced van még hátra.
+1763	[Prémium magánbolt] Itt nem párbajozhatsz.
+1764	[Prémium magánbolt] A begyûjthetõ pénz nem frissül, amíg a tárgyakat rendezed.
+1765	A Szerpent templom utolsó fõszörnye megjelent.
+1766	[Prémium magánbolt] Itt már nyitottak egy boltot. Kérünk, keress egy másik helyet a boltod megnyitásához.
+1767	Nem fejlesztheted ezt, amíg egy nevelhetõ házikedvenced meg van idézve.
+1768	<Északszél mélység> %d perced van hátra.
+1769	<Északszél mélység> Ha nem indítjátok el a harcot 3 percen belül, a kihívás véget ér.
+1770	<Északszél mélység> Lejárt az idõ. Ki leszel teleportálva a kazamatából.
+1771	
+1772	<Északszél mélység> Egy kihívás indult az Északszél búvóhelyen.
+1773	
+1774	
+1775	
+1776	
+1777	
+1778	
+1779	
+1780	
+1781	
+1782	
+1783	
+1784	
+1785	
+1786	
+1787	
+1788	
+1789	
+1790	
+1791	
+1792	
+1793	
+1794	
+1795	
+1796	<Északszél mélység> Legyõztétek Alasztórt! Ki leszel teleportálva a kazamatából 20 másodperc múlva.
+1797	<Északszél mélység> Alasztór hamarosan szabadjára engedi fagyos dühét!
+1798	<Északszél mélység> Alasztór szabadjára engedi a(z) %d. szintû fagyos dühét!
+1799	<Északszél mélység> Sikerült kivédenetek Alasztór fagyos dühét.
+1800	<Északszél mélység> Ha nem pusztítjátok el a fehér sárkánytojásokat %d másodpercen belül, Alasztór dermesztõ hatalma kitör a búvóhelyrõl!
+1801	Ez nem elérhetõ itt.
+1802	Ez akkor lesz elérhetõ, ha a harc elkezdõdött.
+1803	<Északszél mélység> A kihívás véget ért, mert nem indítottátok el a harcot a megadott idõn belül.
+1804	
+1805	Nem kerül a zsákmány begyûjtésre, mivel ki van kapcsolva a zsákmány szûrõ.
+1806	Nem kerül a zsákmány begyûjtésre, mivel egy csoport tag zsákmány szûrõje ki van kapcsolva.
+1807	
+1808	Kaptál %d Bajnokszint tapasztalati pontot.
+1809	Kaptál %d tapasztalati pontot.
+1810	Veszítettél %d tapasztalati pontot.
+1811	Veszítettél %d Bajnokszint tapasztalati pontot.
+1812	Ezt nem tudod megtenni kereskedés közben.
+1813	Elkezdõdött a Metinláz rendezvény!
+1814	Teljesíts küldetéseket a rendezvény küldetés listájáról, pusztíts el Metinköveket, és gyûjtsd be a jutalmad!
+1815	A Metinláz jelenleg nem aktív.
+1816	[Sárkány temploma] Létrehoztál egy kihívást a Sárkány templomához.
+1817	[Sárkány temploma] Ha nem indítod el a harcot 3 percen belül, a kihívás véget ér.
+1818	[Sárkány temploma] Legyõztétek Beran-Setaout. Ki leszel teleportálva a kazamatából %d másodperc múlva.
+1819	[Sárkány temploma] %d perced van még hátra.
+1820	[Sárkány temploma] A kihívás véget ért, mert nem indították el a harcot.
+1821	[Sárkány temploma] Lejárt az idõ. Mindenki ki lesz teleportálva a kazamatából.
+1822	[Sárkány temploma] Létrehoztál egy kihívást a Sárkány templomához.
+1823	[Sárkány temploma] Ha nem indítod el a harcot 3 percen belül, a kihívás véget ér.
+1824	[Sárkány temploma] Elindult a kihívás.
+1825	[Sárkány temploma] Feladtad a harcot, ezért a kihívás véget ért.
+1829	[Sárkány temploma] A kihívás lezárásra kerül, ha senki nem lép be %d másodpercen belül.
+1830	[Sárkány temploma] A kihívás lezárásra került, mert senki nem lépett be a megadott idõn belül.
+1838	Nem tudod magadat blokkolni.
+1839	Nem tudod magadat hozzáadni.
+1840	%s akciója engedélyezve.
+1844	Megetettél a lovaddal %d Abrakot. %d tapasztalatot kapott.
+1845	Nincs elég Gaya vagy Yang
+1846	Nem tanulhatod meg ezt a ló készséget.
+1847	[Enigma templom] Ezt nem tudod itt használni.
+1848	[Enigma templom] Csak a csoport vezetõje tudja használni ezt a tekercset.
+1849	[Enigma templom] %s nincs a közelben.
+1850	[Enigma templom] Nem tudod használni ezt a tekercset a mostani szinteden.
+1851	[Enigma templom] %s szintje nem felel meg a belépéshez.
+1852	[Enigma templom] %s visszautasította a belépést.
+1853	[Enigma templom] A kazamata el fog tûnni 1 perc után, ha nem kezditek el a harcot.
+1854	[Enigma templom] Az Enigma templomba vezetõ portál létrejött.
+1855	[Enigma templom] Pusztítsd el a valódi Metinkövet.
+1856	[Enigma templom] Ez egy hamis Metinkõ. Találj egy valódi Metinkövet!
+1857	[Enigma templom] Kaptál egy kincsesládát a Metinkõbõl.
+1858	[Enigma templom] Még meg kell találnod a valódi Metinkövet. Használd a portált, és próbáld újra.
+1859	[Enigma templom] Feladat teljesítve. Találd meg a titkos termet!
+1860	[Enigma templom] Találj egy valódi szörnyet, és gyõzd le! Ne hagyd, hogy az illúziók megtévesszenek!
+1861	[Enigma templom] Nem találtál valódi szörnyet. Használd a portált, és próbáld újra.
+1862	[Enigma templom] Nézd meg a kincsesládát.
+1863	[Enigma templom] Üdvözlünk a titkos teremben.
+1864	[Enigma templom] Lejárt az idõd! Mindenki ki lesz teleportálva a kazamatából.
+1865	[Enigma templom] Jutalomként az Enigma templom áldását kapod.
+1866	[Enigma templom] Nem kaptál jutalmat. Hátralevõ idõ a következõ jutalomig: %d óra %d perc
+1867	Enigma templom jutalom
+1868	[Enigma templom] Az Enigma templom eltûnt, mert lejárt az idõ.
+1869	[Enigma templom] 4 percen belül el kell indítanotok a harcot az Enigma portálon keresztül.
+1870	[Enigma templom] Az Enigma templom áldása miatt még egy kincsesládát kaptál.
+1871	[Enigma templom] Kaptál egy Enigma jutalmat. Az elfogadásához nézd meg a postaládádat.
+1872	A(z) %s törlésre került.
+1873	Elsajátítottad ezt: %s. A készségeidet megnézheted a készségek menübõl is.
+1874	Nincs elég Gaya
+1876	Kérjük, próbáld újra késõbb.
+1878	Lejárt az idõ. Hamarosan a városba leszel teleportálva.
+1879	Többször már nem tudsz újraéledni.
+1880	Teljesítetted a kazamatát, és %d perc múlva ki leszel teleportálva.
+1881	Legyõzted az összes követet. Menj a Hae-Tae õrhöz, hogy beléphess a Kárhozat térképre.
+1882	Nem tudsz többet használni, mint a tárgyak maximális mennyisége.
+1883	Az Utazás a Túlvilágba véget ért, és nem tudsz már több Halállángot szerezni.
+1884	Az Utazás a Túlvilágba elkezdõdött. Halállángot szörnyek legyõzésével szerezhetsz.
+1885	Az Utazás a Túlvilágba véget ért.
+1886	Az Utazás a Túlvilágba elkezdõdött. Most már használhatod a Túlvilág portált a Sárkánytûz-fokon.
+1887	Felhasználtál %dx Életvizet. Maradt nálad %dx Életvíz.
+1888	Kaptál %d Halállángot.
+1895	Legyõzted a Föld követét.
+1896	Legyõzted az Éj követét.
+1897	Legyõzted a Mennydörgés követét.
+1898	Legyõzted a Levegõ követét.
+1899	A kazamata %d perc múlva lezárul.
+1900	Nincs helyed több Halállángnak.
+1901	Várnod kell, mielõtt újra próbálkozhatsz. Hátralevõ várakozási idõ: %d óra %d perc
+1902	Már nem változtathatsz a csoporton, miután beléptél a Sárkány templomába.
+1903	Nem lehet több zsoldosod.
+1904	Állóképesség túllépve.
+1905	[Enigma templom] Pusztítsd el az Enigma Metint a következõ szintre jutáshoz.
+1916	Már elsajátítottad ezt a készséget.
+1917	Nem tanulhatod meg ezt a készséget, amíg nem éri el a lovad a 31. szintet.
+1918	Nem sajátíthatsz el több készséget.
+1919	Nem tanulhatod meg ezt a készséget, amíg nem éri el a lovad a 21. szintet.
+1921	[Enigma templom] Nem léphetsz be, mert nem felelsz meg a szint követelménynek.
+1922	Nem válthatsz felszerelés oldalt, mert a fegyver és öltözék nem illik egymáshoz.
+1924	Zsákmány szûrõ bekapcsolva.
+1925	Zsákmány szûrõ idõtartama megnövelve.
+1926	[Sung Ma inváziós portál] Egy Sung Ma inváziós portál nyílt valahol ezen a területen. [ENTER]Nyisd meg a nagy térképet, és találd meg.
+1927	[Sung Ma inváziós portál] Az Inváziós fõnök megjelent valahol!
+1930	[Sung Ma inváziós portál] Az inváziós portál ereje meggyengült, így most már elpusztítható.
+1931	[Sung Ma inváziós portál] A területet sikeresen megvédték. Hamarosan visszateleportálásra kerülsz.
+1932	[Sung Ma inváziós portál] Az inváziós portál bezárult.
+1933	[Sung Ma inváziós portál] Az inváziós portál körül Erõvirágok jelentek meg.[ENTER]Használj a terület elementáris típusával megegyezõ virágot, és sebzés bónuszt kapsz!
+1934	[Sung Ma inváziós portál] Az Inváziós fõnök közelében Erõvirágok jelentek meg.[ENTER]Használj a terület elementáris típusával megegyezõ virágot, és sebzés bónuszt kapsz!
+1936	[Sung Ma inváziós portál] Nincs elég helyed a leltáradban, hogy elfogadd a jutalmat.
+1937	[Sung Ma inváziós portál] Az inváziós portál elpusztításához minden szörnyet le kell gyõznöd a közelében. 
+1938	[Céh] %d Yang került kivételre.
+1939	Aranybogyó vadászat jutalom
+1940	Pusztíts el %d Õsi szobrot. Nem támadhatsz meg egyszerre több szobrot.
+1941	Megszerezted az összes állóképességet a küldetéseidbõl. A jutalmat átveheted a küldetés ablakban.
+1942	A Vállpántod által abszorbeált bónuszok sikeresen eltávolításra kerültek.
+1943	Az Aura öltözéked által abszorbeált bónuszok sikeresen eltávolításra kerültek.
+1944	Több helyre van szükséged a leltáradban.
+1945	[Aranyföld] Jelenleg nem tudsz átváltozni.
+1946	Nem oszlathatod fel a csoportot, amíg aktív vagy Meley barlangjában.
+1947	Nem oszlathatod fel a csoportot, amíg folyamatban van egy céh harc.
+1948	A játékos jelenleg AFK.
+1949	Sikeresen kiszabadítottad magad.
+1950	[NPC keresõ] Ez a karakter nincs ezen a térképen.
+1951	Titkos kincs jutalom
+1952	Kaptál egy titkos jutalmat, amiért részt vettél a Kincsvadászat rendezvényen %d alkalommal.
+1953	%d. helyezés jutalom
+1954	Jutalmat kaptál a Kincsvadászaton elért %d. helyezésért.
+1955	Nem kaphatsz több Halállángot, mert már a maximális mennyiség van nálad.
+1956	Nem szerezhetsz több Yangot.
+1957	[Sung Ma kincsesládája] Hátralevõ újra pörgetések: %d
+1958	[Sung Ma ládája] Nyisd ki egy értékes jutalomért.
+1959	Összegyûjtötted a maximális számú lelket. Menj a Vér oltárához, és végezd el a rituálét!
+1961	Az eladási ár Yang részének %.1Lf%%-a díjként levonásra kerül.
+1962	Sárkányok elleni erõ +%d%%
+1963	A tranzakció nem sikerült, mert a mennyiség meghaladta volna a maximálisan lehetségest.
+1964	Ez a készségkönyv csak céh vezetõknek és bajtársaknak elérhetõ.
+1965	Nem tanulhatsz meg több céh készséget.
+1966	Nem sikerült a céh készség megtanulása.
+1967	Nem hozhatsz létre csoportot, miközben párbajozol.
+1968	Elõbb töröld a játékost a blokkoltak listájáról.
+1969	Csoport meghívást küldtél %s részére.
+1970	%s jelenleg olyan helyen van, ahol nem lehet csoportot létrehozni.
+1971	Elõbb töröld a játékost a blokkoltak listájáról.
+1972	Nem lehet több barátod (max. %d).
+1973	Elõbb töröld a játékost a barát kérelmeid közül.
+1974	Nem blokkolhatsz több játékost (max. %d).
+1975	Már megvan neked ez a térkép.
+1976	Sikeresen megtanultad Balathor rohamát.
+1977	Sikeresen megtanultad Balathor akaratát.
+1978	Sikeresen megtanultad Balathor elszántságát.
+1992	Nem férsz hozzá a küldetéseidhez egy tárgy kiválasztása közben.
+1993	Nem férsz hozzá a céhraktárhoz és kereskedéshez egy tárgy kiválasztása közben.
+1994	Ezt nem tudod megtenni, miközben a másik játékosnál elõtérben van egy másik ablak.
+1995	Nem használhatod ezt egy tárgy kiválasztása közben.
+2000	Nincs szabad hely a felszereléshez.
+2006	Éber
+2007	Hatalmas
+2008	A fejlõdésnek ebben a szakaszában Hõsies házikedvenc-könyvekre van szükséged.
+2009	A fejlõdésnek ebben a szakaszában Éber házikedvenc-könyvekre van szükséged.
+2010	Blokkolás áthatolás +%d%%
+2011	Pontosság +%d%%
+2012	A kedvenced feloldott egy potenciális készséget (%s).
+2013	A(z) %s potenciális készség eltávolításra került.
+2014	Feloldottad az elsõ potenciális készség helyet.
+2015	%s elérte a(z) %d. bajnokszintet.
+2016	Kedvenced rendkívül izgatott a jutalomfalat miatt.
+2019	Feloldottad a második potenciális készség helyet.
+2028	Ezt nem teheted meg a kedvenced megidézése közben.

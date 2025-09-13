@@ -1,0 +1,233 @@
+define mysterious_man 20369
+define memorial_stone 20372
+define ancient_doc 31002
+define ancient_rubbing 30160
+define ice_golem 1107
+define ice_gaint 1106
+define ice_man 1105
+define blue_bead 31005
+define blue_bead_drop_rate 100
+define blue_bead_report_term 86400
+define blue_bead_can_report_num 10
+define blue_beads_num 50
+define pass_pct 60
+quest main_quest_lv72 begin
+    state start begin
+    end
+    state state_0 begin
+        when login or levelup or enter with pc.level >= 72 begin
+            set_state (state_1)
+        end
+    end
+    state state_1 begin
+        when letter begin
+            local v = find_npc_by_vnum (mysterious_man)
+            if v != 0 then
+                target.vid ("__TARGET__",v,"")
+            end
+            send_letter(gameforge.main_quest_lv72._10_sendLetter)
+        end
+        when button or info begin
+            say_title(gameforge.main_quest_lv72._10_sendLetter)
+            say (gameforge.main_quest_lv72._20_say)
+        end
+        when mysterious_man.chat.gameforge.main_quest_lv72._10_sendLetter begin
+            target.delete("__TARGET__")
+            say_title (gameforge.main_quest_lv66._300_sayTitle)
+            say(gameforge.main_quest_lv72._30_say)
+            wait()
+            say_title (gameforge.main_quest_lv66._300_sayTitle)
+            say(gameforge.main_quest_lv72._40_say)
+            wait()
+            say_title (gameforge.main_quest_lv66._300_sayTitle)
+            say(gameforge.main_quest_lv72._50_say)
+            set_state (state_2)
+        end
+    end
+    state state_2 begin
+        when letter begin
+            local v = find_npc_by_vnum (memorial_stone)
+            if v != 0 then
+                target.vid ("__TARGET__",v,"")
+            end
+            send_letter(gameforge.main_quest_lv72._60_sendLetter)
+        end
+        when button or info begin
+            say_title(gameforge.main_quest_lv72._60_sendLetter)
+            say (gameforge.main_quest_lv72._70_say)
+        end
+        when memorial_stone.click begin
+            target.delete("__TARGET__")
+            say(gameforge.main_quest_lv72._80_say)
+            wait()
+            say_title(mob_name(memorial_stone))
+            say(gameforge.main_quest_lv72._90_say)
+            wait()
+            say_title(mob_name(memorial_stone))
+            say(gameforge.main_quest_lv72._100_say)	
+            wait()
+            say(gameforge.main_quest_lv72._110_say)
+            pc.give_item2 (ancient_rubbing, 1)
+            set_state (report_discovery)
+        end
+    end
+    state report_discovery begin
+        
+        when button or info begin
+            return
+        end
+        
+        when mysterious_man.chat.gameforge.main_quest_lv72._60_sendLetter begin
+            pc.remove_item (ancient_rubbing)
+            say_title (gameforge.main_quest_lv66._300_sayTitle)
+            say(gameforge.main_quest_lv72._120_say)
+            wait()
+            say_title ( pc.getname())
+            say(gameforge.main_quest_lv72._130_say)
+            wait()
+            say_title (gameforge.main_quest_lv66._300_sayTitle)
+            say(gameforge.main_quest_lv72._140_say)
+            wait()
+            say_title ( pc.getname())
+            say(gameforge.main_quest_lv72._150_say)
+            wait()
+            say_title (gameforge.main_quest_lv66._300_sayTitle)
+            say(gameforge.main_quest_lv72._160_say)
+            wait()
+            say_title (gameforge.main_quest_lv66._300_sayTitle)
+            say(gameforge.main_quest_lv72._170_say)
+            wait()
+            
+            if number (1,2) == 1 then
+                drug = 30009
+            else
+                drug = 30083
+            end
+            say_title (locale.reward)
+            say_reward(string.format(gameforge.main_quest_lv60._190_sayReward, 3100000))
+            say_reward(string.format(gameforge.main_quest_lv60._210_sayReward, item_name(70005)))
+            say_reward(string.format(gameforge.main_quest_lv60._210_sayReward, item_name(drug)))
+            say_reward(string.format(gameforge.main_quest_lv60._210_sayReward, item_name(30039)))
+
+            pc.give_exp2(3100000)
+            
+            pc.give_item2(70005) -- 경험의 반지
+            pc.give_item2(drug) -- 알수 없는 약 (+일 수도)
+            pc.give_item2(30039) -- 헝겊조각
+            
+            set_state (state_4)
+        end
+    end
+    state state_4 begin
+        when letter begin
+            local v = find_npc_by_vnum (mysterious_man)
+            if v != 0 then
+                target.vid ("__TARGET__",v,"")
+            end
+            send_letter(gameforge.main_quest_lv72._180_sendLetter)
+        end
+        when button or info begin
+            say_title(gameforge.main_quest_lv72._180_sendLetter)
+            say(gameforge.main_quest_lv72._190_say)
+        end
+        when mysterious_man.chat.gameforge.main_quest_lv72._180_sendLetter begin
+            target.delete("__TARGET__")
+            say_title (gameforge.main_quest_lv66._300_sayTitle)
+            say(gameforge.main_quest_lv72._200_say)
+            wait()
+            say_title (gameforge.main_quest_lv66._300_sayTitle)
+            say(gameforge.main_quest_lv72._210_say)
+            wait()
+            say_title (gameforge.main_quest_lv66._300_sayTitle)
+            say(gameforge.main_quest_lv72._220_say)
+            pc.setqf ("collect_beads", 0)
+
+            set_state (state_5)
+        end
+    end
+    state state_5 begin
+        when letter begin
+            send_letter(gameforge.main_quest_lv72._180_sendLetter)
+        end
+        when button or info begin
+            say_title(gameforge.main_quest_lv72._180_sendLetter)
+            say(gameforge.main_quest_lv72._190_say)
+        end
+
+        when ice_man.kill or ice_gaint.kill or ice_golem.kill begin
+            if number(1, blue_bead_drop_rate) > 1 then 
+                return
+            end
+
+            local n = pc.getqf ("pass_beads")
+            local i = pc.count_item (blue_bead)
+            if n < blue_beads_num and pc.count_item (blue_bead) < blue_beads_num - n then
+                notice_multiline(gameforge.main_quest_lv72._240_notice, notice)
+                notice_multiline(string.format(gameforge.main_quest_lv72._250_notice, blue_beads_num - n - 1), notice)
+                pc.give_item2 (blue_bead, 1)
+            end
+        end
+
+        when mysterious_man.chat.gameforge.main_quest_lv72._180_sendLetter with pc.count_item (blue_bead) > 0 begin
+            local now = get_global_time()
+            local today = now - math.mod (now, blue_bead_report_term)
+            local can_report_num
+            if pc.getqf ("last_access_date") != today then
+                pc.setqf ("last_access_date", today)
+                pc.setqf ("blue_bead_todays_report_num", 1)
+            else
+                local reported_num = pc.getqf("blue_bead_todays_report_num")
+                
+                if blue_bead_can_report_num - reported_num <= 0 then
+                    say(gameforge.main_quest_lv72._260_say)
+                    return
+                else
+                    if not pc.is_gm() then 
+                        pc.setqf ("blue_bead_todays_report_num", reported_num + 1)
+                    end
+                end
+            end
+
+            pc.remove_item (blue_bead, 1)
+            local n = pc.getqf("pass_beads")
+            if number (1,100) > pass_pct then
+                say_title (mob_name(mysterious_man))
+                say(gameforge.main_quest_lv72._270_say)
+                return
+            elseif n < blue_beads_num -1 then
+                pc.setqf ("pass_beads", n + 1)
+                say_title (gameforge.main_quest_lv66._300_sayTitle)
+                say (string.format(gameforge.main_quest_lv72._280_say, blue_beads_num - n - 1))
+            else
+                pc.setqf("pass_beads", 0)
+                say_title(gameforge.main_quest_lv66._300_sayTitle)
+                say(gameforge.main_quest_lv72._290_say)						
+                wait()
+                say_title (locale.reward)
+                say_reward(string.format(gameforge.main_quest_lv60._190_sayReward, 20000000))
+                say_reward(string.format(gameforge.main_quest_lv60._200_sayReward, 225000))
+                say_reward(string.format(gameforge.main_quest_lv60._210_sayReward, item_name(71035).." ".."3"..locale.count_postfix))
+                say_reward(string.format(gameforge.main_quest_lv60._210_sayReward, item_name(70043)))
+                say_reward(string.format(gameforge.main_quest_lv60._210_sayReward, item_name(72024)))
+
+                pc.give_exp2(20000000)
+                pc.change_money(225000)
+                
+                pc.give_item2(71035) 
+                pc.give_item2(71035) 
+                pc.give_item2(71035) 
+                pc.give_item2(70043) 
+                pc.give_item2(72024)
+
+                wait()
+                say(gameforge.main_quest_lv72._300_say)
+                set_state (__COMPLETE__)
+                q.done()
+                set_quest_state ("main_quest_lv78", "state_0")
+            end
+        end
+    end
+
+    state __COMPLETE__ begin
+    end
+end

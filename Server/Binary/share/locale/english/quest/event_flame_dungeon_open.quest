@@ -1,0 +1,119 @@
+define EVENT_NPC 20381
+define TELEPORT_ITEM 71173
+define TELEPORT_ITEM_CNT 1
+define PASS_ITEM 71174
+define PASS_ITEM_CNT 3
+define ENTRY_MAP_INDEX 62
+define ENTRY_MAP_X 614200
+define ENTRY_MAP_Y 706800
+define KILL_MOB1 3101
+define KILL_MOB2 3102
+define KILL_MOB3 3103
+define KILL_MOB4 3104
+define KILL_MOB5 3105
+define KILL_MOB6 3190
+define KILL_MOB7 3191
+
+quest event_flame_dungeon_open begin
+    state start begin
+        when EVENT_NPC.chat.gameforge.event_flame_dungeon_open._010_npcChat with pc.get_level() >= 90 begin
+            say(gameforge.event_flame_dungeon_open._020_say)
+            wait()
+            say(gameforge.event_flame_dungeon_open._030_say)
+            wait()
+            say(gameforge.event_flame_dungeon_open._080_say)
+            pc.setqf("event_FD_time", 0)
+            set_state(run)
+        end
+    end
+
+    state run begin
+        when EVENT_NPC.chat.gameforge.event_flame_dungeon_open._040_npcChat with game.get_event_flag("w21open_event")>0 begin
+            say(gameforge.event_flame_dungeon_open._050_say)
+            wait()
+            
+            local t = pc.getqf("event_FD_time")
+            local killcount = pc.getqf("kill_done")
+            if killcount == 0 then
+                say(gameforge.event_flame_dungeon_open._080_say)
+            elseif (t==0) or (t+86400 < get_global_time()) then
+                say(gameforge.event_flame_dungeon_open._060_say)
+                pc.give_item2(TELEPORT_ITEM, TELEPORT_ITEM_CNT)
+                pc.give_item2(PASS_ITEM, PASS_ITEM_CNT)
+                pc.setqf("event_FD_time", get_global_time())
+                pc.setqf("kill_count_1", 0)
+            else
+                say(gameforge.event_flame_dungeon_open._070_say)
+            end	
+        end
+
+        when letter with game.get_event_flag("w21open_event")>0 begin
+			send_letter(gameforge.event_flame_dungeon_open._010_npcChat) 
+ 			--남은 처치 수 안내문 
+			q.set_counter_name(gameforge.main_quest_lv98._680_counterName)
+			event_flame_dungeon_open.kill_count() 
+		end
+        
+        when button or info with game.get_event_flag("w21open_event")>0 begin
+			say_title(gameforge.event_flame_dungeon_open._010_npcChat) 
+			say(string.format(gameforge.levelup._26_say, 100 - pc.getqf("kill_count_1")))
+		end
+        
+        when KILL_MOB1.kill begin
+            local kill_count = pc.getqf("kill_count_1")
+            pc.setqf("kill_count_1", kill_count+1)
+            event_flame_dungeon_open.kill_count() 
+        end
+        
+        when KILL_MOB2.kill begin
+            local kill_count = pc.getqf("kill_count_1")
+            pc.setqf("kill_count_1", kill_count+1)
+            event_flame_dungeon_open.kill_count() 
+        end
+
+        when KILL_MOB3.kill begin
+            local kill_count = pc.getqf("kill_count_1")
+            pc.setqf("kill_count_1", kill_count+1)
+            event_flame_dungeon_open.kill_count() 
+        end
+
+        when KILL_MOB4.kill begin
+            local kill_count = pc.getqf("kill_count_1")
+            pc.setqf("kill_count_1", kill_count+1)
+            event_flame_dungeon_open.kill_count() 
+        end
+
+        when KILL_MOB5.kill begin
+            local kill_count = pc.getqf("kill_count_1")
+            pc.setqf("kill_count_1", kill_count+1)
+            event_flame_dungeon_open.kill_count() 
+        end
+
+        when KILL_MOB6.kill begin
+            local kill_count = pc.getqf("kill_count_1")
+            pc.setqf("kill_count_1", kill_count+1)
+            event_flame_dungeon_open.kill_count() 
+        end
+
+        when KILL_MOB7.kill begin
+            local kill_count = pc.getqf("kill_count_1")
+            pc.setqf("kill_count_1", kill_count+1)
+            event_flame_dungeon_open.kill_count() 
+        end
+
+        when TELEPORT_ITEM.use begin
+            pc.warp(ENTRY_MAP_X, ENTRY_MAP_Y, ENTRY_MAP_INDEX)
+            pc.remove_item(TELEPORT_ITEM, 1)
+        end
+        
+        function kill_count()
+            local total_remain = 100
+            local remain1 = pc.getqf("kill_count_1")
+            local remain_count = total_remain - remain1
+            q.set_counter_value(remain_count)
+            if total_remain == 0 then
+                pc.setqf("kill_done", 1)
+            end
+        end
+    end
+end

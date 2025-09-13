@@ -1,0 +1,739 @@
+quest arne_test begin
+	state start begin
+		when login begin
+					NpcName=mob_name(20095) --SeonHae
+--					notice("Script läuft.")
+--					notice("Npc heisst: "..NpcName..". Right on!")
+--					notice(string.format("Geschlecht ist: %s", pc.get_sex()))
+--					mob.spawn(20095, 356, 483, 1, 1, 1)
+					pc.give_item2(10)
+--					set_state(talk_seon)
+		end
+	end
+	
+	state talk_seon begin     
+
+function challenge_main_menu_proto(SelectionList)
+	local selected = 0
+	local s = select_table (SelectionList)
+--	local s = select ("1", "2", "3", "4", "5")
+-- always 5 deep
+--	say_title("ChallengeX")
+	if s == 1 then
+			selected = 1
+		else
+			if s == 2 then
+				selected = 2
+			else
+				if s == 3 then
+					selected = 3
+				else
+					if s == 4 then
+						selected = 4
+					else
+						selected = 5
+					end
+				end
+			end
+		end
+	return selected
+end
+
+function challenge_calculate_rewards(TargetChallenge, AmountChallenge, TimeChallenge)
+	local NewChallenge
+	local NewRewards = {1,2,3}
+	local	BetRewardTable= {
+				[1] = {[1] = 50, [2] = 100,},
+				[2] = {[1] = 250, [2] = 500,},
+				[3] = {[1] = 300, [2] = 1200,},
+				[4] = {[1] = 400, [2] = 5000,},
+				}
+	
+	NewChallenge = (TargetChallenge + (2*AmountChallenge))*TimeChallenge
+	notice("Challenge computed")
+		if NewChallenge >= 30 then
+			BetMoney = BetRewardTable[4][1]
+			Reward = BetRewardTable[4][2]
+			 NewRewards = {NewChallenge, BetMoney, Reward}
+		else
+			if NewChallenge >= 15 then
+				BetMoney = BetRewardTable[3][1]
+				Reward = BetRewardTable[3][2]
+				 NewRewards = {NewChallenge, BetMoney, Reward}
+			else
+				if NewChallenge >= 8 then
+					BetMoney = BetRewardTable[2][1]
+					Reward = BetRewardTable[2][2]
+					 NewRewards = {NewChallenge, BetMoney, Reward}
+				else
+						BetMoney = BetRewardTable[1][1]
+						Reward = BetRewardTable[1][2]
+						 NewRewards = {NewChallenge, BetMoney, Reward}
+				end
+			end
+		end 
+	return NewRewards
+end
+
+			when login or enter begin
+				HuntAmount=5
+				GatherAmount=5
+				pc.setqf("kill_count_1", 0)
+				pc.setqf("collect_count", 0)
+--				local find_npc_vnum = 20095
+--				local v=find_npc_by_vnum(find_npc_vnum) -- alter Mann
+--				if 0==v then
+--					notice("Id 0")
+--					else
+--						notice("NPC da")
+--						target.vid("__TARGET__", v, "Seon-Hae")
+--						send_letter("Sprecht mit Seon-Hae")
+--				end
+			end
+			
+			when button or info begin
+				say_title("Sprecht mit Seon-Hae")
+				say("Ihr habt einen alten Mann an der Brücke gesehen, der völlig aufgelöst ist und wahrscheinlich Hilfe braucht.")
+			end
+		
+
+			  when 20095.Chat."Teleport Command" begin
+			  	pc.setqf("pcx", pc.get_x())
+					pc.setqf("pcy", pc.get_y())
+			  	set_state(teleport)
+			  end   
+			  
+		  when 20095.Chat."ChallengeX" begin 
+		
+		  local MainMenuList = 
+		  		{
+		  		"Ziel Wählen",
+		  		"Menge Wählen",
+		  		"Zeit Wählen",
+		  		"Quest Starten",
+		  		"Abbruch",
+		  		}
+		  local TargetMenuList =
+		  	{
+		  		"Wildhunde",
+		  		"Wölfe",
+		  		"Tiger",
+		  	}
+		  local AmountMenuList =
+		  	{
+		  		"10",
+		  		"30",
+		  		"50",
+		  	}
+		  local TimeMenuList =
+		  	{
+		  		"60 min",
+		  		"30 min",
+		  		"10 min",
+		  	}
+		  TargetList =
+		  	{
+		  		101,
+		  		102,
+		  		114,
+		  	}
+		  AmountList =
+		  	{
+		  		10,
+		  		30,
+		  		50,
+		  	}
+		  TimeList =
+		  	{
+		  		3600,
+		  		1800,
+		  		600,
+		  	}
+		  
+		  local Selected = 0
+		 
+		  
+		  if BeenHere != 1 then
+		 		ChallengeIndex = 0
+				BetMoney = 0
+				Reward = 0
+				TargetChallenge = 0
+				AmountChallenge = 0
+				TimeChallenge = 0
+				TargetSelector = 0
+				AmountSelector = 0
+				TimeSelector = 0
+				BeenHere = 1				
+			end
+		repeat
+			Selected = arne_test.challenge_main_menu_proto(MainMenuList)
+			if Selected == 1 then
+				TargetSelector = arne_test.challenge_main_menu_proto(TargetMenuList)
+				TargetChallenge = TargetSelector
+			end
+			if Selected == 2 then
+				AmountSelector = arne_test.challenge_main_menu_proto(AmountMenuList)
+				AmountChallenge = AmountSelector
+			end
+			if Selected == 3 then
+				TimeSelector = arne_test.challenge_main_menu_proto(TimeMenuList)
+				TimeChallenge = TimeSelector
+			end
+			if Selected == 4 then
+				local NewRewardsTable = {}
+				NewRewardsTable = arne_test.challenge_calculate_rewards(TargetChallenge, AmountChallenge, TimeChallenge)
+				say_title("Quest starten")                                                                              
+				say("Quest mit folgenden Parametern starten?")                                                          
+				say(string.format("Jage %s x %s in %s Minuten",AmountList[AmountSelector],mob_name(TargetList[TargetSelector]),TimeList[TimeSelector]/60))
+				say(string.format("Challenge: %s  Einsatz: %s  Belohnung: %s Yang", NewRewardsTable[1], NewRewardsTable[2], NewRewardsTable[3]))  
+				local x = select("Ja", "Nein")                                                                          
+				if x == 1 then                                                                                                                                                
+					pc.setqf("challenge_duration", get_time())
+					FinalTarget = TargetList[TargetSelector]
+					Selected = 5
+					pc.setqf("FinalTarget",TargetList[TargetSelector])		
+					pc.setqf("FinalAmount",AmountList[AmountSelector])	
+					pc.setqf("FinalTime",TimeList[TimeSelector])				
+					set_state(start_2quest)                                                       
+				else                                                                                                    
+					Selected = 5
+					set_state(bounceback)                                                               
+				end
+			end	 
+			if Selected == 5 then
+			  set_state(bounceback)                                                                                                
+			end
+		until Selected == 5
+	end
+end
+
+
+	state bounceback begin
+		when enter or login begin
+			notice(string.format("%s ,%s ,%s", TimeChallenge, AmountChallenge, TargetChallenge))
+			set_state(talk_seon)
+		end      
+	end
+
+state start_2quest begin
+		when enter or login begin
+			q.start()
+			local timeToWait = pc.getqf("FinalTime")
+			local timeLeft = 0
+			timeLeft = timeToWait - (get_time() - pc.getqf("challenge_duration"))
+			send_letter(string.format("Jage %s x %s in %s Minuten",pc.getqf("FinalAmount"),mob_name(pc.getqf("FinalTarget")),pc.getqf("FinalTime")/60))
+			q.set_title(string.format("Jage %s x %s in %s Minuten",pc.getqf("FinalAmount"),mob_name(pc.getqf("FinalTarget")),pc.getqf("FinalTime")/60))
+			q.set_clock("Zeit:", timeLeft)	
+			if get_time() - pc.getqf("challenge_duration") >= timeToWait then
+			q.done()
+			notice("Challenge Zeit Abgelaufen") 
+			set_state(challenge_failed)
+			end
+		end
+	
+		when FinalTarget.kill begin   
+			if pc.getqf("kill_count_1") < AmountSelector then                                      
+				local index =pc.getqf("kill_count_1") + 1                                        
+				pc.setqf("kill_count_1",index)                                                   
+	--			q.set_counter_value(AmountSelector - pc.getqf("kill_count_1"))                       
+				if AmountSelector == pc.getqf("kill_count_1") and get_time() - pc.getqf("challenge_duration") < timeToWait then                                   
+					q.done()                                                                       
+					notice("Challenge Erfolg")      
+					set_state(challenge_success)                                                         
+				end                                                                              
+			end
+		end 
+	
+end
+--				
+--			  
+--			  
+--			  when 20095.Chat."Challenge" begin
+--			  if BeenHere != 1 then
+--			 		ChallengeIndex = 0
+--					BetMoney = 0
+--					Reward = 0
+--					TargetChallenge = 0
+--					AmountChallenge = 0
+--					TimeChallenge = 0
+--					TargetSelector = 0
+--					AmountSelector = 0
+--					TimeSelector = 0
+--					BeenHere = 1					
+--				end
+--				say_title("Challenge")
+--				local s = select("Ziel auswählen", "Anzahl auswählen", "Zeit auswählen")
+--				if s == 1 then
+--			 		say_title("Ziel auswählen")
+--				 	local t = select("Wildhunde", "Wölfe", "Tiger")
+--				 	if t == 1 then
+--				 		TargetSelector = Target1 
+--				 		TargetChallenge = 1 
+--				 	else
+--				 		if t== 2 then
+--				 			TargetSelector = Target2
+--				 			TargetChallenge = 2 
+--				 		else
+--				 			TargetSelector = Target3
+--				 			TargetChallenge = 4 
+--				 		end
+--				 	end
+--				 	else
+--				 		if h == 2 then
+--				 		say_title("Anzahl festlegen")
+--			 			local a = select("10", "30", "50")
+--					 	if a == 1 then
+--					 		AmountSelector = 10 
+--					 		AmountChallenge = 1 
+--								else
+--									if a== 2 then
+--										AmountSelector = 30
+--										AmountChallenge = 2 	 			
+--									else
+--										AmountSelector = 50
+--										AmountChallenge = 4 
+--									end
+--							end
+--						else
+--							say_title("Zeit festlegen")
+--						 	local i = select("60 Minuten", "30 Minuten", "10 Minuten")
+--			 				if i == 1 then
+--			 					TimeSelector = Time1
+--			 					TimeChallenge = 1  	 					
+--			 				else
+--			 					if i== 2 then	 					
+--			 					TimeChallenge = 2
+--			 					set_state(bounceback)
+--			 					else
+--			 						TimeSelector = Time3
+--			 						TimeChallenge = 4
+--			 					end
+--			 				end
+--						end			 		
+--					end			
+--			 	end
+--			  
+--
+--			
+--			when 20095.Chat."Dem alten Mann helfen" begin
+--			target.delete("__TARGET__")
+--				say_title("Hilfe für Seon-Hae")
+--				say("Wehe! Diese verflixten Kläffer! Hungrige Wildunde haben meinen kleinen Hund Fu verschlungen! Mit zwei Bissen war er weg, der arme Kleine!")
+--				wait()
+--				say(string.format("Rächt meinen Fu! Erschlagt %s hungrige Wildhunde und seine kleine Hundeseele wird mit Genugtuung in das Geisterreich eingehen können! Der arme Kleine ...",HuntAmount))
+--				set_state(hunting)
+--			end			
+--		
+--			when 20095.Chat."Dem alten Mann Ehre erweisen" begin
+--			target.delete("__TARGET__")
+--				say_title("Tee für Seon-Hae")
+--				say("*Der alte Mann Seon-Hae nickt euch zu, als ihr euch zur Begrüßung verbeugt. Er scheint von Sorgen geplagt.*")
+--				wait()
+--				say("*Die Tradition würde gebieten, ihm einen Glockenblumentee zu reichen. Dies demonstriert eure Achtung und beruhigt seine Seele.*")
+--				wait()
+--				say(string.format("*Sammelt %s Glockenblumen. Die Wildhunde erschnüffeln sie gere im Gras, von ihnen könnt ihr welche erbeuten.*", GatherAmount))
+--				set_state(gather)
+--			end
+--		
+--		when 20095.Chat."Den alten Mann ausrauben" begin
+--			target.delete("__TARGET__")
+--				say_title("Überfall auf Seon-Hae")
+--				say("Rüpel! Ein alter Mann ist in Trauer um seinen besten Freund und ihr haltet ihm noch eine Klinge unter die Nase! Aber glaubt nur nicht das ihr damit davonkommt! Der Geist meines toten Hundes wird mir Schutz senden!")
+--				wait()
+--				say("Fass, Fu! Fass!")
+--				set_state(fighting)
+--			end
+--		
+--
+--		
+	state teleport begin
+		when enter or login begin
+			if pc.get_map_index() >= 1120000 and pc.get_map_index() <= 1129999 then
+				say_in_map("proper state")
+				set_state(arena_relocate)
+			else
+			notice("teleport begin")
+			command("private 112")
+			set_state(arena_relocate)
+			end
+		end
+	end
+		
+		state arena_relocate begin
+			when enter or login begin
+				if pc.get_map_index() >= 1120000 then
+				notice("relocate")
+				command("go 88 88")
+--				say_in_map("proper state")
+				set_state(spawn_arena)
+				end
+			end
+		end
+		
+		state spawn_arena begin
+			when enter or login begin
+				mob.spawn(101, 101, 101, 1,1, 3)
+				notice("spawn")
+				set_state(arena_combat)
+			end
+		end
+		
+	
+		
+		state arena_combat begin
+			when enter or login begin
+				notice("combat")
+--				if pc.is_dead()	== true then
+--					set_state(return_from_arena)
+--				end
+			end
+		
+			when 101.kill begin
+				local index = pc.getqf("killcount")+1
+				pc.setqf("killcount", index)    
+
+				if pc.getqf("killcount") >= 3 then
+					notice("final kill")
+					set_state(return_from_arena)
+				end
+			end
+		end
+		
+		state return_from_arena begin
+			when enter or login begin
+				local CordX = pc.getqf("pcx")*100
+				local CordY = pc.getqf("pcy")*100
+				pc.setqf("killcount", 0)  
+				say_title("Round Over")
+				say("Return home.")
+				local s = select("OK")
+				if s == 1 then
+					pc.warp(CordX, CordY)
+					notice("timer over")
+					set_state(talk_seon)
+				end
+			end
+		end
+		
+		state hunting begin
+			when enter begin	
+				q.start()
+				q.set_title("Hundejagd")
+				notice("Erlege hungrige Wildhunde.")
+				send_letter("Erlegt hungrige Wildhunde.")
+				q.set_counter("Noch übrig", HuntAmount)
+			end
+			
+			when button or info begin
+				say_title("Erlege Wildhunde")
+				say(string.format("Erlegt %s hungrige Wildhunde um Fu zu rächen.", HuntAmount))
+			end
+			
+			
+			-----Kill 171#Hungringer wildhund-----
+			when 171.kill begin
+				if pc.getqf("kill_count_1") < HuntAmount then
+					local index =pc.getqf("kill_count_1") + 1
+					pc.setqf("kill_count_1",index)
+					q.set_counter_value(HuntAmount - pc.getqf("kill_count_1"))  
+					if HuntAmount == pc.getqf("kill_count_1") then
+						q.done()
+						notice("Das sollten genug Hunde gewesen sein, kehrt zu Seon-Hae zurück.")
+						set_state(back_to_npc)
+					end
+				end
+			end
+		end
+			
+			state back_to_npc begin
+				when enter begin
+					q.start()
+					q.set_title("Zurück zu Seon-Hae")
+					send_letter("Zurück zu Seon-Hae")
+					local v=find_npc_by_vnum(20095) -- Seon-Hae
+					if 0==v then
+					else
+						target.vid("__TARGET2__", v, "Seon-Hae")
+					end
+				end
+				
+				when button or info begin
+					say_title("Zurück zu Seon-Hae")
+					say("Kehrt zu Seon-Hae zurück.")
+				end
+				
+				when __TARGET2__.target.click begin
+					target.delete("__TARGET2__")
+						say("Gute Arbeit, ihr habt es den Biestern gezeigt! Mein kleiner Fu kann nun getrost ins Geisterreich übergehen.") -- white font text
+						wait()
+						say("Hier, dieses Geld hatte ich gespart um seine Leckereien zu kaufen. Ich schätze es gebührt euch.")
+						say_reward("Ihr erhaltet:")
+						say("Einen großen Beutel Yang")
+						q.done()
+						pc.change_money(10000)
+						pc.give_exp2(500)
+				end
+			end
+			
+		state gather begin
+		
+			when enter begin
+				q.start()
+				q.set_title("Glockenblumen")
+				notice("Erlegt Wildhunde um Glockenblumen zu sammeln")
+				send_letter("Erlegt Wildhunde um Glockenblumen zu sammeln.")
+				q.set_counter("Noch übrig", GatherAmount)
+			end
+
+				when button or info begin
+					say_title("Glockenblumen von Wildhunden")
+					say(string.format("Erbeutet %s Glockenblumen von den Wildhunden der Umgebung", GatherAmount))
+				end
+											
+			when 101.kill begin -- yy unfinished yy
+				if pc.count_item(50702)< GatherAmount - pc.getqf("collect_count") then
+					pc.give_item2(50702, 1)
+					local index = pc.getqf("collect_count") + 1
+					q.set_counter_value(GatherAmount - pc.getqf("collect_count"))
+					pc.setqf("collect_count",index)
+					notice("Ihr habt eine Glockenblume gefunden")				
+					else
+					q.done()
+--					set_state(return_flowers)
+				end			
+			end		
+		end
+		
+--		state return_flowers
+--			when enter begin
+--				q.start()
+--				q.set_title("Der Tee für Seon-Hae")
+--				notice("Kehrt zu Seon-Hae zurück")
+--				send_letter("Kehrt zu Seon-Hae zurück")
+--				if 0!=v then
+--					target.vid("__TARGET3__", v, "Seon-Hae")
+--				end
+--			end
+--
+--			when button or info begin
+--				say_title("Glockenblumen für Seon-Hae")
+--				say("Kehrt mit dne Glockenblumen zu Seon-Hae zurück.")
+--			end
+--			
+--			when __TARGET3__.target.click begin
+--				target.delete("__TARGET3__")
+--				say("*Es dauert nicht lange, aus den Glockenblumen einen Tee zuzubereiten. Seon-Hae betrachtet euch wohlwollend als ihr ihm die Schale überreicht.*") -- white font text
+--				wait()
+--				say("Das nenne ich gute Erziehung! Das war genau das,w as ich in dieser schweren Zeit brauchte. Ihr seid noch ein junger Mensch mit Manieren. Selten anzutreffen bei euch Abenteurern.")
+--				say_reward("*Seon-Hae steckt euch etwas zu:*")
+--				say("Einige Yang")
+--				q.done()
+--				pc.change_money(100)
+--				pc.give_exp2(1000)
+--			end	
+--		
+--		end		
+			
+		state fighting begin
+			when enter begin
+				q.start()
+				q.set_title("Besiegt den Wolf")
+				send_letter("Besiegt den Wolf")
+				mob.spawn(102, 356, 483, 1, 1, 1)
+			end
+			
+			when button or info begin
+				say_title("Besiegt den Wolf")
+				say("Besiegt den Wolfsgeist, der Seon-Ha zur Hilfe geeilt ist.")
+			end
+			
+			when 102.kill begin
+				q.done()
+				set_state(robbing)
+			end
+
+		end
+		
+	state robbing begin
+			when enter begin
+				q.start()
+				q.set_title("Holt das Geld von Seon-Hae")
+				send_letter("Holt das Geld von Seon-Hae")
+				local v=find_npc_by_vnum(20095) -- Seon-Hae
+				if 0==v then
+					else
+						target.vid("__TARGET2__", v, "Seon-Hae")
+				end
+			end
+			
+			when button or info begin
+				say_title("Seon-Hae ausrauben")
+				say("Ihr habt Seon-Haes Wächter beseigt, nun ist es an der Zeit sich sein Geld zu schnappen.")
+			end	
+			
+			when __TARGET2__.target.click begin
+					target.delete("__TARGET2__")
+					say_title("Das Geld von Seon-Ha")
+					say("Ihr... Ihr habt ihn erschlagen! Bitte, tut mir nicht das gleiche an, ihr sollt alles bekommen, was ich habe!") -- white font text
+					wait()
+					say("Da, nehmt meinen Besitz! Möge euch höchstpersönlich ein Metinstein auf den Kopf fallen, ehrloser Schurke!")
+					say_reward("Seon-Ha übergibt euch:")
+					say_item_vnum(11)
+					say("und einen großen Beutel Yang")
+					q.done()
+					pc.change_money(10000)
+					pc.give_item2(11, 1)
+					pc.give_exp2(100)
+			end				
+		end	
+
+		
+--	 when 20095.Chat."Ziele festlegen" begin
+--		say_title("Challenge")
+--		local s = select("Ziel auswählen", "Anzahl auswählen", "Zeit auswählen")
+--		if s == 1 then
+--	 		say_title("Ziel auswählen")
+--		 	local t = select("Wildhunde", "Wölfe", "Tiger")
+--		 	if t == 1 then
+--		 		TargetSelector = Target1 
+--		 		TargetChallenge = 1 
+--		 	else
+--		 		if t== 2 then
+--		 			TargetSelector = Target2
+--		 			TargetChallenge = 2 
+--		 		else
+--		 			TargetSelector = Target3
+--		 			TargetChallenge = 4 
+--		 		end
+--		 	end
+--		 	else
+--		 		if h == 2 then
+--		 		say_title("Anzahl festlegen")
+--	 			local a = select("10", "30", "50")
+--			 	if a == 1 then
+--			 		AmountSelector = 10 
+--			 		AmountChallenge = 1 
+--						else
+--							if a== 2 then
+--								AmountSelector = 30
+--								AmountChallenge = 2 	 			
+--							else
+--								AmountSelector = 50
+--								AmountChallenge = 4 
+--							end
+--					end
+--				else
+--					say_title("Zeit festlegen")
+--				 	local i = select("60 Minuten", "30 Minuten", "10 Minuten")
+--	 				if i == 1 then
+--	 					TimeSelector = Time1
+--	 					TimeChallenge = 1  	 					
+--	 				else
+--	 					if i== 2 then	 					
+--	 					TimeChallenge = 2
+--	 					else
+--	 						TimeSelector = Time3
+--	 						TimeChallenge = 4
+--	 					end
+--	 				end
+--				end	
+--		 		
+--	end
+--
+--	 when 20095.Chat."Anzahl festlegen" begin
+--	 	say_title("Anzahl festlegen")
+--	 	local s = select("10", "30", "50")
+--	 	if s == 1 then
+--	 		AmountSelector = 10 
+--	 		AmountChallenge = 1 
+--	 		set_state(bounceback)
+--	 	else
+--	 		if s== 2 then
+--	 			AmountSelector = 30
+--	 			AmountChallenge = 2 	 			
+--	 			set_state(bounceback)
+--	 		else
+--	 			AmountSelector = 50
+--	 			AmountChallenge = 4 
+--	 			set_state(bounceback)
+--	 		end
+--	  end	
+--	end
+--
+--	
+--	 when 20095.Chat."Zeit festlegen" begin
+--	 	say_title("Zeit festlegen")
+--	 	local s = select("60 Minuten", "30 Minuten", "10 Minuten")
+--	 	if s == 1 then
+--	 		TimeSelector = Time1
+--	 		TimeChallenge = 1  
+--	 		set_state(bounceback)
+--	 	else
+--	 		if s== 2 then
+--	 			TimeSelector = Time2
+--	 			TimeChallenge = 2
+--	 			set_state(bounceback)
+--	 		else
+--	 			TimeSelector = Time3
+--	 			TimeChallenge = 4
+--	 			set_state(bounceback)
+--	 		end
+--	 	end
+--	 end	
+
+	
+
+	
+	state bounceback begin
+		when enter or login begin
+			notice(string.format("%s ,%s ,%s", TimeChallenge, AmountChallenge, TargetChallenge))
+			set_state(talk_seon)
+		end      
+	end
+	
+	state start_quest begin
+		when enter or login begin
+			q.start()
+			timeToWait = TimeList[TimeSelector]
+			timeLeft = timeToWait - (get_time() - pc.getqf("challenge_duration"))
+			send_letter(string.format("Jage %s x %s in %s Minuten",AmountList[AmountSelector],mob_name(TargetList[TargetSelector]),TimeList[TimeSelector]/60))
+			q.set_title(string.format("Jage %s x %s in %s Minuten",AmountList[AmountSelector],mob_name(TargetList[TargetSelector]),TimeList[TimeSelector]/60))
+			q.set_clock("Zeit:", timeLeft)	
+			if get_time() - pc.getqf("challenge_duration") >= timeToWait then
+			q.done()
+			notice("Challenge Zeit Abgelaufen") 
+			set_state(challenge_failed)
+			end
+		end
+		
+		when FinalTarget.kill begin   
+			if pc.getqf("kill_count_1") < AmountSelector then                                      
+				local index =pc.getqf("kill_count_1") + 1                                        
+				pc.setqf("kill_count_1",index)                                                   
+	--			q.set_counter_value(AmountSelector - pc.getqf("kill_count_1"))                       
+				if AmountSelector == pc.getqf("kill_count_1") and get_time() - pc.getqf("challenge_duration") < timeToWait then                                   
+					q.done()                                                                       
+					notice("Challenge Erfolg")      
+					set_state(challenge_success)                                                         
+				end                                                                              
+			end
+		end                                                                                
+	end	
+
+
+	state challenge_failed begin
+		when enter or login begin
+			notice("Challenge fehlgeschlagen")
+			set_state(talk_seon)
+		end
+	end
+	
+	state challenge_success begin
+		when enter or login begin
+			notice(string.format("Du erhälst", Reward))
+			pc.change_money(Reward)
+			set_state(talk_seon)
+		end
+	end
+
+end

@@ -1,0 +1,162 @@
+quest subquest_47  begin
+
+	state start begin
+		when login or levelup with pc.level >= 50  and pc.level <= 52 begin
+			set_state( information )
+		end
+	end
+
+	state information begin
+		when letter begin
+			local v=find_npc_by_vnum(20355)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, gameforge.subquest_47._10_targetVid)
+			end
+		end
+		when __TARGET__.target.click or	20355.chat.gameforge.subquest_47._20_npcChat with  pc.level >= 50 begin
+			target.delete("__TARGET__")
+			say_title(gameforge.main_quest_lv10._30_sayTitle)
+			say(gameforge.subquest_47._30_say)
+			-- select: take quest / give up quest
+			local r= select(gameforge.find_brother_article._90_select, gameforge.subquest_01._60_select)
+			-- give up quest
+			if 2==r then
+				say(gameforge.subquest_47._40_say) -- give up yes/no
+				local a= select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
+				-- dont give up
+				if 2==a then
+					say_title(gameforge.main_quest_lv10._30_sayTitle)
+					say(gameforge.subquest_47._50_say)
+					return
+				end
+				-- give up
+				say_title(gameforge.main_quest_lv10._30_sayTitle)
+				say(gameforge.subquest_47._60_say)
+				set_state(__GIVEUP__)
+				return
+			end
+			-- dont give up quest
+			say_title(gameforge.main_quest_lv10._30_sayTitle)
+			say(gameforge.subquest_47._70_say)
+			wait()
+			say_title(gameforge.main_quest_lv10._30_sayTitle)
+			say(gameforge.subquest_47._80_say) -- displays the riddle text
+			wait()
+			say_title(gameforge.main_quest_lv10._30_sayTitle)
+			say(gameforge.subquest_47._90_say)
+			-- select: answer question / i dont know / show again
+			local s= select(gameforge.subquest_47._100_select, gameforge.subquest_47._110_select, gameforge.subquest_47._115_select)
+			-- i dont know
+			if 2==s then
+				say(gameforge.subquest_47._120_say)
+				-- select: give up yes / no
+				local a= select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
+				-- show riddle again
+				if  2==a then
+					say_title(gameforge.main_quest_lv10._30_sayTitle)
+					say(gameforge.subquest_47._130_say)
+					return
+				end
+				-- give up quest
+				say_title(gameforge.main_quest_lv10._30_sayTitle)
+				say(gameforge.subquest_47._140_say)
+				set_state(__GIVEUP__)
+				return
+			end
+			-- show the riddle again
+			if 3==s then
+				say_title(gameforge.main_quest_lv10._30_sayTitle)
+				say(gameforge.subquest_47._150_say) -- displays the riddle text again
+				wait()
+			end
+			say_title(gameforge.main_quest_lv10._30_sayTitle)
+			say(gameforge.subquest_47._160_say)
+			-- input answer
+			local answer = select( gameforge.subquest_47._302_answer_wrong, gameforge.subquest_47._304_answer_wrong, gameforge.subquest_47._301_answer_correct, gameforge.subquest_47._303_answer_wrong, gameforge.subquest_47._305_answer_dontknow)
+			-- input correct answer -> quest complete
+			if 3 == answer  then
+				say_title(gameforge.main_quest_lv10._30_sayTitle)
+				say(gameforge.subquest_47._170_say)
+				say_reward(gameforge.subquest_47._180_sayReward)
+				pc.give_exp2(2300000)
+				clear_letter()
+			    set_state(__COMPLETE__)
+				return
+			-- input no answer
+			elseif 5 == answer then
+				say_title(gameforge.main_quest_lv10._30_sayTitle)
+				say(gameforge.subquest_47._190_say)
+				-- select: try again / i dont know
+				local answer = select(gameforge.subquest_47._200_select, gameforge.subquest_47._210_select)
+				-- i dont know
+				if 2==answer then
+					say_title(gameforge.main_quest_lv10._30_sayTitle)
+					say(gameforge.subquest_47._220_say)
+					return
+				end
+				-- try again
+				say_title(gameforge.main_quest_lv10._30_sayTitle)
+				say(gameforge.subquest_47._230_say)
+				local answer = select( gameforge.subquest_47._304_answer_wrong, gameforge.subquest_47._301_answer_correct, gameforge.subquest_47._303_answer_wrong, gameforge.subquest_47._302_answer_wrong, gameforge.subquest_47._305_answer_dontknow)
+				-- input correct answer -> quest complete
+				if 2==answer then
+					say_title(gameforge.main_quest_lv10._30_sayTitle)
+					say(gameforge.subquest_47._240_say)
+					say_reward(gameforge.subquest_47._250_sayReward)
+					pc.give_exp2(2300000)
+					clear_letter()
+					set_state(__COMPLETE__)
+					return
+				-- input wrong answer
+				else
+					say_title(gameforge.main_quest_lv10._30_sayTitle)
+					say(gameforge.subquest_47._260_say)
+					return
+				end
+			-- wrong answer
+			else
+				say_title(gameforge.main_quest_lv10._30_sayTitle)
+				say(gameforge.subquest_47._270_say)
+				-- select: try again / i dont know
+				local a= select(gameforge.subquest_47._280_select, gameforge.subquest_47._290_select)
+				-- i dont know -> give up
+				if 2==a then
+					say_title(gameforge.main_quest_lv10._30_sayTitle)
+					say(gameforge.subquest_47._220_say)
+					set_state(__GIVEUP__)
+					return
+				end
+				-- try again
+				say(gameforge.subquest_47._300_say)
+				local answer = select( gameforge.subquest_47._301_answer_correct, gameforge.subquest_47._302_answer_wrong, gameforge.subquest_47._303_answer_wrong, gameforge.subquest_47._304_answer_wrong, gameforge.subquest_47._305_answer_dontknow)
+				-- correct answer
+				if 1==answer then
+					say_title(gameforge.main_quest_lv10._30_sayTitle)
+					say(gameforge.subquest_47._310_say)
+					say_reward(gameforge.subquest_47._180_sayReward)
+					pc.give_exp2(2300000)
+					say_reward(gameforge.subquest_47._320_sayReward)
+					pc.change_money(20000)
+					clear_letter()
+					set_state(__COMPLETE__)
+					return
+				-- no or wrong answer -> retry by clicking captain (20355.chat) again
+				else
+					say_title(gameforge.main_quest_lv10._30_sayTitle)
+					say(gameforge.subquest_47._330_say)
+					return
+				end
+			end
+		end
+	end
+
+	state __COMPLETE__ begin
+		when enter begin
+			q.done()
+		end
+	end
+	state __GIVEUP__ begin
+	end
+end
+

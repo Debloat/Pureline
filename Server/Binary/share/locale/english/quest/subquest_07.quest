@@ -1,0 +1,138 @@
+quest subquest_7 begin
+	state start begin
+		when login or levelup with pc.level >= 12 and pc.level <= 17 begin
+			set_state(information)
+		end
+
+	end
+
+	state information begin
+		when letter begin
+
+			local v = find_npc_by_vnum(20008)
+
+			if v!= 0 then
+				target.vid("__TARGET__", v, gameforge.subquest_07._10_targetVid)
+			end
+		end
+
+		when 20008.chat.gameforge.subquest_07._20_npcChat with pc.level >= 12 begin
+			target.delete("__TARGET__")
+
+			say_title(gameforge.subquest_06._320_sayTitle)
+			say(gameforge.subquest_07._30_say)
+
+			set_state(ask_to_sunyugil)
+		end
+	end
+
+	state ask_to_sunyugil begin
+		when letter begin
+			send_letter(gameforge.subquest_07._10_targetVid)
+		end
+
+		when letter begin
+			local v=find_npc_by_vnum(20023)
+			if 0== v then
+			else
+				target.vid("__TARGET__",v, gameforge.subquest_07._40_targetVid)
+			end
+
+		end
+
+		when info or button begin
+			say_title(gameforge.subquest_07._20_npcChat)
+						say(gameforge.subquest_07._50_sayReward)
+					end
+
+		when 20023.chat.gameforge.subquest_07._60_npcChat begin
+			target.delete("__TARGET__")
+			say_title(gameforge.subquest_05._30_sayTitle)
+			say(gameforge.subquest_07._70_say)
+
+			set_state(back_to)
+		end
+	end
+
+	state back_to begin
+		when letter begin
+			send_letter(gameforge.subquest_07._10_targetVid)
+		end
+
+		when letter begin
+			local v=find_npc_by_vnum(20008)
+			if 0==v then
+			else
+				target.vid("__TARGET__",v, gameforge.subquest_07._80_targetVid)
+			end
+		end
+
+		when info or button begin
+			say_title(gameforge.subquest_07._20_npcChat)
+			say(gameforge.subquest_07._80_targetVid)
+		end
+
+		when 20008.chat.gameforge.subquest_07._90_npcChat begin
+			target.delete("__TARGET__")
+			say_title(gameforge.subquest_06._320_sayTitle)
+			say(gameforge.subquest_07._100_say)
+			wait()
+
+            say_title(gameforge.subquest_06._320_sayTitle)
+			say(gameforge.subquest_07._110_say)
+
+			set_state(hunt_for_oku)
+		end
+	end
+
+	state hunt_for_oku begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.subquest_07._10_targetVid)
+			q.set_title(gameforge.subquest_07._10_targetVid)
+			q.start()
+		end
+
+		when info or button begin
+			say_title(gameforge.subquest_07._10_targetVid)
+			say(gameforge.subquest_07._120_sayReward)
+			say_item_vnum("30026")
+		end
+
+		when 106.kill begin
+			local s = number(1, 100)
+			if s <= 5 then
+				pc.give_item2("30026", 1)
+
+			end
+		end
+
+		when 20008.chat.gameforge.subquest_07._130_npcChat begin
+			target.delete("__TARGET__")
+			if pc.count_item("30026") >= 1 then
+				say_title(gameforge.subquest_06._320_sayTitle)
+				say(gameforge.subquest_07._140_say)
+				pc.remove_item("30026")
+				pc.give_exp2(12000)
+				set_quest_state("levelup","run")
+				pc.change_money(5000 )
+				pc.give_item2("30028", 1)
+
+                                say_title(gameforge.collect_herb_lv4._130_sayTitle)
+                                				say_reward(gameforge.subquest_07._150_sayReward)
+				
+				set_state(__COMPLETE__)
+			else
+				say_title(gameforge.subquest_06._320_sayTitle)
+				say(gameforge.subquest_07._160_say)
+			end
+		end
+	end
+
+	state __COMPLETE__ begin
+		when enter begin
+			q.done()
+		end
+	end
+end
+

@@ -1,0 +1,226 @@
+quest kids_day_quiz begin
+    state start begin
+	when 20041.chat."GM: Quiz Event" with pc.is_gm() begin
+	    local low_value=game.get_event_flag("kids_day_drop")
+	    local high_value=game.get_event_flag("kids_day_drop_high")
+	    
+	    say_title("Prozentsatz des Kistendrop fur Quiz Event")
+	    say(string.format("Der Prozent des niedrige Level : 1/%d", low_value))
+	    say(string.format("Der Prozent des hohe Level  : 1/%d", high_value))
+	    local s=select("Ver‰nderung f¸r niedrige Level", "Ver‰nderung f¸r hˆhere Level", "Schlieﬂen")
+	    
+	    if s==1 then
+		say_title("Ver‰nderung der Dropchance der Kisten f¸rs niedrige Level")
+		say("")
+		say(string.format("Prozent Dropchance 1/%d -> ", low_value))
+		local v=tonumber(input())
+		if v<300 then
+		    say("Weniger als 300 kann man nicht einstellen")
+
+		    if not is_test_server() then
+		    	return
+		    end
+
+		    say("Beim Test Server moglich")
+		end
+
+		say(string.format("Die Dropchance 1/%d -> 1/%d", low_value, v))
+		say("")
+		local s=select("Best‰tigen", "Abbrechen")
+		if s==1 then
+		    say("")	
+		    say("Ge‰ndert")
+		    game.set_event_flag("kids_day_drop", v)
+		else
+		    say("")
+		    say("Abgebrochen")
+		end
+	    
+	    elseif s==2 then
+		say_title("Ver‰nderung der Dropchance der Kisten f¸rs hohe Level")
+		say(string.format("Prozent Dropchance 1/%d -> ", high_value))
+		local v=tonumber(input())
+		if v<300 then
+		    say("Weniger als 300 kann man nicht einstellen")
+
+		    if not is_test_server() then
+		    	return
+		    end
+
+		    say("Beim Test Sever moglich")
+		end
+
+		say(string.format("Die Dropchance f¸r hohes Level 1/%d -> 1/%d", high_value, v))
+		say("")
+		local s=select("Bestatigen", "Abbrechen")
+		if s==1 then
+		    say("Ge‰ndert")
+		    game.set_event_flag("kids_day_drop_high", v)
+		else
+		    say("Abgebrochen")
+		end
+	    end
+	end
+	
+	when 20041.chat."GM: Quiz Event" with pc.is_gm() and game.get_event_flag("kids_day_drop")==0 begin
+		say("Soll das Quiz Event durchgef¸hrt werden?")
+		say("")
+		local s=select("Starten", "Schlieﬂen")
+		if s==1 then
+		    local default_value=1000;
+		    game.set_event_flag("kids_day_drop", default_value)
+		    game.set_event_flag("kids_day_drop_high", default_value)
+		    say(string.format("Die Dropchance der Kisten f¸rs Event: 1/%d", default_value))
+		end
+	end
+	
+	when 20041.chat."GM: Quiz Event beenden" with pc.is_gm() and game.get_event_flag("kids_day_drop")!=0 begin
+		say("Soll das Quiz Event beendet werden?")
+		say("")
+		local s=select("Beenden", "Schlieﬂen")
+		if s==1 then
+		    game.set_event_flag("kids_day_drop", 0)
+		    game.set_event_flag("kids_day_drop_high", 0)
+		end
+	end
+	
+	when 20041.chat."GM: Das Metin2 Quiz!" with pc.is_gm() begin
+	    say_title("Das Metin2 Quiz")
+	    say("Du kannst am Quiz teilnehmen es beginnt mit")
+	    say("der ersten von 10 Fragen.")
+
+	    local max=table.getn(locale.quiz)
+	    say(string.format("(Die Frage Anzahl : %d)", max))
+
+	    local quiz_begin = input()
+	    if quiz_begin=="" then
+		return
+	    end
+	    local quiz_end = quiz_begin + 10
+
+	    if quiz_end>max then quiz_end=max end
+
+	    for quiz_index=quiz_begin, quiz_end do
+		local quiz_data=locale.quiz[quiz_index]
+		say_title(string.format("Das Metin2 Quiz! #%d", quiz_index))
+		say(quiz_data[1])
+		say("")
+		local s=select(quiz_data[2], quiz_data[3], quiz_data[4], quiz_data[5], "Schlieﬂen")
+		if s==5 then
+		    return
+		elseif s==quiz_data[6] then
+		    say_title("Das Metin2 Quiz!")
+		    say("richtig")
+		    say("")
+		    wait()
+		else
+		    say_title("Das Metin2 Quiz!")
+		    say("falsch")
+		    say("")
+		    say(string.format("#%d.", quiz_index))
+		    say(quiz_data[1])
+		    say_reward(quiz_data[1+quiz_data[6]])
+		    say("")
+		    wait()
+		end
+	    end
+
+	end
+	
+	when 50034.use begin
+	    say_title("Das Metin2 Quiz!")
+	    say("Das ist eine Erinnerung an das Metin2 Quiz!")
+	    say("wenn man die Fragen richtig beantwortet hat")
+	    say("bekommt man eine Belohnung")
+	    say("")
+	    say("Willst du es versuchen?")
+	    say("")
+	    local s=select("Ja!", "Nein!")
+	    if 2==s then
+		return
+	    end
+
+	    --pc.remove_item(50034, 1)
+	    item.remove()
+
+	    local size=3
+	    local chance=pc.getqf("chance")
+
+	    -- Chance benutzen!
+	    if 0==chance then
+		pc.setqf("chance", number(3, 5))
+	    elseif pc.getqf("success_count")==chance then
+		pc.setqf("success_count", 0)
+		pc.setqf("chance", number(3, 5))
+		size=5
+	    end
+
+	    say_title("Das Metin2 Quiz!")
+
+	    if size==5 then
+		say(string.format("Quiz hat insgesammt %d Frage, wenn man in der gegebenen zeit richt erratet", size))
+		say("bekommt man die Produktartikel. Huete hat man mehr frage als es beim anderen Tagen")
+		say("um so mehr kriegt man die Geschenke")
+		say("")
+		say("Fur Beginn drucke die Taste")
+		say("")
+	    else
+		say(string.format("Quiz hat %d Frage, wenn man in der gegeben Zeit richtig erratet", size))
+		say("das Produktartikel bekommen. ")
+		say("")
+		say("Fur beginn drucke die Taste")
+		say("")
+	    end
+	    wait()
+
+	    for i=1, size+1 do
+
+		local quiz_index=number(1, table.getn(locale.quiz))
+		local quiz_data=locale.quiz[quiz_index]
+
+		say_title(string.format("Das Metin2 Quiz! #%d", i))
+		say(quiz_data[1])
+		say("")
+		local s=select(quiz_data[2], quiz_data[3], quiz_data[4], quiz_data[5])
+		if s==quiz_data[6] then
+		    if i==size then
+			say_title("Das Metin2 Quiz!")
+			say("Da du alle Frage richtig beantwortet,")
+			say("kriegst du die Belohnung! ")
+			say("")
+
+			pc.setqf("success_count", pc.getqf("success_count")+1)
+
+			if 5==size then
+			    say_item("Die Geschenkkarton fur den Kindertag", 50036, "")
+			    say_reward("Als Geschenk habe cih eine Karton fur den Kindertag.")
+			    say_reward("Es gibt besseres Geschenk je nach der Frage.")
+			    pc.give_item2(50036)
+			else
+			    say_item("die geschenkkarton fur Kindertag", 50035, "")
+			    say_reward("Als Geschenk habe ich die geschenkkasten bekommen.")
+			    pc.give_item2(50035)
+			end
+			say("")
+			return
+		    else
+			say_title("Das Metin2 Quiz!")
+			say_reward("richtig!!")
+			say("Fur die nachste Frage duucke die Taste.")
+			say("")
+			wait()
+		    end
+		else
+		    say_title("Das Metin2 Quiz!")
+		    say("BB- Tut mir leid. Falsch. ")
+		    say("Beim nachstes mal versuche wieder")
+		    say("dann tschu©¨~")
+		    say("")
+		    return
+		end
+	    end
+
+	end
+    end
+end
+

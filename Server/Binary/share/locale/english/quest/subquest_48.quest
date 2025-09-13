@@ -1,0 +1,186 @@
+quest subquest_48  begin
+	state start begin
+		when login or levelup with pc.level >= 58 and pc.level <= 60 begin
+			set_state(information)
+		end
+	end
+
+	state information begin
+		when letter begin
+			local v=find_npc_by_vnum(20355)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, gameforge.subquest_16._320_makequestbutton)
+			end
+		end
+
+		when __TARGET__.target.click or	20355.chat.gameforge.subquest_48._10_npcChat  begin
+			target.delete("__TARGET__")
+			say_title(gameforge.main_quest_lv10._30_sayTitle)
+			say(gameforge.subquest_48._20_say)
+			wait()
+			say_title(gameforge.main_quest_lv10._30_sayTitle)
+			say(gameforge.subquest_48._30_say)
+			wait()
+			say_title(gameforge.main_quest_lv10._30_sayTitle)
+			say(gameforge.subquest_48._40_say)
+			local r= select(gameforge.find_brother_article._90_select, gameforge.find_brother_article._100_select)
+			if 2==r then
+				say(gameforge.subquest_48._50_say)
+				local a= select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
+				if 2==a then
+					say_title(gameforge.main_quest_lv10._30_sayTitle)
+					say(gameforge.subquest_48._60_say)
+					return
+				end
+				say_title(gameforge.main_quest_lv10._30_sayTitle)
+				say(gameforge.subquest_48._70_say)
+				set_state(__GIVEUP__)
+				return
+			end
+			say_title(gameforge.main_quest_lv10._30_sayTitle)
+			say(gameforge.subquest_48._80_say)
+			set_state(go_to_otherland)
+
+		end
+	end
+	state go_to_otherland begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.subquest_48._90_makequestbutton)
+			q.set_title(gameforge.subquest_48._90_makequestbutton)
+			q.start()
+		end
+
+		function is_other_vil()
+			local empire = pc.get_empire()
+			local map_num= pc.get_map_index()
+
+			local is_village = 0
+
+			if empire == 1 and map_num == 41 then is_village = 1 end
+			if empire == 2 and map_num ==  1 then is_village = 1 end
+			if empire == 3 and map_num == 21 then is_village = 1 end
+			return is_village
+		end
+
+		when info or button begin
+			local empire = pc.get_empire()
+
+			if empire==1 then
+				say_title(gameforge.subquest_48._100_sayTitle)
+
+				say(gameforge.subquest_48._110_say)
+			elseif  empire ==2 then
+				say_title(gameforge.subquest_48._100_sayTitle)
+
+				say(gameforge.subquest_48._120_say)
+			elseif  empire ==3 then
+				say_title(gameforge.subquest_48._100_sayTitle)
+
+				say(gameforge.subquest_48._130_say)
+			end
+	end
+
+
+
+		when __TARGET__.target.click or 9009.chat.gameforge.subquest_48._140_npcChat  with subquest_48.is_other_vil() ==1  begin
+			 target.delete("__TARGET__")
+			 say_title(gameforge.manwoo._20_sayTitle)
+			 say(gameforge.subquest_48._150_say)
+			 wait()
+			 say_title(gameforge.fisher._30_sayTitle)
+			 say(gameforge.subquest_48._160_say)
+			 wait()
+			 say_title(gameforge.fisher._30_sayTitle)
+			 say(gameforge.subquest_48._170_say)
+			 wait()
+			 say_title(gameforge.fisher._30_sayTitle)
+			 say(gameforge.subquest_48._180_say)
+			 wait()
+			 say_title(gameforge.buy_fishrod._210_sayTitle)
+			 			 say_reward(gameforge.subquest_48._190_sayReward)
+			 			 wait("")
+			say_pc_name()
+			say(gameforge.subquest_48._200_say)
+			say_item_vnum(27873)
+			say_reward(gameforge.subquest_48._210_sayReward)
+			pc.give_item2(27873,3)
+			set_state(back_to_boss)
+
+			end
+	end
+
+
+state back_to_boss begin
+	when letter begin
+
+			send_letter(gameforge.subquest_48._220_sendLetter)
+			if subquest_48.is_my_vil()==1  then
+				local v=find_npc_by_vnum(20355)
+				if 0==v then
+				else
+					target.vid("__TARGET__", v, gameforge.subquest_48._230_targetVid)
+				end
+			end
+
+		end
+		when info or button begin
+			local empire = pc.get_empire()
+
+			if empire==1 then  --das Reich Shinsu
+				say_title(gameforge.subquest_48._100_sayTitle)
+
+				say(gameforge.subquest_48._240_say)
+			elseif  empire ==2 then --das Reich Chunjo
+				say_title(gameforge.subquest_48._100_sayTitle)
+
+				say(gameforge.subquest_48._250_say)
+			elseif  empire ==3 then  --das Reich Jinno
+				say_title(gameforge.subquest_48._100_sayTitle)
+				say(gameforge.subquest_48._260_say)
+			end
+
+		end
+
+			function is_my_vil()
+			local empire = pc.get_empire()
+			local map_num= pc.get_map_index()
+
+			local is_village = 0
+
+			if empire == 1 and map_num == 1 then is_village = 1 end
+			if empire == 2 and map_num == 21 then is_village = 1 end
+			if empire == 3 and map_num == 41 then is_village = 1 end
+			return is_village
+		end
+
+
+
+		when __TARGET__.target.click or 20355.chat.gameforge.subquest_48._270_npcChat  with subquest_48.is_my_vil() ==1 begin
+			target.delete("__TARGET__")
+			say_title(gameforge.main_quest_lv10._30_sayTitle)
+			say(gameforge.subquest_48._280_say)
+			say_reward(gameforge.subquest_48._290_sayReward)
+			say_reward(gameforge.subquest_48._300_sayReward)
+			
+			pc.change_money(50000)			 
+		    pc.give_exp2(5500000)
+			
+			set_quest_state("levelup","run")	
+
+			clear_letter()
+		    set_state(__COMPLETE__)
+		end
+	end
+
+	state __GIVEUP__ begin
+	end
+
+	state __COMPLETE__ begin
+		when enter begin
+			q.done()
+		end
+	end
+end
+

@@ -1,0 +1,290 @@
+quest main_quest_lv32 begin
+	state start begin
+	end
+	state run begin
+		when login or levelup or enter with pc.get_level() >= 32 begin
+			set_state ( gototeacher )
+		end
+	end
+
+	state gototeacher begin
+		when letter begin
+			send_letter(gameforge.main_quest_lv32._10_sendLetter)
+
+			local v=find_npc_by_vnum(20011)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, gameforge.main_quest_lv32._20_targetVid)
+			end
+		end
+		when button or info begin
+			say_title(gameforge.main_quest_lv32._10_sendLetter)
+			say(gameforge.main_quest_lv32._30_say)
+		end
+		when __TARGET__.target.click or	20011.chat.gameforge.main_quest_lv32._10_sendLetter begin
+			target.delete("__TARGET__")
+
+			say_title(gameforge.main_quest_lv30._40_sayTitle)
+			say(gameforge.main_quest_lv32._40_say)
+   			wait()
+			say_title(gameforge.main_quest_lv30._40_sayTitle)
+   			say(gameforge.main_quest_lv32._50_say)
+   			wait()
+			say_title(gameforge.main_quest_lv30._40_sayTitle)
+			say(gameforge.main_quest_lv32._60_say)
+			set_state ( gomerchant )
+
+		end
+	end
+
+	state gomerchant begin
+		when letter begin
+			send_letter(gameforge.main_quest_lv32._10_sendLetter)
+
+			local v=find_npc_by_vnum(20010)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, gameforge.main_quest_lv32._70_targetVid)
+			end
+		end
+		when button or info begin
+			say_title(gameforge.main_quest_lv32._80_sayTitle)
+			say(gameforge.main_quest_lv32._90_say)
+			say_reward(gameforge.main_quest_lv32._100_sayReward)
+		end
+		when __TARGET__.target.click or	20010.chat.gameforge.main_quest_lv32._110_npcChat begin
+			target.delete("__TARGET__")
+			say_title(gameforge.main_quest_lv32._120_sayTitle)
+			say(gameforge.main_quest_lv32._130_say)
+   			wait()
+			say_title(gameforge.main_quest_lv32._120_sayTitle)
+			say(gameforge.main_quest_lv32._140_say)
+			set_state ( gotorequest )
+
+		end
+	end
+	state gotorequest begin
+		when letter begin
+			send_letter(gameforge.main_quest_lv32._110_npcChat)
+
+				if pc.count_item(60)>=20 then
+					local v=find_npc_by_vnum(20010)
+					if 0==v then
+					else
+						target.vid("__TARGET__", v, gameforge.main_quest_lv32._150_targetVid)
+					end
+				end
+
+		end
+		when button or info begin
+			if pc.count_item(60)>=20 then
+				say_title(gameforge.main_quest_lv32._160_sayTitle)
+				say(gameforge.main_quest_lv32._170_say)
+				return
+			end
+			say_title(gameforge.main_quest_lv32._180_sayTitle)
+			say(gameforge.main_quest_lv32._190_say)
+		end
+
+
+		when __TARGET__.target.click or	20010.chat.gameforge.main_quest_lv32._200_npcChat begin
+			target.delete("__TARGET__")
+
+			if pc.count_item(60)>=20 then
+				say_title(gameforge.main_quest_lv32._120_sayTitle)
+				say(gameforge.main_quest_lv32._210_say)
+				wait()
+				say_title(gameforge.main_quest_lv32._120_sayTitle)
+				say(gameforge.main_quest_lv32._220_say)
+				pc.remove_item(60,20)
+				set_state ( gotodoc )
+			else
+				say_title(gameforge.main_quest_lv32._230_sayTitle)
+				say(gameforge.main_quest_lv32._240_say)
+			end
+		end
+	end
+
+	state gotodoc begin
+		when letter begin
+			send_letter(gameforge.main_quest_lv32._250_sendLetter)
+
+			local v=find_npc_by_vnum(20357)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, gameforge.main_quest_lv32._260_targetVid)
+			end
+		end
+
+		when button or info begin
+			say_title(gameforge.main_quest_lv32._250_sendLetter)
+			say(gameforge.main_quest_lv32._270_say)
+		end
+
+		when __TARGET__.target.click or	20357.chat.gameforge.main_quest_lv32._280_npcChat begin
+			target.delete("__TARGET__")
+			say_pc_name()
+			say(gameforge.main_quest_lv32._290_say)
+			pc.give_item2(30150)
+			set_state ( gototeacher2 )
+
+		end
+	end
+
+	state gototeacher2 begin
+		when letter begin
+			send_letter(gameforge.main_quest_lv32._300_sendLetter)
+
+			local v=find_npc_by_vnum(20011)
+	if 0==v then
+			else
+				target.vid("__TARGET__", v, gameforge.main_quest_lv32._310_targetVid)
+			end
+		end
+		when button or info begin
+			say_title(gameforge.main_quest_lv32._320_sayTitle)
+			say(gameforge.main_quest_lv32._330_say)
+		end
+		when __TARGET__.target.click or	20011.chat.gameforge.main_quest_lv32._300_sendLetter begin
+			target.delete("__TARGET__")
+			say_title(gameforge.main_quest_lv30._40_sayTitle)
+			say(gameforge.main_quest_lv32._340_say)
+			wait()
+			say_title(gameforge.main_quest_lv32._350_sayTitle)
+						say_reward(gameforge.main_quest_lv32._360_sayReward)
+			wait()
+			say_title(gameforge.main_quest_lv32._370_sayTitle)
+						say_reward(gameforge.main_quest_lv32._380_sayReward)
+			wait()
+			say_title(gameforge.main_quest_lv30._40_sayTitle)
+			say(gameforge.main_quest_lv32._390_say)
+			wait()
+			say_title(gameforge.main_quest_lv30._40_sayTitle)
+			say(gameforge.main_quest_lv32._400_say)
+			wait()
+			say_title(gameforge.main_quest_lv30._40_sayTitle)
+			say(gameforge.main_quest_lv32._410_say)
+			say_reward(gameforge.main_quest_lv32._420_sayReward)
+			pc.give_exp2(1000000)
+
+			say_reward(gameforge.main_quest_lv32._430_sayReward)
+			pc.change_money(50000)
+
+			say_reward(gameforge.main_quest_lv32._440_sayReward)
+			pc.give_item2(70012)
+
+			pc.remove_item(30150)
+			set_state ( gotohunter )
+
+		end
+	end
+
+	state gotohunter begin
+		when letter begin
+			send_letter(gameforge.main_quest_lv32._450_sendLetter)
+
+			local v=find_npc_by_vnum(20019)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, gameforge.main_quest_lv32._460_targetVid)
+			end
+		end
+		when button or info begin
+			say_title(gameforge.main_quest_lv32._470_sayTitle)
+			say(gameforge.main_quest_lv32._480_say)
+			say_reward(gameforge.main_quest_lv32._490_sayReward)
+		end
+
+		when __TARGET__.target.click or	20019.chat.gameforge.main_quest_lv32._500_npcChat begin
+			target.delete("__TARGET__")
+			say_title(gameforge.main_quest_lv32._510_sayTitle)
+			say(gameforge.main_quest_lv32._520_say)
+			wait()
+			say_title(gameforge.main_quest_lv32._510_sayTitle)
+			say(gameforge.main_quest_lv32._530_say)
+			set_state ( godoc2 )
+
+		end
+	end
+
+	state godoc2 begin
+		when letter begin
+			send_letter(gameforge.main_quest_lv32._540_sendLetter)
+		end
+		when button or info begin
+			say_title(gameforge.main_quest_lv32._540_sendLetter)
+			say(gameforge.main_quest_lv32._550_say)
+		end
+		when 634.kill begin
+			local s = number(1, 100)
+			if s <= 5 and pc.count_item("30150")==0 then
+				pc.give_item2(30150, 1)
+				set_state ( goteacher3 )
+			end
+		end
+	end
+	state goteacher3 begin
+		when letter begin
+			send_letter(gameforge.main_quest_lv32._560_sendLetter)
+			local v=find_npc_by_vnum(20011)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, gameforge.main_quest_lv32._310_targetVid)
+			end
+		end
+		when button or info begin
+			say_title(gameforge.main_quest_lv32._570_sayTitle)
+			say(gameforge.main_quest_lv32._580_say)
+		end
+
+		when __TARGET__.target.click or	20011.chat.gameforge.main_quest_lv32._560_sendLetter	begin
+			target.delete("__TARGET__")
+			say_title(gameforge.main_quest_lv30._40_sayTitle)
+			say(gameforge.main_quest_lv32._590_say)
+			wait()
+			say_title(gameforge.main_quest_lv32._600_sayTitle)
+						say_reward(gameforge.main_quest_lv32._610_sayReward)
+			wait()
+			say_title(gameforge.main_quest_lv30._40_sayTitle)
+			say(gameforge.main_quest_lv32._620_say)
+			wait()
+			say_title(gameforge.main_quest_lv30._40_sayTitle)
+			say(gameforge.main_quest_lv32._630_say)
+			say_reward(gameforge.main_quest_lv32._640_sayReward)
+			pc.give_exp2(1000000)
+
+			say_reward(gameforge.main_quest_lv32._650_sayReward)
+			pc.change_money(50000)
+
+			say_reward(gameforge.main_quest_lv32._660_sayReward)
+			pc.give_item2(70008)
+
+			pc.remove_item(30150)
+			set_state (godoc3)
+
+		end
+	end
+
+	state godoc3 begin
+
+		when letter begin
+			send_letter(gameforge.main_quest_lv32._670_sendLetter)
+		end
+
+		when button or info begin
+			say_title(gameforge.main_quest_lv32._670_sendLetter)
+			say(gameforge.main_quest_lv32._680_say)
+			say_reward(gameforge.main_quest_lv32._690_sayReward)
+			
+			clear_letter()
+			set_quest_state("main_quest_lv40", "run")
+			set_state (__COMPLETE__)
+
+		end
+
+	end
+	state __COMPLETE__ begin
+	end
+
+end
+

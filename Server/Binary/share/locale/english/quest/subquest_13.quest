@@ -1,0 +1,210 @@
+quest subquest_13 begin
+    state start begin
+        when login  or levelup with pc.level >= 21 and pc.level <= 26 begin
+            set_state(information)
+        end
+
+    end
+
+    state information begin
+        when letter begin
+            local v = find_npc_by_vnum(9001)
+
+            if v != 0 then
+                target.vid("__TARGET__", v, gameforge.subquest_13._10_targetVid)
+            end
+        end
+
+
+        when __TARGET__.target.click or	9001.chat.gameforge.subquest_13._20_npcChat with pc.level >= 21 begin
+            target.delete("__TARGET__")
+
+            say_title(gameforge.subquest_08._120_sayTitle)
+            say(gameforge.subquest_13._30_say)
+            wait()
+            
+            say_title(gameforge.subquest_08._120_sayTitle)
+
+            say(gameforge.subquest_13._40_say)
+            local s= select(gameforge.subquest_11._50_select, gameforge.subquest_05._80_select)
+            if 2==s then
+            say_title(gameforge.subquest_08._120_sayTitle)
+            say(gameforge.subquest_13._50_say)
+                local a= select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
+                if  2==a then
+                    say_title(gameforge.subquest_08._120_sayTitle)
+                    say(gameforge.subquest_13._60_say)
+                    return
+                end
+                say_title(gameforge.subquest_08._120_sayTitle)
+                say(gameforge.subquest_13._70_say)
+                set_state(__GIVEUP__)
+                return
+            end
+            say_title(gameforge.subquest_08._120_sayTitle)
+            say(gameforge.subquest_13._80_say)
+            set_state(get_weapon)
+
+        end 
+    end  
+    state get_weapon begin
+        when letter begin
+            send_letter(gameforge.subquest_13._90_sendLetter)
+            if	pc.getqf("iron_done") == 0  then
+                local v=find_npc_by_vnum(20011) 
+                if 0==v then
+                else
+                    target.vid("__TARGET1__",v, gameforge.subquest_06._240_targetVid)
+                end
+            end
+            if	pc.getqf("cloth_done") == 0  then 
+                local v=find_npc_by_vnum(20021)
+                if 0==v then
+                else
+                    target.vid("__TARGET2__",v, gameforge.subquest_13._100_targetVid)
+                end
+            end
+            
+            if	pc.getqf("cloth_done") == 1  then 
+                local v=find_npc_by_vnum(20003)
+                if 0==v then
+                else
+                    target.vid("__TARGET3__",v, gameforge.subquest_13._110_targetVid)
+                end
+            end	
+
+        end
+
+
+        when info or button begin
+            say_title(gameforge.buy_fishrod._210_sayTitle)
+            say_reward(gameforge.subquest_13._120_sayReward)
+        end
+        when 20011.chat.gameforge.subquest_13._130_npcChat with pc.getqf("iron_done")==0 begin
+            target.delete("__TARGET1__")
+            say_title(gameforge.main_quest_lv30._40_sayTitle)
+            say(gameforge.subquest_13._140_say)
+            wait()
+            say_title(gameforge.main_quest_lv30._40_sayTitle)
+            say(gameforge.subquest_13._150_say)
+            say_item_vnum("30134")
+            pc.setqf("iron_done",1)
+
+        end	
+        when 20011.chat.gameforge.subquest_13._160_npcChat with pc.getf("subquest_13","iron_done") == 1 begin
+            target.delete("__TARGET1__")
+            if pc.count_item("30134") >= 1 then
+                say_title(gameforge.main_quest_lv30._40_sayTitle)
+                say(gameforge.subquest_13._170_say)
+                pc.setqf("iron_done",2)
+                pc.remove_item("30134",1)
+                if  pc.getf("subquest_13","cloth_done") == 2 and pc.getqf("iron_done") == 2 then
+                set_state(back_to)
+                end
+                return
+            else
+                say_title(gameforge.main_quest_lv30._40_sayTitle)
+                say(gameforge.subquest_13._180_say)
+                return
+            end  
+        end	  
+        when 20011.chat.gameforge.subquest_06._290_npcChat with pc.getf("subquest_13","iron_done")==2 begin
+            target.delete("__TARGET1__")
+            say_title(gameforge.main_quest_lv30._40_sayTitle)
+            say(gameforge.subquest_13._190_say)
+        end	
+
+        when 114.kill  begin 
+            local s = number(1, 100)
+            if s <= 5 and pc.count_item("30134")==0  then
+            say_title(gameforge.subquest_13._200_sayTitle)
+            say(gameforge.subquest_13._210_say)
+            pc.give_item2("30134", 1)
+            end
+        end
+
+
+        when 20021.chat.gameforge.subquest_13._220_npcChat begin
+            target.delete("__TARGET2__")
+            
+            if pc.getqf("cloth_done") == 0  then
+                say_title(gameforge.hair_shop._20_sayTitle)
+                say(gameforge.subquest_13._230_say)
+                pc.setqf("cloth_done", 1)
+                
+            end
+
+            if pc.getqf("cloth_done") == 2  then
+                say(gameforge.subquest_13._240_say)
+            end
+
+        end 
+
+        when  20003.chat.gameforge.subquest_13._250_npcChat with pc.getf("subquest_13","cloth_done") == 1 begin
+            target.delete("__TARGET3__")
+            say_title(gameforge.npc_talk._580_sayTitle)
+            say(gameforge.subquest_13._260_say)
+            pc.setqf("cloth_done", 2)
+            if  pc.getf("subquest_13","cloth_done") == 2 and pc.getqf("iron_done") == 2 then
+                set_state(back_to)
+            end
+            return
+        end 
+    end	
+    state back_to begin
+        when letter begin
+            setskin(NOWINDOW)
+            makequestbutton(gameforge.subquest_06._470_makequestbutton)
+            q.set_title(gameforge.subquest_13._270_qSetTitle)
+            q.start()
+
+            local v=find_npc_by_vnum(9001)
+            if 0==v then
+            else
+                target.vid("__TARGET__",v, gameforge.subquest_13._280_targetVid)
+            end
+        end
+        when info or button begin
+            say_title(gameforge.subquest_13._290_sayTitle)
+            say_reward(gameforge.subquest_13._300_sayReward)
+        end
+        when __TARGET__.target.click or 9001.chat.gameforge.subquest_13._290_sayTitle with pc.getf("subquest_13","cloth_done") == 2 and pc.getqf("iron_done") == 2  begin
+                    target.delete("__TARGET__")
+                    say_title(gameforge.subquest_08._120_sayTitle)
+                    say(gameforge.subquest_13._310_say)
+                    wait()
+                    say_title(gameforge.subquest_13._320_sayTitle)
+                    say_reward(gameforge.subquest_13._330_sayReward)
+                    --pc.remove_item(remove, 1)
+                    --pc.remove_item(122000)
+        
+                    pc.give_exp2(122000)
+                    set_quest_state("levelup","run")
+                    pc.change_money(20000)
+                    clear_letter()
+                    set_state(__COMPLETE__)		
+
+                    if pc.job == 0 then
+                        pc.give_item2("53", 1)
+                        say_reward(gameforge.subquest_13._340_sayReward)
+                    elseif pc.job == 1 then
+                        pc.give_item2("1023", 1)
+                        say_reward(gameforge.subquest_13._350_sayReward)
+                    elseif pc.job == 2 then
+                        pc.give_item2("53", 1)
+                        say_reward(gameforge.subquest_13._340_sayReward)
+                    elseif pc.job == 3 then
+                        pc.give_item2("7043", 1)
+                        say_reward(gameforge.subquest_13._360_sayReward)
+                    end   --if
+                    
+                    pc.setqf("cloth_done",0)
+                    pc.setqf("iron_done",0)
+                end  
+        end   --state
+    state __GIVEUP__ begin
+    end
+    state __COMPLETE__ begin
+    end
+
+end

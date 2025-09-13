@@ -1,0 +1,26 @@
+quest new_christmas_quest begin
+	state start begin
+		when 20126.chat.gameforge.new_christmas._010_npcChat  begin
+			say_title(mob_name(20126))
+			say (gameforge.new_christmas._020_say )
+			wait()
+			say_title(mob_name(20126))
+			say (gameforge.new_christmas._030_say )
+			wait()
+			say_title(mob_name(20126))
+			say (gameforge.new_christmas._040_say )
+			wait()
+			set_quest_state("new_christmas_nog_quest", "nog_first_give")
+			set_quest_state("new_christmas_sock_quest", "baby_dear_give")
+			set_state ("__COMPLETE__")
+		end
+	end
+	state __COMPLETE__ begin
+		when 20126.chat."init christmas quest" with is_test_server()	begin
+			set_state ("start")
+			set_quest_state("new_christmas_nog_quest", "start")
+			set_quest_state("new_christmas_sock_quest", "start")
+			say ("init complete")
+		end
+	end
+end

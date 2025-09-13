@@ -1,0 +1,163 @@
+quest subquest_45 begin
+	state start begin
+		when login or levelup with pc.level >= 60  and pc.level <= 62  begin
+			set_state(enter)
+		end
+	end
+
+	state enter  begin
+		when letter begin
+			local v=find_npc_by_vnum(20023)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, gameforge.subquest_27._10_targetVid)
+			end
+		end
+
+		when __TARGET__.target.click or 20023.chat.gameforge.subquest_45._10_npcChat begin
+			target.delete("__TARGET__")
+			say_title(gameforge.subquest_05._30_sayTitle)
+			say(gameforge.subquest_45._20_say)
+			wait()
+			say_title(gameforge.subquest_05._30_sayTitle)
+			say(gameforge.subquest_45._30_say)
+			
+			local s= select(gameforge.subquest_45._40_select)
+			if 2==s then
+				say(gameforge.subquest_45._50_say)
+				local a= select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
+				if  2==a then
+					say_title(gameforge.subquest_05._30_sayTitle)
+					say(gameforge.subquest_45._60_say)
+					return
+				end
+				say_title(gameforge.subquest_05._30_sayTitle)
+				say(gameforge.subquest_45._70_say)
+				set_state(__GIVEUP__)
+				return
+			end
+					
+			say_title(gameforge.subquest_05._30_sayTitle)
+			say(gameforge.subquest_45._80_say)
+			set_state(WHAT_IS_MILGYO)
+			
+		end
+
+	end
+			
+
+	state WHAT_IS_MILGYO begin
+
+		when letter begin
+
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.subquest_45._90_makequestbutton)
+			q.set_title(gameforge.subquest_45._90_makequestbutton)
+			q.start()
+
+			if pc.count_item("30147")>=1 and	 pc.count_item("30148")>=1  and  pc.count_item("30164")>=1 then
+				local v=find_npc_by_vnum(20023)
+				if 0!= v then
+					target.vid("__TARGET__",v, gameforge.subquest_27._180_makequestbutton)
+				end 
+			end
+
+		end
+
+		when info or  button begin
+
+			if pc.count_item("30147")>=1 and pc.count_item("30148")>=1  and  pc.count_item("30164")>=1  then
+				say_title(gameforge.subquest_45._100_sayTitle)
+				say(gameforge.subquest_45._110_say)
+				return
+			end
+				
+			say_title(gameforge.subquest_45._100_sayTitle)
+
+
+			say(gameforge.subquest_45._120_say)
+		end
+
+		when 737.kill  begin
+		
+			local s = number(1, 100)
+			if s <= 5 and pc.count_item("30147")==0  then
+				pc.give_item2(30147, 1)    
+				return
+			end	
+			
+			local s = number(1, 100)
+			if s <= 5 and pc.count_item("30148")==0  then
+				pc.give_item2(30148, 1) 
+				return
+			end
+			
+			local s = number(1, 100)
+			if s <= 5 and pc.count_item("30164")==0  then
+				pc.give_item2(30164, 1) 
+				return
+			end
+			
+		end
+
+			
+		when __TARGET__.target.click or 20023.chat.gameforge.subquest_45._130_npcChat   begin
+			if pc.count_item("30147")>0 and pc.count_item("30148")>0  and  pc.count_item("30164")>0 then
+				target.delete("__TARGET__")
+				say_title(gameforge.subquest_05._30_sayTitle)
+				say(gameforge.subquest_45._140_say)
+				wait()
+				say_title(gameforge.subquest_05._30_sayTitle)
+				say(gameforge.subquest_45._150_say)
+				pc.remove_item("30148",1)
+				pc.remove_item("30147",1)
+				pc.remove_item("30164",1)
+				
+				say_reward(gameforge.subquest_45._160_sayReward)
+				pc.give_exp2(7000000)
+					
+				say_reward(gameforge.subquest_45._170_sayReward)
+				pc.give_item2(70003)
+
+				say_reward(gameforge.subquest_45._180_sayReward)
+				pc.change_money(70000)
+				clear_letter()
+				set_state(COMPLETE)
+
+
+				
+				return
+			else		
+				say_title(gameforge.subquest_05._30_sayTitle)
+
+
+				say(gameforge.subquest_45._190_say)
+				local s= select(gameforge.subquest_45._200_select, gameforge.find_brother_article._170_select)
+				if 2==s then
+					say_title(gameforge.subquest_05._30_sayTitle)
+					say(gameforge.subquest_45._210_say)
+					set_state(__GIVEUP__)
+					return
+				end
+						
+				say_title(gameforge.subquest_05._30_sayTitle)
+
+				say(gameforge.subquest_45._220_say)
+			end
+
+
+		end
+
+	end
+
+
+	state __GIVEUP__ begin
+	end
+	state COMPLETE begin
+		when enter begin
+			q.done()
+		end	
+	end	
+end
+	
+

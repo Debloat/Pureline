@@ -1,0 +1,135 @@
+quest Kaiser begin
+	state start begin
+
+		when electionman1.chat."GM: Kaiser Wahl Einstellung" 	or electionman2.chat."GM: Kaiser Wahl Einstellung" 	or electionman3.chat."GM: Kaiser Wahl Einstellung" with pc.is_gm()  begin
+	
+			if game.get_event_flag("Kaiser") == 1 then 
+				say("Du kannst hier die Kaiserwahl beenden.")
+				say("Möchtest Du die Kaiserwahl jetzt beenden?")
+				local s = select("Beenden.","Nicht beenden.")
+
+				if s == 1 then
+					game.set_event_flag("Kaiser",0)
+				end
+			else
+				say("Du kannst hier die Kaiser Wahl anfangen.")
+				say("Möchtest du die Kaiser Wahl jetzt anfangen?")
+				local s = select("Anfangen","Nicht anfangen.")
+
+				if s == 1 then
+					game.set_event_flag("Kaiser",1)
+				end
+
+			end
+			
+		end
+		
+		when electionman1.chat."GM: Kaiserwahl Einstellung" or  electionman2.chat."GM: Kaiserwahl Einstellung" 	or electionman3.chat."GM: Kaiserwahl Einstellung" with pc.is_gm()  begin
+	
+			if game.get_event_flag("Kaiserwahl") == 1 then 
+				say("Du kannst hier die Kaiserwahl beenden.")
+				say("Möchtest Du die Kaiserwahl jetzt beenden?")
+				local s = select("Beenden.","Nicht beenden.")
+
+				if s == 1 then
+					game.set_event_flag("Kaiserwahl",0)
+				end
+			else
+				say("Du kannst hier die Kaiserwahl anfangen.")
+				say("Möchtest Du die Kaiserwahl anfangen?")				
+				local s = select("Anfangen","Nicht Anfangen.")
+
+				if s == 1 then
+					game.set_event_flag("Kaiserwahl",1)
+				end
+
+			end
+			
+		end
+	
+
+		when electionman1.chat."Wähle einen Kaiser" or electionman2.chat."Wähle einen Kaiser" or electionman3.chat."Wähle einen Kaiser"  begin
+		
+
+			if  game.get_event_flag("Kaiserwahl") != 1 then
+				
+				
+				say("Die Wahl hat noch nicht begonnen.")
+				say("Bitte versuche es nochmal wenn sie gestartet ist.")
+				return 	
+			end
+			local g = oh.candidacy_list() 
+			local gname_table = {}
+
+			table.foreachi(g,
+			function(n, p) 
+				gname_table[n] = n.."."..oh.candidacy_name(n-1)
+			end)
+
+			if table.getn(g) == 0 then
+				-- no currently war
+				say("Es gibt noch keine Kanditaten")
+			else
+				gname_table[table.getn(g)+1] = locale.cancel
+				say("Du kannst hier für einen Kaiser stimmen.")
+				say("Während der Kaiserwahlen beruhigen sich die Nationen ein wenig")
+				say("Bitte, Wähle vorsichtig")
+				say("Du hast nur eine Stimme.")
+				say("Bitte Wähle einen Kanditaten")
+				wait()
+				local s = select_table(gname_table)
+
+				if s == table.getn(gname_table) then
+					return;
+				else
+					ret = oh.election( s -1 )
+					
+					say(oh.candidacy_name(s-1).."Du hast gewählt")
+				end
+			end	
+		end
+		when electionman1.chat."Zeigt die Kaiser Kanditaten" 	or electionman2.chat."Zeigt die Kaiser Kanditaten" 	or electionman3.chat."Zeigt die Kaiser Kanditaten"  begin
+	    
+			if  game.get_event_flag("Kaiser") != 1 then
+				say("Folgende Qualifikationen sind für einen") 
+				say("Kaiser nötig.")
+				say("")
+				say_reward("1. Eine Wahl Gebühr von 1 Million Yang")
+				say_reward("2. Du musst Gilden Leader oder Vize-Gilden leader sein")
+				say_reward("3. Level 50 muss erreicht sein")
+				
+				say("")
+				say("Aber die Wahl Periode hat noch nicht angefangen.")
+				say("Komm wieder wenn sie gestartet ist.")
+				return 	
+			end
+			say("Du bist im Begriff, dich für die Wahl einzutragen.")
+			say("Als ein Kanditat musst du folgende Vorrausetzngen erfüllen")
+			say("")
+			say_reward("1. Eine Wahl Gebühr von 1 Million Yang")
+			say_reward("2. Du musst Gilden Leader oder Vize-Gilden leader sein")
+			say_reward("3. Level 50 muss erreicht sein")
+
+			say("")
+			say("Möchtest du dich zur Wahl stellen?")
+
+		    local s = select("Ja, ich stelle mich zur Wahl.","Nein Danke.")
+
+			local NEED_MONEY = 100000000
+
+			if s == 1 then
+				if oh.candidacycount() >= 8 then
+					say("Es tut uns leid.")
+					say("Wir haben genug Kanditaten.")
+					say("Versuche es bei der nächsten Wahl.")
+					return 
+				end
+				if pc.get_gold() >= NEED_MONEY and pc.get_level() >= 50 and oh.isguildmaster() == 1 then 
+
+					pc.change_gold(-NEED_MONEY);
+					oh.candidacy();
+				end
+			end
+		end
+	end
+end

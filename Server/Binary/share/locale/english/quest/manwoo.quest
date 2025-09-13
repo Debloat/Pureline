@@ -1,0 +1,180 @@
+quest manwoo begin
+	state start begin
+		when 9009.chat."GM: Start Fishing Event" with pc.get_gm_level() == 5 and game.get_event_flag("manwoo_start") == 0 begin
+			say_title("Manwoo Event")
+			say("Which fish should be accepted?") -- Setting which kind of fishes should the fisher man accept in the event
+			say("Between 27802 and 27818") -- We have fishes till 27823 but they aren't activated
+			
+			local fish = input()
+			if fish != "" then
+				fish = tonumber(fish)
+			end
+			if fish >= 27802 and fish <= 27818 then -- Check if the input is a number and if it is fishable.
+				game.set_event_flag("manwoo_fish", fish) -- To check the fish as an eventflag
+			else
+				say("That number isn't accepted")
+				return
+			end
+			say_title("Manwoo Event") -- Setting the amount of fishes that would be accepted
+			say("How many fishes should we accept?")
+			local amount = input()
+			if amount != "" then
+				amount = tonumber(amount)
+			end
+			if amount > 0 then
+				game.set_event_flag("manwoo", amount)
+			else
+				say("That isn't a valid number")
+			end
+			
+			say_title("Manwoo Event") -- Setting the reward for the event
+			say("How many different items should")
+			say("the player receive as a reward? Max = 4")
+			--
+			local reward_amount = select("1", "2", "3", "4", "cancel") -- how many different items a player can get, max = 4.
+			if s == 5 then
+				return
+			else
+				local i = 0
+				repeat
+					i = i + 1
+					game.set_event_flag("manwoo_reward_"..i, 0)
+				until i == 4
+
+				local current_amount = 0
+				local again = 1
+				repeat -- repeat so that the array will be filled in
+					say_title("Manwoo Event")
+					say("Please input the item vnum that will be given (Reward "..current_amount..").")
+					local reward_vnum = input()
+					say_title("Manwoo Event")
+					if reward_vnum == "" or reward_vnum == 0 then
+						say("You did not put a vnum in there")
+						again = select("Again", "no more items", "cancel")
+						if again == 2 then
+							current_amount = reward_amount
+						elseif again == 3 then
+							return
+						end
+					else	
+						if item_name(reward_vnum) == nil then
+							say("That vnum does not exist")
+							wait()
+						else
+							say_item_vnum(reward_vnum)
+							say("")
+							local vnum_ok = select("ok", "type again", "cancel")
+							if vnum_ok == 1 then
+								current_amount = current_amount + 1
+								game.set_event_flag("manwoo_reward_"..current_amount, reward_vnum)
+							elseif vnum_ok == 3 then
+								return
+							end
+						end
+					end
+				until current_amount == reward_amount
+				
+			end
+			
+			
+			say_title("Manwoo Event")
+			say("For how many hours should the event be on?")
+			local s = select("8 hours", "16 hours", "24 hours", "unlimited", "input", "cancel")
+			local hours = 1 -- default value
+			if s == 1 then
+				hours = 8
+			elseif s == 2 then
+				hours = 16
+			elseif s == 3 then
+				hours = 24
+			elseif s == 4 then
+				hours = 0
+			elseif s == 5 then
+				hours = tonumber(input())
+				if hours < 1 then
+					return						
+				end
+			else
+				return
+			end
+			game.set_event_flag("manwoo_time", get_global_time()+hours*60)
+			game.set_event_flag("manwoo_start", 1)
+			return
+		end
+		when 9009.chat."GM: Stop Fish event" with pc.get_gm_level() == 5 and game.get_event_flag("manwoo_start") > 0 begin
+			say_title("Manwoo Event")
+			local s=select("stop the event", "cancel")
+			if s == 1 then
+				game.set_event_flag("manwoo_start", 0)
+			else
+				return
+			end
+		end
+		
+		when 9009.chat."Psst, want to help me out?" with game.get_event_flag("manwoo_start") > 0 and game.get_event_flag("manwoo_time") >= get_global_time() begin
+			pc.setqf("reward", 1) 
+			pc.setqf("time", game.get_event_flag("manwoo_time"))
+			say_title("Fisherman's Event")
+			say("Hi, do you know Octavio in the village over there?")
+			say("He came to me one day with a very attractive business deal.")
+			say("As you know, he is one of the most famous cooks in these regions,")
+			say("and he strives to be the best there is in every cooking mastery.")
+			say("He has put his attention to sushi,")
+			say("and he claims he needs live fish to make the tastiest sushi.")
+			wait()
+			say_title("Fisherman's Event")
+			say("Of course he doesn't have any time to catch them himself,")
+			say("so he asked me to do it for him, for some items he gets from his customers.")
+			say("But I'm a bit stretched at the moment with the amount he needs from me,")
+			say("I cannot possibly do it alone.")
+			say("If you help me with Octavio's order,")
+			say("I will give you a nice reward!")
+			say("Give me this fish: ")
+			say(game.get_event_flag("manwoo").."x: ")
+			say_item_vnum(game.get_event_flag("manwoo_fish"))
+			wait()
+			
+			set_state(give_fish)
+		end
+	end
+	
+	state give_fish begin
+		when login or enter with game.get_event_flag("manwoo_start") == 0 or pc.getqf("time") < get_global_time() begin
+			set_state(start)
+		end
+
+		when login or enter begin
+			say("bla")
+		end
+		
+		when 9009.chat."About the fish..." with game.get_event_flag("manwoo_start") > 0 and game.get_event_flag("manwoo_start") > 0 and game.get_event_flag("manwoo_time") >= get_global_time() begin
+			say_title("Fisherman's Event")
+			if pc.count_item(game.get_event_flag("manwoo_fish")) < game.get_event_flag("manwoo") then
+				say("You don't have enough fish!")
+			else
+				say("Hey! You actually managed to do it!")
+				say("Thank you!")
+				say("And now... for the reward")
+				wait()
+				say_title("Fisherman's Event")
+				local current_amount = pc.getqf("reward")
+				local reward_vnum = game.get_event_flag("manwoo_reward_"..current_amount)
+				if reward_vnum == 0 or reward_vnum == "" then
+					local last_item_vnum = 150
+					say_item_vnum(last_item_vnum)
+					pc.give_item2(last_item_vnum)
+				else
+					if pc.enough_inventory(reward_vnum) == true then
+						say_item_vnum(reward_vnum)
+						pc.remove_item(game.get_event_flag("manwoo_fish"), game.get_event_flag("manwoo"))
+						pc.give_item2(reward_vnum)
+						pc.setqf("reward", current_amount +1)
+					else
+						say("You don't have enough space!")
+						say("Please, return when you have enough space!")
+					end
+				end
+			end
+		end
+	end
+end

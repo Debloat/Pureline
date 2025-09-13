@@ -1,0 +1,204 @@
+quest subquest_1 begin
+	state start begin
+		when login or levelup with pc.level >= 6 and pc.level <= 11 begin
+			set_state(information)
+		end
+	end
+
+	state information begin
+		when letter begin
+			local v=find_npc_by_vnum(9003)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, gameforge.subquest_01._10_targetVid)
+			end
+		end
+
+		when __TARGET__.target.click or	9003.chat.gameforge.subquest_01._20_npcChat begin
+			target.delete("__TARGET__")
+
+			say_title(gameforge.find_squareguard._130_sayTitle)
+			say(gameforge.subquest_01._30_say)
+			say_item_vnum(30130)
+			say(gameforge.subquest_01._40_say)
+			local s= select(gameforge.subquest_01._50_select, gameforge.subquest_01._60_select)
+			if 2==s then
+				say(gameforge.subquest_01._70_say)
+
+				local a= select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
+				if 2==a then
+					say_title(gameforge.find_squareguard._130_sayTitle)
+					say(gameforge.subquest_01._80_say)
+					return
+				end
+
+				say_title(gameforge.find_squareguard._130_sayTitle)
+				say(gameforge.subquest_01._90_say)
+				set_state(__GIVEUP__)
+				return
+			end	
+			say_title(gameforge.subquest_01._100_sayTitle)
+			say(gameforge.subquest_01._110_say)
+			set_state(to_yeonnahwan)
+		end
+	end
+
+	state to_yeonnahwan begin
+		when letter begin
+			local v = find_npc_by_vnum(20005)
+			if v!= 0 then
+				target.vid("__TARGET__", v, gameforge.subquest_01._120_targetVid)
+			end
+			send_letter(gameforge.subquest_01._120_targetVid)
+		
+		end
+
+		when button or info begin
+			say_title(gameforge.subquest_01._120_targetVid)
+						say_reward(gameforge.subquest_01._130_sayReward)
+						say_item_vnum(30130)
+					end
+
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+			say_title(gameforge.subquest_01._140_sayTitle)
+			say(gameforge.subquest_01._150_say)
+			say_item_vnum(30130)
+			wait()
+			say_title(gameforge.subquest_01._140_sayTitle)
+			say(gameforge.subquest_01._160_say)
+			say_item_vnum(30020)
+			wait()
+			set_state(hunt_for_peach)
+		end
+	end
+
+	state hunt_for_peach begin
+		when letter begin
+			send_letter(gameforge.subquest_01._170_sendLetter)
+		end
+
+		when button or info begin
+			say_title(gameforge.subquest_01._170_sendLetter)
+						say_reward(gameforge.subquest_01._180_sayReward)
+			say_item_vnum(30020)
+					end
+
+	when 20005.chat.gameforge.subquest_01._190_npcChat with pc.count_item(30020) == 0 begin
+			say_title(gameforge.subquest_01._140_sayTitle)
+			say(gameforge.subquest_01._200_say)
+
+		end
+
+
+		when 108.kill begin
+			local s = number(1, 100)
+			if s <= 5 then
+				pc.give_item2(30020, 1)
+				set_state(go_back_to_yonah)
+			end 
+		end
+	end
+    state go_back_to_yonah begin
+		when letter begin
+			send_letter(gameforge.subquest_01._210_sendLetter)
+			local v = find_npc_by_vnum(20005)
+
+			if v!= 0 then
+				target.vid("__TARGET__", v, gameforge.subquest_01._210_sendLetter)
+			end
+		end
+		when button or info begin
+			say_title(gameforge.subquest_01._220_sayTitle)
+						say_reward(gameforge.subquest_01._230_sayReward)
+					end
+		
+		when __TARGET__.target.click begin 
+			target.delete("__TARGET__") 
+			if pc.count_item(30020) >= 1 then
+			
+			say_title(gameforge.subquest_01._140_sayTitle)
+			say(gameforge.subquest_01._240_say)
+			say_item_vnum(30020)
+			say(gameforge.subquest_01._250_say)
+			wait()
+			say_title(gameforge.subquest_01._140_sayTitle)
+			say(gameforge.subquest_01._260_say)
+			say_item_vnum(30130)
+			
+			pc.remove_item(30020, 1)
+			pc.give_item2(30130, 1)
+
+			set_state(going_to_reward)
+			end
+		end
+    end
+
+	state going_to_reward begin
+		when letter begin
+			send_letter(gameforge.subquest_01._270_sendLetter)
+
+			local v=find_npc_by_vnum(9003)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, gameforge.subquest_01._270_sendLetter)
+			end
+
+		end
+		when info or button begin
+			say_title(gameforge.subquest_01._270_sendLetter)
+						say_reward(gameforge.subquest_01._280_sayReward)
+			say_item_vnum(30130)
+					end
+
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+			if pc.count_item(30130) >= 1 then
+				say_title(gameforge.subquest_01._290_sayTitle)
+				say(gameforge.subquest_01._300_say)
+				wait()
+				say_title(gameforge.collect_herb_lv4._130_sayTitle)
+								say_reward(gameforge.subquest_01._310_sayReward)
+								pc.remove_item(30130)
+				pc.give_exp2(1500)
+				set_quest_state("levelup","run")
+				pc.change_money(1000)
+				clear_letter()
+				set_state(__COMPLETE__)
+			else
+				say_title(gameforge.subquest_01._290_sayTitle)
+				say(gameforge.subquest_01._320_say)
+
+								say_item_vnum(30130)
+				
+				wait()
+				say_title(gameforge.find_squareguard._130_sayTitle)
+				say(gameforge.subquest_01._330_say)
+				local s= select(gameforge.subquest_01._340_select, gameforge.subquest_01._350_select)
+				if s==2 then
+					say(gameforge.subquest_01._360_say)
+				
+				local a= select(gameforge.locale.guild.yes, gameforge.locale.guild.no)	
+				if 2==a then
+					say_title(gameforge.find_squareguard._130_sayTitle)
+					say(gameforge.subquest_01._370_say)
+					return
+					end
+
+				say_pc_name()
+				say(gameforge.subquest_01._380_say)
+				clear_letter()
+				set_state(__GIVEUP__)
+				return
+				end
+				
+			set_state(hunt_for_peach)
+			end
+		end
+	end
+
+	state __GIVEUP__ begin
+	end
+	state __COMPLETE__ begin
+	end
+end

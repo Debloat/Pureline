@@ -1,0 +1,18 @@
+quest dragon_lair begin
+	state start begin
+		when 8031.kill or 8032.kill or 8033.kill or 8034.kill begin
+			-- spawns a group of mobs at the area of the player with a chance of 1/3
+			if (math.random(3) == 1) then
+				local group_group = {
+					2425, 2425,
+					2426, 2426,
+					2427
+				}
+				local group_num = math.random(table.getn(group_group))
+				local group_vnum = group_group[group_num]
+				mob.spawn_group(group_vnum, pc.get_local_x(), pc.get_local_y(), 1, 1, 1) -- spawn a group of monsters
+			end
+		end
+	end
+end
+

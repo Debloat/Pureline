@@ -1,0 +1,44 @@
+quest new_christmas_2012_gift_box begin
+	state start begin
+		function gift ()
+--			local pct_table = {4, 8, 12, 16, 21, 26, 31, 40, 50, 61, 73, 86, 100}
+--			local gift_table = {25100, 71084, 71085, 71109, 25040, 71101, 71107, 50513, 0, 0, 0, 0, 0}
+--			local gift_cont = {1,1,1,1,1,5,1,1,100000,50000,30000,20000,10000}
+			local n = number (1,100)
+			if n <= 4 then
+				pc.give_item2(25100,1)
+			elseif n <= 8 then
+				pc.give_item2(71084,1)
+			elseif n <= 12 then
+				pc.give_item2(71085,1)
+			elseif n <= 16 then
+				pc.give_item2(71109,1)
+			elseif n <= 21 then
+				pc.give_item2(25040,1)
+			elseif n <= 26 then
+				pc.give_item2(71101,5)
+			elseif n <= 31 then
+				pc.give_item2(71107,1)
+			elseif n <= 40 then
+				pc.give_item2(50513,1)
+			elseif n <= 50 then
+				pc.changegold (100000)
+			elseif n <= 61 then
+				pc.changegold (50000)
+			elseif n <= 73 then
+				pc.changegold (30000)
+			elseif n <= 86 then
+				pc.changegold (20000)
+			else
+				pc.changegold (10000)
+			end
+
+		end
+
+		-- 크리스마스 선물 상자 : 71144
+		when 71144.use begin
+			new_christmas_2012_gift_box.gift()
+			item.remove()
+		end
+	end
+end

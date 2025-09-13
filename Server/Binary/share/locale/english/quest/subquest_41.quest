@@ -1,0 +1,139 @@
+
+quest subquest_41 begin
+	state start begin
+		when login or levelup with pc.level >= 49 and pc.level <= 51 begin
+			set_state(information)
+		end
+
+	end
+
+	state information begin
+		when letter begin
+					
+			local v = find_npc_by_vnum(20008)
+
+			if v != 0 then
+				target.vid("__TARGET__", v, gameforge.subquest_41._10_targetVid)
+			end
+		end
+
+		
+		when __TARGET__.target.click or	20008.chat.gameforge._015_npcChat with pc.level >= 49 begin
+			target.delete("__TARGET__")
+
+			say_title(gameforge.subquest_06._320_sayTitle)
+			say(gameforge.subquest_41._20_say)
+			wait()
+			say_title(gameforge.subquest_06._320_sayTitle)
+			say(gameforge.subquest_41._30_say)
+			wait()
+			say_title(gameforge.subquest_06._320_sayTitle)
+			say(gameforge.subquest_41._40_say)
+			say_item_vnum("30162")
+						local s= select(gameforge.subquest_01._50_select, gameforge.subquest_30._50_select)
+			if 2==s then
+				say(gameforge.subquest_41._50_say)
+				local a= select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
+				if  2==a then
+					say_title(gameforge.subquest_06._320_sayTitle)
+					say(gameforge.subquest_41._60_say)
+					return
+				end
+				say_title(gameforge.subquest_06._320_sayTitle)
+				say(gameforge.subquest_41._70_say)
+				set_state(__GIVEUP__)
+				return
+			end
+			say_title(gameforge.subquest_06._320_sayTitle)
+			say(gameforge.subquest_41._80_say)
+			set_state(hunt_for_oku)
+		end
+	end
+
+	state hunt_for_oku begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.subquest_41._10_targetVid)
+			q.set_title(gameforge.subquest_41._10_targetVid)
+			q.start()
+
+			if pc.count_item("30162") >= 100 then  
+				local v = find_npc_by_vnum(20008)
+
+				if v != 0 then
+					target.vid("__TARGET__", v, gameforge.subquest_41._10_targetVid)
+				end
+				return
+			end
+		end
+
+		when info or button begin
+
+			if pc.count_item("30162") >= 100 then  
+				say_title(gameforge.subquest_41._90_sayTitle)
+				say(gameforge.subquest_41._100_say)
+				return
+			end
+				
+			say_title(gameforge.subquest_41._110_sayTitle)
+			say(gameforge.subquest_41._120_say)
+			say_item_vnum("30162")
+					end
+		when 2001.kill or 2002.kill or 2003.kill or 2004.kill or  2005.kill begin
+			local s = number(1, 100)
+			if s <= 7 and pc.count_item("30162")<100  then 
+				pc.give_item2("30162", 3) 
+				if pc.count_item("30162")>=100 then
+					local v=find_npc_by_vnum(20008)
+					if 0==v then
+					else
+						target.vid("__TARGET__",v, gameforge.subquest_41._130_targetVid)
+					end
+				end	
+			end	
+		end
+			
+		when __TARGET__.target.click or	20008.chat.gameforge.subquest_41._140_npcChat begin
+			target.delete("__TARGET__")
+			if pc.count_item("30162") >= 100 then
+				say_title(gameforge.subquest_41._150_sayTitle)
+				say(gameforge.subquest_41._160_say)
+				wait()
+				say_title(gameforge.subquest_41._150_sayTitle)
+				say(gameforge.subquest_41._170_say)
+				pc.remove_item("30162",100)
+
+				say_reward(gameforge.subquest_41._180_sayReward)
+				pc.give_exp2(2100000)
+				set_quest_state("levelup","run")
+
+				say_reward(gameforge.subquest_30._270_sayReward)
+				pc.change_money(20000)
+				clear_letter()	
+				set_state(COMPLETE)
+				return
+				
+			else
+				say_title(gameforge.subquest_41._150_sayTitle)
+				say(gameforge.subquest_41._190_say)
+				local s= select(gameforge.subquest_26._330_select, gameforge.find_brother_article._170_select)
+				if 2==s then
+					say_title(gameforge.subquest_41._150_sayTitle)
+					say(gameforge.subquest_41._200_say)
+					set_state(__GIVEUP__)
+					return
+				end
+				say_title(gameforge.subquest_41._150_sayTitle)
+				say(gameforge.subquest_41._210_say)
+			end
+		end
+	end
+	state __GIVEUP__ begin
+	end
+	
+	state COMPLETE begin
+		when enter begin
+			q.done()
+		end
+	end
+end

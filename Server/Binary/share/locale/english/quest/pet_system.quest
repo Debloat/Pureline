@@ -1,0 +1,66 @@
+quest pet_system begin
+    state start begin
+        function get_pet_info(itemVnum)
+            pet_info_map = {
+            --  [ITEM VNUM] MOB_VNUM, DEFAULT NAME
+                [53001]     = { 34001, gameforge.pet_system._010_say ,0},
+                [53002]     = { 34002, gameforge.pet_system._020_say ,0},
+				[53003]     = { 34003, gameforge.pet_system._040_say ,0},
+				[53005]     = { 34004, gameforge.pet_system._050_say, 1},
+				[53006]     = { 34009, gameforge.pet_system._050_say, 1},
+                [53010]     = { 34008, gameforge.pet_system._060_say, 0},
+                [53011]     = { 34007, gameforge.pet_system._070_say, 0},
+                [53012]     = { 34005, gameforge.pet_system._080_say, 0},
+                [53013]     = { 34006, gameforge.pet_system._090_say, 0},
+                [53007]     = { 34010, gameforge.pet_system._100_say, 0},
+                [53008]     = { 34011, gameforge.pet_system._110_say, 0},
+                [53009]     = { 34012, gameforge.pet_system._120_say, 0},
+                -- GF specials
+                [38200]     = { 34006, gameforge.pet_system._090_say, 0},
+                [38201]     = { 34006, gameforge.pet_system._090_say, 0},
+				[53014]     = { 34013, gameforge.pet_system._130_say, 0},
+				[53015]     = { 34014, gameforge.pet_system._140_say, 0},
+				[53016]     = { 34015, gameforge.pet_system._150_say, 0},
+				[53017]     = { 34016, gameforge.pet_system._160_say, 0},
+            }
+
+            itemVnum = tonumber(itemVnum)
+
+            return pet_info_map[itemVnum]
+        end
+		function get_spawn_effect_file(idx)
+			effect_table = {
+				[0] = nil,
+				[1] = "d:\\\\ymir work\\\\effect\\\\etc\\\\appear_die\\\\npc2_appear.mse",
+			}
+			return effect_table [idx]
+		end
+        when 38200.use or 38201.use or 53007.use or 53013.use or 53012.use or 53011.use or 53010.use or 53006.use  or 53005.use or 53002.use or 53001.use or 53003.use or 53008.use or 53009.use or
+			 53014.use or 53015.use  or 53016.use or 53017.use begin
+            local pet_info = pet_system.get_pet_info(item.vnum)
+
+            if null != pet_info then
+
+                local mobVnum = pet_info[1]
+                local petName = pet_info[2]
+				local spawn_effect_file_name = pet_system.get_spawn_effect_file(pet_info[3])
+
+                if true == pet.is_summon(mobVnum) then
+					if spawn_effect_file_name != nil then
+						pet.spawn_effect (mobVnum, spawn_effect_file_name)
+					end
+                    pet.unsummon(mobVnum)
+                else
+                    if pet.count_summoned() < 1 then
+                        pet.summon(mobVnum, petName, false)
+                    else
+                        syschat(gameforge.pet_system._030_chat)
+                    end
+					if spawn_effect_file_name != nil then
+						pet.spawn_effect (mobVnum, spawn_effect_file_name)
+					end
+                end -- if pet.is_summon
+            end  -- if null != pet_info
+        end -- when
+    end -- state
+end -- quest

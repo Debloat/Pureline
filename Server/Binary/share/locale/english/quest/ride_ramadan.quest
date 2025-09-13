@@ -1,0 +1,63 @@
+quest ride_ramadan begin
+	state start begin
+		function Ride( vnum, remain_time )
+			ride_info = {
+				
+				--ramadan mounts
+				[71131] = { 20119,  item.get_socket(2)*60,	apply.MOV_SPEED, 60,	1,	false	},
+				[71132] = { 20119,  item.get_socket(2)*60,	apply.MOV_SPEED, 60,	1,	false	},
+				[71133] = { 20119,  item.get_socket(2)*60,	apply.MOV_SPEED, 60,	1,	false	},
+				[71134] = { 20119,  item.get_socket(2)*60,	apply.MOV_SPEED, 60,	1,	false	},
+				[71161] = { 20219,  item.get_socket(2)*60,	apply.MOV_SPEED, 60,	1,	false	},
+				}
+
+			if pc.level < ride_info[vnum][5] then
+				say("")
+				say(gameforge.ride._010_say)
+				say("")
+			else
+				if 112 == pc.get_map_index() then
+					return
+				end
+				if ride_info[vnum][2] == 0 and remain_time != 0 then
+					pc.mount( ride_info[vnum][1], remain_time*60 )
+					pc.mount_bonus( ride_info[vnum][3], ride_info[vnum][4], remain_time*60 )
+				else
+					pc.mount( ride_info[vnum][1], ride_info[vnum][2] )
+					pc.mount_bonus( ride_info[vnum][3], ride_info[vnum][4], ride_info[vnum][2] )
+				end
+
+				if true == ride_info[vnum][6] then
+					pc.remove_item(vnum, 1)
+				end	
+			end	
+		end
+
+		when login begin
+			local vnum, remain_time = pc.get_special_ride_vnum()
+			if (vnum <= 71130 or vnum >=71135) and vnum != 71161 then
+		        return
+      		end
+			if 0 != vnum then
+				ride_ramadan.Ride(vnum, remain_time)
+			end
+		end
+
+		when 71131.use or 71132.use or 71133.use or 71134.use or 71161.use begin
+			 if pc.is_polymorphed() then
+				 say("")
+				 say(gameforge.ride._020_say)
+				 say("")
+			elseif false == pc.is_riding() then
+			 	if true == horse.is_summon() then
+					horse.unsummon()
+				end
+				 ride_ramadan.Ride(item.vnum, 0)
+			 else
+				say("")
+				 say(gameforge.ride._030_say)
+				 say("")
+			 end
+		end
+	end
+end

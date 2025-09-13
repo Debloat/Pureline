@@ -1,0 +1,28 @@
+quest years_greetings begin
+    state start begin
+	when oldwoman.chat.locale.years_greetings.chat_greet with game.get_event_flag("newyear_greet")>0 begin
+	    local GREETING_ITEM_VNUM = 50023
+	    say(locale.years_greetings.greet_msg)
+	    local s = select(locale.years_greetings.select_1,locale.years_greetings.select_2,locale.years_greetings.select_3)
+	    if s==1 then
+		if pc.level < 15 then
+		    say(locale.years_greetings.under_level_15)
+		elseif pc.getqf("already_does") == 0 or pc.getqf("already_does") == 1 then
+		    say(locale.years_greetings.give_msg)
+		    if pc.enough_inventory(GREETING_ITEM_VNUM) then
+			pc.give_item2(GREETING_ITEM_VNUM, 1)
+			pc.setqf("already_does", 2)
+		    else
+			say(locale.years_greetings.not_enoguh_inventory)
+		    end
+		else
+		    say(locale.years_greetings.no_money_this_time)
+		end
+	    elseif s==2 then
+		say(locale.years_greetings.bless_msg)
+	    elseif s==3 then
+		say(locale.years_greetings.event_info)
+	    end
+	end
+    end
+end

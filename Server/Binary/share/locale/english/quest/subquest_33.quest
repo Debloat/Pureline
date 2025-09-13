@@ -1,0 +1,259 @@
+
+quest subquest_33 begin
+	state start begin
+		when login or levelup or enter with pc.get_level() >=44  and pc.get_level() <= 46 begin
+			set_state( information )
+		end
+	end
+
+	state information begin
+		when letter begin
+					
+			local v = find_npc_by_vnum(20023)
+
+			if v != 0 then
+				target.vid("__TARGET__", v, gameforge.subquest_33._10_targetVid)
+			end
+		end
+
+				
+		when __TARGET__.target.click or	20023.chat.gameforge.subquest_33._20_npcChat with pc.level >= 44 begin
+			target.delete("__TARGET__")
+			say_title(gameforge.subquest_05._30_sayTitle)
+			say(gameforge.subquest_33._30_say)
+			wait()
+			say_title(gameforge.subquest_05._30_sayTitle)
+			say(gameforge.subquest_33._40_say)
+			local s= select(gameforge.subquest_01._50_select, gameforge.subquest_01._60_select)
+			if 2==s then
+				say_title(gameforge.subquest_05._30_sayTitle)
+				say(gameforge.subquest_30._60_say)
+				local a= select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
+				if  2==a then
+    					say_title(gameforge.subquest_05._30_sayTitle)
+					say(gameforge.subquest_33._50_say)
+					return
+				end
+  				say_title(gameforge.subquest_05._30_sayTitle)
+				say(gameforge.subquest_33._60_say)
+				set_state(__GIVEUP__)
+				return
+			end
+ 			say_title(gameforge.subquest_05._30_sayTitle)
+			say(gameforge.subquest_33._70_say)
+			set_state(to_gain_map)
+		end	
+	end
+
+	state to_gain_map begin
+
+		when letter begin
+
+			send_letter(gameforge.subquest_33._80_sendLetter)
+			if  pc.count_item(27988) ==4 then
+				local v = find_npc_by_vnum(20023)
+
+				if v != 0 then
+					target.vid("__TARGET__", v, gameforge.subquest_33._90_targetVid)
+				end
+				return
+			end
+				
+		end
+
+		when info or button begin
+			if  pc.count_item(27988) >=4 then
+				say_title(gameforge.subquest_33._100_sayTitle)
+				say(gameforge.subquest_33._110_say)
+				return
+			end
+			say_title(gameforge.subquest_33._120_sayTitle)
+			say(gameforge.subquest_33._130_say)
+			say_reward(string.format(gameforge.subquest_33._140_sayReward, pc.count_item(27988)))
+					end
+	
+		when 191.kill or 192.kill or 193.kill  or 194.kill   begin   
+			if pc.count_item("27988") <4 then
+				pc.give_item2(27988, 1)
+			end
+			if pc.count_item("27988") ==4 then
+			    set_state(hunt_reward)
+			end
+				
+		end
+	end		
+	state hunt_reward begin
+		when letter begin
+			send_letter(gameforge.subquest_33._150_sendLetter)
+		
+			local v = find_npc_by_vnum(20023)
+
+			if v != 0 then
+				target.vid("__TARGET__", v, gameforge.subquest_27._180_makequestbutton)
+			end
+		end
+
+		when info or button begin
+			say_title(gameforge.subquest_33._160_sayTitle)
+			say(gameforge.subquest_33._170_say)
+		end
+
+	when __TARGET__.click or 20023.chat.gameforge.subquest_33._175_npcChat begin
+			target.delete("__TARGET__")
+			if pc.count_item(27988)>=4 then	
+				say_title(gameforge.subquest_05._30_sayTitle)
+				say(gameforge.subquest_33._180_say)
+				wait()
+				say_title(gameforge.subquest_05._30_sayTitle)
+				say(gameforge.subquest_33._190_say)
+				local s= select(gameforge.subquest_33._200_select, gameforge.subquest_33._210_select)
+				if 2==s then
+					say_title(gameforge.subquest_05._30_sayTitle)
+					say(gameforge.subquest_33._220_say)
+					local a= select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
+					if  1==s then
+    						say_title(gameforge.subquest_05._30_sayTitle)
+						say(gameforge.subquest_33._230_say)
+						pc.remove_item(27988,4)
+						set_state(__GIVEUP__)
+						return
+					end
+	   				say_title(gameforge.subquest_05._30_sayTitle)
+					say(gameforge.subquest_33._240_say)
+					set_state(to_gain_tresure)
+					return 		
+
+				end	
+ 				say_title(gameforge.subquest_05._30_sayTitle)
+				say(gameforge.subquest_33._250_say)
+				set_state(to_gain_tresure)
+				return
+			else
+ 				say_title(gameforge.subquest_05._30_sayTitle)
+				say(gameforge.subquest_33._260_say)
+				local s= select(gameforge.subquest_33._270_select, gameforge.find_brother_article._170_select)
+				if 2==s then	
+   					say_title(gameforge.subquest_05._30_sayTitle)
+					say(gameforge.subquest_33._280_say)
+					set_state(__GIVEUP__)
+					return
+				end
+ 				say_title(gameforge.subquest_05._30_sayTitle)
+				say(gameforge.subquest_33._290_say)
+		end
+	
+	end
+end
+	state to_gain_tresure begin
+		when letter begin
+			send_letter(gameforge.subquest_33._20_npcChat)
+			
+			local v=find_npc_by_vnum(20009)  -----------old man
+				if 0 == v then
+				else
+					target.vid("__TARGET__",v, gameforge.subquest_33._300_targetVid)
+				end 
+
+		end
+
+		when info or button begin
+			say_title(gameforge.subquest_33._310_sayTitle)
+						say_pc_name()
+			say(gameforge.subquest_33._320_say)
+		end
+				
+
+		when __TARGET__.target.click or	20009.chat.gameforge.subquest_33._310_sayTitle with pc.count_item(27988)>=4 begin   
+			 target.delete("__TARGET__")
+			 say_title(gameforge.subquest_33._330_sayTitle)
+			 say(gameforge.subquest_33._340_say)
+			 wait("")
+			 say_pc_name()
+			 say(gameforge.subquest_33._350_say)
+			 say_item_vnum(70009)
+			 
+			 pc.give_item2(70009, 1)
+			 
+			 set_state(go_to_reward)
+		 end 
+
+	end
+
+	state go_to_reward begin
+		when letter begin
+			send_letter(gameforge.subquest_33._360_sendLetter)
+			
+			local v=find_npc_by_vnum(20023)
+				if 0 == v then
+				else
+					target.vid("__TARGET__",v, gameforge.subquest_27._180_makequestbutton)
+				end 
+
+		end
+
+		when info or button begin
+			say_title(gameforge.subquest_33._370_sayTitle)
+			say(gameforge.subquest_33._380_say)
+		end
+
+
+		when __TARGET__.click or	20023.chat.gameforge.subquest_33._390_npcChat  begin
+			target.delete("__TARGET__")
+			if pc.count_item(70009)>=1 then	
+				say_title(gameforge.subquest_05._30_sayTitle)
+				say(gameforge.subquest_33._400_say)
+				pc.remove_item(70009,1)		
+				pc.remove_item(27988,4)	
+				
+				say_reward(gameforge.subquest_33._410_sayReward)
+				pc.give_exp2(1400000)
+				
+				say_reward(gameforge.subquest_33._420_sayReward)
+				pc.change_money(25000)
+				
+				if pc.job == 0 then
+					pc.give_item2(12241, 1)
+					say_reward(gameforge.subquest_33._430_sayReward)
+				elseif pc.job == 1 then
+					pc.give_item2(12521, 1)
+					say_reward(gameforge.subquest_33._440_sayReward)
+				elseif pc.job == 2 then
+					pc.give_item2(12381, 1)
+					say_reward(gameforge.subquest_33._450_sayReward)
+				elseif pc.job == 3 then
+					pc.give_item2(12661, 1)
+					say_reward(gameforge.subquest_33._460_sayReward)
+				end	
+
+				clear_letter()
+				set_state(__COMPLETE__)
+			else
+				say_title(gameforge.subquest_05._30_sayTitle)
+				say(gameforge.subquest_33._470_say)
+				return 
+
+			end
+
+		end
+	end
+
+state __GIVEUP__ begin
+end
+
+state __COMPLETE__ begin
+	
+end
+
+end
+
+
+
+
+
+
+
+
+
+
+		
+

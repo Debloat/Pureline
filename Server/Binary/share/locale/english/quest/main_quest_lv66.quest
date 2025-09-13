@@ -1,0 +1,386 @@
+define eulduji 20011
+define mysterious_man 20369
+define guard_man1 11000
+define guard_man2 11002
+define guard_man3 11004
+define spy 20370
+define rgd 2313
+--define rgd_kill_num 200
+define rgd_kill_num 200
+define rgd_kill_time_limit 30 
+define detoxicant 31003
+quest main_quest_lv66 begin
+	state start begin
+	end
+	state state_0 begin
+		when login or levelup or enter with pc.level >= 66 begin
+			set_state (state_1)
+		end
+	end
+	state state_1 begin
+		when letter begin
+			send_letter (gameforge.main_quest_lv66._10_sendLetter)
+			local v = find_npc_by_vnum (eulduji)
+			if v != 0 then
+				target.vid ("__TARGET__",v,"")
+			end
+		end
+		when button or info begin
+			say_title (gameforge.main_quest_lv66._10_sendLetter)
+			say (gameforge.main_quest_lv66._20_say)
+		end
+		when eulduji.chat.gameforge.main_quest_lv66._10_sendLetter begin
+			target.delete("__TARGET__")
+			say_title ( mob_name(eulduji))
+			say(gameforge.main_quest_lv66._30_say)
+		end
+		when 1091.kill begin
+		--	target.delete("__TARGET__")
+			set_state (state_2)
+		end
+	end
+	state state_2 begin
+		when letter begin
+			local v = find_npc_by_vnum (eulduji)
+			if v != 0 then
+				target.vid ("__TARGET__",v,"")
+			end
+			send_letter (gameforge.main_quest_lv66._10_sendLetter)
+		end
+		when button or info begin
+			say_title (gameforge.main_quest_lv66._10_sendLetter)
+			say (gameforge.main_quest_lv66._40_say)
+		end
+		when eulduji.chat.gameforge.main_quest_lv66._10_sendLetter begin
+			target.delete("__TARGET__")
+			say_title ( mob_name(eulduji))
+			say(gameforge.main_quest_lv66._50_say)
+			set_state (state_3)
+		end
+	end
+	state state_3 begin
+		when letter begin
+			local v = find_npc_by_vnum (eulduji)
+			if v != 0 then
+				target.vid ("__TARGET__",v,"")
+			end
+			send_letter(gameforge.main_quest_lv66._60_sendLetter)
+		end
+		when button or info begin
+			say_title (gameforge.main_quest_lv66._60_sendLetter)
+			say(gameforge.main_quest_lv66._70_say)
+		end
+		when eulduji.chat.gameforge.main_quest_lv66._60_sendLetter begin
+			target.delete("__TARGET__")
+			say_title(mob_name(eulduji))
+			say(gameforge.main_quest_lv66._80_say)
+			wait()
+			say_title ( mob_name(eulduji))
+			say(gameforge.main_quest_lv66._90_say)
+			wait()
+			say_title ( mob_name(eulduji))
+			say(gameforge.main_quest_lv66._100_say)
+			wait()
+			say_title ( mob_name(eulduji))
+			say(gameforge.main_quest_lv66._110_say)					
+			wait()
+			say_title ( mob_name(eulduji))
+			say(gameforge.main_quest_lv66._120_say)
+			wait()
+			
+			--say_title ("보상 :")
+			say_reward(string.format (gameforge.main_quest_lv60._190_sayReward, 5800000))
+			say_reward(string.format (gameforge.main_quest_lv60._210_sayReward, item_name(72301).." ".."3"..locale.count_postfix))
+			say_reward(string.format (gameforge.main_quest_lv60._210_sayReward, item_name(30046)))
+
+			pc.give_exp2(5800000)
+			
+			pc.give_item2(72301) -- 축복의 서 * 3
+			pc.give_item2(72301) 
+			pc.give_item2(72301) 
+			pc.give_item2(30046) -- 전갈의 꼬리
+			
+			set_state (state_4)
+		end
+	end
+	state state_4 begin
+		when letter begin
+			local v = find_npc_by_vnum (pc_find_square_guard_vid())
+			if v != 0 then
+				target.vid ("__TARGET__",v,"")
+			end
+			send_letter (gameforge.main_quest_lv66._130_sendLetter)
+		end
+		when button or info begin
+			say_title (gameforge.main_quest_lv66._130_sendLetter)
+			say (gameforge.main_quest_lv66._140_say)
+		end
+		when guard_man1.chat.gameforge.main_quest_lv66._130_sendLetter or guard_man2.chat.gameforge.main_quest_lv66._130_sendLetter or guard_man3.chat.gameforge.main_quest_lv66._130_sendLetter begin
+			target.delete("__TARGET__")
+			say_title(mob_name(guard_man1))
+			say(gameforge.main_quest_lv66._150_say)
+			wait()
+			say_title(mob_name(guard_man1))
+            say(gameforge.main_quest_lv66._160_say)					
+			set_state (state_5)
+		end
+	end
+	state state_5 begin
+		when letter begin
+			local v = find_npc_by_vnum (mysterious_man)
+			if v != 0 then
+				target.vid ("__TARGET__",v,"")
+			end
+			send_letter(gameforge.main_quest_lv66._170_sendLetter)
+		end
+		when button or info begin
+			say_title(gameforge.main_quest_lv66._170_sendLetter)
+			say (gameforge.main_quest_lv66._140_say)
+		end
+		when mysterious_man.chat.gameforge.main_quest_lv66._170_sendLetter begin
+			target.delete("__TARGET__")
+			say_title(gameforge.main_quest_lv66._190_sayTitle)
+			say(gameforge.main_quest_lv66._200_say)
+			set_state (state_6)
+		end
+	end
+	state state_6 begin
+		when letter begin
+			local v = find_npc_by_vnum (mysterious_man)
+			if v != 0 then
+				target.vid ("__TARGET__",v,"")
+			end
+			send_letter (gameforge.main_quest_lv66._210_sendLetter)
+		end
+		when button or info begin
+			say_title (gameforge.main_quest_lv66._210_sendLetter)
+			say (gameforge.main_quest_lv66._220_say)
+		end
+		when mysterious_man.chat.gameforge.main_quest_lv66._210_sendLetter begin
+			target.delete("__TARGET__")
+			say_title(gameforge.main_quest_lv66._190_sayTitle)
+			say(gameforge.main_quest_lv66._230_say)	
+			wait()
+			say_title(pc.getname())
+			say(gameforge.main_quest_lv66._240_say)
+			wait()
+			say_title(gameforge.main_quest_lv66._190_sayTitle)
+			say(gameforge.main_quest_lv66._250_say)
+			wait()
+			say_title(pc.getname())
+			say(gameforge.main_quest_lv66._260_say)
+			wait()
+			say_title(gameforge.main_quest_lv66._190_sayTitle)
+			say(gameforge.main_quest_lv66._270_say)					
+			wait()
+			say_title(pc.getname())
+			say(gameforge.main_quest_lv66._280_say)
+			wait()
+			say_title(mob_name(mysterious_man))
+			say(gameforge.main_quest_lv66._290_say)
+			wait()
+			say_title(gameforge.main_quest_lv66._300_sayTitle)
+			say(gameforge.main_quest_lv66._310_say)					
+			set_state (state_7)
+		end
+	end
+	state state_7 begin
+		when letter begin
+			local v = find_npc_by_vnum (mysterious_man)
+			if v != 0 then
+				target.vid ("__TARGET__",v,"")
+			end
+			send_letter (gameforge.main_quest_lv66._320_sendLetter)
+		end
+		when button or info begin
+			say_title (gameforge.main_quest_lv66._320_sendLetter)
+			say (gameforge.main_quest_lv66._330_say)
+		end
+		when mysterious_man.chat.gameforge.main_quest_lv66._320_sendLetter begin
+			target.delete("__TARGET__")
+			say_title( gameforge.main_quest_lv66._300_sayTitle)
+			say(gameforge.main_quest_lv66._340_say)					
+			wait()
+			say_title( gameforge.main_quest_lv66._300_sayTitle)
+			say(string.format(gameforge.main_quest_lv66._350_say,item_name(30033)))	
+			wait()
+			say_title(pc.getname())
+			say(gameforge.main_quest_lv66._360_say)					
+			wait()
+			say_title(gameforge.main_quest_lv66._300_sayTitle)
+			say(gameforge.main_quest_lv66._370_say)
+			set_state (state_8)
+		end
+	end
+	state state_8 begin
+		when enter begin
+			pc.setqf ("rgd_kill", 0)
+			pc.setqf ("state_8_start", get_global_time())
+			notice_multiline(string.format(gameforge.main_quest_lv66._380_notice, rgd_kill_time_limit), notice)
+			timer("rgd_kill_timer", rgd_kill_time_limit * 60 / 2)
+		end
+		when letter begin
+			send_letter (gameforge.main_quest_lv66._390_sendLetter)
+			local t = pc.getqf ("state_8_start") + rgd_kill_time_limit * 60 - get_global_time()
+			q.set_clock(locale.stash.enlarge_1_timer, t)
+			q.set_counter_name (mob_name (rgd))
+			q.set_counter_value (rgd_kill_num)
+		end
+		when button or info begin
+			say_title (gameforge.main_quest_lv66._390_sendLetter)
+			say (string.format(gameforge.main_quest_lv66._400_say, rgd_kill_num))
+			local t = pc.getqf ("state_8_start") + rgd_kill_time_limit * 60 - get_global_time()
+			if t < 0 then
+				say(gameforge.main_quest_lv66._410_say)
+			else
+				say(string.format(gameforge.main_quest_lv66._420_say, t / 60))
+			end
+		end
+		when rgd.kill begin
+			if pc.getqf("rgd_kill") >= rgd_kill_num - 1 then
+				pc.give_item2 (detoxicant, 1)
+				pc.setqf ("rgd_kill", 0)
+				q.set_counter_value (0)
+				set_state (state_9)
+			else 
+				pc.setqf ("rgd_kill", pc.getqf ("rgd_kill") + 1)
+				q.set_counter_value (rgd_kill_num - pc.getqf ("rgd_kill"))
+			end
+		end
+		when rgd_kill_timer.timer begin
+			local t = pc.getqf ("state_8_start") + rgd_kill_time_limit * 60 - get_global_time()
+			notice (string.format(gameforge.main_quest_lv66._420_say, t / 60))
+		end
+	end
+	state state_9 begin
+		when letter begin
+			local v = find_npc_by_vnum (mysterious_man)
+			if v != 0 then
+				target.vid ("__TARGET__",v,"")
+			end
+			send_letter (gameforge.main_quest_lv66._390_sendLetter)
+		end
+		when button or info begin
+			say_title (gameforge.main_quest_lv66._390_sendLetter)
+			say(gameforge.main_quest_lv66._430_say)
+		end
+		when mysterious_man.chat.gameforge.main_quest_lv66._390_sendLetter begin
+			target.delete("__TARGET__")
+			pc.remove_item (detoxicant, 1)
+			if (pc.getqf ("state_8_start") + rgd_kill_time_limit * 60 - get_global_time()) >= 0 then
+				q.done()
+				say_title (gameforge.main_quest_lv66._300_sayTitle)
+				say(gameforge.main_quest_lv66._440_say)
+				wait()
+				say_title (gameforge.main_quest_lv66._300_sayTitle)
+				say(gameforge.main_quest_lv66._450_say)
+				wait()
+				say_title (locale.reward)
+				say_reward(string.format(gameforge.main_quest_lv60._190_sayReward, 2900000))
+				say_reward(string.format(gameforge.main_quest_lv60._200_sayReward, 200000))
+				say_reward(string.format(gameforge.main_quest_lv60._210_sayReward, item_name(30033)))
+				say_reward(string.format(gameforge.main_quest_lv60._210_sayReward, item_name(50727).." ".."10"..locale.count_postfix))
+				say_reward(string.format(gameforge.main_quest_lv60._210_sayReward, item_name(50728).." ".."10"..locale.count_postfix))
+
+				pc.give_exp2(2900000)
+				pc.change_money(200000)
+				
+				pc.give_item2(30033) -- 깨진 사기그릇
+				pc.give_item2(50727, 10) -- 만병초 10
+				pc.give_item2(50728, 10) -- 산뽕나무 10
+
+			else
+			
+				say_title(gameforge.main_quest_lv66._300_sayTitle)
+				say(gameforge.main_quest_lv66._460_say)						
+				wait()
+				say_title(gameforge.main_quest_lv66._300_sayTitle)
+				say(gameforge.main_quest_lv66._470_say)
+				wait()
+
+				say_title (locale.reward)
+				say_reward(string.format(gameforge.main_quest_lv60._190_sayReward, 2000000))
+				say_reward(string.format(gameforge.main_quest_lv60._200_sayReward, 100000))
+				say_reward(string.format(gameforge.main_quest_lv60._210_sayReward, item_name(50727).." ".."10"..locale.count_postfix))
+				say_reward(string.format(gameforge.main_quest_lv60._210_sayReward, item_name(50728).." ".."10"..locale.count_postfix))
+
+				pc.give_exp2(2000000)
+				pc.change_money(100000)
+				
+				pc.give_item2(50727, 10) -- 만병초 10
+				pc.give_item2(50728, 10) -- 산뽕나무 10
+				
+			end
+			set_state (state_10)
+		end
+	end
+	state state_10 begin
+		when letter begin
+			local v = find_npc_by_vnum (spy)
+			if v != 0 then
+				target.vid ("__TARGET__",v,"")
+			end
+			send_letter (gameforge.main_quest_lv66._480_sendLetter)
+		end
+		when button or info begin
+			say_title (gameforge.main_quest_lv66._480_sendLetter)
+			say(gameforge.main_quest_lv66._490_say)
+		end
+		when spy.chat.gameforge.main_quest_lv66._480_sendLetter begin
+			target.delete("__TARGET__")
+			say_title( mob_name(spy))
+			say(gameforge.main_quest_lv66._500_say)
+			wait()
+			say_title ( pc.getname())
+			say(gameforge.main_quest_lv66._510_say)
+			wait()
+			say_title ( mob_name(spy))
+			say(gameforge.main_quest_lv66._520_say)					
+			wait()
+			say_title ( pc.getname())
+			say(gameforge.main_quest_lv66._530_say)
+			wait()
+			say_title ( mob_name(spy))
+			say(gameforge.main_quest_lv66._540_say)
+			wait()
+			say_title ( mob_name(spy))
+			say(gameforge.main_quest_lv66._550_say)	
+			set_state (state_11)
+		end
+	end
+	state state_11 begin
+		when letter begin
+			local v = find_npc_by_vnum (mysterious_man)
+			if v != 0 then
+				target.vid ("__TARGET__",v,"")
+			end
+			send_letter (gameforge.main_quest_lv66._560_sendLetter)
+		end
+		when button or info begin
+			say_title (gameforge.main_quest_lv66._560_sendLetter)
+			say (gameforge.main_quest_lv66._570_say)
+		end
+		when mysterious_man.chat.gameforge.main_quest_lv66._560_sendLetter begin
+			target.delete("__TARGET__")
+			say_title (gameforge.main_quest_lv66._300_sayTitle)
+			say(gameforge.main_quest_lv66._580_say)
+			wait()
+			say_title ( pc.getname())
+			say(gameforge.main_quest_lv66._590_say)
+			wait()
+			say_title(gameforge.main_quest_lv66._300_sayTitle)
+			say(gameforge.main_quest_lv66._600_say)
+			wait()
+			say_title(gameforge.main_quest_lv66._300_sayTitle)
+			say(gameforge.main_quest_lv66._610_say)
+			wait()
+			say_title(gameforge.main_quest_lv66._300_sayTitle)
+            say(gameforge.main_quest_lv66._620_say)
+			set_state (__COMPLETE__)
+			q.done()
+			set_quest_state ("main_quest_lv72", "state_0")
+		end
+	end	
+	state __COMPLETE__ begin
+	end
+end

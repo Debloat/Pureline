@@ -1,0 +1,164 @@
+
+quest subquest_30 begin
+	state start begin
+		when login or levelup or enter with pc.get_level() >=33  and pc.get_level() <= 35 begin
+			set_state( information )
+		end
+	end
+
+	state information begin
+		when letter begin
+					
+			local v = find_npc_by_vnum(20016)
+
+			if v != 0 then
+				target.vid("__TARGET__", v, gameforge.subquest_10._90_targetVid)
+			end
+		end
+
+				
+		when __TARGET__.target.click or	20016.chat.gameforge.subquest_30._10_npcChat with pc.level >= 33 begin
+			target.delete("__TARGET__")
+			say_title(gameforge.subquest_09._50_sayTitle)
+			say(gameforge.subquest_30._20_say)
+			wait()
+			say_title(gameforge.subquest_09._50_sayTitle)
+			say(gameforge.subquest_30._30_say)
+			wait()
+			say_title(gameforge.subquest_09._50_sayTitle)
+			say(gameforge.subquest_30._40_say)
+			local s= select(gameforge.subquest_01._50_select, gameforge.subquest_30._50_select)
+			if 2==s then
+				say_title(gameforge.subquest_09._50_sayTitle)
+				say(gameforge.subquest_30._60_say)
+				local a= select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
+				if  2==a then
+					say_title(gameforge.subquest_09._50_sayTitle)
+					say(gameforge.subquest_30._70_say)
+					return
+				end
+				say_title(gameforge.subquest_09._50_sayTitle)
+				say(gameforge.subquest_30._80_say)
+				set_state(__GIVEUP__)
+				return
+			end
+			say_title(gameforge.subquest_09._50_sayTitle)
+			say(gameforge.subquest_30._90_say)
+			set_state(to_gain_material)
+		end	
+	end
+
+	state to_gain_material begin
+
+		when letter begin
+
+			send_letter(gameforge.subquest_30._100_sendLetter)
+			local gold=pc.count_item(50606)
+			local silver=pc.count_item(50605)
+			local ebony=pc.count_item(50608)
+
+			if	gold>=100  and silver>=100 and ebony>=100 then
+				local v = find_npc_by_vnum(20016)
+
+				if v != 0 then
+					target.vid("__TARGET__", v, gameforge.subquest_30._110_targetVid)
+				end
+				return
+			end
+			
+		end
+
+		when info or button begin
+			local gold=pc.count_item(50606)
+			local silver=pc.count_item(50605)
+			local ebony=pc.count_item(50608)
+
+			if	gold>=100  and silver>=100 and ebony>=100 then
+
+				say_title(gameforge.subquest_30._120_sayTitle)
+				say(gameforge.subquest_30._130_say)
+				return
+			end
+
+			say_title(gameforge.subquest_30._140_sayTitle)
+
+			say(gameforge.subquest_30._150_say)
+		end
+
+		when __TARGET__.target.click or	20016.chat.gameforge.subquest_30._160_npcChat begin
+			target.delete("__TARGET__")
+			
+			local gold = pc.count_item(50606)
+			local silver = pc.count_item(50605)
+			local ebony = pc.count_item(50608)
+
+			
+			if	gold<100 or silver<100 or ebony<100 then
+
+				say_title(gameforge.blacksmith._20_sayTitle)
+
+				say(gameforge.subquest_30._170_say)
+				local s= select(gameforge.subquest_30._180_select, gameforge.subquest_30._190_select)
+				if 2==s then
+  				say_title(gameforge.blacksmith._20_sayTitle)
+				say(gameforge.subquest_30._200_say)
+					local a= select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
+					if  2==a then
+						say_title(gameforge.subquest_09._50_sayTitle)
+
+						say(gameforge.subquest_30._210_say)
+						return
+					end
+				say_title(gameforge.blacksmith._20_sayTitle)
+  				say(gameforge.subquest_30._220_say)
+					set_state(__GIVEUP__)
+					return
+				end
+				say_title(gameforge.subquest_09._50_sayTitle)
+				say(gameforge.subquest_30._230_say)
+				return
+		end	
+			
+		if	gold>=100  and silver>=100 and ebony>=100 then
+
+			say_title(gameforge.blacksmith._20_sayTitle)
+			say(gameforge.subquest_30._240_say)
+			wait()
+			say_title(gameforge.blacksmith._20_sayTitle)
+			say(gameforge.subquest_30._250_say)
+			pc.remove_item(50606,100)
+			pc.remove_item(50605,100)
+			pc.remove_item(50608,100)
+		
+			say_reward(gameforge.subquest_30._260_sayReward)
+			pc.give_exp2(200000)
+	
+			say_reward(gameforge.subquest_30._270_sayReward)
+			pc.change_money(20000)
+				
+				if pc.job == 0 then
+					pc.give_item2(00063,1)
+					say_reward(gameforge.subquest_30._280_sayReward)
+				elseif pc.job == 1 then
+					pc.give_item2(00063,1)
+					say_reward(gameforge.subquest_30._280_sayReward)
+				elseif pc.job == 2 then
+					pc.give_item2(00063,1)
+					say_reward(gameforge.subquest_30._280_sayReward)
+				elseif pc.job == 3 then
+					pc.give_item2(07053, 1)
+					say_reward(gameforge.subquest_30._290_sayReward)
+				end	
+			clear_letter()
+			set_state(__COMPLETE__)	
+		end
+			
+		end	
+	end
+state __GIVEUP__ begin
+end
+state __COMPLETE__ begin
+	when enter begin
+	end
+end
+end

@@ -1,0 +1,346 @@
+1	1	Má batoh obchodního cestujícího zámek?
+1	2	Mùeš získat Kulièku promìny v Zemi obrù?
+1	3	Mùeš z Prokletého modrého silného vlka získat Vlèí koešinu?
+1	4	Mùeš z Yetiho získat Koešinu Yetiho?
+1	5	Lze Ledovou kulièku získat pouze na Hoøe Sohan?
+1	6	Lze Slzu bohynì získat pouze z truhel?
+1	7	Zvyšuje Kámen spìchu+3 tvou rychlost pohybu o 30?
+1	8	Pøidávají Perly obvykle bonus k inteligenci?
+1	9	Existuje brnìní, které je od úrovnì 12?
+1	10	Vyskytují se v chrámu Hwang Nefritové íly?
+1	11	Je v údolí Seungryong celkem 22 mostù?
+1	12	Je na Metin2 celkem 8 tøíd postav?
+1	13	Existuje v Metin2 pøeklika?
+1	14	Existuje pøedmìt, kterı se nazıvá 'Šperk'?
+1	15	Existuje schopnost, která se nazıvá 'Vysávání aury'?
+1	16	Existuje bonus Léèení?
+1	17	Existuje ve høe Korejskı ohòostroj?
+1	18	Existuje støední Kniha misí?
+1	19	Existují ve høe Køemenové íly?
+1	20	Existuje speciální mapa pro tréninkové bitvy?
+1	21	Sedí na pravém rameni Teleportéra pták?
+1	22	Existuje ve høe Døevìné brnìní?
+1	23	Existuje ve høe Ohnivı fénix?
+1	24	Existuje ve høe Uèitel šermu?
+1	25	Jsou ve høe Orkové?
+1	26	Jsou na mapì 2 rybáøi?
+1	27	Je v kadém království pouze jeden Pacholek?
+1	28	Mùete mít na Metin2 zvíøátka?
+1	29	Existují v Metin2 psi?
+1	30	Je v kadém království ten samı poèet rybáøù?
+1	31	Existují na Metin2 Rıové buchty?
+1	32	Je na mapì 2 trištì?
+1	33	Existuje na Metin2 Mléènice?
+1	34	Dají se prokletá zvíøata najít jen v oblasti cechu?
+1	35	Útoèí Bera na hráèe automaticky?
+1	36	Zabil Beran-Setaou svou vlastní sestru?
+1	37	Má inventáø 90 míst?
+1	38	Má Bambusovı šíp hodnotu útoku 10?
+1	39	Je Brutální arahan úrovnì 53?
+1	40	Je Hladovı divokı pes  úrovnì 1?
+1	41	Nosí Správce skladištì modrou èelenku?
+1	42	Nosí kováø zástìru?
+1	43	Je Zubatá s kosou boss?
+1	44	Nosí Silnı orèí generál  øetìz se šesti pøívìsky?
+1	45	Má staøenka sestru?
+1	46	Existuje fórum Metin2?
+1	47	Má Mirine èerné oèi?
+1	48	Najdete Zubatou s kosou ve Vìi démonù?
+1	49	Jmenuje se duše Sury v druhém patøe jeskynì Akuma?
+1	50	Je Bahar-Taraji nejmladší z boskıch sourozencù?
+1	51	Je Bahar-Taraji bohyní rovnováhy?
+1	52	Je Baljit-Elvedin nejstarší z boskıch sourozencù?
+1	53	Je Baljit-Elvedin bùh rovnováhy?
+1	54	Je pøíšera Hae-Tae boss?
+1	55	Je Hrdı tmavı bojovník úrovnì 54?
+1	56	Nachází se Prokletı èervenı divoèák v sedmi rùznıch oblastech?
+1	57	Lze Mìdìnı zvon+0 pouívat od úrovnì hráèe 5?
+1	58	Je Èervená vıstroj Hwang urèena pro váleèníky?
+1	59	Je v poušti jasno také bìhem noci?
+1	60	Je Soon knihomol?
+1	61	Mùe kováø znièit zbranì pøi jejich vylepšování?
+1	62	Mùete se Velká pouštní elva objevit na mapì 2?
+1	63	Mùeš tìit diamanty?
+1	64	Mùeš se na Metin2 oenit?
+1	65	Mùeš na Metin2 tancovat?
+1	66	Mùeš bıt GM, kdy je ti jen 16 let?
+1	67	Mùeš pouít 'Zavolat' od úrovnì 15?
+1	68	Mùeš dosáhnout první mistrovské úrovnì kdy máš postavu na úrovni 17?
+1	69	Mùeš mít tøi mistrovské úrovnì u postavy na úrovni 52?
+1	70	Mùe ti z Metinu úrovnì 5 nìco vypadnout, kdy máš postavu na úrovni 55?
+1	71	Mùeš pouívat jezdecké schopnosti u zvíøete úrovnì 9?
+1	72	Mùeš opustit své zvíøátko v domì zvíøat?
+1	73	Mùeš na strom vìšet ponoky?
+1	74	Mùeš vylepšit Kámen ducha?
+1	75	Vypadává ze všech pøíšer Kulièka promìny ?
+1	76	Lze ve høe z pøíšer získat všechny druhy zelenıch lektvarù?
+1	77	Mùe Houby tue zpracovat pouze Huahn-So?
+1	78	Zvyšují se úrovnì GM postavám?
+1	79	Nachází se v Údolí Seungryong tìlo?
+1	80	Musíš v úkolu 'Deník legendy' nasbírat celkem 16 stránek knihy?
+1	81	Pøidává ti Královskı opasek +5 celkem 6 míst v inventáøi?
+1	82	Má Heuk-Young vzhled váleèníka?
+1	83	Je moné s Kroucenım klíèem obchodovat?
+1	84	Nachází se v Zemi obrù celkem 42 tìl?
+1	85	Nachází se na cechovním území Teleportér?
+1	86	Nachází se Teleportér v Zemi obrù?
+1	87	Spotøebuje hráè se zápornou hodností 4500 bodù po úspìšném pøeètení Kamenu duše G5 na G6?
+1	88	Spotøebuje hráè s kladnou hodností 3000 bodù po úspìšném pøeètení Kamenu duše G5 na G6?
+1	89	Prodává Obchodník se zbranìmi Ocelové šípy?
+1	90	Mìní mosty v údolí Orkù své místo?
+1	91	Je potøeba 1 milion Yangù pro jednostrannı rozvod?
+1	92	Lze Vìjíø jeøabího køídla získat z vlkù?
+1	93	Jsou pro svatbu potøeba Svatební šaty?
+1	94	Funguje bonus 'Síla proti ïáblu' také na Podzemní Yeti?
+1	95	Je Devítiocas úrovnì 73?
+1	96	Je Bakra vesnicí v království Jinno?
+1	97	Nachází se Taurean v první vesnici?
+1	98	Musíš bıt alespoò na úrovni 30, abys mohl rybaøit?
+1	99	Musíš bıt alespoò na úrovni 30, aby ses mohl oenit?
+1	100	Mùeš si koupit krumpáè u Yang-Shin?
+1	101	Mùeš zaèít pouívat Perlovı náramek od úrovnì 28?
+1	102	Mohou všechny postavy od úrovnì 40 vstoupit do Vìe démonù?
+1	103	Je Bokjung souèástí království Shinsoo?
+1	104	Je Hadí pole neutrální mapou?
+1	105	Nachází se v Údolí Seungryong boss na úrovni 55?
+1	106	Mùe postava na úrovni 51 získat z pøíšer Poehnanı pergamen?
+1	107	Nachází se v Lese duchù boss na úrovni 80?
+1	108	Mùeš získat Brnìní z modré oceli +9?
+1	109	Vyrábí se Obleèení draka z Brnìní z èerné oceli+9?
+1	110	Mùe z pøíšery po jejím zabití vypadnout 1000 Yangù?
+1	111	Je Obleèení draka vyrobeno z Èerného obleèení+9?
+1	112	Je Èervenı drak pravidelnì vyvolán kadı den ve svìtì Metin2?
+1	113	Získáš permanentní bonus 8 %% poškození v soubojích kdy dokonèíš misi ' Biologùv vızkum'?
+1	114	Musíš donést Cheagirabovi 30 Tabulek Tugyise jako souèást úkolu 'Biologùv vızkum  6'?
+1	115	Lze ve høe koupit brnìní Hwang?
+1	116	Vyrábí se Brnìní z modré oceli z Brnìní z èerné oceli+9?
+1	117	Nachází se v Hadím poli Teleportér?
+1	118	Nachází se v Zemi obrù kameny Metin úrovnì 75 a 80?
+1	119	Nachází se vstup do Zemì obrù v Hadím poli?
+1	120	Mùeš získat Èepel na pololidi z Tisícibojovníka?
+1	121	Hranièí Zemì obrù s Hadím polem?
+1	122	Má Létající pouštní oko své vlastní oko?
+1	123	Má Titánskı štít+9 vyšší obranu ne Štít+9 úrovnì 61?
+1	124	Má Sokolskı štít+9 hodnotu obrany 153?
+1	125	Poskytují Døevìné náušnice bonus k ZB?
+1	126	Mùeš Slabikáø ezoteriky+ získat pouze z Tmavého Arahana a Tmavého zaøíkávaèe?
+1	127	Má Meè víly vyšší hodnotu rychlosti útoku ne Bitevní meè?
+1	128	Mùete z Velké ledové èarodìjnice získat Krvavı kámen?
+1	129	Je Beran-Setaou NPC?
+1	130	Zvyšuje Lev, jakoto jezdecké zvíøe, hodnotu útoku o 200 bodù?
+1	131	Mùeš se teleportovat ke svému partnerovi, kterı se nachází v Pavouèím bludišti 2?
+1	132	Vyrábí Huahn-So Rosu?
+1	133	Musíš pro získání Zásnubního prstenu zabít 30 Jin-Hee?
+1	134	Lze se Snubním prstenem obchodovat?
+1	135	Vyaduje kováø ve Vìi démonù Yangy pro vylepšení vìcí?
+1	136	Mùeš získat Kámen duše z Hae-Tae?
+1	137	Je Hae-Tae pravidelnì vyvoláván ve svìtì Metin2 kadı den?
+1	138	Objevuje se Hae-Tae pouze pøi speciálních akcích?
+1	139	Jsou pøíšery v Jeskyni vyhnanství agresivní?
+1	140	Je Taurean NPC?
+1	141	Mùeš Bylinu tìkıch opic získat z Opièího lorda?
+1	142	Je spotøeba bodù hodnosti zdvojnásobena, pokud pøeèteš Kámen duše a máš zápornou hodnost?
+1	143	Mùeš získat Kámen duše jako odmìnu za splnìní mise 'Prozkoumej stromy duchù'?
+1	144	Mùeš získat Kámen duše jako odmìnu za splnìní mise 'Tajemství lesa duchù'?
+1	145	Mùeš získat Kámen ducha z Metinu vrady ve Vìi démonù?
+1	146	Mùeš z kamenù Metin úrovnì 75 a 80 získat Knihy schopností?
+1	147	Lze získat z kamenù Metin úrovnì 75 a 80 Kámen ducha?
+1	148	Mùeš získat Kámen duše z kamenù Metin s úrovní niší ne 40?
+1	149	Mùeš se na úrovni 60 teleportovat pøímo do Vìe démonù?
+1	150	Zvyšuje Brnìní z modré oceli +5 obranu o 184 a sniuje rychlost pohybu o 6?
+1	151	Mùeš v Metin2 získat Mušli?
+1	152	Mùeš v Jeskyni vyhnanství získat z pøíšer Propustku?
+1	153	Mùeš Úplòkovı meè získat od Jin-Hee?
+1	154	Mùe mentální váleèník pouít schopnost Bleskovı vrh?
+1	155	Zvyšuje Divokı bojovı kanec obranu o 500?
+1	156	Lze z Metinu èernoty získat Kámen ducha+4?
+1	157	Potøebuješ Èernou uniformu+ na vylepšení Plátového brnìní tygra?
+1	158	Je 'Zaèarovat pøedmìt' obchodovatelné?
+1	159	Mùeš získat Modrı lektvar (M) v Pavouèím bludišti?
+1	160	Je Nosiè útrapy pravidelnì ve svìtì Metin2 vyvolán kadı den?
+1	161	Lze najít Medvìdí luè ve Zlaté pokladnici?
+1	162	Lze tìit Ebenové døevo z Nefritové íly?
+1	163	Je Metin ïábla vyvoláván pøi akcích?
+1	164	Lze Náramek z bílého zlata získat z Orkù?
+1	165	Musíš v Ïáblovì katakombì porazit všechny protivníky?
+1	166	Mùe tì Azrael v boji zasáhnout kritickou ranou?
+1	167	Lze Øetízek krystalu duše koupit v ItemShopu?
+1	168	Má staøenka alergii na prach?
+1	169	Je Obchodník se zbranìmi zamilován do Obchodnice smíšenım zboím?
+1	170	Má Správce skladištì Pruty zlata?
+1	171	Je Uriel ena?
+1	172	Má Obchodnice smíšenım zboím vztah s Obchodníkem s vızbrojí?
+1	173	Je prachovka staøenky vyrobena z kùí Modrıch vlkù?
+1	174	Lze na Velkou pouštní elvu útoèit pouze Dvouruèním meèem??
+1	175	Lze Meè kouzelníka pouívat od úrovnì 50?
+1	176	Zabil Beran-Setaou Bahar-Taraji?
+1	177	Vyskytuje se Beran-Setaou ve høe pouze na jediné mapì?
+1	178	Dává Èervenı lektvar (V) 650ZB?
+1	179	Obsahuje Elixír Slunce (M) 2.000.000 ZB?
+1	180	Lze doplnit vytrvalost pomocí lutıch lektvarù?
+1	181	Je schopnost 'Pouít jed' smrtelná?
+1	182	Obnovuje Voda Sim okamitì 100 MB?
+1	183	Zvyšuje Èervená rosa rychlost útoku o 2 %% a 8 %%?
+1	184	Trvá efekt Rosy 20 minut?
+1	185	Trvá efekt Šávy z broskvovıch kvìtù 5 minut?
+1	186	Zvyšuje Modrá rosa hodnotu útoku?
+1	187	Nosí Chuk-Sal masku?
+1	188	Mùeš ve ètvrtém patøe Ïáblovy katakomby najít Runovı sloup?
+1	189	Je Metin odplaty úrovnì 80?
+1	190	Vyskytuje se v Draèím chrámu Duše Sury?
+1	191	Obdrí sezdaná dvojice na konci svatebního rituálu Èervené lektvary (S)?
+1	192	Mùeš ve stínu budovy nebo stromu vidìt svùj vlastní stín?
+1	193	Mùeš nosit Obleèení draka +6 od úrovnì 84?
+1	194	Mùeš do Staroitného zvonu pøidat maximálnì dva Kameny ducha?
+1	195	Pøitahuje Pláš tajemství pøíšery?
+1	196	Lze všechna jezdecká zvíøata ve høe pouívat od úrovnì 1?
+1	197	Lze z Modrého draka získat Perlu?
+1	198	Je schopnost pøevodu poškození do MB standardním bonusem Klobouku èásti duše?
+1	199	Objevují se prokleté pøíšery pouze na území cechu?
+1	200	Pokud pouiješ schopnost 'Spálit' na umírajícím protivníkovi, zùstane mu 1 ZB?
+1	201	Lze úkol na získání Vojenského konì plnit od úrovnì 45?
+1	202	Mùe hráè úrovnì 82 pozvat do skupiny hráèe úrovnì 53?
+1	203	Mùe ninja vyuívat ètyøi jezdecké schopnosti?
+1	204	Nachází se Støíbrné íly pouze v první vesnici?
+1	205	Vyskytuje se Metin Pung-Ma pouze v Lungsamu?
+1	206	Lze vstoupit do Draèího chrámu za pouití Vysušenıch hlav?
+1	207	Dá ti Kroucenı klíè Generál Huashin?
+1	208	Vyskytuje se na Hoøe Sohan nìjakı boss?
+1	209	Lze Boty se zlatou ozdobou nosit od úrovnì 20?
+1	210	Nosí Pomocnice pøi událostech rukavice ?
+1	211	Nosí Baek-Go brıle?
+1	212	Je Památník Mok ètvercovı?
+1	213	Nosí Manaerka svateb zelené šaty?
+1	214	Drí Seon-Hae v pravé ruce hùl?
+1	215	Má Yang-Shin v toulci tøi šípy?
+1	216	Má Metin pomsty nebesky modrou barvu?
+1	217	Je Metin odplaty kamenem Metin nejvyšší úrovnì?
+1	218	Nachází se Metin duše v Údolí Seungryong?
+1	219	Lze najít Nefritovou ílu v Temném chrámu?
+1	220	Lze tìit Køemenovou rudu na Hoøe Sohan?
+1	221	Má Beran-Setaou úroveò 97?
+1	222	Má Azrael vyšší úroveò nì Beran-Setaou?
+1	223	Má Velká ledová èarodìjnice stejnou úroveò jako Tartaros?
+1	224	Je Bleskovı útok schopností ninjù?
+1	225	Dává Èervenı lektvar (S) 500 ZB?
+1	226	Mohou Pancéøové brnìní YingYang nosit váleèníci?
+1	227	Zdvojnásobují Rukavice moudrého císaøe body hodnosti kdy zabiješ pøíšeru?
+1	228	Má Urielùv deník 20 stránek?
+1	229	Vede tì do Jeskynì vyhnanství Chuk-Sal?
+1	230	Musíš mít pro vstup do Jeskynì vyhnanství úroveò alespoò 75?
+1	231	Má kováø vousy?
+1	232	Nachází se v ohradì u Pacholka ètyøi konì?
+1	233	Jsou fialové ponoky souèástí Obleèení baronky?
+1	234	Má Mladı štíøí mu zbraò?
+1	235	Má Devítiocas opravdu devìt ocasù?
+1	236	Nachází se Nalezištì nebeskıch slz na Hoøe Sohan?
+1	237	Má Tmavı vùdce bonus na omráèení protivníka?
+1	238	Je Památník Gum umístìn za Vìí démonù?
+1	239	Hoøí hlava Krále plamenù?
+1	240	Nosí Král plamenù sandály?
+1	241	Je Hae-Tae pøíšera?
+1	242	Nosí Mu útrapy šálu?
+1	243	Má Opièí lord ocas?
+1	244	Má Opièí lord ezlo?
+1	245	Má Zloduch na èele roh?
+1	246	Má Obrovskı strom duchù koøeny?
+1	247	Jsou ruce Dryády èervené?
+1	248	Je Tisícíbojovník vyzbrojen dvìma sekyrami?
+1	249	Je Duchovní Setaou úrovnì 80?
+1	250	Má Beran-Setaou nebesky modrou barvu?
+1	251	Je Aranyo enou Soona?
+1	252	Nachází se Ariyoung v první vesnici?
+1	253	Mùe Baek-Go vyrábìt lektvary?
+1	254	Je Duch mistra meèe modrı?
+1	255	Má Ledovı hmyz deset nohou?
+1	256	Regeneruje Grilovanı pstruh øíèní 250 MB?
+1	257	Má Handu-Up puntíkovanı rùovı klobouk?
+1	258	Pohybuje se Nakajima po mapì?
+1	259	Poskytuje Èervenı mravenèí oblek+9 bonus k obranì 101?
+1	260	Má Harang vlasy staené do copu?
+1	261	Má Deokbae zlatou sekyru?
+1	262	Zaèíná mise 'Stáje mají problémy' od úrovnì 49?
+1	263	Má Uriel zkøíené ruce?
+1	264	Nachází se Opièí lord v Hasun Dong?
+1	265	Mùeš nakrmit konì pomocí stisku kláves CTRL+B?
+1	266	Má Obchodník s vızbrojí knírek?
+1	267	Øíká se tìké opièí jeskyni také Jungsun Dong?
+1	268	Zvyšuje Vztek draèího boha šanci na pronikavı zásah?
+1	269	Nosí Aranyo košík s ovocem?
+1	270	Má Ledovı hmyz 6 nohou?
+1	271	Existuje v Zemi obrù celkem šest rùznıch druhù pøíšer?
+1	272	Mùe bıt Èepel z krevele pouita pouze na úrovni 30?
+1	273	Nachází se Kuahlo Dong v poušti?
+1	274	Má teleportér na hlavì znaèku?
+1	275	Je Metin boje úrovnì 15?
+1	276	Nosí Chaegirab brıle?
+1	277	Potøebujete drahokam na vylepšení brnìní úrovnì 26 na +4?
+1	278	Mùete koupit brnìní úrovnì 26 u obchodníka?
+1	279	Má Pes útrapy mezi ušima skvrnu?
+1	280	Má Vzteklı lukostøelec útrapy 2 hlavy?
+1	281	Existuje Balvan Chunjo?
+1	282	Existuje Skála Yongbi?
+1	283	Má brnìní úrovnì 42 vylepšené na +7 obranu 97?
+1	284	Má brnìní úrovnì 42 vylepšené na +7 obranu -97?
+1	285	Je Lovec Setaou úrovnì 89, stupeò 2?
+1	286	Je To-Su Èerného vìtru úrovnì 33, stupeò 2?
+1	287	Existuje v Metin2 hlína?
+1	288	Má Pacholek v ohradì 4 poníky?
+1	289	Nosí Baek-Go brıle?
+1	290	Je Wonda-Rim pøíbuznım biologa Chaegiraba?
+1	291	Je biolog Chaegirab strıèkem Wondy-Rim?
+1	292	Je biolog Chaegirab otcem Wondy-Rim?
+1	293	Je na druhé mapì zvíøecí bùh?
+1	294	Je na druhé mapì rybáø?
+1	295	Mohou po Vás chtít èlenové tımu ID a heslo?
+1	296	Mùete nìjak poznat postavu GameMastera [GM]? 
+1	297	Je na druhé mapì opilı obèan?
+1	298	Je Oko pavouka vìcí pro úkol?
+1	299	Existuje v Metin2 5 barev na vlasy?
+1	300	Dá se s Pimovım olejem obchodovat?
+1	301	Má Aranyo nìco na zádech?
+1	302	Je Aranyo enou Octavia?
+1	303	Je Aranyo enou Soona?
+1	304	Existují v Metin2 kostlivci?
+1	305	Jsou v Kuahlo Dong nìjaké památníky?
+1	306	Existují v Metin2 tréninkové boje?
+1	307	Mùe Koené støevíce nosit kadı?
+1	308	Má Meè exorcismu rychlost útoku +20 %%?
+1	309	Má Eun-Jung vìjíø?
+1	310	Má Eun-Jung zbraò?
+1	311	Mùete pruty zlata a støíbra hodit na zem?
+1	312	Je rychlost útoku Magnetické èepele sniována bìhem vylepšování?
+1	313	Je rychlost útoku Magnetické èepele zvyšována bìhem vylepšování?
+1	314	Existuje Ponurá døevìná maska?
+1	315	Mùete v Metin2 grilovat?
+1	316	Má Koe-Pung masku?
+1	317	Je Kámen duše lesa pøedmìt pro úkol?
+1	318	Má Zuøivı zlobr zbraò v levé ruce?
+1	319	Mùete si zmìnit pohlaví na kadé úrovni?
+1	320	Je Imha zónou cechu v království Chunjo?
+1	321	Je Imha zónou cechu v království Shinsoo?
+1	322	Je Imha zónou cechu v království Jinno?
+1	323	Je Jungrang postava v Metin2?
+1	324	Je Yayang dcerou Soona?
+1	325	Je vnitøek Jungsun Dong dekorován zelenım kamenem?
+1	326	Je v Metin2 mìnou Yang?
+1	327	Je potøeba Kámen duší Jinunggisù pro úkol úrovnì 30?
+1	328	Existují vìci pro vızkum?
+1	329	Mùe Seon-Hae míchat lektvary?
+1	330	Existují v Metin2 dınì?
+1	331	Existují v Metin2 ponoky?
+1	332	Je oheò na Temném oltáøi èervenı?
+1	333	Je Opièí generál úrovnì 40, stupeò 4?
+1	334	Mùe kadá postava pouívat meè?
+1	335	Je Nakajima postava v Metin2?
+1	336	Mùe z pøíšery vypadnout Propustka?
+1	337	Stojí 200 Èervenıch elixírù 33.000 Yangù u Obchodnice se smíšenım zboím?
+1	338	Mohou ninjové pouívat Krásnì vyøezávanı luk?
+1	339	Je Chuong na první mapì?
+1	340	Je Metin smutku úrovnì 10, stupeò 5?
+1	341	Existují v Metin2 Vánoèní ohòostroje?
+1	342	Zvyšují Èínské ohòostroje rychlost pohybu?
+1	343	Zvyšují Èínské ohòostroje rychlost útoku?
+1	344	Zvyšují Èínské ohòostroje šanci na ztrátu vìdomí?
+1	345	Obnovuje Grilovanı losos 350 ivota?
+1	346	Obnovuje Grilovanı losos 350 bodù many?

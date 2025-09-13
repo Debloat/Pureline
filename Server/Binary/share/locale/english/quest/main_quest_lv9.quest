@@ -1,0 +1,45 @@
+quest main_quest_lv9 begin
+	state start begin
+	end
+	state run begin
+		when login or levelup or enter with pc.get_level() >= 9 begin
+			set_state ( gototeacher )
+		end
+	end
+	state gototeacher begin
+		when letter begin
+			local v=find_npc_by_vnum(20354)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, gameforge.main_quest_lv9._10_targetVid)
+			end
+		end
+		when letter begin
+			send_letter(gameforge.main_quest_lv9._20_sendLetter)
+		end
+		when button or info begin
+			say_title(gameforge.main_quest_lv9._20_sendLetter)
+				    		----"12345678901234567890123456789012345678901234567890"|
+			say(gameforge.main_quest_lv9._30_sayReward)
+					end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+			say_title(gameforge.main_quest_lv1._60_sayTitle)
+				    		----"12345678901234567890123456789012345678901234567890"|
+			say(gameforge.main_quest_lv9._40_say)
+			wait()
+			say_title(gameforge.main_quest_lv1._60_sayTitle)
+			say(gameforge.main_quest_lv9._50_say)
+			say_title(gameforge.collect_herb_lv4._130_sayTitle)
+						say_reward(gameforge.main_quest_lv10._100_sayReward)
+			pc.give_exp2( 5000 )
+			pc.change_money( 2000 )
+			clear_letter()
+			set_state ( __COMPLETE__ )
+			set_quest_state("main_quest_lv10", "run")
+		end
+	end
+	state __COMPLETE__ begin
+	end
+end
+

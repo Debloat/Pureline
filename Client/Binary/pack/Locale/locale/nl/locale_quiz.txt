@@ -1,0 +1,346 @@
+1	1	Heeft de rugzak van de Venter een slot?
+1	2	Kan je een Metamorfose bol krijgen in het Reuzen Land?
+1	3	Laat de Vervloekte Blauwe Alfa Wolf Wolvenvacht vallen?
+1	4	Laat de Yeti Yeti Vacht vallen?
+1	5	Kan je de IJsbol alleen vinden op Berg Sohan
+1	6	Kan je de Godinnen Traan alleen ontvangen uit kisten?
+1	7	Verhoogt de Steen der Snelheid +3 je beweegsnelheid met 30?
+1	8	Geven parels normaal gesproken INT bonus?
+1	9	Is er een pantser die begint op level 12?
+1	10	Zijn er Jade Aders in de Hwang Tempel?
+1	11	Zijn er 22 bruggen in de Vallei van Seungryong?
+1	12	Zijn er 8 Klassen in Metin2?
+1	13	Is er Triplex in Metin2?
+1	14	Is er een voorwerp met de naam 'Stuk Sieraad'?
+1	15	Is er een vaardigheid met de naam 'Absorbeer Aura'?
+1	16	Bestaat de Herstel bonus?
+1	17	Is er Koreaans vuurwerk?
+1	18	Is er een gemiddeld Missieboek?
+1	19	Is er een Amethist Ader?
+1	20	Is er een speciale kaart voor trainingsgevechten?
+1	21	Zit er een vogel op de rechterschouder van de Teleporter?
+1	22	Is er een Houten Pantser?
+1	23	Is er een Vuur Feniks?
+1	24	Is er een Schermleraar?
+1	25	Zijn er Orks?
+1	26	Zijn er Vissers op kaart 2?
+1	27	Is er altijd maar 1 Staljongen per koninkrijk?
+1	28	Kan je dieren houden in Metin2?
+1	29	Zijn er honden in Metin2?
+1	30	Zijn er evenveel vissers in elk koninkrijk?
+1	31	Zijn er Rijst Cakes in Metin 2?
+1	32	Is er een Marktplaats op kaart 2?
+1	33	Is er Plantensap in Metin2?
+1	34	Kun je vervloekte dieren alleen vinden in het gildegebied?
+1	35	Valt Bera uit zichzelf aan?
+1	36	Heeft Beran-Setaou zijn eigen zus gedood?
+1	37	Heeft het inventaris 90 plekken?
+1	38	Heeft de Bamboe pijl een aanvalswaarde van 10?
+1	39	Is de Brute Arahan level 53?
+1	40	Is de Hongerige Straat Hond level 1?
+1	41	Draagt de Winkeleigenaar een blauwe hoofdband?
+1	42	Draagt de smid een schort?
+1	43	Heeft de Man met de Zeis als level Baas?
+1	44	Heeft de  Elite Ork Generaal een ketting met 6 aanhangsels?
+1	45	Heeft het Oude Dametje een zus?
+1	46	Heeft Metin2 een forum?
+1	47	Heeft Mirine zwarte ogen?
+1	48	Leeft de Man met de Zeis in de Gumsamtoren (Demonen Toren)?
+1	49	Is de Sura geest in grot 2 Akuma?
+1	50	Is Bahar-Taraji de jongste van de goddelijke broers & zussen?
+1	51	Is Bahar-Taraji de godin van balans?
+1	52	Is Baljit-Elvedin de oudste van de goddelijke broers & zussen?
+1	53	Is Baljit-Elvedin de god van Balans?
+1	54	Is het monster Hae-Tae een baas?
+1	55	Is de Trotse Donker Krijger level 54?
+1	56	Kan het Vervloekte Rood Wild Zwijn in 7 regio's gevonden worden?
+1	57	Kan de Koperen Bel vanaf level 5 gebruikt worden?
+1	58	Is  het rode Hwang Pantser voor krijgers?
+1	59	Is het 's nachts ook helder in de woestijn?
+1	60	Is Soon een boekenworm?
+1	61	Kan de Smid je wapen vernietigen wanneer je ze verbeterd?
+1	62	Verschijnt de Reuzen Schildpad op kaart 2?
+1	63	Kan je diamanten mijnen?
+1	64	Kan je trouwen in Metin2?
+1	65	Kan je dansen in Metin2?
+1	66	Kan je GM worden als je 16 jaar oud bent?
+1	67	Kan je vanaf level 15 Roepen in de chat?
+1	68	Kan je vanaf level 17 je eerste Master behalen?
+1	69	Kan je 3 Masters hebben op level 52?
+1	70	Laat de level 5 Metin iets laten vallen als je level 55 bent?
+1	71	Kan je Paardenvaardigheden gebruiken met een paard van level 9?
+1	72	Kan je je dier achterlaten in een asiel?
+1	73	Kun je Kousen aan een boom hangen?
+1	74	Kun je Geestenstenen verbeteren?
+1	75	Laten alle monsters Metamorfose Bol vallen?
+1	76	Kunnen alle Groene Brouwsels uit drops gehaald worden?
+1	77	Kunnen Tue Paddestoelen alleen verwerkt worden door Huahn-So?
+1	78	Levelen GM Spelers ook?
+1	79	Is er een lijk in de Vallei van Seungryong?
+1	80	Moet je 16 pagina's verzamelen in de 'Dagboek van een Legende' missie?
+1	81	Geeft de Konings Riem +5 je 6 extra ruimten in je inventaris?
+1	82	Heeft Heuk-Young het uiterlijk van een Krijger?
+1	83	Is de Gedraaide Sleutel verhandelbaar?
+1	84	Zijn er 42 lijken in het Reuzen Land?
+1	85	Is er een Teleporter in het Gildegebied?
+1	86	Is er een Teleporter in het Reuzen Land?
+1	87	Consumeert een speler met een negatieve rang 4500 rangpunten wanneer je succesvol een Zielensteen leest van G5 naar G6?
+1	88	 Consumeert een speler met een positieve rang 3000 rangpunten wanneer je succesvol een Zielensteen leest van G5 naar G6? 
+1	89	Heeft de Wapen Winkeleigenaar Stalen Pijlen te koop?
+1	90	Veranderen de bruggen in de Ork Vallei van positie?
+1	91	1kk Yang is nodig voor een scheiding van 1 kant
+1	92	Laten wolven Kraanvogel Waaiers vallen?
+1	93	Is een Trouwjurk verplicht voor een trouwerij?
+1	94	Werkt de 'Sterk tegen duivels' bonus tegen Onderwereld Yetis?
+1	95	Is de Negen Staarten level 73?
+1	96	Is Bakra een dorp in het Jinno Koninkrijk?
+1	97	Is Taurean in het eerste dorp?
+1	98	Moet je minimaal level 30 zijn om te vissen?
+1	99	Moet je minimaal level 30 zijn om te trouwen?
+1	100	Kan je een Pikhouweel kopen bij Yang-Shin?
+1	101	Kan je de Parel Armband gebruiken vanaf level 28?
+1	102	Kunnen alle karakters vanaf level 40 de Demonen Toren betreden?
+1	103	Is Bokjung deel van het Shinsoo Koninkrijk?
+1	104	Is Slangenveld een neutrale kaart?
+1	105	is er een level 55 baas in de  Vallei van Seungryong?
+1	106	Kan een level 51 karakter een Zegening Geschrift krijgen van monsters?
+1	107	Is er een level 80 baas in Lungsam (Spoken Woud)?
+1	108	Kun je Blauw Staal Pantser +9 laten vallen?
+1	109	Is de Drakenkleden gemaakt van uit het Zwart Stalen Pantser+9?
+1	110	Kan je 1000 Yang laten vallen?
+1	111	Wordt Draken Kleding gemaakt van het  Zwart Gewaad+9?
+1	112	Ontstaat normaal gesproken de Rode draak dagelijks in de wereld van Metin2?
+1	113	Krijg je een permanente bonus van 8%% extra schade tegen andere spelers als je het 'Onderzoek van de Bioloog' afrond?
+1	114	Moet je Chaegirab 30 Tugyis Panelen brengen als onderdeel van het onderzoek van de bioloog deel 6?
+1	115	Kan het Hwang Pantser gekocht worden ingame?
+1	116	Wordt het Blauw Staal Pantser gemaakt van het Zwart Stalen Pantser+9?
+1	117	Is er een Teleporter in Slangenveld?
+1	118	Zijn de Level 75 en 80 Metin Stenen in het Reuzen Land?
+1	119	Is de ingang van het Reuzen Land in het slangenveld?
+1	120	Kan je het Halfmens Mes krijgen van de Duizend Vechter?
+1	121	Grenst het Reuzen Land aan het Slangenveld?
+1	122	Heeft het Woestijn Vliegend Oog een eigen oog?
+1	123	Heeft het Titan Schild +9 een hogere verdediging dan een level 61 schild +9?
+1	124	Heeft het  Valk Schild+9 een verdediging van 153?
+1	125	Leveren Houten Oorbellen je een LP-bonus op?
+1	126	Kan je het  Esoterisch Handboek+ alleen krijgen van Donkere Arahan en Donkere Oproeper?
+1	127	Heeft het Nymfenzwaard een hogere aanvalssnelheid dan het Strijdzwaard?
+1	128	Laat de Machtige IJs heks Bloedstenen vallen?
+1	129	Is Beran-Setaou een NPC?
+1	130	Als Rijdier, verhoogt de leeuw je aanvalswaarde met 200 punten?
+1	131	Kan je teleporteren naar je metgezel teleporteren die zich in de Spinnenkerker 2 bevindt?
+1	132	Produceert Huahn-So dauw?
+1	133	Moet je 30 Jin-Hees verslaan voor een verlovingsring?
+1	134	Is de Trouwring verhandelbaar?
+1	135	Accepteert de smid in de Demonen Toren Yang voor verbeteringen van items?
+1	136	Kan je Zielensteen krijgen van Hae-Tae?
+1	137	Ontstaat Hae-Tae dagelijks in de wereld van Metin2?
+1	138	Verschijnt Hae-Tae alleen voor een specifiek evenement?
+1	139	Zijn alle monsters in de Grot der Verbanning 2 agressief?
+1	140	Is Taurean een NPC?
+1	141	Kan je  Zware Apenkruid krijgen van de Apen Heer?
+1	142	Wordt de dubbele hoeveelheid rangpunten afgetrokken als je een Zielensteen leest met een negatieve rang?
+1	143	Kan je een Zielensteen krijgen als beloning voor de 'Bestudeerd de Spook Bomen' missie?
+1	144	Kan je een Zielensteen krijgen als beloning voor de 'Het geheim van het Spoken bos' missie?
+1	145	Kan je Geestenstenen krijgen van de Metin van moord in de Demonen Toren?
+1	146	Kun je level 75 en 80 Vaardighedenboeken krijgen van Metin Stenen?
+1	147	Laten level 75 en 80 Metinstenen Geestenstenen vallen?
+1	148	Laten Metin Stenen onder level 40 Zielenstenen vallen?
+1	149	Kan je op level 60 direct teleporteren naar de binnen de Demonentoren?
+1	150	Heeft het  Blauw Staal Pantser +5 verdediging van 154 en een verminderde snelheid van 6?
+1	151	Worden er oesters gedropt in Metin2?
+1	152	Is het mogelijk om een Vrijbiljet te laten vallen in de Grot de verbanning?
+1	153	Kan je het Volle Maan Zwaard krijgen van Jin-Hee?
+1	154	Kan de Mentale Krijger de Gooi Bliksem-vaardigheid gebruiken?
+1	155	Verhoogd het Wilde Strijd Zwijn je verdediging met 500?
+1	156	Laat de Metin de Zwartheid een Geestensteen+4 vallen?
+1	157	Heb je een Zwart Uniform+ nodig om het Tijger Plaat Pantser te verbeteren?
+1	158	Is het 'Betover Voorwerp' Voorwerp verhandelbaar?
+1	159	Kan je Blauw Brouwsel (K) vinden in de Spinnenkerker?
+1	160	Worden Pest dragers dagelijks gemaakt in de wereld van Metin2?
+1	161	Kan je een Berengal in de Gouden schatkist vinden?
+1	162	Kan je Ebbenhout mijnen uit een Jade Ader?
+1	163	Worden de Metin van Duivel gemaakt voor evenementen?
+1	164	Laten de Orks de Witgouden Armband vallen?
+1	165	Moet je alle tegenstanders in de Duivelse Catacomben verslaan?
+1	166	Kan Azrael een Kritieke slag toedienen?
+1	167	Kan je een Ziel Kristal Ketting kopen in de itemshop?
+1	168	Is het Oude Dametje allergisch voor stof?
+1	169	Is de Wapen Winkeleigenaar verliefd op de Algemene Winkel Verkoopster?
+1	170	Heeft de Winkeleigenaar Goudstaven?
+1	171	Is Uriel een vrouw?
+1	172	Heeft de Algemene Winkel Verkoopster een relatie met de Pantser Winkeleigenaar?
+1	173	Is de stoffer gemaakt van de vacht van de Blauwe wolven?
+1	174	Kan je de Reuzen Schildpad alleen raken met een twee hand zwaard?
+1	175	Kan het Tovenaarszwaard gebruikt worden vanaf level 50?
+1	176	Heeft Beran-Setaou Bahar-Taraji gedood?
+1	177	Kan Beran-Setaou maar op 1 kaart in het spel gevonden worden?
+1	178	Hersteld het Rood Brouwsel (G) 650 LP?
+1	179	Bevat het Zon Elixer (K) 2.000.000 LP?
+1	180	Kan Uithoudingsvermogen worden bijgevuld met Gele Brouwsels?
+1	181	Is gif dodelijk?
+1	182	Herstelt Sim Water direct 100 TP?
+1	183	Verhoogd Rood Dauw je aanvalssnelheid met 2%% tot 8%%?
+1	184	Duurt het effect van Dauw maximaal 20 minuten?
+1	185	Duurt het effect van Perzik Bloesem Sap 5 minuten?
+1	186	Verhoogt Blauw Dauw de aanvalswaarde?
+1	187	Draagt Chuk-Sal een masker?
+1	188	Kan je een Runnesteen vinden op het 4e level van de Duivelse Catacomben?
+1	189	Is de Metin van Vergelding level 80?
+1	190	Is er een Spook van een Sura in de Drakentempel?
+1	191	Krijgen koppels die trouwen Rode Brouwsels (M) aan het einde van de ceremonie?
+1	192	Kan je je eigen schaduw zien in de schaduw van een boom of gebouw?
+1	193	Vanaf level 84 kan je Drakenkleding +6 dragen.
+1	194	Kan je maximaal 2 Geestenstenen in een Antieke bel doen?
+1	195	Trekt de Mantel der Geheimen monsters aan?
+1	196	Kunnen alle rijdieren gebruikt worden vanaf level 1?
+1	197	Laat de blauwe draak parels vallen?
+1	198	Is 'Schade geabsorbeerd door TP' is de standaard bonus van Ziel Scherf Hoed?
+1	199	Verschijnen vervloekte dieren alleen in Gildegebied?
+1	200	Als je Permanent Vuur gebruikt op een stervende Tegenstander, houdt hij dan 1 LP over?
+1	201	Kan de Militaire Paard missie worden afgerond op level 45?
+1	202	Kan een level 82 speler een speler van level 53 uitnodigen voor zijn groep?
+1	203	Kunnen Ninjas 4 paardenvaardigheden gebruiken?
+1	204	Zijn Zilveraders alleen in het eerste dorp?
+1	205	Is Metin Pung-Ma alleen in Lungsam?
+1	206	Kan je de Drakentempel betreden door Gekrompen Hoofden te gebruiken?
+1	207	Laat Generaal Huashin een Gedraaide Sleutel vallen?
+1	208	Is er een Baas tegenstander in Berg Sohan?
+1	209	Kan je Goudversierde Schoenen vanaf level 20 dragen?
+1	210	Draagt de Evenement Helper handschoenen?
+1	211	Draagt Baek-Go een bril?
+1	212	Heet het Mok Memorial een rechthoekige vorm?
+1	213	Draagt de Bruiloft Planner een groene jurk?
+1	214	Heeft Seon-Hae een stok in zijn rechterhand?
+1	215	Heeft Yang-Sing 3 pijlen in zijn pijlenkoker?
+1	216	Is de Metin van Wraak Lucht blauw?
+1	217	Is de Metin van Vergelding de Metin steen met het hoogste level?
+1	218	Is de Metin van Ziel te vinden in de Vallei van Seungryong?
+1	219	Kan je een Jade Ader ontdekken in de Tempel van het Duister?
+1	220	Kan je Amethist Erts mijnen op Berg Sohan?
+1	221	Is Beran-Setaou level 97?
+1	222	Heeft Azrael een hoger level dan Beran-Setaou?
+1	223	Heeft de Machtige IJs Heks het zelfde level als Tartaros?
+1	224	Is Snelle aanval een ninja vaardigheid?
+1	225	Herstelt het Rood Brouwsel (M) 500LP?
+1	226	Kan het Ying Yang Plaats pantser gedragen worden door Krijgers?
+1	227	Geef de Wijze Keizer Handschoen dubbele Rangpunten wanneer je een monster verslaat?
+1	228	Heeft het dagboek van Uriel 20 pagina's?
+1	229	Leidt Chuk-Sal je naar de Grot der Verbanning?
+1	230	Moet je level 75 zijn om de Grot der Verbanning te betreden?
+1	231	Heeft de smid een baard?
+1	232	Zijn er 4 paarden in de omheining van de Staljongen?
+1	233	Zijn Violette sokken deel van het Baronnen Gewaad?
+1	234	Heeft de Jonge Schorpioen Man een wapen?
+1	235	Heeft de Negen Staarten ook daadwerkelijk 9 staarten?
+1	236	Is er een Hemelse Traan Ader op Berg Sohan?
+1	237	Heeft de Donkere Leider een flauwvalkansbonus?
+1	238	Bevind het Gum Monument zich achter de Demon Toren?
+1	239	Brandt het hoofd van de Vlammenkoning?
+1	240	Draagt de Vlammenkoning sandalen?
+1	241	Is Hae-Tae een monster?
+1	242	Heeft de Zieke Man een sjaal?
+1	243	Heeft de Apen Heer een staart?
+1	244	Heeft de Apenheer een scepter? 
+1	245	Heeft de Boeman een hoorn op zijn voorhoofd?
+1	246	Heeft de Reuze Spook Boom wortels?
+1	247	Zijn de handen van de Dryad rood?
+1	248	Heeft de Duizend Vechter 2 bijlen in zijn handen?
+1	249	Is Setaou Geestelijke  level 88?
+1	250	Is Beran-Setaou lucht blauw?
+1	251	Is Aranyo de vrouw van Soon?
+1	252	Is Ariyoung in het eerste dorp?
+1	253	Brouwt Baek-Go drankjes?
+1	254	Is  Spook Zwaard Meester  blauw?
+1	255	Heeft de IJs Kever 10 poten?
+1	256	Hersteld  Gegrilde Rivier Forel 250 TP?
+1	257	Heeft Handu-Up een paarse puntmuts?
+1	258	Loopt Nakajima rond over de kaart?
+1	259	Geeft her Rode Mieren Pak een verdediging van 101?
+1	260	Draagt Harang paardenstaarten in haar haar?
+1	261	Heeft Deokbae een gouden bijl?
+1	262	Start de missie 'De stallen verkeren in problemen' bij level 49?
+1	263	Heeft Uriel zijn armen over elkaar?
+1	264	Is de Apenheer te vinden in Hasun Dong?
+1	265	Kun je jouw paard voeden met het standaardcommando CTRL+B?
+1	266	Heeft de Pantser Winkeleigenaar een snor?
+1	267	Staat de Zware Apen Kerker ook bekend als Jungsun Dong?
+1	268	Verhoogt de Wraak van de Draken God de kans op een penetrerende slag?
+1	269	Draagt Aranyo een fruitmand?
+1	270	Heeft de IJs Kever 6 poten?
+1	271	Zijn er 6 verschillende soorten monsters in het Reuzen land?
+1	272	Kan het Rood IJzeren Mes alleen gebruikt worden op level 30?
+1	273	Bevind Kuahlo Dong  zich in de woestijn?
+1	274	Heeft de Teleporter een markering op zijn hoofd?
+1	275	Is Metin van Strijd level 15?
+1	276	Draagt Chaegirab een bril?
+1	277	Heb je een edelsteen nodig om een level 26 pantser te uppen naar +4?
+1	278	Kun je level 26 pantsers kopen van de NPC?
+1	279	Krabt de Zieke Hond zich wel eens achter zijn oor?
+1	280	Heeft de Boze Zieke Boogschutter 2 hoofden?
+1	281	Is er een Chunjo Rots?
+1	282	Bestaat er een Yongbi Rots?
+1	283	Heeft het level 42 pantser +7 een verdedigingswaarde van 97?
+1	284	Heeft het level 42 pantser +7 een verdedigingswaarde van -97?
+1	285	Is de Setaou Jager level 89, graad 2?
+1	286	Is de Zwarte Wind To-Su level 33, graad 2?
+1	287	Bestaat er Klei in Metin2?
+1	288	Zijn er 4 Pony's bij de poort van de Staljongen?
+1	289	Draagt Baek-Go een bril?
+1	290	Is Wonda-Rim een neef van Bioloog Chaegirab?
+1	291	Is Bioloog Chaegirab de oom van Wonda-Rim?
+1	292	Is Bioloog Chaegirab de vader van Wonda-Rim?
+1	293	Is er een Dieren God in map 2?
+1	294	Zijn er drie Vissers in Map2?
+1	295	Vragen teamleden je naar je ID en je wachtwoord?
+1	296	Kun je een GameMaster [GM] herkennen?
+1	297	Loopt de Groezelige Voorbijganger in map 2?
+1	298	Is Spinnenoog een quest item?
+1	299	Zijn er 5 verschillende haarkleurverfjes in Metin2?
+1	300	Is Muskus Olie verhandelbaar?
+1	301	Heeft Aranyo iets op haar rug?
+1	302	Is Aranyo de vrouw van Octavio?
+1	303	Is Aranyo de vrouw van Soon?
+1	304	Zijn er skeletten in Metin2?
+1	305	Zijn er gedenktekens in Kuahlo Dong?
+1	306	Zijn er trainingsgevechten in Metin2?
+1	307	Kunnen Lederen Schoenen door iedereen gedragen worden?
+1	308	Heeft het Exorcisme Zwaard een aanvalssnelheid van 20%%?
+1	309	Draagt Eun-Jung een waaier?
+1	310	Draagt Eun-Jung een wapen?
+1	311	Kun je Zilveren Plakken en Goudstaven op de grond gooien?
+1	312	Wordt de aanvalssnelheid van een Electromaginetisch mes verminderd bij het verhogen?
+1	313	Wordt de aanvalssnelheid van een Electromagnetisch Mes verhoogd bij het verhogen van het wapen?
+1	314	Bestaat er een Sombere Houten Masker?
+1	315	Kun je barbecueën in Metin2?
+1	316	Draagt Koe-Pung een masker?
+1	317	Is de Bos Zielensteen een quest-item?
+1	318	Draagt de Mormel Waanzinnige een wapen in zijn linkerhand?
+1	319	Kun je van geslacht veranderen op welk level dan ook?
+1	320	Is Imha het Gilde gebied van het Chunjo-keizerrijk?
+1	321	Is het Imha Gebied voor de gildes van het Shinsoo Keizerrijk?
+1	322	Het Imha (Gilde gebied), is dat het gebied voor het Jinno-keizerrijk?
+1	323	Is Jungrang een NPC in Metin2?
+1	324	Is Yayang de dochter van Soon?
+1	325	Bestaat de binnenkant van Jungsun Dong uit groenkleurige stenen?
+1	326	Is Yang de valuta van Metin2?
+1	327	Is de Jinunggyi Zielensteen benodigd voor de level 30 quest?
+1	328	Bestaan er voorwerpen die nodig zijn voor onderzoek?
+1	329	Kun je bij Seon-Hae drankjes brouwen?
+1	330	Zijn er Pompoenen in Metin2?
+1	331	Zijn er sokken in Metin2?
+1	332	Is het vuur in de Donkere Schrijn rood?
+1	333	Is de Aap Generaal level 40, graad 4?
+1	334	Kan iedere klasse het zwaard gebruiken?
+1	335	Is Nakajima een Metin2 NPC?
+1	336	Kunnen monsters een Vrijbiljet droppen?
+1	337	Kosten 200 grote Rode Brouwsels 33,000 yang bij de verkoopster van Algemene Winkel?
+1	338	Kan de Versierde Boog gedragen worden door Ninja's?
+1	339	Is Chuong in Map 1?
+1	340	Is de Metin van Verdriet level 10, graad 5?
+1	341	Is er Kerst Vuurwerk in Metin2?
+1	342	Verhoogd Chinees Vuurwerk bewegings snelheid?
+1	343	Verhoogd Chinees Vuurwerk aanval snelheid?
+1	344	Verhoogt het Chinees Vuurwerk de kans op flauwvallen?
+1	345	Hersteld gegrilde Zalm 350 levenspunten?
+1	346	Hersteld gegrilde Zalm 350 mana punten?

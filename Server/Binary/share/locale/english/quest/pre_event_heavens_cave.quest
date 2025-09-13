@@ -1,0 +1,447 @@
+quest pre_event_heavens_cave begin
+	state start begin
+		when login with pc.get_level() >= 15 begin  -- tbd
+			pc.setqf("personalvalue", 0)
+			set_state(pre_event_heavens_cave)
+		end -- tbd
+	end
+	
+	state pre_event_heavens_cave begin
+		when enter with pc.is_gm() begin -- tbd
+			send_letter("Pre-Event Helper Script") -- tbd
+		end	-- tbd
+		
+		when button or info begin -- tbd
+			say_reward("Warning!") -- tbd
+			say("This dialog is not part of the Heavens Cave Pre-Event!!!") -- tbd
+			say("It's purpose is to help in the testing of the event. Only run the script ONCE PER SERVER because it automaticly starts the event which should only be done 1 time!") -- tbd
+			say("You may use it to resets - using Stop and then Start - every variable to its default value. It only resets variable concerning the event and not your character's variables.") -- tbd
+			say("The tickets related to this event are: 0030149, 0030150 and 0031479.") -- tbd
+			say("Have Fun!") -- tbd
+			say("") -- tbd
+			say("Benjamin") -- tbd
+			local startevent = select("Start the Event", "Stop the Event", "Close") -- tbd
+			if startevent == 1 then
+				game.set_event_flag("pre_event_hc", 1) -- tbd
+				game.set_event_flag("glyphstones_collected", 0) -- tbd
+				game.set_event_flag("hc_drop", 100) -- tbd
+				game.set_event_flag("gold_collected", 0) -- tbd
+				-- event flags for the score table
+				game.set_event_flag("score0",100) -- tbd
+				game.set_event_flag("score1",90) -- tbd
+				game.set_event_flag("score2",80) -- tbd
+				game.set_event_flag("score3",70) -- tbd
+				game.set_event_flag("score4",60) -- tbd
+				game.set_event_flag("score5",50) -- tbd
+				game.set_event_flag("score6",40) -- tbd
+				game.set_event_flag("score7",30) -- tbd
+				game.set_event_flag("score8",20) -- tbd
+				game.set_event_flag("score9",10) -- tbd
+				-- how many yang did the player spent on Heuk-Young
+			elseif startevent == 2 then
+				game.set_event_flag("pre_event_hc", 0) -- tbd
+				game.set_event_flag("hc_drop", 0) -- tbd
+			else -- tbd
+				return -- tbd
+			end -- tbd
+		end -- tbd
+	
+		function getherbs(maxlevel)
+			local range = maxlevel -12
+			range = math.floor(range /4)
+			local randomvalue = math.random(1,range)
+			local herbvnum=0
+			if randomvalue == 2 then
+				herbvnum = 50722 -- Glockenblume - LV20
+			elseif randomvalue == 3 then
+				herbvnum = 50723 -- Kakiblüte - LV24
+			elseif randomvalue == 4 then
+				herbvnum = 50724 -- Gango-Wurzel - LV28
+			elseif randomvalue == 5 or randomvalue == 6 then
+				herbvnum = 50725 -- Flieder - LV32
+			elseif randomvalue == 7 or randomvalue == 8 then
+				herbvnum = 50726 -- Tue-Pilz - LV40
+			elseif randomvalue == 9 then
+				herbvnum = 50727 -- Alpenrose - LV46
+			elseif randomvalue >= 10 then
+				herbvnum = 50728 -- Maulbeeren - LV50
+			else
+				herbvnum = 50721 -- Pfirsichblüte  - LV16
+			end
+			return herbvnum
+		end
+		
+		function getpotion(maxlevel)
+			local randomvalue = math.random(1,6)
+			local potionvnum = 0
+			if maxlevel <= 18 then
+				if randomvalue <= 3 then potionvnum = 27100 -- Grüner Trank(K)
+				else potionvnum = 27103 -- Violetter Trank(K)
+				end
+			elseif maxlevel > 18 and maxlevel <= 25 + randomvalue then
+				if randomvalue == 1 then potionvnum = 27100 -- Grüner Trank(K)
+				elseif randomvalue == 2 then potionvnum = 27103 -- Violetter Trank(K)
+				elseif randomvalue == 3 then potionvnum = 27002 -- Roter Trank(M)
+				elseif randomvalue == 4 then potionvnum = 27005 -- Blauer Trank(M)
+				elseif randomvalue == 5 then potionvnum = 27101 -- Grüner Trank(M)
+				else potionvnum = 27104 -- Violetter Trank(M)
+				end
+			else
+				if randomvalue == 1 then potionvnum = 27101 -- Grüner Trank(M)
+				elseif randomvalue == 2 then potionvnum = 27104 -- Violetter Trank(M)
+				elseif randomvalue == 3 then potionvnum = 27003 -- Roter Trank(G)
+				elseif randomvalue == 4 then potionvnum = 27006 -- Blauer Trank(G)
+				elseif randomvalue == 5 then potionvnum = 27102 -- Grüner Trank(G)
+				else potionvnum = 27105 -- Violetter Trank(G)
+				end
+			end
+			return potionvnum
+		end
+		
+		function getsushi()
+			local randomvalue = math.random(1,5)
+			local sushivnum = 0
+			if randomvalue == 1 then sushivnum = 50091 -- Goldfisch-Sushi
+			elseif randomvalue == 2 then sushivnum = 50092 -- Karpfen-Sushi
+			elseif randomvalue == 3 then sushivnum = 50093 -- Lachs-Sushi
+			elseif randomvalue == 4 then sushivnum = 50094 -- Katzenfisch-Sushi
+			else sushivnum = 50901 -- empty bottle
+			end
+			return sushivnum
+		end
+		
+		when 20090.chat.gameforge.pre_event_heavens_cave._10_npcChat with pc.get_level() >= 15 and pc.get_map_index() <= 43 and game.get_event_flag("hc_drop") > 0 begin
+			say(gameforge.pre_event_heavens_cave._20_say)
+			say(gameforge.pre_event_heavens_cave._30_say)
+			if pc.get_map_index() == 3 then
+				say(gameforge.pre_event_heavens_cave._40_say)
+			elseif pc.get_map_index() == 23 then
+				say(gameforge.pre_event_heavens_cave._50_say)
+			elseif pc.get_map_index() == 43 then
+				say(gameforge.pre_event_heavens_cave._60_say)
+			end
+			wait()
+			say(gameforge.pre_event_heavens_cave._70_say)
+			say(gameforge.pre_event_heavens_cave._80_say)
+			say_item_vnum(30178)
+			local maxlevel = pc.get_level()
+			local glyphcount = 0
+			glyphcount = pc.count_item(30178)
+			if glyphcount > 0 then -- Glyphstone
+				local giveglyphstone = select(gameforge.pre_event_heavens_cave._90_1_select, gameforge.pre_event_heavens_cave._90_2_select)
+				if giveglyphstone == 1 then
+					say_pc_name()
+					say(gameforge.pre_event_heavens_cave._100_say)
+					local pickpotion = 0
+					if pc.get_level() < 24 and pc.get_level() >= 20 then
+						pickpotion = math.random(0,8)
+					elseif pc.get_level() < 20 then
+						pickpotion = math.random(0,4)
+					else
+						pickpotion = math.random(0,9)
+					end
+					--notice(string.format("pickpotion = %d", pickpotion)) -- tbd
+					local potion1=0
+					local potion2=0
+					local potion3=0
+					if pickpotion <= 4 then 
+						-- Find me 3 types of reward items; 1 juice, 1 potion and 1 sushi
+						potion1 = pre_event_heavens_cave.getherbs(maxlevel)
+						--notice(string.format("potion1 = %d", potion1)) -- tbd
+						potion2 = pre_event_heavens_cave.getpotion(maxlevel)
+						--notice(string.format("potion2 = %d", potion2)) -- tbd
+						potion3 = pre_event_heavens_cave.getsushi()
+						--notice(string.format("potion3 = %d", potion3)) -- tbd
+					elseif pickpotion == 5 or pickpotion == 6 then
+						-- Find me 3 types of reward items; 2 juice and 1 potion and make sure we don't got the same juice twice
+						potion1 = pre_event_heavens_cave.getherbs(maxlevel)
+						--notice(string.format("potion1 = %d", potion1)) -- tbd
+						potion2 = pre_event_heavens_cave.getherbs(maxlevel)
+						--notice(string.format("potion2 = %d", potion2)) -- tbd
+						while potion2 == potion1 do
+							potion2 = pre_event_heavens_cave.getherbs(maxlevel)
+							--notice(string.format("changed potion2 to %d", potion2)) -- tbd
+						end
+						potion3 = pre_event_heavens_cave.getpotion(maxlevel)
+						--notice(string.format("potion3 = %s", potion3)) -- tbd
+					elseif pickpotion == 7 or pickpotion == 8 then
+						-- Find me 3 types of reward items; 2 juice and 1 sushi and make sure we don't got the same juice twice
+						potion1 = pre_event_heavens_cave.getherbs(maxlevel)
+						--notice(string.format("potion1 = %d", potion1)) -- tbd
+						potion2 = pre_event_heavens_cave.getherbs(maxlevel)
+						--notice(string.format("potion2 = %d", potion2)) -- tbd
+						while potion2 == potion1 do
+							potion2 = pre_event_heavens_cave.getherbs(maxlevel)
+							--notice(string.format("changed potion2 to %d", potion2)) -- tbd
+						end
+						potion3 = pre_event_heavens_cave.getsushi()
+						--notice(string.format("potion3 = %d", potion3)) -- tbd
+					else
+						-- Find me 3 types of reward items; 3 juice and make sure we don't got the same juice twice
+						potion1 = pre_event_heavens_cave.getherbs(maxlevel)
+						--notice(string.format("potion1 = %d", potion1)) -- tbd
+						potion2 = pre_event_heavens_cave.getherbs(maxlevel)
+						--notice(string.format("potion2 = %d", potion2)) -- tbd
+						while potion2 == potion1 do
+							potion2 = pre_event_heavens_cave.getherbs(maxlevel)
+							--notice(string.format("changed potion2 to %d", potion2)) -- tbd
+						end
+						potion3 = pre_event_heavens_cave.getherbs(maxlevel)
+						--notice(string.format("potion3 = %d", potion3)) -- tbd
+						while potion3 == potion1 or potion3 == potion2 do
+							potion3 = pre_event_heavens_cave.getherbs(maxlevel)
+							--notice(string.format("changed potion3 to %d", potion3)) -- tbd
+						end
+					end
+					-- potion1 is a herb
+					local potion1amount = pc.count_item(30178) *7
+					local potion2amount = 0
+					local potion3amount = 0
+					if potion2 < 27200 then -- it is a potion
+						potion2amount = pc.count_item(30178) *3
+					else -- it is a herb
+						potion2amount = pc.count_item(30178) *5
+					end
+					if potion3 < 27200 then -- it is a potion
+						potion3amount = pc.count_item(30178) *2
+					elseif potion1 > 50800 then -- it is Sushi
+						potion3amount = pc.count_item(30178) *6
+					else -- it is a herb
+						potion3amount = pc.count_item(30178) *3
+					end
+					wait()
+					say(gameforge.pre_event_heavens_cave._20_say)
+					say(gameforge.pre_event_heavens_cave._110_say)
+					say(string.format("%dx", potion1amount))
+					say_item_vnum(potion1)
+					say(string.format("%dx", potion2amount))
+					say_item_vnum(potion2)
+					wait()
+					say(string.format(gameforge.pre_event_heavens_cave._120_say, potion3amount))
+					say_item_vnum(potion3)
+					local choosereward = 
+						select(
+							string.format("%d %s", potion1amount, item_name(potion1)), 
+							string.format("%d %s", potion2amount, item_name(potion2)), 
+							string.format("%d %s", potion3amount, item_name(potion3)), 
+							gameforge.pre_event_heavens_cave._130_4_select)
+					if choosereward < 4 then 
+						local glyphstones = pc.count_item(30178)
+						pc.remove_item(30178, glyphstones)
+						local glyphcount = game.get_event_flag("glyphstones_collected")
+						glyphcount = glyphcount + glyphstones
+						game.set_event_flag("glyphstones_collected", glyphcount)
+						if choosereward == 1 then pc.give_item2(potion1, potion1amount)
+						elseif choosereward == 2 then pc.give_item2(potion2, potion2amount)
+						elseif choosereward == 3 then pc.give_item2(potion3, potion3amount)
+						end
+						say(gameforge.pre_event_heavens_cave._20_say)
+						say(string.format(gameforge.pre_event_heavens_cave._140_say, glyphcount))
+						say_pc_name()
+						local eventstory = select(gameforge.pre_event_heavens_cave._150_1_select, gameforge.pre_event_heavens_cave._150_2_select)
+						if eventstory == 1 then
+							say(gameforge.pre_event_heavens_cave._20_say)
+							say(gameforge.pre_event_heavens_cave._160_say)
+							say(gameforge.pre_event_heavens_cave._170_say)
+							say(gameforge.pre_event_heavens_cave._180_say) 
+							say(gameforge.pre_event_heavens_cave._190_say)
+							say(gameforge.pre_event_heavens_cave._200_say)
+							wait()
+							if pc.getqf("goldstatus") == 0 then
+								say(string.format(gameforge.pre_event_heavens_cave._210_say, item_name(30180)))
+								say_item_vnum(30180) -- Dragongod Amulet
+								pc.setqf("goldstatus", 2)
+								say(string.format(gameforge.pre_event_heavens_cave._220_say, mob_name(20009), mob_name(9012)))
+								wait()
+								say(gameforge.pre_event_heavens_cave._230_say)
+							else
+								say(gameforge.pre_event_heavens_cave._240_say)
+							end
+							say_item_vnum(50626) -- mined gold 200 Yang
+							say_item_vnum(80008) -- gold nugget 100.000 Yang
+							wait()
+							say("")
+							say_item_vnum(80005) -- gold bar 500.000 Yang
+							say_item_vnum(80006) -- gold bar 1.000.000 Yang
+							say_item_vnum(80007) -- gold bar 2.000.000 Yang
+						end
+					else 
+						say(gameforge.pre_event_heavens_cave._250_say)
+					end
+				else
+					--notice("failed") -- tbd
+				end
+			end
+		end
+		
+		when 20090.chat.gameforge.pre_event_heavens_cave._260_npcChat with pc.getqf("goldstatus") > 0 begin
+			if game.get_event_flag("hc_drop") == 0 then
+				set_state(__COMPLETE__)
+			end
+			if pc.count_item(80005) == 0 and pc.count_item(80006) == 0 and pc.count_item(80007) == 0 and pc.count_item(80008) == 0 and pc.count_item(50626) == 0 then
+				say(gameforge.pre_event_heavens_cave._20_say)
+				say(string.format(gameforge.pre_event_heavens_cave._270_say, item_name(30180)))
+				say(item_name(80005)) -- gold bar 500.000 Yang
+				say(item_name(80006)) -- gold bar 1.000.000 Yang
+				say(item_name(80007)) -- gold bar 2.000.000 Yang
+				say(item_name(80008)) -- gold nugget 100.000 Yang
+				say(item_name(50626)) -- mined gold 200 Yang
+				return
+			end
+			say(gameforge.pre_event_heavens_cave._280_say)
+			local checkinventory = {}
+			checkinventory[1] = {}
+			checkinventory[1]["vnum"] = 80005
+			checkinventory[2] = {}
+			checkinventory[2]["vnum"] = 80006
+			checkinventory[3] = {}
+			checkinventory[3]["vnum"] = 80007
+			checkinventory[4] = {}
+			checkinventory[4]["vnum"] = 80008
+			checkinventory[5] = {}
+			checkinventory[5]["vnum"] = 50626
+			notice(checkinventory[1]["vnum"])
+			local goldcounter = 1
+			repeat
+				checkinventory[goldcounter]["amount"] = pc.count_item(checkinventory[goldcounter].vnum)
+				checkinventory[goldcounter]["name"] = item_name(checkinventory[goldcounter].vnum)
+				goldcounter = goldcounter +1
+			until goldcounter > 5
+			notice(checkinventory[1]["amount"])
+			notice(checkinventory[1]["name"])
+			local gold = {}
+			local buttoncounter = 1
+			goldcounter = 1
+			repeat
+				if checkinventory[goldcounter]["amount"] > 0 then
+					gold[buttoncounter] = checkinventory[goldcounter]
+					buttoncounter = buttoncounter +1
+				end
+				goldcounter = goldcounter +1
+			until goldcounter > 5
+			local choosegold = 0
+			if buttoncounter == 2 then
+				choosegold = select(gameforge.pre_event_heavens_cave._290_select, string.format("%dx %s", gold[1].amount, gold[1].name))
+			elseif buttoncounter == 3 then
+				choosegold = select(gameforge.pre_event_heavens_cave._290_select, string.format("%dx %s", gold[1].amount, gold[1].name), string.format("%dx %s", gold[2].amount, gold[2].name))
+			elseif buttoncounter == 4 then
+				choosegold = select(gameforge.pre_event_heavens_cave._290_select, string.format("%dx %s", gold[1].amount, gold[1].name), string.format("%dx %s", gold[2].amount, gold[2].name), string.format("%dx %s", gold[3].amount, gold[3].name))
+			elseif buttoncounter == 5 then
+				choosegold = select(gameforge.pre_event_heavens_cave._290_select, string.format("%dx %s", gold[1].amount, gold[1].name), string.format("%dx %s", gold[2].amount, gold[2].name), string.format("%dx %s", gold[3].amount, gold[3].name), string.format("%dx %s", gold[4].amount, gold[4].name))
+			elseif buttoncounter == 6 then
+				choosegold = select(gameforge.pre_event_heavens_cave._290_select, string.format("%dx %s", gold[1].amount, gold[1].name), string.format("%dx %s", gold[2].amount, gold[2].name), string.format("%dx %s", gold[3].amount, gold[3].name), string.format("%dx %s", gold[4].amount, gold[4].name), string.format("%dx %s", gold[5].amount, gold[5].name))
+			end
+			if choosegold > 1 then
+				choosegold = choosegold -1
+				pc.remove_item(gold[choosegold].vnum, 1)
+				local globalvalue = 0
+				local personalvalue = 0
+				if gold[choosegold].vnum == 80005 then
+					globalvalue = 500000 + game.get_event_flag("gold_collected")
+					personalvalue = 500000 + pc.getqf("personalvalue")
+					game.set_event_flag("gold_collected", globalvalue)
+					pc.setqf("personalvalue", personalvalue)
+				elseif gold[choosegold].vnum == 80006 then
+					globalvalue = 1000000 + game.get_event_flag("gold_collected")
+					personalvalue = 1000000 + pc.getqf("personalvalue")
+					game.set_event_flag("gold_collected", globalvalue)
+					pc.setqf("personalvalue", personalvalue)
+				elseif gold[choosegold].vnum == 80007 then
+					globalvalue = 2000000 + game.get_event_flag("gold_collected")
+					personalvalue = 2000000 + pc.getqf("personalvalue")
+					game.set_event_flag("gold_collected", globalvalue)
+					pc.setqf("personalvalue", personalvalue)
+				elseif gold[choosegold].vnum == 80008 then
+					globalvalue = 100000 + game.get_event_flag("gold_collected")
+					personalvalue = 100000 + pc.getqf("personalvalue")
+					game.set_event_flag("gold_collected", globalvalue)
+					pc.setqf("personalvalue", personalvalue)
+				elseif gold[choosegold].vnum == 50626 then
+					globalvalue = 200 + game.get_event_flag("gold_collected")
+					personalvalue = 200 + pc.getqf("personalvalue")
+					game.set_event_flag("gold_collected", globalvalue)
+					pc.setqf("personalvalue", personalvalue)
+				end
+				if pc.getqf("goldstatus") == 2 then
+					say(gameforge.pre_event_heavens_cave._20_say)
+					say(gameforge.pre_event_heavens_cave._300_say)
+					pc.give_item2(30180) -- give Dragongod Amulet to player
+					pc.setqf("goldstatus", 1)
+					say(string.format(gameforge.pre_event_heavens_cave._310_say, item_name(30180), mob_name(20009), mob_name(9012)))
+				else
+					say(gameforge.pre_event_heavens_cave._20_say)
+					say(gameforge.pre_event_heavens_cave._320_say)
+				end
+				say(string.format(gameforge.pre_event_heavens_cave._330_say, globalvalue))
+				wait()
+				-- building table for the score
+				local scoretable = {}
+				scoretable[1] = {}
+				scoretable[2] = {}
+				scoretable[3] = {}
+				scoretable[4] = {}
+				scoretable[5] = {}
+				scoretable[6] = {}
+				scoretable[7] = {}
+				scoretable[8] = {}
+				scoretable[9] = {}
+				scoretable[10] = {}
+				scoretable[11] = {}
+				-- putting all the event flags for the score into the table
+				local scorecounter0 = 0
+				local scorecounter1 = 1
+				local score = 0
+				local pcname = "zzz"
+				local letmeout = 0
+				local loadscore = 0
+				repeat
+					score = string.format("score%s", scorecounter0)
+					loadscore = game.get_event_flag(score)
+					scoretable[scorecounter1]["score"] = loadscore *100
+					scorecounter0 = scorecounter0 +1
+					scorecounter1 = scorecounter1 +1
+				until scorecounter0 == 10
+				-- checking if personalvalue is in the list
+				repeat
+					if scorecounter0 > 0 then
+						if pc.getqf("personalvalue") > scoretable[scorecounter0]["score"] then
+							scoretable[scorecounter1] = scoretable[scorecounter0]
+							scorecounter0 = scorecounter0 -1
+							scorecounter1 = scorecounter1 -1
+						else
+							letmeout = 1
+						end
+					else
+						letmeout = 1
+					end
+				until letmeout > 0
+				-- fill in the players score data
+				local scoreplace = scorecounter1
+				scoretable[scoreplace]["score"] = pc.getqf("personalvalue")
+				-- write the new score back into the event flags and put in in the dialog
+				local scorecounter0 = 0
+				local scorecounter1 = 1
+				local savescore = 0
+				say_title(gameforge.pre_event_heavens_cave._340_say_title)
+				repeat
+					score = string.format("score%d", scorecounter0)
+					savescore = scoretable[scorecounter1]["score"] /100
+					game.set_event_flag(score, savescore)
+					if scorecounter1 == scoreplace then
+						say_reward(string.format(gameforge.pre_event_heavens_cave._350_say_reward, scorecounter1, scoretable[scorecounter1]["score"]))
+					else
+						say(string.format(gameforge.pre_event_heavens_cave._350_say_reward, scorecounter1, scoretable[scorecounter1]["score"]))
+					end
+					scorecounter0 = scorecounter0 +1
+					scorecounter1 = scorecounter1 +1
+				until scorecounter0 == 10
+			else
+				say(gameforge.pre_event_heavens_cave._20_say)
+				say(gameforge.pre_event_heavens_cave._250_say)
+			end
+		end
+	end
+	
+	state __COMPLETE__ begin
+	end
+end

@@ -1,0 +1,436 @@
+quest deviltower_zone begin
+    state start begin
+    when login begin
+        if pc.get_map_index() == 66 then
+            if pc.get_x() < 2048+88 or pc.get_y() < 6656+577 or pc.get_x() > 2048+236 or pc.get_y() > 6656+737 then
+                pc.warp((5376+532)*100, (512+596+4)*100, 65)
+            end
+        pc.set_warp_location(65, 5376+532, 512+596+4)
+        elseif pc.get_map_index() >= 660000 and pc.get_map_index() < 670000 then
+            pc.set_warp_location(65, 5376+532, 512+596+4)
+        end
+    end
+
+    when logout begin
+        if pc.count_item(30300) >= 1 then
+            pc.remove_item(30300, pc.count_item(30300))
+        end
+        -- not used in the game
+        -- pc.remove_item(30301, pc.count_item(30301))
+        if pc.count_item(30302) >= 1 then
+            pc.remove_item(30302, pc.count_item(30302))
+        end
+    end
+        
+    when deviltower_man.chat.gameforge.deviltower_zone._10_npcChat begin
+        if pc.get_level() < 40 then
+            say_title(gameforge.deviltower_zone._20_sayTitle)
+            say(gameforge.deviltower_zone._30_say)
+        else
+            say_title(gameforge.deviltower_zone._20_sayTitle)
+            say(gameforge.deviltower_zone._40_say)
+            local s =  select(gameforge.locale.monkey_dungeon.enter, gameforge.locale.monkey_dungeon.no_enter)
+            if s == 1 then
+                pc.warp(216500,727000)
+            end
+        end
+    end
+    when devil_stone1.kill begin
+        timer("devil_stone1_1", 6)
+    end
+    when devil_stone1_1.timer begin
+        d.new_jump_all(66, special.devil_tower[1][1], special.devil_tower[1][2])
+        d.regen_file("data/dungeon/deviltower2_regen.txt")
+        d.set_warp_at_eliminate(4, d.get_map_index(), special.devil_tower[2][1], special.devil_tower[2][2], "data/dungeon/deviltower3_regen.txt")
+    end
+    when devil_stone3.kill with pc.in_dungeon() and pc.get_map_index() >= 660000 and pc.get_map_index() < 670000 begin
+        d.set_warp_at_eliminate(4, d.get_map_index(), special.devil_tower[3][1], special.devil_tower[3][2], "data/dungeon/deviltower4_regen.txt")
+        d.check_eliminated()
+    end
+
+    function get_4floor_stone_pos()
+        local positions = 
+            {
+                {368, 629}, {419, 630}, {428, 653}, {422, 679},
+                {395, 689}, {369, 679}, {361, 658},
+        }
+        for i = 1, 6 do
+            local j = number(i, 7)
+            if i != j then
+                local t = positions[i];
+                positions[i] = positions[j];
+                positions[j] = t;
+            end
+        end
+        return positions
+    end
+
+    when 8016.kill with pc.in_dungeon() and pc.get_map_index() >= 660000 and pc.get_map_index() < 670000 begin
+        d.setf("level", 4)
+        local positions = deviltower_zone.get_4floor_stone_pos()
+
+        for i = 1, 6 do
+            test_chat(positions[i][1], positions[i][2])
+            d.set_unique("fake" .. i , d.spawn_mob(8017, positions[i][1], positions[i][2]))
+        end
+
+        test_chat(positions[7][1], positions[7][2])
+
+        local vid = d.spawn_mob(8017, positions[7][1], positions[7][2])
+        test_chat(vid)
+        d.set_unique("real", vid)
+        server_loop_timer('devil_stone4_update', 10, pc.get_map_index())
+        server_timer('devil_stone4_fail1', 5*60, pc.get_map_index())
+        
+        notice_multiline(gameforge.deviltower_zone._50_dNotice,d.notice)
+        
+    end
+
+    when devil_stone4_fail1.server_timer begin
+        if d.select(get_server_timer_arg()) then
+            notice_multiline(gameforge.deviltower_zone._60_dNotice,d.notice)
+            server_timer('devil_stone4_fail2', 5*60, get_server_timer_arg())
+        end
+    end
+
+    when devil_stone4_fail2.server_timer begin
+        if d.select(get_server_timer_arg()) then
+            notice_multiline(gameforge.deviltower_zone._70_dNotice,d.notice)
+            server_timer('devil_stone4_fail', 5*60, get_server_timer_arg())
+        end
+    end
+
+    when devil_stone4_fail.server_timer begin
+        if d.select(get_server_timer_arg()) then
+            notice_multiline(gameforge.deviltower_zone._80_dNotice,d.notice)
+            d.clear_regen()
+            d.exit_all()
+            clear_server_timer('devil_stone4_update', get_server_timer_arg())
+        end
+    end
+
+    when devil_stone4_update.server_timer begin
+        if d.select(get_server_timer_arg()) then
+            if not d.is_unique_dead("real") then
+                for i = 1, 6 do
+                    if d.getf("fakedead" .. i) == 0 then
+                        if d.unique_get_hp_perc("fake" .. i) < 50 then
+                            d.purge_unique("fake" .. i)
+                            d.setf("fakedead" .. i, 1)
+                            notice_multiline(gameforge.deviltower_zone._90_dNotice,d.notice)
+                        end
+                    end
+                end
+            else
+                server_timer("devil_stone4_end", 5, get_server_timer_arg())
+                --d.kill_all()
+                d.purge()
+                notice_multiline(gameforge.deviltower_zone._100_dNotice,d.notice)
+                clear_server_timer('devil_stone4_fail1', get_server_timer_arg())
+                clear_server_timer('devil_stone4_fail2', get_server_timer_arg())
+                clear_server_timer('devil_stone4_fail', get_server_timer_arg())
+            end
+        else
+            server_timer('devil_stone4_stop_timer', 1, get_server_timer_arg())
+        end
+    end
+
+    when devil_stone4_stop_timer.server_timer begin
+        clear_server_timer('devil_stone4_update', get_server_timer_arg())
+    end
+
+    when devil_stone4_end.server_timer begin
+        if d.select(get_server_timer_arg()) then
+            clear_server_timer('devil_stone4_update', get_server_timer_arg())
+            clear_server_timer('devil_stone4_fail1', get_server_timer_arg())
+            clear_server_timer('devil_stone4_fail2', get_server_timer_arg())
+            clear_server_timer('devil_stone4_fail', get_server_timer_arg())
+            
+            -- clear regen from memory when exit
+            d.clear_regen()
+            
+            d.setf("level", 5)
+            d.setf("stone_count", 5)
+            notice_multiline(gameforge.deviltower_zone._110_dNotice,d.notice)
+            d.jump_all(special.devil_tower[4][1], special.devil_tower[4][2])
+            server_timer('devil_stone5_fail1', 5*60, get_server_timer_arg())
+            clear_server_timer('devil_stone4_update', get_server_timer_arg())
+
+            d.set_regen_file("data/dungeon/deviltower5_regen.txt")
+
+            d.spawn_mob(20073, 421, 452)
+            d.spawn_mob(20073, 380, 460)
+            d.spawn_mob(20073, 428, 414)
+            d.spawn_mob(20073, 398, 392)
+            d.spawn_mob(20073, 359, 426)
+        end
+    end
+    when devil_stone5_fail1.server_timer begin
+        if d.select(get_server_timer_arg()) then
+            notice_multiline(gameforge.deviltower_zone._120_dNotice,d.notice)
+            server_timer('devil_stone5_fail2', 5*60, get_server_timer_arg())
+        end
+    end
+
+    when devil_stone5_fail2.server_timer begin
+        if d.select(get_server_timer_arg()) then
+            notice_multiline(gameforge.deviltower_zone._60_dNotice,d.notice)
+            server_timer('devil_stone5_fail3', 5*60, get_server_timer_arg())
+        end
+    end
+
+    when devil_stone5_fail3.server_timer begin
+        if d.select(get_server_timer_arg()) then
+            notice_multiline(gameforge.deviltower_zone._70_dNotice,d.notice)
+            server_timer('devil_stone5_fail', 5*60, get_server_timer_arg())
+        end
+    end
+
+    when devil_stone5_fail.server_timer begin
+        if d.select(get_server_timer_arg()) then
+            notice_multiline(gameforge.deviltower_zone._80_dNotice,d.notice)
+            d.exit_all()
+        end
+    end
+
+
+    when 1062.kill with pc.in_dungeon() and d.getf("level") == 5 begin
+        local KILL_COUNT_FOR_DROP_KEY = 50
+        local n =d.getf("count") + 1
+        d.setf("count", n) 
+        if n == KILL_COUNT_FOR_DROP_KEY then
+            game.drop_item(50084, 1)
+            d.setf("count", 0)
+        end
+    end
+
+    when devil_stone5.take with item.vnum == 50084 begin
+        npc.purge()
+        item.remove()
+        d.setf("stone_count", d.getf("stone_count") - 1)
+        if d.getf("stone_count") <= 0 then
+            d.setf("level", 6)
+            d.clear_regen()
+            d.regen_file("data/dungeon/deviltower6_regen.txt")
+
+            notice_multiline(gameforge.deviltower_zone._130_dNotice,d.notice)
+            d.jump_all(special.devil_tower[5][1], special.devil_tower[5][2])
+            local server_arg = d.get_map_index()
+            clear_server_timer('devil_stone5_fail1', server_arg)
+            clear_server_timer('devil_stone5_fail2', server_arg)
+            clear_server_timer('devil_stone5_fail3', server_arg)
+            clear_server_timer('devil_stone5_fail', server_arg)
+        else
+            d.notice(string.format(gameforge.deviltower_zone._140_dNotice, d.getf("stone_count")))
+        end
+    end
+
+    when devil_stone6.kill with pc.in_dungeon() and pc.get_map_index() >= 660000 and pc.get_map_index() < 670000 and d.getf("level") == 6 begin
+        d.kill_all()
+        notice_multiline(gameforge.deviltower_zone._150_dNotice,d.notice)
+        d.check_eliminated()
+        notice_multiline(gameforge.deviltower_zone._160_dNotice,d.notice)
+        local reward_alchemist = {20074, 20075, 20076}
+        d.spawn_mob(reward_alchemist[number(1,3)], 425, 216);
+        d.setqf2("deviltower_zone","can_refine", 1)
+    end
+
+
+    when 20074.chat.gameforge.deviltower_zone._170_npcChat with pc.in_dungeon() and pc.get_map_index() >= 660000 and pc.get_map_index() < 670000 and npc.lock() begin
+        say_title(mob_name(20074))
+        say(gameforge.deviltower_zone._190_say)
+        wait()
+        if pc.level >=75 then
+            say_title(mob_name(20074))
+
+            say(gameforge.deviltower_zone._200_say)
+            local s= select(gameforge.deviltower_zone._210_select, gameforge.locale.cancel, gameforge.deviltower_zone._220_select)
+            if s==3 then
+                pc.warp(590500, 110900)
+                return
+            end	
+            if s==2 then
+                return
+            end
+
+            timer("devil_jump_7", 6)
+            npc.unlock()
+            d.purge()
+            return
+        end
+        say_title(mob_name(20074))
+        say(gameforge.deviltower_zone._230_say)
+        wait()
+        pc.warp(590500, 110500)
+        return
+    end
+
+    when 20075.chat.gameforge.deviltower_zone._170_npcChat with pc.in_dungeon() and pc.get_map_index() >= 660000 and pc.get_map_index() < 670000  and npc.lock() begin
+        say_title(mob_name(20075))
+        say(gameforge.deviltower_zone._190_say)
+        wait()
+        if pc.level >=75 then
+            say_title(mob_name(20075))
+
+            say(gameforge.deviltower_zone._200_say)
+            local s= select(gameforge.deviltower_zone._210_select, gameforge.deviltower_zone._220_select)
+            if s==3 then
+                pc.warp(590500, 110900)
+                return
+            end	
+            if s==2 then
+                return
+            end	
+
+            timer("devil_jump_7", 6)
+            npc.unlock()
+            d.purge()
+            return
+        end
+        say_title(mob_name(20075))
+        say(gameforge.deviltower_zone._230_say)
+        wait()
+        pc.warp(590500, 110500)
+        return
+    end
+    when 20076.chat.gameforge.deviltower_zone._170_npcChat with pc.in_dungeon() and pc.get_map_index() >= 660000 and pc.get_map_index() < 670000  and npc.lock() begin
+        say_title(mob_name(20076))
+        say(gameforge.deviltower_zone._190_say)
+        wait()
+        if pc.level >=75 then
+            say_title(mob_name(20076))
+
+            say(gameforge.deviltower_zone._200_say)
+            local s= select(gameforge.deviltower_zone._210_select, gameforge.deviltower_zone._220_select)
+            if s==3 then
+                pc.warp(590500, 110900)
+                return
+            end	
+            if s==2 then
+                return
+            end	
+
+            timer("devil_jump_7", 6)
+            npc.unlock()
+            d.purge()
+            return
+        end
+        say_title(mob_name(20076))
+        say(gameforge.deviltower_zone._230_say)
+        wait()
+        pc.warp(590500, 110500)
+        return
+    end
+    when devil_jump_7.timer begin
+        d.clear_regen()
+
+        d.spawn_mob(8018, 639, 658)
+        d.spawn_mob(8018, 611, 637)
+        d.spawn_mob(8018, 596, 674)
+        d.spawn_mob(8018, 629, 670)
+
+        d.setf("level", 7)
+
+
+        notice_multiline(gameforge.deviltower_zone._240_dNotice,d.notice)
+        d.jump_all(2048+590, 6656+638)
+    end
+
+    when 8018.kill with pc.in_dungeon() and pc.get_map_index() >= 660000 and pc.get_map_index() < 670000 begin
+        local cont = d.getf("7_stone_kill") + 1
+        d.setf("7_stone_kill", cont)
+
+        if cont >= 4 then
+            d.setf("7_stone_kill", 0)
+            d.set_regen_file("data/dungeon/deviltower7_regen.txt")
+        end	
+    end
+
+    when 8019.kill with pc.in_dungeon() and pc.get_map_index() >= 660000 and pc.get_map_index() < 670000 begin
+        game.drop_item(30300, 1)
+    end
+
+    when 30300.use with pc.in_dungeon() and pc.get_map_index() >= 660000 and pc.get_map_index() < 670000 begin
+        pc.remove_item("30300", 1)
+
+        local pct = number(1,10)
+
+        if pct == 1 then
+            game.drop_item(30302, 1)
+            d.clear_regen()
+        else
+            -- nothing happens cause the items isnt used in the game
+            -- game.drop_item(30301, 1)
+        end
+    end
+
+    when 30302.use with pc.in_dungeon() and pc.get_map_index() >= 660000 and pc.get_map_index() < 670000 begin
+        if d.getf( "level" ) != 7 then
+            pc.remove_item( "30302", 1)
+            return
+        end
+            
+        say_title(gameforge.blacksmith._40_sayTitle)
+        say(gameforge.deviltower_zone._250_say)
+        pc.remove_item("30302", 1)
+        timer("devil_jump_8", 6)
+        d.clear_regen()
+    end
+
+    when devil_jump_8.timer begin
+        d.setf("level", 8)
+
+        notice_multiline(gameforge.deviltower_zone._260_dNotice,d.notice)
+        d.jump_all(2048+590, 6656+403)
+        d.set_regen_file("data/dungeon/deviltower8_regen.txt")
+        d.spawn_mob(20366, 640, 460)
+        local _count = pc.count_item(30302)
+        pc.remove_item(30302,_count)
+        
+    end
+
+    when 1040.kill with pc.in_dungeon() and pc.get_map_index() >= 660000 and pc.get_map_index() < 670000 begin
+        local pct1 = number(1, 5)
+        if pct1 == 1 then
+            local pct2 = number(1, 10)
+            if pct2 == 1 then
+                game.drop_item(30304, 1)
+            else
+                game.drop_item(30303, 1)
+            end
+        else
+            return
+        end
+    end
+
+    when 20366.take with item.vnum == 30304 begin
+        npc.purge()
+        item.remove()
+        timer("devil_jump_9", 6)
+    end
+
+    when devil_jump_9.timer begin
+        d.setf("level", 9)
+
+
+        notice_multiline(gameforge.deviltower_zone._270_dNotice,d.notice)
+        d.jump_all(2048+590, 6656+155)
+        d.regen_file("data/dungeon/deviltower9_regen.txt")
+    end
+
+    when 1093.kill with pc.in_dungeon() and pc.get_map_index() >= 660000 and pc.get_map_index() < 670000 begin
+        d.kill_all()
+        d.setqf2("deviltower_zone","9_done", 1)
+        notice_multiline(gameforge.deviltower_zone._280_dNotice,d.notice)
+        notice_multiline(gameforge.deviltower_zone._290_dNotice,d.notice)
+        server_timer("devil_end_jump", 60, d.get_map_index())
+    end
+
+        when devil_end_jump.server_timer begin
+            if d.select (get_server_timer_arg()) then
+                d.clear_regen()
+                d.exit_all()
+            end
+        end
+    end
+end

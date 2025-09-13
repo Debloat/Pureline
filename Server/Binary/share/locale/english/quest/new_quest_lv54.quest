@@ -1,0 +1,244 @@
+quest new_quest_lv54 begin
+
+	state start begin
+		when login or levelup with pc.get_level() >= 54 begin
+			set_state(information)
+		end
+	end
+	-------------- the captain needs supplies from the trader, but she can't sell enough potions ------------------------------------------------------
+	state information begin
+		when login or enter begin
+			local v=find_npc_by_vnum(20355) -- Hauptmann
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, gameforge.new_quest_lv54._010_target)
+			end
+		end
+		when 20355.chat.gameforge.new_quest_lv54._020_say_title begin
+			target.delete("__TARGET__")
+			say_title(gameforge.new_quest_lv54._056_say_title) -- yellow text headline
+			say(gameforge.new_quest_lv54._030_say) -- white font text
+			say(gameforge.new_quest_lv54._031_say_reward)
+			local doquest = select(gameforge.new_quest_lv54._032_select, gameforge.subquest_12._50_select, gameforge.new_quest_lv75._290_2_select)
+			if doquest ==1 then 
+				set_state(ask_trader)
+			elseif doquest == 3 then
+				say(gameforge.subquest_06._60_say)
+				local abortquest = select(gameforge.subquest_06._70_select, gameforge.subquest_06._80_select)
+				if abortquest == 1 then
+					set_state(__GIVEUP__)
+				else
+					say_title(gameforge.new_quest_lv54._056_say_title) -- yellow text headline
+					say(gameforge.subquest_11._80_say)
+					return
+				end
+			else
+				say_title(gameforge.new_quest_lv54._056_say_title) -- yellow text headline
+				say(gameforge.subquest_11._80_say)
+				return
+			end
+		end
+	end
+	-------------- player has to ask her why there are too less potions ------------------------------------------------------
+	state ask_trader begin
+		when enter or login begin
+			send_letter(gameforge.new_quest_lv54._020_say_title)
+			q.start()
+			q.set_title(gameforge.new_quest_lv54._020_say_title)
+			local v=find_npc_by_vnum(9003) --Gemischtwarenhändlerin
+			if 0==v then
+			else
+				target.vid("__TARGET2__", v, gameforge.new_quest_lv54._050_target)
+			end
+		end
+		when 9003.chat.gameforge.new_quest_lv54._020_say_title begin
+			target.delete("__TARGET2__")
+			say_title(gameforge.new_quest_lv54._040_say_title) -- yellow text headline
+			say(gameforge.new_quest_lv54._051_say)
+		wait()
+			say_title(gameforge.new_quest_lv54._040_say_title)
+			say(gameforge.new_quest_lv54._052_say)
+			--say_reward(gameforge.new_quest_lv54._053_say_reward)
+			q.done()
+			set_state(ask_captain)
+		end
+		when info or button begin
+			say_title(gameforge.new_quest_lv54._020_say_title)
+			say(gameforge.new_quest_lv54._054_say)
+			say("")
+			say(string.format(gameforge.new_quest_lv54._055_say, get_map_name_by_number(1)))
+		end
+	end
+	-------------- player has to ask the captain to secure trading routes for the traders to guarantee supplies ------------------------------------------------------
+	state ask_captain begin
+		when login or enter begin
+			send_letter(gameforge.new_quest_lv54._020_say_title)
+			q.start()
+			q.set_title(gameforge.new_quest_lv54._020_say_title)
+			local v=find_npc_by_vnum(20355) -- Hauptmann
+			if 0==v then
+			else
+				target.vid("__TARGET3__", v, gameforge.new_quest_lv54._010_target)
+			end
+		end
+		when 20355.chat.gameforge.new_quest_lv54._020_say_title begin
+			target.delete("__TARGET3__")
+			say_title(gameforge.new_quest_lv54._056_say_title) -- yellow text headline
+			say(gameforge.new_quest_lv54._060_say) -- white font text
+		wait()
+			say_title(gameforge.new_quest_lv54._056_say_title)
+			say(gameforge.new_quest_lv54._061_say)
+			say(gameforge.new_quest_lv54._062_say_reward)
+			q.done()
+			set_state(ask_yangshin)
+		end
+		when info or button begin
+			say_title(gameforge.new_quest_lv54._020_say_title)
+			say(gameforge.new_quest_lv54._064_say)
+			say("")
+			say(string.format(gameforge.new_quest_lv54._065_say, get_map_name_by_number(1)))
+		end
+	end
+	-------------- the player has to ask yang-shin to kill the tigers, because only hunters are allowed to kill animals ------------------------------------------------------
+	state ask_yangshin begin
+		when login or enter begin
+			new_quest_lv54_neededAmountDrop1 = 20
+			new_quest_lv54_mob1 = 144 -- haunted white tiger
+			new_quest_lv54_drop1 = 30176 -- white tiger skin
+			send_letter(gameforge.new_quest_lv54._020_say_title)
+			q.start()
+			q.set_title(gameforge.new_quest_lv54._020_say_title)
+			local v=find_npc_by_vnum(20019) -- Yang Shin
+			if 0==v then
+			else
+				target.vid("__TARGET4__", v, gameforge.new_quest_lv54._070_target)
+			end
+		end
+		when 20019.chat.gameforge.new_quest_lv54._020_say_title begin
+			target.delete("__TARGET4__")
+			say_title(gameforge.new_quest_lv54._077_say_title) -- yellow text headline
+			say(gameforge.new_quest_lv54._071_say)
+		wait()
+			say_title(gameforge.new_quest_lv54._077_say_title)
+			say(gameforge.new_quest_lv54._072_say)
+			say("")
+			say(gameforge.new_quest_lv54._073_say)
+		wait()
+			say(gameforge.new_quest_lv54._074_say )
+			say_reward(string.format("%s x", new_quest_lv54_neededAmountDrop1))
+			say_item_vnum(new_quest_lv54_drop1) -- icon of item
+			say_reward(gameforge.new_quest_lv54._075_say )
+			say(mob_name(new_quest_lv54_mob1))
+            q.done()
+			set_state(hunting)
+		end
+		when info or button begin
+			say_title(gameforge.new_quest_lv54._020_say_title)
+			say(gameforge.new_quest_lv54._076_say)
+			say("")
+			say(string.format(gameforge.new_quest_lv54._078_say, get_map_name_by_number(3)))
+		end
+	end
+	-------------- yang-shin wants the player to hunt tigers for him, because they have too less hunters to kill all the agressive animals ------------------------------------------------------
+	state hunting begin
+		when enter or login begin
+			new_quest_lv54_neededAmountDrop1 = 20
+			new_quest_lv54_dropProb1 = 6
+			new_quest_lv54_mob1 = 144 -- haunted white tiger
+			new_quest_lv54_drop1 = 30176 -- white tiger skin
+			send_letter(gameforge.new_quest_lv54._020_say_title)
+			q.start()
+			q.set_title(gameforge.new_quest_lv54._020_say_title)
+		end
+		-------------- tiger skin ------------------------------------------------------
+		-- kill a 144#haunted white tiger
+		when 144.kill begin
+			if pc.getqf("collect_count_1") < new_quest_lv54_neededAmountDrop1 then
+				if math.random(1,100) <= new_quest_lv54_dropProb1 then -- probability if s.th. drops
+					local index =pc.getqf("collect_count_1") + 1
+					pc.setqf("collect_count_1",index) --you got one, so you would get +1
+					pc.give_item2(new_quest_lv54_drop1)
+					if new_quest_lv54_neededAmountDrop1 ==  pc.getqf("collect_count_1")  then
+						notice_multiline(gameforge.new_quest_lv54._082_notice, notice)
+           -- you have all, so remove collected Amount
+				    pc.setqf("collect_count_1",index - new_quest_lv54_neededAmountDrop1)
+            q.done()
+						set_state(backto_yangshin)
+           else
+					    notice(string.format(gameforge.new_quest_lv54._081_notice, new_quest_lv54_neededAmountDrop1-pc.getqf("collect_count_1")))
+					end	
+				else
+					notice_multiline(gameforge.new_quest_lv54._083_notice, notice)
+				end
+			end
+		end
+		when info or button begin
+			say_title(gameforge.new_quest_lv54._020_say_title)
+			say(gameforge.new_quest_lv54._085_say)
+			if new_quest_lv54_neededAmountDrop1 !=  pc.getqf("collect_count_1") then
+                say("")
+				say_reward(string.format(gameforge.new_quest_lv54._084_say, new_quest_lv54_neededAmountDrop1-pc.getqf("collect_count_1")))
+			else
+				notice_multiline(gameforge.new_quest_lv54._082_notice, notice)
+			end
+		end
+		when 20019.chat.gameforge.new_quest_lv54._020_say_title begin
+			say_title(gameforge.new_quest_lv54._077_say_title)
+			say(gameforge.new_quest_lv54._091_say)
+		end
+	end
+	-------------- player brings tiger skin to yang shin, too proove he killed them and wants the promised tiger-shield for his efforts ------------------------------------------------------
+	state backto_yangshin begin
+		when enter or login begin
+			new_quest_lv54_amountYang = 125000 
+			new_quest_lv54_amountXp = 3750000
+			new_quest_lv54_rewardVnum = 13083
+			new_quest_lv54_neededAmountDrop1 = 20
+			new_quest_lv54_drop1 = 30176 -- white tiger skin
+			send_letter(gameforge.new_quest_lv54._020_say_title)
+			q.start()
+			q.set_title(gameforge.new_quest_lv54._020_say_title)
+		end
+		when 20019.chat.gameforge.new_quest_lv54._020_say_title begin
+			say_title(gameforge.new_quest_lv54._077_say_title)
+			if pc.count_item(new_quest_lv54_drop1) >= new_quest_lv54_neededAmountDrop1 then 
+				say(gameforge.new_quest_lv54._092_say)
+				say(gameforge.new_quest_lv54._093_say )
+			wait()
+				say_title(gameforge.new_quest_lv54._077_say_title)
+				say(gameforge.new_quest_lv54._094_say )
+				say(gameforge.new_quest_lv54._095_say_reward)
+				say_title(gameforge.new_quest_lv54._096_say)
+				say_reward(string.format(gameforge.new_quest_lv54._101_say_reward, new_quest_lv54_amountXp))
+				say_reward(string.format(gameforge.new_quest_lv54._102_say_reward, new_quest_lv54_amountYang))
+				say_reward(string.format(gameforge.new_quest_lv54._097_say_reward, item_name(new_quest_lv54_rewardVnum)))
+                pc.change_money(new_quest_lv54_amountYang)
+                pc.give_exp2(new_quest_lv54_amountXp)
+                pc.give_item2(new_quest_lv54_rewardVnum)
+                pc.remove_item(new_quest_lv54_drop1, pc.count_item(new_quest_lv54_drop1))
+				q.done()
+				set_state(__COMPLETE__)
+			else
+				-- this happens, if the player sold or dropped needed items:
+				say(gameforge.new_quest_lv54._098_say)
+				say_reward(string.format(gameforge.new_quest_lv54._099_say_reward, new_quest_lv54_neededAmountDrop1))
+				pc.setqf("collect_count_1", pc.count_item(new_quest_lv54_drop1))
+				q.done()
+                set_state(hunting)
+			end
+		end
+		when info or button begin
+			say_title(gameforge.new_quest_lv54._020_say_title)
+			say(gameforge.new_quest_lv54._100_say)
+			say("")
+			say(string.format(gameforge.new_quest_lv54._078_say, get_map_name_by_number(3)))
+		end
+	end
+	
+	------  give up ------------------------------------------------------------------------------------------------------
+	state __GIVEUP__ begin
+	end
+	------  complete ------------------------------------------------------------------------------------------------------
+	state __COMPLETE__ begin
+	end
+end 

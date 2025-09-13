@@ -1,0 +1,214 @@
++----------------------------------------------------------------+
+| Kaptan Yosun's Pureline                                        |
++----------------------------------------------------------------+
++------------+
+| 17.11.2025 |
++------------+
+~ DirectX9Ex Update
+
++------------+
+| 15.11.2025 |
++------------+
+~ Removed 16bit color support and BPP setting from config.
+~ Added Shader Manager.
+~ Added ImGUI library support.
+~ Added Yosun Admin Panel.
+~ Added shader toggles for ease of use.
+
++------------+
+| 14.11.2025 |
++------------+
+~ Removed some unused code
+    * IsLowTextureMemory
+    * IsHighTextureMemory
+    * uTexBias
+    * IsFastTNL
+    * SupportDXT
+    * PutImage16
+    * GRAPHICS_CAPS_CAN_NOT_DRAW_LINE
+    * GRAPHICS_CAPS_CAN_NOT_DRAW_SHADOW
+    * GRAPHICS_CAPS_HALF_SIZE_IMAGE
+    * GRAPHICS_CAPS_CAN_NOT_TEXTURE_ADDRESS_BORDER
+    * 3dfx & SIS drivers
+    * CREATE_FORMAT
+
++------------+
+| 02.11.2025 |
++------------+
+~ Added some Reversed UI(wndMgr) Functions
+    * SetSlotCoolTimeInverse
+    * SetSlotCoolTimeColor
+
+~ Added Slot Time Info
+
++------------+
+| 01.11.2025 |
++------------+
+~ Fixed a bug in Admin Panel
+~ Removed CGraphicShadowTexture files which are unused.
+~ Removed Dimm.h and msctf.h
+~ DirectX9 Update.
+
++------------+
+| 22.10.2025 |
++------------+
+~ Removed Auction
+
++------------+
+| 18.10.2025 |
++------------+
+~ New shadow slider and improved shadow distance and quality.
+
++------------+
+| 15.10.2025 |
++------------+
+~ Dynamic shadows for World Editor (Credits: m2Ciaran @Metin2Dev)
+~ Minor code modernizations
+    * auto
+    * contains
+    * insert -> try_emplace
+    * push_back -> emplace_back
+    * null -> nullptr
+    * typedef -> using
+    * 1.732f -> std::numbers::sqrt3_v<float>
+    * std::ranges
+    * .empty()
+    * std::size
+
++------------+
+| 11.10.2025 |
++------------+
+Added Dynamic tree and object shadows.
+
++------------+
+| 07.10.2025 |
++------------+
+~ Added Some Code
+    * [REVERSED] CLIENT_LOCALE_STRING
+    * MULTI_LANGUAGE_MINIMAL
+
++------------+
+| 06.10.2025 |
++------------+
+~ Moved some ui scripts to uiscript from locale/xx to avoid duplication.
+    * webwindow.py
+    * selectempirewindow.py
+    * loginwindow.py
+    * EnergyBar.py
+~ Moved some ui elements to locale/common to avoid duplication.
+    * systemdialog.py
+    * inventorywindow.py
+    * expandedtaskbar.py
+~ Updated login background.
+
++------------+
+| 05.10.2025 |
++------------+
+~ Removed some locale specific code.
+~ Moved some ui scripts to uiscript from locale/xx to avoid duplication.
+    * createcharacterwindow.py
+    * passworddialog.py
+    * dragonsoulwindow.py
+    * dragonsoulrefinewindow.py
+    * giftbox.py
+~ Moved some ui elements to locale/common to avoid duplication.
+    * taskbar.py
+    * taskbar_easter.py
+    * taskbar_halloween.py
+    * taskbar_valentine.py
+    * costume_bg.jpg
+    * new_cube_bg.jpg
+    * locale/xx/ui/Mall/
+    * highlighted_quest.tga
+    * highlighted_quest_r.tga
+~ Quest scroll icons changed to highlighted ones.
+
++------------+
+| 04.10.2025 |
++------------+
+~ [YOSUN_SERVER_FIX_002] Blocked private shop creation while riding.
+
++------------+
+| 03.10.2025 |
++------------+
+~ Moved some ui elements to locale/common to avoid duplication.
+~ Moved some ui scripts to uiscript from locale/xx to avoid duplication.
+    * selectcharacterwindow.py
+~ Removed some duplicate code and some locale specific python locale code.
+~ Removed Virtual Keyboard from loginwindow
+
++------------+
+| 30.09.2025 |
++------------+
+~ Pack simplified.
+~ Season patches are integrated directly in pack.
+~ Duplicate pack files deleted.
+~ Items like Blue Steel Armor and White Lion visuals fixed.
+~ [YOSUN_WORLDEDITOR_FIX_001] Fixes crash when a .spt SpeedTree model is selected on brush.
+
++------------+
+| 29.09.2025 |
++------------+
+~ Integrated WorldEditor Source Code into the Client
+
++------------+
+| 23.09.2025 |
++------------+
+~ Added [REVERSED] SAVE_CAMERA_MODE
+~ Added [REVERSED] ABORT_TRACEBACK_UPDATE
+~ Added [REVERSED] ATLAS_MARK_INFO
+
++------------+
+| 20.09.2025 |
++------------+
+~ Removed locale_name column from protos and a couple related functions
+~ ETC_drop_item update. The file will use VNUM instead of Korean names.
+~ special_item_group update. Korean item names are changed to VNUM's and "gold" keyword is added for convenience.
+~ mob_drop_item.txt fixed using all VNUM's instead of Korean names.
++------------+
+| 18.09.2025 |
++------------+
+~ Added [REVERSED] LEVEL_UPDATE_FIX
++------------+
+| 17.09.2025 |
++------------+
+~ Made some enums more readable in protoreader.
+~ [YOSUN_SERVER_FIX_001] Fixed a typo
+~ Deleted some unused files
+    * uioption.py
+~ Removed some code
+    * BlockCountryIp
+    * Mobile - SMS
+    * Auth_Brazil & Auth_Japan
++------------+
+| 16.09.2025 |
++------------+
+~ Updated SQL Dumps, fixed some "data truncated" errors.
+~ item_list.txt is now read from locale/common instead of each locale folder, preventing duplication.
+~ skilltable.txt is now read from locale/common instead of each locale folder, preventing duplication.
+~ Removed some code
+    * Teen
+    * nProtect_GameGuard
+    * Software Tiling
+    * LibServerKey
++------------+
+| 15.09.2025 |
++------------+
+~ Removed some code
+    * Netmarble
+    * HammerOfTor
+    * Roulette
+    * Xtrap
+    * Hackshield
+    * PC_Bang
+    * Lottery
++------------+
+| 14.09.2025 |
++------------+
+~ Much better folder hierarchy and structure.
+~ Fixed all build errors.
+~ Fixed quest compilation on Windows
+~ [YOSUN_PACK_FIX_001] ("Python int too large to convert to C long")
+~ Some UiScripts are now read from Root/UiScript instead of locale/xx
+    * loadingwindow.py
+~ Atlasinfo.txt is now read from root instead of locale/xx

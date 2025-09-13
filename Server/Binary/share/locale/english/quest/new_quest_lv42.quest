@@ -1,0 +1,375 @@
+quest new_quest_lv42 begin
+	state start begin
+		when login or levelup with pc.get_level() >= 42 begin
+			set_state(information)
+		end
+	end
+	-- player wants to eat s.th. at octavio's but he has no fish -----------------------------------------
+	state information begin
+		when login or enter begin
+			send_letter(gameforge.new_quest_lv42._010_send_letter)
+			q.start()
+			q.set_title(gameforge.new_quest_lv42._010_send_letter)
+			local v=find_npc_by_vnum(20008) -- Octavio
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, gameforge.new_quest_lv42._020_target)
+			end
+		end
+		when button or info begin
+			say_title(gameforge.new_quest_lv42._010_send_letter)
+			say(gameforge.new_quest_lv42._021_say)
+			say("")
+			say(string.format(gameforge.new_quest_lv42._025_say, get_map_name_by_number(1)))
+		end
+		when 20008.chat.gameforge.new_quest_lv42._010_send_letter begin -- EDIT added by Arne 22Sept09, Reason: make all quests to choices
+			target.delete("__TARGET__")
+			say_title(gameforge.new_quest_lv42._022_say_title) -- yellow text headline
+			say(gameforge.new_quest_lv42._023_say ) -- white font text
+			say(gameforge.new_quest_lv42._024_say)
+			local doquest = select(gameforge.new_quest_lv42._026_select, gameforge.subquest_12._50_select, gameforge.new_quest_lv75._290_2_select)
+			if doquest ==1 then 
+				q.done()
+				set_state(ask_fisher)
+			elseif doquest == 3 then
+				say(gameforge.subquest_06._60_say)
+				local abortquest = select(gameforge.subquest_06._70_select, gameforge.subquest_06._80_select)
+				if abortquest == 1 then
+					set_state(__GIVEUP__)
+				else
+					say_title(gameforge.new_quest_lv42._022_say_title) -- yellow text headline
+					say(gameforge.subquest_11._80_say)
+					return
+				end
+			else
+				say_title(gameforge.new_quest_lv42._022_say_title) -- yellow text headline
+				say(gameforge.subquest_11._80_say)
+				return
+			end
+		end
+	end
+	-- player shall ask the fisher, why there is no fresh fish from the sea-----------------------------
+	state ask_fisher begin
+		when enter or login begin
+			send_letter(gameforge.new_quest_lv42._010_send_letter)
+			q.start()
+			q.set_title(gameforge.new_quest_lv42._010_send_letter)
+			local v=find_npc_by_vnum(9009) -- Fisher
+			local v2=find_npc_by_vnum(20013) -- Fisher without store
+			if 0==v2 then -- EDIT modified by Arne 22Sept09, Reason: rtying to get both Fisher instances marked, preferably that one without a shop
+				if 0!=v then
+					target.vid("__TARGET2__", v, gameforge.new_quest_lv42._030_target)
+				end
+			else
+				target.vid("__TARGET2__", v2, gameforge.new_quest_lv42._030_target)
+			end
+		end
+	
+        -- BEGIN EDIT by Arne 22Sept09, Reason: trying to get dialoges working for both Fishers
+		when button or info begin
+    		say_title(gameforge.new_quest_lv42._010_send_letter)
+	    	say(gameforge.new_quest_lv42._035_say)
+		    say("")
+    		say(string.format(gameforge.new_quest_lv42._036_say, get_map_name_by_number(1)))
+		end
+	
+        function npc_chat()
+			target.delete("__TARGET2__")
+			say_title(gameforge.new_quest_lv42._034_say_title)
+			say(gameforge.new_quest_lv42._031_say)
+    			wait()
+			say(gameforge.new_quest_lv42._032_say)
+	    		wait()
+			say(gameforge.new_quest_lv42._033_say)
+			q.done()
+        end
+
+		when 9009.chat.gameforge.new_quest_lv42._010_send_letter begin
+            		new_quest_lv42.npc_chat()
+			set_state(ask_yonah)
+		end
+		
+		when 20013.chat.gameforge.new_quest_lv42._010_send_letter begin
+			new_quest_lv42.npc_chat()
+			set_state(ask_yonah)			
+		end
+		-- END EDIT
+	end
+	
+	-- player shall ask yonah, what to to against the agressive whales, because he hunted whales in his youth -------------------------------------
+	state ask_yonah begin
+		when enter or login begin
+			send_letter(gameforge.new_quest_lv42._037_send_letter)
+			q.start() -- EDIT Added by Arne 22Sept09, Reason: no quest, no letter
+			q.set_title(gameforge.new_quest_lv42._037_send_letter)
+			local v=find_npc_by_vnum(20005) -- Yonah
+			if 0==v then
+			else
+				target.vid("__TARGET3__", v, gameforge.new_quest_lv42._040_target)
+			end
+		end
+		-- BEGIN EDIT by Arne 22Sept09, Reason: missing quest
+		when button or info begin
+			say_title(gameforge.new_quest_lv42._037_send_letter)
+			say(gameforge.new_quest_lv42._038_say)
+			say("")
+			say(string.format(gameforge.new_quest_lv42._039_say, get_map_name_by_number(1)))
+		end
+		--END EDIT
+		when 20005.chat.gameforge.new_quest_lv42._037_send_letter begin -- EDIT added by Arne 22Sept09, Reason: make all quests to choices
+			target.delete("__TARGET3__")
+			say_title(gameforge.new_quest_lv42._044_say_title)
+			say(gameforge.new_quest_lv42._041_say)			
+		wait()
+			say(gameforge.new_quest_lv42._042_say)
+			say_reward(gameforge.new_quest_lv42._043_say_reward)
+			q.done() --EDIT added by Arne 22Sept09, Reason: see above
+			set_state(goto_smith)
+		end
+	end
+	-- player shall ask the smith to produce special weapons for hunting whales with strong iron -----------------------------------------
+	state goto_smith begin
+		when enter or login begin
+			
+			-- turkey special hack
+			if pc.getqf("reward_given") == 1 then
+				char_log(pc.get_player_id(), 'QUEST_HACK', 'new_quest_lv42 goto_smith hack')
+				q.done()
+				set_state(__COMPLETE__)
+				return
+			end
+			
+			new_quest_lv42_neededAmountDrop1 = 20
+			new_quest_lv42_mob1 = 20047 -- diamantader
+			new_quest_lv42_drop1 = 50601 -- diamant stein
+			send_letter(gameforge.new_quest_lv42._037_send_letter)
+			q.start() -- EDIT Added by Arne 22Sept09, Reason: no quest, no letter
+			q.set_title(gameforge.new_quest_lv42._037_send_letter)
+			local v=find_npc_by_vnum(20016) -- Schmied
+			if 0==v then
+			else
+				target.vid("__TARGET4__", v, gameforge.new_quest_lv42._050_target)
+			end
+		end
+				-- BEGIN EDIT by Arne 22Sept09, Reason: missing quest
+		when button or info begin
+			say_title(gameforge.new_quest_lv42._037_send_letter)
+			say(gameforge.new_quest_lv42._045_say)
+			say("")
+			say(string.format(gameforge.new_quest_lv42._067_say, get_map_name_by_number(1)))
+		end
+		--END EDIT
+		
+		when 20016.chat.gameforge.new_quest_lv42._037_send_letter begin
+			target.delete("__TARGET4__")
+			say_title(gameforge.new_quest_lv42._054_say_title)
+			say(gameforge.new_quest_lv42._051_say)			
+			wait()
+			say_title(gameforge.new_quest_lv42._054_say_title)
+			say(gameforge.new_quest_lv42._052_say)
+			say_reward(string.format("%s x", new_quest_lv42_neededAmountDrop1))
+			say_item_vnum(new_quest_lv42_drop1) -- icon of item
+			say_reward(gameforge.new_quest_lv42._053_say_reward)
+			say(mob_name(new_quest_lv42_mob1))
+			q.done() --EDIT added by Arne 22Sept09, Reason: see above
+			set_state(find_diamonds)
+		end
+	end
+	-- smith need special diamondstones, to produce strong iron weapons -----------------------------------------
+	-- player has to go mining to get the diamond stones -----------------------------------------
+	state find_diamonds begin
+		when enter or login begin
+			new_quest_lv42_neededAmountDrop1 = 20
+			new_quest_lv42_mob1 = 20047 -- diamantader
+			new_quest_lv42_drop1 = 50601 -- diamant stein
+			send_letter(gameforge.new_quest_lv42._037_send_letter)
+			--BEGIN EDIT by Arne 22Sept09, Reason: trying to come up with a messaging for the harvestable items but abandoned it
+			q.start()
+			q.set_title(gameforge.new_quest_lv42._037_send_letter)
+			
+			notice_multiline(gameforge.new_quest_lv42._061_notice, notice)
+			if new_quest_lv42_neededAmountDrop1 <= pc.count_item(new_quest_lv42_drop1) then
+				send_letter(gameforge.new_quest_lv42._037_send_letter)
+				local v=find_npc_by_vnum(20016) -- Schmied
+				if 0==v then
+				else
+					target.vid("__TARGET4__", v, gameforge.new_quest_lv42._050_target)
+				end
+			else
+			end
+			--END EDIT
+		end
+		when info or button begin
+			say_title(gameforge.new_quest_lv42._037_send_letter) --EDIT Arne 22Sept09, Reason: more info in quest message
+			say(gameforge.new_quest_lv42._066_say)
+			say("")
+			if new_quest_lv42_neededAmountDrop1 <= pc.count_item(new_quest_lv42_drop1) then
+				say(gameforge.new_quest_lv42._063_say)
+				say(string.format(gameforge.new_quest_lv42._067_say, get_map_name_by_number(1)))
+			else
+				say(string.format(gameforge.new_quest_lv42._062_say , new_quest_lv42_neededAmountDrop1-pc.count_item(new_quest_lv42_drop1), mob_name(new_quest_lv42_mob1)))
+			end
+		end
+		
+		when kill begin
+			if new_quest_lv42_neededAmountDrop1 <= pc.count_item(new_quest_lv42_drop1) then
+				send_letter(gameforge.new_quest_lv42._037_send_letter)
+				local v=find_npc_by_vnum(20016) -- Schmied
+				if 0==v then
+				else
+					target.vid("__TARGET4__", v, gameforge.new_quest_lv42._050_target)
+				end
+			end
+		end
+		
+		when 20047.click begin
+			if pc.is_mount() != true then
+					pc.mining()
+				end
+			if new_quest_lv42_neededAmountDrop1 <= pc.count_item(new_quest_lv42_drop1) then
+				send_letter(gameforge.new_quest_lv42._037_send_letter)
+				local v=find_npc_by_vnum(20016) -- Schmied
+				if 0==v then
+				else
+					target.vid("__TARGET4__", v, gameforge.new_quest_lv42._050_target)
+				end
+			end
+		end
+
+
+		
+		when 20016.chat.gameforge.new_quest_lv42._037_send_letter begin
+			say_title(gameforge.new_quest_lv42._054_say_title)
+			if new_quest_lv42_neededAmountDrop1 <= pc.count_item(new_quest_lv42_drop1) then
+				say(gameforge.new_quest_lv42._064_say)
+				target.delete("__TARGET4__")
+				pc.setqf("diamond_duration", get_time())
+				new_quest_lv42_timeToWait = 86400
+				pc.remove_item(new_quest_lv42_drop1, new_quest_lv42_neededAmountDrop1)
+				q.done() --EDIT ... yawn, see above
+				set_state(wait_for_smith)
+			else
+				say(string.format(gameforge.new_quest_lv42._068_say, new_quest_lv42_neededAmountDrop1-pc.count_item(new_quest_lv42_drop1)))
+				say(gameforge.new_quest_lv42._065_say)
+			end
+		end
+	end
+	-- player has to wait as long as the smith needs to produce the weapons -----------------------------------------
+	state wait_for_smith begin
+		when enter or login begin
+			new_quest_lv42_neededAmountDrop1 = 20
+			new_quest_lv42_mob1 = 20047 -- diamantader
+			new_quest_lv42_drop1 = 50601 -- diamant stein
+			new_quest_lv42_timeToWait = 86400
+			send_letter(gameforge.new_quest_lv42._037_send_letter)
+			q.start()
+			q.set_title(gameforge.new_quest_lv42._037_send_letter)
+			local timeLeft = new_quest_lv42_timeToWait - (get_time() - pc.getqf("diamond_duration"))
+			q.set_clock(gameforge.new_quest_lv42._071_set_clock, timeLeft)
+			if get_time() - pc.getqf("diamond_duration") >= new_quest_lv42_timeToWait then
+				send_letter(gameforge.new_quest_lv42._037_send_letter)
+				local v=find_npc_by_vnum(20016) -- Schmied
+				if 0==v then
+				else
+					target.vid("__TARGET4__", v, gameforge.new_quest_lv42._050_target)
+				end
+			end
+		end
+		
+		when button or info begin
+			say_title(gameforge.new_quest_lv42._037_send_letter)
+			if get_time() - pc.getqf("diamond_duration") >= new_quest_lv42_timeToWait then
+				say(gameforge.new_quest_lv42._071_say)
+				say("")
+				say(string.format(gameforge.new_quest_lv42._067_say, get_map_name_by_number(1)))
+			else
+				say(gameforge.new_quest_lv42._073_say)
+			end
+		end
+		--BEGIN EDIT added by Arne 23Sept09, Reason: trying to get a letter started on time up
+		when kill begin
+			if get_time() - pc.getqf("diamond_duration") >= new_quest_lv42_timeToWait then
+				send_letter(gameforge.new_quest_lv42._037_send_letter)
+				local v=find_npc_by_vnum(20016) -- Schmied
+				if 0==v then
+				else
+					target.vid("__TARGET4__", v, gameforge.new_quest_lv42._050_target)
+				end
+			end
+		end
+		--END EDIT
+				
+		when 20016.chat.gameforge.new_quest_lv42._037_send_letter begin
+    		say_title(gameforge.new_quest_lv42._054_say_title)
+			if get_time() - pc.getqf("diamond_duration") >= new_quest_lv42_timeToWait then
+				say(gameforge.new_quest_lv42._074_say)
+				target.delete("__TARGET4__")
+				q.done()
+				pc.give_item2(30175)
+				pc.give_item2(30175)
+				set_state(back_to_fisher)
+			else
+				say(gameforge.new_quest_lv42._075_say)
+			end
+		end
+	end
+	-- player brings back the weapons to the fisher -> now they can defend themselves against the agressive whales -------
+	state back_to_fisher begin
+		when enter or login begin
+			new_quest_lv42_neededAmountDrop1 = 20
+			new_quest_lv42_mob1 = 20047 -- diamantader
+			new_quest_lv42_drop1 = 50601 -- diamant stein
+			new_quest_lv42_timeToWait = 86400
+			send_letter(gameforge.new_quest_lv42._037_send_letter)
+			q.start()
+			q.set_title(gameforge.new_quest_lv42._037_send_letter)
+			local v=find_npc_by_vnum(9009) -- Fisher
+			local v2=find_npc_by_vnum(20013) -- Fisher without store
+			if 0==v2 then -- EDIT modified by Arne 22Sept09, Reason: rtying to get both Fisher instances marked, preferably that one without a shop
+				if 0!=v then
+					target.vid("__TARGET5__", v, gameforge.new_quest_lv42._030_target)
+				end
+			else
+				target.vid("__TARGET5__", v2, gameforge.new_quest_lv42._030_target)
+			end
+		end
+		
+		when button or info begin
+			say_title(gameforge.new_quest_lv42._037_send_letter)
+			say(gameforge.new_quest_lv42._079_say)
+			say("")
+			say(string.format(gameforge.new_quest_lv42._036_say, get_map_name_by_number(1)))
+			
+		end
+		
+		when 20013.chat.gameforge.new_quest_lv42._037_send_letter or 9009.chat.gameforge.new_quest_lv42._037_send_letter begin
+			target.delete("__TARGET5__")
+			say_title(gameforge.new_quest_lv42._034_say_title)
+			if pc.count_item(30175) >= 2 then
+				pc.remove_item(30175, 2)
+				say(gameforge.new_quest_lv42._080_say)
+				say_reward(string.format(gameforge.new_quest_lv42._081_say_reward, 500000))
+				say_item_vnum(27868) -- icon of item Gegrillter Graskarpfen
+				say_reward(gameforge.new_quest_lv42._082_say_reward)
+				pc.setqf("reward_given", 1)
+				pc.change_money(500000)
+				pc.give_exp2(750000)
+				pc.give_item2(27868, 3)
+				q.done()
+				set_state(__COMPLETE__)
+				return
+			else
+				say(gameforge.new_quest_lv42._083_say)
+				say_reward(gameforge.new_quest_lv42._084_say_reward)
+				q.done()
+				set_state(goto_smith)
+			end
+		end
+	end
+	------  give up ------------------------------------------------------------------------------------------------------
+	state __GIVEUP__ begin
+	end
+	------  complete ------------------------------------------------------------------------------------------------------
+	state __COMPLETE__ begin
+	end
+end 

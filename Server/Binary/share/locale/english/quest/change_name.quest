@@ -1,0 +1,100 @@
+quest chagne_name begin
+	state start begin
+		when 71055.use begin
+			if pc.is_married() then
+				say("You cannot change your name if you are married.")
+				say("")
+				return
+			end
+
+			if pc.is_polymorphed() then
+				say("You cannot change your name if you are transformed.")
+				say("")
+				return
+			end
+
+			if pc.has_guild() then
+				say("You cannot change your name if you are in a guild. ")
+				say("")
+				return
+			end
+
+			if party.is_party() then
+				say("You cannot change your name if you are in a party.")
+				say("")
+				return
+			end
+
+			if pc.get_level() < 35 then
+				say("You need level 35 to change your name!")
+				say("")
+				return
+			end
+
+			if get_time() < pc.getqf("next_time") then
+				say("You can not use it now.")
+				say("")
+
+				if is_test_server() == true then
+					say("Since it's test server, you can go")
+					say("")
+				else
+					return
+				end
+			end
+
+			say("Please enter the name you want to have") ;
+
+			local name = pc.name ;
+			local str = input() ;
+			if string.len(str) > 16 then
+				say("This name is too long. Please try again.")
+				say("")
+				return
+				
+			end
+			local ret = pc.change_name(str) ;
+
+			if ret == 0 then
+				say("You didn't log in after you have changed your name.")
+				say("please re-log in.")
+				say("")
+
+				char_log(0, "CHANGE_NAME", "HAVE NOT RE-LOGIN")
+			elseif ret == 1 then
+				say("The problem occured while using the item.")
+				say("Please use again.")
+				say("")
+				
+				char_log(0, "CHANGE_NAME", "ITEM USE PROBLEM")
+			elseif ret == 2 then
+				say("The name is not available.")
+				say("Please enter other name.")
+				say("")
+
+				char_log(0, "CHANGE_NAME", "CAN NOT USE NAME")
+			elseif ret == 3 then
+				say("The name is not available.")
+				say("Please enter other name.")
+				say("")
+
+				char_log(0, "CHANGE_NAME", "ALREADY USING NAME")
+			elseif ret == 4 then
+				say("You have changed your name successfully.")
+				say("Please log in again.")
+				say("")
+
+				item.remove() ;
+
+				pc.setqf("next_time", get_time() + time_hour_to_sec(24*15))
+
+				char_log(0, "CHANGE_NAME", "SUCCESS: from "..name.." to "..str)
+			else
+				say("Unknown error occured.")
+				say("")
+
+				char_log(0, "CHANGE_NAME", "UNKNOWN NAME")
+			end
+		end
+	end
+end

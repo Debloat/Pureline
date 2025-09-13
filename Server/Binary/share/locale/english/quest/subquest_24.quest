@@ -1,0 +1,166 @@
+quest subquest_24 begin
+    state start begin
+		when login or levelup with pc.level >=39 and pc.level <=41 begin
+			set_state(information)
+		end
+	end
+
+	state information begin
+		when letter begin
+			local v=find_npc_by_vnum(20012)
+			if 0==v then
+			else
+				target.vid("__TARGET__",v, gameforge.subquest_24._10_targetVid)
+			end
+		end
+		
+		when __TARGET__.target.click or 20012.chat.gameforge.subquest_24._20_npcChat  begin
+			target.delete("__TARGET__") 
+			say_pc_name()
+			say(gameforge.subquest_24._30_say)
+			wait()
+			say_title(gameforge.subquest_08._240_sayTitle)
+			say(gameforge.subquest_24._40_say)
+			wait()
+			say_pc_name()
+			say(gameforge.subquest_24._50_say)
+			wait()
+			say_title(gameforge.subquest_08._240_sayTitle)
+			say(gameforge.subquest_24._60_say)
+			say_item_vnum(30158)
+						local s= select(gameforge.subquest_24._70_select, gameforge.subquest_24._80_select)
+
+			if 2==s then
+				say_title(gameforge.subquest_24._90_sayTitle)
+				say(gameforge.subquest_24._100_say)
+				local a= select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
+				if 2==a then
+					say_title(gameforge.subquest_08._240_sayTitle)
+					say(gameforge.subquest_24._110_say)
+					return
+				end
+				say_title(gameforge.subquest_08._240_sayTitle)
+				say(gameforge.subquest_24._120_say)
+				set_state(__GIVEUP__)
+				return
+			end
+			say_title(gameforge.subquest_08._240_sayTitle)
+			say(gameforge.subquest_24._130_say)
+			set_state(accept)
+    	end
+      end
+    state accept begin
+		when letter begin
+			send_letter(gameforge.subquest_24._140_sendLetter)
+		end
+		
+		when button or info begin
+			say_title(gameforge.subquest_24._140_sendLetter)
+			say(gameforge.subquest_24._150_say)
+			say_reward(gameforge.subquest_24._160_sayReward)
+					end
+		
+		when 20012.chat.gameforge.subquest_24._170_npcChat begin
+			if get_time() < pc.getqf("limit_time") then 
+				say_title(gameforge.subquest_08._240_sayTitle)
+				say(gameforge.subquest_24._180_say)
+				local s= select(gameforge.subquest_24._190_select, gameforge.subquest_24._200_select) 
+				if 2==s then
+					say_title(gameforge.subquest_08._240_sayTitle)
+					say(gameforge.subquest_24._210_say)
+					local s= select(gameforge.subquest_24._220_select, gameforge.subquest_24._230_select)
+					if 2==s then
+						say_title(gameforge.subquest_08._240_sayTitle)
+						say(gameforge.subquest_24._240_say)
+						set_state(__GIVEUP__)
+						return 
+					end
+					say_title(gameforge.subquest_08._240_sayTitle)
+					say(gameforge.subquest_24._250_say)
+					return
+				end
+				say_title(gameforge.subquest_08._240_sayTitle)
+				say(gameforge.subquest_24._260_say)
+				return
+			end
+			say_title(gameforge.subquest_08._240_sayTitle)
+			say(gameforge.subquest_24._270_say)
+			set_state(__FAIL__)
+		end
+
+		when enter begin
+		    pc.setqf("limit_time", get_time()+30*60)
+		    pc.setqf("kill_count", 0)
+		end
+	
+		when leave begin
+		    pc.setqf("limit_time", 0)
+		    pc.setqf("kill_count", 0)
+		    q.done()
+		end
+		when letter begin
+		    local rest_time=pc.getqf("limit_time")-get_time()
+			 timer("time_over", rest_time) 
+			 q.set_clock("Time left", rest_time)
+		end
+		when time_over.timer begin
+		    say_title(gameforge.buy_fishrod._210_sayTitle)
+		    say(gameforge.subquest_24._280_say)
+		    say_reward(gameforge.subquest_24._290_sayReward)
+			set_state(__FAIL__)
+		    q.done()
+																																															end
+																																															when 2001.kill begin
+		    local cur_kill_count=pc.getqf("kill_count")+1
+		    pc.setqf("kill_count", cur_kill_count)
+
+		    if cur_kill_count>=number(30, 40) then
+				pc.give_item2(30158)
+				set_state(report)
+		    end
+		end
+
+
+		
+	end
+	state report begin
+		when letter begin
+			send_letter(gameforge.subquest_24._300_sendLetter)
+			
+			local v=find_npc_by_vnum(20012)
+			if v!=0 then
+				target.vid("__TARGET__", v, gameforge.subquest_24._310_targetVid)
+			end
+
+		end
+		when button or info begin
+			say_title(gameforge.subquest_24._300_sendLetter)
+			say(gameforge.subquest_24._320_say)
+		end
+		
+		when __TARGET__.target.click or	20012.chat.gameforge.subquest_24._330_npcChat with pc.count_item(30158) >0  begin
+			target.delete("__TARGET__")
+			say_title(gameforge.subquest_08._240_sayTitle)
+			say(gameforge.subquest_24._340_say)
+			say_title(gameforge.collect_herb_lv4._130_sayTitle)
+						say_reward(gameforge.subquest_24._350_sayReward)
+			pc.remove_item(30158)
+			pc.change_money(25000)
+			say_reward(gameforge.subquest_24._360_sayReward)
+			pc.give_exp2(900000)
+			
+			clear_letter()
+			set_state(__COMPLETE__)
+		end
+	end
+	state __FAIL__ begin
+	end
+    state __GIVEUP__ begin
+    end
+    state __COMPLETE__ begin
+		when enter begin
+			q.done()
+		end
+    end
+end
+

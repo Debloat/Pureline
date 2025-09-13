@@ -1,0 +1,11 @@
+quest user_tracking begin
+	state start begin
+		when login begin
+			char_log(pc.getcurrentmapindex(), 'MAP_CHANGE', pc.get_level())
+		end
+
+		when levelup begin
+			char_log(pc.getcurrentmapindex(), 'LEVELUP', pc.get_level())
+		end
+	end
+end

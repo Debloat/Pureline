@@ -1,0 +1,346 @@
+1	1	Does the Peddler's rucksack have a lock? 
+1	2	Can you loot a Polymorph Marble in the Land of Giants?
+1	3	Does the Cursed Alpha Blue Wolf drop Wolf Fur?
+1	4	Does the Yeti drop Yeti Fur?
+1	5	Can you loot Ice Marble only on Mount Sohan?
+1	6	Can you only receive Goddess Tears from chests?
+1	7	Does the level three Stone of Haste increase your movement speed by 30?
+1	8	Do Pearls usually give out the INT bonus?
+1	9	Is there any armour with start level 12?
+1	10	Are there Veins of Jade Ore in Hwang Temple?
+1	11	Are there 22 bridges in the Valley of Seungryong?
+1	12	Are there eight classes in Metin2?
+1	13	Is there Plywood in Metin2?
+1	14	Is there an item called 'Piece of Jewellery'?
+1	15	Is there a skill called 'Aura Leech'?
+1	16	Does the Heal bonus exist?
+1	17	Is there a Korean firework?
+1	18	Is there a medium Mission Book?
+1	19	Is there a Vein of Amethyst Ore?
+1	20	Is there a special map for training battles?
+1	21	Is there a bird sitting on the Teleporter's right shoulder?
+1	22	Is there Wooden Armour?
+1	23	Is there a Fire Phoenix?
+1	24	Is there a fencing teacher?
+1	25	Are there Orcs?
+1	26	Are there fishermen on map 2?
+1	27	Is there always only one Stable Boy per kingdom?
+1	28	Can you keep pets in Metin2?
+1	29	Are there dogs in Metin2?
+1	30	Are there the same amount of fishers in every kingdom?
+1	31	Are there Rice Cakes in Metin2?
+1	32	Is there a Marketplace on map 2?
+1	33	Is there Plant Sap in Metin2?
+1	34	Are cursed animals only found in the guild area?
+1	35	Do Bera attack on their own volition?
+1	36	Did Beran-Setaou kill his own sister?
+1	37	Does the inventory have 90 slots?
+1	38	Does the Bamboo Arrow have an attack value of 10?
+1	39	Is the Bestial Arahan level 53?
+1	40	Is the Hungry Stray Dog level 1?
+1	41	Does the Storekeeper wear a blue headband?
+1	42	Does the Blacksmith wear an apron?
+1	43	Is the Death Reaper 'Boss' level?
+1	44	Does the Elite Orc General wear a chain with six attachments?
+1	45	Does the Old Lady have a sister?
+1	46	Does Metin2 have a forum?
+1	47	Does Mirine have black eyes?
+1	48	Does the Death Reaper reside in the Demon Tower?
+1	49	Is the Sura spirit in grotto 2 called Akuma?
+1	50	Is Bahar-Taraji the youngest of the divine siblings?
+1	51	Is Bahar-Taraji the goddess of balance?
+1	52	Is Baljit-Elvedin the oldest of the divine siblings?
+1	53	Is Baljit-Elvedin the god of balance?
+1	54	Is the monster Hae-Tae a boss?
+1	55	Is the Proud Dark Fighter level 54?
+1	56	Can the Cursed Red Wild Boar be found in seven different regions?
+1	57	Can the Copper Bell be equipped from level 5?
+1	58	Is the Red Hwang Armour for warriors?
+1	59	Is it bright in the desert at night too?
+1	60	Is Soon a bookworm?
+1	61	Can the Blacksmith destroy weapons when improving them?
+1	62	Can the Giant Tortoise appear on map 2?
+1	63	Can you mine diamonds?
+1	64	Can you get married in Metin2?
+1	65	Can you dance in Metin2?
+1	66	Can you become a GM at the age of 16?
+1	67	Can you use the 'Call' chat from level 15?
+1	68	Can you reach your first Master with level 17?
+1	69	Can you have three Masters with level 52?
+1	70	Can you get a level 5 Metin to drop something when you are level 55?
+1	71	Can you use horse skills with a mount levelled to level 9?
+1	72	Can you release your pet to an animal home?
+1	73	Can you hang Stockings on a tree?
+1	74	Can you upgrade Spirit Stones?
+1	75	Do all monsters drop Polymorph Marbles?
+1	76	Can all of the Green Potions in the game be dropped?
+1	77	Can Tue Fungus be exclusively worked on by Huahn-So?
+1	78	Do GMs level players up?
+1	79	Is there a corpse in the Valley of Seungryong?
+1	80	Do you need to collect 16 book pages in the 'Diary of a Legend' quest?
+1	81	Does the King's Belt +5 provide 6 slots in your inventory?
+1	82	Does Heuk-Young have the appearance of a warrior?
+1	83	Are Twisted Keys tradeable?
+1	84	Are there 42 corpses in the Land of Giants?
+1	85	Is there a Teleporter in the Guild Territory?
+1	86	Is there a Teleporter in the Land of Giants?
+1	87	Does a player with a negative rank consume 4500 ranking points when successfully reading a Soul Stone from G5 to G6?
+1	88	Does a player with a positive rank consume 3000 ranking points when successfully reading a Soul Stone from G5 to G6?
+1	89	Does the Weapon Shop Dealer sell Steel Arrows?
+1	90	Do the bridges in Orc Valley switch positions?
+1	91	1kk Yang is required for a one-sided separation?
+1	92	Are Crane Wing Fans dropped by wolves?
+1	93	Is a Wedding Dress required for marriage?
+1	94	Does the 'strong against Devils' bonus work on Underworld Yetis?
+1	95	Is the Nine Tails level 73?
+1	96	Is Bakra a village in the Jinno kingdom?
+1	97	Is Taurean located in the first village?
+1	98	Do you need to be at least level 30 to be able to fish?
+1	99	Do you need to be at least level 30 to marry?
+1	100	Can you buy a Pickaxe from Yang-Shin?
+1	101	Can you use the Pearl Bracelet starting from level 28?
+1	102	May all characters above level 40 enter the Demon Tower?
+1	103	Is Bokjung part of the Shinsoo kingdom?
+1	104	Is Snakefield a neutral map?
+1	105	Is there a level 55 boss in the Valley of Seungryong?
+1	106	Can a level 51 character loot Blessing Scrolls from monsters?
+1	107	Is there a level 80 boss in the Ghost Forest?
+1	108	Can you drop Blue Steel Armour +9?
+1	109	Is the Dragon Clothing produced out of the Black Steel Armour+9?
+1	110	Can you drop 1000 Yang?
+1	111	Is the Dragon Clothing produced out of the Black Clothing+9?
+1	112	Does Red Dragon normally spawn in the world of everyday Metin2?
+1	113	Do you receive a permanent bonus of 8%% more damage on other players when you complete the 'The biologist's research' quest?
+1	114	Do you need to bring Chaegirab 30 Tugyi's Tablets as part of the 'The biologist's research 6' quest?
+1	115	Can the Hwang Armour be bought in the game?
+1	116	Is the Blue Steel Armour produced from the Black Steel Armour+9?
+1	117	Is there a Teleporter in Snakefield?
+1	118	Are the level 75 and 80 Metin Stones in the Land of Giants?
+1	119	Is the entrance to the Land of Giants located in the Snakefield?
+1	120	Can you loot the Soul Stealing Blade from the Thousand Fighter?
+1	121	Does the Land of Giants border the Snakefield?
+1	122	Does the Desert Flying Eye have an eye of its own?
+1	123	Does the Titan Shield+9 have a higher defence than a level 61 Shield+9?
+1	124	Does the Falcon Shield+9 have a defence value of 153?
+1	125	Do Wooden Earrings provide an HP bonus?
+1	126	Can you only loot the Esoteric Primer+ from Dark Arahan and the Dark Summoner?
+1	127	Does the Nymph Sword have a higher attack speed than the Battle Sword?
+1	128	Does the Mighty Ice Witch drop Blood Stones?
+1	129	Is Beran-Setaou an NPC?
+1	130	As a mount, does the Lion increase your attack value by 200 points?
+1	131	Can you teleport to a spouse who is currently located in the Spider Dungeon 2?
+1	132	Does Huahn-So produce dew?
+1	133	Do you have to defeat 30 Jin-Hees for an Engagement Ring?
+1	134	Is the Wedding Ring tradeable?
+1	135	Does the Blacksmith in the Demon Tower take Yang for the improvement of items?
+1	136	Can you loot a Soul Stone from Hae-Tae?
+1	137	Does Hae-Tae normally spawn in the world of everyday Metin2?
+1	138	Does Hae-Tae only appear for a specific event?
+1	139	Are the monsters in Grotto of Exile 2 aggressive?
+1	140	Is Taurean an NPC?
+1	141	Can you loot Herb of Hard Monkeys from the Ape Lord?
+1	142	Will double the amount of ranking points be deducted when you read a Soul Stone with a negative rank?
+1	143	Can you receive a Soul Stone as a reward for the 'Examine the Ghost Trees' mission?
+1	144	Can you receive a Soul Stone as a reward for the 'The Secret of the Ghost Forest' mission?
+1	145	Can you loot Spirit Stones from the Metin of Murder in the Demon Tower?
+1	146	Can you loot skill books from level 75 and 80 Metin Stones?
+1	147	Do level 75 and 80 Metin Stones drop Spirit Stones?
+1	148	Do Metin Stones below level 40 drop Soul Stones?
+1	149	Can you teleport directly into the Demon Tower at level 60?
+1	150	Does the Blue Steel Armour +5 increase defence by 184 and reduce movement speed by 6?
+1	151	Can you drop Clams in Metin2?
+1	152	Is it possible to drop a Passage Ticket in the Grotto of Exile?
+1	153	Can you loot the Full Moon Sword from Jin-Hee?
+1	154	Can the Mental Warrior use the Lightning Throw skill?
+1	155	Does the Wild Battle Boar increase defence by 500?
+1	156	Does the Metin of Black drop Spirit Stone+4?
+1	157	Do you need a Black Uniform+ to improve the Tiger Plate Armour?
+1	158	Is the 'Enchant Item' item tradeable?
+1	159	Can you loot the Blue Potion (S) in the Spider Dungeon?
+1	160	Do Plague Carriers normally spawn in the world of everyday Metin2? 
+1	161	Can you find a Bear Gall in the Gold Treasure Chest?
+1	162	Can you mine refined Ebony from a Vein of Jade Ore?
+1	163	Does the Metin of Devil spawn for events?
+1	164	Do Orcs drop the White Gold Bracelet?
+1	165	Do you have to defeat all opponents in the Devil's Catacomb?
+1	166	Can Azrael land a critical hit in battle?
+1	167	Can you buy the Soul Crystal Necklace in the item shop?
+1	168	Does the Old Lady have a dust allergy?
+1	169	Is the Weapon Shop Dealer in love with the General Store Saleswoman?
+1	170	Does the Storekeeper have Gold Bars?
+1	171	Is Uriel a woman?
+1	172	Does the General Store Saleswoman have a relationship with the Armour Shop Dealer?
+1	173	Is the Old Lady's feather duster made from the fur of Blue Wolves?
+1	174	Can you only hit the Giant Tortoise with a Two-Handed Sword?
+1	175	Can the Wizard Sword be used from level 50?
+1	176	Did Beran-Setaou kill Bahar-Taraji?
+1	177	Can Beran-Setaou only be found on one map in the game?
+1	178	Does the Red Potion (L) refill 650 HP?
+1	179	Does the Sun Elixir (S) contain 2,000,000 HP?
+1	180	Can endurance be refilled using Yellow Potions?
+1	181	Is poison deadly?
+1	182	Does Sim Water immediately restore 100 SP?
+1	183	Does Red Dew increase attack speed by 2%% to 8%%?
+1	184	Do the effects of dew last for a maximum of 20 minutes?
+1	185	Do the effects of Peach Blossom Juice last for five minutes?
+1	186	Does Blue Dew increase attack value?
+1	187	Does Chuk-Sal wear a mask?
+1	188	Can you find a Rune Stake on the fourth level of the Devil's Catacomb?
+1	189	Is the Metin of Retribution level 80?
+1	190	Is there a Ghost of a Sura in the Dragon's Temple?
+1	191	Do the people marrying receive Red Potions (M) at the end of the wedding?
+1	192	Can you see your own shadow in the shadow of a tree or building?
+1	193	From level 84 can you wear the Dragon Clothing +6?
+1	194	Can you set a maximum of two Spirit Stones in an Antique Bell?
+1	195	Does the Cloak of Secrecy attract monsters?
+1	196	Can all mounts in the game be used from level 1?
+1	197	Does the Blue Dragon drop Pearls?
+1	198	Is 'Damage is absorbed by SP' the standard bonus of the Soul Shard Hat?
+1	199	Do cursed monsters only appear in guild territory?
+1	200	If you use Permanent Fire on a dying opponent, will they retain one HP?
+1	201	Can the Military Horse quest be completed from level 45?
+1	202	Can a level 82 player invite a player with level 53 into their group?
+1	203	Can Ninjas use four Horse Skills?
+1	204	Are the Veins of Silver Ore only in the first village?
+1	205	Is the Metin Pung-Ma only in Lungsam?
+1	206	Can you enter the Dragon's Temple using Shrunken Heads?
+1	207	Is the Twisted Key dropped by General Huashin?
+1	208	Is there a boss opponent on Mount Sohan?
+1	209	Can Gold Threaded Shoes be worn from level 20?
+1	210	Does the event helper wear gloves?
+1	211	Does Baek-Go wear glasses?
+1	212	Does the Mok Memorial have a rectangular form?
+1	213	Does the Wedding Planner wear a green dress?
+1	214	Does Seon-Hae hold a stick in his right hand?
+1	215	Does Yang-Shin have three arrows in his quiver?
+1	216	Is the Metin of Vengeance sky blue?
+1	217	Is the Metin of Retribution the Metin Stone with the highest level?
+1	218	Is the Metin of Soul located in the Valley of Seungryong?
+1	219	Can you discover a Vein of Jade Ore in the Temple of Darkness?
+1	220	Can you mine Amethyst Ore on Mount Sohan?
+1	221	Is Beran-Setaou level 97?
+1	222	Does Azrael have a higher level than Beran-Setaou?
+1	223	Does the Mighty Ice Witch have the same level as Tartaros?
+1	224	Is the Fast Attack a Ninja's skill?
+1	225	Does the Red Potion (M) refill 500 HP?
+1	226	Can the Yin and Yang Armour be worn by warriors?
+1	227	Does the Sage King's Glove double the received ranking points when you defeat a monster?
+1	228	Does Uriel's Diary have 20 pages?
+1	229	Are you led into the Grotto of Exile by Chuk-Sal?
+1	230	Do you need to be level 75 to be able to enter the Grotto of Exile?
+1	231	Does the Blacksmith have a beard?
+1	232	Are there four horses in the Stable Boy's enclosure?
+1	233	Are violet socks part of the Baroness Dress?
+1	234	Does the Young Scorpion Man have a weapon?
+1	235	Does the Nine Tails actually have nine tails?
+1	236	Is there a Heaven's Tear Vein on Mount Sohan?
+1	237	Does the Dark Leader have the faint chance bonus?
+1	238	Is the Gum Memorial located behind the Demon Tower?
+1	239	Does the head of the Flame King burn?
+1	240	Does the Flame King wear sandals?
+1	241	Is Hae-Tae a monster?
+1	242	Does the Plagued Man wear a scarf?
+1	243	Does the Ape Lord have a tail?
+1	244	Does the Ape Lord have a sceptre?
+1	245	Does the Bogeyman have a horn on its forehead?
+1	246	Does the Giant Ghost Tree have roots?
+1	247	Are the hands of the Dryads red?
+1	248	Does the Thousand Fighter hold two axes in his hands?
+1	249	Is the Setaou Mystic level 88?
+1	250	Is Beran-Setaou sky blue?
+1	251	Is Aranyo the wife of Soon?
+1	252	Is Ariyoung located in the first village?
+1	253	Does Baek-Go brew potions?
+1	254	Is the Ghost Sword Master blue?
+1	255	Does the Ice Bug have ten legs?
+1	256	Does the Grilled River Trout regenerate 250 SP?
+1	257	Does Handu-Up have a pointed purple hat?
+1	258	Does Nakajima wander around the map?
+1	259	Does the Red Ant Suit+9 provide a defence bonus of 101?
+1	260	Does Harang wear her hair with ponytails?
+1	261	Does Deokbae hold a golden axe?
+1	262	Does the 'The stables are in trouble' quest start from level 49?
+1	263	Does Uriel have his arms crossed?
+1	264	Is the Ape Lord to be found in Hasun Dong?
+1	265	Can you feed your horse with the default command CTRL+B?
+1	266	Does the Armour Shop Dealer have a moustache?
+1	267	Is the hard Monkey Dungeon also known as Jungsun Dong?
+1	268	Does Wrath of the Dragon God increase the chance of a penetrating hit?
+1	269	Does Aranyo carry a fruit basket?
+1	270	Does the Ice Bug have 6 legs?
+1	271	Are there six different types of monsters in the Land of Giants?
+1	272	Can the Red Iron Blade only be used with level 30?
+1	273	Is Kuahlo Dong located in the desert?
+1	274	Does the Teleporter have a mark on their head?
+1	275	Is the Metin of Combat level 15?
+1	276	Does Chaegirab wear glasses?
+1	277	Do you need a gem to improve level 26 armour to +4?
+1	278	Can you buy level 26 armour from the NPC?
+1	279	Does the Plagued Dog scratch behind his ear? 
+1	280	Has the Angry Plagued Archer got 2 heads? 
+1	281	Is there a Chunjo Rock? 
+1	282	Is there a Yongbi Rock? 
+1	283	Does level 42 armour on +7 have a defence of +97?
+1	284	Does level 42 armour on +7 have a defence of -97?
+1	285	Is the Setaou Hunter level 89, tier 2? 
+1	286	Is the Black Wind To-Su level 33, tier 2? 
+1	287	Does Metin2 have clay? 
+1	288	Are there 4 Ponies at the gate by the Stable Boy?
+1	289	Does Baek-Go wear glasses? 
+1	290	Is Wonda-Rim Chaegirab's nephew? 
+1	291	Is Chaegirab Wonda-Rim's uncle?
+1	292	Is Chaegirab Wonda-Rim's father? 
+1	293	Is there an animal god on Map2?
+1	294	Are there three fishermen on Map2? 
+1	295	Do teamlers ask you for your ID and password? 
+1	296	Can you recognise a GameMaster [GM]? 
+1	297	Is the Shabby Pedestrian in Map2?   
+1	298	Is the Eye of a Spider a quest item?
+1	299	Are there 5 Hair Dyes in Metin2? 
+1	300	Is Musk Oil tradeable? 
+1	301	Has Aranyo got something on her back? 
+1	302	Is Aranyo Octavio's wife? 
+1	303	Is Aranyo Soon's wife? 
+1	304	Are there skeletons in Metin2? 
+1	305	Are there Memorials in Kuahlo Dong? 
+1	306	Are there training fights in Metin2? 
+1	307	Can Leather Shoes be worn by everyone? 
+1	308	Has the Exorcism Sword got an attack speed of 20%%? 
+1	309	Does Eun-Jung carry a fan? 
+1	310	Does Eun-Jung carry a weapon? 
+1	311	Can you throw gold and silver bars on the ground? 
+1	312	Is the attack speed of the Electromagnetic Blade reduced during higher upgrade levels? 
+1	313	Does the attack speed of the Electromagnetic Blade increase at higher upgrade levels? 
+1	314	Is there a Sombre Wooden Mask? 
+1	315	Can you barbecue in Metin2? 
+1	316	Does Koe-Pung wear a mask? 
+1	317	Is the Forest Spirit Soul Stone a quest item? 
+1	318	Does the Ogre Berserk carry a weapon in his left hand? 
+1	319	Can your gender be changed at every level? 
+1	320	Is Imha the Guild Area of the Chunjo Kingdom? 
+1	321	Is Imha the Guild Area of the Shinsoo Kingdom? 
+1	322	Is Imha the Guild Area of the Jinno Kingdom? 
+1	323	Is Jungrang an NPC in Metin2? 
+1	324	Is Yayang Soon's daughter? 
+1	325	Is the interior of Jungsun Dong made of green-coloured stone?
+1	326	Is Yang Metin2's currency? 
+1	327	Is a Jinunggyi's Soul Stone needed for the level 30 quest? 
+1	328	Are there research items? 
+1	329	Can you brew potions at Seon-Hae's? 
+1	330	Are there Pumpkins in Metin2? 
+1	331	Are there stockings in Metin2?
+1	332	Is the fire in the Dark Shrine red? 
+1	333	Is the Apegeneral level 40, tier 4? 
+1	334	Can every class use the Sword? 
+1	335	Is Nakajima a Metin2 NPC? 
+1	336	Can monsters loot the Passage Ticket? 
+1	337	Do 200 Red Potions (L) cost 33,000 Yang at the General Store Saleswoman's? 
+1	338	Can the Lavishly Decorated Bow be worn by Ninjas? 
+1	339	Is Chuong on Map1? 
+1	340	Is the Metin of Sorrow level 10, tier 5? 
+1	341	Is there a Christmas Fire Cracker?
+1	342	Does the Chinese Fire Cracker increase movement speed? 
+1	343	Does the Chinese Fire Cracker increase attack speed? 
+1	344	Does the Chinese Fire Cracker increase the chance of fainting?
+1	345	Does Grilled Salmon restore 350 hit points? 
+1	346	Does Grilled Salmon restore 350 spell points? 

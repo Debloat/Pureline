@@ -1,0 +1,105 @@
+quest horse_menu begin
+    state start begin
+		function horse_menu()
+			if horse.is_mine() then
+				say(locale.horse_menu.menu)
+				say("")
+
+				local s = 6
+
+				if horse.is_dead() then
+					s = select(locale.horse_menu.revive,locale.horse_menu.unsummon, locale.horse_menu.close)
+
+					if s == 1 then s = 0
+					elseif s == 2 then s = 3
+					elseif s == 3 then return
+					end
+				else
+					s = select(
+					locale.horse_menu.feed, locale.horse_menu.ride, locale.horse_menu.unsummon,gameforge.horse_menu._10_say ,gameforge.horse_menu._20_say,locale.horse_menu.close)
+				end
+
+				if s == 0 then
+					horse.revive()
+				elseif s == 1 then
+					local food = horse.get_grade() + 50054 - 1
+
+					if pc.countitem(food) > 0 then
+						pc.removeitem(food, 1)
+						horse.feed()
+					else
+						say(gameforge.horse_menu._30_say  .. item_name(food))
+						say("")
+					end
+				elseif (s == 2 and false == pc.is_riding()) then 
+					horse.ride()
+				elseif s == 3 then
+					horse.unsummon()
+				elseif s == 4 then
+					say(gameforge.horse_menu._40_say..horse.get_health_pct().."%")
+					say(gameforge.horse_menu._50_say..horse.get_stamina_pct().."%")
+					say("")
+				elseif s == 5 then
+					if pc.countitem("71110") <= 0 then
+						say(gameforge.horse_menu._30_say  .. item_name("71110"))
+						say("")
+						return
+					end
+
+					local old_horse_name = horse.get_name() ;
+					if string.len(old_horse_name) == 0 then
+						say(gameforge.horse_menu._60_say)
+					else
+						say(gameforge.horse_menu._70_say..old_horse_name)
+					end
+					
+					say(gameforge.horse_menu._80_say)
+					say("")
+
+					local horse_name = input()
+
+					if string.len(horse_name) < 2 then
+						say(gameforge.horse_menu._90_say)
+						say("")
+						return
+					elseif string.len(horse_name) > 12 then
+						say(gameforge.horse_menu._100_say)
+						say("")
+						return
+					end
+					
+					local ret = horse.set_name(horse_name)
+
+					if ret == 0 then
+						say(gameforge.horse_menu._110_say)
+						say("")
+					elseif ret == 1 then
+						say()
+						say(gameforge.horse_menu._120_say)
+					elseif ret == 2 then
+						pc.remove_item("71110")
+
+						say(gameforge.horse_menu._130_say)
+						say("")
+					end
+				end
+			end
+		end
+
+		when 20030.click begin horse_menu.horse_menu() end
+		when 20101.click begin horse_menu.horse_menu() end
+		when 20102.click begin horse_menu.horse_menu() end
+		when 20103.click begin horse_menu.horse_menu() end
+		when 20104.click begin horse_menu.horse_menu() end
+		when 20105.click begin horse_menu.horse_menu() end
+		when 20106.click begin horse_menu.horse_menu() end
+		when 20107.click begin horse_menu.horse_menu() end
+		when 20108.click begin horse_menu.horse_menu() end
+		when 20109.click begin horse_menu.horse_menu() end
+		when 20119.click begin horse_menu.horse_menu() end
+		when 20120.click begin horse_menu.horse_menu() end
+		when 20121.click begin horse_menu.horse_menu() end
+		when 20122.click begin horse_menu.horse_menu() end
+
+    end
+end

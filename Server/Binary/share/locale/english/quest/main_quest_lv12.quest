@@ -1,0 +1,121 @@
+quest main_quest_lv12 begin
+	state start begin
+	end
+	state run begin
+		when login or levelup or enter with pc.get_level() >= 12 begin
+			set_state (gotoboss)
+		end
+	end
+
+	state gotoboss begin
+		when letter begin
+		 	send_letter(gameforge.main_quest_lv10._10_sendLetter)
+		
+			local v=find_npc_by_vnum(20355)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, gameforge.main_quest_lv10._10_sendLetter)
+			end
+		end
+		when button or info begin
+			say_title(gameforge.main_quest_lv10._10_sendLetter)
+            say(gameforge.main_quest_lv12._10_sayReward)
+			end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+
+                        say_title(gameforge.main_quest_lv10._30_sayTitle)
+                        	    		---                                                   l
+			say(gameforge.main_quest_lv12._20_say)
+			wait()
+			say_title(gameforge.buy_fishrod._210_sayTitle)
+                        			say_reward(gameforge.main_quest_lv12._30_sayReward)
+			set_state ( killgraydog )
+
+
+		end
+	end
+
+	state killgraydog begin
+		when letter begin
+			send_letter(gameforge.main_quest_lv12._40_sendLetter)
+		end
+		when button or info begin
+			say_title(gameforge.main_quest_lv12._40_sendLetter)
+            say(gameforge.main_quest_lv12._50_sayReward)
+			say_reward(string.format(gameforge.main_quest_lv12._60_sayReward, pc.getqf("state")))
+		end
+		when 107.kill begin
+			local count = pc.getqf("state") + 1
+			
+			if count <= 10 then
+				pc.setqf("state", count)
+				q.set_counter(gameforge.main_quest_lv12._65_counter, 10 - count)
+						
+				if count == 10 then 
+					say_title(gameforge.buy_fishrod._210_sayTitle)
+					say_reward(gameforge.main_quest_lv12._70_sayReward)
+					set_state (gotoboss2)
+				end
+			end
+		end
+		when 20355.chat.gameforge.main_quest_lv12._80_npcChat with pc.getqf("state") < 10 begin	
+			say_title(gameforge.main_quest_lv10._30_sayTitle)
+			say(gameforge.main_quest_lv12._90_say)
+			
+			if pc.is_gm() then
+				wait()
+				say_title(gameforge.main_quest_lv12._100_sayTitle)
+				say(gameforge.main_quest_lv12._110_say)
+				local s =  select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
+				if s == 1 then
+					set_state (gotoboss2)
+				end
+			end
+		end
+
+	when 20355.chat.gameforge.main_quest_lv12._80_npcChat with pc.getqf("state") >= 10 begin
+			say_title(gameforge.main_quest_lv10._30_sayTitle)
+			say(gameforge.main_quest_lv12._120_say)
+			set_state (gotoboss2)
+		end
+	end
+	
+	state gotoboss2 begin
+		when letter begin
+			local v=find_npc_by_vnum(20355)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, gameforge.main_quest_lv12._130_targetVid)
+			end
+		end
+		when letter begin
+			send_letter(gameforge.main_quest_lv12._140_sendLetter)
+		end
+		when button or info begin
+			say_title(gameforge.main_quest_lv12._150_say)
+			say(gameforge.main_quest_lv12._160_sayReward)
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+
+			say_title(gameforge.main_quest_lv10._30_sayTitle)
+                        	    		---                                                   l
+                        say(gameforge.main_quest_lv12._170_say)
+			wait()
+			say_title(gameforge.collect_herb_lv4._130_sayTitle)
+                        			say_reward(gameforge.main_quest_lv12._180_sayReward)
+			
+			pc.give_exp2( 10000 )
+			pc.change_money( 3500 )
+			pc.setqf("state", 0)
+			
+			clear_letter()
+			set_state (__COMPLETE__)
+			set_quest_state("main_quest_lv14","run")
+
+		end
+	end
+	state __COMPLETE__ begin
+	end
+end

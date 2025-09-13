@@ -1,0 +1,1858 @@
+1	Snart vil alle blive teleporteret til byen.
+2	Denne genstand findes ikke.
+3	Kisten er eksploderet! Dine HP blev formindsket.
+4	[Orden] Salget af ordens området har fejlet.
+5	[Orden] Salget af ordens området kan ikke afsluttes da der er for få Yang i ordens banken.
+6	[Orden] Du kan ikke forlade ordenen så længe en afstemning er undervejs.
+7	[Orden] Spilleren er offline eller er på et andet kort.
+8	[Orden] Du kan ikke vælge krigsdeltagere mens ordenen er i en krig.
+9	[Orden] Du kan ikke starte en anden afstemning mens en allerede er undervejs.
+10	[Orden] Denne handling er ikke mulig under en krig.
+11	[Orden] Kan ikke opgraderes da ordens banken er fyldt.
+12	[Orden] Du kan ikke bruge Ordens Lagerhuset så længe en afstemning er undervejs.
+13	Hvis du indånder grøn røg fra kisten, fordeler giften sig i din krop!
+14	[Orden] Du kan ikke udføre denne handling mens Ordens Lagerhuset er åbent.
+15	[Orden] Du kan ikke skifte ordenslederen mens du er i krig.
+16	[Orden] %s har brug %s.
+17	[Orden] Du har ikke tilladelser til at bruge ordens færdigheder.
+18	[Orden] Du er nu i tilskuer tilstand fordi du har nået genoplivnings grænsen.
+19	[Orden] Tjek venligst medlemmerne og lederne.
+20	[Orden] Tjek venligst fjendtlige medlemmer og ledere.
+21	[Orden] Bestemte medlemmer er offline eller på et andet kort.
+22	[Orden] Bestemte medlemmer af fjendens orden er offline eller på et andet kort.
+23	[Orden] Der er ikke nok deltagere online.
+24	Du får %s og der er %d styk.
+25	[Orden] Du kan ikke udføre denne handling under en krig.
+26	[Orden] Du kan bruge det om 10 sekunder.
+27	[Orden] Karakteren skal mindst være level 40 for at modtage ordens lederskabet.
+28	[Orden] %s har vundet.
+29	[Orden] Uafgjort
+30	[Orden] Du kan ikke fjerne nogen fra ordenen mens i er i krig.
+31	[Orden] Du kan ikke starte en afstemning til at fjerne ordens lederen.
+32	[Orden] Du kan ikke starte en afstemning til at fjerne dig selv fra ordenen.
+33	[Orden] Du skal bruge Efterfølgerens ring for at overdrage ordenen.
+34	[Orden] Ikke nok plads i ordens banken.
+35	Der er %s i kisten.
+36	[Orden] Du skal vente mindst 12 timer fra du har brugt Ordens Lagerhuset før du kan forlade ordenen.
+37	Orden [%s]! Det endelige mål er fremtrådt. Ødelæg alle mål for at vinde denne krig!
+38	[Orden] Krigen slutter om 5 minutter.
+39	[Orden] Krigen slutter om 1 minut.
+40	[Orden] Ingen orden til stede med en ordens annoncering.
+41	[Orden] Ingen orden har besejret dragen endnu.
+42	[Orden] Ranglige opdatering.
+43	[Orden] Kampen mod Drage Dronning Meley begynder.
+44	[Orden] Portene til Meleys Grotte er åbne. Tidsbegrænsningen i grotten er en time.
+45	[Orden] Du har besejret Drage Dronningen Meley!
+46	Denne nøgle passer ikke.
+47	[Orden] Påkrævet tid: %d min. %d sek.
+48	[Orden] For din egen sikkerheds skyld vil du blive teleporteret ud af reden om 10 minutter.
+49	[Orden] Tiden er gået.
+50	[Orden] Portene til grotten er lukket endnu en gang.
+51	[Orden] For din egen sikkerheds skyld vil du blive teleporteret ud af reden om 1 minut.
+52	[Orden] Grotten vil lukke om %d min.
+53	[Orden] Du har afbrudt kampen i Meleys Grotte.
+54	[Orden] Du kan ikke erklære en ordenskrig mens der kæmpes i drage grotten
+55	[Orden] Fjendens orden kæmper lige nu i drage grotten.
+56	Du har ikke modtaget noget.
+57	[Orden] Registreret til Meleys Grotte med success.
+58	[Orden] Besøg Drage Vogter Dolnarr for at betræde drage grotten.
+59	Sommer eventet er startet. Besøg Summer i byen. Hun vil give dig nogle velsmagende forfriskninger.
+60	Sommer eventet vil snart slutte.
+61	Denne effekt er allerede aktiv.
+62	[Orden] Du kan kun lave en transaktion en gang per 10 sekunder.
+63	[Orden] Et andet medlem bruger allerede ordens banken.
+64	[Orden] Orden [%s] har tabt krigen mod [%s].
+65	Du kan ikke åbne denne boks, da den ville overskride det maksimale antal Yang.
+66	[Orden] Din orden har ikke nok Yang på kontoen. Indbetal venligst flere Yang og prøv igen.
+67	Du har ikke nok Yang til at kunne bruge genstanden.
+68	[Orden] Objekt blev flyttet med success.
+69	[Orden] Du kan ikke bruge dette ordens logo. Prøv venligst igen.
+70	[Transmutation] Du kan ikke bære den transmuterede genstand da den ikke matcher dit køn.
+71	[Transmutation] Du kan ikke bære den transmuterede genstand da den ikke matcher din karakterklasse.
+72	[Monster Kort] Mission level: %d Du har besejret monstret: %s
+73	[Monster Kort] Du har gennemført din monster mission. Saml dit Monster Kort nu.
+74	[Monster Kort] Du har ikke nok plads i dit inventar.
+75	[Monster Kort] [%s] Level op gennemført.
+76	[Monster Kort] Du kan nu se monsterets bevægelses animation.
+77	[Monster Kort] Du kan nu transformere dig om til dette monster.
+78	Du har mindsket din færdigheds-level.
+79	[Monster Kort] Du kan nu teleportere til dette monsters placering.
+80	[Orden] Som en krigsdeltager kan du ikke observere din egen ordenskrig.
+81	[Orden] Orden har sat et minimums level til ansøgere (min. level: %d).
+82	[Orden] Du kan kun lave en transaktion en gang per 10 sekunder.
+83	[Orden] Orden %s har købt område.
+84	[Orden] Et Dragens Tempel kamp er allerede undervejs på en anden kanal.
+85	[Orden] Logo serveren er p.t. nede grundet vedligeholdelse.
+86	[Orden] Logo serveren er p.t. nede grundet vedligeholdelse.
+87	[Orden] Dette land tilhører en anden spiller.
+88	Du kan ikke mindske din færdigheds-level.
+89	Du skal være level %d for at gå ind i Kamp Zonen.
+90	Du kan ikke gå ind i Kamp Zonen fra dette kort.
+91	Du skal lukke alle vinduer før du går ind eller forlader Kamp Zonen.
+92	Du kan ikke forlade Kamp Zonen når du er død.
+93	Du går nu ind i Kamp Zonen. Vent venligst.
+94	Du forlader nu Kamp Zonen. Vent venligst.
+95	Næste tilgang er tilgængelig om %d minut(ter).
+96	Næste tilgang er tilgængelig om %d sekund(er).
+97	Du kan ikke bruge denne genstand her.
+98	Du kan ikke bruge denne genstand her.
+99	Denne effekt er allerede aktiveret.
+100	Du har brug for en Reinkarnations genstand for at genoplive på stedet.
+101	Kamp Zonen er nu åben.
+102	Kamp Zonen er nu lukket.
+103	Kamp Zonen vil åbne om %d minut(ter).
+104	Kamp Zonen vil lukke om %d minut(ter).
+105	Et event finder lige nu sted og du vil modtage dobbelt point.
+106	Eventet i Kamp Zonen er nu afsluttet.
+107	Du har annonceret din retræte fra Kamp Zonen og kan forlade den om %d minutter.
+108	En spiller har annonceret sin retræte. Dræb dem for at få flere point!
+109	Din retræte annoncering var annulleret.
+110	Dit inventar er fyldt op, så der er ikke nok plads til at modtage belønningen.
+111	Denne genstand kan kun bruges fra en InternetCafe.
+112	Din retræte annoncering er aktiv.
+113	Du kan ikke gå ind i Kamp Zonen på nuværende tidspunkt.
+114	Godt arbejde! For at nå rang %d i Kamp Zone ranglisten, så vil du blive belønnet med et specielt hædersbevis.
+115	Du har lige nu %d point. Din samlede score er %d.
+116	Du kan ikke bruge denne genstand under din retræte fra Kamp Zonen.
+117	Du kan ikke erklære krige i Kamp Zonen.
+118	Denne handling er ikke mulig på dette kort.
+119	Resterende antal: %d
+120	[Orden] Ordenens skatkammer har nået sit maksimum.
+121	[Orden] Du kan ikke hæve nogen Yang da du allerede har mere end 2 milliarder Yang.
+122	Det er over grænsen.
+123	[Orden] Du kan ikke hæve nogen Yang mens et andet vindue er åbent.
+124	Ordens krig deklarationen udløber om 3 minutter.
+125	Træder ind i Kamp Zonen om %d sekunder.
+126	Forlader Kamp Zonen om %d sekunder.
+127	Du har tabt %d point. Resterende point: %d
+128	Desværre har du ikke nok plads i dit inventar.
+129	Du modtager ikke nogen point for denne spiller.
+130	Du har annonceret din retræte fra Kamp Zonen og kan forlade den om %d sekunder.
+131	Eventet er startet!
+132	Brugt månekage eller frø.
+133	Fjern %s fra din venneliste for at fortsætte.
+134	%s er nu blokeret.
+135	%s er ikke længere blokeret.
+136	%s bliver allerede blokeret.
+138	Fjern blokering på %s for at fortsætte.
+139	%s har blokeret dig.
+140	Monsteret fra det nuværende event er dukket op.
+141	Du har ikke nok Jubilæums Flag.
+142	Jubilæums Eventet er startet!
+143	Du kan ikke bære en vielsesring når du ikke er gift.
+144	Jubilæums Eventet slutter om %d minut(ter).
+145	Du kan ikke bruge denne genstand mens du er iført et andet kostume.
+146	Du kan ikke udstyre denne genstand mens du er iført en Brudekjole eller en Tuxedo.
+147	Du kan ikke gøre dette mens genstanden er udstyret.
+148	[Orden] Du kan ikke indbetale eller udbetale nogen Yang fra ordens kontoen mens et andet vindue er åbent.
+149	[Orden] Du kan ikke udføre denne handling mens du indbetaler eller udbetaler nogen Yang fra ordens kontoen.
+150	[Orden] Indbetal Yang eller Udbetal Yang vinduet er allerede åbent.
+151	[Orden] Du kan ikke indbetale eller udbetale nogen Yang fra ordens kontoen mens dit kæledyr er tilkaldt.
+152	%s vil blive vist her: %s
+153	Seungryong Dalen
+154	Begivenheds-detektoren kan ikke bruges her.
+155	Bjerg Sohan
+156	Yongbi Ørkenen
+157	Doyyumhwan
+158	Ramadan Eventet er begyndt!
+159	Ramadan Eventet er afsluttet.
+160	Du kan ikke skifte kanal.
+161	Vent venligst et øjeblik. Skifter kanal...
+162	Denne genstand kan ikke blive absorberet.
+163	Denne genstand kan ikke blive omdannet.
+164	Fortrylle Genstand kan ikke bruges på denne genstand.
+165	Begivenheds-detektor er forsvundet i det mysteriøse lys.
+166	Forstærk Genstand kan ikke bruges på denne genstand.
+167	Genstande kan kun blive byttet på det samme kort.
+168	Kan ikke oprette forbindelse til kanalen denne gang. Prøv venligst igen senere.
+169	[Gruppe] Du kan ikke gøre dette mens gruppe søgningen er aktiv.
+170	[Gaya] Du har ikke nok Glimmersten.
+171	[Gaya] Du har ikke nok Yang til at skære Glimmersten.
+172	[Gaya] Du har allerede det maksimale antal Gaya.
+173	[Gaya] Skæring fuldført.
+174	[Gaya] Skæring mislykkedes.
+175	[Gaya] Genstands listen er blevet opdateret.
+176	Begivenheds-detektor er forsvundet.
+179	[Gaya] Dit inventar er fyldt.
+180	[Gaya] Du har ikke en Opdater Gaya Marked genstand.
+181	[Gaya] Du skal åbne Gaya Marked først.
+182	[Gaya] Du kan ikke låse op for flere felter i Gaya Markedet.
+183	[Gaya] Du har ikke nok %s. Du har brug for %d mere for at låse op for en felt yderligere.
+184	[Gaya] Gaya Markedet er utilgængeligt i øjeblikket.
+185	[Gaya] Gaya Markedet er allerede åbent.
+186	[Gaya] Du kan kun åbne Gaya Markedet når du har lukket for de andre vinduer.
+187	Metinstenens kompas kan ikke bruges her.
+188	[Gruppe] Kampen er begyndt.
+189	[Gruppe] Du har 1 time til at gennemføre fangehulet.
+190	[Gruppe] Du har fuldført din opgave udmærket!
+191	[Gruppe] Tid indtil teleportering: %d min. %d sek.
+192	[Gruppe] Du vil blive teleporteret fra fangehullet om 10 minutter.
+193	[Gruppe] Du er nu registreret til Meleys Grotte.
+194	[Gruppe] Snak venligst til den relevante NPC for at komme ind.
+195	[Gruppe] Du har givet op.
+196	[Gruppe] Du vil blive teleporteret til byen om 1 minut.
+197	Besøg %s for at få din belønning.
+198	Metinstenens kompas er forsvundet i det mystiske lys.
+199	[Gruppe] Ranglisten for grupper i Meleys Grotte er ved at blive udarbejdet.
+200	[Gruppe] Du kan ikke forlade fangehullet i øjeblikket.
+201	[Gruppe] Din tid i fangehullet er gået.
+202	[Gruppe] Du har forladt fangehullet.
+203	[Gruppe] Fangehullet vil lukke om %d min.
+204	Modtag: %s - %d
+205	Du kan ikke åbne en butik, mens du er forvandlet til sten.
+206	Du kan ikke bruge genstande, mens du er forvandlet til sten.
+207	Denne kommando kan kun bruges i Zodiac Tempel.
+208	Du har ikke nok emblemer.
+209	Metinstenens kompas er forsvundet.
+210	Du har endnu ikke gennemført alle missioner.
+211	Du har brug for flere Aventurin og Aureolin Skatte for at modtage din belønning.
+212	Du har genoplivet %s.
+213	Du er blevet genoplivet af %s.
+214	Du har ikke nok genstande til at genoplive nogen.
+215	Du er blevet genoplivet.
+216	Du kan ikke bruge det på denne placering.
+217	Du kan ikke bruge det i øjeblikket.
+218	%s er blevet genoplivet.
+219	Første level klaret. Vend tilbage til Munk Milbon.
+220	Du har vundet %s genstand.
+221	I muslingen ligger der et stykke af en sten.
+222	Alle gruppe medlemmerne er blevet forvandlet til sten. Missionen mislykkedes.
+223	Alle levels klaret. Du vil nu blive teleporteret til bonus level.
+224	Mission gennemført. Så snart gruppe lederen slår på knappen, vil du blive teleporteret direkte til level %d.
+225	Missionen var ikke succesfuld.
+226	Udryd! Hvis ingen er genoplivet indenfor et minut, vil dit fangehuls eventyr være slut.
+227	Tiden er gået.
+228	Dette tempels porte åbner en anden dag.
+229	Alle gruppe medlemmerne skal være placeret på det samme kort for at komme ind.
+230	Du er ikke gruppe lederen.
+231	Der er %d Zodiac Tempel(er) i området. Indtast den relevante kommando for at teleportere til en af dem (1-%d).
+232	En musling er forsvundet.
+233	Der er ingen Zodiac Tempel på denne kort.
+234	Ødelæg Metin-sten.
+235	Bonus level: Ødelæg Metin-sten.
+236	Ødelæg Metin-sten.
+237	Ødelæg Metin-sten.
+238	Besejr 5 Zodiac bosser.
+239	Bonus level: Du har 5 minutter til at handle med købmanden og lagre op med forsyninger.
+240	Ødelæg Metin-sten.
+241	Ødelæg Metin-sten.
+242	Ødelæg alle Metin-sten.
+243	I muslingen ligger der en hvid perle.
+244	Ødelæg alle Metin-sten og besejr Zodiac bossen.
+245	Ødelæg alle Metin-sten.
+246	Besejr alle monstre.
+247	Besejr alle monstre.
+248	Besejr monstre.
+249	Besejr monstre.
+250	Besejr alle monstre.
+251	Du har lige missede bonus level.
+252	Besejr alle Zodiac bosserne.
+253	I muslingen ligger der en blå perle.
+254	Besejr Zodiac bossen.
+255	Besejr Zodiac bossen.
+256	Besejr Zodiac bossen uden at dø.
+257	Besejr alle monstre uden at dø.
+258	Tiden er gået. Bedre held næste gang.
+259	Besejr Zodiac bossen.
+260	Besejr alle fjender!
+261	Bonus level: Ødelæg en Metin-sten.
+262	Ødelæg en Metin-sten. Hvis du er succesfuld, vil du modtage en bonus belønning.
+263	%d minutter tilbage til at tilmelde dig til PvP turneringen!
+264	I muslingen ligger der en blodrød perle.
+265	Du kan ikke komme ind i PvP turneringens kamp arena.
+266	Du kan ikke transformere dig under PvP turneringen.
+267	%d mere indtil kampen begynder!
+268	Kampen er begyndt.
+269	Vinder: %s / Taber: %s
+270	%s har forladt arenaen. %s vinder.
+271	Tilmeldingen til PvP turneringen er gennemført.
+272	PvP turneringen starter om %d min.
+273	Finale
+274	Denne bog er for svær til at forstå.
+275	Semifinale
+276	Runde %u
+277	Ingen vinder
+278	PvP turneringen er slut.
+279	%s er turneringens vinder!
+280	Deltagere: %s
+281	Resterende deltagere: %u
+282	Nuværende deltagere: %u
+283	Du har tilmeldt dig til PvP turneringen.
+284	Denne bog hjælper dig ikke.
+285	Du har ikke tilmeldt dig til PvP turneringen.
+286	Denne kommando kan kun bruges på PvP turneringens kort.
+287	Yut Nori er begyndt!
+288	Indsaml Birkegrene, skab et Yut Nori Bræt ud af dem og spil det spændende minispil.
+289	Fantastiske præmier venter!
+290	Yut Nori er færdigt.
+291	Gå til Yut Nori Bordet for at indsamle din belønning.
+293	[Sjæl System] Brug %s for at modtage effekten.
+294	[Sjæl System] %s er allerede på det højeste level.
+295	Du skal være mindst level 30 for at læse denne bog.
+296	[Sjæl System] Sjælen er aktiv.
+297	
+298	[Monster Bash Event] Kort %s rapporterer observationer af %s.
+299	Egnen Yayang
+300	Egnen Bokjung
+301	Egnen Bakra
+302	Hwang Tempel
+303	Kuahlo Dong (Edderkoppens Grotte)
+304	Edderkoppe Grotten 2
+305	Du skal være mindst level 50 for at forstå denne bog.
+306	Gautama Klippen
+307	Nefrit Bugten
+308	Tordenbjergene
+309	Fortryllede Skov
+310	Forbandelsens Grotte
+311	Forbandelsens Grotte 2
+312	Du kan ikke komme ind mens du er monteret.
+313	Dette kan ikke bruges på udstyrede genstande.
+314	Rød Skov
+315	Slangeområde
+316	Du kan ikke lære yderligere kombos.
+317	Du har stadig brug for %d %s(r).
+318	Eventet er afsluttet. Du kan ikke bruge denne genstand mere.
+319	Det højeste level er allerede blevet opnået.
+320	Succes! %s effekt er blevet øget til level %d.
+321	Mislykkedes! Forsøget på at opgradere %s effekt til level %d mislykkedes.
+322	Succes! %s effekt er nu aktiv.
+323	Mislykkedes! Forsøget på at ændre %s effekt mislykkedes.
+324	Succes! %s effekt er nu aktiv.
+325	Mislykkedes! %s effekt blev ikke aktiveret.
+326	Blomster Kraft Eventet er startet.
+327	%s har erobret flaget fra %s!
+328	Du forstår allerede sproget!
+329	Blomster Kraft Eventet er afsluttet.
+330	Du skal vente i et stykke tid før du åbner din postkasse igen.
+331	Luk venligst alle andre vinduer for at åbne din postkasse.
+332	Din postkasse er fyldt.
+333	Tøm venligst din postkasse for at være i stand til at modtage nye beskeder.
+334	Du kan ikke bruge det i øjeblikket.
+335	[Orden] Du kan ikke bruge ordens færdighederne i feltet ordens krige.
+336	[Orden] Det kan kun bruges i ordens krigene.
+337	Du har modtaget %d Won.
+338	[Orden] Indbetalt: %d Yang
+339	Du kan ikke øge denne færdighed yderligere.
+340	[Orden] Købet blev annulleret da du allerede ejer ordens området.
+341	[Orden] Købet blev annulleret da din orden allerede ejer ordens området.
+342	[Fang Kongen] Din score er ikke god nok til en præmie.
+343	[Fang Kongen] Spil et spil Fang Kongen nu!
+344	[Okey Event] Besejr monstre, indsaml kort og spil et spil okey.
+345	[Okey Event] Fantastiske præmier venter!
+346	[Fang Kongen] Fang Kongen er afsluttet.
+349	[Fang Kongen] %s optjente %d point i Fang Kongen.
+350	Du skal stige i level for at kunne læse denne bog.
+351	Du har allerede brugt Forskerens Eliksir.
+352	'Skibs Forsvar' fangehullet er klar. Fiskeren vil lade dig om bord nu.
+353	Vi er under angreb fra hav monstrene! Gør dig klar til kamp!
+354	De angriber igen! Gør dine våben klar!
+355	Land i sigte! Du har beskyttet masten med succes og nået det nye kontinent, efter en lang og udmattet rejse. Fortsæt til portalen.
+356	Din mast er blevet smadret. Du kæmpede tappert, men slaget er tabt.
+357	Du skal forlade skibet om %d sek.
+358	Du skal forlade skibet om %d min.
+359	Søslaget starter om %d sek.
+360	Denne bog er for svær til at øve sig.
+361	Skynd dig! Du har %d minutter til at rejse igennem portalen for at komme til fastlandet.
+362	Du skal forlade skibet nu, da du ikke har startet søslaget.
+363	Hvis du ikke starter søslaget indenfor 1 minut, bliver du nød til at forlade skibet.
+364	%ss resterende HP: %d%%
+365	SOS! Masten er blevet smadret og din skib synker. Du vil nu blive teleporteret til Kap Drageild.
+366	Bølge %d: I %d sek. skal du beskytte %s med alt dit styrke.
+367	Bølge %d: Mens du beskytter %s, skal du besejre %s.
+368	Du har beskyttet masten med succes. Fortsæt! Gør dig klar til den næste bølge.
+369	Den næste bølge starter om %d sek.
+370	%s
+371	Med denne bog kan du ikke fortsætte din træning.
+372	Du kan kun trække dig tilbage fra slaget om %d sek.
+373	Du kan ikke udføre denne handling i øjeblikket.
+374	Du skal vente i %d sek. efter du åbner Postkassen før du kan skifte kanaler eller teleportere.
+375	Skatten er sat til %d%%.
+376	Du skal være level 50 for at få ride-træning.
+377	Du er flygtet fra den ond-ånde-forbandelse vha. eksorcisme-dokumentet.
+378	Du kan ikke læse yderligere ride-bøger.
+379	Du har læst Hesteridningsmanualen og har modtaget et ride-points.
+380	Du kan øge din ridefærdigheds-lvl, idet du investerer de nye points.
+381	Ordenen %s`s flag er blevet stjålet af spiller %s.
+382	Du har ikke forstået ride-vejledningen.
+383	Dine forstand er styrket. Du kan nu koncentere dig.
+384	Din rang er steget med %d.
+385	Din aktuelle frisure kan du hverken farvelægge eller blege.
+386	Du bliver nødtil at opnå level %d for at farvelægge dit hår.
+387	Denne genstand kan kun åbnes af det andet køn.
+388	Du kan ikke benytte det fra din aktuelle position.
+389	Du er klar til at blive teleportret, derfor kan du ikke bruge omegns dokument.
+390	Du bliver teleporteret tilbage til dit forrige sted.
+391	%s%s kan ikke benyttes i en grotte.
+392	[Quest] Du har allerede modtaget din belønning.
+393	den
+394	det
+395	Der er ingen stenstykker tilstede der kan renses.
+396	Du kan ikke ændre forbedringen af denne genstand.
+397	Du har ingen forbedringer, der kan ændres.
+398	Det kan du først gøre %d minutter efter en forbedring. (%d minutter tilbage)
+399	Du har ændret forbedringen.
+400	Forbedringen blev tilføjet.
+401	Forbedringen blev ikke tilføjet.
+402	Du skal bruge en velsignelseskugle for at tilføje en yderligere bonus til denne genstand.
+403	Dette kan du ikke benytte i duel-arenaen.
+404	Denne genstand kan ikke forbedres længere. Det maksimale antal af bonusser er nået.
+405	Du kan kun bruge velsignelseskuglen på en genstand der allerede har 4 bonusser.
+406	Indfatning blev tilføjet.
+407	Indfatning blev ikke tilføjet.
+408	I dette tilbehør kan der ikke tilføjes yderligere indfatninger.
+409	Denne genstand kan ikke få indfatninger.
+410	Udrustning lykket.
+411	Udrustning mislykket.
+412	Du bliver nødt til at bruge en diamant først, for at tilføje en indfatning til tilbehøret.
+413	I dette tilbehør findes ingen indfatning for udrustning med ædelsten.
+414	Du kan kun vise emotioner når du bærer en følelsesmaske.
+415	Du bliver nød til at tilføje en indfatning, hvis du vil bruge en diamant.
+416	Du kan ikke tilføje yderligere ædelsten.
+417	Disse genstande kan ikke bruges sammen.
+418	Du kan ikke skifte agn mens du fisker.
+419	Du skifter den aktuelle agn med %s.
+420	Sætter %s maddingen på krogen.
+421	Du mangler nogle ingredienser til denne eliksir.
+422	Du har ikke nok mineraler (%s).
+423	Du har ikke nok tomme flasker.
+424	Blandingen mislykkes.
+425	Det kan kun kvinder gøre.
+426	Du kan ikke tilføje yderligere sten af samme type.
+427	Du kan ikke tilføje denne sten på dette udstyr.
+428	Du kan ikke tilføje denne sten i dit våben.
+429	Du har tilføjet stenen.
+430	Du har ikke tilføjet stenen.
+431	Der er ingen plads.
+432	Denne funktion er ikke mulig lige nu.
+433	Du kan ikke bruge omegns dokument når du tager del i nations krigen.
+434	Efter du har åbnet dit lager, kan du ikke bruge omegns dokument i %d sekunder.
+435	Du kan ikke bruge omegns dokument mens du har andre vinduer åbne.
+436	Denne person findes ikke.
+437	Du kan ikke bruge dokumenter i %d sek. efter en handel.
+438	Efter du åbner dit lager kan du ikke bruge omegns dokument i %d sekunder.
+439	Du kan ikke bruge omegns dokument, da afstanden er for lille.
+440	Efter en handel kan du ikke bruge omegns dokument i %d sekunder.
+441	Du kan ikke åbne lageret, mens du har andre vinduer åbne.
+442	Du kan ikke smide denne genstand væk.
+443	Den tabte genstand vil blive fjernet om 5 minutter.
+444	%s modtaget
+445	Du bærer rundt på for mange genstande.
+446	%s modtager %s.
+447	Snart vil alle blive teleporteret til byen.
+448	Du er for tæt på.
+449	Genstandshandel: %s, %s
+450	I den tid du er forvandlet kan du ikke ændre genstande der er i brug.
+451	Du skal stå stille for at skifte genstande. som er i brug.
+452	Du kan ikke fodre en levende hest med urter. De bliver brugt til at genoplive døde heste.
+453	Du kan ikke fodre en død hest.
+454	Du har fodret hesten med urter.
+455	Du har fodret hesten.
+456	Din level er for lav til at kunne bære denne frisure.
+457	Du har allerede den frisure.
+458	Du har allerede forvandlet dig.
+459	Du er for langt væk.
+460	Det er den forkerte forvandlingsgenstand.
+461	Du kan ikke forvandle dig til et monster der har et højere level end du selv har.
+462	Din level er for lavt til at bruge det.
+463	Du er ikke stærk nok til at kunne bruge det.
+464	Din intelligens er for lav til at kunne bruge det.
+465	Din smidighed er for lav til at kunne bruge det.
+466	Din vitalitet er for lav til at kunne udruste dig selv med denne genstand.
+467	Du kan ikke bruge denne genstand, da du ikke er gift.
+468	Du kan ikke udruste denne genstand to gange.
+469	Tid tilbage inden fjernelse af indfatningen fra %s: %d
+470	Denne aktion kan kun gennemføres af et andet køn.
+471	En perle indfattet i %s er forsvundet.
+472	[Orden] Dette navn er ikke tilladt.
+473	[Orden] Dette Ordensnavn findes allerede.
+474	[Orden] Du kan ikke oprette en Orden.
+475	%s har erklæret krig mod %s!
+476	[Orden] %s har afvist Ordens-krigserklæringen.
+477	Ordenskrigen mellem %s og %s starter om få minutter!
+478	Krigen mellem %s og %s er startet!
+479	Krigen mellem %s og %s er uafgjort.
+480	%s har vundet krigen mod %s.
+481	Medspilleren skal godkende denne aktion.
+482	[Orden] Ordens-krigen blev afbrudt.
+483	Krigen mellem %s og %s blev afbrudt.
+484	Luk
+485	Afbrudt. Du er kommet i kamp.
+486	En anden person har logget på din account. Din forbindelse med serveren blev afbrudt.
+487	Et mysterisk lys kommer fra træet.
+488	Der tilføjes %d spilletid til dit konto. (Betalings nr.: %d)
+489	Du kan deltage i Ordens-kampen som tilskuer.
+490	Når du vælger en karakter, vises der et ikon.
+491	Der findes ingen modstander.
+492	Kampen mod %s er begyndt!
+493	Hvis der ikke findes nogle modstander vil Ordens-krigen automatisk blive afsluttet.
+494	Da Ordens-krigen blev afsluttet tidligere tæller den som uafgjort.
+495	Pga. Kejserens velsignelse, bliver energien reflekteret.
+496	Efter %d sek. kan Kejserens velsignelse aktiveres.
+497	Ikke nok skatteindtægt: %d
+498	[TEST_ONLY]Skat: %d
+499	Fejl ved forvandlingen
+500	Du har lært alt om forvandling.
+501	Tilkald først din hest.
+502	Du har sendt din hest tilbage.
+503	%s har udfordret dig til kamp!
+504	Du skal først stige af hesten.
+505	Du kan ikke fodre din hest mens du ridder.
+506	Du har fodret din hest med %s%s.
+507	Du har brug for %s.
+508	%d sekunder indtil afslutningen.
+509	Efter %d sekunder bliver spillet lukket.
+510	%d sekunder indtil afslutning.
+511	Logout blev afbrudt.
+512	Tilbage til login-vindue. Vent venligst.
+513	Din forbindelse til serveren bliver afbrudt. Vent venligst.
+514	Du har udfordret %s.
+515	Du skifter karakter. Vent venligst.
+516	En ny start er ikke muligt på nuværende tidspunkt. Vent venligst %d sek.
+517	Du kan ikke genstarte endnu. Vent venligst %d sek.
+518	Du kan ikke genstarte endnu. Vent venligst %d sek.
+519	Du kan ikke genstarte i byen endnu. Vent venligst %d sek.
+520	Ventetiden er udløbet. Du vil blive genoplivet i byen.
+521	Du kan ikke ændre din status, mens du er forvandlet.
+522	Denne spiller er allerede i en duel.
+523	[Orden] Dette ejes ikke af Ordenen.
+524	[Orden] Du har ikke rettighederne til at redigere i Ordens-færdighedernes level.
+525	Udvalget er forkert.
+526	[Lager] Du har indtastet et forkert kodeord.
+527	[Lager] Lageret er allerede åbnet.
+528	[Lager] Du skal vente 10 Sekunder inden du kan åbne lageret igen.
+529	[Lager] Du er for langt væk til at åbne lageret.
+530	[Gruppe] Serveren kan ikke bearbejde gruppeopgaven.
+531	[Gruppe] Du kan ikke forlade en gruppe mens du er i en grotte.
+532	[Gruppe] Du har forladt gruppen.
+533	[Orden] Din Orden deltager allerede i en anden krig.
+534	[Orden] Du har ikke krav på en Ordens-krig.
+535	[Orden] Denne Orden findes ikke.
+536	Der er allerede en kandidat.
+537	[Orden] Den Orden er allerede i krig.
+538	[Orden] Ikke nok Yang for at deltage i en Ordens-krig.
+539	[Orden] Ordenen har ikke nok Yang for at deltage i en Ordens-krig.
+540	[Orden] Denne Orden har allerede planlagt endnu en Ordens-krig.
+541	[Orden] Denne Orden er allerede i krig.
+542	[Orden] Ordenslevel er for lav for at deltage i en Ordens-krig.
+543	[Orden] Mindst %d spiller skal deltage i en Ordens-krig.
+544	[Orden] Ordenen har ikke nok points for at deltage i en Ordens-krig.
+545	[Orden] Ordenen har ikke nok medlemmer til at deltage i en Ordens-krig.
+546	Din level skal være højere end 20 for at registrere et mobilnr.
+547	Du har ikke kvalifikationerne til at blive Kejser.
+549	Du kan ikke tage imod invitationen, da du allerede er i en anden gruppe.
+550	Kun Kejseren kan bruge det.
+551	Opladningstid er ca. %d sekunder
+552	Manglende skattepenge. Kapital: %u - der mangler: %u
+553	Kommando: warpto <character name>
+554	Du kan ikke teleportere til en spiller fra et andet Rige.
+555	Tilføjer spiller %d i denne channel. (Aktuel channel %d)
+556	Teleporter til spiller %s.
+557	Du kan ikke tilkalde spiller af andre Riger.
+558	[Orden] Mens du er i en Ordens-krig er der ingen jagt-fordel.
+559	Når Kejseren %s´ velsignelse gennemføres, gendannes HP og MP.
+560	Mine Kejser-informationer
+561	[%s Monark]: %s Yang i besiddelse %lld
+562	[%s Monark]: %s
+563	Kejser-informationer
+564	Kun en Kejser kan bruge det.
+565	Vælg et tal mellem 1 og 50.
+566	Skatten blev sat til %d %%.
+567	Dette monster kan ikke tilkaldes, check Mob-nr.
+568	Livspoints +%d
+569	Manapoints +%d
+570	Kejserens velsignelse er aktiv.
+571	Udholdenhed +%d
+572	Intelligens +%d
+573	Styrke +%d
+574	Smidighed +%d
+575	Angrebshastighed +%d
+576	Bevægelseshastighed %d
+577	Klargørings tid -%d
+578	Livsgendannelse +%d
+579	Mana-gendannelse +%d
+580	Giftangreb %d
+581	Er i forberedelse. Muligt at bruge efter %d.
+582	Stjerne +%d
+583	Hastighedsreducering +%d
+584	Kritisk angreb med en sandsynlighed på %d%%
+585	Gennemslående hit med en sandsynlighed på %d%%
+586	Spillerangrebskraft mod monstre +%d%%
+587	Hesteangrebsstyrke mod monstre +%d%%
+588	Angrebsforstærkning mod Wonggui +%d%%
+589	Angrebsforstærkning mod Milgyo +%d%%
+590	Angrebs-boost mod zombier + %d%%
+591	Angrebsforstærkning mod djævle +%d%%
+592	Herskeren Sa-Zu-Ha vil øge spilleren %s i denne omegn, i 3 minutter 10 %% af sin angrebsstyrke.
+593	Livspoint-absorpation på %d%% ved angreb.
+594	Manapoint-absorpation på %d%% ved angreb.
+595	Med en sandsynlighed på %d%% trækkes fjendens manapoints.
+596	Absorberer med en sandsynlighed på %d%% manapoints.
+597	%d%% sandsynligheden for at blokere pile-angreb.
+598	%d%% sandsynligheden for at blokere et pile-angreb.
+599	Enhåndsværds-forsvar %d%%
+600	Tohåndsværds-forsvar %d%%
+601	Tohåndsværds-forsvar %d%%
+602	Klokke-forsvar %d%%
+603	Herskeren Geum-Gang-Gwon vil øge spiller %s i denne omegn for 3 minutter 10 %% på hans rustning.
+604	Vifter-forsvar %d%%
+605	Distance-modstand %d%%
+606	Ild-modstand %d%%
+607	Elektricitets-modstand %d%%
+608	Magi-modstand %d%%
+609	Vind-modstand %d%%
+610	Reflektere direkte angrebet: %d%%
+611	Reflektere forbandelse: %d%%
+612	Gift-modstand %d%%
+613	Mana-point vil øges med %d%% hvis du vinder.
+614	Dette event er allerede i gang (Flag: %d)
+615	Erfaringen forøges med %d%% hvis du vinder over fjenden.
+616	Yang-byttet af monstre forøges med %d%% hvis du vinder over fjenden.
+617	Sandsynlighed for at genstande findes, forøges med %d%% hvis du vinder over fjenden.
+618	Øger eliksirens virkning med %d%%
+619	%d%% sandsynlighed for at fylde livspoint op hvis du vinder over fjenden
+620	Ingen besvimmelse %d%%
+621	Ingen sløvelse %d%%
+622	Ingen væltning %d%%
+623	Angrebsstyrke + %d
+624	Rustning + %d
+625	OX Quiz-Script kunne ikke startes.
+626	Magisk angreb + %d
+627	Magisk forsvar + %d
+628	Maksimal udholdenhed + %d
+629	Fordel mod kriger + %d%%
+630	Fordel mod ninja + %d%%
+631	Fordel mod sura + %d%%
+632	Fordel mod shamaner + %d%%
+633	Stærk mod monstre + %d%%
+634	Angreb + %d%%
+635	Forsvar + %d%%
+636	OX Quiz-Script blev startet.
+637	Erfaring %d%%
+638	Sandsynlighed for at finde en genstand %.1f
+639	Sandsynlighed for at finde Yang %.1f
+640	Maksimalt liv +%d%%
+641	Maksimalt liv +%d%%
+642	Færdighedsskade %d%%
+643	Slå-skade %d%%
+644	Modstand mod færdighedsskade %d%%
+645	Modstand mod hits %d%%
+646	%d%% modstand mod kriger-angreb
+647	Velkommen til Metin2.
+648	%d%% modstand mod ninja-angreb
+649	%d%% modstand mod sura-angreb
+650	%d%% modstand mod shamaner-angreb
+651	(Udløber: %d y- %d m - %d d)
+652	Din chat blev spærret.
+653	Der kræves et højere level for at kunne råbe.
+654	Du skal være level %d for at kunne råbe.
+655	Du er ikke medlem i en gruppe.
+656	Du er ikke blevet medlem af denne Orden.
+657	Spilleren har afvist din anmodning om at tilføje ham til din venneliste.
+658	OX Event er startet.
+659	[Venner] Du kan ikke tilføje en GM til din venneliste.
+660	%s er ikke online.
+661	Efter at have handlet, kan du først åbne en butik om %d sek.
+662	Du kan først handle om %d sekunder.
+663	Du har mere end 2 Milliarder Yang. Du kan ikke handle.
+664	Du kan ikke åbne en privat butik mens et andet vindue er åbent.
+665	Du kan ikke handle, da dette ville overskride den maksimale mængde på 2 billioner Yang.
+666	[Lager] Det er ikke muligt at bevæge sig imens.
+667	[Lager] Denne genstand kan ikke lagres.
+668	[Gruppe] Spilleren der har sendt invitationen er ikke online længere.
+669	Ordens-kampen kan ikke startes nu, da serveren ikke er online.
+670	Med Uriel´s tilladelse er indgangen åben.
+671	[Gruppe] Kun gruppelederen kan redigere det.
+672	[Gruppe] Målet er ikke medlem af din gruppe.
+673	[Gruppe] Du kan ikke udelukke en spiller mens I er i grotten.
+674	[Gruppe] Du kan ikke udelukke en spiller mens I er i grotten.
+675	[Gruppe] Du blev udelukket af gruppen.
+676	[Gruppe] Du kan ikke forlade en gruppe mens du er i en grotte.
+677	[Gruppe] Du kan ikke udelukke gruppemedlemmerne.
+678	[Orden] Du har først lige opløst en Orden - derfor skal du vente %d dage inden du kan oprette en ny Orden.
+679	[Orden] Du er først lige gået ud af en Orden - derfor skal du vente %d dage inden du kan oprette en ny Orden.
+680	Ordensnavnet er ikke tilladt.
+681	Vi beder om deltagelsen fra mange spillere
+682	[Orden] [%s] blev oprettet.
+683	[Orden] Oprettelsen mislykket.
+684	[Gruppe] Gruppefærdigheder kan kun bruges af gruppelederen.
+685	[Gruppe] Målet blev ikke fundet.
+686	[Orden] Yang-bidraget er ikke korrekt.
+687	[Orden] Du har ikke nok Yang.
+688	[Orden] Den søgte person kunne ikke findes.
+689	[Orden] Denne person er ikke medlem af samme Orden.
+690	[Orden] Du har ingen rettigheder til at udelukke Ordensmedlemmer.
+691	[Orden] Ordensmedlem %s blev udelukket af Ordenen.
+692	OX Eventet blev ikke afsluttet, der opstod en fejl. (flag: %d)
+693	[Orden] Du har udelukket et Ordensmedlem.
+694	[Orden] Du har ikke rettighederne til at redigere dit egen rangnavn.
+695	[Orden] Ordenslederen`s position kan ikke ændres.
+696	[Orden] Rangnavn er ikke tilladt.
+697	[Orden] Du har ikke rettighederne til at redigere din position.
+698	[Orden] Ordenslederen`s position kan ikke ændres.
+699	[Orden] %u erfaringspoint indsat.
+700	[Orden] Erfaringsindsats mislykket.
+701	[Orden] Ikke nok Yang i ordens skatkammeret.
+702	[Orden] Drage-ånden kunne ikke gendannes.
+703	Snart vil vores OX Event starte på ny.
+704	[Orden] Du har ikke ret til at skrive meddelelser.
+705	[Orden] Du har ikke tilladelse til at redigere positionen.
+706	[Orden] Ordenslederen`s position kan ikke ændres.
+707	[Orden] Du kan ikke skifte Ordensmesters position.
+708	[Orden] Du har ikke rettighederne til at vælge Ordenslederen.
+709	[Orden] Du kan ikke vælge yderligere Ordensledere.
+710	Du kan ikke give denne genstand bort.
+711	Illegal software blev fundet! Spillet lukkes ned.
+712	Du har mere end 2 Mrd. Yang. Du kan ikke handle.
+713	Ikke nok Yang.
+714	Gave-Event er begrænset på denne egn.
+715	Genstands-Roulette er startet.
+716	Genstands-Yang-Roulette er startet.
+717	Han/hun er online. Vær venlig at bruge hviske-funktionen.
+718	Dit mobilnr. er ikke registreret.
+719	Du skal mindst være på level 20 for at sende SMS.
+720	Du har brug for 2000 DT for at sende en SMS.
+721	Din SMS blev sendt.
+722	%s af Ordenen %s er steget med %d%%!
+723	%s af Ordenen %s er normale igen.
+724	%s: %s er steget med %d%%!
+725	OX Eventet bliver afsluttet.
+726	%s `s %s er normalt igen.
+727	Dine udvindings-points er steget til det maksimale (%d).
+728	Dine udvindings-points er steget til det maksimale.
+729	Du kan forbedre din Spidshakke hos brændehuggeren Deokbae.
+730	Dine udvindings-points er steget! (%d/%d)
+731	Uden spidshakke kan du ikke udvinde noget.
+732	Der er intet der kan udvindes.
+733	Udvindelsen var succesfuld.
+734	Udvindelsen er mislykket.
+735	[Venner] Du har tilføjet %s som ven.
+736	Spilleren vil snart blive teleporteret til byen.
+737	[Venner] Du har fjernet %s fra listen.
+738	En kritisk server-fejl opstod! Serveren bliver automatisk genstartet.
+739	Om 10 sekunder bliver forbindelsen automatisk afbrudt.
+740	Du kan logge på igen om 5 minutter.
+741	(%s) blev oprettet. [temporær]
+742	Denne Orden er i krig.
+743	%s: Denne Orden findes ikke.
+744	En Orden med det navn eller nr. findes ikke.
+745	Denne bygning findes ikke.
+746	Denne bygningstype kan kun oprettes en gang.
+747	Luk først OX eventkortet. (Flag: %d)
+748	Først skal hovedbygningen oprettes.
+749	Bygning, pga. forkerte omkostninger mislykket.
+750	Din orden har ikke nok Yang til at opføre denne bygning.
+751	Du har ikke nok materialer.
+752	Du kan ikke oprette en bygning på denne egn.
+753	Denne karakter findes ikke.
+754	Duel blev ikke afbrudt.
+755	Duel blev afbrudt.
+756	Duel-start!
+757	Der opstod en fejl ved duel-starten.
+758	Der er ikke opstået nogen fejl.
+759	Der er ingen du kan duelere mod.
+760	Ingen statuspoints tilovers.
+761	Resterende status point er for lave.
+762	Du har indtastet en forkert værdi.
+763	Underkommando af kommandoen er forkert.
+764	Kontraktbrud mellem spiller %d og %d.
+765	Start Rouletten, med en indsats på %d Yang.
+766	Itemlog blev gemt i syslog.
+767	Succes-informationer af Rigene.
+768	Vælg kort-informationen af det hellige land %d Adgang %d %d %d
+769	Der opstod en fejl.
+770	%s killcount %d mobkillcount %d bosskillcount %d Antal helligt land %d
+771	Informationer: Rigsslag-stand.
+772	Din ansøgning blev sendt. vent venligst.
+773	Du kan ikke åbne et Lagerrum mens et andet vindue er åbent.
+774	[Lager] Kodeordet blev redigeret.
+775	[Lager] Du har indtastet et forkert kodeord.
+776	Din spilletid er forbi om %d minutter.
+777	Lovligt valgt.
+778	Er allerede valgt
+779	%s spiller er allerede med i valget.
+780	Du har erklæret krig mod denne Orden.
+781	OX event afsluttet. Ingen fejl opstod. (Flag: %d)
+782	Kan ikke stilles op til valg.
+783	%s har stadig %u Yang tilovers.
+784	%s har stadig %d Yang tilovers.
+785	Du har ikke nok Yang.
+786	%s er slettet som Kejserkandidat.
+787	%s er ikke Kejserkandidat.
+788	%s er nomineret som Kejser.
+789	%s kan ikke blive nomineret som Kejser.
+790	Kejseren %s bliver fjernet.
+791	Kejseren %s kan ikke blive fjernet.
+792	OX Event accepterer ikke yderligere deltagere.
+793	Shinsoo Riget
+794	Chunjo Riget
+795	Jinno Riget
+796	Dine fiskeri-points er steget! (%d/%d)
+797	Du kan ikke forbedre din fiskestang yderligere.
+798	Du kan forbedre din fiskestang ved fiskeren.
+799	Fisken har spist din agn.
+800	Du har fanget en fisk! (%s)
+801	Den fangede fisk har en længde på %.2fcm
+802	Fiskeri-stævne 'Den bedste fisker'
+803	OX de resterende eventdeltagere bliver noteret.
+804	Fiskeri-stævne 'Karpe'
+805	%s: %d
+806	Du har fanget %d %d.
+807	Fisken er forsvundet i vandets dybde.
+808	I fisken er en musling.
+809	I fisken er en orm.
+810	Du rister %s over ilden.
+811	Du kan ikke handle da du bære mere end 2 milliarder Yang.
+812	Du kan ikke give din butik et ugyldigt navn.
+813	Du kan ikke sælge en Item-Shop genstand i private butikker.
+814	OX De resterende eventdeltagere bliver ikke noteret.
+815	Afvindelse afsluttet.
+817	Udrust dig med en fiskestang.
+818	Sæt først agnen på fiskekrogen.
+819	Du kan ikke fiske uden fiskestang!
+820	[Gruppe] Du kan ikke ansøge om noget, da gruppelederen ikke er online.
+821	[Gruppe] Du kan ikke være i samme gruppe med medlemmer fra et andet Rige.
+822	[Gruppe] Du kan ikke invitere andre folk til gruppen mens du er i en grotte.
+823	[Gruppe] Som tilskuer kan du ikke invitere andre folk.
+824	[Gruppe] Kun spillere med en levelforskel fra -30 til +30 kan inviteres.
+825	Nummer af resterende medlemmer: %d
+826	[Gruppe] Du kan ikke invitere denne spiller, da hans level er for lav.
+827	[Gruppe] Du kan ikke invitere den spiller, da hans level er for høj.
+828	[Gruppe] Du kan ikke invitere yderligere spillere i din gruppe.
+829	Du ønsker at bliver medlem i %s gruppe.
+830	Denne spiller er ikke medlem af gruppen.
+831	[Gruppe] Du kan ikke blive medlem i en gruppe der allerede er fuld.
+832	[Gruppe] Du har ikke rettighederne til at lave en invitation.
+833	[Gruppe] %s afviser invitationen.
+834	[Gruppe] %s er allerede medlem af en gruppe.
+835	[Gruppe] Du kan ikke acceptere invitationer mens du er i en grotte.
+836	OX Event bliver afsluttet.
+837	[Gruppe] Du har ikke mulighed for at modtage invitationen.
+838	[Gruppe] %s afviste din invitation.
+839	[Gruppe] %s er blevet medlem af gruppen.
+840	[Gruppe] %s er blevet medlem af gruppen.
+841	Nu kan du ikke benytte en privat butik
+842	Denne spiller handler allerede med en anden.
+843	Metin2 bekræftigelses-Nr.: %s
+844	Dit bekræftigelses-Nr. er forkert. Prøv venligst igen.
+845	Dit mobilnr. er registreret.
+846	Du kan ikke teleportere dig til denne spiller.
+847	OX Prisen blev uddelt. ID: %d Størrelse: %d
+848	Denne spiller er ikke online.
+849	Denne spiller er på kanal %d. (Du er på kanal %d.)
+850	Efter åbning af lageret skal du vente %d sekunder for at kunne gå andre steder.
+851	Efter handelstransaktionen kan du i nogen tid ikke gå nogen steder.
+852	Da du lige har handlet kan, du ikke gå til et andet sted før om %d sekunder.
+853	Duel afsluttet, da din fjende er forsvundet.
+854	Der er ingen begrænsning for eliksirere.
+855	Du kan bruge op til %d eliksirere.
+856	Kampen begynder om 10 sekunder.
+857	Duellen er startet
+858	TRUE
+859	Din duel bliver afsluttet, da der er nogle problemer med duel-arenaen.
+860	Din duel bliver pga. tidsoverskridelse afsluttet.
+861	Om 10 sekunder bliver du teleporteret til byen.
+862	Din duel bliver afsluttet, da der er nogle problemer med duel-arenaen.
+863	Din duel-modstander har et problem. Duellen bliver afsluttet.
+864	Din duel bliver afsluttet, da der opstod et problem med modstanderen.
+865	%s har vundet denne duel.
+866	%s har vundet.
+867	Om 10 sekunder bliver du teleporteret til byen.
+868	Næste runde starter om 10 sekunder.
+869	FALSE
+870	Forbindelsen til din modstander blev afbrudt. Duellen bliver afsluttet.
+876	Du kan ikke handle i butikken mens et andet vindue er åbent.
+877	Afstanden til butikken er for stor til at købe noget.
+878	Afstanden til butikken er for stor til at sælge noget.
+879	Du kan ikke handle da du bære mere end 2 milliarder Yang.
+880	Samlet quiz antal: %d
+881	Salget beskattes med %d%% .
+882	Du kan ikke ride på hest, mens du er forvandlet.
+883	Du kan ikke ride når du bærer bryllupstøj.
+884	Du har ingen hest.
+885	Din hest er død.
+886	Din hests udholdenhed er for lav.
+887	Tilkaldning af hesten mislykkedes.
+888	Hest
+889	Brylluppet er snart forbi.
+890	Bliver automatisk forladt.
+891	Krigen er allerede over.
+892	Resultatet vil komme om 10 sekunder.
+893	Som tilskuer kan du ikke handle.
+894	Hvis vinduet er åbent, kan du ikke handle med andre.
+895	Den anden person er optaget i øjeblikket, så du kan ikke handle lige nu.
+896	Personen har afbrudt handlen.
+897	Ikke nok Yang eller ledig plads i dit inventar.
+898	Din handelspartner har ikke nok Yang eller ingen ledig plads i inventar.
+899	Handelspartneren har ingen ledig plads i inventaret.
+900	Handlen med %s blev afsluttet.
+901	Du har pga. dragegudens velsignelse ikke tabt nogen erfaring.
+902	Nuværende score: Shinsoo %d, Chunjo %d, Jinno %d
+903	Det korrekte svar er:
+904	%s deadcount %d Empire %d killcount %d(Purpose %d) killmobcount %d, RegenFlag %d
+905	Djævelen fra den hellige egn: [ENTER][ENTER]
+906	, du har ikke ret til at være her. Medlemmerne af dit rige vil forlade dette hellige område om 10 sekunder.
+907	%s Riget blev besejret og bliver udelukket af Rigskampen.
+908	Monstre ved Rigsslagtningen.
+909	Når du besejre vagten på den hellige plads, er du den nye ejer af den hellige plads.
+910	Du har ikke mistet nogen rang point, da du er beskyttet af Drageguden.
+911	Yderligere stikvåben skade %d
+912	%s blokeret! (%d%%)
+913	%s udvige! (%d%%)
+914	Ja (O)
+915	%s[%d]s angrebsposition: %d %d
+916	Vær venlig og indtaste kommandoen i fuld længde.
+917	Dette kan du ikke, mens du ridder.
+918	Du kan ikke gøre det mens du ligger på jorden.
+919	I mine drømme? Hvorfor?
+920	Rejs dig op først.
+921	Denne kommando findes ikke.
+922	[Gruppe] Gruppen blev løst op.
+923	[Gruppe] Du kan ikke hidkalde målet.
+924	[Gruppe] Du kan ikke hidkalde gruppemedlemmer til din aktuel position.
+925	Nej (X)
+926	Din gruppe arbejder fint sammen, og gruppe medlemmer tæt på gruppe lederen vil modtage en erfarings bonus.
+927	Leder
+928	Medlem
+929	[Orden] Den tilbudte erfaring er større end den resterende.
+930	[Orden] Denne meddelelse kan ikke slettes.
+931	[Orden] Ikke nok drageånd. (%d, %d)
+932	[Orden] Du kan endnu ikke bruge Ordensfærdighederne.
+933	[Orden] %d-færdighed blev aktiveret (%d, %d) på %u.
+934	[Orden] Denne spiller er i kanal %d. (Du er på kanal %d).
+935	[Orden] Denne spiller er ikke online.
+936	Efter 5 sekunder fjernes alle deltagere der gav et forkert svar.
+937	[Orden] Ordens-færdighederne kan kun bruges i krige.
+938	[Orden] %u Drageånd blev gendannet.
+939	[Orden] Kun en Ordensleder kan hæve Yang.
+940	[Orden] Denne spiller afviste Ordens-invitationen.
+941	[Orden] Du har ingen rettigheder til at invitere spillere i Ordenen.
+942	[Orden] Spiller fra andre Riger kan ikke blive medlem af Ordenen.
+943	[Orden] Denne spiller kan blive inviteret igen efter %d dag(e).
+944	[Orden] Du kan først invitere folk til Ordenen om %d dage.
+945	[Orden] Denne person er allerede medlem af en anden Orden.
+946	[Orden] Ordenen har opnået det maksimale antal af medlemmer.
+947	Klar til næste spørgsmål?
+948	Du kan ikke træne denne færdighed.
+949	Denne færdighed kan du ikke træne på stormester-niveau.
+950	Du er allerede mester i denne færdighed. Du kan ikke træne den yderligere.
+951	Din færdighed er ikke god nok til stormester-træning.
+952	Oh, det virkede ikke! Damn..
+953	Træning mislykket. Prøv igen senere.
+954	Din krop er fuld af styrke.
+955	Uddannelsen synes at virke allerede...
+956	Du har afsluttet træningen med din bog succesfuld.
+957	Du kan ikke læse det pga. manglende erfaring.
+958	Spørgsmål.
+959	Denne færdighed kan ikke træneres yderligere med en bog.
+960	Denne færdighed er ikke høj nok, til at træne den med en bog.
+961	Jeg gør fremskridt, men jeg har stadig ikke forstået det hele.
+962	Disse instruktioner er vanskelige at forstå. Jeg er nødt til at fortsætte studierne.
+963	Jeg forstår dette kapitel. Men jeg er nødt til at arbejde hårdt.
+964	Du har afsluttet din træning med denne bog med succes.
+965	Teleportationen mislykkedes.
+966	Ingen hest tilstede. Spørg venligt stald-knægten.
+967	Brug en genstand til at tilkalde din hest.
+968	%s FP-forbrug: %d
+969	Er det rigtigt, så gå til O. Er det forkert, så gå til X.
+970	Jeg brænder inden i, men det får min krop til at slappe af.
+971	Langsomt, men stødt.. uden at stoppe!
+972	Ja, det føles godt. Min krop er fyldt med Chi.
+973	Jeg har læst det! Nu skal Chi´et fordele sig i kroppen.
+974	Træningen er afsluttet.
+975	Jeg er nået til den sidste side i bogen! Træningen er næsten afsluttet!
+976	Jeg har næsten nået det! Mangler kun en smule!
+977	Forstået! Jeg er næsten nået helt igennem!
+978	Kun et par sider tilbage og så har jeg læst alt.
+979	jeg føler mig frisk.
+980	Korrekt!
+981	Nu forstår jeg!
+982	Godt, jeg bliver nødtil fortsat, at være koncentreret.
+983	Jeg læser den samme sætning igen og igen.
+984	Jeg vil ikke fortsætte med at læse.
+985	Det er mere kompliceret og svært end jeg havde troet.
+986	Det er svært for mig at koncentrere sig. Jeg skulle tage en pause.
+987	Din chat er blevet midlertidigt blokeret for spam.
+988	Din chat-spærring blev fjernet.
+989	Fremstillings-vinduet er allerede åben.
+990	Du kan ikke fremstille noget, mens et andet handels-/lager-vindue er åben.
+991	Ingen yderligere forbedringer mulig.
+992	Fremstillings-vinduet er ikke åbnet.
+993	Du har ikke det rigtige materiale.
+994	[Orden] Prøv igen senere.
+995	Du skal læse yderligere %d færdighedsbøger for at forbedre din færdighed.
+996	[Orden] Prøv igen senere.
+997	Denne funktion kan kun bruges på Slottet.
+998	TEST: Guldbarren er betalt tilbage til dit riges skattekammer.
+999	TEST: I Rigets pengeskab ligger der: %d
+1000	TEST: Du kan ikke tilbagebetalt guldbarren til dit riges skattekammer.
+1001	[Orden] Ordnen har opnået %d points.
+1002	Denne genstand kan ikke blive forbedret.
+1003	Gratis våben-forbedring kan kun anvendes på våben optil level 20.
+1004	Du kan ikke bruge denne genstand, da forudsætningerne ikke opfyldes.
+1005	Du kan ikke bruge denne genstand, da du ikke har det krævede køn.
+1006	Anvend: transfer <name>
+1007	Denne funktion kan kun anvendes af Kejseren.
+1008	Du kan ikke rekrutere spillere fra det andet Rige.
+1009	Spilleren %s er pt. på kanal %d. (Din kanal: %d)
+1010	Du har rekruteret %s.
+1011	Der findes ingen spiller med det navn.
+1012	Du kan ikke rekrutere dig selv.
+1013	Din level er for lav til at bruge denne genstand.
+1014	Du kan ikke opgrader noget mens et andet vindue er åbent.
+1015	Kejseren af %s er nu af %s.
+1016	I %s er der en krig om at sætte ild i fyrtårnene.
+1017	Forsvaret i %s er lykkes.
+1018	Fra nu af, kan %s få en belønning for ødelæggelsen af fyrtårnet. Tid: 30 minutter.
+1020	Fyrtårnet blev tændt i %s for at advare om et slag.
+1021	%s har ødelagt fyrtårnet.
+1022	%s har tabt krigen, da de ikke kunne forsvare slottet.
+1023	%s har ødelagt alle fyrtårne.
+1024	Ikke nok Yang til en forbedring.
+1025	Du kan kun åbne butikken når du tager din rustningen af.
+1026	Du kan ikke bruge det, mens du rider på en hest.
+1027	For at gøre dette skal du bruge: %s
+1028	%d time %d minutter %d sekunder tilbage af din chat blokering
+1029	%d timer %d sekunder tilbage af din chat blokering
+1030	%d minutter %d sekunder tilbage af din chat blokering
+1031	Yang Regn Smednings Sats
+1032	Der findes ingen sten som kunne fjernes.
+1033	Kan endnu ikke benyttes.
+1034	Tidslimitationen på testserveren er overskredet.
+1035	Du har ikke de rigtige materialer til at fremstille dette.
+1036	Rangen kan ikke øges yderligere.
+1037	Alle riger
+1038	Genstands Smednings Sats
+1039	Yang Smednings Sats
+1040	Procenttal for erfaringspoints
+1041	Du kan ikke læse en bog mens at du er transformeret.
+1042	%d sekunder tilbage af din chat blokering
+1043	Du kan ikke lave emotioner når du sidder på hesten.
+1044	Du kan ikke lave emotions med en spiller der sidder på en hest.
+1045	Krigsgudens dokument virker ikke på genstande der er +4 eller over.
+1046	%s kastede terningen. Der blev slået %d (%d-%d).
+1047	Du kastede terningen. Du fik %d (%d-%d).
+1048	[Orden] Fjendens ordensleder er offline.
+1049	Du kan ikke stige på hesten når du ligger på jorden.
+1050	[Orden] Denne orden deltager for tiden i en kamp.
+1051	Du kan ikke fiske her.
+1052	[Orden] Din orden har allerede opnået det højeste level.
+1053	Du kan ikke transformere mens du ridder.
+1054	Du rider allerede. Stig af først.
+1055	Personen over for dig kan ikke tilføjes til din venneliste.
+1056	Du kan ikke forbedre med dette dokument.
+1057	Den faldne genstand vil forsvinde efter %d minutter.
+1058	[Orden] Personen over for dig kan ikke modtage invitationen.
+1059	Du kan ikke sælge udstyr du har på.
+1060	Udstyr man har på kan ikke sælges i en privat butik.
+1061	[Lagerrum] Du kan ikke flytte denne genstand til dit lagerrum.
+1062	Du kan ikke smide guldet væk endnu.
+1063	Dit inventory er fyldt. Du kan ikke samle genstanden op.
+1064	Levelet på din genstand er for høj.
+1065	Kan kun bruges på våben og pansring.
+1066	Du kan ikke genopfylde denne drage sten.
+1067	Du kan kun engang få belønningen for opgaven i dæmone-tårnet.
+1068	Drage stenen er blevet fjernet.
+1069	Du kan ikke flytte genstanden i forfinelses vinduet.
+1071	Der er i øjeblikket ingen Metin sten i dette kort.
+1072	Drage stenens resterende varighed er blevet udvundet.
+1073	Resterende varigheds udvinding mislykkedes.
+1074	Fjernelse af drage stenen mislykkedes. Men du har modtaget følgende: %s
+1075	Fjernelse af drage stenen mislykkedes.
+1076	Denne genstand er ikke påkrævet at forbedre i dette klarheds level.
+1077	Denne genstand kan ikke forbedres på denne måde.
+1078	Forbedring af klarheds level var succesfuldt.
+1079	Forfinelsen af en klasse op mislykkedes.
+1080	Denne genstand er ikke påkrævet forfinelse.
+1081	Denne drage sten kan ikke anvendes til forfinelsen.
+1082	Forfinelsen af én klasse op var vellykket.
+1083	Forbedring af klarheds level mislykkedes.
+1084	Du ejer ikke de nødvendige materialer til at styrke drage stenen.
+1085	Denne drage sten kan ikke bruges til styrkelse.
+1086	Du kan ikke sammenføre 2 identiske forbedrings-dokumenter.
+1087	Styrkelse lykkedes.
+1088	Styrkelse mislykkedes.
+1089	Drage stenen er ikke aktiveret.
+1090	Du bærer allerede rundt på en drage sten af denne type.
+1091	Denne drage sten kan ikke fjernes.
+1092	Du har allerede udstyrret denne slags drage sten.
+1093	%d sekunder er blevet tilføjet.
+1094	Før du kan åbne Cor Draconis, skal du have gennemført drage stens missionen og aktiveret drage stens alkymisten.
+1095	Du kan kun kassere bæltet når du ikke har flere genstande i dine rum.
+1096	Du kan kombinere Velsignelses dokumentet med Magisk jernmalm.
+1097	Du kan ikke putte denne genstand i dit bælte rum.
+1098	Du kan ikke ride i denne grotte.
+1099	Du kan maksimalt bruge 200 ingredienser på en gang.
+1100	Du kan ikke sælge sjælebundende genstande i en privat shop.
+1101	Du kan ikke ændre attributter på en sjælebundet genstand.
+1102	Du kan ikke bruge en sjælebunden genstand.
+1103	Du kan ikke droppe en sjælebunden genstand.
+1104	Du kan ikke give en sjælebunden genstand væk.
+1105	Du kan ikke sjæle binde genstande på denne server.
+1106	Du kan ikke binde denne genstand til din sjæl.
+1107	Du har investeret %d Yang.
+1108	Der er ingen sten der kan fjernes.
+1109	Denne genstand er alle sjælebundet.
+1110	Sjælebindingen på denne genstand er allerede ved at blive fjernet.
+1111	Denne genstand er ikke sjælebundet.
+1112	Du kan ikke forbedre en sjælebunden genstand.
+1113	Du kan ikke sælge en sjælebunden genstand.
+1114	Du kan ikke åbne denne kiste da du ikke har nok plads i dit inventar.
+1115	Du kan ikke åbne en privat butik, mens du handler med andre.
+1116	Du kan ikke bruge denne genstand mens du handler.
+1117	Du kan ikke bruge omegns dokument mens skulderbælte vinduet er åbent.
+1118	Du kan ikke handle mens et andet vindue er åbent.
+1119	Du kan ikke gemme denne position.
+1120	Du kan kun bruge skulderbånd såvel som våben og rustnings genstande.
+1121	Træk genstanden ind i vinduet.
+1122	Dette er allerede blevet tilpasset.
+1123	Du kan ikke tilføje yderligere bonusser.
+1124	Du kan kun bruge skulderbånd.
+1125	Disse bånd kan ikke kombineres.
+1126	Fejlet!
+1127	Succes!
+1128	Du har ikke penge nok til kombinationen.
+1129	Du kan ikke bruge denne genstand mens vinduerne til absorbering og kombinering er åbne.
+1130	Du har ikke nok ledig plads i dit inventar.
+1131	%s var succesfuld! En %d%% absorberings sats på deres nye %s. Tillykke!
+1132	Du kan ikke benytte en sjælebunden genstand.
+1133	Du kan ikke sælge genstande du bruger i øjeblikket i en privat shop.
+1134	Du kan ikke bruge dette bundt når du rider.
+1135	Tiden er gået. Første runde er overstået.
+1136	Tiden er gået. Anden runde er overstået.
+1137	Tid tilbage af første runde: %d minutter.
+1138	Tid tilbage af anden runde: %d minutter.
+1139	Det beskyttede område er nu slået fra.
+1140	Tid tilbage før det beskyttede område slås fra: %d minutter.
+1141	Du kan ikke teleportere dig fra et fremmed Rige til et sikkert sted.
+1142	Svaret vil komme om 20 sekunder.
+1143	Efter 15 sekunder fjernes alle deltagere der gav et forkert svar.
+1144	Dit level er for lavt til at tilkalde dit kæledyr.
+1145	Ingen genstand valgt til kombinationen.
+1146	Du har tilkaldt %s.
+1147	Du har afvist %s.
+1148	%s har nået level %d!
+1149	%s er på nuværende tidspunkt i dyb søvn.
+1150	%s er udklækket!
+1151	Dit kæledyr stopper sig begejstret med Protein Snack.
+1152	Du har ikke nok HP.
+1153	%s vågner og går i gang med et lækkert måltid.
+1154	%s er nu i en Transportkasse.
+1155	%s kommer frem fra Transportkassen.
+1156	%s har videreudviklet sig til %s! Fantastisk!
+1157	%s nægter at spise noget!
+1158	Dette event er afsluttet da ingen riger tiltrådte.
+1159	Du har med succes overført bonusserne.
+1160	Du har ikke nok Yang til at bytte bøger med mig.
+1161	Indtast venligst et andet navn.
+1162	Du har ikke nok MP.
+1163	Du kan ikke handle mens din partners Inkubator er åben.
+1164	Du kan ikke bruge Inkubatoren mens du handler, eller mens du har dit lagerrum eller en privat butik åben.
+1165	Du kan ikke åbne en privat butik mens du tilkalder dit kæledyr.
+1166	Du kan ikke handle mens du tilkalder dit kæledyr.
+1167	Du kan ikke handle mens din partner tilkalder deres kæledyr.
+1168	Dit kæledyr har indsamlet nok erfaring. Den kræver nu Genstand EXP til at nå til næste stadie af udviklingen.
+1169	Dit kæledyr er klar til at udvikle sig. Brug Kæledyrsbøger til at opnå dette.
+1170	Dit kæledyr har allerede opnået det højeste stadie inden for udviklingen.
+1171	Det indtastede navn er for kort.
+1172	%d sekunder efter udførelsen, når du dit mål.
+1173	Du har ikke nok Yang.
+1174	Du har trænet dit kæledyr godt! Den lærer hurtigt sine nye færdigheder!
+1175	Erfaring er øget til %d point.
+1176	Dit kæledyr har allerede lært denne færdighed, og nægter at øve den igen.
+1177	%s færdigheder aktiveret. HP gendannet med %d.
+1178	Opnå Tapper kæledyrsbogen til dit kæledyrs helte træning.
+1179	Dit kæledyr skal være level %d for at træne og fremme det til næste stadue af udviklingen.
+1180	Dit kæledyr skal være %d dage gammel for at kunne træne og fremme det til næste stadie af udviklingen.
+1181	Dit kæledyr skal have 100% erfaring for at kunne træne og fremme det til næste stadie af udviklingen.
+1182	%s effekt aktiveret.
+1183	Din level er for lav til at bruge denne genstand.
+1184	%s effekt ikke aktiveret.
+1185	%s færdighed aktiveret. Du vil nu ikke modtage nogle skader.
+1186	%s færdighed aktiveret. Langsom, gift og blødning effekter blev fjernet.
+1187	Du modtager dine bonusser.
+1188	Vinduet er allerede åben.
+1189	Magisk gennemtrængning for %d%%.
+1190	%s gendanner fra udmattelse.
+1191	Du kan ikke bruge genstanden her.
+1192	Du kan ikke tilkalde dit kæledyr mens du handler.
+1193	Du kan ikke åbne en privat butik.
+1194	Månekager kan kun bruges alle 5 sekunder.
+1195	%s er utilstrækkelig. Du behøver %d for næste stadie af udviklingen.
+1196	Kæledyrets level kan ikke være højere end spillerens.
+1197	ung level
+1198	vilde level
+1199	tapper level
+1200	heroisk level
+1201	@*** Kaster for følgende genstand: %s ***
+1202	@*** ->%*s - Terning score: %4d ***
+1203	$*** Vinder af genstand %s is: %s ***
+1204	Ny absorberings sats: %d
+1205	Du kan ikke bruge denne genstand i en duel.
+1206	Maksimal absorberings sats nået.
+1207	Du har allerede lært denne færdighed.
+1208	Der er ingen genstande der matcher din søgning.
+1209	Der er samlet nok Græskar Lanterner.
+1210	Spørg Sam Græskar om du har optjent en belønning.
+1211	Halloween Eventet er begyndt!
+1212	Gå til Sam Græskar og tal med ham!
+1213	Halloween Eventet er slut. Glem ikke at hente dine belønninger!
+1214	Antal Græskar Lanterner afleveret: %d
+1215	Samlet antal Græskar Lanterner: %d
+1216	Du har vundet %d Yang.
+1217	Du kan ikke lave et lejrbål her.
+1218	Denne spiller handler allerede med en anden.
+1219	Du skal bære et våben først.
+1220	Du kan ikke bruge dette kostume til dette våben.
+1221	Hvis du vil skifte våben, så skal du fjerne dit våben-skin først.
+1224	Dit spil okey er startet!
+1225	Du kan ikke trække flere kort.
+1226	Du kan ikke afskaffe kort når du allerede har valgt nogen.
+1227	Du kan ikke trække flere kort når du allerede har valgt nogle.
+1228	Du kan ikke lave et lejrbål i vandet.
+1229	Dit inventar er fyldt.
+1230	Du kan kun modtage din præmie når du har gjort plads i dit inventar.
+1231	%s optjente %d point i et spil okey.
+1233	Okey Eventet er begyndt!
+1234	Okey Eventet er overstået!
+1235	[Okey Event] Hvis du når op til toppen af ranglisten, har du 7 dage til at indsamle din præmie.
+1236	Du kan ikke gøre dette mens du spiller okey.
+1237	Låst. Du burde søge efter nøglen.
+1238	Ritual Stenen virker kun på genstande over niveau 80.
+1239	Du kan ikke handle, fordi det maksimale antal på %d Won blev overskredet.
+1240	Du har ikke nok Yang.
+1241	Du har ikke nok Won.
+1242	Du kan ikke bytte, da det vil overskride det maksimale antal Won.
+1243	Du kan ikke bytte, da det vil overskride det maksimale antal Yang.
+1244	Du kan ikke åbne en privat butik, da det vil overskride det maksimale antal på %d Won.
+1245	Du kan ikke udvide dit inventar mens du handler.
+1246	Okey Eventet er begyndt!
+1247	Okey Eventet er overstået!
+1248	Denne genstand kan ikke åbnes med en nøgle.
+1249	Monstre er dukket op i Seungryong Dalen, Bjerget Sohan, Doyyumhwan og i Yongbi ørkenen!
+1250	Kæm områderne igennem og eliminer dem. Saml angrebspoint og byt dem for kister.
+1251	Høstmand Boss Eventet slutter om %d minut(ter).
+1252	Mr. B og boss monstrene forsvinder om %d minut(ter).
+1253	Du har optjent dit daglige mål - Hent din belønning.
+1254	Du kan ikke bruge våben-skins mens du bærer en Bryllupskjole eller Smoking.
+1255	Den anden person er optaget, så du kan ikke handle lige nu.
+1256	Du kan ikke bære en Bryllupskjole eller en Smoking når du allerede bærer et våben-skin.
+1257	Runde %d begynder
+1258	Det er ikke den rigtig nøgle.
+1259	[Orden] Du har allerede doneret den maksimale mængde EXP.
+1260	[Orden] Ordens annoncering sat i gang.
+1261	[Orden] Ordens annoncering forlænget.
+1262	[Orden] Listen opdateres. Prøv igen senere.
+1263	[Orden] Ingen orden fundet.
+1264	[Orden] Du har allerede ansøgt til denne orden.
+1265	[Orden] Din ansøgning er blevet registreret.
+1266	[Orden] Spiller %s har ansøgt om at tilslutte sig.
+1267	[Orden] Listen opdateres. Prøv igen senere.
+1268	[Orden] Ingen ordens annonceringer tilgængelige.
+1269	Du har fået %d Yang.
+1270	[Orden] Ingen ansøgninger tilgængelig.
+1271	[Orden] Ordens annoncering vil køre i %s.
+1272	[Orden] Din ordens annoncering vil snart udløbe.
+1273	[Orden] Modtaget %d Yang
+1274	[Orden] Efter skattetræk på %d%% modtager du %d Yang.
+1275	[Orden] Du kan ikke starte en krig så længe en afstemning er undervejs.
+1276	[Orden] Du kan ikke ophæve ordenen så længe en afstemning er undervejs.
+1277	[Orden] Du kan ikke invitere nogle til ordenen så længe en afstemning er undervejs.
+1278	[Orden] Du kan kun fremstille et Ordens Lagerhus.
+1279	Mysterisk lys, skinner ud fra kisten.
+1280	[Orden] Prøv igen om 10 sekunder.
+1281	[Orden] Et andet ordens medlem bruger lige nu denne.
+1282	[Orden] Der er stadig genstande i Ordens Lagerhuset.
+1283	[Orden] Du har stemt imod.
+1284	[Orden] Du har stemt for.
+1285	[Orden] Dette medlem er lige nu offline.
+1286	[Orden] Der er ingen afstemninger undervejs.
+1287	[Orden] Starter 'Ordensleder Overførsel' afstemningen.
+1288	[Orden] Starter 'Fjern Medlem' afstemningen.
+1289	[Orden] Starter 'Sælg Ordens Område' afstemningen.
+1290	Du har fået %d erfaring.
+1291	[Orden] Starter 'Opgiv Ordens Område' afstemningen.
+1292	[Orden] 'Ordensleder Overførsel' afstemning er undervejs.
+1293	[Orden] 'Fjern Medlem' afstemning er undervejs.
+1294	[Orden] 'Sælg Ordens Område' afstemning er undervejs.
+1295	[Orden] 'Opgiv Ordens Område' afstemning er undervejs.
+1296	[Orden] Ordens Lagerhuset er lige nu i brug.
+1297	[Orden] Du skal vente 10 sekunder før Ordens Lagerhuset kan åbnes igen.
+1298	[Orden] Din orden har ikke et lagerhus.
+1299	Se hvad der kom ud af kisten!
+1300	[Orden] Afstemningen relateret til denne spiller fejlede. Prøv venligst igen om %d måneder, %d dage, %d timer og %d minutter.
+1301	[Orden] Ordens medlemmet blev fjernet fra ordenen på grund af inaktivitet.
+1302	[Orden] Du har taget del i den nuværende afstemning.
+1303	[Orden] Du kan ikke starte en afstemning til din egen karakter.
+1304	[Orden] Du kan ikke starte en afstemning under en krig.
+1305	[Orden] Du kan ikke sælge ordens området til dig selv.
+1306	[Orden] Denne Orden findes ikke.
+1307	[Orden] Du kan ikke starte en afstemning under en krig.
+1308	[Orden] Ordenslevel er for lavt.
+1309	[Orden] Dine medlemmer afviste den sidste afstemning. Prøv venligst igen om %d måneder, %d dage, %d timer og %d minutter.
+1310	Hvis du indånder rød røg fra kisten, forøges din hastighed!
+1311	[Orden] Du kan ikke starte en afstemning under en krig.
+1312	[Orden] Dine medlemmer afviste den sidste afstemning. Prøv venligst igen om %d måneder, %d dage, %d timer og %d minutter.
+1313	[Orden] Du skal udføre en afstemning før du sælger dit ordens område.
+1314	[Orden] Denne orden er den indtastede i afstemningen til at sælge ordens området.
+1315	[Orden] Dine medlemmer afviste den sidste afstemning til at sælge. Prøv igen.
+1316	[Orden] Du kan ikke sælge ordens området til dig selv.
+1317	[Orden] Ordens leder er offline eller på et andet kort.
+1318	[Orden] Denne orden ejer allerede et ordens område.
+1319	[Orden] Intet ordens område fundet.
+1320	[Orden] Salget af ordens området er gennemført.
+1321	Du kan kun bruge denne genstand under den nuværende event.
+1322	Der opstod en fejl. Bonusserne kunne ikke ændres.
+1323	Du kan ikke tilkalde din ganger/kæledyr lige nu.
+1330	Du kan ikke bruge en skærf med en bonus til målet.
+1331	Du kan ikke bruge en skærf uden en bonus som kilden.
+1332	Du kan ikke overføre bonussen, da skærferne har forskellige absorberings satser.
+1333	Du kan ikke overføre bonussen, da skærferne har forskellige karakterer.
+1334	Mislykkedes! Absorberings satsen blev reduceret med 1%.
+1335	Delvis succes! Absorberings satsen blev reduceret med 1%.
+1336	Succes! Bonussen blev overført med succes.
+1337	Du kan ikke smide genstande under bonus overførslen.
+1338	Du kan ikke flytte genstande under bonus overførslen.
+1339	Du kan ikke sælge genstande under bonus overførslen.
+1340	Ikke muligt mens man overfører bonusser.
+1341	Dette er ikke muligt mens den anden spiller overfører bonusser.
+1342	For at bestemme et kæledyrs skæbne, skal du bruge Kæledyrs Skæbne Kuglen.
+1343	Aktiver dit kæledyr først.
+1344	Mens du ændre dit kæledyrs statistikker, kan du ikke bytte, sælge genstande, bruge lagerrummet osv.
+1345	Du kan ikke bruge genstande mens du ændre dit kæledyrs statistikker.
+1346	Du kan ikke smide genstande mens du ændre dit kæledyrs statistikker.
+1347	Du kan ikke flytte genstande mens du ændre dit kæledyrs statistikker.
+1348	Du kan ikke bytte mens din handlings partner ændre hans kæledyrs statistikker.
+1349	Du kan ikke snakke med en NPC mens du ændrer dine kæledyrs statistikker.
+1350	Dit kæledyrs statistikker er blevet ændret.
+1351	Du kan åbne den 3 sekunder efter du lukker kæledyrs statistikker ændrings menuen.
+1352	Alle pladser er optaget.
+1399	Spilleren kan ikke acceptere din invitation i øjeblikket.
+1400	Efter du bruger Rigets Skær, kan du ikke acceptere flere invitationer i denne rige mere.
+1401	%ss kæledyrs færdighed er blevet aktiveret. %s bruger Fjervandring.
+1403	Et navn er allerede blevet registreret.
+1404	Fjern venligst de udstyrede Dragesten før du bruger denne genstand.
+1409	Desværre var du ikke i stand til at stoppe Dommedagen. Du vil blive teleporteret tilbage til Zodiac Templet om et øjeblik.
+1411	Du kan ikke snakke med NPCer mens Lykkens Kiste er åben.
+1412	Du kan ikke bruge genstande mens Lykkens Kiste er åben.
+1413	Du kan ikke smide genstande mens Lykkens Kiste er åben.
+1414	Du kan ikke flytte genstande mens Lykkens Kiste er åben.
+1415	Du kan ikke handle mens Lykkens Kiste er åben.
+1416	Du kan ikke handle mens din partners Lykkens Kiste er åben.
+1420	Din Dragestens bonus er blevet ændret.
+1421	[Fang Kongen] Besejr monstre for at indsamle Konge Kort. Du har brug for 25 kort til et Konge Dæk.
+1422	[Fang Kongen] En masse gode præmier venter!
+1423	[Fang Kongen] Hvis du når til toppen af ranglisten, modtager du din præmie fra spille bordet.
+1426	Du har modtaget et lager bonus på %d%% EXP.
+1427	Du har modtaget et lager bonus på %d forsvar.
+1428	Du har modtaget et lager bonus på %d%% HP.
+1429	Du har modtaget et lager bonus på %d%% styrke imod monstre.
+1430	Sørg for at du har nok plads i din inventar, før du tager ud og fisker.
+1431	Du kan ikke flytte genstande mens bonus ændrings vinduet er åbent.
+1432	Desværre, var der ikke nogen skat i fiskens mave.
+1433	Du kan ikke fiske når dit kæledyr er udklækket.
+1434	Du kan ikke fiske mens dit kæledyr er tilkaldt.
+1435	Du kan ikke fiske mens kæledyr bonus ændrings vinduet er åbent.
+1436	Du kan ikke udføre denne handling mens vinduet til at kombinere eller absorbere Skulderbånd er åbent.
+1437	Du kan ikke udføre denne handling mens Skulderbånds bonus overførelses vinduet er åbent.
+1438	Du kan ikke udføre denne handling mens bonus overførelses vinduet er åbent.
+1439	Du kan ikke fiske mens andre vinduer er åbne.
+1440	Du kan ikke udføre denne handling mens du fisker.
+1441	Resterende tid: %.2f | Fiske vanskelighed: %u | Vanskeligheds reducering: %d
+1442	Alle Kamp Zone ranglisterne er blevet nulstillet.
+1443	Lever udstyret våben-skin.
+1444	Dit inventar er fyldt.
+1450	%s forbedringen mislykkedes.
+1451	%s forbedring fuldført.
+1452	Alter af Blod er dukket op.
+1453	Du har fanget en sjæl.
+1454	[Blods Ritualet] Du har ikke nok plads i din inventar.
+1455	[Blods Ritualet] Du har ikke nok sjæle.
+1456	[Blods Ritualet] Du har ikke nok Yang.
+1457	Blods Ritualet er begyndt. Køb specielle genstande for at få bedre belønninger.
+1458	Blods Ritualet er slut. Prøv igen en anden gang.
+1459	Opgraderings ændring mislykkedes.
+1460	Denne genstand er kun tilgængelig i Balathor's Krypt.
+1461	Kompasset blev brugt, men Vagten blev ikke fundet.
+1462	Du kan ikke gøre dette mens du udfører en anden handling.
+1463	Du kan ikke gøre dette mens du udfører en anden handling.
+1464	Du kan ikke forbedre dine våben, mens dit kæledyr er tilkaldt.
+1465	Du har brug for %d vinkelrette pladser i din inventar, for at åbne Kisten.
+1466	Du har ikke nok plads i din inventar.
+1467	[Lagerrum] En genstand der bliver brugt i øjeblikket, kan ikke blive lagret.
+1468	[Aura] Virker ikke med sjælebundede genstande.
+1469	[Aura] Virker ikke med en Aura Outfit, hvis en genstand allerede er blevet overført til den.
+1470	[Aura] Dit Aura Outfit har nået det maksimale level.
+1471	[Aura] Du kan ikke udvikle dit Aura Outfit indtil at du har forbedret den.
+1472	[Aura] Kun Aura Outfit kan blive indsat.
+1473	[Aura] Kun Aura Outfit, Skjold, Halskæde, Ørering eller Armbånd kan blive indsat.
+1474	[Aura] Kan ikke blive forbedret.
+1475	[Aura] Kan kun blive gjort når en Aura Outfit er blevet indsat.
+1476	[Aura] Antallet af indsatte materialer, er blevet justeret til at matche det krævede antal.
+1477	[Aura] Kan ikke blive udviklet.
+1478	[Aura] Du kan ikke udvikle dit Aura Outfit indtil at du har forbedret den.
+1479	[Aura] Du bliver nød til at indsætte genstande.
+1480	[Aura] Forbedring fuldført. Udvikling er nu muligt.
+1481	[Aura] Forbedring fuldført!
+1482	[Aura] Du har ikke nok penge til at udvikle din Aura Outfit.
+1483	[Aura] Udvikling fuldført!
+1484	[Aura] Fuldført!
+1485	[Orden] %d EXP er blevet doneret.
+1486	Du kan ikke fodre dit kæledyr mens forædlings vinduet er åbent.
+1487	Kampen om de Fem Helligdomme er begyndt! Den vil vare i %d dage.
+1488	Kampen om de Fem Helligdomme er slut. Den næste kamp starter om %d time(r).
+1489	Brugerfladen kan ikke blive åbnet mens du er monteret.
+1490	Eventet er ikke aktivt i øjeblikket.
+1491	Du kan ikke handle eller flytte, eller sælge, smide eller lagre genstande mens du tilkalder en ganger.
+1492	Kampen er blevet afbrudt, på grund af et uventet problem.
+1493	Kampen om de Fem Helligdomme slutter om %d minut(ter).
+1494	Du skal bruge %s x %d mere.
+1495	En level-%d Drage Portal har åbnet sig. Tag fangehullet med stormen!
+1496	En level-%d Drage Portal kan nu betrædes.
+1497	Vi har dræbt bossen!
+1498	%d ordens EXP modtaget!
+1499	Tiden til at betræde Drage Portalen er udløbet.
+1500	Fangehullet vil blive lukket, hvis du ikke starter kampen indenfor %d minut(ter).
+1501	Kampen er ikke startet. Fangehul lukket.
+1502	%s har optaget %s!
+1503	Du kan ikke donere mens dit kæledyr er tilkaldt.
+1504	Denne karakter er ikke tilgængelig til duel.
+1505	I alt %d: Du kan stadig pakke ud %d.
+1506	Udpak den næste gave om %d minutter.
+1507	%s angriber %s!
+1508	%s har nået det personlige score på %d!
+1509	Belønning for Blods Ritualet
+1510	Ikke nok plads i din inventar. Belønningen vil blive sendt til din postkasse.
+1511	Gruppe medlemmerne er alt for langt væk til at modtage genstanden.
+1512	Maksimal ordens level nået. Ikke flere donationer er mulige.
+1513	[Seernes Duel] Seernes Duel er begyndt!
+1514	[Seernes Duel] Du modtager en mission til minispillet.
+1515	[Seernes Duel] Rige skatte venter!
+1516	[Seernes Duel] Seernes Duel er slut.
+1517	[Seernes Duel] Tjek din rang og få din belønning.
+1518	[Seernes Duel] Du har ikke nok Seer Mønter.
+1519	[SD] Din rangs belønning
+1520	[Seernes Duel] Du har øget dit donations tal med 1.
+1521	Du kan ikke bruge denne genstand på sjælebundene genstande.
+1522	Du kan ikke deltage i Battle Royale.
+1524	Du bliver først nød til at forlade din gruppe.
+1525	Du kan ikke komme ind, fordi nedtællingen er allerede begyndt.
+1527	Dette er vinderen af Battle Royale: %s
+1528	%s dræbte %s.
+1529	Nedtællingen er begyndt. Battle Royale starter om %d sekunder.
+1530	Battle Royale kan ikke begynde, fordi der er for få deltagere.
+1531	Battle Royale er begyndt. Det første område vil blive vist om %d sekunder.
+1532	Kamp Zonen er blevet opdateret. Den vil blive lukket af om %d sekunder.
+1533	Kamp Zonen vil blive lukket af om %d sekunder.
+1534	Det elektriske felt er stoppet. Den næste Kamp Zone vil blive vist om %d sekunder.
+1535	Battle Royale slutter om %d sekunder.
+1536	Du kan ikke gøre det under en Battle Royale.
+1537	Du kan ikke registrere dig til det på denne kort.
+1538	Du kan ikke registrere dig til det på Battle Royale serveren.
+1540	Du kan ikke annullere dette på Battle Royale serveren.
+1541	Battle Royale er begyndt!!
+1542	Battle Royale er slut!!
+1543	Der er ikke flere Kamp Zoner. Hele området vil blive lukket af om %d sekunder.
+1544	Du har ikke nogen debuff i øjeblikket.
+1545	Du skal bruge en Battle Royale Billet for at deltage.
+1546	En speciel forsynings pakke er blevet smidt et eller andet sted.
+1547	[Levn Bonus] Du bærer allerede en Sjæl Levn.
+1548	Du kan ikke bruge det her.
+1549	Teleporteringen til de Primale Kræfters Højslette mislykkedes.
+1550	Du kan ikke bruge det længere.
+1551	Du har ikke nok Gaya.
+1552	Battle Royale deltageres status: (%u/%u)
+1553	Registreringen til Battle Royale er blevet lukket.
+1554	Prøv venligst igen senere.
+1555	Du kan ikke gøre dette mens du udfører en anden handling.
+1556	PvP Turnering
+1557	Belønning for at vinde en runde
+1558	Belønning for at vinde en turnering
+1559	Seernes Duel Præmier
+1560	Dit inventar er fyldt. Din præmie vil blive leveret med posten.
+1561	Præmien fra Seernes Duel vil blive leveret med posten, da dit inventar var fyldt.
+1562	Du har modtaget %u EXP til din Champion Level.
+1574	Prøv venligst igen senere.
+1575	Battle Royale
+1576	Battle Royale Sæsons Belønning. Sæsons rang: %d
+1577	Battle Royale General Belønning.
+1578	Battle Royale Spil Belønning. Rang: %d
+1579	Battle Royale Kamp Belønning. Dræbte %d modstandere eller mere
+1580	Du kan ikke gøre krav på en præstation lige nu.
+1581	Du kan ikke bruge nogen følelser lige nu.
+1582	Yongan
+1583	%s ordenen har købt territoriet i %s området på %d,%d for %d Won.
+1584	Din ordens leder har registreret sig til auktionen i territoriet i %s området på %d,%d.
+1585	Du har allerede givet dit bud.
+1586	Du kan tage det Won tilbage som du budte.
+1587	Der er ikke noget at indsamle.
+1588	Du har allerede det maksimale antal Won.
+1589	Du tog de %d Won tilbage som du budte.
+1590	Kun ordens lederen eller et medlem med bank adgang kan betale lejen.
+1591	Der skal ikke betales nogen leje.
+1592	Ordenen har ikke nok Yang.
+1593	[Ordens Område] Gå til vagten og betal lejen på %d Yang for dit ordens område.
+1594	Du har betalt %u-Yang leje for ordens området.
+1595	Du kan ikke gøre dette, mens territoriets auktion er i gang.
+1596	Du har ikke registreret dig til nogen territorie auktioner.
+1597	Du er ikke et medlem af nogen orden.
+1598	Du har allerede registreret dig til territorie auktionen.
+1599	Kun ordens lederen kan registrere sig til territorie auktionen.
+1600	Kun ordener på level %d eller højere kan registrere sig.
+1601	Din orden har allerede et ordens område.
+1602	Der er ingen territorie auktioner lige nu.
+1603	Det maksimale bud er %d Won.
+1604	Du har ikke nok Won.
+1605	Din orden har ikke registreret sig til territorie auktionen.
+1606	Du kan kun byde hvis du har været et medlem af ordenen i mere end 24 timer.
+1607	Lejen for ordens området var ikke betalt. Ordens området er blevet forladt.
+1608	Ingen ordener har registreret sig til territorie auktionen.
+1609	Du har budt %d Won.
+1610	Denne orden findes ikke.
+1611	Dong Gwang Almindelig
+1612	Du kan få det Won tilbage som du budte fra vagten i landsbyen.
+1613	Perfekt! Du har vedhæftet Åndestenen med succes, og du får endda en dobbelt stat bonus.
+1614	Joan
+1615	Pyungmoo
+1616	Jungrang
+1617	Waryong
+1618	Imha
+1619	Miryang
+1620	Songpa
+1621	Daeyami
+1622	[Verdens boss] Event begyndt
+1623	[Verdens boss] Event gennemført
+1624	[Verdens boss] I Kanalen %d, %s er kommet frem og terroriserer området %s. Lad os gå på jagt!
+1625	[Verdens boss] Verdens bossen i Kanalen %d er blevet angrebet. Deltag i jagten nu!
+1626	[Verdens boss] Godt klaret: %s er blevet besejret, og freden er blevet genoprettet... for nu.
+1627	[Verdens boss] Verdens bossen har flygtet! Held og lykke næste gang.
+1628	[Verdens boss] Du kan ikke modtage en belønning nu.
+1629	[Verdens boss] Godt klaret! Her er din belønning. Vær med næste gang også!
+1630	[Verdens boss] Du kan ikke modtage en belønning nu, fordi du ikke har nok plads i din inventar.
+1631	[Verdens boss] Belønning for Bytte Level I på ranglisten: %d
+1632	[Verdens boss] Belønninger for Bytte Level II på ranglisten: %d
+1633	[Verdens boss] Belønninger for Bytte Level III på ranglisten: %d
+1634	[Verdens boss] Belønninger for Bytte Level IV på ranglisten: %d
+1635	[Blomster Kraft] Du har ikke nok skud.
+1636	[Blomster Kraft] Der er ikke nok plads i din inventar.
+1637	[Blomster Kraft] Du modtog Blomsterfrø.
+1638	[Blomster Kraft] Du har ikke nok Blomsterfrø.
+1639	[Blomster Kraft] Du har modtaget et Krysantemum Skud.
+1640	[Blomster Kraft] Du har modtaget et Maj Klokke Skud.
+1641	[Blomster Kraft] Du har modtaget et Påskelilje Skud.
+1642	[Blomster Kraft] Du har modtaget et Lilje Skud.
+1643	[Blomster Kraft] Du har modtaget et Solsikke Skud.
+1644	[Verdens boss] Advarsel: verdens bossen vil komme frem snart!
+1645	[Blomster Kraft] Denne genstand kan ikke længere bruges.
+1646	Du kan ikke transformere dig i øjeblikket.
+1647	Dræb alle monstrene indenfor tidsgrænsen!
+1648	Portalen til det næste rum er åben.
+1649	Undvig hvert angreb!
+1650	Portalen til den næste level er åben.
+1651	%s har gennemført level %u i Sung Mahi Tårnet!
+1652	Byttet fra Sung Mahi Tårnet er blevet sendt til din postkasse.
+1653	Sung Mahis Tårn Level %d
+1654	Byttet for at gennemføre Sung Mahi Tårnet
+1655	Kampen starter om %d sekunder.
+1656	Du står overfor level %d.
+1657	Dræb et par monstre der ikke hører sammen!
+1658	Du angreb det forkerte monster. Dræb alle monstrene!
+1659	Dræb alle monstrene indenfor tidsgrænsen!
+1660	Du ødelagde den forkerte Metin-sten. Besejr alle monstrene!
+1661	Ødelæg den rigtige Metin-sten!
+1662	Find den rigtige nøgle for at flygte!
+1663	Find et Seglsten for at ødelægge seglet!
+1664	[Sung Mahi Tårnet] Dræb alle monstrene indenfor tidsgrænsen!
+1665	[Sung Mahi Tårnet] Den nuværende rang cyklus er slut.
+1666	[Sung Mahi Tårnet] En ny rang cyklus er begyndt.
+1667	Sæsons belønning til 1. pladsen på level %d i Sung Mahi Tårnet.
+1668	Sæsons Sung Mahi Tårns Belønning
+1669	Du er ikke forbandet.
+1670	Alle forbandelserne er blevet ophævet.
+1671	Tiden er gået. Du bliver taget udenfor.
+1672	[Sung Mahi Tårnet] Ødelæg Dæmon stenen!
+1673	[Sung Mahi Tårnet] Nøglen passer ikke. Find en anden en og prøv igen!
+1674	[Sung Mahi Tårnet] Ødelæg seglet med Sung Mahis Seglsten!
+1675	[Sung Mahi Tårnet] Du bliver nød til at ødelægge et andet segl først!
+1676	Du kan nu have handsker på.
+1677	Du kan ikke have handsker på endnu.
+1678	Denne funktion er ikke tilgængelig, da noget hacking software er blevet fundet.
+1679	[Sung Mahi Tårnet] Du har gennemført denne level på %d sekunder.
+1680	Du kan ikke deltage i territorie auktionen, den dag ordenen er grundlagt.
+1681	
+1683	
+1684	
+1685	
+1686	Klatre op ad trinnene på Sung Mahi Tårnet, og træd ind til den næste level.
+1687	[Personlig Premiums Butik] Du kan ikke bruge det. Gå til landsbyens Handels Administrator.
+1688	Du er kommet ind i et område som er under Sung Mahis påvirkning, og lider af hans forbandelse.
+1689	%s har stadig %d forposter. (%d/%d)
+1690	%s har rejst alle forposterne, og Sung Mahis kontrol vil begynde om %d minutter.
+1691	Sung Mahis forposter bliver rejst.
+1692	Sung Mahis forposter er blevet ødelagt.
+1693	Alle forposterne i %s er blevet ødelagt, og området er ikke længere under Sung Mahis kontrol.
+1694	Seo Gwang Ødemarker
+1695	Nam Gwang Afgrunden
+1696	Forbedringen var succesfuld.
+1697	Forbedringen er desværre mislykkedes.
+1698	Takket være immunitets velsignelsen, er du ikke påvirket af Sung Mahis Tilstedeværelse.
+1699	Din immunitet er udløbet, og du er igen påvirket af Sung Mahis Tilstedeværelse og Forbandelse.
+1700	Du kan ikke gøre dette med en bruger af hacking software.
+1701	Du har ikke nok materialer til opgraderingen. (Sjælebundne genstande kan ikke bruges.)
+1702	Din ordens territorie vil automatisk blive opgivet om %d timer. Enhver genstand i ordens lagerhuset vil blive slettet.
+1703	[Orden] Du kan ikke fjerne ordens lederen.
+1704	[Orden] Du kan ikke fjerne dig selv.
+1705	[Orden] Du kan ikke gøre dig selv til en ordens leder.
+1706	[Orden] Kun tilgængeligt for ordens lederen (hvis et ordens territorie bliver opgivet).
+1707	[Orden] Du kan ikke opgive ordens territoriet under en ordens kamp.
+1708	Du kan ikke bytte den.
+1709	Tårn Eventet er blevet aktiveret.
+1710	Du kan lære dette efter du når op til Champion Level.
+1711	[Personlig Premiums Butik] Du kan ikke åbne dette, fordi du stadig har penge at indsamle.
+1712	[Personlig Premiums Butik] Du kan ikke åbne dette, fordi du stadig har genstande at indsamle.
+1713	[Personlig Premiums Butik] Du har allerede åbnet din personlige butik.
+1714	[Personlig Premiums Butik] Butikken bliver forberedt nu.
+1715	[Personlig Premiums Butik] Du har ikke nok plads i din inventar.
+1716	[Personlig Premiums Butik] Du kan samle genstande i din personlige butik.
+1717	[Personlig Premiums Butik] Du kan samle penge i din personlige butik.
+1718	[Personlig Premiums Butik] %s er blevet solgt. Indsaml venligst dine penge.
+1719	[Personlig Premiums Butik] Du kan ikke genåbne din butik i %d sekunder efter den er blevet lukket.
+1720	Du kan ikke gøre dette, mens fangehullet bliver skabt.
+1721	Du kan ikke genoplive dig selv mere. Du vil blive transporteret ud af fangehullet.
+1722	Du har allerede modtaget din belønning. Hvis du gerne vil prøve igen, så kom tilbage igen senere. Resterende tid: %d t %d m
+1723	Du kan genoplive dig selv yderligere %d gange.
+1724	Du kan nu komme ind til Slange Templet. Brug Slange Statuen til at gøre det.
+1725	Den ødelagte Metin reagerer ikke. Alle Metins er kommet frem igen.
+1726	Den ødelagte Metin reagerer ikke. Alle Metins er kommet frem igen.
+1727	Du har ødelagt %d Metin. Ødelæg nu %d Metin.
+1728	Tiden er gået. Du vil blive transporteret ud af fangehullet.
+1729	Det er nu tilgængeligt i %d minutter.
+1730	Du kan ikke forlænge fangehuls timeren endnu yderligere.
+1731	Fangehuls timeren er forlænget med 1 minut.
+1732	Du har dræbt alle mostrene. Du vil blive transporteret til level %d. Der er %d sekunder tilbage indtil da.
+1733	Du har ødelagt alle Metins. Du vil blive transporteret til level %d. Der er %d sekunder tilbage indtil da.
+1734	Stykket er blevet tilføjet til Slange Hovedet. Men der sker ingenting.
+1735	Alle Slange Søjlerne er blevet låst op. %d levels om %d sekunder.
+1736	Den specielle Slange Templets Smed kommer frem!
+1737	Slange Templets Smed kommer frem!
+1738	Du har dræbt alle mostrene og kan nu komme videre til boss level.
+1739	Du har gennemført Slange Templet. Du vil blive transporteret ud af fangehullet om %d sekunder.
+1740	Ødelæg Metin-Stenene i den rigtige rækkefølge.
+1741	Dræb alle monstrene.
+1742	Tag nøglen fra monstrene for at låse op for Slange Søjlen.
+1743	Du har tilføjet et stykke til Slange Hovedet.
+1744	Dræb bossen.
+1745	Åbnet med succes!
+1746	Du bliver nød til at låse op for den anden søjle først.
+1747	Fængslet er blevet låst op. Smeden smiler til dig.
+1748	Denne nøgle åbnede ikke for fængslet, og reddede smeden.
+1749	Dette stykke passer ikke til Slange Hovedet.
+1750	
+1751	
+1752	Du skal fylde mindst 1 EXP Marmor op ved level 120 for at nå op til Champion Level.
+1753	Du skal gennemføre 'Skibs Forsvar' fangehullet.
+1754	Du har allerede nået op til Champion Level.
+1755	[Personlig Premiums Butik] Du kan ikke bruge genstande mens du åbner din personlige butik.
+1756	[Personlig Premiums Butik] Du kan ikke gøre det mens du håndtere genstande.
+1757	[Personlig Premiums Butik] Du kan ikke bruge den Personlige Premiums Butik mens du har andre vinduer åbne.
+1758	[Personlig Premiums Butik] Du kan ikke gøre det mens du håndtere genstande.
+1759	
+1760	[Levn Bonus] Dette er ikke muligt mens Sjæl Levns vinduet er åbent.
+1761	%s gruppe medlemmer har forladt kampen.
+1762	Du har %d minutter tilbage.
+1763	[Personlig Premiums Butik] Du kan ikke duellere her.
+1764	[Personlig Premiums Butik] Samlede penge vil ikke blive opdateret mens du håndtere genstande.
+1765	Slange Templets endelige boss er kommet frem.
+1766	[Personlig Premiums Butik] En butik er allerede blevet åbnet her. Find venligst en anden lokation til at åbne din butik.
+1767	Du kan ikke forbedre det, mens en udviklede kæledyr er blevet tilkaldt.
+1768	<Nordvinds Dybder> Du har %d minutter tilbage.
+1769	<Nordvinds Dybder> Hvis du ikke starter kampen indenfor 3 minutter, vil instansen blive afsluttet.
+1770	<Nordvinds Dybder> Tiden er gået. Du vil blive transporteret ud af fangehulet.
+1771	
+1772	<Nordvinds Dybder> En instans er blevet genereret til Nordvinds Ly.
+1773	
+1774	
+1775	
+1776	
+1777	
+1778	
+1779	
+1780	
+1781	
+1782	
+1783	
+1784	
+1785	
+1786	
+1787	
+1788	
+1789	
+1790	
+1791	
+1792	
+1793	
+1794	
+1795	
+1796	<Nordvinds Dybder> Du besejrede Alastor! Du vil blive transporteret ud af fangehullet om 20 sekunder.
+1797	<Nordvinds Dybder> Alastor vil snart løslade hans isende vrede!
+1798	<Nordvinds Dybder> Alastor løsladte hans isende vrede ved level %d!
+1799	<Nordvinds Dybder> Du fik affekteret Alastors isende vrede.
+1800	<Nordvinds Dybder> Hvis du ikke ødelægger de hvide drage æg indenfor %d sekunder, vil Alastors dødbringende frost komme igennem lyet!
+1801	Det er ikke tilgængeligt her.
+1802	Dette vil være tilgængeligt når kampen er begyndt.
+1803	<Nordvinds Dybder> Instansen blev afsluttet, fordi du ikke startede kampen indenfor den specificerede tidsgrænse.
+1804	
+1805	Ingen bytte vil blive indsamlet, da bytte filteret er deaktiveret.
+1806	Ingen bytte vil blive indsamlet, da et medlems bytte filter er deaktiveret.
+1807	
+1808	Du har fået %d Champion Level erfaringspoint.
+1809	Du har fået %d erfaringspoint.
+1810	Du har tabt %d erfaringspoint.
+1811	Du har tabt %d Champion Level erfaringspoint.
+1812	Du kan ikke gøre det under handlen.
+1813	Metin Feber eventet er startet!
+1814	Gennemfør missioner på event missions listen, ødelæg Metin-sten og få dine belønninger.
+1815	Metin Feber er ikke aktivt i øjeblikket.
+1816	[Dragens Tempel] Du har genereret en instans til Dragens Tempel.
+1817	[Dragens Tempel] Hvis du ikke starter kampen indenfor 3 minutter, vil din instans blive afsluttet.
+1818	[Dragens Tempel] Beran-Setaou er blevet besejret. Du vil blive teleporteret ud af fangehullet om %d sekunder.
+1819	[Dragens Tempel] Du har %d minutter tilbage.
+1820	[Dragens Tempel] Instansen blev afsluttet fordi kampen ikke blev startet.
+1821	[Dragens Tempel] Tiden er gået. Alle bliver teleporteret ud af fangehullet.
+1822	[Dragens Tempel] Du har genereret en instans til Dragens Tempel.
+1823	[Dragens Tempel] Hvis du ikke starter kampen indenfor 3 minutter, vil din instans blive afsluttet.
+1824	[Dragens Tempel] Instansen blev startet.
+1825	[Dragens Tempel] Du gav op og instansen blev afsluttet.
+1829	[Dragens Tempel] Instansen vil blive lukket, hvis ingen går ind i den indenfor %d sekunder.
+1830	[Dragens Tempel] Instansen blev lukket, fordi ingen gik ind i den indenfor den tildelte tid.
+1838	Du kan ikke blokere dig selv.
+1839	Du kan ikke tilføje dig selv.
+1840	%s handlingen var tilladt.
+1844	Du har fodret din hest %d Foder. Den har fået %d erfaring.
+1845	Ikke nok Gaya eller Yang
+1846	Du kan ikke lære denne hestefærdighed.
+1847	[Gådens Tempel] Du kan ikke bruge det her.
+1848	[Gådens Tempel] Kun gruppe lederen kan bruge dette dokument.
+1849	[Gådens Tempel] %s er ikke indenfor rækkevidde.
+1850	[Gådens Tempel] Du kan ikke bruge dette dokument på din level.
+1851	[Gådens Tempel] %s er ikke den rette level for at komme ind.
+1852	[Gådens Tempel] %s har afvist indgangen.
+1853	[Gådens Tempel] Fangehullet vil forsvinde efter 1 minut, hvis du ikke starter kampen.
+1854	[Gådens Tempel] En portal til Gådens Tempel er blevet oprettet.
+1855	[Gådens Tempel] Ødelæg de rigtige Metin-sten.
+1856	[Gådens Tempel] Dette er en falsk Metin-sten. Find en rigtig Metin-sten!
+1857	[Gådens Tempel] Du har modtaget en skattekiste fra Metin-stenen.
+1858	[Gådens Tempel] Du mangler stadig at finde en rigtig Metin-sten. Brug portalen og prøv igen.
+1859	[Gådens Tempel] Opgaven er gennemført. Find det hemmelige rum.
+1860	[Gådens Tempel] Find en rigtig monster og besejr den! Lad ikke illusionerne føre dig på afveje.
+1861	[Gådens Tempel] Du har ikke fundet en rigtig monster. Brug portalen og prøv igen.
+1862	[Gådens Tempel] Se på skattekisten.
+1863	[Gådens Tempel] Velkommen til det hemmelige rum.
+1864	[Gådens Tempel] Din tid er gået! Teleportere alle ud af fangehullet.
+1865	[Gådens Tempel] Du modtager Gådens Templets Velsignelse som en belønning.
+1866	[Gådens Tempel] Du har ikke modtaget en belønning. Resterende tid indtil den næste belønning: %d time(r) og %d minut(ter)
+1867	Gådens Templets Belønning
+1868	[Gådens Tempel] Gådens Tempel forsvandt fordi tiden løb ud.
+1869	[Gådens Tempel] Du har 4 minutter til at starte kampen ved hjælp af Gåde Portalen.
+1870	[Gådens Tempel] Gådens Templets Velsignelse har givet dig endnu en skattekiste.
+1871	[Gådens Tempel] Du har modtaget en Gådens Belønning. Se i din postkasse for at acceptere den.
+1872	%s er blevet fjernet.
+1873	Du har anskaffet %s. Du kan også tjekke dine færdigheder fra færdigheds menuen.
+1874	Ikke nok Gaya
+1876	Prøv venligst igen senere.
+1878	Tiden er gået. Du vil blive transporteret til byen om kort tid.
+1879	Du kan ikke genoplive dig selv mere.
+1880	Du har gennemført fangehullet og vil blive teleporteret ud om %d minutter.
+1881	Du har besejret alle de udsendte. Gå til Vogteren Hae-Tae for at komme ind i Fordømmelsen.
+1882	Du kan ikke bruge mere end den maksimale mængde genstande.
+1883	Rejsen til Åndeverdenen er slut, og du kan ikke finde flere Døds Flammer.
+1884	Rejsen til Åndeverdenen er startet. Du kan finde Døds Flammer ved at besejre monstre.
+1885	Rejsen til Åndeverdenen er slut.
+1886	Rejsen til Åndeverdenen er startet. Du kan nu bruge Åndeverdens Portalen på Kap Drageild.
+1887	Du har brugt %dx Livs Vand. Du har %dx Livs Vand tilbage.
+1888	Du modtager %d Døds Flamme(r).
+1895	Du har besejret Jordens Udsendte.
+1896	Du har besejret Nattens Udsendte.
+1897	Du har besejret Tordens Udsendte.
+1898	Du har besejret Luftens Udsendte.
+1899	Fangehullet vil lukke om %d minutter.
+1900	Du har ikke plads til flere Døds Flammer.
+1901	Du bliver nød til at vente inden du prøver igen. Resterende ventetid: %d time(r) og %d minut(ter)
+1902	Du kan ikke længere ændre gruppen, så snart du har trådt ind i Dragens Tempel.
+1903	Du kan ikke have flere Lejesoldater.
+1904	Udholdenhed overskredet.
+1905	[Gådens Tempel] Ødelæg Gådens Metin for at komme til den næste level.
+1916	Du har allerede erhvervet denne færdighed.
+1917	Du kan ikke lære denne færdighed indtil heste level 31.
+1918	Du kan ikke erhverve dig flere færdigheder.
+1919	Du kan ikke lære denne færdighed indtil heste level 21.
+1921	[Gådens Tempel] Du kan ikke komme ind, da du ikke opfylder levels kravet.
+1922	Kan ikke ændre udstyrssiden, fordi våbnet og kostumet passer ikke sammen.
+1924	Bytte filter aktiveret.
+1925	Bytte filter varighed forlænget.
+1926	[Sung Ma Invasions Portal] En Sung Ma Invasions Portal er blevet åbnet et sted i dette område. [ENTER]Åben det store kort for at finde den.
+1927	[Sung Ma Invasions Portal] Invasions Bossen er kommet frem et sted!
+1930	[Sung Ma Invasions Portal] Invations portalens kraft er blevet svækket, og den kan nu blive ødelagt.
+1931	[Sung Ma Invasions Portal] Området er blevet forsvaret med succes. Du vil blive teleporteret tilbage om et kort øjeblik.
+1932	[Sung Ma Invasions Portal] Invasions portalen er blevet lukket.
+1933	[Sung Ma Invasions Portal] Kraft Blomsterne er kommet frem omkring invasions portalen.[ENTER]Brug en blomst af den samme elementære type som området, for at modtage en skade bonus!
+1934	[Sung Ma Invasions Portal] Kraft Blomsterne er kommet frem i nærheden af Invasions Bossen.[ENTER]Brug en blomst af den samme elementære type som området, for at modtage en skade bonus!
+1936	[Sung Ma Invasions Portal] Du har ikke nok plads i dit inventar til at tage imod belønningen.
+1937	[Sung Ma Invasions Portal] Du skal besejre alle monstrene ved invasions portalen for at ødelægge den. 
+1938	[Orden] %d Yang er blevet tilbagetrukket.
+1939	Guldbærs Jagtens Belønning
+1940	Ødelæg %d Primordis Statuerne. Du kan ikke angribe flere statuer på en gang.
+1941	Du har modtaget alt udholdenheden fra dine missioner. Indsaml belønningen fra missions vinduet.
+1942	De bonusser der blev absorberet ind i dit Skulderbånd, er blevet fjernet med succes.
+1943	De bonusser der blev absorberet ind i din Aura Outfit, er blevet fjernet med succes.
+1944	Du har brug for mere plads i din inventar.
+1945	[Guld Land] Du kan ikke transformere dig i øjeblikket.
+1946	Du kan ikke opløse gruppen, mens du stadig er aktiv i Meleys Grotte.
+1947	Du kan ikke opløse gruppen, mens en ordens kamp er i gang.
+1948	Spilleren er i øjeblikket markeret som AFK.
+1949	Du har befriet dig selv med succes.
+1950	[NPC Finder] Denne karakter er ikke på dette kort.
+1951	Hemmelig Skat Belønning
+1952	Du har modtaget en hemmelig belønning for at deltage i Skattejagten %d gange.
+1953	Rang %d Belønning
+1954	Du har modtaget en belønning for at nå op til rang %d i Skattejagten.
+1955	Du kan ikke modtage flere Døds Flammer, da du allerede har den maksimale mængde.
+1956	Du kan ikke modtage mere Yang.
+1957	[Sung Ma's Skattekiste] Resterende omrulninger: %d
+1958	[Sung Ma's Kiste] Åben for at modtage en værdifuld belønning.
+1959	Du har indsamlet det maksimale antal af sjæle. Besøg Alter af Blod og udfør ritualet!
+1961	%.1Lf%% af salgsprisen i Yang vil blive indsamlet som et gebyr.
+1962	Stærk imod Drager +%d%%
+1963	Transaktionen blev annulleret, da mængden overskred det højest tilgængelige.
+1964	Denne færdighedsbog er kun tilgængelig for ordens ledere eller kombattanter.
+1965	Du kan ikke lære flere ordens færdigheder.
+1966	Læringen af en ordens færdighed mislykkedes.
+1967	Du kan ikke forme en gruppe med nogen, mens du duellerer.
+1968	Fjern først spilleren fra din blokerings liste.
+1969	En gruppe invitation er blevet sendt til %s.
+1970	%s er i øjeblikket i en lokation, hvor det ikke er muligt at forme grupper.
+1971	Fjern først spilleren fra din blokerings liste.
+1972	Du kan ikke have flere venner (maks. %d).
+1973	Fjern først spilleren fra dine ven anmodninger.
+1974	Du kan ikke blokere flere spillere (maks. %d).
+1975	Du har allerede dette kort.
+1976	Du har lært Balathor's Storm med succes.
+1977	Du har lært Balathor's Vilje med succes.
+1978	Du har lært Balathor's Beslutsomhed med succes.
+1992	Du kan ikke få adgang til dine missioner mens du vælger en genstand.
+1993	Du kan ikke få adgang til ordens lagerhuset eller handle mens du vælger en genstand.
+1994	Du kan ikke gøre dette mens den anden spiller har et andet vindue åbent.
+1995	Du kan ikke bruge dette mens du vælger en genstand.
+2000	Ingen frie pladser til at udstyre.
+2006	Vækket
+2007	Mægtig
+2008	Du har brug for Heroiske Kæledyrsbøger til denne udviklingsstadie.
+2009	Du har brug for Vækkede Kæledyrsbøger til denne udviklingsstadie.
+2010	Blokerings Gennemtrængning +%d%%
+2011	Præcision +%d%%
+2012	Dit kæledyr har låst op for en potentiel færdighed (%s).
+2013	%s potentiel færdighed er blevet fjernet.
+2014	Du har låst op for den første potentielle færdigheds plads.
+2015	%s har nået champion level %d.
+2016	Dit kæledyr er begejstret over den lækre godbid.
+2019	Du har låst op for den anden potentielle færdigheds plads.
+2028	Du kan ikke gøre dette, mens du tilkalder dit kæledyr.

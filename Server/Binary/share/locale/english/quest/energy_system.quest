@@ -1,0 +1,172 @@
+quest energy_system begin
+	state start begin
+		when alchemist.chat.gameforge.energy_system._001_npcChat begin
+			say_title(mob_name(20001)) 
+			say(gameforge.energy_system._010_say)
+			wait()
+			say_title(mob_name(20001)) 
+			say(gameforge.energy_system._020_say)
+			wait()
+			say_title(mob_name(20001)) 
+			say(gameforge.energy_system._030_say)
+			setstate(can_make)
+		end
+	end
+
+	state can_make begin
+		function setting () 
+			return
+			{
+				["prob_acc_table"] = 
+				{
+					["35to50"] = {30,55,70,80,90,95,97,98,99,100},
+					["51to70"] = {20,40,60,75,85,91,96,98,99,100},
+					["upto70"] = {10,25,45,65,80,88,94,97,99,100}
+				},
+				["item_num_table"] ={0,1,2,3,4,6,8,10,12,15},
+				["energy_stone"] = 51001,
+				["charging_stone"] = 51002
+			}
+		end	
+		function getItemNum ( str, r )
+			local setting = energy_system.setting()
+			for i = 1, 10 do
+				if r < setting.prob_acc_table[str][i] then
+					return setting.item_num_table[i]
+				end
+			end
+			return 0
+		end
+
+		when alchemist.chat.gameforge.energy_system._035_npcChat begin
+			say_title(mob_name(20001)) 
+			say(gameforge.energy_system._040_say)
+			wait()
+			say_title(mob_name(20001)) 
+			say(gameforge.energy_system._050_say)
+			wait()
+			if pc.get_level() < 35 then 
+				say_title(mob_name(20001)) 
+				say(gameforge.energy_system._060_say)
+			else
+				say_title(mob_name(20001)) 
+				say(gameforge.energy_system._070_say)
+			end
+		end
+
+		when alchemist.take begin
+			if pc.get_level() < 35 then 
+				say_title(mob_name(20001)) 
+				say(gameforge.energy_system._080_say)
+				return
+			end
+			local item_vnum = item.vnum
+			local levelLimit = item.get_level_limit(item_vnum)
+			local setting = energy_system.setting()
+			
+			if levelLimit == nil then
+				say_title(mob_name(20001)) 
+				say(gameforge.energy_system._090_say)
+				wait()
+			elseif item.get_type() == ITEM_WEAPON and item.get_sub_type() == WEAPON_ARROW then
+				say_title (mob_name(20001)) 
+				say (gameforge.energy_system._090_say)
+				wait()
+			elseif levelLimit < 35 then
+				say_title(mob_name(20001)) 
+				say(gameforge.energy_system._100_say)
+			else
+				say_title(mob_name(20001)) 
+				say(item_name(item_vnum))
+				say(gameforge.energy_system._110_say)
+				local s = select (gameforge.energy_system._120_select,gameforge.energy_system._130_select)
+				if s == 1 then
+					item.remove()
+					local r = number(1, 100)
+					local n
+					if levelLimit >= 35 and levelLimit <= 50 then
+						n = energy_system.getItemNum ("35to50",r)
+					elseif levelLimit > 50 and levelLimit <= 70 then
+						n = energy_system.getItemNum ("51to70",r)
+					else
+						n = energy_system.getItemNum ("upto70",r)
+					end
+					if (n == 0) then
+						say_title(mob_name(20001)) 
+						say(gameforge.energy_system._140_say)
+					else
+						pc.give_item2(setting.energy_stone, n)
+						say_title(mob_name(20001)) 
+						say(string.format(gameforge.energy_system._150_say,n))
+					end
+				end
+			end
+		end
+
+		when alchemist.chat.gameforge.energy_system._160_npcChat begin
+			local setting = energy_system.setting()
+			local need = 30
+			say_title(mob_name(20001)) 
+			say(string.format(gameforge.energy_system._170_say,need))
+			wait()
+			
+			if pc.get_level() < 35 then 
+				say_title(mob_name(20001)) 
+				say(gameforge.energy_system._060_say)
+				return
+			end
+			
+			if pc.count_item(setting.energy_stone) < need then
+				say_title(mob_name(20001)) 
+				say(string.format(gameforge.energy_system._180_say,need))
+				return
+			else
+				say_title(mob_name(20001)) 
+				say(string.format(gameforge.energy_system._190_say, need))
+				wait()
+			end
+			
+			local charge = 1000
+			say_title(mob_name(20001)) 
+			say(string.format(gameforge.energy_system._200_say, charge))
+			local s = select (gameforge.energy_system._210_select,gameforge.energy_system._220_select)
+			if s == 2 then
+				say_title(mob_name(20001)) 
+				say(gameforge.energy_system._230_say)
+				return
+			end
+
+			if pc.get_gold() < charge then
+				say_title(mob_name(20001)) 
+				say(gameforge.energy_system._240_say)
+				return
+			end
+			
+			if pc.count_item (setting.energy_stone) < need then
+				return
+			end			
+
+			pc.change_gold(-charge)
+			pc.remove_item(setting.energy_stone, need)
+
+			if pc.getqf("hasExperience") == 0 then
+				say_title(mob_name(20001)) 
+				say(gameforge.energy_system._250_say)
+				pc.give_item2 (setting.charging_stone, 1)
+				pc.setqf("hasExperience", 1)
+				return
+			end
+
+			local r = number (1, 100)
+			if r > 30 then
+				say_title(mob_name(20001)) 
+				say(gameforge.energy_system._260_say)
+				return
+			end
+			say_title(mob_name(20001)) 
+			say(gameforge.energy_system._270_say)
+			pc.give_item2(setting.charging_stone, 1)
+
+		end
+	end
+end
