@@ -1,0 +1,38 @@
+quest is_yang begin
+    state start begin
+        when 38010.use begin
+            if get_time() > pc.getqf("next_time") or pc.getqf("next_time") == 0 then
+                    pc.setqf("next_time", get_time() + 20)
+                    local yang_amount_1 = item.get_socket(0)
+                    say_title(gameforge.is_yang._010_sayTitle)
+                    say(string.format(gameforge.is_yang._020_say, yang_amount_1))
+
+                    local choice = select(locale.yes, locale.no)
+
+                    if choice == 2 then
+                        return
+                    end
+
+                    say_title(gameforge.is_yang._010_sayTitle)
+
+                    local current_gold = pc.get_gold()
+
+                    if current_gold+yang_amount_1 >= 1999999999 then
+                        say(gameforge.is_yang._040_say)
+                    else
+                        local yang_amount_2 = item.get_socket(0)
+                        if yang_amount_1 == yang_amount_2 then
+                            say(gameforge.is_yang._030_say)
+                            pc.changegold(yang_amount_1)
+                            item.remove()
+                            pc.setqf("next_time", get_time() + 20)
+                        else
+                            char_log(pc.get_player_id(), 'IS_YANG_HACK', yang_amount_1 ..' not match: '.. yang_amount_2)
+                        end
+                    end
+            else
+                syschat(string.format(gameforge.is_yang._050_syschat, pc.getqf("next_time")-get_time()))
+            end
+        end
+    end
+end

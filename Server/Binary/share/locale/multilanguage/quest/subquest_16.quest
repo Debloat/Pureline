@@ -1,0 +1,209 @@
+quest subquest_16 begin
+	state start begin
+		when login or levelup or enter with pc.level >= 25 and pc.level <= 30 begin
+			set_state(information)
+		end
+
+	end
+
+	state information begin
+		when letter begin
+			local v = find_npc_by_vnum(20355)
+
+			if v != 0 then
+				target.vid("__TARGET__", v, gameforge.subquest_16._10_targetVid)
+			end
+		end
+
+
+		when __TARGET__.target.click or	20355.chat.gameforge.subquest_16._20_npcChat with pc.level >= 25 begin
+			target.delete("__TARGET__")
+
+			say_title(gameforge.main_quest_lv10._30_sayTitle)
+			say(gameforge.subquest_16._30_say)
+			wait()
+
+			say_title(gameforge.main_quest_lv10._30_sayTitle)
+			say(gameforge.subquest_16._40_say)
+			local s= select(gameforge.subquest_05._70_select, gameforge.subquest_08._170_select)
+			if 2==s then
+				say(gameforge.subquest_11._60_say)
+				local a= select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
+				if  2==a then
+					say_title(gameforge.main_quest_lv10._30_sayTitle)
+					say(gameforge.subquest_16._50_say)
+					return
+				end
+				say_title(gameforge.main_quest_lv10._30_sayTitle)
+				say(gameforge.subquest_16._60_say)
+				set_state(__GIVEUP__)
+				return
+			end
+			say_title(gameforge.main_quest_lv10._30_sayTitle)
+			say(gameforge.subquest_16._70_say)
+			set_state(ask_to_youhwan)
+		
+
+		
+		end
+	end
+
+	state ask_to_youhwan begin
+		when info or button begin
+			say_title(gameforge.subquest_16._80_sayTitle)
+			say(gameforge.subquest_16._90_sayReward)
+		end
+
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.subquest_16._80_sayTitle)
+			q.set_title(gameforge.subquest_16._100_qSetTitle)
+			q.start()
+
+			local v=find_npc_by_vnum("20017")
+			if 0== v then
+			else
+				target.vid("__TARGET__",v, gameforge.subquest_16._110_targetVid)
+			end
+		end
+
+		when 20017.chat.gameforge.subquest_16._80_sayTitle begin
+			target.delete("__TARGET__")	
+			say_title(gameforge.arena_manager._20_sayTitle)
+			say(gameforge.subquest_16._120_say)
+			wait()
+
+			say_title(gameforge.subquest_16._130_sayTitle)
+			say(gameforge.subquest_16._140_say)
+			wait()
+
+			say_title(gameforge.subquest_16._130_sayTitle)
+			say(gameforge.subquest_16._150_say)
+			set_state(ask_to_hengsang)
+		end
+	end
+
+	state ask_to_hengsang begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.subquest_16._160_makequestbutton)
+			q.set_title(gameforge.subquest_16._170_qSetTitle)
+			q.start()
+
+			local v=find_npc_by_vnum("20010")
+			if 0== v then
+			else
+				target.vid("__TARGET1__",v, gameforge.subquest_16._180_targetVid)
+			end	
+		end
+		
+		when info or button begin
+			say_title(gameforge.subquest_16._80_sayTitle)
+			say(gameforge.subquest_16._190_sayReward)
+		end
+		
+		
+		when 20010.chat.gameforge.subquest_16._20_npcChat begin
+			target.delete("__TARGET1__")
+			say_title(gameforge.subquest_16._200_sayTitle)
+			say(gameforge.subquest_16._210_say)
+			wait()
+			say_title(gameforge.subquest_16._200_sayTitle)
+			say(gameforge.subquest_16._220_say)
+			wait()
+			say_title(gameforge.subquest_16._200_sayTitle)
+			say(gameforge.subquest_16._230_say)
+			wait()
+
+			say_title(gameforge.subquest_16._200_sayTitle)
+			say(gameforge.subquest_16._240_say)
+			set_state(ask_to_euldo)
+		end
+	end
+	state ask_to_euldo begin
+		when letter begin
+			local v=find_npc_by_vnum("20011")
+			if 0== v then
+			else
+				target.vid("__TARGET1__",v, gameforge.main_quest_lv47._70_sayTitle)
+			end
+		
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.main_quest_lv47._390_targetVid)
+			q.set_title(gameforge.subquest_16._170_qSetTitle)
+			q.start()
+		end
+
+		when info or button begin
+			say_title(gameforge.subquest_16._250_sayTitle)
+			say(gameforge.subquest_16._260_say)
+		end
+		
+		
+		
+		when 20011.chat.gameforge.subquest_16._80_sayTitle begin
+			target.delete("__TARGET1__")
+			say_title(gameforge.subquest_16._270_sayTitle)
+			say(gameforge.subquest_16._280_say)
+			wait()
+
+			say_title(gameforge.subquest_16._270_sayTitle)
+			say(gameforge.subquest_16._290_say)
+			wait()
+			say_title(gameforge.subquest_16._270_sayTitle)
+			say(gameforge.subquest_16._300_say)
+			set_state(ask_to_guard)
+		end
+	end
+
+	state ask_to_guard begin
+		when info or button begin
+			say_title(gameforge.buy_fishrod._210_sayTitle)
+			say(gameforge.subquest_16._310_say)
+		end
+		
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.subquest_16._320_makequestbutton)
+			q.set_title(gameforge.subquest_16._320_makequestbutton)
+			q.start()
+
+			local v=find_npc_by_vnum("20355")
+			if 0== v then
+			else
+				target.vid("__TARGET__",v, gameforge.subquest_16._80_sayTitle)
+			end
+		end
+
+		when 20355.chat.gameforge.subquest_16._330_npcChat begin
+			target.delete("__TARGET__")
+			say_title(gameforge.subquest_16._340_sayTitle)
+			say(gameforge.subquest_16._350_say)
+			wait()
+			
+			say_title(gameforge.subquest_16._340_sayTitle)
+			say(gameforge.subquest_16._360_say)
+			wait()
+
+			say_title(gameforge.subquest_16._340_sayTitle)
+			say(gameforge.subquest_16._370_say)
+			wait()
+			say_title(gameforge.collect_herb_lv4._130_sayTitle)
+						say_reward(gameforge.subquest_16._380_sayReward)
+						pc.give_exp2(150000)
+			pc.change_money(30000)
+			pc.give_item2("17060", 1)			
+
+			clear_letter()
+			set_state(__COMPLETE__)
+		end
+	end
+	state __GIVEUP__ begin
+	end
+	state __COMPLETE__ begin
+		when enter begin
+			q.done()
+		end
+	end
+end
+

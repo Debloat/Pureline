@@ -1,0 +1,1858 @@
+1	Herkes şehre ışınlanacak.
+2	Bu eşya mevcut değil.
+3	Kutu patladı! HP seviyen düştü.
+4	[Lonca] Lonca bölgesi satışı başarısız.
+5	[Lonca] Lonca bankasında yeterince Yang bulunmadığı için lonca satılamıyor.
+6	[Lonca] Bir anket esnasında loncayı terk edemezsin.
+7	[Lonca] Oyuncu çevrimdışı veya başka bir haritada bulunuyor.
+8	[Lonca] Lonca savaş halindeyken savaşçı belirleyemezsin.
+9	[Lonca] Bir anket esnasında başka bir anket başlatamazsın.
+10	[Lonca] Bu eylem savaş esnasında mümkün değil.
+11	[Lonca] Lonca bankası dolu olduğu için geliştirme mümkün değil.
+12	[Lonca] Bir anket esnasında lonca deposunu kullanamazsın.
+13	Eğer kutudan gelen kırmızı dumanı solursan, zehirlenirsin!
+14	[Lonca] Lonca deposu açıkken bu eylemi gerçekleştiremezsin.
+15	[Lonca] Bir savaş esnasında lonca liderini değiştiremezsin.
+16	[Lonca]%s %s kullandı.
+17	[Lonca] Lonca becerilerini kullanma yetkin yok.
+18	[Lonca] Yeniden diriltme sınırına eriştiğin için şu anda seyirci modundasın.
+19	[Lonca] Lütfen üyeleri ve liderleri kontrol et.
+20	[Lonca] Lütfen rakip üyeleri ve liderleri kontrol et.
+21	[Lonca] Bazı üyeler çevrim dışı ya da başka bir haritada.
+22	[Lonca] Rakip loncanın bazı üyeleri çevrim dışı ya da başka bir haritada.
+23	[Lonca] Yeterli sayıda katılımcı çevrim içi değil
+24	%s : %d adet kazandın.
+25	[Lonca] Bu eylemi bir savaş esnasında gerçekleştiremezsin.
+26	[Lonca] 10 saniye içinde kullanabilirsin.
+27	[Lonca] Loncayı devralması için karakterin seviyesi en az 40 olmalı.
+28	[Lonca] %s kazandı.
+29	[Lonca] Berabere
+30	[Lonca] Bir savaş esnasında kimseyi loncadan çıkaramazsın.
+31	[Lonca] Lonca liderini çıkarmak için bir anket başlatamazsın.
+32	[Lonca] Kendini loncadan çıkarmak için bir anket başlatamazsın.
+33	[Lonca] Loncayı devretmek için Yer Değiştirme Yüzüğü'ne ihtiyacın var.
+34	[Lonca] Lonca bankasında yeterli alan yok.
+35	Kutuda %s var.
+36	[Lonca] Loncayı en erken 12 saat sonra, lonca deposunu kullandıktan sınra terk edebilirsin.
+37	[%s] Loncası! Son hedef belirdi. Tüm hedefleri yok edin ve bu savaşı kazanın!
+38	[Lonca] Savaş 5 dakika içinde sona erecek.
+39	[Lonca] Savaş 1 dakika içinde sona erecek.
+40	[Lonca] Lonca duyurusu olan lonca yok.
+41	[Lonca] Henüz hiçbir lonca ejderhayı yenemedi.
+42	[Lonca] En iyiler listesi yenilendi
+43	[Lonca] Ejderha Kraliçesi Meley'e karşı verilen savaş başladı.
+44	[Lonca] Meley'in İni'nin kapısı açılıyor. En fazla bir saat kalabilirsiniz.
+45	[Lonca] Ejderha Kraliçesi Meley'i yendiniz!
+46	Bu anahtar kilide uygun görünmüyor.
+47	[Lonca] Gereken süre: %d dak. %d san.
+48	[Lonca] Güvenliğiniz için 10 dakika sonra İn'den ışınlanacaksınız.
+49	[Lonca] Süre doldu.
+50	[Lonca] İn'in kapısı tekrar kapanıyor.
+51	[Lonca] Güvenliğiniz için 1 dakika sonra İn'den ışınlanacaksınız.
+52	[Lonca] İn %d dak. sonra kapancak.
+53	[Lonca] Meley'in İni'ndeki savaşı iptal ettiniz.
+54	[Lonca] Ejderha Mağarası'nda iken lonca savaşı ilan edemezsin.
+55	[Lonca] Rakip lonca şu anda Ejderha Mağarası'nda savaşta.
+56	Hiç bir şey kazanamadın.
+57	[Lonca] Meley'in İni için kayıt başarıyla tamamlandı.
+58	[Lonca] Erjderha Mağarasına girmek için Ejderha Bekçisi Dolnarr'ı ziyaret et.
+59	Yaz Etkinliği başlıyor. Şehir'de Summer'i ziyaret edin. Sizlere serinletici lezzetler sunacak.
+60	Yaz Etkinliği yakında son bulacak.
+61	Bu efekt zaten etkin.
+62	[Lonca] Her 10 saniyede bir işlem gerçekleştirebilirsin.
+63	[Lonca] Başka bir üye şu anda lonca bankasını kullanıyor.
+64	[Lonca] [%s] loncası [%s] loncasına karşı savaşı kaybetti.
+65	Maksimum Yang sayısına ulaştığın için bu kutuyu açamazsın.
+66	[Lonca] Senin loncanın lonca hesabında yeterli Yang yok. Lütfen daha fazla Yang yatırın ve tekrar deneyin.
+67	Bu eşyayı kullanmak için yeterli Yang a sahip değilsin.
+68	[Lonca] Nesne başarıyla kaydırıldı.
+69	[Lonca] Bu lonca logosunu kullanamazsın! Lütfen tekrar dene.
+70	[Yansıtma] Yansıtılan nesneyi kuşanamazsın çünkü bu nesne diğer cinsiyet için.
+71	[Yansıtma] Yansıtılan nesneyi kuşanamazsın çünkü sınıfı farklı.
+72	[Canavar kartı] %d. görev sınıfında %s canavarını alt ettin.
+73	[Canavar kartı] Bir canavar görevi tamamladın. Şimdi bir canavar kartı kap!
+74	[Canavar kartı] Envanterinde yer yok.
+75	[Canavar kartı] [%s] Seviye atlamayı tamamladın.
+76	[Canavar Kartı] Şimdi canavarın hareket animasyonunu izleyebilirsin.
+77	[Canavar Kartı] Şimdi bu canavara dönüşebilirsin.
+78	Beceri seviyeni düşürdün.
+79	[Canavar Kartı] Şimdi bu canavarın yakınına ışınlanabilirsin.
+80	[Lonca] Bir savaşçı olarak kendi lonca savaşını izleyemezsin.
+81	[Lonca] Lonca başvuru için minimum seviye ekledi (minimum seviye: %d).
+82	[Lonca] Sadece her 10 saniyede bir işlem gerçekleştirebilirsin.
+83	[Lonca] %s loncası bölge satın aldı.
+84	[Lonca] Başka bir kanalda bir Ejderha Tapınağı yapılıyor.
+85	[Lonca] Logo sunucusu bakıma alındı.
+86	[Lonca] Logo sunucusu bakıma alındı.
+87	[Lonca] Bu arsa başka bir oyuncuya ait.
+88	Beceri seviyeni düşüremezsin.
+89	Savaş Bölgesine seviye %d itibarıyla girebilirsin.
+90	Maalesef bu harita üzerinden Savaş Bölgesi'ne giremezsin.
+91	Savaş bölgesine girmek veya onu terk etmek için bütün pencereleri kapatmalısın.
+92	Ölü iken Savaş Bölgesi'ni terk edemezsin.
+93	Savaş Bölgesi'ne giriyorsun. Lütfen bekle.
+94	Savaş Bölgesi'ni terk ediyorsun. Lütfen bekle.
+95	Bir sonraki giriş %d dakika sonra mümkün.
+96	Bir sonraki giriş %d saniye sonra mümkün.
+97	Bu eşyayı burada kullanamazsın.
+98	Bu eşyayı burada kullanamazsın.
+99	Bu etki zaten çalışıyor.
+100	Hemen dirilmek için bir Reenkarnasyon nesnesine ihtiyacın var.
+101	Savaş Bölgesi açıldı.
+102	Savaş Bölgesi kapatıldı.
+103	Savaş Bölgesi %d dakika sonra açılacak.
+104	Savaş Bölgesi %d dakika sonra kapatılacak.
+105	Aktif bir etkinlik var ve iki katı puan alabilirsin.
+106	Savaş Bölgesi'ndeki etkinlik sona erdi.
+107	Geri çekileceğini bildirdin ve %d dakika sonra Savaş Bölgesi'ni terk edebilirsin.
+108	Bir oyuncu geri çekileceğini bildirdi. Daha fazla puan almak için onu öldür!
+109	Geri çekilme bildirimin kaldırıldı.
+110	Ödüller için evanter kapasiten yeterli değil.
+111	Bu nesne sadece internet cafede kullanılabilir.
+112	Geri çekilme bildirimin etkin.
+113	Şu anda Savaş Bölgesi'ne girilemiyor.
+114	Harika! Savaş Bölgesi sıralamasında %d. sıraya ulaştın. Bunun için özel bir ödül alacaksın.
+115	Şu anda %d puanın var. Toplam puanın %d.
+116	Bu nesneyi Savaş Bölgesi'nden geri çekilirken kullanamazsın.
+117	Savaş Bölgesi'nde savaş ilan edemezsin.
+118	Bu eylem bu haritada mümkün değil.
+119	Kalan Sayı: %d
+120	[Lonca] Lonca serveti maksimuma ulaştı.
+121	[Lonca] 2 milyardan fazla Yang'a sahip olduğun için Yang çekemezsin.
+122	Bu limitin üzerinde.
+123	[Lonca] Başka bir pencere açık olunca Yang çekemezsin.
+124	Lonca savaş ilanı 3 dakika sonra devre dışı.
+125	Savaş Bölgesi'ne girişe %d saniye kaldı.
+126	Savaş Bölgesi'nden çıkışa %d saniye kaldı.
+127	%d Puan kaybettin. Kalan puanlar: %d
+128	Ne yazıkki envanterinde yeterince yer yok.
+129	Bu oyuncu için puan alamazsın.
+130	Geri çekileceğini bildirdin, Savaş Bölgesi'ni %d saniye sonra terk edebilirsin.
+131	Etkinlik başladı!
+132	Tohum ya da ay pastası kullanıldı.
+133	Devam etmek için %s karakterini arkadaş listenden sil.
+134	%s şu andan itibaren engellenecek.
+135	%s artık engellenmeyecek.
+136	%s zaten senin tarafından engellendi.
+138	Devam etmek için %s üzerindeki engellemeyi kaldır.
+139	%s seni engelledi.
+140	Güncel etkinliğin canavarı belirdi.
+141	Yeterince yıl dönümü bayrağına sahip değilsin.
+142	Yıl dönümü etkinliği başladı!
+143	Evli değilsen nikah yüzüğü takamazsın.
+144	Yıl dönümü etkinliği %d dakika içinde sona erecek.
+145	Başka bir kostüm taşırken bu nesneyi kullanamazsın.
+146	Gelinlik veya Smokin giyerken bu eşyayı kuşanamazsın.
+147	Bu nesneyi kuşandığın sürece bu eylemi gerçekleştiremezsin.
+148	[Lonca] Başka bir pencere açık olduğu sürece lonca hesabına ne Yang yatırabilirsin ne de çekebilirsin.
+149	[Lonca] Lonca hesabına Yang yatırırken veya çekerken bu işlemi gerçekleştiremezsin.
+150	[Lonca] 'Yang yatır' veya 'Yang öde' penceresi zaten açık.
+151	[Lonca] Bir pet çağırırken lonca hesabına ne Yang yatırabilir ne de çekebilirsin.
+152	%s şurada görülür: %s
+153	Seungryong Vadisi
+154	Etkinlik Dedektörünü bu pozisyondayken kullanamazsın.
+155	Sohan Dağı
+156	Yongbi Çölü
+157	Doyyumhwan
+158	Ramazan Etkinliği başlıyor!
+159	Ramazan etkinliği sona erdi.
+160	Kanalı değiştiremezsin.
+161	Biraz bekle lütfen. Kanal değiştiriliyor.
+162	Nesne alınamıyor.
+163	Bu nesne dönüştürülemez.
+164	Efsun nesnesi bu nesneye uygulanamaz.
+165	Etkinlik Dedektörü gizemli bir ışıkla birlikte yok oldu.
+166	Arttırma kağıdı bu nesneye uygulanamaz.
+167	Nesne ticareti sadece aynı harita üzerinde yapılabilir.
+168	Şu an kanalla bağlantı kurulamıyor. Lütfen daha sonra tekrar dene.
+169	[Grup] Grup araması etkinken bu işlemi gerçekleştiremezsin.
+170	[Gaya] Yeterli süs taşına sahip değilsin.
+171	[Gaya] Süs taşı biletmeye yetecek kadar Yang'ın yok.
+172	[Gaya] Zaten maksimum sayıda Gayaya sahipsin.
+173	[Gaya] Bileme işlemi başarılı oldu.
+174	[Gaya] Bileme işlemi başarısız oldu.
+175	[Gaya] Eşya listesi yenilendi.
+176	Etkinlik Dedektörü kayboldu.
+179	[Gaya] Envanterin dolu.
+180	[Gaya] 'Gaya mağazasını sıfırlaya' sahip değilsin.
+181	[Gaya] Önce Gaya mağazasını açman gerekiyor.
+182	[Gaya] Gaya mağazasında başka yer açamazsın.
+183	[Gaya] Yeterli %s yok. Bir yer daha açabilmek için daha çok %d lazım.
+184	[Gaya] Gaya mağazası şu anda kullanılamıyor.
+185	[Gaya] Gaya mağazası zaten açık.
+186	[Gaya] Gaya mağazasını ancak diğer pencerelerini kapattığında açabilirsin.
+187	Metin Taşı Dedektörü zindanda çalışmıyor.
+188	[Grup] Savaş başladı.
+189	[Grup] Zindanı başarıyla tamamlamak için 1 saatiniz var.
+190	[Grup] Görevinizi takdirle başardınız!
+191	[Grup] Işınlanmaya kalan süre: %d dak. %d san.
+192	[Grup] 10 dakika içinde zindandan ışınlanırsınız.
+193	[Grup] Şimdi Meley'in İni için kaydoldunuz.
+194	[Grup] Giriş yapmak için yetkili YZK'ya başvurun.
+195	[Grup] Pes ettiniz.
+196	[Grup] Bir dakika içerisinde şehre taşınacaksın.
+197	Ödülünü alacağın yer: %s.
+198	Metin Taşı Dedektörü gizemli ışıkla birlikte kayboldu.
+199	[Grup] Meley'in İni'ndeki grup dövüşündeki en iyiler listesi hazırlanıyor.
+200	[Grup] Şu anda bu zindandan çıkamazsın.
+201	[Grup] Zindan süresi doldu.
+202	[Grup] Zindandan çıktın.
+203	[Grup] Zindan %d dak. sonra sona erecek.
+204	Al: %s - %d
+205	Taş gibi donduğun sürece dükkan açamazsın.
+206	Taş gibi donduğun sürece nesne kullanamazsın.
+207	Bu komut sadece Zodyak tapınağında uygulanabilir.
+208	Yeterli nişanın yok.
+209	Metin Taşı Dedektörü kayboldu.
+210	Henüz tüm görevleri yerine getirmedin.
+211	Ödülünü almak için daha fazla Aventurin ve Aurelin hazinesine ihtiyacın var.
+212	%s karakterini dirilttin.
+213	%s tarafından diriltildin.
+214	Diriltme işlemi için yeterince nesnen yok.
+215	Diriltildin.
+216	Bunu burada kullanamazsın.
+217	Bunu şu an kullanamazsın.
+218	%s diriltildi.
+219	1. kat halloldu. Keşiş Milbon'a geri dönün.
+220	%s eşyasını kazandın.
+221	İstiridyenin içinde sadece sıradan bir taş parçası var.
+222	Tüm üyeler taşa döndü. Misyon başarısız oldu.
+223	Tüm katlar halloldu. Şimdi bonus katına ışınlanıyorsunuz.
+224	Misyon tamamlandı. Grup lideri "atla" butonunu kullandığı anda, doğrudan %d. kata ışınlanırsınız.
+225	Misyon başarılı olmadı.
+226	İşi bitti! Bir dakika içerisinde kimse diriltilmezse zindandaki süreniz dolar.
+227	Zaman doldu.
+228	Bu tapınağın kapısı başka bir gün açılır.
+229	Giriş yapmak için tüm grup üyeleri aynı haritada bulunmak zorundadır.
+230	Grup lideri değilsin.
+231	Çevrede %d Zodyak tapınağı var. Birine ışınlanmak için ilgili komutu gir (1- %d).
+232	İstiridye kayboldu.
+233	Bu haritada Zodyak tapınağı yok.
+234	Metin taşlarını imha et.
+235	Bonus katı: Metin taşlarını imha et
+236	Metin taşlarını imha et.
+237	Metin taşlarını imha et.
+238	5 Zodyak patronu alt et.
+239	Bonus katı: Şimdi 5 dakika boyunca tüccardan alışveriş yaparak stoklarınızı doldurabilirsiniz.
+240	Metin taşlarını imha et.
+241	Metin taşlarını imha et.
+242	Tüm Metin taşlarını imha et.
+243	İstiridyenin içinde Beyaz bir inci var.
+244	Tüm Metin taşlarını imha et ve Zodyak patronunu öldür.
+245	Tüm Metin taşlarını imha et.
+246	Tüm canavarları alt et.
+247	Tüm canavarları alt et.
+248	Canavarları yen.
+249	Canavarları yen.
+250	Tüm canavarları alt et.
+251	Bonus katını kıl payıyla kaçırdın.
+252	Tüm Zodyak patronlarını alt et.
+253	İstiridyenin içinde Mavi bir inci var.
+254	Zodyak patronunu alt et.
+255	Zodyak patronunu alt et.
+256	Zodyak patronunu hiç ölmeden alt et.
+257	Tüm canavarları hiç ölmeden alt et.
+258	Zaman doldu. Şansını bir dahaki sefer dene.
+259	Zodyak patronunu alt et.
+260	Tüm rakipleri alt et!
+261	Bonus katı: Bir Metin taşı imha et.
+262	Bir Metin taşı imha et! Başarılı olursan bir bonus güçlendirici kazanırsın.
+263	PvP turnuvasına kaydolmak için %d dakika kaldı!
+264	İstiridyenin içinde kan kırmızı bir inci var.
+265	PvP turnuvasının savaş arenasına giriş yapamazsın.
+266	PvP turnuvasında kendini dönüştüremezsin.
+267	Savaşın başlamasına %d kaldı!
+268	Savaş başladı.
+269	Kazanan: %s / Kaybeden: %s
+270	%s Arena'yı terk etti. %s kazandı.
+271	PvP turnuvasına kayıtlar kapandı.
+272	PvP turnuvası %d dakika içinde başlayacak.
+273	Final
+274	Bu kitabı anlamak kolay değil.
+275	Yarı Final
+276	%u. Tur
+277	Kazanan yok
+278	PvP turnuvası bitti.
+279	Turnuvanın galibi %s!
+280	Katılımcı: %s
+281	Kalan katılımcı: %u
+282	Mevcut katılımcı: %u
+283	PvP turnuvasına kaydoldun.
+284	Bu kitap sana yardım etmeyecek.
+285	PvP turnuvasına kaydolmadın.
+286	Bu komut sadece PvP turnuvasının haritasında uygulanabilir.
+287	Yutnori başladı!
+288	Huş gövdeleri toplayıp bunlardan Yutnori oyun tahtaları yap ve heyecanlı mini oyuna katıl.
+289	Harika ödüller seni bekliyor!
+290	Yutnori bitti.
+291	Ödülünü almak için Yutnori masasına git.
+293	[Ruh sistemi] Efekti almak için %s kullan.
+294	[Ruh sistemi] %s zaten en yüksek seviyede.
+295	Bu kitabı anlaman için 30.Seviyede olman gerekiyor.
+296	[Ruh sistemi] Ruh etkin.
+297	
+298	[Canavar Avı Etkinliği] %s haritasında %s belirdi.
+299	Jayang Şehri
+300	Bokjung Şehri
+301	Bakra Şehri
+302	Hwang Tapınağı
+303	Kuahlo Dong (Örümcek Zindanı)
+304	Örümcek Zindanı 2
+305	Bu kitabı anlaman için 50.Seviyede olman gerekiyor.
+306	Gautama Uçurumu
+307	Nefrit Körfezi
+308	Yıldırım Dağları
+309	Efsunlu Orman
+310	Sürgün Mağarası
+311	Sürgün Mağarası 2
+312	Binek hayvanın üzerindeyken giremezsin.
+313	Bu kuşanılmış nesneler üzerinde uygulanamaz.
+314	Kızıl Orman
+315	Yılan Vadisi
+316	Daha fazla kombo geliştiremezsin.
+317	Daha ihtiyacın var: %d %s.
+318	Etkinlik sonlandırıldı. Bu nesneyi artık kullanamazsın.
+319	Maksimum seviyeye zaten ulaşıldı.
+320	Başarılı! %s etkisi şu seviyeye yükseltildi: %d
+321	Başarısız! %s etkisinin şu seviyeye yükseltilmesi başarısız: %d
+322	Başarılı! %s etkisi şu andan itibaren etkin.
+323	Başarısız! %s üzerindeki etkilerin değişikliği başarısız.
+324	Başarılı! %s etkisi şu andan itibaren etkin.
+325	Başarısız! %s etkisi etkinleştirilmedi.
+326	Çiçek çocuklar etkinliği başladı.
+327	%s Loncası %s Loncasının bayrağını ele geçirdi!
+328	Bu dili zaten anlıyorsun.
+329	Çiçek çocuklar etkinliği sonlandırıldı.
+330	Posta kutunu tekrar açmadan önce biraz beklemelisin.
+331	Posta kutunu açmak için lütfen diğer tüm pencereleri kapat.
+332	Posta kutun dolu.
+333	Yeni mesajlar almak için lütfen posta kutunu boşalt.
+334	Bunu şu anda kullanamazsın.
+335	[Lonca] Lonca savaşı alannında lonca yeteneklerini kullanamazsın.
+336	[Lonca] Bunu sadece lonca savaşında kullanabilirsin.
+337	%d Won aldın.
+338	[Lonca] Yatırdı: %d Yang
+339	Bu beceriyi daha fazla yükseltemezsin.
+340	[Lonca] Zaten Lonca bölgesine sahip olduğun için satın alım işlemi iptal edildi.
+341	[Lonca] Loncan zaten Lonca bölgesine sahip olduğu için satın alım işlemi iptal edildi.
+342	[Kralı yakala] Puanın bir ödül için yeterli değil.
+343	[Kralı yakala] Şimdi bir tur "Kralı yakala" oyna!
+344	[Okey Etkinliği] Canavarları yen, kartları topla ve bir tur okey oyna.
+345	[Okey Etkinliği] Harika ödüller seni bekliyor!
+346	[Kralı yakala] "Kralı yakala" sona erdi!
+349	[Kralı yakala] %s Kralı yakala'da %d puan aldı.
+350	Bu kitabı anlayabilmek için seviyeni yükseltmelisin.
+351	Araştırmacının özütünü zaten kullandın.
+352	"Gemi savunması" zindanı hazır. Balıkçı sizi gemiye alacak.
+353	Deniz canavarları tarafından saldırıya uğruyoruz! Savaşa hazırlanın!
+354	Yine saldırıyorlar! Savaşmaya hazır olun!
+355	Kara göründü! Gemi direğini başarıyla savundunuz ve uzun bir yolculuktan sonra yeni kıtaya ulaştınız. Portala gidin.
+356	Direğiniz parçalandı. Cesurca savaştınız, ama savaşı kaybettiniz.
+357	Gemiden %d sn. içinde vazgeçmelisiniz.
+358	Gemiden %d dk.
+359	Deniz savaşı %d sn. içinde başlayacak
+360	Kitabın öğrenilmesi zor.
+361	Acele edin! Portal üzerinden karaya ulaşmanız için %d dak. kaldı.
+362	Deniz savaşını başlatmamış olduğunuz için şimdi gemiyi terk etmelisiniz.
+363	Deniz savaşını 1 dakika içinde başlatmazsanız, gemiyi terk etmek zorundasınız.
+364	%s ögesinden kalan HP: %%%d
+365	SOS! Direk parçalandı ve geminiz batıyor. Şimdi Ejderha Ateşi Burnu'na ışınlanacaksınız.
+366	%d. Dalga: %d sn. boyunca tüm gücünüzle %s ögesini savunun.
+367	%d. Dalga: %s savunması esnasında, %s kişisini mağlup edin.
+368	Direği başarıyla savundunuz. Aferin! Bir sonraki dalgaya hazırlanın.
+369	Bir sonraki dalga %d sn. içinde başlayacak.
+370	%s
+371	Bu kitapla daha fazla eğitim yapamazsın.
+372	Ancak %d sn. içinde savaştan çekilebilirsin.
+373	Bu eylem şu anda yapılamaz.
+374	Kanalı değiştirmek veya ışınlanmak için posta kutusunu açtıktan sonra %d saniye beklemelisin.
+375	Vergi %%%d olarak ayarlandı.
+376	Binicilik Eğitimi almak için 50'inci seviyeye ulaşmış olman gerekiyor.
+377	Kötü ruhların lanetinden Kötü Ruh Kovma Kağıdının yardımıyla kurtuldun.
+378	Daha fazla Binicilik Rehberi okuyamazsın.
+379	Binicilik Kılavuzu'nu okudun ve bir tane Binicilik Puanı kazandın.
+380	Bu puanı Biniciliğini geliştirmek için kullanabilirsin!
+381	%s loncasının bayrağı, %s tarafından çalındı.
+382	Binicilik Rehberini anlamadın.
+383	Zihnin açık. Şimdi iyi konsantre olabilirsin.
+384	Sıralama %d puan yükseldi.
+385	Şu anki saç stilini beyazlatamaz veya boyayamazsın.
+386	Saçını tekrar boyayabilmek için %d. seviyeye ulaşman gerekli.
+387	Bu eşya sadece karşı cins tarafından açılabilir.
+388	Şu anki pozisyonunda bunu kullanamazsın.
+389	Işınlanmaya hazırsın, bu nedenle geri dönüş kağıdını kullanamazsın.
+390	Başlangıç yerine geri gönderiliyorsun.
+391	%s%s zindanda kullanılamaz.
+392	[Quest] Ödülünü aldın zaten.
+393	the
+394	the
+395	Silinecek taş parçası kırıkları yok.
+396	Bu eşyanın geliştirilmesini değiştiremezsin.
+397	Değiştirebileceğin hiçbir geliştirme yok.
+398	Bunu bir geliştirmeden en az %d dakika sonra yapabilirsin. (%d dakika kaldı)
+399	Geliştirmeyi değiştirdin.
+400	Geliştirme başarıyla eklendi.
+401	Geliştirme eklenmedi.
+402	Kutsama Küresini bu eşyaya başka bir bonus eklemek için kullanmalısın.
+403	Bunu arenada kullanamazsın.
+404	Bu eşya geliştirilemez. Maksimum bonus sayısına ulaşıldı.
+405	Kutsama Küresini üzerinde zaten 4 bonus olan eşyalar için kullanabilirsiniz.
+406	Slot başarıyla eklendi.
+407	Slot eklenmedi.
+408	Bu nesneye daha fazla slot eklenmiyor.
+409	Bu nesneye slot eklenmiyor.
+410	Silahlanma başarılı.
+411	Silahlanma başarısız.
+412	İlk önce bir slot eklemen gerekiyor. Bunu yapmak için bir elmas kullan.
+413	Bu nesnede mücevher slotu yok.
+414	Bunu Duygu Maskesi taktığında yapabilirsin.
+415	Elmas kullanmak istiyorsan bir slot eklemen gerekiyor.
+416	Bu nesneye daha fazla mücevher eklenemiyor.
+417	Bu nesneler birleştirilerek kullanılmıyor.
+418	Balık tutarken yemi değiştiremezsin.
+419	Şu anki yemi %s ile değiştirdin.
+420	Çengele yem olarak %s taktın.
+421	İksir hazırlamak için tüm malzemelere sahip değilsin.
+422	Yeterli malzemen yok (%s).
+423	Yeterince boş şişen yok.
+424	İksir hazırlama işlemi başarısız.
+425	Bunu sadece bayanlar yapabilir.
+426	Aynı türden çok sayıda zihin taşı ekleyemezsin.
+427	Bu zihin taşı böyle bir nesneye eklenemez.
+428	Bu zihin taşını silaha takamazsın.
+429	Zihin taşını başarıyla taktın.
+430	Zihin taşı yerleştirirken kırıldı.
+431	Boş yer yok.
+432	Şu anda eşinize teleport olamazsınız.
+433	Katılmış olduğun bir krallık savaşı devam ederken geri dönüş kağıdı kullanamazsın.
+434	Depoyu açtıktan sonra %d saniye boyunca geri dönüş kağıdı kullanamazsın.
+435	Başka pencere açık olduğu sürece geri dönüş kağıdı kullanamazsın.
+436	Kişi bulunamadı.
+437	Ticaretten sonra %d saniye Parşömen kullanamazsın.
+438	Depoyu açtıktan sonra %d saniye boyunca geri dönüş kağıdı kullanamazsın.
+439	Mesafe çok yakın olduğu için geri dönüş kağıdı kullanamazsın.
+440	Ticaretten sonra %d saniye boyunca geri dönüş kağıdı kullanamazsın.
+441	Başka bir pencere açıkken depo açamazsın.
+442	Bu eşyayı düşüremezsin.
+443	Düşürülen eşya 5 dakika içinde yok olacak.
+444	%s Kazandın.
+445	Çok fazla eşya taşıyorsun.
+446	%s şunu kazandı: %s.
+447	Kısa zamanda herkes seçilen şehre ışınlanacak.
+448	Çok yakınsın.
+449	Eşya Ticareti:  %s, %s
+450	Dönüşüm esnasında ekipmanını değiştiremezsin.
+451	Eşya giyebilmek için hareketsiz olman gerekli.
+452	Maymun Bitkisi yem olarak kullanılamaz. Ölmüş atları canlandırmak için kullanılır.
+453	Ölü Atı besleyemezsin.
+454	Atı otlarla beslediniz.
+455	Atı besledin.
+456	Bu saç şekli için seviyen çok düşük.
+457	Zaten bu saç şekline sahipsin.
+458	Dönüşmüş haldesin zaten.
+459	Çok uzaksın.
+460	Bu yanlış ticaret eşyası.
+461	Kendinden daha yüksek seviyeli bir canavara dönüşemezsin.
+462	Seviyen çok düşük olduğu için bu nesneyi kullanamıyorsun.
+463	Bu nesneyi kullanmak için yeterli güce sahip değilsin.
+464	Zekân çok düşük olduğu için bu nesneyi kullanamıyorsun.
+465	Bu nesneyi kullanabilmek için yeterli çevikliğe sahip değilsin.
+466	Bu nesneyi kullanmak için yeterli canlılığa sahip değilsin.
+467	Evli olmadığın için bu eşyayı kullanamazsın.
+468	2.kez bu eşyayı giyemezsin.
+469	%sgirişinin silinmesine kalan süre : %d
+470	Bu sadece diğer cinsiyetle birlikte yapılabilen bir aksiyon.
+471	%s Mücevherinden bir değerli taş kayboldu.
+472	[Guild] Lonca adı hatalı.
+473	[Guild] Bu Lonca adı zaten kullanılıyor.
+474	[Guild] Lonca kuramazsın.
+475	%s, %s loncasına karşı savaş ilan etti!
+476	[Guild] %s Lonca savaşını reddetti.
+477	%s ile %s arasındaki lonca savaşı birkaç dakika içinde başlayacak!
+478	%s ile %s arasında lonca savaşı başladı!
+479	%s ile %s arasındaki lonca savaşı berabere sonuçlandı!
+480	Lonca savaşında %s, %s loncasına karşı kazandı.
+481	Bunun için eşinin onayı gerekli.
+482	[Guild] Lonca savaşı iptal oldu.
+483	%s ile %s arasındaki lonca savaşı iptal oldu!
+484	Kapat
+485	Hareket iptal edildi. Bir savaşa girdin.
+486	Biri hesabınıza giriş yaptı. Bağlantınız kesilecek.
+487	Ağaçtan gizemli bir ışık yayılıyor.
+488	%d oyun süresi hesabınıza eklendi. (Ödeme Numarası %d)
+489	Lonca savaşına izleyici olarak katılabilirsin.
+490	Bir karakter seçerken <izlemeyi bitir> butonu görünür.
+491	Burada düşman yok.
+492	%s ile olan savaş başladı!
+493	Eğer düşman bulunamazsa Lonca Savaşı otomatik olarak biter.
+494	Lonca Savaşı vaktinden önce bittiği için sonuç berabere sayılıyor.
+495	İmparatorların Kutsaması nedeniyle enerji yansıtıldı.
+496	%d saniye sonra İmparator Kutsamasını kullanabilirsin.
+497	Yetersiz vergi geliri : %d
+498	[TEST_ONLY]Vergi : %d
+499	Dönüşüm sırasında hata oluştu.
+500	Dönüşümü tamamen öğrendin.
+501	Lütfen önce atını çağır.
+502	Atını gönderdin.
+503	%s seni savaşa davet ediyor!
+504	Atından inmelisin.
+505	Atının üzerinde otururken onu besleyemezsin.
+506	Ata %s%s yedirdin.
+507	%s gerekli.
+508	%d saniye sonra oyun kapanacak.
+509	Oyun %d saniye sonra kapanacak.
+510	%d saniye sonra oyun kapanacak.
+511	Çıkışınız iptal edildi.
+512	Giriş ekranına dön. Lütfen bekleyin.
+513	Serverla olan bağlantınız kesiliyor. Lütfen bekleyin.
+514	%s savaşa davet ettiniz.
+515	Karakteri değiştirdiniz. Lütfen bekleyin.
+516	Yeniden dirilme henüz mümkün değil. %d saniye bekle.
+517	Yeniden dirilme henüz mümkün değil. %d saniye bekle.
+518	Yeniden dirilme henüz mümkün değil. %d saniye bekle.
+519	Şehirde yeniden dirilme henüz mümkün değil. %d saniye bekle.
+520	Bekleme süresi doldu. Şehirde yeniden diriltileceksin.
+521	Dönüşmüş durumda olduğunuz sürece statünüzü değiştiremezsiniz.
+522	Oyuncu zaten dövüşüyor.
+523	[Guild] Bu Loncaya ait değil.
+524	[Guild] Lonca Becerilerinin Seviyesini değiştiremezsin.
+525	Seçiminiz yanlış.
+526	[Storages] Yanlış şifre girdin.
+527	[Storages] Depo zaten açık.
+528	[Storages] Yeniden depo açmak için 10 saniye beklemelisin.
+529	[Storeroom] Depoya uzak olduğun için açamıyorsun.
+530	[Group] Sunucu grup isteğini gerçekleştiremedi.
+531	[Group] Zindandayken gruptan ayrılamazsın.
+532	[Group] Gruptan ayrıldın.
+533	[Guild] Loncanız zaten başka bir savaşa katılıyor.
+534	[Guild] Lonca savaşı için kimse yetkilendirilmedi.
+535	[Guild] Bu isimde bir Lonca bulunamadı.
+536	Zaten bir aday var.
+537	[Guild] Bu Lonca zaten bir savaşa katılıyor.
+538	[Guild] Lonca savaşına katılmak için yeterli Yang yok.
+539	[Guild] Bu Lonca, Lonca savaşı yapmak için yeterli Yang'a sahip değil.
+540	[Guild] Bu Lonca zaten başka bir Lonca savaşı için kayıt edilmiş.
+541	[Guild] Loncanız zaten başka bir savaşa katılıyor.
+542	[Guild] Sıralama Lonca Savaşına katılabilmek için çok düşük.
+543	[Guild] Lonca savaşına en az %d oyuncu katılması gerekiyor.
+544	[Guild] Lonca bir savaşta yer almak için yeterli Sıralama Puanına sahip değil.
+545	[Guild] Lonca, Lonca Savaşına katılabilmek için yeterli üyeye sahip değil.
+546	Cep telefonu numarası kaydedebilmek için 20.Seviyeden yüksek olmalısın.
+547	İmparator olmak için gerekli özelliklere sahip değilsin.
+549	Daveti kabul edemezsin, zaten bir grubun var.
+550	Bunu sadece İmparator kullanabilir.
+551	Dinlenme Süresi yaklaşık %d saniye
+552	Vergi eksikliği. Mevcut Sermaye : %u Eksik Sermaye : %u
+553	Sıra: warpto <character name>
+554	Bilinmeyen bir oyuncuya nakledemezsiniz.
+555	Oyuncu %d kanala ekleniyor. (Bulunulan kanal: %d)
+556	%s yanına naklet.
+557	Bilinmeyen bir oyuncuyu arayamazsın.
+558	[Guild] Lonca savaşı sırasında avlanma, Tecrübe Puanı kazandırmıyor.
+559	İmparator kutsaması kullanıldığı zaman %s HP ve SP yeniden yüklenir.
+560	Benim İmparatorluk Bilgim
+561	[%sHükümdar] : %s Yang Sahip olunan %lld
+562	[%sHükümdar] : %s
+563	İmparator Bilgisi
+564	Bunu sadece bir İmparator kullanabilir.
+565	1 - 50 arasında bir rakam seç.
+566	Vergi ayarlandı: %d %%.
+567	Canavar çağrılamaz. Mob numarasını kontrol ediniz.
+568	Hayat Puanları +%d
+569	Mana Puanı +%d
+570	İmparator Kutsaması aktif.
+571	Dayanıklılık +%d
+572	Zeka +%d
+573	Güç +%d
+574	Çeviklik +%d
+575	Saldırı Hızı +%d
+576	Hareket Hızı %d
+577	Dinlenme Süresi -%d
+578	Geri Kazanılan Enerji +%d
+579	Geri Kazanılan SP +%d
+580	Zehirli Saldırı %d
+581	Hazırlandı. %d sonra kullanılabilir.
+582	Star +%d
+583	Hız azalması +%d
+584	Kritik saldırı şansı %%%d
+585	Delici saldırı şansı %%%d
+586	Yaratıklara karşı oyuncunun saldırı gücü +%%%d
+587	Yaratıklara karşı Atın saldırı gücü +%%%d
+588	Wonggui karşısında saldırı artışı  +%%%d
+589	Milgyo karşısında saldırı artışı +%%%d
+590	Ölümsüzlere karşı saldırı artışı: +%%%d
+591	Şeytanlara karşı saldırı artışı: +%%%d
+592	İmparator Sa-Za-Hu sayesinde, oyuncu bu alanda %s 3 dakika için %%10 daha fazla saldırı gücü aldı.
+593	Saldırı sırasında %%%d enerji emildi.
+594	Saldırı sırasında %%%d SP emildi.
+595	%%%d oranında SP düşmandan çalma şansı.
+596	Oranında SP emiliyor %%%d.
+597	Yakın dövüş saldırısını engelleme şansı %%%d
+598	Uzak dövüş saldırısını engelleme şansı %%%d
+599	Kılıç Savunması %%%d
+600	Çift-El Savunması %%%d
+601	Çift-El Savunması %%%d
+602	Çan Savunması %%%d
+603	İmparator Geum-Gang-Gwon sayesinde, oyuncu %s 3 dakika süreyle %%10 daha fazla savunma aldı.
+604	Yelpaze Savunması %%%d
+605	Uzak Dövüş Direnci %%%d
+606	Ateşe dayanıklılık %%%d
+607	Şimşek direnci %%%d
+608	Büyü Savunması %%%d
+609	Rüzgara Dayanıklılık %%%d
+610	Doğrudan Vuruş Yansıtma: %%%d
+611	Lanet Yansıtma: %%%d
+612	Zehire karşı koyma %%%d
+613	Eğer kazanırsan SP %%%d artacak.
+614	Etkinlik başladı bile. (Flag: %d)
+615	Eğer kazanırsan tecrübe %%%d artacak.
+616	Eğer kazanırsan Yang %%%d artacak.
+617	Eğer kazanırsan ele geçirilen nesne %%%d artacak.
+618	İksir kullandığın zaman güç %%%d artacak.
+619	Kazandıktan sonra hayat puanın %%%d oranında artacak.
+620	Baş dönmesi yok %%%d
+621	Yavaşlama yok %%%d
+622	Düşmek yok %%%d
+623	Saldırı gücü + %d
+624	Zırh + %d
+625	OX Quiz metni yüklenemedi.
+626	Büyülü Saldırı + %d
+627	Büyü Savunması + %d
+628	Max. Dayanıklılık + %d
+629	Savaşçılara karşı güçlü +%%%d
+630	Ninjalara karşı güçlü +%%%d
+631	Suralara karşı güçlü +%%%d
+632	Şamanlara karşı güçlü +%%%d
+633	Canavarlara karşı güçlü +%%%d
+634	Saldırı +%%%d
+635	Savunma +%%%d
+636	OX Quiz metni yüklendi.
+637	Tecrübe %%%d
+638	Nesne bulma oranı %.1f
+639	Yang bulma şansı %.1f
+640	Enerji üst sınırı +%%%d
+641	Enerji üst sınırı +%%%d
+642	Beceri Hasarı %%%d
+643	Vuruş Hasarı %%%d
+644	Beceri hasarına dayanıklılık %%%d
+645	Vuruş direnci %%%d
+646	Savaşçı ataklarında %%%d dayanıklılık
+647	Metin2'ye Hoşgeldin.
+648	Ninja ataklarında %%%d dayanıklılık
+649	Sura ataklarında %%%d dayanıklılık
+650	Şaman ataklarında %%%d dayanıklılık
+651	(Prosedür: %d y- %d m - %d d)
+652	Sohbetiniz engellendi.
+653	Çağırmak için daha yüksek seviyede olman gerekiyor.
+654	Çağırmak için en az %d. seviyede olman gerekiyor.
+655	Bu Grupta değilsin.
+656	Loncaya katılamadın.
+657	Oyuncu, arkadaş listene eklenmeyi reddetti.
+658	OX Etkinlik başladı.
+659	[Friends] Listene bir GM ekleyemezsin.
+660	%s çevrimiçi değil.
+661	Ticaret yaptıktan %d saniye sonra dükkân açabilirsin.
+662	%d saniye içinde tekrar ticaret yapabilirsin.
+663	2 milyardan fazla Yang'ın var.Ticaret yapamazsın.
+664	Başka bir pencere açıkken özel dükkan açamazsın.
+665	Bu, 2 milyar Yang üst sınırını aşacağı için ticaret yapamazsın.
+666	[Storages] Hareket mümkün değil.
+667	[Storages] Eşya depolanamaz.
+668	[Group] Davet edilen oyuncu çevrimiçi değil.
+669	Sunucu çevrimiçi olmadığı için Lonca Savaşı başlayamaz.
+670	Uriel girmene izin verdi.
+671	[Group] Bunu sadece Grup Lideri değiştirebilir.
+672	[Group] Hedef grubunuzun üyesi değil.
+673	[Group] Zindandayken oyuncu atamazsın.
+674	[Group] Zindandayken oyuncu atamazsın.
+675	[Group] Gruptan atıldın.
+676	[Group] Zindandayken gruptan ayrılamazsın.
+677	[Group] Grup üyelerini atamazsın.
+678	[Guild] Lonca silindikten sonra, %d gün yeni Lonca kuramazsın.
+679	[Guild] Bir Loncadan ayrıldıktan sonra  %d gün yeni Lonca kuramazsın.
+680	Lonca ismi geçersiz.
+681	Katılım için birçok oyuncu arıyoruz.
+682	[Guild] [%s] Lonca kuruldu.
+683	[Guild] Lonca kurulamadı.
+684	[Group] Grup Becerilerini sadece grup lideri kullanabilir.
+685	[Group] Hedef bulunamadı.
+686	[Guild] Yanlış Yang toplamı.
+687	[Guild] Yeterli Yang yok.
+688	[Guild] İstenen oyuncu bulunamadı.
+689	[Guild] Oyuncu aynı Loncada değil.
+690	[Guild] Lonca Üyelerini atamazsın.
+691	[Guild] Lonca Üyesi %s Loncadan atıldı.
+692	OX Etkinlik henüz bitmedi. Hatalar oluştu. (Flag: %d)
+693	[Guild] Lonca üyesini attın.
+694	[Guild] Rütbe ismini değiştiremezsin.
+695	[Guild] Lonca Liderinin gücü değiştirilemez.
+696	[Guild] Bu rütbe ismi geçersiz.
+697	[Guild] Pozisyonunu değiştiremezsin.
+698	[Guild] Lonca Liderinin yetkileri değiştirilemez.
+699	[Guild] %u Tecrübe kullanıldı.
+700	[Guild] Tecrübe kullanımı başarısız oldu.
+701	[Lonca] Lonca kasasında yeterli Yang yok.
+702	[Guild] Ejderha hayaleti yüklenemedi.
+703	Kısa süre içinde OX Etkinlik tekrar başlayacak.
+704	[Guild] Duyuru yapamazsın.
+705	[Guild] Pozisyonunu değiştiremezsin.
+706	[Guild] Lonca liderinin rütbesi değiştirilemez.
+707	[Guild] Kendini Lonca lideri yapamazsın.
+708	[Guild] Lideri seçemezsin.
+709	[Guild] Daha fazla Lider seçemezsin.
+710	Bu nesneyle ticaret yapamazsın.
+711	Yasadışı yazılım tespit edildi. Oyun kapatılacak.
+712	2 milyardan fazla Yang sahibisiniz. Ticaret yapamazsınız.
+713	Geçersiz Yang.
+714	Geçerli etkinlik bir alanla kısıtlı.
+715	Nesne Ruleti Başlat.
+716	Yang Ruleti Başlat.
+717	Oyuncu online. Lütfen fısıltı kullanın.
+718	Cep telefonu numarası kayıtlı değil.
+719	Yazılı mesaj yollayabilmek için en az 20.Seviye olman gerekli.
+720	Yazılı mesaj yollamak için 2000 Yang gerekli.
+721	Yazılı mesajınız yollandı.
+722	Loncanın %s %s %%%d derecesine yükseldi!
+723	Loncanın %s %s tekrar normal.
+724	%s: %s, %%%d oranında yükseldi!
+725	OX Etkinliği sona eriyor.
+726	%s 's %s tekrar normal.
+727	Madencilik Puanın maksimuma ulaştı. (%d)
+728	Madencilik Puanlarınız en üst Seviyeye ulaştı.
+729	Kazmanı, oduncu Deokbae'nin yardımıyla geliştirebilirsin.
+730	Madencilik Puanların arttı! (%d/%d)
+731	Kazma olmadan madencilik yapamazsın.
+732	Burada maden yok.
+733	Madencilik başarılı.
+734	Madencilik başarısız.
+735	[Friends] %s arkadaş olarak eklendi.
+736	Kısa süre içinde oyuncu şehre ışınlanacak.
+737	[Friends] %s listenden silindi.
+738	Kritik sunucu hatası. Sunucu otomatik olarak yeniden başlatılacak.
+739	10 saniye içinde bağlantınız kesilecek.
+740	5 dakika sonra tekrar bağlanabilirsiniz.
+741	(%s) Lonca kuruldu. [Temporary]
+742	Bu lonca savaşta.
+743	%s: Lonca bulunamadı.
+744	Belirtilen isim veya numarada lonca mevcut değil.
+745	Bina mevcut değil.
+746	Bu tip binalar sadece bir kez inşa edilebilir.
+747	Önce OX Etkinlik haritasını kapat. (Flag: %d)
+748	İlk olarak temel binaları inşa etmelisin.
+749	Yanlış fiyat nedeniyle bina inşa edilemedi.
+750	Binayi inşa edebilmek için loncan yeterli Yang'a sahip değil.
+751	Bu binayı inşa edebilmek için yeterli kaynağın yok.
+752	Bu alana bir bina inşa edemezsin.
+753	Karakter bulunamadı.
+754	Düello iptal edilmedi.
+755	Düello iptali başarılı.
+756	Düello başarıyla başladı.
+757	Düellonun başlamasıyla ilgili bir problem var.
+758	Hata oluşmadı.
+759	Burada savaşçı yok.
+760	Statü Puanı kalmadı.
+761	Kalan Statü puanları çok düşük.
+762	Yanlış değer girdin.
+763	Sıralama veya alt sıralama yanlış.
+764	%d ve %d oyuncuları arasındaki anlaşma bozuldu.
+765	%d Yang için rulet çevir.
+766	Nesne logları, sistem loglarının içine yerleştirildi.
+767	Krallık Bilgileri
+768	Haritadan kutsal alan bilgisini seç %d Giriş Yap %d %d %d
+769	Bir hata oluştu.
+770	%s öldürülen %d öldürülen mob %d öldürülen lider %d Kutsal alan numarası %d
+771	İmparatorluk savaşı hakkında bilgi
+772	İsteğin yükleniyor. Anlayışın için teşekkür ederiz.
+773	Başka bir pencere açıkken depo açamazsın.
+774	[Storeroom] Depo şifresi değişti.
+775	[Storages] Yanlış şifre girdin.
+776	Oyun süreniz %d dakika içinde doluyor.
+777	Düzenli olarak oylanır.
+778	Zaten oy vermiştin.
+779	%s oyuncu zaten oylamada.
+780	Bu Loncaya savaş ilan ettin.
+781	OX Etkinlik bitti. Herhangi bir hata oluşmadı. (Flag: %d)
+782	Oylanamaz.
+783	%s hala %u Yang sahibi.
+784	%s hala %d Yang sahibi
+785	Yeterli Yang'a sahip değilsin.
+786	İmparator adayı olarak %s silindi.
+787	%s İmparator olmak için bir aday değil.
+788	%s İmparator adayı olarak gösterildi.
+789	%s İmparatorluğa aday olamaz.
+790	%s İmparatorluk görevini bıraktı.
+791	%s İmparatoru görevi bırakamaz.
+792	OX Etkinliğine daha fazla oyuncu katılamaz.
+793	Shinsoo Krallığı
+794	Chunjo Krallığı
+795	Jinno Krallığı
+796	Balıkçılık puanınız arttı! (%d/%d)
+797	Maksimum Balıkçılık Puanı'na ulaştın.
+798	Balıkçının yanına git ve onun yardımıyla oltanı geliştir!
+799	Balık yemini kaybettin.
+800	Bir balık yakaladın! (%s)
+801	Yakalanan balığın uzunluğu %.2fcm.
+802	Balıkçılık olayı 'Büyük Sudak Balığı'
+803	OX Etkinlikteki diğer katılımcılar listelendi.
+804	Balıkçılık olayı 'Sazan Balığı'
+805	%s: %d
+806	%d nın %d Yakaladın.
+807	Balık derin suda kayboldu.
+808	Balığın içinde bir istiridye var.
+809	Balığın içinde bir solucan var.
+810	Ateşte %s kızartıyorsun.
+811	Beraberinde 2 milyardan fazla Yang taşıyorsun. Bu nedenle ticaret yapamazsın.
+812	Depona hatalı bir isim veremezsin.
+813	Nesne Market eşyalarını özel markette satamazsın.
+814	OX Etkinlikteki diğer katılımcılar listelenemedi.
+815	Madencilik bitti.
+817	Lütfen bir olta seç.
+818	Önce yemi çengele geçir.
+819	Oltasız balığa gidemezsin.
+820	[Group] İstekte bulunamazsın çünkü grup lideri çevrim içi değil.
+821	[Group] Diğer Krallıktan olan oyuncularla grup oluşturamazsın.
+822	[Group] Zindandayken oyuncu davet edemezsin.
+823	[Group] İzleyici modundayken oyuncu davet edemezsin.
+824	[Group] -30 ile +30 Seviye aralığında olan oyuncuları davet edebilirsin.
+825	Diğer Katılımcıların sayısı : %d
+826	[Group] Bu oyuncuyu seviyesi çok düşük olduğu için davet edemezsin.
+827	[Group] Bu oyuncuyu seviyesi çok yüksek olduğu için davet edemezsin.
+828	[Group] Gruba daha fazla oyuncu davet edemezsin.
+829	%s Grubuna katılmak istiyor musun?
+830	Oyuncu bu grupta değil.
+831	[Group] Bu grup dolu olduğu için katılamazsın.
+832	[Grup] Birini davet etmek için yetkin yok.
+833	[Group] %s Grup davetini reddetti.
+834	[Group] %s zaten grupta.
+835	[Group] Zindandayken davet kabul edemezsin.
+836	OX Etkinlik bitti.
+837	[Group] Daveti kabul edemezsin.
+838	[Group] %s davetini reddetti.
+839	[Group] %s Grubunuza katıldı.
+840	[Group] %s Grubunuza katıldı.
+841	Şu anda özel depoyu kullanamazsın.
+842	Bu oyuncu zaten başkasıyla ticaret yapıyor.
+843	Metin2 Onay Numarası: %s
+844	Onay Numaranız doğru değil. Lütfen tekrar deneyin.
+845	Cep telefonu numarası kayıtlı.
+846	Bu oyuncuya ışınlanamazsın.
+847	OX Ödül verildi. İsim: %d Değer: %d
+848	Oyuncu çevrimdışı.
+849	Oyuncu %d numaralı kanalda. (Sen %d numaralı kanaldasın.)
+850	Depo açtıktan sonra %d saniye başka bir yere gidemezsin.
+851	Ticaretten sonra bir süre bir yere gidemezsin.
+852	Ticaretten sonra %d saniye bir yere gidemezsin.
+853	Düello bitti çünkü savaşçınız gözden kayboldu.
+854	Burada iksirler için herhangi bir sınırlama yok.
+855	%d iksir kullanabilirsiniz.
+856	Savaş 10 saniye içerisinde başlayacak.
+857	Düello başladı.
+858	DOĞRU
+859	Arenadaki bir problemden dolayı düello bitti.
+860	Süre bittiği için düello sona erdi.
+861	10 Saniye içerisinde şehre ışınlanmış olacaksınız.
+862	Arena ile ilgili bir problem olduğu için düello sona erdi.
+863	Savaşçınızla ilgili bir problem olduğu için düello sona erdi.
+864	Savaşçınızla ilgili bir problem olduğu için düello sona erdi.
+865	Düelloyu %s kazandı.
+866	%s kazandı.
+867	10 saniye içerisinde şehre ışınlanmış olacaksınız.
+868	Bir sonraki raund 10 saniye içerisinde başlayacak.
+869	YANLIŞ
+870	Savaşçılar ayrıldı. Düello sona erdi.
+876	Başka bir pencere açıkken dükkanda ticaret yapamazsın.
+877	Almak için depodan çok uzaksın.
+878	Satmak için depodan çok uzaksın.
+879	Beraberinde 2 milyardan fazla Yang taşıyorsun. Bu nedenle ticaret yapamazsın.
+880	Toplam Quiz sayısı: %d
+881	Satış için %%%d vergi alınacak.
+882	Dönüşmüş durumdayken ata binemezsin.
+883	Gelinlik veya Smokin giyerken ata binemezsin.
+884	Atın yok.
+885	Atın öldü.
+886	Atının dayanıklılığı çok az.
+887	At çağırma işlemi başarısız.
+888	At
+889	Düğün kısa süre sonra bitecek.
+890	Otomatik olarak geçecek.
+891	Savaş çoktan sona erdi.
+892	Sonucu 10 saniye içinde alacaksın.
+893	İzleme sırasında ticaret yapamazsın.
+894	Pencereler açıkken başkaları ile ticaret yapamazsın.
+895	Diğer oyuncu şu an meşgul, bu nedenle onunla şimdi ticaret yapamazsın.
+896	Diğer oyuncu ticareti iptal etti.
+897	Yeterli Yang veya envanter boş yer yok.
+898	Diğer kişide yeterli Yang veya envanterinde boş yer yok.
+899	Diğer kişinin envanterinde hiç boş yer yok.
+900	%s ile olan ticaret başarıyla gerçekleşti.
+901	Ejderha Tanrının korumasında olduğun için tecrübe kaybetmedin.
+902	Mevcut Puan Durumu: Shinsoo %d, Chunjo %d, Jinno %d
+903	Doğru cevap:
+904	%s deadcount %d Empire %d killcount %d(Purpose %d) killmobcount %d, RegenFlag %d
+905	Kutsal Yerin Şeytanı: [ENTER][ENTER]
+906	, burada olmaya hakkın yok. 10 saniye içinde krallığına bağlı olanlar bu kutsal toprakları terk edecek.
+907	%s Krallığı yenildi ve krallık savaşından çıktı.
+908	Krallık savaşındaki yaratıkların sayısı:
+909	Eğer Kutsal Alanın Bekçisini öldürürsen, onun sahibi olacaksın.
+910	Ejderha tanrısının korumasında olduğun için sıralama puanı kaybetmedin.
+911	Ek olarak verilen zarar %d
+912	%s engelle! (%%%d)
+913	%s kaç! (%%%d)
+914	Evet (O)
+915	%s[%d] Saldırı pozisyonu: %d %d
+916	Lütfen düzenlemenin tam ismini giriniz.
+917	Bunu at üzerinde yapamazsınız.
+918	Bunu düşmüş haldeyken yapamazsın.
+919	Rüyamda? Ne?
+920	Önce kalk.
+921	Bu düzenleme mevcut değil.
+922	[Grup] Grup silindi.
+923	[Grup] Hedefi çağıramazsın.
+924	[Grup] Bulunduğun pozisyonda grup üyelerini çağıramazsın.
+925	Hayır (X)
+926	Grubun iyi bir ortak çalışma ortaya koyuyor, liderin yakınında bulunan grup üyeleri bir tecrübe bonusu kazanıyor.
+927	Lider
+928	Üye
+929	[Guild] Sağlanan tecrübe kaybedilenden tecrübeden daha fazla.
+930	[Guild] Mesaj silinemez.
+931	[Guild] Yeterli Ejderha hayaleti yok. (%d, %d)
+932	[Guild] Henüz Lonca Becerilerini kullanamazsın.
+933	[Guild] %d becerisi (%d, %d) %u üzerine uygulandı.
+934	[Guild]  Oyuncu şu an %d kanalında. (Bulunulan kanal: %d)
+935	[Guild] Oyuncu çevrim dışı.
+936	Yanlış cevap veren katılımcılar 5 saniye sonra silinecekler.
+937	[Guild] Bu Lonca Becerisi sadece savaşlarda kullanılabilir.
+938	[Guild] %u oranında Ejderha Hayaleti Puanı yüklendi.
+939	[Guild] Sadece Lonca lideri Yang çekebilir.
+940	[Guild] Oyuncu Lonca davetini reddetti.
+941	[Guild] Loncaya birini davet edemezsin.
+942	[Guild] Diğer Krallıklardan olan oyuncuları Loncaya davet edemezsin.
+943	[Lonca] Bu oyuncuyu %d gün sonra tekrar davet edebilirsin.
+944	[Guild] Düzenlemeden sonraki  %d gün içinde üyeleri davet edebilirsin.
+945	[Guild] Bu oyuncu zaten başka bir Loncaya üye.
+946	[Guild] Lonca kapasitesi maximum seviyeye ulaştı.
+947	Sonraki soru için hazır mısın?
+948	Bu beceriyi geliştiremezsiniz.
+949	Bu beceriyi Grand Master seviyesine geliştiremezsiniz.
+950	Zaten bu beceride master konumundasın. Onu geliştiremezsin.
+951	Becerin Grand Master seviyesi için yeterince yüksek değil.
+952	Çalışmadı. Lanet olsun!
+953	Eğitim başarısız. Lütfen sonra tekrar deneyin.
+954	Bedenim güçle dolu!
+955	Eğitim yavaş yavaş fayda ediyor...
+956	Kitapla olan eğitimini başarıyla tamamladın.
+957	Bu kadar tecrübesizken bunu okuyamazsın.
+958	Soru.
+959	Bu beceriyi kitap okuyarak geliştiremezsin.
+960	Bu becerin kitap okuyarak geliştirebilmek için yeterli seviyede değil.
+961	İlerleyebiliyorum ama henüz hepsini anlamış değilim.
+962	Bu talimatları anlamak kolay değil. Biraz daha çalışmam gerekiyor.
+963	Bu bölümü anladım. Yine de çok çalışmam gerekiyor.
+964	Kitapla olan eğitimini başarıyla tamamladın.
+965	Işınlama başarısız.
+966	Burada at yok. Seyise sor.
+967	Lütfen at çağırma nesnesini kullan.
+968	%s FP Kullanımı: %d
+969	Doğruysa O'ya git, yanlışsa X'e git.
+970	İçim yanıyor fakat vücudumu sakinleştiriyor.
+971	Yavaşça, fakat sürekli... Ara vermeksizin.
+972	Evet, bu his mükemmel. Bedenim Chi ile dolu.
+973	Okudum! Şimdi Chi tüm vücudumu kaplıyor.
+974	Eğitim tamamlandı.
+975	Kitabın son sayfasındayım. Eğitim neredeyse bitmek üzere!
+976	Nerdeyse bitti! Sadece azıcık kaldı!
+977	Aydınlandım! Neredeyse hepsini okudum!
+978	Sadece birkaç sayfa kaldı, onları da okuduktan sonra hepsini okumuş oluyorum.
+979	Yenilenmiş hissediyorum.
+980	Doğru!
+981	Şimdi anladım!
+982	Tamam, konsantre kalmalıyım!
+983	Aynı satırı tekrar okuyup duruyorum.
+984	Daha fazla bir şey öğrenmek istemiyorum.
+985	Bu yöntem düşündüğümden çok daha karışık.
+986	Konsantre olamıyorum. Mola vermem gerekiyor.
+987	Sohbetin, spam nedeniyle geçici olarak engellendi.
+988	Sohbet blokunuz kaldırıldı.
+989	İnşa penceresi zaten açık.
+990	Başka bir Ticaret/Depo penceresi açıkken herhangi birşey inşa edemezsiniz.
+991	Daha fazla geliştirme imkansız.
+992	İnşa penceresi açık değil.
+993	Doğru maddeye sahip değilsiniz.
+994	[Guild] Lütfen daha sonra tekrar deneyin.
+995	Bu yeteneği geliştirmek için %d Yetenek Kitabı daha okumalısınız.
+996	[Guild] Lütfen daha sonra tekrar deneyin.
+997	Bu özelliği sadece kaledeyken kullanabilirsin.
+998	TEST: Altın külçe krallığınızın kasasına geri ödendi.
+999	TEST: Krallığınızın kasasında bulunan: %d
+1000	TEST: Altın külçeyi krallığınızın kasasına gönderme yetkiniz yok.
+1001	[Guild] Lonca %d puana ulaştı.
+1002	Bu eşya daha iyi hale gelemez.
+1003	Ücretsiz silah geliştirmeleri ancak seviye 20'ye kadar olan silahlarda kullanılabilir.
+1004	Gerekli özelliklere sahip olmadığın için bu eşyayı kullanamazsın.
+1005	Doğru cinsiyette olmadığınız için bu eşyayı kullanamazsınız.
+1006	Kullan: transfer <name>
+1007	Bu özellik sadece İmparator tarafından kullanılabilir.
+1008	Başka krallıktan olan oyuncuları birliğine dahil edemezsin.
+1009	%s şuanda %d kanalında. (Kanalınız: %d)
+1010	%s oyuncuları iyileştirdin.
+1011	Bu isimde bir kullanıcı yok.
+1012	Kendini birliğine ekleyemezsin.
+1013	Seviyeniz eşyanın yükseltmeden sonraki seviyesinden düşük.
+1014	Başka bir pencere açıkken yükseltme yapamazsın.
+1015	%s İmparatoru %s oldu.
+1016	Ateşleri yakmak için %s savaşları var.
+1017	%s başarıyla savundu.
+1018	%s ateşi yok ettiği için şu andan itibaren 30 dakika boyunca bir ödül alabilir.
+1020	%s de savaş yüzünden bir uyarı ateşi yakıldı.
+1021	%s ateşi yok etti.
+1022	%s kaleyi koruyamadığı için savaşı kaybetti.
+1023	%s ateşi yok etti.
+1024	Geliştirme için yeterli Yang yok.
+1025	Sadece zırhınızı çıkardığınızda bir dükkan açabilirsiniz.
+1026	Ata binerken bunu kullanamazsınız.
+1027	Bu hareket için gereken: %s
+1028	Sohbet bloklamanızın kalkmasına %d saat %d dakika %d saniye kaldı
+1029	Sohbet bloklamanızın kalkmasına %d saat %d saniye kaldı
+1030	Sohbet bloklamanızın kalkmasına %d dakika %d saniye kaldı
+1031	Yang yağmuru düşme oranı
+1032	Çıkartılacak taş yok.
+1033	Henüz kullanılamaz.
+1034	Test sunucusundaki zaman limiti aşıldı.
+1035	Yükseltme için yeterli malzeme yok.
+1036	Sıralama Puanları daha fazla arttırılamıyor.
+1037	Tüm Krallıklar
+1038	Eşya düşürme oranı
+1039	Yang düşme oranı
+1040	Deneyim yüzdesi
+1041	Dönüşüm halindeyken kitap okuyamazsın.
+1042	Sohbet engelinizin kalkmasına %d saniye kaldı
+1043	At sürerken duygularınızı ifade edemezsiniz.
+1044	At süren bir kişiye duygularınızı ifade edemezsiniz.
+1045	Savaş Kağıdı, +4'ün üzerinde olan nesnelerle işlemiyor.
+1046	%s zar attı. Sonuç %d (%d-%d).
+1047	Zar atınız. Sonuç %d (%d-%d).
+1048	[Lonca] Düşman lonca lideri çevrimdışı.
+1049	Yerde yatarken ata binemezsin.
+1050	[Lonca] Bu lonca şu anda savaşta.
+1051	Burada balık tutamazsın.
+1052	[Lonca] Loncanız zaten en yüksek seviyeye ulaştı.
+1053	Ata binerken dönüşemezsin.
+1054	Zaten bir binektesin. Önce in.
+1055	Karşındaki kişiyi arkadaşlarına ekleyemiyorsun.
+1056	Bu role ile yükseltemezsiniz.
+1057	Düşürülen eşya %d dakika sonra kaybolacak.
+1058	[Guild] Karşındaki kişi davetiyeyi alamıyor.
+1059	Üzerinde olan nesneleri satamazsın.
+1060	Üzerinde olan nesneler özel dükkânda satılamıyor.
+1061	[Storeroom] Bu eşyayı depona süremezsin.
+1062	Altın'ı henüz atamazsın.
+1063	Envanterin dolu. Eşyayı koyacak yer yok.
+1064	Eşyanın seviyesi çok yüksek.
+1065	Yalnızca silahlara ve zırhlara uygulanabilir.
+1066	Bu ejderha taşı tekrar yüklenemez.
+1067	Şeytan Kulesi görevi için sadece bir kez ödüllendirilebilirsiniz.
+1068	Ejderha taşı başarıyla çıkarıldı.
+1069	Bu nesne, arındırma paneli içerisinde sürüklenemez.
+1071	Bu haritada şu anda Metin Taşı bulunmuyor.
+1072	Ejderha taşında kalan süreyi çıkarma işlemi başarılıydı.
+1073	Kalan süreyi çıkarma işlemi başarısızdı.
+1074	Ejderha taşı çıkarılamadı, ama şunu elde ettin: %s
+1075	Ejderha taşı çıkarılamadı.
+1076	Bu nesneye saflık derecesini geliştirmek için ihtiyaç duyulmaz.
+1077	Bu eşya bu şekilde yükseltilemez.
+1078	Saflık derecesini geliştirme işlemi başarılıydı.
+1079	Arındırmayı bir sınıf daha yükseltme işlemi başarısızdı.
+1080	Bu nesneye arındırmada ihtiyaç duyulmaz.
+1081	Bu ejderha taşı, arındırmada kullanılamaz.
+1082	Arındırmayı bir sınıf daha yükseltme işlemi başarılıydı.
+1083	Saflık derecesini geliştirme işlemi başarısızdı.
+1084	Ejderha taşını güçlendirmek için gerekli malzemeye sahip değilisn.
+1085	Bu ejderha taşı güçlendirmek için kullanılamaz.
+1086	Benzer roleleri birleştiremezsiniz.
+1087	Güçlendirme başarılıydı.
+1088	Güçlendirme başarısız
+1089	Ejderha taşı etkinleştirilmedi.
+1090	Üzerinde zaten bu türden bir ejderha taşı bulunuyor.
+1091	Ejderha taşı çıkarılamaz.
+1092	Böyle bir ejderha taşı kuşandın bile.
+1093	%d saniye eklendi.
+1094	Cor Draconis'i açmadan önce Ejderha Taşı görevi tamamlanmış olmalı ve Ejderha Taşı Simyası etkinleştirilmiş olmalı.
+1095	Eşyaya ait envanter tamamen boş olmadığı sürece kemeri çıkaramazsın.
+1096	Kutsama Kağıdı ve Büyülü Demir Madeni birleştirebilirsin.
+1097	Bu eşyayı kemer envanterinde donanamazsın.
+1098	Bu zindanda binek kullanamazsın.
+1099	Aynı anda maksimum 200 bileşen kullanabilirsin.
+1100	Ruha bağlı bir objeyi özel markette satamazsın.
+1101	Ruha bağlı bir objenin özelliklerini değiştiremezsin.
+1102	Ruha bağlı bir objeyi kullanamazsın.
+1103	Ruha bağlı bir objeyi düşüremezsin.
+1104	Ruha bağlı bir objeyi başkasına veremezsin.
+1105	Bu sunucuda ruhuna obje bağlayamazsın.
+1106	Bu objeyi ruhuna bağlayamazsın.
+1107	%d Yang yatırdın.
+1108	Çıkartılacak metin taşı yok.
+1109	Bu obje zaten ruha bağlı.
+1110	Bu obje, ruhtan ayrılma sürecinde.
+1111	Bu obje, ruha bağlı bir obje değil.
+1112	Ruha bağlı bir objeyi geliştiremezsin.
+1113	Ruha bağlı bir objeyi satamazsın.
+1114	Envanterinde yeterince yerin olmadığından, sandığı açamazsın.
+1115	Başkasıyla ticaret yaparken özel depo açamazsın.
+1116	Ticaret yaparken bu nesneyi kullanamazsın.
+1117	Omuz kuşağı penceresi açıkken geri dönüş kağıdı kullanamazsın.
+1118	Başka bir pencere açık olunca ticaret yapamazsın.
+1119	Bu yeri kaydedemezsin.
+1120	Sadece omuz kuşakları, silah ve zırhlar kullanabilirsin.
+1121	Nesneleri pencereye çek.
+1122	Bu kişiye özel üretimdir.
+1123	Bu kuşak başka bonus ememez.
+1124	Sadece omuz kuşakları kullanabilirsin.
+1125	Bu kuşaklar birbiriyle kombine edilemez.
+1126	Olmadı!
+1127	Oldu!
+1128	Kombinasyon için yeterli paran yok.
+1129	Emiş ve kombinasyon pencereleri açıkken bu nesneyi kullanamazsın.
+1130	Envanterde yeterli boşluk yok.
+1131	%s başarılı! %%%d Emiş oranı ile yeni %s. Tebrikler!
+1132	Ruha bağlı nesne kullanamazsın.
+1133	Şu an kullandığın hiçbir eşyayı özel bir dükkanda satamazsın.
+1134	Bineğinin sırtındayken bu paketi kullanamazsın.
+1135	Süre doldu. İlk tur sona erdi.
+1136	Süre doldu. İkinci tur sona erdi.
+1137	İlk turu tamamlamak için kalan süre: %d dakika.
+1138	İkinci turu tamamlamak için kalan süre: %d dakika.
+1139	Güvenli Alan devre dışı.
+1140	Güvenli Alan'ın devre dışı bırakılmasına kalan süre: %d dakika.
+1141	Yabancı Krallıkta güvenli bir yere ışınlanamazsın.
+1142	Yanıtın 20 saniye içinde belirecek.
+1143	Yanlış cevap veren tüm katılımcılar 15 saniye sonra silinecek.
+1144	Pet çağırmak için seviyen çok düşük.
+1145	Kombinasyon için eşya seçilmedi.
+1146	Çağırdın: %s
+1147	Geri gönderdin: %s
+1148	%s %d. seviyeye erişti!
+1149	%s şimdi derin uykuda.
+1150	%s yumurtadan çıktı!
+1151	Petin heyecanla protein lokmalarını yiyor.
+1152	Yeterli HP yok.
+1153	%s uyanıyor ve hemen lezzetli öğününe dalıyor.
+1154	%s şimdi bir nakliye kutusunda.
+1155	%s nakliye kutusundan çıkıyor.
+1156	%s %s erişti! Harika!
+1157	%s beslenmeyi reddediyor!
+1158	İki krallık da katılmadığı için etkinlik sonlandırıldı.
+1159	Bonusları başarıyla aktardın.
+1160	Sahip olduğun Yang benimle kitap takas etmeye yetmiyor.
+1161	Lütfen başka bir isim gir.
+1162	Bunu kullanmak için yeterli manaya sahip değilsin.
+1163	Karşındaki kişinin kuluçka makinesi açıkken ticaret yapamazsın.
+1164	Ticaret yaparken, kampın ya da özel dükkanın açıkken kuluçka makinesini kullanamazsın.
+1165	Petini çağırırken özel dükkan açamazsın.
+1166	Petini çağırırken ticaret yapamazsın.
+1167	Karşındaki kişi petini çağırırken ticaret yapamazsın.
+1168	Petin yeterli deneyim topladı. Bir sonraki gelişme aşamasına ulaşması için şimdi de nesne EXP'ye ihtiyacı var.
+1169	Petin bir sonraki gelişme aşamasına hazır değil. Bunun için pet kitaplarını kullan.
+1170	Petin zaten en yüksek gelişme aşamasına ulaştı.
+1171	Girilen isim çok kısa.
+1172	%d saniye içinde hedefte olacaksın.
+1173	Yeterli Yang'a sahip değilsin.
+1174	Petini iyi eğitiyorsun, yeni becerilerini çabuk öğreniyor!
+1175	Deneyim %d puana yükseldi.
+1176	Petin bu beceriyi zaten öğrendi ve eğitimi reddediyor.
+1177	%s becerisi etkinleştirildi. %d HP yüklendi.
+1178	Petinin kahraman eğitimi için cesur pet kitabını edin.
+1179	Petin, eğitilmesi ve bir sonraki gelişme aşamasına yükselmesi için %d. seviyede olmalı.
+1180	Petin, eğitim ve bir sonraki gelişme aşamasına yükselmek için %d günlük olmalı.
+1181	Petin, eğitilmesi ve bir sonraki gelişme aşamasına yükselmesi için %100 deneyime sahip olmalı.
+1182	%s etkisi etkinleştirildi.
+1183	Seviyen eşyanın geliştirmeden sonraki seviyesinden düşük.
+1184	%s etkisi etkinleştirilmedi.
+1185	%s becerisi etkinleştirildi. Artık hasar almayacaksın.
+1186	%s etkisi etkinleştirildi. Yavaşlama, zehir ve kanama etkileri kaldırıldı.
+1187	Bonusların sende kalacak.
+1188	Penceren zaten açık.
+1189	Büyü bozma %%%d.
+1190	%s yorgunluğunu atıyor.
+1191	Eşyayı burada kullanamazsın.
+1192	Ticaret yaparken petini çağıramazsın.
+1193	Özel dükkan açamazsın.
+1194	Her 5 saniyede bir Ay Pastası kullanabilirsin.
+1195	%s yeterli değil. Bir sonraki gelişme aşaması için ihtyiacın olan: %d.
+1196	Petin seviyesi oyuncunun seviyesinden daha yüksek olamaz.
+1197	Genç basamağına
+1198	Yabani basamağına
+1199	Cesur basamağına
+1200	Kahraman Eğitimi basamağına
+1201	@*** Zar büyük nesne için atılıyor: %s ***
+1202	@*** ->%*s - Zar sonucu: %4d ***
+1203	$*** %s nesnesinin kazananı: %s ***
+1204	Yeni emiş oranı: %d
+1205	Bu eşyayı düelloda kullanamazsın.
+1206	Maksimum emiş oranına ulaşıldı.
+1207	Bu beceriyi zaten öğrenmiştin.
+1208	Aramana uygun bir nesne yok.
+1209	Yeterince bal kabağı feneri toplandı.
+1210	Bir ödülü hak edip hak etmediğini Sam Pumpkin'e sor.
+1211	Cadılar Bayramı başlıyor!
+1212	Sam Pumpkin'le konuş!
+1213	Cadılar Bayramı sona eriyor. Ödüllerinizi teslim almayı unutmayın!
+1214	Verilen bal kabağı fenerleri: %d
+1215	Toplam bal kabağı feneri sayısı: %d
+1216	%d Yang kazandın.
+1217	Buraya kamp ateşi yakamazsın.
+1218	Bu oyuncu başka bir oyuncuyla ticaret yapıyor.
+1219	Bunun için öncelikle bir silah kuşanman gerekiyor.
+1220	Bu kostümü bu silah için alamazsın.
+1221	Silahı değiştirmek istediğinde önce silah görünümünü çıkarmalısın.
+1224	Okey turun başladı!
+1225	Başka kart çekemezsin.
+1226	Kartları seçtiğinde kart atamazsın.
+1227	Kartları seçtiğinde başka kart çekemezsin.
+1228	Suyun altında kamp ateşi yakamazsın.
+1229	Envanterin dolu.
+1230	Ödülünü ancak envanterinde yer açılınca teslim alabilirsin.
+1231	%s bir okey turunda %d puan topladı.
+1233	Okey etkinliği başlıyor!
+1234	Okey etkinliği sona erdi!
+1235	[Okey Etkinliği] Eğer en iyiler listesine girmeyi başardıysan, an itibarıyla 7 gün içinde ödülünü alabilirsin.
+1236	Okey oynarken bu eylemi gerçekleştiremezsin.
+1237	Kapalı. Anahtarı aramalısın.
+1238	Bu ritüel taşı sadece seviye 80 üzerindeki nesnelerde çalışır.
+1239	Bu, %d Won üst sınırını aşacağı için ticaret yapamazsın.
+1240	Yang'ın yetersiz.
+1241	Won'un yetersiz.
+1242	Won üst sınırı aşıldığı için dönüştürme yapamazsın.
+1243	Yang üst sınırı aşıldığı için dönüştürme yapamazsın.
+1244	Bu, %d Won üst sınırını aşacağı için özel dükkan açamazsın.
+1245	Ticaret yaparken envanteri genişletemezsin.
+1246	Okey etkinliği başlıyor!
+1247	Okey etkinliği sona erdi!
+1248	Bu eşya bir anahtarla açılamaz.
+1249	Seungryong Vadisi, Sohan Dağı, Doyyumhwan ve Yongbi Çölü canavar dolu!
+1250	Bölgeleri tarayın ve onları yok edin. Hayat puanı toplayın ve bunları sandıklarla takas edin.
+1251	Patron Avcısı etkinliği %d dakika içinde sona erecek.
+1252	Bay B. ve patron canavar %d dakika içinde kaybolacak).
+1253	Günlük hedefine ulaştın - ödülünü al.
+1254	Gelinlik veya smokin giyerken silah görünümlerini kullanamazsın.
+1255	Diğer oyuncu şu an meşgul, bu nedenle onunla şimdi ticaret yapamazsın.
+1256	Silah görünümü taşırken gelinlik veya smokin giyemezsin.
+1257	%d. tur başlıyor.
+1258	Doğru anahtar.
+1259	[Lonca] Maksimum EXP miktarını zaten bağışladın.
+1260	[Lonca] Lonca duyurusu başlatıldı.
+1261	[Lonca] Lonca duyurusu için süre uzatıldı.
+1262	[Lonca] Liste şu anda güncelleniyor. Lütfen daha sonra tekrar dene.
+1263	[Lonca] Lonca bulunamadı.
+1264	[Lonca] Bu loncaya zaten başvurmuşsun.
+1265	[Lonca] Başvurun iletildi.
+1266	[Lonca] Oyuncu %s size başvurdu.
+1267	[Lonca] Liste şu anda güncelleniyor. Lütfen daha sonra tekrar dene.
+1268	[Lonca] Lonca duyurusu yok
+1269	%d Yang kazandın.
+1270	[Lonca] Başvuru yok
+1271	[Lonca] Lonca duyurusunun süresi: %s.
+1272	[Lonca] Lonca duyurunun süresi yakında sona erecek.
+1273	[Lonca] %d Yang alındı.
+1274	[Lonca] Kesilen %%%d vergiden sonra %d Yang alırsın.
+1275	[Lonca] Bir anket esnasında savaşa başlayamazsın.
+1276	[Lonca] Bir anket esnasında loncayı kapatamazsın.
+1277	[Lonca] Bir anket esnasında hiç kimseyi loncaya davet edemezsin.
+1278	[Lonca] Sadece bir lonca deposu inşa edebilirsin.
+1279	Kutudan gizemli bir ışık geliyor.
+1280	[Lonca] Lütfen 10 saniye sonra tekrar dene.
+1281	[Lonca] Başka bir lonca üyesi bunu zaten kullanıyor.
+1282	[Lonca] Lonca deposunda hala eşyalar mevcut.
+1283	[Lonca] Anketi reddettin.
+1284	[Lonca] Anketi kabul ettin.
+1285	[Lonca] Bu üye şu anda çevrim dışı.
+1286	[Lonca] Devam eden anket yok.
+1287	[Lonca] 'Lonca transferi' anketi başlıyor.
+1288	[Lonca] 'Üyeyi çıkar' anketi başlıyor.
+1289	[Lonca] 'Lonca bölgesini sat' anketi başlıyor.
+1290	%d Tecrübe Puanı kazandın.
+1291	[Lonca] 'Lonca bölgesini kapat' anketi başlıyor.
+1292	[Lonca] 'Lonca lideri transferi' anketi başlıyor.
+1293	[Lonca] 'Üyeyi çıkar anketi' devam ediyor.
+1294	[Lonca] 'Lonca bölgesini sat' anketi devam ediyor.
+1295	[Lonca] 'Lonca bölgesini kapat' anketi devam ediyor.
+1296	[Lonca] Lonca deposu şu anda kullanılıyor.
+1297	[Lonca] Lonca deposunu 10 saniye sonra açabilirsin.
+1298	[Lonca] Senin loncanın lonca deposu yok.
+1299	Bak kutudan ne çıktı!
+1300	[Lonca] Bu oyuncu için anket olumsuz sonuçlandı. Lütfen %d ay, %d gün, %d saat ve %d dakika sonra tekrar dene.
+1301	[Lonca] Bu oyuncu eylemsizlik sebebiyle loncadan çıkarıldı.
+1302	[Lonca] Güncel ankete katıldın.
+1303	[Lonca] Kendi karakterin için anket oluşturamazsın.
+1304	[Lonca] Savaş esnasında anket başlatamazsın.
+1305	[Lonca] Lonca bölgesini kendine satamazsın.
+1306	[Lonca] Böyle bir lonca yok.
+1307	[Lonca] Savaş esnasında anket başlatamazsın.
+1308	[Lonca] Lonca seviyesi çok düşük.
+1309	[Lonca] Üyelerin son ankette buna karşıydı. Lütfen %d ay, %d gün, %d saat ve %d dakika sonra tekrar dene.
+1310	Eğer kutudan gelen kırmızı dumanı solursan, hızın artar!
+1311	[Lonca] Savaş esnasında anket başlatamazsın.
+1312	[Lonca] Üyelerin son ankette buna karşıydı. Lütfen %d ay, %d gün, %d saat ve %d dakika sonra tekrar dene.
+1313	[Lonca] Lonca bölgeni başlatmadan önce bir anket yapmalısın.
+1314	[Lonca] Lonca bölgesi satışı için kaydedilen anketteki lonca bu değil.
+1315	[Lonca] Üyelerin son ankette satışa karşı çıktı. Tekrar dene.
+1316	[Lonca] Lonca bölgeni kendine satamazsın.
+1317	[Lonca] Lonca lideri çevrim dışı ya da başka bir haritada.
+1318	[Lonca] Bu loncanın zaten bir lonca bölgesi var.
+1319	[Lonca] Lonca bölgesi bulunamadı.
+1320	[Lonca] Lonca bölgesi satışı tamamlandı.
+1321	Bu eşyayı sadece devam eden etkinlik esnasında kullanabilirsin.
+1322	Bir hata oluştu. Maalesef bonuslar değiştirilemedi.
+1323	Şu anda binek/petini çağıramazsın.
+1330	Bonus içeren bir kuşak, transfer esnasında alıcı olamaz.
+1331	Bonus içermeyen bir kuşak, transfer esnasında orijinal olarak kullanılamaz.
+1332	Bonusu transfer edemezsin çünkü emiş oranları uyuşmuyor.
+1333	Bonusu transfer edemezsin çünkü kuşakların derecesi uyuşmuyor.
+1334	Başarısız! Emiş oranı %1 düşürüldü.
+1335	Kısmen başarılı! Emiş oranı %1 düşürüldü.
+1336	Tamamen başarılı! Bonus, istenilen şekilde aktarıldı.
+1337	Bonus transferi esnasında eşya düşüremezsin.
+1338	Bonus transferi esnasında eşya kaydıramazsın.
+1339	Bonus transferi esnasında eşya satamazsın.
+1340	Bonus transferi esnasında bu mümkün değil.
+1341	Diğer kişi bonus transferi yaparken bu mümkün değil.
+1342	Bir pet belirlemek için pet belirleme küresine ihtiyacın var.
+1343	Önce petini etkinleştir.
+1344	Petinin değerlerini değiştirirken, ticaret yapamaz, eşya satamaz ve depoyu kullanamazsın vb.
+1345	Petinin değerlerini değiştirirken, eşya kullanamazsın.
+1346	Petinin değerlerini değiştirirken, eşya düşüremezsin.
+1347	Petinin değerlerini değiştirirken, eşya kaydıramazsın.
+1348	Ticaret ortağın petinin değerlerini değiştirirken, onunla ticaret yapamazsın.
+1349	Petinin değerlerini değiştirirken, YZK ile konuşamazsın.
+1350	Petinin değerleri değiştirildi.
+1351	Petler için değer dönüştürme penceresini kapattıktan 3 saniye sonra açabilirsin.
+1352	Tüm slotlar dolu.
+1399	Bu oyuncu şu anda davetini kabul edemiyor.
+1400	Krallıkların izini uyguladıktan sonra artık bu krallıktaki davetleri kabul edemezsin.
+1401	Pet becerisi %s etkinleştirildi - %s hafif adım kullanıyor.
+1403	Zaten bir isim kayıtlı.
+1404	Bu nesneyi kullanmadan önce lütfen donatılmış ejderha taşını kaldır.
+1409	Ne yazık ki kıyameti önleyemedin. En yakın zamanda Zodyak Tapınağı'na geri ışınlanacaksın.
+1411	Şans kutusu açıkken, hiçbir YZK ile konuşamazsın.
+1412	Şans kutusu açıkken eşya kullanamazsın.
+1413	Şans kutusu açıkken eşya düşüremezsin.
+1414	Şans kutusu açıkken eşyaları taşıyamazsın.
+1415	Şans kutusu açıkken ticaret yapamazsın.
+1416	Karşındaki kullanıcının şans kutusu açıkken birbirinizle ticaret yapamazsınız.
+1420	Ejderha taşı bonusun değiştirildi.
+1421	[Kralı yakala] Kral kartları toplamak için canavarları yen. Bir kral destesi için 25 karta ihtiyacın var.
+1422	[Kralı yakala] Çok sayıda harika ödül seni bekliyor!
+1423	[Kralı yakala] Eğer en iyiler listesine girmeyi başardıysan, oyun masasında ödülünü alırsın.
+1426	Bir adet %%%d EXP depo bonusu aldın.
+1427	Bir adet %d savunma depo bonusu aldın.
+1428	Bir adet %%%d HP depo bonusu aldın.
+1429	Bir adet %%%d canavarlara karşı güçlü depo bonusu aldın.
+1430	Balığa çıkmadan önce envanterinde yeterince yer olduğundan emin ol.
+1431	Bonus dönüşüm penceresi açıkken, eşyaları taşıyamazsın.
+1432	Şansın yaver gitmedi. Balığın karnında hazine yoktu.
+1433	Petin yumurtadan çıkmışsa, balıkçılık yapamazsın.
+1434	Petin çağrıldığı esnada balıkçılık yapamazsın.
+1435	Pet bonusu dönüşüm penceresi açıkken balıkçılık yapamazsın.
+1436	Omuz kuşağı birleştirme veya alma pencereleri açıkken bu işlemi gerçekleştiremezsin.
+1437	Omuz kuşağı için bonus transferler penceresi açıkken bu işlemi gerçekleştiremezsin.
+1438	Bonus transferler penceresi açıkken bu işlemi gerçekleştiremezsin.
+1439	Diğer pencereler açıkken balıkçılık yapamazsın.
+1440	Balık tutarken bu işlemi gerçekleştiremezsin.
+1441	Kalan zaman: %.2f | Balık zorluk derecesi: %u | Zorluk seviyesi düşüşü: %d
+1442	Savaş Bölgesinin tüm rütbe sıralamaları sıfırlandı.
+1443	Kuşanılan silah görünümünü naklet.
+1444	Envanterinde boş alan yok.
+1450	%s Geliştirme başarısız.
+1451	%s Geliştirme başarılı.
+1452	Kan Sunağı belirdi.
+1453	Bir Ruh yakaladın.
+1454	[Kan Ritüeli] Envanterde yeterli alan yok.
+1455	[Kan Ritüeli] Yeterli Ruh'un yok.
+1456	[Kan Ritüeli] Yang'ın yetersiz.
+1457	Kan Ritüeli başlıyor. Daha iyi ödüller için özel eşyalar satın al.
+1458	Kan Ritüeli sona erdi. Lütfen daha sonra tekrar dene.
+1459	Yükseltme değişikliği başarısız.
+1460	Bu eşya sadece Balathor'un Mahzeni'nde mevcut.
+1461	Pusula kullanıldı, ancak bekçi bulunamadı.
+1462	Başka bir eylemi gerçekleştirirken bunu yapamazsın.
+1463	Başka bir eylemi gerçekleştirirken bunu yapamazsın.
+1464	Petin çağrıldığı esnada silahını geliştiremezsin.
+1465	Sandığı açmak için envanterinde %d dikey alana ihtiyacın var.
+1466	Envanterde yeterli alan yok.
+1467	[Lager] Şu anda kullanılan bir eşya depolanamaz.
+1468	[Aura] Ruha bağlı eşyalarla çalışmaz.
+1469	[Aura] Üzerine zaten bir eşya aktarılmış olan bir aura giysisi ile çalışmaz.
+1470	[Aura] Aura giysin maksimum seviyeye ulaştı.
+1471	[Aura] Aura giysini ancak onu yükselttikten sonra geliştirebilirsin.
+1472	[Aura] Sadece aura giysileri eklenebilir.
+1473	[Aura] Sadece aura giysisi, kalkan, kolye, küpe ve bileklik eklenebilir.
+1474	[Aura] Yükseltilemez.
+1475	[Aura] Bir aura giysisi eklendikten sonra yapılabilir.
+1476	[Aura] Eklenen malzemelerin sayısı gerekli miktara göre ayarlandı.
+1477	[Aura] Geliştirilemez.
+1478	[Aura] Aura giysini ancak onu yükselttikten sonra geliştirebilirsin.
+1479	[Aura] Eşya eklemelisin.
+1480	[Aura] Yükseltme başarılı. Gelişim şimdi mümkün.
+1481	[Aura] Yükseltme başarılı!
+1482	[Aura] Aura giysini geliştirmek için yeterli paran yok.
+1483	[Aura] Gelişim başarılı!
+1484	[Aura] Başarılı!
+1485	[Lonca] %d EXP bağışlandı.
+1486	Arındırma Paneli açıkken petini besleyemezsin.
+1487	Beş Tapınağın Savaşı başladı! %d gün sürecek.
+1488	Beş Tapınağın Savaşı sona erdi. Bir sonraki savaş %d saat sonra başlayacak.
+1489	Sürüş esnasında UI açılamaz.
+1490	Şu anda bir etkinlik yok.
+1491	Bir binek çağırdığında ticaret yapamaz, hareket edemez ve eşya satamazsın, düşüremez veya depolayamazsın.
+1492	Beklenmedik bir sorun nedeniyle savaş sona erdi.
+1493	Beş Tapınağın Savaşı %d dakika sonra sona erecek.
+1494	Daha %s x %d fazlasına ihtiyacın var.
+1495	Seviye %d ejderha portalı açıldı. Haydi zindana!
+1496	Seviye %d ejderha portalına şimdi girilebilir.
+1497	Patronu öldürdük!
+1498	%d Lonca EXP aldın!
+1499	Ejderha portalına giriş süresi sona erdi.
+1500	Savaşı %d dakika içinde başlatmazsan portal kapanır.
+1501	Savaş başlatılmadı. Zindan kapandı.
+1502	%s, %s noktasını işgal etti!
+1503	Petin çağrıldığı esnada bağış yapamazsın.
+1504	Bu karakter bir düello için mevcut değil.
+1505	%d üyesinden: %d tane daha açabilirsin.
+1506	Bir sonraki hediyeyi %d dakika sonra aç.
+1507	%s, %s noktasına saldırıyor!
+1508	%s, %d kişisel puan durumuna erişti!
+1509	Kan Ritüeli ödülü
+1510	Envanterde yeterli alan yok. Ödül, posta kutuna gönderilecek.
+1511	Grup üyeleri eşyayı alamayacak kadar uzakta.
+1512	Maksimum lonca seviyesine ulaşıldı. Daha fazla bağış mümkün değil.
+1513	[Kahin Yarışması] Kahin Yarışması başladı!
+1514	[Kahin Yarışması] Mini oyun için bir görev alacaksın
+1515	[Kahin Yarışması] Seni değerli ganimetler bekliyor!
+1516	[Kahin Yarışması] Kahin Yarışması sona erdi.
+1517	[Kahin Yarışması] Rütbeni kontrol et ve ödülünü iste.
+1518	[Kahin Yarışması] Bunun için yeterli Kahin Jetonun yok.
+1519	[KY] Rütbe ödülün
+1520	[Kahin Yarışması] Bağış sayını 1 oranında artırdın.
+1521	Bu eşyayı ruha bağlı eşyalarda kullanamazsın.
+1522	Şu anda Battle Royale'e katılamazsın.
+1524	Önce grubunu terketmelisin.
+1525	Geri sayım başladığı için katılamazsın.
+1527	Battle Royale galibi: %s
+1528	%s öldürdü: %s.
+1529	Geri sayım başladı. Battle Royale %d saniye sonra başlayacak.
+1530	Çok az katılımcı olduğu için Battle Royale başlatılamıyor.
+1531	Battle Royale başladı. İlk bölge %d saniye sonra gösterilecek.
+1532	Savaş Bölgesi güncellendi. %d saniye sonra sınırlanacak.
+1533	Savaş Bölgesi %d saniyeliğine sınırlanacak.
+1534	Elektrik alanı durduruldu. Bir sonra Savaş Bölgesi %d saniye sonra gösterilecek.
+1535	Battle Royale %d saniye sonra sona erecek.
+1536	Bunu bir Battle Royale esnasında yapamazsın.
+1537	Bunun için bu haritaya giriş yapamazsın.
+1538	Bunun için Battle Royale sunucusuna giriş yapamazsın.
+1540	Bunu Battle Royale sunucusunda iptal edemezsin.
+1541	Battle Royale başladı!!
+1542	Battle Royale sona erdi!!
+1543	Başka Savaş Bölgesi yok. Tüm bölge %d saniye sonra sınırlanacak.
+1544	Şu anda bir Debuffın yok.
+1545	Katılım için bir Battle Royale biletine ihtiyacın var.
+1546	Bir yere özel bir tedarik paketi atıldı.
+1547	[Kalıntı bonusu] Zaten bir ruh kalıntısı kuşandın.
+1548	Bunu burada kullanamazsın.
+1549	İlkel Kuvvetler Platosu'na ışınlanma başarısız.
+1550	Bunu artık kullanamazsın.
+1551	Yetersiz Gaya.
+1552	Battle Royale katılımcı durumu: (%u/%u)
+1553	Battle Royale kayıtları kapandı.
+1554	Lütfen daha sonra tekrar dene.
+1555	Başka bir eylem gerçekleştirirken bunu yapamazsın.
+1556	PvP Turnuvası
+1557	Tur galibiyeti ödülü
+1558	Turnuva galibiyeti ödülü
+1559	Kahin Yarışması Ödülleri
+1560	Envanterin dolu. Ödülün sana posta yoluyla iletildi.
+1561	Envanterin dolu olduğu için Kahin Yarışması ödülü posta yoluyla iletildi.
+1562	Şampiyon seviyen için %u EXP aldın.
+1574	Lütfen daha sonra tekrar dene.
+1575	Battle Royale
+1576	Battle Royale Sezon Ödülü. Sezon sıralaması: %d
+1577	Battle Royale Genel Ödül
+1578	Battle Royale Oyun Ödülü. Sıralama: %d
+1579	Battle Royale Savaş Ödülü. Öldürülen rakipler %d veya daha fazla
+1580	Şu anda bir başarı talep edemezsin.
+1581	Şu anda bir duygu kullanamazsın.
+1582	Yongan
+1583	%s Loncası %s bölgesinde %d ülkesini, %d %d Won karşılığında aldı.
+1584	Lonca liderin %s bölgesinde %d,%d ülkesinin müzayedesine kaydoldu.
+1585	Zaten bir teklif verdin.
+1586	Yatırdığın Won miktarını geri alabilirsin.
+1587	Alınacak bir şey yok.
+1588	Zaten maksimum Won miktarına sahipsin.
+1589	Yatırılan %d Won'u geri aldın.
+1590	Sadece lonca lideri veya banka erişimi olan bir üye kirayı ödeyebilir.
+1591	Kira ödenmesi gerekmiyor.
+1592	Loncada yeterli Yang yok.
+1593	[Lonca bölgesi] Bekçiye git ve lonca bölgeniz için %d Yang kira öde.
+1594	Lonca bölgesi için %u Yang kira ödedin.
+1595	Bölge müzayedesi mevcut olduğu sürece bunu yapamazsın.
+1596	Bir bölge müzayedesine kayıtlı değilsin.
+1597	Bir Loncaya üye değilsin.
+1598	Zaten bir bölge müzayedesine kaydoldun.
+1599	Sadece lonca lideri bölge müzayedesine kaydolabilir.
+1600	Sadece seviye %d veya üstü loncalar kaydolabilir.
+1601	Loncanın zaten bir lonca bölgesi var.
+1602	Şu anda bir bölge müzayedesi yok.
+1603	Maksimum teklif %d Won.
+1604	Yeterli Won'un yok.
+1605	Loncan bölge müzayedesi için kayıtlı değil.
+1606	Yalnızca loncada 24 saatten uzun bir süredir bulunuyorsan teklif verebilirsin.
+1607	Lonca bölesinin kirası ödenmedi. Lonca bölgesinden vazgeçildi.
+1608	Hiçbir lonca, bölge müzayedesine kaydolmadı.
+1609	%d Won teklif ettin.
+1610	Bu lonca yok.
+1611	Dongan ovası
+1612	Yatırdığın Won miktarını köydeki bekçiden geri alabilirsin.
+1613	Şimdi oldu! Zihin taşını başarıyla taktın ve iki katı değer bonusu alacaksın.
+1614	Joan
+1615	Pyungmo
+1616	Jungrang
+1617	Waryong
+1618	Imha
+1619	Miryang
+1620	Songpa
+1621	Daeyami
+1622	[Dünya patronu] etkinliği başladı
+1623	[Dünya patronu] etkinliği sona erdi
+1624	%d Kanalındaki [Dünya patronu], %s dahilinde belirdi ve %s bölgesinde dehşet saçıyor. Haydi ava!
+1625	%d Kanalında [Dünya patronu] saldırıya uğradı. Şimdi ava katıl!
+1626	Aferin [Dünya patronu]: %s mağlup edildi ve tekrar barış sağlandı... şimdilik.
+1627	[Dünya patronu] Dünya patronu kaçtı! Şansını bir dahaki sefer dene.
+1628	[Dünya patronu] Şu anda bir ödül alamazsın.
+1629	[Dünya patronu] Aferin! İşte ödülün. Bir dahaki sefer yine katıl!
+1630	[Dünya patronu] Şu anda bir ödül alamazsın, çünkü envanterinde yeterli alan yok.
+1631	[Dünya patronu] Rütbe listesi ganimet seviyesi I ödülü: %d
+1632	[Dünya patronu] Rütbe listesi ganimet seviyesi II ödülü: %d
+1633	[Dünya patronu] Rütbe listesi ganimet seviyesi III ödülü: %d
+1634	[Dünya patronu] Rütbe listesi ganimet seviyesi IV ödülü: %d
+1635	[Çiçek Çocuklar] Yetersiz filiz.
+1636	[Çiçek Çocuklar] Envanterinde yeterli alan yok.
+1637	[Çiçek Çocuklar] Çiçek tohumu kazandın.
+1638	[Çiçek Çocuklar] Yetersiz çiçek tohumu.
+1639	[Çiçek Çocuklar] Bir kasımpatı filizi kazandın.
+1640	[Çiçek Çocuklar] Bir inci çiçeği filizi kazandın.
+1641	[Çiçek Çocuklar] Bir nergiz filizi kazandın.
+1642	[Çiçek Çocuklar] Bir zambak filizi kazandın.
+1643	[Çiçek Çocuklar] bir ayçiçeği filizi kazandın.
+1644	[Dünya patronu] Dikkat: Yakında dünya patronu belirecek!
+1645	[Çiçek Çocuklar] Bu eşya artık kullanılamaz.
+1646	Şu an kendini dönüştüremezsin.
+1647	Tüm canavarları zaman sınırı esnasında öldür!
+1648	Bir sonraki odanın portalı açık.
+1649	Tüm saldırıları savuştur!
+1650	Bir sonraki katın portalı açık.
+1651	%s, Sung Mahi'nin Cehennem Kulesi'nde %u. katı geçti!
+1652	Sung Mahi'nin Cehennem Kulesi'nin ganimeti posta kutuna gönderildi.
+1653	Cehennem Kulesi: Kat %d
+1654	Sung Mahi'nin Cehennem Kulesini tamamlama ganimeti
+1655	Savaş %d saniye içinde başlayacak.
+1656	%d. Katta savaşacaksın.
+1657	Birbirine ait olmayan bir canavar çiftini öldür!
+1658	Yanlış canavara saldırdın. Tüm canavarları öldür!
+1659	Tüm canavarları zaman sınırı esnasında öldür!
+1660	Yanlış Metin Taşını yok ettin. Tüm canavarları alt et!
+1661	Doğru Metin taşını imha et!
+1662	Kaçmak için doğru anahtarı bul!
+1663	Mührü çözmek için bir Mühür Taşı bul!
+1664	[Sung Mahi'nin Cehennem Kulesi] Zaman sınırı esnasında tüm canavarları öldür!
+1665	[Sung Mahi'nin Cehennem Kulesi] Güncel rütbe listesi devresi sona erdi.
+1666	[Sung Mahi'nin Cehennem Kulesi] Yeni bir rütbe listesi devresi başladı.
+1667	Cehennem Kulesi'nin %d. katındaki 1.'lik için sezon ödülün.
+1668	Cehennem Kulesi sezon ödülü
+1669	Üzerinde lanet yok.
+1670	Tüm lanetler kaldırıldı.
+1671	Süre doldu. Dışarı götürülüyorsun.
+1672	[Sung Mahi'nin Cehennem Kulesi] Şeytan taşını imha et!
+1673	[Sung Mahi'nin Cehennem Kulesi] Anahtar uymuyor. Başka bir tane bul ve tekrar dene.
+1674	[Sung Mahi'nin Cehennem Kulesi] Sung Mahi'nin mühür taşı ile mührü çöz!
+1675	[Sung Mahi'nin Cehennem Kulesi] Önce başka bir mührü çözmelisin!
+1676	Artık eldiven takabilirsin.
+1677	Henüz eldiven takamazsın.
+1678	Bu özellik, bir hack programı bulunduğu için kullanılamıyor.
+1679	[Sung Mahi'nin Cehennem Kulesi] Bu seviyeyi %d saniyede tamamladın.
+1680	Loncanın kurulduğu gün bölge müzayedesine katılamazsınız.
+1681	
+1683	
+1684	
+1685	
+1686	Sung Mahi'nin Cehennem Kulesi'nin basamaklarını çık ve bir üst kata gir.
+1687	[Kişisel premium dükkan] Bunu kullanamazsın. Köydeki ticaret yöneticisine git.
+1688	Sung Mahi'nin etkisinin altında olan bir bölgeye girdin ve lanetlendin.
+1689	%s bölgesinde %d karakol kaldı. (%d/%d)
+1690	%s bölgesi tüm karakolları kurdu ve Sung Mahi'nin kontrolü %d dakika sonra başlayacak.
+1691	Sung Mahi'nin karakolları kuruluyor.
+1692	Sung Mahi'nin karakolları yıkıldı.
+1693	%s bölgesindeki tüm karakollar imha edildi ve bölge artık Sung Mahi'nin kontrolü altında değil.
+1694	Seogan Çorağı
+1695	Namgan Yarığı
+1696	Geliştirme başarılı!
+1697	Geliştirme maalesef başarısız!
+1698	Bağışıklık kutsaması sayesinde Sung Mahi'nin etkisinden kurtuldun.
+1699	Bağışıklık kutsamanın süresi doldu ve tekrar Sung Mahi'nin etkisi ve laneti altındasın.
+1700	Bunu bir hack programı kullanıcısıyla yapamazsın.
+1701	Yükseltme için yeterli malzemen yok. (Ruha bağlı nesneler kullanılamaz)
+1702	Loncanın bölgesi %d saat sonra otomatik olarak bırakılacak. Lonca deposundaki nesneler silinecek.
+1703	[Lonca] Lonca liderini reddedemezsin.
+1704	[Lonca] Kendini reddedemezsin.
+1705	[Lonca] Kendini lonca lideri ilan edemezsin.
+1706	[Lonca] Bu sadece lonca liderleri için mevcut. (Bir lonca bölgesi bırakıldığında.)
+1707	[Lonca] Bir lonca savaşı esnasında lonca bölgesini bırakamazsın.
+1708	Bunu takas edemezsin.
+1709	Cehennem Kulesi aksiyonu etkinleştirildi.
+1710	Bunu şampiyon seviyesine ulaştıktan sonra öğrenebilirsin.
+1711	[Kişisel premium dükkan] Hala alacak paran olduğu için bunu açamazsın.
+1712	[Kişisel premium dükkan] Hala toplayacak eşyaların olduğu için bunu açamazsın.
+1713	[Kişisel premium dükkan] Kişisel dükkanını zaten açtın.
+1714	[Kişisel premium dükkan] Dükkan şu anda hazırlanıyor.
+1715	[Kişisel premium dükkan] Envanterinde yeterince yer yok.
+1716	[Kişisel premium dükkan] Eşyaları kişisel dükkanından alabilirsin.
+1717	[Kişisel premium dükkan] Parayı kişisel dükkanından alabilirsin.
+1718	[Kişisel premium dükkan] %s satıldı. Lütfen paranı al.
+1719	[Kişisel premium dükkan] Dükkanı kapattıktan sonra %d saniye boyunca tekrar açamazsın.
+1720	Bir zindan oluşturulurken bunu yapamazsın.
+1721	Kendini daha fazla canlandıramazsın. Zindandan nakledileceksin.
+1722	Ödülünü zaten aldın. Tekrar denemek istersen yine gel. Kalan süre: %d s %d d
+1723	%d kez daha dirilebilirsin.
+1724	Şimdi Yılan Tapınağı'na girebilirsin. Bunun için yılan heykelini kullan.
+1725	İmha edilen Metin tepki vermiyor. Tüm Metin'ler tekrar belirdi.
+1726	İmha edilen Metin tepki vermiyor. Tüm Metin'ler tekrar belirdi.
+1727	%d. Metini yok ettin. Şimdi %d. Metini yok et.
+1728	Süre doldu. Zindandan nakledileceksin.
+1729	Bu, %d dakika daha mevcut.
+1730	Zindan sayacını uzatamazsın.
+1731	Zindan sayacı 1 dakikalığına uzatılacak.
+1732	Tüm canavarları devirdin. %d. kata nakledileceksin. Daha %d saniyen var.
+1733	Tüm Metinlerini imha ettin. %d. kata nakledileceksin. Daha %d saniyen var.
+1734	Parça, yılan başına eklendi. Ama hiçbir şey olmadı.
+1735	Tüm yılan sütunlarının kilidi açıldı. %d. kata %d saniye var.
+1736	Özel Yılan Tapınağı demircisi beliriyor!
+1737	Yılan Tapınağı demircisi beliriyor!
+1738	Tüm canavarları devirdin ve artık patron alanına geçebilirsin.
+1739	Yılan Tapınağı'nı başarıyla tamamladın. %d saniye sonra zindan nakledileceksin.
+1740	Metin taşlarını doğru sırada imha et.
+1741	Tüm canavarları öldür.
+1742	Canavarlardan anahtarı al ve Yılan Sütunu'nun kilidini aç.
+1743	Yılan başına bir parça ekledin.
+1744	Patronu öldür.
+1745	Başarıyla açıldı!
+1746	Önce diğer sütunun kilidini açmalısın.
+1747	Cezaevi açıldı. Demirci sana gülümsüyor.
+1748	Bu anahtar cezaevini açamadı ve demirciyi kurtaramadı.
+1749	Bu parça yılanın başına uymuyor.
+1750	
+1751	
+1752	Şampiyon seviyesine ulaşabilmek için seviye 120'de en az 1 EXP küresi doldurmalısın.
+1753	"Gemi savunması" zindanını temizlemelisin.
+1754	Zaten şampiyon seviyesine ulaştın.
+1755	[Kişisel premium dükkan] Kişisel dükkanını açarken eşya kullanamazsın.
+1756	[Kişisel premium dükkan] Eşyaları yönetirken bunu kullanamazsın.
+1757	[Kişisel premium dükkan] Diğer pencereler açıkken kişisel premium dükkanı kullanamazsın.
+1758	[Kişisel premium dükkan] Eşyaları yönetirken bunu yapamazsın.
+1759	
+1760	[Kalıntı bonusu] Ruh kalıntısı penceresi açıkken bu mümkün değil.
+1761	%s grup üyesi savaştaı terk etti.
+1762	%d dakikan kaldı.
+1763	[Kişisel premium dükkan] Burada düello yapamazsın.
+1764	[Kişisel premium dükkan] Eşyaları yönetirken, tahsil edilebilen para güncellenmez.
+1765	Yılan Tapınağı'nın bölüm sonu canavarı belirdi!
+1766	[Kişisel premium dükkan] Burada zaten bir dükkan açıldı. Lütfen dükkanını açmak için başka bir yer bul.
+1767	Yükseltilebilir bir pet çağırırken bunu geliştiremezsin.
+1768	<Kuzey Rüzgarı Derinlikleri> %d dakikan kaldı.
+1769	<Kuzey Rüzgarı Derinlikleri> Savaşı 3 dakika içinde başlatmazsan, aşama feshedilir.
+1770	<Kuzey Rüzgarı Derinlikleri> Süre doldu. Zindandan nakledileceksin.
+1771	
+1772	<Kuzey Rüzgarı Derinlikleri> Kuzey Rüzgarı Zulası için bir aşama oluşturuldu.
+1773	
+1774	
+1775	
+1776	
+1777	
+1778	
+1779	
+1780	
+1781	
+1782	
+1783	
+1784	
+1785	
+1786	
+1787	
+1788	
+1789	
+1790	
+1791	
+1792	
+1793	
+1794	
+1795	
+1796	<Kuzey Rüzgarı Derinlikleri> Alastor'u yendin!  20 saniye sonra zindandan nakledileceksin.
+1797	<Kuzey Rüzgarı Derinlikleri> Alastor yakında buzlu öfkesini salacak!
+1798	<Kuzey Rüzgarı Derinlikleri> Alastor buzlu öfkesinin %d. seviyesini salıyor!
+1799	<Kuzey Rüzgarı Derinlikleri> Alastor'un buzlu öfkesini savuşturdun.
+1800	<Kuzey Rüzgarı Derinlikleri> Beyaz ejderha yumurtalarını %d saniye içinde yok etmezsen, Alastor'un ölümcül soğuğu zulaya nüfuz eder!
+1801	Bu, burada mevcut değil.
+1802	Bu, savaş başladıktan sonra mevcut olacak.
+1803	<Kuzey Rüzgarı Derinlikleri> Aşama, belirtilen süre içinde savaşı başlatmadığın için feshedildi.
+1804	
+1805	Ganimet toplanmıyor çünkü ganimet filtresi kapalı.
+1806	Ganimet toplanmıyor çünkü bir grup üyesinin ganimet filtresi kapalı.
+1807	
+1808	%d Şampiyon seviyesi tecrübe puanı kazandın.
+1809	%d Tecrübe puanı kazandın.
+1810	%d tecrübe puanı kaybettin.
+1811	%d şampiyon seviyesi tecrübe puanı kaybettin.
+1812	Bunu ticaret esnasında yapamazsın.
+1813	"Metin Ateşi" etkinliği başladı!
+1814	Etkinlik görevi listesindeki görevleri tamamla, Metin taşlarını imha et ve ödülleri al.
+1815	Metin Ateşi şu anda mevcut değil.
+1816	[Ejderha Tapınağı] Ejderha tapınağı için bir aşama oluşturdun.
+1817	[Ejderha Tapınağı] Savaşı 3 dakika içinde başlatmazsan, aşama feshedilir.
+1818	[Ejderha Tapınağı] Beran-Setaou yenildi. %d saniye sonra zindandan ışınlanacaksın.
+1819	[Ejderha Tapınağı] %d dakikan kaldı.
+1820	[Ejderha Tapınağı] Savaş başlatılmadığı için aşama feshedildi.
+1821	[Ejderha Tapınağı] Süre doldu ve herkes zindandan ışınlanacak.
+1822	[Ejderha Tapınağı] Ejderha tapınağı için bir aşama oluşturdun.
+1823	[Ejderha Tapınağı] Savaşı 3 dakika içinde başlatmazsan, aşama feshedilir.
+1824	[Ejderha Tapınağı] Aşama başlatıldı
+1825	[Ejderha Tapınağı] Pes ettin ve aşama feshedildi.
+1829	[Ejderha Tapınağı] %d saniye içinde kimse girmezse aşama kapatılır.
+1830	[Ejderha Tapınağı] Belirtilen sürede kimse girmediği için aşama kapatıldı.
+1838	Kendi kendini engelleyemezsin.
+1839	Kendi kendini ekleyemezsin.
+1840	%s işlemine izin verildi.
+1844	Atını %d at yemi ile besledin. %d tecrübe puanı kazandı.
+1845	Yetersiz Gaya veya Yang
+1846	Bu at becerisini öğrenemezsin.
+1847	[Enigma Tapınağı] Bunu burada kullanamazsın.
+1848	[Enigma Tapınağı] Bu parşömeni yalnızca grup lideri kullanabilir.
+1849	[Enigma Tapınağı] %s menzil içerisinde değil.
+1850	[Enigma Tapınağı] Bu parşömeni bulunduğun seviyede kullanamazsın.
+1851	[Enigma Tapınağı] %s. seviye giriş yapmak için uygun değil.
+1852	[Enigma Tapınağı] %s girişi reddetti.
+1853	[Enigma Tapınağı] Savaşa başlamazsan zindan 1 dakika sonra yok olur.
+1854	[Enigma Tapınağı] Enigma Tapınağı'na bir portal oluşturuldu.
+1855	[Enigma Tapınağı] Gerçek Metin taşını imha et.
+1856	[Enigma Tapınağı] Bu Metin taşı sahte. Gerçek bir Metin taşı bul!
+1857	[Enigma Tapınağı] Metin taşından bir hazine sandığı kazandın.
+1858	[Enigma Tapınağı] Gerçek bir Metin taşı bulamadın. Portalı kullan ve tekrar dene.
+1859	[Enigma Tapınağı] Görev tamamlandı. Gizli odayı bul.
+1860	[Enigma Tapınağı] Gerçek bir canavar bul ve onu yen! Yanılsamaların seni aldatmasına izin verme.
+1861	[Enigma Tapınağı] Gerçek bir canavar bulamadın. Portalı kullan ve tekrar dene.
+1862	[Enigma Tapınağı] Hazine sandığına bak.
+1863	[Enigma Tapınağı] Gizli odaya hoş geldin.
+1864	[Enigma Tapınağı] Süre doldu! Herkes zindandan ışınlanacak.
+1865	[Enigma Tapınağı] Ödül olarak Enigma Tapınağı'nın kutsamasını kazandın.
+1866	[Enigma Tapınağı] Ödül kazanamadın. Bir sonraki ödüle kadar kalan süre: %d saat %d dakika
+1867	Enigma Tapınağı ödülü
+1868	[Enigma Tapınağı] Süre dolduğu için Enigma Tapınağı kayboldu.
+1869	[Enigma Tapınağı] Enigma portalındaki savaşa başlamak için 4 dakikan var.
+1870	[Enigma Tapınağı] Enigma Tapınağı'nın kutsaması sayesinde bir hazine sandığı daha kazandın.
+1871	[Enigma Tapınağı] Bir Enigma ödülü kazandın. Almak için posta kutunu kontrol et.
+1872	%s kaldırıldı.
+1873	%s aldın. Becerilerini beceriler tablosundan kontrol edebilirsin.
+1874	Yetersiz Gaya.
+1876	Lütfen daha sonra tekrar dene.
+1878	Zaman doldu. Yakında şehre ışınlanacaksın.
+1879	Artık kendini canlandıramazsın.
+1880	Zindanı tamamladın ve %d dakika içinde dışarı ışınlanacaksın.
+1881	Bütün elçileri yendin. Lanetlenmeye girmek için Hae-Tae bekçisine git.
+1882	Maksimum eşya sayısından fazlasını kullanamazsın.
+1883	Öbür Dünyaya seyahat bitti ve artık başka ölü alevi bulamazsın.
+1884	Öbür Dünyaya seyahat başladı. Canavar öldürerek ölü alevi bulabilirsin.
+1885	Öbür Dünyaya seyahat bitti.
+1886	Öbür Dünyaya seyahat başladı. Şimdi Ejderha Ateşi Burnu'ndaki Öbür Dünya portalını kullanabilirsin.
+1887	%d x hayat suyu kullandın. Elinde %d x hayat suyu kaldı.
+1888	%d ölü alevi kazandın.
+1895	Toprak elçisini yendin.
+1896	Gece elçisini yendin.
+1897	Gök gürültüsü elçisini yendin.
+1898	Göklerin elçisini yendin.
+1899	Zindan %d dakika içinde kapanacak.
+1900	Daha fazla ölü alevine yer kalmadı.
+1901	Tekrar denemeden önce beklemelisin. Kalan bekleme süresi: %d saat %d dakika
+1902	Ejderha Tapınağı'na girdikten sonra grubu değiştiremezsin.
+1903	Daha fazla paralı askere sahip olamazsın.
+1904	Dayanıklılık aşıldı.
+1905	[Enigma Tapınağı] Bir sonraki kata geçmek için bir Enigma-Metin'i yok et.
+1916	Bu beceriye zaten sahipsin.
+1917	Bu beceriyi 31. seviyeden itibaren öğrenebilirsin.
+1918	Başka beceriler alamazsın.
+1919	Bu beceriyi 21. seviyeden itibaren öğrenebilirsin.
+1921	[Enigma Tapınağı] Giriş yapamazsın. Seviye talebini doldurmuyorsun.
+1922	Ekipman sayfası değiştirilemiyor çünkü silah ve kostüm birbiriyle uyuşmuyor.
+1924	Ganimet filtresi etkinleştirildi.
+1925	Ganimet filtresinin süresi uzatıldı.
+1926	[SungMa İstila Portalı] Bu bölgenin bir yerinde bir SungMa İstila Portalı açıldı. [ENTER]Bulmak için genel görünüm haritanı aç.
+1927	[SungMa İstila Portalı] İstilacılar Komutanı bir yerde belirdi!
+1930	[SungMa İstila Portalı] İstila Portalı’nın gücü zayıfladı ve imha edilebilir hale geldi.
+1931	[SungMa İstila Portalı] Bölge başarıyla savunuldu ve yakında buradan dışarı ışınlanacaksın.
+1932	[SungMa İstila Portalı] İstila Protalı kapandı.
+1933	[SungMa İstila Portalı] İstila Portalı’nın yakınında güç çiçekleri belirdi.[ENTER]Bölgeyle aynı elemente sahip bir çiçek kullan ve hasar bonusu kazan!
+1934	[SungMa İstila Portalı] İstila Komutanı’nın yakınında güç çiçekleri belirdi.[ENTER]Bölgeyle aynı elemente sahip bir çiçek kullan ve hasar bonusu kazan!
+1936	[SungMa İstila Portalı] Envanterinde bu ödülü almak için yeterli alan yok.
+1937	[SungMa İstila Portalı] İstila portalını imha etmek için öncelikle yakınındaki tüm canavarları yenmelisin. 
+1938	[Lonca] %d Yang çekildi.
+1939	Altın dut avı ödülü
+1940	%d Primordis heykeli imha et. Aynı anda birden fazla heykele saldıramazsın.
+1941	Görevlerden tüm dayanıklılığı aldın. Ödülü görev penceresi üzerinden al.
+1942	Toplanan değerler omuz kuşağından başarıyla kaldırıldı.
+1943	Toplanan değerler aura giysisinden başarıyla kaldırıldı.
+1944	Envanterinde daha fazla alana ihtiyacın var.
+1945	[Altın Topraklar] Şu anda kendini dönüştüremezsin.
+1946	Meley'in İni'nde aktif olduğun sürece grubu dağıtamazsın.
+1947	Bir lonca savaşı devam ederken grubu dağıtamazsın.
+1948	Bu oyuncu AFK modunda.
+1949	Kendini başarıyla serbest bıraktın.
+1950	[Karakter Bulucu] Bu karakter bu haritada yok.
+1951	Gizli hazine ödülü
+1952	Hazine avına %d kez katıldığın için gizli bir ödül kazandın.
+1953	Rütbe %d Ödülü
+1954	Hazine avında %d. sırada olduğun için bir ödül kazandın.
+1955	Zaten maksimum sayıya sahip olduğun için daha fazla Ölüm Alevi alamazsın.
+1956	Daha fazla Yang alamazsın.
+1957	SungMa hazine sandığı - kalan ödül değişikliği: %d
+1958	SungMa sandığı - Değerli bir eşya almak için aç.
+1959	Mümkün olan maksimum sayıda ruh topladın. Kan sunağına git ve ritüeli düzenle!
+1961	Yang cinsinden satış bedelinin %.1Lf %% oranı ücret olarak alınır.
+1962	Ejderhalara karşı güçlü +%d %%
+1963	Miktar mevcut maksimum tutarı aştığı için işlem iptal edildi.
+1964	Bu beceri kitabı yalnızca lonca liderleri veya savaşçılar için mevcuttur.
+1965	Daha fazla lonca becerisi öğrenemezsin.
+1966	Lonca beceri eğitimi başarısız oldu.
+1967	Düello yaparken birisiyle grup oluşturamazsın.
+1968	Önce oyuncuyu engelleme listenden çıkar.
+1969	%s adresine bir grup daveti gönderildi.
+1970	%s, grup oluşturamayacağınız bir konumda bulunuyor.
+1971	Önce oyuncuyu engelleme listenden çıkar.
+1972	Daha fazla arkadaşın olamaz (maks. %d).
+1973	Önce oyuncuyu arkadaşlık isteklerinden çıkar.
+1974	Daha fazla oyuncu engelleyemezsin (maks. %d).
+1975	Bu haritaya zaten sahipsin.
+1976	Balathor'un Saldırısı'nı başarıyla öğrendin.
+1977	Balathor'un İradesi'ni başarıyla öğrendin.
+1978	Balathor'un Eğilmezliği'ni başarıyla öğrendin.
+1992	Bir eşya seçerken görevlere erişemezsin.
+1993	Bir eşya seçerken lonca deposuna erişemez veya ticaret yapamazsın.
+1994	Karşındaki kişinin başka bir penceresi açıkken bu mümkün değil.
+1995	Bir eşya seçerken bunu kullanamazsın.
+2000	Donatılacak slot yok.
+2006	Uyanmış
+2007	Güçlü
+2008	Bu gelişme aşaması için kahraman pet kitaplarına ihtiyacın var.
+2009	Bu gelişme aşaması için uyanmış pet kitaplarına ihtiyacın var.
+2010	+%%%d Engelleme nüfuzu
+2011	+%%%d Tamlık
+2012	Petin bir potansiyel beceri (%s) kazandı.
+2013	Potansiyel beceri "%s" kaldırıldı.
+2014	Potansiyel beceriler için 1. slotu açtın.
+2015	%s %d. Şampiyon seviyesine ulaştı.
+2016	Petin bu nefis lokmadan dolayı çok mutlu.
+2019	Potansiyel beceriler için 2. slotu açtın.
+2028	Petini çağırırken bunu yapamazsın.

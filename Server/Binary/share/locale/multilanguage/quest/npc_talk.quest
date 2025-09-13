@@ -1,0 +1,187 @@
+quest npc_talk begin
+	state start begin
+		when 20354.click begin
+			say_npc()
+			say(gameforge.npc_talk._10_say)
+		end
+
+		when 20002.chat.gameforge.npc_talk._620_npcChat begin
+			say_title(gameforge.npc_talk._630_sayTitle)
+			say(gameforge.npc_talk._640_say)
+		end
+
+		when 20003.chat.gameforge.npc_talk._570_npcChat begin
+			say_title(gameforge.npc_talk._580_sayTitle)
+			say(gameforge.npc_talk._590_say)
+		end
+
+		when 20003.chat.gameforge.npc_talk._600_npcChat begin
+			say_title(gameforge.npc_talk._580_sayTitle)
+			say(gameforge.npc_talk._610_say)
+		end
+
+		when 20005.chat.gameforge.npc_talk._60_npcChat begin
+			say_title(gameforge.npc_talk._70_sayTitle)
+			say(gameforge.npc_talk._80_say)
+		end
+
+		when 20005.chat.gameforge.npc_talk._90_npcChat begin
+			say_title(gameforge.npc_talk._70_sayTitle)
+			say(gameforge.npc_talk._100_say)
+		end
+
+		when 20006.chat.gameforge.npc_talk._440_npcChat begin
+			say_title(mob_name(20006))
+			say(gameforge.npc_talk._450_say)
+		end
+
+		when 20006.chat.gameforge.npc_talk._460_npcChat begin
+			say_title(mob_name(20006))
+			say(gameforge.npc_talk._470_say)
+		end
+
+		when 20008.chat.gameforge.npc_talk._20_npcChat begin
+			say_title(gameforge.npc_talk._30_sayTitle)
+			say(gameforge.npc_talk._40_say)
+			if math.random(2) == 1 then
+				wait()
+				say(pc.get_name()..":")
+				say(gameforge.npc_talk._50_say)
+			end
+		end
+
+		when 20010.chat.gameforge.npc_talk._650_npcChat begin
+			say_title(mob_name(20010))
+			say(gameforge.npc_talk._660_say)
+		end
+
+		when 20011.chat.gameforge.npc_talk._340_npcChat begin
+			say_title(gameforge.npc_talk._350_sayTitle)
+			say(gameforge.npc_talk._360_say)
+		end
+
+		when 20012.chat.gameforge.npc_talk._480_npcChat begin
+			say_title(gameforge.npc_talk._490_sayTitle)
+			say(gameforge.npc_talk._500_say)
+		end
+
+		when 20012.chat.gameforge.npc_talk._510_npcChat begin
+			say_title(gameforge.npc_talk._490_sayTitle)
+			say(gameforge.npc_talk._520_say)
+		end
+
+		when 20014.chat.gameforge.npc_talk._670_npcChat begin
+			say_title(gameforge.npc_talk._680_sayTitle)
+			say(gameforge.npc_talk._690_say)
+			if math.random(2) == 1 then
+				wait()
+				say(pc.get_name()..":")
+				say(gameforge.npc_talk._700_say)
+			end
+		end
+
+		when 20015.chat.gameforge.npc_talk._110_npcChat begin
+			say_npc()
+			say(gameforge.npc_talk._120_say)
+		end
+
+		when 20017.chat.gameforge.npc_talk._130_npcChat begin
+			say_title(gameforge.npc_talk._140_sayTitle)
+			say(gameforge.npc_talk._150_say)
+		end
+
+		when 20018.chat.gameforge.npc_talk._370_npcChat begin
+			say_title(mob_name(20018))
+			say(gameforge.npc_talk._380_say)
+		end
+
+		when 20019.chat.gameforge.npc_talk._390_npcChat begin
+			say_title(gameforge.npc_talk._400_sayTitle)
+			say(gameforge.npc_talk._410_say)
+		end
+
+		when 20019.chat.gameforge.npc_talk._420_npcChat begin
+			say_title(gameforge.npc_talk._400_sayTitle)
+			say(gameforge.npc_talk._430_say)
+		end
+
+		when 20020.chat.gameforge.npc_talk._270_npcChat begin
+			say_title(gameforge.npc_talk._280_sayTitle)
+			say(gameforge.npc_talk._290_say)
+		end
+
+		when 20020.chat.gameforge.npc_talk._300_npcChat begin
+			say_title(gameforge.npc_talk._280_sayTitle)
+			say(gameforge.npc_talk._310_say)
+			if math.random(2) == 1 then
+				wait()
+				say(pc.get_name()..":")
+				say(gameforge.npc_talk._320_say)
+				wait()
+				say_title(gameforge.npc_talk._280_sayTitle)
+				say(gameforge.npc_talk._330_say)
+			end
+		end
+
+		when 20021.chat.gameforge.npc_talk._530_npcChat begin
+			say_npc()
+			say(gameforge.npc_talk._540_say)
+		end
+
+		when 20021.chat.gameforge.npc_talk._550_npcChat begin
+			say_npc()
+			say(gameforge.npc_talk._560_say)
+		end
+
+		when 20023.chat.gameforge.npc_talk._160_npcChat begin
+			say_title(gameforge.npc_talk._170_sayTitle)
+			say(gameforge.npc_talk._180_say)
+		end
+
+		when 20023.chat.gameforge.npc_talk._190_npcChat begin
+			say_title(gameforge.npc_talk._170_sayTitle)
+			say(gameforge.npc_talk._200_say)
+		end
+
+		when 20024.chat.gameforge.npc_talk._710_npcChat begin
+			say_title(gameforge.npc_talk._720_sayTitle)
+			say(gameforge.npc_talk._730_say)
+		end
+
+		when 20024.chat.gameforge.npc_talk._740_npcChat begin
+			say_title(gameforge.npc_talk._720_sayTitle)
+			say(gameforge.npc_talk._750_say)
+		end
+
+		when 20086.chat.gameforge.npc_talk._210_npcChat begin
+			say_title(gameforge.npc_talk._220_sayTitle)
+			say(gameforge.npc_talk._230_say)
+		end
+
+		when 20087.chat.gameforge.npc_talk._240_npcChat begin
+			say_title(gameforge.npc_talk._250_sayTitle)
+			say(gameforge.npc_talk._260_say)
+		end
+
+		when 20091.chat.gameforge.npc_talk._760_npcChat begin
+			say_title(gameforge.npc_talk._770_say_title)
+			say(gameforge.npc_talk._780_say)
+		end
+
+		when 20091.chat.gameforge.npc_talk._790_npcChat begin
+			say_title(gameforge.npc_talk._770_say_title)
+			say(gameforge.npc_talk._800_say)
+		end
+
+		when 20091.chat.gameforge.npc_talk._810_npcChat begin
+			say_title(gameforge.npc_talk._770_say_title)
+			say(gameforge.npc_talk._820_say)
+			say(gameforge.npc_talk._830_say)
+		end
+
+		when 20091.chat.gameforge.npc_talk._840_npcChat begin
+			say_title(gameforge.npc_talk._770_say_title)
+			say(gameforge.npc_talk._850_say)
+		end
+	end
+end

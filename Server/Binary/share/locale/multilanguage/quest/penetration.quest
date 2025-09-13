@@ -1,0 +1,23 @@
+quest penetration begin
+	state start begin
+		when 20355.chat."Login-Client-Stress" begin
+			pc.setqf("login_count", 0)
+			set_state(run_test)
+
+		end
+	end
+
+	state run_test begin
+		when login or enter begin
+			local lcounter = pc.getqf("login_count")
+			if pc.get_map_index() == 303 then
+				pc.setqf("login_count", lcounter+1)
+				pc.warp(11043*100,17885*100, 301)	
+			end
+			if pc.get_map_index() == 301 then
+				pc.setqf("login_count", lcounter+1)
+				pc.warp(10869*100, 16558*100, 303)
+			end
+		end
+	end
+end

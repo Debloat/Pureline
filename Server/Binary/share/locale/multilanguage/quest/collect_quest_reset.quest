@@ -1,0 +1,214 @@
+quest collect_quest_reset begin
+	state start begin
+		when login with pc.level >= 92 begin
+			if tostring(get_quest_state("collect_quest_lv92")) == "557528158" or
+				tostring(get_quest_state("collect_quest_lv94")) == "557528158" or 
+				tostring(get_quest_state("collect_quest_lv96")) == "557528158" then
+				set_state( check_reset_able )
+			end
+		end
+	end
+
+	state check_reset_able begin
+		when 20091.chat."보상을 다시 받고 싶다고?!" begin
+			---                                                   l
+			say("백선아평")
+			say("지난번에 받았던 보상을 다른 것으로 바꾸고 싶다고?")
+			say("흠....")
+			say("")
+
+			wait()
+
+			if get_time() < pc.getqf("duration") then
+				say("백선아평")
+				say("벌써 오다니..")
+				say("성격 참 급하군..")
+				say("아직 시간이안되었어!")
+				return
+			end
+			say("백선아평")
+			say("사실 안그래도 천옥이 필요해서")
+			say("자넬 다시 찾으려고 하고 있었네")
+			say("지난번에 구해왔던 보석 말고도")
+			say("천의 동굴에 가면 천옥을 구할수 있다고 하네")
+			say("그것을 5개만 구해다 주게나")
+			say("")
+
+			wait()
+
+			say("백선아평")
+			say("천옥을 5개 구해오면")
+			say("지난번에 받았던 보상중 한가지를")
+			say("다른 것으로 바꿔주도록 하겠네")
+			say("어떤가?")
+			say("")
+
+			local s = select("얼른 구해다 드릴께요", "생각 좀 해보구요")
+
+			if s == 1 then
+				say("백선아평")
+				say("어서 다녀오게나 기다리고 있겠네~")
+				say("")
+
+				set_state( find_jewel )
+			else
+				say("백선아평")
+				say("그러게나. 심사숙고해야 할것이야")
+				say("")
+			end
+		end
+	end
+
+	state find_jewel begin
+		when letter begin
+			send_letter("백선의 제안")
+		end
+
+		when button or info begin
+			say("")
+			say("승룡곡에 있는 백선아평에게")
+			say("천옥을 가져다 주고 보상을 바꾸자")
+			say("")
+
+			say_item_vnum( 30254 )
+
+			say_reward("  현재 "..pc.getqf("collect_count").." 개를 백선에게 주었습니다")
+			say("")
+		end
+
+		when 2401.kill or 2402.kill or 2403.kill or 2404.kill begin
+			if number(1, 500) <= 3 then
+				pc.give_item2(30254, 1)
+				send_letter("천옥을 획득하였습니다")
+			end
+		end
+
+		when 2411.kill or 2412.kill or 2413.kill or 2414.kill begin
+			if number(1, 500) <= 5 then
+				pc.give_item2(30254, 1)
+				send_letter("천옥을 획득하였습니다")
+			end
+		end
+
+		when 20091.chat."천옥을 가져온겐가?" with pc.count_item(30254) > 0 begin
+			pc.remove_item( 30254 , 1 )
+
+			say("백선아평")
+			say("어디보세...")
+
+			setdelay(150)
+			say("..........")
+			resetdelay()
+
+			if number(1, 100) <= 20 then
+				say("이건 가짜야...")
+				say("다시 찾아보게나")
+				say("")
+				return
+			end
+
+			say("흠... 그래 이건 분명 천옥이야")
+			say("")
+
+			wait()
+
+			local count = pc.getqf( "collect_count" ) + 1
+
+			if count < 5 then
+				pc.setqf( "collect_count", count )
+
+				say("백선아평")
+				say("이제 " .. 5-count .. " 개만 더 구해다 주면 되네")
+				say("수고해주게나")
+				say("")
+				return
+			end
+			
+			say("백선아평")
+			say("약속대로 자네에게 줬던 보상을 다른 것으로 바꿔 주겠네")
+			say("")
+
+			local selTab = {}
+			local pos = 1 
+
+			if tostring(get_quest_state("collect_quest_lv92")) == "557528158" then
+				table.insert(selTab, pos, "홍천의보석 보상")
+				pos = pos + 1
+			end
+
+			if tostring(get_quest_state("collect_quest_lv94")) == "557528158" then
+				table.insert(selTab, pos, "백천의보석 보상")
+				pos = pos + 1
+			end
+
+			if tostring(get_quest_state("collect_quest_lv96")) == "557528158" then
+				table.insert(selTab, pos, "청천의보석 보상")
+				pos = pos + 1
+			end
+
+			local s = select_table( selTab )
+
+			if selTab[s] == "lv92 홍천의보석 보상" then
+				affect.remove_collect(1, 1000)
+				affect.remove_collect(apply.DEF_GRADE_BONUS, 120)
+				affect.remove_collect(apply.ATT_GRADE_BONUS, 51)
+
+				s = select("체력 +1000", "방어력 +120", "공격력 +51")
+
+				if s == 1 then
+					affect.add_collect(1, 1000, 60*60*24*365*60)
+					pc.setf("collect_quest_lv92","reward","1")
+				elseif s == 2 then
+					affect.add_collect(apply.DEF_GRADE_BONUS, 120, 60*60*24*365*60)
+					pc.setf("collect_quest_lv92","reward","2")
+				elseif s == 3 then
+					affect.add_collect(apply.ATT_GRADE_BONUS, 51, 60*60*24*365*60)
+					pc.setf("collect_quest_lv92","reward","3")
+				end
+			elseif selTab[s] == "lv94 백천의보석 보상" then
+				affect.remove_collect(1, 1100)
+				affect.remove_collect(apply.DEF_GRADE_BONUS, 140)
+				affect.remove_collect(apply.ATT_GRADE_BONUS, 60)
+
+				s = select("체력 +1100", "방어력 +140", "공격력 +60")
+
+				if s == 1 then
+					affect.add_collect(1, 1100, 60*60*24*365*60)
+					pc.setf("collect_quest_lv94","reward","1")
+				elseif s == 2 then
+					affect.add_collect(apply.DEF_GRADE_BONUS, 140, 60*60*24*365*60)
+					pc.setf("collect_quest_lv94","reward","2")
+				elseif s == 3 then
+					affect.add_collect(apply.ATT_GRADE_BONUS, 60, 60*60*24*365*60)
+					pc.setf("collect_quest_lv94","reward","3")
+				end
+			elseif selTab[s] == "lv96 청천의보석 보상" then
+				affect.remove_collect(1, 2000)
+				affect.remove_collect(apply.DEF_GRADE_BONUS, 700)
+				affect.remove_collect(apply.ATT_GRADE_BONUS, 300)
+
+				s = select("체력 +2000", "방어력 +700", "공격력 +300")
+
+				if s == 1 then
+					affect.add_collect(1, 2000, 60*60*24*365*60)
+					pc.setf("collect_quest_lv96","reward","1")
+				elseif s == 2 then
+					affect.add_collect(apply.DEF_GRADE_BONUS, 700, 60*60*24*365*60)
+					pc.setf("collect_quest_lv96","reward","2")
+				elseif s == 3 then
+					affect.add_collect(apply.ATT_GRADE_BONUS, 300, 60*60*24*365*60)
+					pc.setf("collect_quest_lv96","reward","3")
+				end
+			end
+			pc.setqf( "collect_count", 0 )
+			set_state( check_reset_able )
+
+			say("백선아평")
+			say("새로 고른 보상으로 바꿔 놓았네")
+			say("또 바꾸고 싶으면 일주일 후에 찾아오게나")
+			say("")
+			pc.setqf("duration", get_time()+60*60*24*7) 
+		end
+	end
+end
+

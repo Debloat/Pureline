@@ -1,0 +1,18 @@
+quest trash_npc begin
+	state start begin
+		when 20041.take with game.get_event_flag("trash_npc") == 0 begin -- to close if needed
+			say_npc()
+			say("" )
+			say("Remove item?")
+			say("" )
+			say_show_item(item.vnum)
+			say("")
+			local s = select("Yes", "No")
+			if s == 1 then
+				item.remove()
+			else
+				return
+			end
+		end
+	end
+end

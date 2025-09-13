@@ -1,0 +1,85 @@
+quest main_quest_lv16 begin
+	state start begin
+	end
+	state run begin
+		when login or levelup or enter with pc.get_level() >= 16 begin
+			set_state ( gotoboss )
+		end
+	end
+	state gotoboss begin
+		when letter begin
+			send_letter(gameforge.main_quest_lv16._10_sendLetter)
+			
+			local v=find_npc_by_vnum(20355)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, gameforge.main_quest_lv10._10_sendLetter)
+			end
+
+		end
+		when button or info begin
+			say_title(gameforge.main_quest_lv16._20_sayTitle)
+	    		----------                                                   l
+			say(gameforge.main_quest_lv16._30_sayReward)
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+			
+			say_title(gameforge.main_quest_lv10._30_sayTitle)
+			say(gameforge.main_quest_lv16._40_say)
+			set_state ( killrobber )
+		end
+	end
+
+	state killrobber begin
+		when letter begin
+           		send_letter(gameforge.main_quest_lv16._60_sendLetter)
+		end
+		when button or info begin
+			say_title(gameforge.main_quest_lv16._60_sendLetter)
+			say(gameforge.main_quest_lv16._70_sayReward)
+		end
+		when 394.kill or 393.kill or 392.kill or 391.kill or 301.kill or 302.kill or 303.kill or 304.kill begin
+			
+			if number( 1, 10 ) == 1 then
+				pc.give_item2( 30001, 1 )
+				say_title(gameforge.main_quest_lv16._60_sendLetter)
+				say(gameforge.main_quest_lv16._75_say)
+				set_state (gotoboss2)
+			end
+
+		end
+	end
+	state gotoboss2 begin
+		when letter begin
+			local v=find_npc_by_vnum(20355)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, gameforge.main_quest_lv10._10_sendLetter)
+			end
+		end
+		when button or info begin
+			say_title(gameforge.main_quest_lv10._10_sendLetter)
+			say(gameforge.main_quest_lv16._80_sayReward)
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+			if pc.count_item(30001) >= 1 then
+				say_title(gameforge.main_quest_lv10._30_sayTitle)
+				say(gameforge.main_quest_lv16._90_say)
+				say_title(gameforge.collect_herb_lv4._130_sayTitle)
+				say_reward(gameforge.main_quest_lv16._100_sayReward)
+				
+				pc.remove_item(30001)
+				pc.give_exp2( 40000 )
+				pc.change_money( 5000 )
+				
+				clear_letter()
+				set_state (__COMPLETE__)
+				set_quest_state("main_quest_lv27", "run")
+			end
+		end
+	end
+	state __COMPLETE__ begin
+	end
+end

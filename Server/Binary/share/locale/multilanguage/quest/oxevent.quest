@@ -1,0 +1,220 @@
+quest oxevent_manager begin
+    state start begin
+        
+        function cleanup_event()
+            oxevent.end_event()
+            game.set_event_flag("ox_map_login_counter",0)
+        end
+        
+        function check_limit()
+            if game.get_event_flag("ox_map_login_counter") == game.get_event_flag("ox_map_player_max") then
+                return 0
+            else
+                return 1
+            end
+        end
+
+        function enter_level (vnum1,vnum2)
+            lv_range={}
+            lv_range[1] ={15,39}
+            lv_range[2] ={40,64}
+            lv_range[3] ={65,84}
+            lv_range[4] ={85,99}
+            lv_range[5] ={100,105}
+            return lv_range [vnum1][vnum2]
+        end
+        
+        when login or enter begin
+            if pc.get_map_index() == 113 then
+                local counter = game.get_event_flag("ox_map_login_counter")
+                game.set_event_flag("ox_map_login_counter", counter+1)
+            end
+        end
+
+				when logout begin
+					if pc.get_map_index() == 113 then
+						 if is_test_server() then
+                pc.setqf("ox_end_cooldown_time", get_time() + 20*3)
+            else
+                pc.setqf("ox_end_cooldown_time", get_time()+60*15) -----------------------------------15 Minuten nun
+            end
+					end
+				end
+    
+        when 20011.chat.gameforge.oxevent._10_npcChat begin
+
+            say_title(gameforge.main_quest_lv30._40_sayTitle)
+            say(gameforge.oxevent._20_say)
+            wait()
+
+            if game.get_event_flag("oxevent_status") == 0 then
+                say_title(gameforge.main_quest_lv30._40_sayTitle)
+                say(gameforge.oxevent._30_say)
+
+            elseif game.get_event_flag("oxevent_status") == 1 then
+                say_title(gameforge.main_quest_lv30._40_sayTitle)
+                say(gameforge.oxevent._40_say)
+
+                local s =  select(gameforge.buy_fishrod._120_select, gameforge.locale.cancel)
+
+                if s == 1 then
+                    say_title(gameforge.main_quest_lv30._40_sayTitle)
+                    say(gameforge.oxevent._50_say)
+                    wait()
+                    
+                    -- read the limits that the admin set hopefully
+                    local min = game.get_event_flag("ox_map_level_min")
+                    local max = game.get_event_flag("ox_map_level_max")
+                    
+                    if pc.level < min or pc.level > max then
+                        say_title(gameforge.main_quest_lv30._40_sayTitle)
+                        say_reward(string.format(gameforge.entry_event_map._040_say, min, max))
+                        return
+                    end
+										
+                    if get_time() < pc.getqf("ox_end_cooldown_time") then
+                        say_title(gameforge.main_quest_lv30._40_sayTitle)
+                        say(gameforge.locale.monkey_dungeon.cannot_enter_yet)
+												return
+                    end
+                    
+                    
+                    -- check again the limit before we warp the player, maybe someone have trigger the limit 
+                    if  oxevent_manager.check_limit() == 0 then
+                        say_title(gameforge.main_quest_lv30._40_sayTitle)
+                        say(gameforge.entry_event_map._060_say)
+                        return
+                    end
+                    
+                    -- removed the random warp, cause the current binary checks the coordinates.
+                    --pc.warp(math.random(892973,899719), math.random(23256, 26044) )
+                     pc.warp(896500, 24600)
+                elseif s == 2 then
+                    return
+                end
+
+            elseif game.get_event_flag("oxevent_status") == 2 then
+                say_title(gameforge.main_quest_lv30._40_sayTitle)
+                say(gameforge.oxevent._60_say)
+
+            end
+        end
+
+        when 20358.chat.gameforge.oxevent._70_npcChat with pc.get_gm_level()== 5  begin
+
+            local stat = oxevent.get_status()
+
+            if stat == 0 then
+            
+                say(gameforge.entry_event_map._150_say)
+                local choice = select ("1> min "..oxevent_manager.enter_level(1,1).." max "..oxevent_manager.enter_level(1,2),"2> min "..oxevent_manager.enter_level(2,1).." max "..oxevent_manager.enter_level(2,2), "3> min "..oxevent_manager.enter_level(3,1).." max "..oxevent_manager.enter_level(3,2), "4> min "..oxevent_manager.enter_level(4,1).." max "..oxevent_manager.enter_level(4,2),  "5> min "..oxevent_manager.enter_level(5,1).." max "..oxevent_manager.enter_level(5,2), gameforge.locale.cancel)
+                if choice == 6 then
+                    return
+                end
+                
+                say(gameforge.entry_event_map._160_say)
+                local amount_choice = input_number(gameforge.entry_event_map._240_say)
+
+                 if amount_choice > 200 or amount_choice <= 0 then
+                    say(gameforge.entry_event_map._250_say)
+                    return
+                end
+
+                say(gameforge.oxevent._80_say)
+                say(gameforge.entry_event_map._180_say)
+                say(gameforge.entry_event_map._190_say .. " " .. oxevent_manager.enter_level(choice,1).. " - " ..oxevent_manager.enter_level(choice,2))
+                say(gameforge.entry_event_map._200_say .. " " .. amount_choice)
+
+                local s =  select(gameforge.oxevent._90_select, gameforge.locale.cancel)
+
+                if s == 1 then
+                    local v = oxevent.open()
+
+                    if v == 0 then
+                        say(gameforge.oxevent._100_say)
+                        say_reward(gameforge.oxevent._110_sayReward)
+                        
+                    elseif v == 1 then
+                        say(gameforge.oxevent._120_say)
+                        notice_multiline(gameforge.oxevent._130_notice_all,notice_all)
+                        notice_multiline(gameforge.oxevent._131_notice_all,notice_all)
+                        -- set the limits we set previous asked
+                        game.set_event_flag("ox_map_level_min",oxevent_manager.enter_level(choice,1))
+                        game.set_event_flag("ox_map_level_max",oxevent_manager.enter_level(choice,2))
+                        game.set_event_flag("ox_map_player_max",amount_choice)
+                    else
+                        say(gameforge.oxevent._100_say)
+                    end
+                end
+            elseif stat == 1 then
+                    say(string.format(gameforge.oxevent._140_say, oxevent.get_attender()))
+
+                    local s =  select(gameforge.oxevent._150_select, gameforge.locale.cancel)
+
+                    if s == 1 then
+                        oxevent.close()
+                        say(gameforge.oxevent._160_say)
+                    end
+            elseif stat == 2 then
+                    say(gameforge.oxevent._170_say)
+
+                    local s =  select(
+                        gameforge.oxevent._180_select, 
+                        gameforge.oxevent._190_select,  
+                        gameforge.oxevent._195_select,
+                        gameforge.locale.cancel
+                        )
+
+                    if s == 1 then
+                        local v = oxevent.quiz(1, 30)
+
+                        if v == 0 then
+                            say(gameforge.oxevent._200_say)
+                        elseif v == 1 then
+                            say(gameforge.oxevent._210_say)
+                        else
+                            say(gameforge.oxevent._220_say)
+                        end
+                    elseif s == 2 then
+                        oxevent_manager.cleanup_event()
+                        say(gameforge.oxevent._230_say)
+                        notice_multiline(gameforge.oxevent._240_notice_all,notice_all)
+                        notice_multiline(gameforge.oxevent._241_notice_all,notice_all)
+                    elseif s == 3 then
+                        oxevent_manager.cleanup_event()
+                        say(gameforge.oxevent._250_say)
+                        notice_multiline(gameforge.oxevent._260_notice_all,notice_all)
+                        notice_multiline(gameforge.oxevent._261_notice_all,notice_all)
+                    end
+            elseif stat == 3 then
+                    say(gameforge.oxevent._270_say)
+                    say_reward(gameforge.oxevent._280_sayReward)
+            else
+                    say(gameforge.oxevent._290_say)
+                end
+            end
+
+        when 20358.chat.gameforge.oxevent._300_npcChat with pc.get_gm_level()== 5  begin
+            say(gameforge.oxevent._310_say)
+
+            local s =  select(gameforge.oxevent._320_select, gameforge.locale.cancel)
+
+            if s == 1 then
+                oxevent.end_event_force()
+                game.set_event_flag("ox_map_login_counter",0)
+                say(gameforge.oxevent._330_say)
+            end
+        end
+
+        when 20358.chat.gameforge.oxevent._340_npcChat with pc.get_gm_level()== 5  begin
+            say(gameforge.oxevent._350_say)
+            local item_vnum = input()
+            say(gameforge.oxevent._360_say)
+            local item_count = input()
+            
+            oxevent.give_item(item_vnum, item_count)
+
+            say(string.format(gameforge.oxevent._370_say, oxevent.get_attender()))
+        end
+    end
+end

@@ -1,0 +1,28 @@
+quest polymarble_test begin
+	state start begin
+		when enter or login with pc.getqf("test") == 1 begin
+			local poly_mobs = {
+				175,
+				184,
+				501,
+				502,
+				552,
+				771,
+				1601,
+				2001,
+				2051,
+				2061,
+				2131,
+				5002
+			}
+			--table.foreachi(poly_mobs, 
+				--function(index, mob)
+					--pc.give_poly_marble(mob)
+				--end
+			--)
+			pc.give_poly_marble(2061)
+			pc.give_poly_marble(5003)
+			pc.give_poly_marble(2131)
+		end
+	end
+end

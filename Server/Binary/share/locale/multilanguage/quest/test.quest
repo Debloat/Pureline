@@ -1,0 +1,8 @@
+quest test begin
+	state start begin
+		when 20355.chat."bbbb" begin
+			setskin(NOWINDOW)
+			say_show_item(90013)
+		end
+	end
+end

@@ -1,0 +1,18 @@
+AStyle 3.6.4 For Metin2
+
+
+TR - Bilgi;
+
+Klasörün içindeki "AStyle.bat ve AStyle.exe" dosyalarýný src içindeki tüm klasörlere tek tek atýp AStyle.bat dosyasýna çift týklayýn, bu kadar.
+
+Hazýrlayan: MT2Dev - 2024
+
+
+
+
+
+ENG - Info;
+
+Drag the "AStyle.bat and AStyle.exe" files to each folder in src and double-click the AStyle.bat file, that's it.
+
+Prepared by: MT2Dev - 2024

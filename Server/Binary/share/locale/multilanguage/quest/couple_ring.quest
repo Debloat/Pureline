@@ -1,0 +1,106 @@
+quest couple_ring begin
+    state start begin
+	when 9006.chat.gameforge.couple_ring._10_npcChat with pc.get_level()>=25 begin
+
+	    say_title(gameforge.couple_ring._20_sayTitle)
+
+	    say(gameforge.couple_ring._30_say)
+	    local s= select(gameforge.couple_ring._40_select, gameforge.couple_ring._50_select)
+
+	    if s==1 then
+		say_title(gameforge.couple_ring._20_sayTitle)
+		say(gameforge.couple_ring._60_say)
+		set_state(kill)
+	    elseif s==2 then
+		say_title(gameforge.couple_ring._20_sayTitle)
+		say(gameforge.couple_ring._70_say)
+	    end
+	end
+    end
+    state kill begin
+	when enter begin
+	    pc.setqf("kill_count", 0)
+	end
+	when leave begin
+	    pc.setqf("kill_count", 0)
+	    q.done()
+	end
+	when letter begin
+	    q.set_counter(gameforge.couple_ring._75_say, couple_ring.get_rest_count());
+	end
+	when 394.kill begin
+	    local kill_count=pc.getqf("kill_count")+1
+	    pc.setqf("kill_count", kill_count)	
+	    q.set_counter(gameforge.couple_ring._75_say, couple_ring.get_rest_count());
+
+	    if couple_ring.is_completed() then
+		say_title(gameforge.couple_ring._80_sayTitle)
+		say(gameforge.couple_ring._90_say)
+		set_state(report)
+	    end
+	end
+	function get_rest_count()
+	    return 30-pc.getqf("kill_count")
+	end
+	function is_completed()
+		return pc.getqf("kill_count")>=30 
+	end
+
+	when letter begin
+	    send_letter(gameforge.couple_ring._100_sendLetter)
+	end
+	when button or info begin
+	    say_title(gameforge.buy_fishrod._210_sayTitle)
+		say(gameforge.couple_ring._110_sayReward)
+	    say_reward(string.format(gameforge.couple_ring._120_sayReward, couple_ring.get_rest_count()))
+	end
+	when 9006.chat.gameforge.couple_ring._10_npcChat begin
+	    say_title(gameforge.couple_ring._20_sayTitle)
+	    say(gameforge.couple_ring._130_say)
+	    local s= select(gameforge.locale.levelup.prev_quest_go, gameforge.locale.cancel)
+	    if s==1 then
+		say_title(gameforge.couple_ring._20_sayTitle)
+		say(gameforge.couple_ring._140_say)
+	    else
+		say_title(gameforge.couple_ring._20_sayTitle)
+		say(gameforge.couple_ring._150_say)
+		wait()
+		say_title(gameforge.buy_fishrod._210_sayTitle)
+		say(gameforge.couple_ring._160_say)
+		local s =  select(gameforge.couple_ring._170_select, gameforge.locale.cancel)
+		if s==1 then
+		say_title(gameforge.couple_ring._20_sayTitle)
+		say(gameforge.couple_ring._180_say)
+		elseif s==2 then
+		say_title(gameforge.couple_ring._20_sayTitle)
+		say(gameforge.couple_ring._190_say)
+		set_state(start)
+		    q.done()
+		end
+	    end
+	end
+    end
+    state report begin
+	when letter begin
+	    send_letter(gameforge.couple_ring._200_sendLetter)
+	end
+	when button or info begin
+	    say_title(gameforge.buy_fishrod._210_sayTitle)
+	    say(gameforge.couple_ring._210_say)
+	end
+	when 9006.chat.gameforge.couple_ring._220_npcChat begin
+	    say_title(gameforge.couple_ring._20_sayTitle)
+	    say(gameforge.couple_ring._230_say)
+	    say_reward(gameforge.couple_ring._240_sayReward)
+	    say_item(gameforge.couple_ring._250_sayItem, 70301, gameforge.couple_ring._255_sayItem)
+	    pc.give_item2(70301)
+	    set_state(__COMPLETE__ )
+	    q.done()
+	end
+    end
+    state __COMPLETE__ begin
+    end
+    state failure begin
+    end
+end
+

@@ -1,0 +1,195 @@
+quest goldbar_shop begin
+	state start begin
+		when 20020.chat.gameforge.goldbar._10_npcChat begin
+			if pc.get_level() < 30 then
+				say_title(gameforge.goldbar._20_sayTitle)
+				say(gameforge.goldbar._30_say)
+				wait()
+				say_title(gameforge.buy_fishrod._210_sayTitle)
+								say_reward(gameforge.goldbar._40_sayReward)
+								return
+			end
+			if game.get_event_flag("gold_trade_enable") == 0 then
+				say_title(gameforge.goldbar._20_sayTitle)
+				say(gameforge.goldbar._50_say)
+				wait()
+				say_title(gameforge.buy_fishrod._210_sayTitle)
+								say_reward(gameforge.goldbar._60_sayReward)
+								return
+			end
+			say_title(gameforge.goldbar._20_sayTitle)
+			say(gameforge.goldbar._70_say)
+
+			local s =  select(gameforge.goldbar._80_select, gameforge.goldbar._90_select)
+
+			if s == 1 then
+				say_title(gameforge.goldbar._20_sayTitle)
+				say(gameforge.goldbar._100_say)
+
+				wait()
+
+				local interval = game.get_event_flag("gold_trade_cycle")
+				local unit = ""
+				if interval <= 0 then interval = 360 end
+
+				if interval >= 60 then
+					interval = interval / 60
+					unit = gameforge.goldbar._104_say
+					math.ceil(interval)
+				else
+					unit = gameforge.goldbar._108_say
+				end
+
+				if interval < 1 then interval = 1 end
+				say_title(gameforge.goldbar._20_sayTitle)
+				say(string.format(gameforge.goldbar._110_say, interval, unit))
+				say(gameforge.goldbar._120_say)
+			else
+				say_title(gameforge.goldbar._20_sayTitle)
+				say(gameforge.goldbar._130_say)
+			end
+
+			setstate(trade_goldbar)
+		end
+	end
+
+	state trade_goldbar begin
+		when 20020.chat.gameforge.goldbar._140_npcChat begin
+			if pc.get_level() < 30 then
+				say_title(gameforge.goldbar._20_sayTitle)
+				say(gameforge.goldbar._150_say)
+				setstate(start)
+				return
+			end
+			if game.get_event_flag("gold_trade_enable") == 0 then
+				say_title(gameforge.goldbar._20_sayTitle)
+				say(gameforge.goldbar._160_say)
+				say_reward(gameforge.goldbar._170_sayReward)
+				return
+			end
+
+			local nexttime = pc.getqf("gold_buy_next_time")
+			
+			local interval = game.get_event_flag("gold_trade_cycle")
+			local unit = ""
+
+			if interval <= 0 then interval = 360 end
+
+			if get_time() < nexttime then
+				nexttime = (nexttime / 60) - (get_time()/60)
+
+				if nexttime >= 60 then
+					unit = gameforge.goldbar._104_say
+					nexttime = nexttime / 60
+					math.ceil(nexttime)
+				else
+					unit = gameforge.goldbar._108_say
+				end
+
+				if nexttime < 1 then nexttime = 1 end
+				say_title(gameforge.goldbar._20_sayTitle)
+				say(gameforge.goldbar._180_say)
+say(string.format(gameforge.goldbar._190_say, nexttime, unit))
+								else
+				say_title(gameforge.goldbar._20_sayTitle)
+				say(gameforge.goldbar._200_say)
+
+					local s =  select(gameforge.buy_fishrod._40_select, gameforge.buy_fishrod._50_select)
+					if s == 1 then
+						if pc.money >= 2200000 then
+							local goldbar_count = pc.count_item(80007)
+							char_log(0, "GOLDBARREN", "KAUFEN ("..goldbar_count..")")
+							pc.changemoney(-2200000)
+							say_title(gameforge.goldbar._20_sayTitle)
+							say(gameforge.goldbar._210_say)
+							pc.give_item2("80007", 1)
+							pc.setqf("gold_buy_next_time", get_time() + time_min_to_sec(interval))
+						else
+							say_title(gameforge.goldbar._20_sayTitle)
+							say(gameforge.goldbar._220_say)
+						end
+					elseif s == 2 then
+						say_title(gameforge.goldbar._20_sayTitle)
+						say(gameforge.goldbar._230_say)
+					else
+				end
+							end
+		end
+
+		when 20020.chat.gameforge.goldbar._240_npcChat with pc.is_gm() begin
+			say(gameforge.goldbar._250_say)
+			pc.setqf("gold_buy_next_time", 0)
+			pc.setqf("gold_sell_next_time", 0)
+		end
+		when 20020.chat.gameforge.goldbar._260_npcChat begin
+			if pc.get_level() < 30 then
+				say_title(gameforge.goldbar._20_sayTitle)
+				say(gameforge.goldbar._270_say)
+				setstate(start)
+				return
+			end
+			if game.get_event_flag("gold_trade_enable") == 0 then
+				say_title(gameforge.goldbar._20_sayTitle)
+				say(gameforge.goldbar._280_say)
+				say_reward(gameforge.goldbar._290_sayReward)
+								return
+			end
+
+			local nexttime = pc.getqf("gold_sell_next_time")
+
+			local interval = game.get_event_flag("gold_trade_cycle")
+			local unit = ""
+
+			if interval <= 0 then interval = 360 end
+
+			if get_time() < nexttime then
+				nexttime = (nexttime / 60) - (get_time()/60)
+
+				if nexttime >= 60 then
+					unit = gameforge.goldbar._104_say
+					nexttime = nexttime / 60
+					math.ceil(nexttime)
+				else
+					unit = gameforge.goldbar._108_say
+				end
+
+				if nexttime < 1 then nexttime = 1 end
+				say_title(gameforge.goldbar._20_sayTitle)
+				say(gameforge.goldbar._300_say)
+say(string.format(gameforge.goldbar._310_say, nexttime, unit))
+							else
+				if pc.count_item(80007) <= 0 then
+				say_title(gameforge.goldbar._20_sayTitle)
+				say(gameforge.goldbar._320_say)
+				else
+				say_title(gameforge.goldbar._20_sayTitle)
+				say(gameforge.goldbar._330_say)
+
+					local s =  select(gameforge.goldbar._340_select, gameforge.goldbar._350_select)
+
+					if s == 1 then
+						say_title(gameforge.goldbar._20_sayTitle)
+						say(gameforge.goldbar._360_say)
+
+						local goldbar_count = pc.count_item(80007)
+						if goldbar_count >= 1 then
+							char_log(0, "GOLDBARREN", "VERKAUFEN("..goldbar_count..")")
+							pc.changemoney(2000000)
+							pc.remove_item(80007)
+						else
+							char_log(0, "GOLDBARREN", "SELL_HACK")
+						end
+						pc.setqf("gold_sell_next_time", get_time() + time_min_to_sec(interval))
+
+					elseif s == 2 then
+						say_title(gameforge.goldbar._20_sayTitle)
+						say(gameforge.goldbar._370_say)
+					end
+				end
+			end
+		end
+	end
+
+end
+
+

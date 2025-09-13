@@ -1,0 +1,131 @@
+quest find_brother_article begin
+    state start begin
+	when 20006.chat.gameforge.find_brother_article._10_npcChat with pc.get_level()>=23 and pc.get_level()<=26 begin
+	    	say_title(gameforge.find_brother_article._20_sayTitle)
+		say(gameforge.find_brother_article._30_say)
+		wait()
+		say_pc_name()
+		say(gameforge.find_brother_article._40_say)
+		wait()
+		say_title(gameforge.find_brother_article._20_sayTitle)
+		say(gameforge.find_brother_article._50_say)
+		wait()
+		say_title(gameforge.find_brother_article._60_sayTitle)
+		say(gameforge.find_brother_article._70_say)
+		say_reward(gameforge.find_brother_article._80_sayReward)
+				local s= select(gameforge.find_brother_article._90_select, gameforge.find_brother_article._100_select)
+		if 1==s then
+			say_pc_name()
+		    say(gameforge.find_brother_article._110_say)
+		    set_state(accept)
+		elseif 2==s then
+			say_pc_name()
+		    say(gameforge.find_brother_article._120_say)
+		end
+	end
+    end
+    state accept begin
+	when letter begin
+	    send_letter(gameforge.find_brother_article._130_sendLetter)
+	end
+	when button or info begin
+		say_title(gameforge.find_brother_article._130_sendLetter)
+		say(gameforge.find_brother_article._140_sayReward)
+	end
+	when 20006.chat.gameforge.find_brother_article._150_npcChat with pc.count_item(30032)==0 begin
+	    say_title(gameforge.find_brother_article._60_sayTitle)
+	    say(gameforge.find_brother_article._160_say)
+	    local s= select(gameforge.locale.levelup.prev_quest_go, gameforge.find_brother_article._170_select)
+	    if 1==s then
+			say_title(gameforge.blacksmith._40_sayTitle)
+			say_reward(gameforge.find_brother_article._180_sayReward)
+		else
+			say_pc_name()
+			say(gameforge.find_brother_article._190_say)
+			wait()
+			say_title(gameforge.find_brother_article._60_sayTitle)
+			say(gameforge.find_brother_article._200_say)
+			say_reward(gameforge.find_brother_article._205_sayReward)
+			local s= select(gameforge.find_brother_article._210_select, gameforge.find_brother_article._170_select)
+			if 1==s then
+				say_pc_name()
+				say(gameforge.find_brother_article._220_say)
+			elseif 2==s then
+				say_title(gameforge.find_brother_article._60_sayTitle)
+				say(gameforge.find_brother_article._230_say)
+				set_state(__FAILURE__)
+			end
+	    end
+	end
+	when 20006.chat.gameforge.find_brother_article._240_npcChat with pc.count_item(30032)>=1 begin
+	    say_title(gameforge.find_brother_article._60_sayTitle)
+	    say(gameforge.find_brother_article._250_say)
+	    say_reward(gameforge.find_brother_article._260_sayReward)
+
+	    pc.remove_item(30032)
+	    set_state(reward)
+	end
+    end
+    state reward begin
+	when letter begin
+	    send_letter(gameforge.find_brother_article._270_sendLetter)
+	end
+	when button begin
+	    say_title(gameforge.find_brother_article._270_sendLetter)
+	    say(gameforge.find_brother_article._280_say)
+	    wait()
+	    say(gameforge.find_brother_article._290_say)
+	    say_reward(gameforge.find_brother_article._300_sayReward)
+	    	    set_state(repair)
+	end
+    end
+    state repair begin
+	when letter begin
+	    send_letter(gameforge.find_brother_article._310_sendLetter)
+
+	end
+	when button or info begin
+	    say_title(gameforge.find_brother_article._310_sendLetter)
+	    say(gameforge.find_brother_article._320_say)
+	end
+	when letter begin
+	    local v=find_npc_by_vnum(20016)
+	    if v!=0 then
+		target.vid("__TARGET__", v, gameforge.find_brother_article._330_targetVid)
+	    end
+	end
+	when __TARGET__.target.click or 20016.chat.gameforge.find_brother_article._340_npcChat begin
+	    target.delete("__TARGET__")
+
+	    say_title(gameforge.blacksmith._20_sayTitle)
+	    say(gameforge.find_brother_article._350_say)
+	    wait()
+	    say_title(gameforge.blacksmith._20_sayTitle)
+	    say(gameforge.find_brother_article._360_say)
+		
+	    local r=number(1, 4)
+	    if 1==r then
+		say_reward(gameforge.find_brother_article._370_sayReward)
+		pc.give_item2(00062)
+	    elseif 2==r then
+		say_reward(gameforge.find_brother_article._380_sayReward)
+		pc.give_item2(00072)
+	    elseif 3==r then
+		say_reward(gameforge.find_brother_article._390_sayReward)
+		pc.give_item2(00082)
+	    elseif 4==r then
+		say_reward(gameforge.find_brother_article._400_sayReward)
+		pc.give_item2(00092)
+	    end
+	    clear_letter()
+	    set_state(__COMPLETE__)
+	    q.done()
+	end
+    end
+    state __COMPLETE__ begin
+    end
+    state __FAILURE__ begin
+    end
+end
+
+

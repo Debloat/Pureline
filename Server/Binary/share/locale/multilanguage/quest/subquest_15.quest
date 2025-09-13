@@ -1,0 +1,141 @@
+quest subquest_15 begin
+	state start begin
+		when login or levelup or enter with pc.get_level() >= 23  and pc.get_level() <= 28 begin
+			set_state(information)
+		end
+	end
+
+	state information begin
+		when letter begin
+
+			local vnum=0
+
+			if pc.get_empire() == 1 then
+				vnum=11000
+			elseif pc.get_empire() == 2 then
+				vnum=11002
+			elseif pc.get_empire() == 3 then
+				vnum=11004
+			end
+
+			local v = find_npc_by_vnum(vnum)
+
+			if v != 0 then
+				target.vid("__TARGET__", v, gameforge.subquest_15._10_targetVid)
+			end
+		end
+
+
+		when __TARGET__.target.click or	11000.chat.gameforge.subquest_15._10_targetVid or	11002.chat.gameforge.subquest_15._10_targetVid or	11004.chat.gameforge.subquest_15._10_targetVid with pc.level >= 23 begin
+			target.delete("__TARGET__")
+
+			say_title(gameforge.find_squareguard._30_sayTitle)
+			say(gameforge.subquest_15._20_say)
+			wait()
+
+			say_title(gameforge.find_squareguard._30_sayTitle)
+			say(gameforge.subquest_15._30_say)
+			wait()
+
+			say_title(gameforge.find_squareguard._30_sayTitle)
+			say(gameforge.subquest_15._40_say)
+			local s= select(gameforge.subquest_06._150_select, gameforge.hair_shop._50_select)
+			if 2==s then
+				say(gameforge.subquest_11._60_say)
+				local a= select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
+				if  2==a then
+					say_title(gameforge.subquest_15._50_sayTitle)
+					say(gameforge.subquest_15._60_say)
+					return
+				end
+				say_title(gameforge.find_squareguard._30_sayTitle)
+				say(gameforge.subquest_15._70_say)
+				set_state(__GIVEUP__)
+				return
+			end
+			say_title(gameforge.find_squareguard._30_sayTitle)
+			say(gameforge.subquest_15._80_say)
+			set_state(hunt_eunjung)
+		end
+	end
+
+	state hunt_eunjung begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.subquest_15._10_targetVid)
+			q.set_title(gameforge.subquest_15._10_targetVid)
+			q.start()
+		end
+
+		when button or info begin
+			say_title(gameforge.subquest_15._10_targetVid)
+			say(gameforge.subquest_15._90_sayReward)
+		end
+
+		when 392.kill begin
+			set_state(hunt_reward)
+		end
+	end
+
+	state hunt_reward begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.subquest_15._10_targetVid)
+			q.set_title(gameforge.subquest_15._10_targetVid)
+			q.start()
+		end
+
+		when letter begin
+			local vnum=0
+
+			if pc.get_empire() == 1 then
+				vnum=11000
+			elseif pc.get_empire() == 2 then
+				vnum=11002
+			elseif pc.get_empire() == 3 then
+				vnum=11004
+			end
+
+			local v = find_npc_by_vnum(vnum)
+
+			if v != 0 then
+				target.vid("__TARGET__", v, gameforge.subquest_15._100_targetVid)
+			end
+		end
+
+		when info or button begin
+			say_title(gameforge.subquest_15._10_targetVid)
+			say(gameforge.subquest_15._110_sayReward)
+		end
+
+		when __TARGET__.target.click or	11000.chat.gameforge.subquest_15._100_targetVid or	11002.chat.gameforge.subquest_15._100_targetVid or	11004.chat.gameforge.subquest_15._100_targetVid begin
+			target.delete("__TARGET__")
+			say_title(gameforge.find_squareguard._30_sayTitle)
+			say(gameforge.subquest_15._120_say)
+			wait()
+			say_title(gameforge.find_squareguard._30_sayTitle)
+			say(gameforge.subquest_15._130_say)
+			wait()
+			pc.give_exp2(150000)
+			pc.change_money(25000)
+			pc.give_item2("16064", 1)
+			say_title(gameforge.collect_herb_lv4._130_sayTitle)
+						say_reward(gameforge.subquest_15._140_sayReward)
+			
+			clear_letter()
+			set_state(__COMPLETE__)
+		end
+
+
+	end
+
+	state __GIVEUP__ begin
+	end
+	state __COMPLETE__ begin
+		when enter begin
+			q.done()
+		end
+	end
+end
+
+

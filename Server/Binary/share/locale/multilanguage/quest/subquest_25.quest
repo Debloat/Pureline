@@ -1,0 +1,212 @@
+quest subquest_25 begin
+	state start begin
+		when login or levelup with pc.level >= 31  and pc.level <= 33 begin
+			set_state(information)
+		end
+	end
+
+	state information begin
+		when letter begin
+			local v=find_npc_by_vnum(20022)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, gameforge.subquest_25._10_targetVid)
+			end
+		end
+
+		when __TARGET__.target.click or 20022.chat.gameforge.subquest_25._20_npcChat begin
+			target.delete("__TARGET__")
+			say_title(gameforge.cube._40_sayTitle)
+			say(gameforge.subquest_25._30_say)
+			wait()
+			say_title(gameforge.cube._40_sayTitle)
+			say(gameforge.subquest_25._40_say)
+			wait()
+			say_title(gameforge.cube._40_sayTitle)
+			say(gameforge.subquest_25._50_say)
+			set_state(to_hear_about_her)
+			
+		end
+	end
+	
+	state to_hear_about_her begin	
+		when letter begin
+			setskin(NOWINDOW)
+			q.set_title(gameforge.subquest_25._60_qSetTitle)
+			q.start()
+			makequestbutton(gameforge.subquest_25._70_makequestbutton)
+			
+			local v=find_npc_by_vnum(20021)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, gameforge.subquest_25._80_targetVid)
+			end
+
+		end
+		
+		when info or button begin
+			say_title(gameforge.subquest_25._60_qSetTitle)
+			say(gameforge.subquest_25._90_say)
+		end
+		
+		when  __TARGET__.target.click or	20021.chat.gameforge.subquest_25._100_npcChat begin
+			target.delete("__TARGET__")
+			say_title(gameforge.hair_shop._20_sayTitle)
+			say(gameforge.subquest_25._110_say)
+			wait()
+			say_title(gameforge.hair_shop._20_sayTitle)
+			say(gameforge.subquest_25._120_say)
+			
+			set_state(order)
+
+	
+		end
+	end
+	state order begin
+		when letter begin
+			setskin(NOWINDOW)
+			q.set_title(gameforge.subquest_25._130_qSetTitle)
+			q.start()
+			makequestbutton(gameforge.subquest_25._140_makequestbutton)
+			
+			local v=find_npc_by_vnum(20022)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, gameforge.subquest_25._150_targetVid)
+			end
+
+		end
+		when info or button begin
+			say_title(gameforge.subquest_25._130_qSetTitle)
+			say(gameforge.subquest_25._160_say)
+		end
+
+		when __TARGET__.target.click or	20022.chat.gameforge.subquest_25._170_npcChat  begin
+			target.delete("__TARGET__")
+
+			say_title(gameforge.cube._40_sayTitle)
+			say(gameforge.subquest_25._180_say)
+			wait()
+			say_title(gameforge.cube._40_sayTitle)
+			say(gameforge.subquest_25._190_say)
+			local s= select(gameforge.subquest_01._50_select, gameforge.subquest_25._200_select)
+			if 2==s then
+				say(gameforge.subquest_25._210_say)
+				local a= select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
+					if  2==a then
+						say_title(gameforge.cube._40_sayTitle)
+						say(gameforge.subquest_25._220_say)
+						return
+					end
+					say_title(gameforge.cube._40_sayTitle)
+					say(gameforge.subquest_25._230_say)
+					set_state(__GIVEUP__)
+					return
+				end
+				say_title(gameforge.cube._40_sayTitle)
+				say(gameforge.subquest_25._240_say)
+				set_state(find_flower)
+			end
+
+
+	end
+
+	state find_flower begin
+		when letter begin
+			setskin(NOWINDOW)
+			q.set_title(gameforge.subquest_25._250_qSetTitle)
+			q.start()
+			makequestbutton(gameforge.subquest_25._250_qSetTitle)
+		
+			local v=find_npc_by_vnum(20358)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, gameforge.subquest_25._260_targetVid)
+			end
+
+
+		end
+		when info or  button begin
+			say_title(gameforge.subquest_25._270_sayTitle)
+
+			say(gameforge.subquest_25._280_say)
+		end
+		when 20022.chat.gameforge.subquest_25._290_npcChat begin
+			say_title(gameforge.cube._40_sayTitle)
+			say(gameforge.subquest_25._300_say)
+		
+			local s= select(gameforge.subquest_25._310_select, gameforge.subquest_25._320_select)
+			if 2==s then
+				say(gameforge.subquest_25._330_say)
+				local a= select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
+					if  2==a then
+						say_title(gameforge.cube._40_sayTitle)
+						say(gameforge.subquest_25._340_say)
+						return
+					end
+					say_title(gameforge.cube._40_sayTitle)
+					say(gameforge.subquest_25._350_say)
+					set_state(__GIVEUP__)
+					return
+				end
+				say_title(gameforge.cube._40_sayTitle)
+
+
+
+				say(gameforge.subquest_25._360_say)
+		end	
+
+
+		when __TARGET__.target.click or	20358.chat.gameforge.subquest_25._370_npcChat with pc.getqf("flower_done")==0 begin    
+				target.delete("__TARGET__")
+				say(gameforge.subquest_25._380_say)
+				pc.give_item2(30153, 1)                                                    
+				set_state(go_to_reward)
+			end
+			
+	end
+
+	state go_to_reward begin
+		when letter begin
+			setskin(NOWINDOW)
+			q.set_title(gameforge.subquest_25._390_qSetTitle)
+			q.start()
+			makequestbutton(gameforge.subquest_25._390_qSetTitle)
+			
+			local v=find_npc_by_vnum(20022)
+			if 0 == v then
+				else
+					target.vid("__TARGET__",v, gameforge.subquest_25._130_qSetTitle)
+			end 
+
+		end
+		when info or  button begin
+			say_title(gameforge.subquest_25._390_qSetTitle)
+
+			say(gameforge.subquest_25._400_say)
+		end
+
+		when __TARGET__.target.click or 20022.chat.gameforge.subquest_25._410_npcChat with pc.count_item(30153) > 0 begin      
+			target.delete("__TARGET__")
+			say_title(gameforge.cube._40_sayTitle)
+			say(gameforge.subquest_25._420_say)
+			pc.remove_item(30153,1)
+			
+			say_reward(gameforge.subquest_25._430_sayReward)
+			pc.give_exp2(400000)
+			say_reward(gameforge.subquest_25._440_sayReward)
+			pc.change_money(12000)	
+			
+			clear_letter()
+			set_state(__COMPLETE__)
+
+		end
+	end
+
+	state __GIVEUP__ begin
+	end
+	state __COMPLETE__ begin
+	end
+end
+
+

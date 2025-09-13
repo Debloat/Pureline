@@ -1,0 +1,135 @@
+quest ride_xmas begin
+	state start begin
+		function Ride( vnum, remain_time )
+			ride_info = {
+				-- Àü°©¼ý¼ø·Ï 
+				[52061]= { 20213,	60*60*24*365, apply.ATTBONUS_MONSTER,	0,	0,	false,	true	},
+				[52062]= { 20213,	60*60*24*365, apply.MALL_EXPBONUS,		0,	0,	false,	true	},
+				[52063]= { 20213,	60*60*24*365, apply.MAX_HP,				0,	0,	false,	true	},
+				[52064]= { 20213,	60*60*24*365, apply.DEF_GRADE_BONUS,	0,	0,	false,	true	},
+				[52065]= { 20213,	60*60*24*365, apply.ATT_GRADE_BONUS,	0,	0,	false,	true	},
+				[52066]= { 20214,	60*60*24*365, apply.ATTBONUS_MONSTER,	3 ,	0,	false,	true	},
+				[52067]= { 20214,	60*60*24*365, apply.MALL_EXPBONUS,		3 ,	0,	false,	true	},
+				[52068]= { 20214,	60*60*24*365, apply.MAX_HP,				250,	0,	false,	true	},
+				[52069]= { 20214,	60*60*24*365, apply.DEF_GRADE_BONUS,	50,	0,	false,	true	},
+				[52070]= { 20214,	60*60*24*365, apply.ATT_GRADE_BONUS,	30,	0,	false,	true	},
+				[52071]= { 20215,	60*60*24*365, apply.ATTBONUS_MONSTER,	5 ,	0,	false,	true	},
+				[52072]= { 20215,	60*60*24*365, apply.MALL_EXPBONUS,		5 ,	0,	false,	true	},
+				[52073]= { 20215,	60*60*24*365, apply.MAX_HP,				500,	0,	false,	true	},
+				[52074]= { 20215,	60*60*24*365, apply.DEF_GRADE_BONUS,	150,	0,	false,	true	},
+				[52075]= { 20215,	60*60*24*365, apply.ATT_GRADE_BONUS,	100,	0,	false,	true	},
+	
+				-- Àü°©¾Ï¼ø·Ï
+				[52076]= { 20216,	60*60*24*365, apply.ATTBONUS_MONSTER,	0,	0,	false,	true	},
+				[52077]= { 20216,	60*60*24*365, apply.MALL_EXPBONUS,		0,	0,	false,	true	},
+				[52078]= { 20216,	60*60*24*365, apply.MAX_HP,				0,	0,	false,	true	},
+				[52079]= { 20216,	60*60*24*365, apply.DEF_GRADE_BONUS,	0,	0,	false,	true	},
+				[52080]= { 20216,	60*60*24*365, apply.ATT_GRADE_BONUS,	0,	0,	false,	true	},
+				[52081]= { 20217,	60*60*24*365, apply.ATTBONUS_MONSTER,	3 ,	0,	false,	true	},
+				[52082]= { 20217,	60*60*24*365, apply.MALL_EXPBONUS,		3 ,	0,	false,	true	},
+				[52083]= { 20217,	60*60*24*365, apply.MAX_HP,				250,	0,	false,	true	},
+				[52084]= { 20217,	60*60*24*365, apply.DEF_GRADE_BONUS,	50,	0,	false,	true	},
+				[52085]= { 20217,	60*60*24*365, apply.ATT_GRADE_BONUS,	30,	0,	false,	true	},
+				[52086]= { 20218,	60*60*24*365, apply.ATTBONUS_MONSTER,	5 ,	0,	false,	true	},
+				[52087]= { 20218,	60*60*24*365, apply.MALL_EXPBONUS,		5 ,	0,	false,	true	},
+				[52088]= { 20218,	60*60*24*365, apply.MAX_HP,				500,	0,	false,	true	},
+				[52089]= { 20218,	60*60*24*365, apply.DEF_GRADE_BONUS,	150,	0,	false,	true	},
+				[52090]= { 20218,	60*60*24*365, apply.ATT_GRADE_BONUS,	100,	0,	false,	true	},
+				[71164] = { 20220,	item.get_socket(2)*60,	apply.MOV_SPEED,	60,		1,	false,	false,	false},
+				[71165] = { 20221,	item.get_socket(2)*60,	apply.MOV_SPEED,	60,		1,	false,	false,	false},
+				[71166] = { 20222,	item.get_socket(2)*60,	apply.MOV_SPEED,	60,		1,	false,	false,	false},
+
+				-- ¼®·æÀÚ
+				[52091]= { 20223,	60*60*24*365, apply.ATTBONUS_MONSTER,	0,	0,	false,	true	},
+				[52092]= { 20223,	60*60*24*365, apply.MALL_EXPBONUS,		0,	0,	false,	true	},
+				[52093]= { 20223,	60*60*24*365, apply.MAX_HP,				0,	0,	false,	true	},
+				[52094]= { 20223,	60*60*24*365, apply.DEF_GRADE_BONUS,	0,	0,	false,	true	},
+				[52095]= { 20223,	60*60*24*365, apply.ATT_GRADE_BONUS,	0,	0,	false,	true	},
+				[52096]= { 20224,	60*60*24*365, apply.ATTBONUS_MONSTER,	3 ,	0,	false,	true	},
+				[52097]= { 20224,	60*60*24*365, apply.MALL_EXPBONUS,		3 ,	0,	false,	true	},
+				[52098]= { 20224,	60*60*24*365, apply.MAX_HP,				250,	0,	false,	true	},
+				[52099]= { 20224,	60*60*24*365, apply.DEF_GRADE_BONUS,	50,	0,	false,	true	},
+				[52100]= { 20224,	60*60*24*365, apply.ATT_GRADE_BONUS,	30,	0,	false,	true	},
+				[52101]= { 20225,	60*60*24*365, apply.ATTBONUS_MONSTER,	5 ,	0,	false,	true	},
+				[52102]= { 20225,	60*60*24*365, apply.MALL_EXPBONUS,		5 ,	0,	false,	true	},
+				[52103]= { 20225,	60*60*24*365, apply.MAX_HP,				500,	0,	false,	true	},
+				[52104]= { 20225,	60*60*24*365, apply.DEF_GRADE_BONUS,	150,	0,	false,	true	},
+				[52105]= { 20225,	60*60*24*365, apply.ATT_GRADE_BONUS,	100,	0,	false,	true	},
+				}
+
+			if pc.level < ride_info[vnum][5] then
+				say("")
+				say(gameforge.ride._010_say)
+				say("")
+			else
+				if 112 == pc.get_map_index() then
+					return
+				end
+				if ride_info[vnum][2] == 0 and remain_time != 0 then
+					pc.mount( ride_info[vnum][1], remain_time*60 )
+					pc.mount_bonus( ride_info[vnum][3], ride_info[vnum][4], remain_time*60 )
+				else
+					pc.mount( ride_info[vnum][1], ride_info[vnum][2] )
+					pc.mount_bonus( ride_info[vnum][3], ride_info[vnum][4], ride_info[vnum][2] )
+				end
+
+				if true == ride_info[vnum][6] then
+					pc.remove_item(vnum, 1)
+				end	
+			end	
+		end
+
+		when login begin
+			local vnum, remain_time = pc.get_special_ride_vnum()
+			if (vnum <= 52060 or vnum >=52091) and vnum != 71164 and vnum != 71165 and vnum != 71166 then
+        		return
+      		end
+			if 0 != vnum then
+				ride_xmas.Ride(vnum, remain_time)
+			end
+		end
+
+		when 71164.use or 71165.use or 71166.use begin
+			if pc.is_polymorphed() then
+				say("")
+				say(gameforge.ride._020_say)
+				say("")
+			elseif false == pc.is_riding() then
+			 	if true == horse.is_summon() then
+					horse.unsummon()
+				end
+
+				ride_xmas.Ride(item.vnum, 0)
+			else
+				say("")
+				say(gameforge.ride._030_say)
+				say("")
+			end
+		end
+		when 52061.use or 52062.use or 52063.use or 52064.use or 52065.use or 52066.use or 52067.use or 52068.use or 52069.use or 52070.use or 52071.use or 52072.use or 52073.use or 52074.use or 52075.use or 
+			52076.use or 52077.use or 52078.use or 52079.use or 52080.use or 52081.use or 52082.use or 52083.use or 52084.use or 52085.use or 52086.use or 52087.use or 52088.use or 52089.use or 52090.use or
+			52091.use or 52092.use or 52093.use or 52094.use or 52095.use or 52096.use or 52097.use or 52098.use or 52099.use or 52100.use or 52101.use or 52102.use or 52103.use or 52104.use or 52105.use	begin
+
+			if pc.is_polymorphed() then
+				say("")
+				say(gameforge.ride._020_say)
+				say("")
+			elseif false == pc.is_riding() then
+			 	if true == horse.is_summon() then
+					horse.unsummon()
+				end
+
+				-- #71164's type is ITEM_UNIQUE. Others are ITEM_QUEST. 
+				if 71164 != item.vnum then
+					item.set_socket(2, 60*24*365*60)
+				end
+
+				ride_xmas.Ride(item.vnum, 0)
+			else
+				say("")
+				say(gameforge.ride._030_say)
+				say("")
+			end
+		end
+	end
+end

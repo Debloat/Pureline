@@ -1,0 +1,773 @@
+--2012.08 김용욱
+--메인퀘스트 레벨 92
+
+--퀘스트 진행 npc
+define GUARD 20378 -- 경비대장 악무르
+define ICHUNG 20369 -- 이충
+define TELEPORT 9012 -- 공간이동술사
+define YACKHWAN 20377 -- 약령도장 약환
+define SCHOLAR 20380 -- 학자
+define OCKGU 20008 -- 옥구
+define ALCHEMIST 20001 -- 연금술사
+define UNDERLING 20379 -- 악무르의 부하
+
+--<1>--
+--초마단의 서신을 찾아라!1-2--
+define MOB1_1 3504 -- 붉은도적단 장군
+define MOB1_2 3505 -- 붉은도적단 상급장수
+define MAP_INDEX1 1 -- 몬스터가 나오는 맵 번호
+define MAP_POS1_1_X 500 -- 맵에 반짝이도록 보이는 좌표.
+define MAP_POS1_1_Y 500
+define MAP_POS1_2_X 600
+define MAP_POS1_2_Y 500
+define MAP_POS1_3_X 700
+define MAP_POS1_3_Y 300
+define ITEM1_1 31010 -- 붉은 도적단의 서신 조각
+define ITEM1_1_NEEDED 4 -- 필요한 갯수 
+define ITEM1_1_PCT_GET 500 -- 획득 확률 (1/n)
+define REWARD1_EXP 33874000 --  보상 : 경험치
+define REWARD1_GOLD 200000 --  보상 : 골드
+define REWARD1_ITEM1 50817 --  보상 : 진활심액
+define REWARD1_ITEM1_COUNT 10 --  보상 갯수
+
+--<2>--
+--마지막 서신 조각--
+define ITEM2_1 31010 -- 붉은 서신조각
+define MAP_INDEX2 1 -- 몬스터가 나오는 맵 번호
+define MAP_POS2_1_X 500 -- 맵에 반짝이도록 보이는 좌표.
+define MAP_POS2_1_Y 500
+define MAP_POS2_2_X 600
+define MAP_POS2_2_Y 500
+define MAP_POS2_3_X 700
+define MAP_POS2_3_Y 300
+define REWARD2_EXP 20874600 -- 보상 : 경험치
+define REWARD2_GOLD 0 -- 보상 : 골드
+define REWARD2_ITEM1 30047 -- 보상 : 저주의 서
+define REWARD2_ITEM1_COUNT 2 -- 보상 갯수
+
+--<3>--
+--세번째 서신 판독1-1 --
+define MOB3_1 3490 -- 어인족 보스
+define MOB3_2 3491 -- 어인족 최종보스
+define MAP_INDEX3 1 -- 몬스터가 나오는 맵 번호
+define MAP_POS3_1_X 500 -- 맵에 반짝이도록 보이는 좌표.
+define MAP_POS3_1_Y 500
+define MAP_POS3_2_X 600
+define MAP_POS3_2_Y 500
+define MAP_POS3_3_X 700
+define MAP_POS3_3_Y 300
+define ITEM3_1 31022 -- 어인족의 비늘 (테스트 : 도+2)
+define ITEM3_1_NEEDED 10 -- 필요한 갯수 
+define ITEM3_1_PCT_GET 500 -- 획득 확률 (1/n)
+define REWARD3_EXP 34874000 -- 보상 : 경험치
+define REWARD3_GOLD 0 -- 보상 : 골드
+define REWARD3_ITEM1 27992 -- 보상 : 백진주
+define REWARD3_ITEM1_COUNT 2 -- 보상 갯수
+
+--<4>--
+--초마단의 서신의 진실--
+define REWARD4_EXP 24911280 -- 보상 : 경험치
+define REWARD4_GOLD 0 -- 보상 : 골드
+define REWARD4_ITEM1 27993 -- 보상 : 청진주
+define REWARD4_ITEM1_COUNT 2 -- 보상 갯수
+
+
+quest main_quest_lv92 begin
+    state start begin
+    end
+    state state0 begin
+        when login or levelup or enter with pc.level >= 92 begin
+            set_state (state1_1)
+        end
+    end
+    ------------------------------------초마단의 서신을 찾아라!1-2------------------------------------
+    ------------------------------------초마단의 서신을 찾아라!1-2------------------------------------
+    ------------------------------------초마단의 서신을 찾아라!1-2------------------------------------
+    ------------------------------------초마단의 서신을 찾아라!1-2------------------------------------
+    ------------------------------------초마단의 서신을 찾아라!1-2------------------------------------
+    ------------------------------------초마단의 서신을 찾아라!1-2------------------------------------
+    ------------------------------------초마단의 서신을 찾아라!1-2------------------------------------
+    ------------------------------------초마단의 서신을 찾아라!1-2------------------------------------
+    ------------------------------------초마단의 서신을 찾아라!1-2------------------------------------
+    ------------------------------------초마단의 서신을 찾아라!1-2------------------------------------
+    ------------------------------------초마단의 서신을 찾아라!1-2------------------------------------
+    state state1_1 begin
+
+        when letter begin
+            send_letter(gameforge.main_quest_lv92._010_sendLetter)
+            
+            local v = find_npc_by_vnum(GUARD)
+            if 0 != v then
+                target.vid("__TARGET__", v, mob_name(GUARD))
+            end
+        end
+        
+        when button or info begin
+            say_title(gameforge.main_quest_lv92._010_sendLetter)
+            say(gameforge.main_quest_lv92._020_say)
+            
+        end
+        
+        when GUARD.chat.gameforge.main_quest_lv92._010_sendLetter begin
+            target.delete("__TARGET__")
+            
+            say_title(mob_name(GUARD))
+            say(gameforge.main_quest_lv92._030_say)
+            wait()
+            
+            say_title(pc.getname())
+            say(gameforge.main_quest_lv92._040_say)
+            wait()
+            
+            say_title(mob_name(GUARD))
+            say(gameforge.main_quest_lv92._050_say)
+            wait()
+            
+            say_title(pc.getname())
+            say(gameforge.main_quest_lv92._060_say)
+            wait()
+            
+            say_title(mob_name(GUARD))
+            say(gameforge.main_quest_lv92._070_say)
+            wait()
+            
+            say_title(mob_name(GUARD))
+            say(gameforge.main_quest_lv92._080_say)
+            wait()
+            
+            say_title(pc.getname())
+            say(gameforge.main_quest_lv92._090_say)
+            wait()
+            
+            say_title(mob_name(GUARD))
+            say(gameforge.main_quest_lv92._100_say)
+            
+            set_state (state1_2)
+            
+            q.set_counter_value(ITEM1_1_NEEDED)
+        end
+    end
+    --퀘스트 수행--
+    state state1_2 begin
+        when letter begin
+            send_letter(gameforge.main_quest_lv92._010_sendLetter)
+            
+            local remain_item = ITEM1_1_NEEDED - pc.count_item(ITEM1_1)
+            if remain_item <= 0 then
+                remain_item = 0
+            end
+            q.set_counter_name("남은 아이템")
+            q.set_counter_value(remain_item)
+        end
+        when button or info begin
+            -- if pc.get_map_index() == MAP_INDEX1 then
+                -- addmapsignal(MAP_POS1_1_X * 100, MAP_POS1_1_Y * 100)
+                -- addmapsignal(MAP_POS1_2_X * 100, MAP_POS1_2_Y * 100)
+                -- addmapsignal(MAP_POS1_3_X * 100, MAP_POS1_3_Y * 100)
+            -- end
+            
+            say_title(gameforge.main_quest_lv92._110_sayTitle)
+            say(gameforge.main_quest_lv92._120_say)
+            say_item_vnum(ITEM1_1)
+            say(gameforge.main_quest_lv90._1180_say)
+            
+            local remain_item = ITEM1_1_NEEDED - pc.count_item(ITEM1_1)
+            if remain_item <= 0 then
+                remain_item = 0
+            end
+            q.set_counter_value(remain_item)
+            say_reward(string.format("%s: %d %s",item_name(ITEM1_1),remain_item,locale.count_postfix))
+            
+            -- say()
+            -- say_reward(locale.main_quest_lv92.pos_info)
+            -- select(gameforge.main_quest_lv90._950_say)
+            -- setskin(NOWINDOW)
+            -- clearmapsignal()
+            
+        end
+        
+        --클리어 전--
+        when GUARD.chat.gameforge.main_quest_lv92._010_sendLetter begin
+            
+            if pc.count_item(ITEM1_1) >= ITEM1_1_NEEDED then
+                pc.remove_item ( ITEM1_1, pc.count_item(ITEM1_1))	
+                say_title(mob_name(GUARD))
+                say(gameforge.main_quest_lv92._160_say)
+                wait()
+                
+                --보상
+                say_title(locale.reward)
+                say_reward(string.format (gameforge.main_quest_lv60._190_sayReward, REWARD1_EXP))
+                say_reward(string.format (gameforge.main_quest_lv60._200_sayReward, REWARD1_GOLD))
+                say_reward(string.format (gameforge.main_quest_lv60._210_sayReward, item_name(REWARD1_ITEM1),REWARD1_ITEM1_COUNT,locale.count_postfix))
+                say("")
+                
+                pc.give_exp2(REWARD1_EXP)
+                pc.change_money(REWARD1_GOLD)
+                pc.give_item2(REWARD1_ITEM1, REWARD1_ITEM1_COUNT)
+                
+                set_state (state2_1)
+            else
+                say_title(mob_name(GUARD))
+                say(gameforge.main_quest_lv92._130_say)
+                
+                set_state (state1_2)
+            end
+        end
+        
+        when MOB1_1.kill or MOB1_2.kill begin
+            if number(1,ITEM1_1_PCT_GET) == 1 then
+                if pc.count_item(ITEM1_1) < ITEM1_1_NEEDED then
+                    pc.give_item2(ITEM1_1, 1)
+                    
+                    --퀘스트 메뉴 창 카운트
+                    local remain_item = ITEM1_1_NEEDED - pc.count_item(ITEM1_1)
+                    if remain_item <= 0 then
+                        remain_item = 0
+                    end
+                    q.set_counter_value(remain_item)
+                    
+                    if pc.count_item(ITEM1_1) >= ITEM1_1_NEEDED then
+                        notice_multiline(gameforge.main_quest_lv92._140_1_notice,notice)
+                        notice_multiline(gameforge.main_quest_lv92._140_2_notice,notice)
+                        set_state (state1_3)
+                    end
+                end
+            end
+        end
+    end
+    state state1_3 begin
+
+        when letter begin
+            q.set_counter_name("")
+            send_letter(gameforge.main_quest_lv92._010_sendLetter)
+            
+            local v = find_npc_by_vnum(GUARD)
+            if 0 != v then
+                target.vid("__TARGET__", v, mob_name(GUARD))
+            end
+        end
+        
+        when button or info begin
+            say_title(gameforge.main_quest_lv92._010_sendLetter)
+            say(gameforge.main_quest_lv92._150_say)
+            
+        end
+        
+        -- 중간에 퀘스트 아이템을 버릴 경우를 대비한 부분.
+        when MOB1_1.kill or MOB1_2.kill begin
+            if number(1,ITEM1_1_PCT_GET) == 1 then
+                if pc.count_item(ITEM1_1) < ITEM1_1_NEEDED then
+                    pc.give_item2(ITEM1_1, 1)
+                    
+                    --퀘스트 메뉴 창 카운트
+                    local remain_item = ITEM1_1_NEEDED - pc.count_item(ITEM1_1)
+                    if remain_item <= 0 then
+                        remain_item = 0
+                    end
+                    q.set_counter_value(remain_item)
+                    
+                    if pc.count_item(ITEM1_1) >= ITEM1_1_NEEDED then
+                        notice_multiline(gameforge.main_quest_lv92._140_1_notice,notice)
+                        notice_multiline(gameforge.main_quest_lv92._140_2_notice,notice)
+                    end
+                end
+            end
+        end
+        
+        when GUARD.chat.gameforge.main_quest_lv92._010_sendLetter begin
+            target.delete("__TARGET__")
+            
+            if pc.count_item(ITEM1_1) >= ITEM1_1_NEEDED then
+                pc.remove_item ( ITEM1_1, pc.count_item(ITEM1_1))	
+                say_title(mob_name(GUARD))
+                say(gameforge.main_quest_lv92._160_say)
+                wait()
+                
+                --보상
+                say_title(locale.reward)
+                say_reward(string.format (gameforge.main_quest_lv60._190_sayReward, REWARD1_EXP))
+                say_reward(string.format (gameforge.main_quest_lv60._200_sayReward, REWARD1_GOLD))
+                say_reward(string.format (gameforge.main_quest_lv60._210_sayReward, item_name(REWARD1_ITEM1),REWARD1_ITEM1_COUNT,locale.count_postfix))
+                say("")
+                
+                pc.give_exp2(REWARD1_EXP)
+                pc.change_money(REWARD1_GOLD)
+                pc.give_item2(REWARD1_ITEM1, REWARD1_ITEM1_COUNT)
+                
+                set_state (state2_1)
+            else
+                say_title(mob_name(GUARD))
+                say(gameforge.main_quest_lv92._130_say)
+                
+                set_state (state1_2)
+            end
+        end
+    end
+
+    ------------------------------------마지막 서신 조각------------------------------------
+    ------------------------------------마지막 서신 조각------------------------------------
+    ------------------------------------마지막 서신 조각------------------------------------
+    ------------------------------------마지막 서신 조각------------------------------------
+    ------------------------------------마지막 서신 조각------------------------------------
+    ------------------------------------마지막 서신 조각------------------------------------
+    ------------------------------------마지막 서신 조각------------------------------------
+    ------------------------------------마지막 서신 조각------------------------------------
+    ------------------------------------마지막 서신 조각------------------------------------
+    ------------------------------------마지막 서신 조각------------------------------------
+    ------------------------------------마지막 서신 조각------------------------------------
+    ------------------------------------마지막 서신 조각------------------------------------
+    state state2_1 begin
+        when letter begin
+            q.set_counter_name("")
+            send_letter(gameforge.main_quest_lv92._170_sendLetter)
+            
+            local v = find_npc_by_vnum(GUARD)
+            if 0 != v then
+                target.vid("__TARGET__", v, mob_name(GUARD))
+            end
+        end
+        when button or info begin
+            say_title(gameforge.main_quest_lv92._170_sendLetter)
+            say(gameforge.main_quest_lv92._180_say)
+            
+        end
+        
+        when GUARD.chat.gameforge.main_quest_lv92._170_sendLetter begin
+            target.delete("__TARGET__")
+            
+            say_title(mob_name(GUARD))
+            say(gameforge.main_quest_lv92._190_say)
+            wait()
+            
+            say_title(pc.getname())
+            say(gameforge.main_quest_lv92._200_say)
+            wait()
+            
+            say_title(mob_name(GUARD))
+            say(gameforge.main_quest_lv92._210_say)
+            wait()
+            
+            say_title(pc.getname())
+            say(gameforge.main_quest_lv92._220_say)
+            wait()
+            
+            say_title(mob_name(GUARD))
+            say(gameforge.main_quest_lv92._230_say)
+            wait()
+            
+            say_title(pc.getname())
+            say(gameforge.main_quest_lv92._240_say)
+            
+            set_state (state2_2)
+        end
+    end
+    --퀘스트 수행--
+    state state2_2 begin
+        when letter begin
+            send_letter(gameforge.main_quest_lv92._170_sendLetter)
+            
+            local v = find_npc_by_vnum(UNDERLING)
+            if 0 != v then
+                target.vid("__TARGET__", v, mob_name(UNDERLING))
+            end
+        end
+        when button or info begin
+            -- if pc.get_map_index() == MAP_INDEX2 then
+                -- addmapsignal(MAP_POS2_1_X * 100, MAP_POS2_1_Y * 100)
+                -- addmapsignal(MAP_POS2_2_X * 100, MAP_POS2_2_Y * 100)
+                -- addmapsignal(MAP_POS2_3_X * 100, MAP_POS2_3_Y * 100)
+            -- end
+
+            say_title(gameforge.main_quest_lv92._250_sayTitle)
+            say(gameforge.main_quest_lv92._260_say)
+            say_item_vnum(ITEM2_1)
+
+            -- say()
+            -- say_reward(locale.main_quest_lv92.pos_info)
+            -- select(gameforge.main_quest_lv90._950_say)
+            -- setskin(NOWINDOW)
+            -- clearmapsignal()
+        end
+        
+        --클리어 전--
+        when GUARD.chat.gameforge.main_quest_lv92._170_sendLetter begin
+            say_title(mob_name(GUARD))
+            say(gameforge.main_quest_lv92._270_say)
+        end
+        
+        when UNDERLING.chat.gameforge.main_quest_lv92._170_sendLetter begin
+            say_title(mob_name(UNDERLING))
+            say(gameforge.main_quest_lv92._280_say)
+            
+        
+            notice_multiline(gameforge.main_quest_lv92._290_1_notice,notice)
+            notice_multiline(gameforge.main_quest_lv92._290_2_notice,notice)
+            pc.give_item2(ITEM2_1, 1)
+            set_state (state2_3)
+        end
+    end
+    state state2_3 begin
+        when letter begin
+            send_letter(gameforge.main_quest_lv92._170_sendLetter)
+            
+            local v = find_npc_by_vnum(GUARD)
+            if 0 != v then
+                target.vid("__TARGET__", v, mob_name(GUARD))
+            end
+        end
+        when button or info begin
+            say_title(gameforge.main_quest_lv92._170_sendLetter)
+            say(gameforge.main_quest_lv92._360_say)
+            
+        end
+        
+        when GUARD.chat.gameforge.main_quest_lv92._170_sendLetter begin
+            target.delete("__TARGET__")
+            
+            if pc.count_item(ITEM2_1) >= 1 then
+                pc.remove_item ( ITEM2_1, pc.count_item(ITEM2_1))	
+                
+                say_title(mob_name(GUARD))
+                say(gameforge.main_quest_lv92._300_say)
+                wait()
+                
+                say_title(pc.getname())
+                say(gameforge.main_quest_lv92._310_say)
+                wait()
+                
+                say_title(mob_name(GUARD))
+                say(gameforge.main_quest_lv92._320_say)
+                wait()
+                
+                say_title(pc.getname())
+                say(gameforge.main_quest_lv92._330_say)
+                wait()
+                
+                say_title(mob_name(GUARD))
+                say(gameforge.main_quest_lv92._340_say)
+                wait()
+                
+                say_title(mob_name(GUARD))
+                say(gameforge.main_quest_lv92._350_say)
+                wait()
+                
+                --보상
+                say_title(locale.reward)
+                say_reward(string.format (gameforge.main_quest_lv60._190_sayReward, REWARD2_EXP))
+                --say_reward(string.format (gameforge.main_quest_lv60._200_sayReward, REWARD2_GOLD))
+                say_reward(string.format (gameforge.main_quest_lv60._210_sayReward, item_name(REWARD2_ITEM1),REWARD2_ITEM1_COUNT,locale.count_postfix))
+                say("")
+                
+                pc.give_exp2(REWARD2_EXP)
+                --pc.change_money(REWARD2_GOLD)
+                pc.give_item2(REWARD2_ITEM1, REWARD2_ITEM1_COUNT)
+                
+                set_state (state3_1)
+            else
+                say_title(mob_name(GUARD))
+                say(gameforge.main_quest_lv92._270_say)
+                
+                set_state (state2_2)
+            end
+        end
+    end
+    ------------------------------------세번째 서신 판독1-1------------------------------------
+    ------------------------------------세번째 서신 판독1-1------------------------------------
+    ------------------------------------세번째 서신 판독1-1------------------------------------
+    ------------------------------------세번째 서신 판독1-1------------------------------------
+    ------------------------------------세번째 서신 판독1-1------------------------------------
+    ------------------------------------세번째 서신 판독1-1------------------------------------
+    ------------------------------------세번째 서신 판독1-1------------------------------------
+    ------------------------------------세번째 서신 판독1-1------------------------------------
+    ------------------------------------세번째 서신 판독1-1------------------------------------
+    ------------------------------------세번째 서신 판독1-1------------------------------------
+    ------------------------------------세번째 서신 판독1-1------------------------------------
+    state state3_1 begin
+        when letter begin
+            send_letter(gameforge.main_quest_lv92._370_sendLetter)
+            
+            local v = find_npc_by_vnum(GUARD)
+            if 0 != v then
+                target.vid("__TARGET__", v, mob_name(GUARD))
+            end
+        end
+        when button or info begin
+            say_title(gameforge.main_quest_lv92._370_sendLetter)
+            say(gameforge.main_quest_lv92._380_say)
+            
+        end
+        when GUARD.chat.gameforge.main_quest_lv92._370_sendLetter begin
+            target.delete("__TARGET__")
+            
+            say_title(mob_name(GUARD ))
+            say(gameforge.main_quest_lv92._390_say)
+            wait()
+            
+            say_title(pc.getname())
+            say(gameforge.main_quest_lv92._400_say)
+            
+            set_state (state3_2)
+        end
+    end
+    state state3_2 begin
+        when letter begin
+            send_letter(gameforge.main_quest_lv92._370_sendLetter)
+            
+            local v = find_npc_by_vnum(SCHOLAR)
+            if 0 != v then
+                target.vid("__TARGET__", v, mob_name(SCHOLAR))
+            end
+        end
+        when button or info begin
+            say_title(gameforge.main_quest_lv92._370_sendLetter)
+            say(gameforge.main_quest_lv92._410_say)
+            
+        end
+        when SCHOLAR.chat.gameforge.main_quest_lv92._370_sendLetter begin
+            target.delete("__TARGET__")
+            
+            say_title(mob_name(SCHOLAR ))
+            say(gameforge.main_quest_lv92._420_say)
+            wait()
+            
+            say_title(pc.getname())
+            say(gameforge.main_quest_lv92._430_say)
+            wait()
+            
+            say_title(mob_name(SCHOLAR ))
+            say(gameforge.main_quest_lv92._440_say)
+            wait()
+            
+            say_title(pc.getname())
+            say(gameforge.main_quest_lv92._450_say)
+            wait()
+            
+            say_title(mob_name(SCHOLAR ))
+            say(gameforge.main_quest_lv92._460_say)
+            wait()
+            
+            say_title(pc.getname())
+            say(gameforge.main_quest_lv92._470_say)
+            wait()
+            
+            say_title(mob_name(SCHOLAR ))
+            say(gameforge.main_quest_lv92._480_say)
+            wait()
+            
+            say_title(pc.getname())
+            say(gameforge.main_quest_lv92._490_say)
+            
+            set_state (state3_3)
+        end
+    end
+    state state3_3 begin
+        when letter begin
+            q.set_counter_name("남은 아이템")
+            send_letter(gameforge.main_quest_lv92._370_sendLetter)
+        end
+        when button or info begin
+            -- if pc.get_map_index() == MAP_INDEX3 then
+                -- addmapsignal(MAP_POS3_1_X * 100, MAP_POS3_1_Y * 100)
+                -- addmapsignal(MAP_POS3_2_X * 100, MAP_POS3_2_Y * 100)
+                -- addmapsignal(MAP_POS3_3_X * 100, MAP_POS3_3_Y * 100)
+            -- end
+            
+            say_title(gameforge.main_quest_lv92._500_sayTitle)
+            say(gameforge.main_quest_lv92._510_say)
+            say_item_vnum(ITEM3_1)
+            say(gameforge.main_quest_lv90._1180_say)
+            
+            local remain_item = ITEM3_1_NEEDED - pc.count_item(ITEM3_1)
+            if remain_item <= 0 then
+                remain_item = 0
+            end
+            q.set_counter_value(remain_item)
+            say_reward(string.format("%s: %d %s",item_name(ITEM3_1),remain_item,locale.count_postfix))
+            
+            -- say()
+            -- say_reward(locale.main_quest_lv92.pos_info)
+            -- select(gameforge.main_quest_lv90._950_say)
+            -- setskin(NOWINDOW)
+            -- clearmapsignal()
+        end
+        
+        --클리어 전--
+        when SCHOLAR.chat.gameforge.main_quest_lv92._370_sendLetter begin
+            if pc.count_item(ITEM3_1) >= ITEM3_1_NEEDED then
+                pc.remove_item ( ITEM3_1, pc.count_item(ITEM3_1))	
+                say_title(mob_name(SCHOLAR))
+                say(gameforge.main_quest_lv92._540_say)
+                wait()
+                
+                --보상
+                say_title(locale.reward)
+                say_reward(string.format (gameforge.main_quest_lv60._190_sayReward, REWARD3_EXP))
+                --say_reward(string.format (gameforge.main_quest_lv60._200_sayReward, REWARD3_GOLD))
+                say_reward(string.format (gameforge.main_quest_lv60._210_sayReward, item_name(REWARD3_ITEM1),REWARD3_ITEM1_COUNT,locale.count_postfix))
+                say("")
+                
+                pc.give_exp2(REWARD3_EXP)
+                --pc.change_money(REWARD3_GOLD)
+                pc.give_item2(REWARD3_ITEM1, 1)
+                pc.give_item2(REWARD3_ITEM1, 1)
+                
+                set_state (state4_1)
+            else
+                say_title(mob_name(SCHOLAR))
+                say(gameforge.main_quest_lv92._520_say)
+            end
+        end
+        
+        when MOB3_1.kill or MOB3_2.kill begin
+            if number(1,ITEM3_1_PCT_GET) == 1 then
+                if pc.count_item(ITEM3_1) < ITEM3_1_NEEDED then
+                    pc.give_item2(ITEM3_1, 1)
+                    
+                    local remain_item = ITEM3_1_NEEDED - pc.count_item(ITEM3_1)
+                    if remain_item <= 0 then
+                        remain_item = 0
+                    end
+                    q.set_counter_value(remain_item)
+                    
+                    if pc.count_item(ITEM3_1) >= ITEM3_1_NEEDED then
+                        notice_multiline(gameforge.main_quest_lv92._530_1_notice,notice)
+                        notice_multiline(gameforge.main_quest_lv92._530_2_notice,notice)
+                        set_state (state3_4)
+                    end
+                end
+            end
+        end
+    end
+
+
+    state state3_4 begin
+
+        when letter begin
+            q.set_counter_name("")
+            send_letter(gameforge.main_quest_lv92._370_sendLetter)
+            
+            local v = find_npc_by_vnum(SCHOLAR)
+            if 0 != v then
+                target.vid("__TARGET__", v, mob_name(SCHOLAR))
+            end
+        end
+        
+        when button or info begin
+            say_title(gameforge.main_quest_lv92._370_sendLetter)
+            say(gameforge.main_quest_lv92._550_say)
+            
+        end
+        
+        -- 중간에 퀘스트 아이템을 버릴 경우를 대비한 부분.
+        when MOB3_1.kill or MOB3_2.kill begin
+            if number(1,ITEM3_1_PCT_GET) == 1 then
+                if pc.count_item(ITEM3_1) < ITEM3_1_NEEDED then
+                    pc.give_item2(ITEM3_1, 1)
+                    
+                    if pc.count_item(ITEM3_1) >= ITEM3_1_NEEDED then
+                        notice_multiline(gameforge.main_quest_lv92._530_1_notice,notice)
+                        notice_multiline(gameforge.main_quest_lv92._530_2_notice,notice)
+                    end
+                end
+            end
+        end
+        
+        when SCHOLAR.chat.gameforge.main_quest_lv92._370_sendLetter begin
+            target.delete("__TARGET__")
+            
+            if pc.count_item(ITEM3_1) >= ITEM3_1_NEEDED then
+                pc.remove_item ( ITEM3_1, pc.count_item(ITEM3_1))	
+                say_title(mob_name(SCHOLAR))
+                say(gameforge.main_quest_lv92._540_say)
+                wait()
+                
+                --보상
+                say_title(locale.reward)
+                say_reward(string.format (gameforge.main_quest_lv60._190_sayReward, REWARD3_EXP))
+                --say_reward(string.format (gameforge.main_quest_lv60._200_sayReward, REWARD3_GOLD))
+                say_reward(string.format (gameforge.main_quest_lv60._210_sayReward, item_name(REWARD3_ITEM1),REWARD3_ITEM1_COUNT,locale.count_postfix))
+                say("")
+                
+                pc.give_exp2(REWARD3_EXP)
+                --pc.change_money(REWARD3_GOLD)
+                pc.give_item2(REWARD3_ITEM1, 1)
+                pc.give_item2(REWARD3_ITEM1, 1)
+                
+                set_state (state4_1)
+            else
+                say_title(mob_name(SCHOLAR))
+                say(gameforge.main_quest_lv92._520_say)
+                
+                set_state (state3_3)
+            end
+        end
+    end
+
+    ------------------------------------초마단의 서신의 진실-----------------------------------
+    ------------------------------------초마단의 서신의 진실-----------------------------------
+    ------------------------------------초마단의 서신의 진실-----------------------------------
+    ------------------------------------초마단의 서신의 진실-----------------------------------
+    ------------------------------------초마단의 서신의 진실-----------------------------------
+    ------------------------------------초마단의 서신의 진실-----------------------------------
+    ------------------------------------초마단의 서신의 진실-----------------------------------
+    ------------------------------------초마단의 서신의 진실-----------------------------------
+    ------------------------------------초마단의 서신의 진실-----------------------------------
+    ------------------------------------초마단의 서신의 진실-----------------------------------
+    ------------------------------------초마단의 서신의 진실-----------------------------------
+    state state4_1 begin
+        when letter begin
+            send_letter(gameforge.main_quest_lv92._560_sendLetter)
+            
+            local v = find_npc_by_vnum(GUARD)
+            if 0 != v then
+                target.vid("__TARGET__", v, mob_name(GUARD))
+            end
+        end
+        when button or info begin
+            say_title(gameforge.main_quest_lv92._560_sendLetter)
+            say(gameforge.main_quest_lv92._570_say)
+            
+        end
+        
+        when GUARD.chat.gameforge.main_quest_lv92._560_sendLetter begin
+            target.delete("__TARGET__")
+            
+            say_title(mob_name(GUARD ))
+            say(gameforge.main_quest_lv92._580_say)
+            wait()
+            
+            say(gameforge.main_quest_lv92._590_say)
+            wait()
+            
+            say_title(mob_name(GUARD ))
+            say(gameforge.main_quest_lv92._600_say)
+            wait()
+            
+            --보상
+            say_title(locale.reward)
+            say_reward(string.format (gameforge.main_quest_lv60._190_sayReward, REWARD4_EXP))
+            --say_reward(string.format (gameforge.main_quest_lv60._200_sayReward, REWARD4_GOLD))
+            say_reward(string.format (gameforge.main_quest_lv60._210_sayReward, item_name(REWARD4_ITEM1),REWARD4_ITEM1_COUNT,locale.count_postfix))
+            
+            say("")
+            say_title(gameforge.main_quest_lv92._610_say)
+            
+            pc.give_exp2(REWARD4_EXP)
+            --pc.change_money(REWARD4_GOLD)
+            pc.give_item2(REWARD4_ITEM1, 1)
+            pc.give_item2(REWARD4_ITEM1, 1)
+            
+
+            clear_letter()
+            set_quest_state ("main_quest_lv93", "state0")
+            set_state (__COMPLETE__)
+        end
+    end
+
+    state __COMPLETE__ begin
+        when enter begin
+            q.done()
+        end
+    end
+end

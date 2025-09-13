@@ -1,0 +1,178 @@
+quest japan_invader_kill begin
+	state start begin
+		when 20005.chat." Die Bitte von Yonah " with pc.get_level()>=15 and game.get_event_flag("815event")>0  begin
+                        ----"12345678901234567890123456789012345678901234567890"|
+			say_title("Yonah:")
+			say("")
+			say("Wie soll ich weiter machen,was kann ich nur tun?")
+			say("Wenn ich ihn fange, dann habe ich keine Sorgen")
+			say("mehr. Er ist aber so schnell,dass man ihn sehr")
+			say("schwierig nur fangen kann. Hm. Was soll ich")
+			say("machen?")
+			say("")
+			wait()
+			say_pc_name()
+			say("Was hast du denn für Sorgen?")
+			wait()
+			say_title("Yonah:")
+			say("")
+			say("Zur Zeit taucht ein Wilder überall im Reich auf")
+			say("und verbreitet Gerüchte über die Wüste Yong-Bi")
+			say("Da er sehr schnell ist, kann man ihn nicht einfach")
+			say("fangen und die Gerüchte zum Verstummen bringen.")
+			say("Unsicherheit wird uns schwächen.")
+			wait()
+			say_pc_name()
+			say("Welche Gerüchte denn??")
+			wait()
+			say_title("Yonah:")
+			say("")
+			say("Das dreigeteilte Land bekriegt sich unaufhörlich.")
+			say("Um dieses Krieg zu überstehen brauchen wir alle")
+			say("Gebiete und Resourcen die uns rechtmäßig gehören")
+			say("Die Wüste Yong-Bi und ihre Rohstoffe gehört uns!")
+			say("Aber der verdammte Wilde behauptet das er die")
+			say("Gegend selber gefunden hat und sie ihm gehört")
+			say("Dies verunsichert unsere tapferen Kämpfer.")
+			wait()
+			say_title("Yonah:")
+			say("")
+			say("Vielleicht bist Du der Richtige um uns zu helfen?")
+			say("Der eine Wüstenbandit verbreitet diese Gerüchte")
+			say("im ganzen Reich und sät Zweifel an unserem")
+			say("Anspruch Töte ihn und bringe ihn zum Verstummen!")
+			say("Wenn Du mir den Beweis mitbringst, dass du ihn ")
+			say("getötet hast werde ich Dich reich belohnen!!!!!")
+			say("")
+			local b=select("Ich werde ihn fangen", "Rennen ist nicht meine Stärke")
+				----"12345678901234567890123456789012345678901234567890"|
+			if 1==b then
+				say_title("Yonah:")
+				say("")
+				say("Ohh Danke Danke!! Es heißt Danaka er ist")
+				say("ein Wüstenbandit. Du findest ihn in der")
+				say("Wüste Yong-Bi. Bring mir sein Ohr als ")
+				say("Beweis für seinen Tod!")
+				say("")
+				set_state(accept)
+			elseif 2==b then
+				say_title("Yonah:")
+				say("")
+				say("Hm..Mir ist aber egal, wem die Wüste")
+				say("Yong-Bi gehört")
+				say("")
+			end
+		end
+	end
+	state accept begin
+		when letter begin
+			send_letter("Töte den wilden Wüstenbandit!!")
+		end
+		when button or info begin
+			----"12345678901234567890123456789012345678901234567890"|
+			say_title("Fange den wilden Wüstenbandit!!")
+			say("")
+			say("Der Wüstenbandit verbreitet allerlei Gerüchte im")
+			say("Reich. Töte ihn!!!!!!!")
+			say("")
+			say_reward("Töte Wüstenbandit und bring sein Ohr zu Yonah")
+			say("")
+		end
+		when 20005.chat."Ein Wüstenbandit fangen" with pc.count_item(30202)==0 begin
+			say_title("Yonah:")
+			say("")
+			say("Wüstenbandit rennt sehr schnell. Mit meiner")
+			say("schweren Rüstung ist es unmoglich für mich,")
+			say("ihn zu fangen. Ah, worum es geht?")
+			say("")
+			local s=select("weitermachen", "aufhören")
+			if 1==s then
+			elseif 2==s then
+				say_title("Yonah:")
+				say("")
+				say("Möchtest du wirklich aufhoren.....")
+				say("Hm, Du schaffst es nicht...")
+				say("Auf jedem Fall, danke ich für Deine Mühen.")
+				say("")
+				local s=select("die Aufgabe beenden", "weiter machen")
+				if 1==s then
+					----"12345678901234567890123456789012345678901234567890"|
+					say_pc_name()
+					say("Mit meinem Level konnte ich den Wüstenbandit")
+					say("nicht fangen. Ich gebe auf")
+					say("")
+					say_title("Yonah:")
+					say("")
+					say("Ich danke Dir für Deine Mühe...")
+					q.done()
+					set_state(failure)
+				elseif 2==s then
+					say_pc_name()
+					say("")
+					say("Hm, Ich habe jetzt noch keine Belohnung erwartet")
+					say("Es wird mir schon noch gelingen Wüstenbandit")
+					say("zu töten. Ich werd es halt weiter versuchen")
+					say("Bitte danke mir jetzt noch nicht")
+					say("")
+				end
+			end
+		end
+		
+		when 2135.kill  begin
+			local s = number(1, 100)
+			if s <= 1 and pc.count_item("30202")==0  then
+				pc.give_item2("30202", 1)
+				
+				if pc.count_item("30202")>0 then
+					local v = find_npc_by_vnum(20005)
+					if v != 0 then
+						target.vid("__TARGET__", v, "Das Ohr gefunden")
+					end
+				end
+			end
+		
+	end	
+		
+		when __TARGET__.target.click or	20005.chat."Das Ohr von Wüstenbandit übergeben" with pc.count_item(30202)>=1 begin
+			target.delete("__TARGET__")
+			----"12345678901234567890123456789012345678901234567890"|
+			say_title("Yonah:")
+			say("")
+			say("Oh, du hast wirlich den Wüstenbandit getötet!")
+			say("Helden aus aller Herren Länder verzweifelten")
+			say("an dieser Aufgabe und Du hast es geschafft?")
+			say("Ja es muss so sein denn Du hast den Beweis.")
+			say("Gehört das Ohr auch wirklich Wüstenbandit?")
+			say("Lass mich mal schauen? Hm Hm. Doch es es")
+			say("besteht kein Zweifel. Es ist sehr klein aber")
+			say("es ist Danakas Ohr.")
+			say("Ausser meiner Dankbarkeit möchte ich Dir")
+			say("dies geben. Es wird Dir von großem Nutzen")
+			say("sein.")
+			say("")
+
+
+			pc.remove_item(30202)
+
+			local r=number(1, 3)
+			if 1==r then
+				say_reward("Du hast von Yonah den Erfahrungring bekommen.")
+				pc.give_item2(72003)
+			elseif 2==r then
+				say_reward("Du hast von Yonah die Glücksgoldmünze bekommen.")
+				pc.give_item2(72024)
+			elseif 3==r then
+				say_reward("Du hast von Yonah die Diebeshandschuhe bekommen.")
+				pc.give_item2(72006)
+			end
+
+			set_state(complete)
+			q.done()
+		end
+	end
+	state complete begin
+	end
+	state failure begin
+	end
+end
+

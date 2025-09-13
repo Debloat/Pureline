@@ -1,0 +1,25 @@
+quest purge_test begin
+	state start begin
+		when 30122.chat."purge test" begin
+			local settings = {}
+			settings.room_area = {}
+			settings.room_area.first = {}
+			settings.room_area.last = {}
+			settings.room_area.first.x = 833000
+			settings.room_area.first.y = 1062500
+			settings.room_area.last.x = 844100
+			settings.room_area.last.y = 1071500
+			
+			say("purge now!")
+			purge_area(settings.room_area.first.x, settings.room_area.first.y, settings.room_area.last.x, settings.room_area.last.y)
+		end
+		when 30122.chat."spawn dragon" begin
+			local settings = {}
+			settings.dragon_vnum = 2430
+			settings.spawn = {}
+			settings.spawn.x = 181
+			settings.spawn.y = 173
+			mob.spawn_group(settings.dragon_vnum, settings.spawn.x, settings.spawn.y, 1, 1, 1) -- spawn the dragon
+		end
+	end
+end

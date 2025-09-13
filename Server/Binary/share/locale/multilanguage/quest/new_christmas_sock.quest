@@ -1,0 +1,102 @@
+quest new_christmas_sock_quest begin
+	state start begin
+	end
+	state baby_dear_give begin
+		when 20126.chat.gameforge.new_christmas_sock._010_npcChat begin
+			say_title(mob_name(20126))
+			say (gameforge.new_christmas_sock._020_say)
+			wait()
+			say_title(mob_name(20126))
+			say (gameforge.new_christmas_sock._030_say)
+			wait()
+			say_title(mob_name(20126))
+			say (gameforge.new_christmas_sock._040_say)
+			pc.give_item2_select(53002, 1)
+			item.set_socket(0, get_global_time() + 7200)
+			pc.setqf ("last_reindeer_give_time", get_global_time())
+			set_state(sock_take)
+		end
+	end
+	state sock_take begin
+		when 20126.chat.gameforge.new_christmas_sock._080_npcChat begin
+            if get_global_time() - pc.getqf ("last_reindeer_give_time") < 86400 then
+                say_title (mob_name(20126))
+                say (gameforge.new_christmas_sock._090_say)
+            else
+                say_title (mob_name(20126))
+                say (gameforge.new_christmas_sock._040_say)
+                pc.give_item2_select(53002, 1)
+                item.set_socket(0, get_global_time() + 7200)
+                pc.setqf ("last_reindeer_give_time", get_global_time())
+            end
+        end
+		when 20126.chat.gameforge.new_christmas_sock._050_npcChat begin
+			local n = pc.count_item(50010)
+			if n < 10 then
+				say_title(mob_name(20126))
+				say (gameforge.new_christmas_sock._060_say)
+				wait()
+			else
+				say_title(mob_name(20126))
+				say (gameforge.new_christmas_sock._070_say)
+				wait()
+				pc.remove_item (50010, 10)
+				say_title(locale.reward)
+				local level = pc.get_level()
+				local l = 1
+				if level < 21 then 
+					l = 1
+				elseif level < 41 then
+					l = 2
+				elseif level < 61 then
+					l = 3
+				elseif level < 71 then
+					l = 4
+				elseif level < 81 then
+					l = 5
+				elseif level < 91 then
+					l = 6
+				elseif level < 95 then
+					l = 7
+				elseif level < 100 then
+					l = 8
+				end
+				
+				local r = number(1, 100)
+				local i = 1
+				if r <= 5 then
+					i = 1
+				elseif r <= 20 then
+					i = 2
+				elseif r <= 45 then
+					i = 3
+				elseif r <= 75 then
+					i = 4
+				elseif r <= 95 then
+					i = 5
+				elseif r <= 98 then
+					i = 6
+				elseif r <= 100 then
+					i = 7
+				end
+
+				local xmas_exp_table = 
+				{ 
+					[1] = {5000,10000,30000,50000,70000,100000,150000},
+					[2] = {10000,30000,50000,70000,100000,120000,150000},
+					[3] = {30000,50000,70000,100000,120000,150000,200000},
+					[4] = {30000,50000,70000,100000,150000,200000,250000},
+					[5] = {50000,70000,90000,120000,150000,200000,250000},
+					[6] = {70000,90000,120000,150000,200000,250000,300000},
+					[7] = {50000,100000,150000,200000,250000,300000,350000},
+					[8] = {100000,150000,200000,250000,300000,350000,400000}
+				}
+				
+				local exp = xmas_exp_table[l][i]
+				pc.give_exp2 (exp)
+				say_reward (locale.exp.." : "..exp)
+				set_quest_state ("levelup", "run")
+			end
+		end
+	end
+end

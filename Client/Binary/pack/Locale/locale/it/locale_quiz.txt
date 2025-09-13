@@ -1,0 +1,346 @@
+1	1	Lo zaino del Mercante Ambulante ha una chiusura?
+1	2	Si possono predare Sfere trasformazione nella Terra dei Giganti?
+1	3	Il Lupo Blu Alfa Maledetto droppa Pelliccia di lupo? 
+1	4	Lo Yeti droppa Pelliccia di Yeti? 
+1	5	È possibile razziare Palle di ghiaccio solo sul Monte Sohan? 
+1	6	Le Lacrime di Dea si possono avere solo dai bauli?
+1	7	La Pietra della fretta aumenta al livello 3 la velocità di movimento di 30? 
+1	8	Le Perle danno automaticamente il bonus INT?
+1	9	Esistono armature che partono dal livello 12?
+1	10	Nel Tempio Hwang ci sono dei Giacimenti di Giada?
+1	11	Ci sono 22 ponti nella Valle di Seungryong?
+1	12	In Metin2 ci sono 8 classi?
+1	13	In Metin2 c'è del Compensato?
+1	14	Esiste un item di nome Accessorio?
+1	15	Esiste l'abilità Estasi dell'aura?
+1	16	Esiste il bonus guarigione?
+1	17	Esistono dei Fuochi d'artificio coreani?
+1	18	Esiste un Libro missione medio?
+1	19	Esiste un Giacimento di Ametista?
+1	20	Esiste una mappa speciale dove allenarsi per i combattimenti?
+1	21	C'è un uccello appollaiato sulla spalla destra del Teleporter?
+1	22	Esiste un'armatura in legno?
+1	23	Esiste una Fenice di fuoco?
+1	24	Esiste un insegnante del Trattato sulla Scherma? 
+1	25	Esistono Orchi?
+1	26	Il Pescatore si trova sulla Mappa 2?
+1	27	C'è sempre solo uno Stalliere per regno?
+1	28	In Metin2 è possibile avere animali domestici?
+1	29	Esistono cani in Metin2?
+1	30	Il numero di pescatori è uguale in tutti i regni?
+1	31	In Metin2 esiste la Torta di riso? 
+1	32	C'è un mercato sulla Mappa2?
+1	33	Esiste il Lattice in Metin2?
+1	34	Gli animali maledetti sono solo nella Zona delle Gilde?
+1	35	Bera attacca da solo?
+1	36	Beran-Setaou ha ucciso sua sorella?
+1	37	L'inventario ha 90 slot?
+1	38	La Freccia di Bambu ha un Valore di attacco pari a 10?
+1	39	L'Arahan Brutale ha il livello 53?
+1	40	Il Cane Selvaggio Affamato ha livello 1? 
+1	41	Il Magazziniere porta un Nastro per capelli azzurro?
+1	42	Il Fabbro indossa un grembiule?
+1	43	La Morte personificata possiede il livello Boss?
+1	44	Il Fiero Orco Generale indossa una collana con sei ciondoli?
+1	45	La Vecchietta ha una sorella? 
+1	46	Metin2 ha un forum? 
+1	47	Mirine ha gli occhi neri?
+1	48	La Morte personificata abita nella Torre dei Demoni? 
+1	49	Lo Spirito Sura nella Grotta2 si chiama Akuma?
+1	50	Bahar-Taraji è la più giovane fra i fratelli degli dei?
+1	51	Bahar-Taraji è la dea della Conservazione?
+1	52	Bahar-Elvedin è la più grande fra i fratelli degli dei?
+1	53	Bahar-Elvedin è la dea della Conservazione? 
+1	54	Il mostro Hae-Tae è un BOSS?
+1	55	Il Fiero Guerriero Oscuro ha il livello 54?
+1	56	È possibile trovare il Cinghiale Rosso Maledetto in sette diversi luoghi?
+1	57	La Campana di Rame è equipaggiabile a partire dal livello 5? 
+1	58	La Corazza Hwang rossa è pensata per guerrieri? 
+1	59	Nel deserto c'è luce anche di notte?
+1	60	Soon è un topo da biblioteca? 
+1	61	Il Fabbro può distruggere oggetti durante il miglioramento?
+1	62	La Tartaruga Deserto Grande può comparire nella Mappa2?
+1	63	È possibile estrarre Diamanti?
+1	64	Ci si può sposare in Metin2?
+1	65	È possibile ballare in Metin2?
+1	66	È possibile diventare GM a 16 anni?
+1	67	Si può usare la chat di chiamata a partire dal livello 15?
+1	68	È possibile raggiungere il primo livello Maestro con il livello 17?
+1	69	È possibile avere tre Maestro con il livello 52?
+1	70	È possibile con il livello 55 droppare qualcosa da un Metin? 
+1	71	È possibile utilizzare l'Abilità del cavallo a partire dal livello del cavallo 9?
+1	72	È possibile consegnare il proprio animale domestico in una pensione per animali?
+1	73	È possibile appendere Calze a un albero?
+1	74	Si possono migliorare le Pietre spirituali?
+1	75	Tutti i mostri possono droppare Sfere Trasformazione?
+1	76	È possibile droppare tutte le Pozione verdi in gioco?
+1	77	I Funghi tue possono essere trasformarti solo da Huahn-So?
+1	78	I GM possono far salire di livello i giocatori?
+1	79	C'è un corpo nella Valle di Seungryong?
+1	80	Nella quest 'Diario di una Leggenda' è necessario raccogliere 16 Pagine di libro?
+1	81	La Cintura regale+5 conferisce 6 spazi nell'inventario?
+1	82	Heuk-Young ha le sembianze da guerriero?
+1	83	Le Chiavi a spirale sono commerciabili?
+1	84	Nella Terra dei Giganti ci sono 42 corpi?
+1	85	C'è un Teleporter nel Territorio della gilda?
+1	86	C'è un teleporter nella Terra dei Giganti?
+1	87	Un giocatore che ha un rango negativo consuma 4500 punti karma quando legge una Pietra delle Anime da G5 a G6?
+1	88	Un giocatore con rango positivo consuma 3.000 punti karma quando legge una Pietra delle Anime da G5 a G6?
+1	89	Il Mercante d'Armi vende Frecce d'acciaio?
+1	90	I ponti cambiano la loro posizione nella Valle del Drago?
+1	91	Per un divorzio unilaterale serve un milione di Yang?
+1	92	Il Ventaglio della gru viene droppato dai lupi? 
+1	93	Per sposarsi è necessario un vestito da sposa?
+1	94	Il bonus 'Forte contro Diavolo' ha effetto nello Yeti degli Abissi?
+1	95	Il Nove Code ha il livello 73? 
+1	96	Bakra è un villaggio nel Regno Jinno?
+1	97	Taurean si trova nel primo villaggio? 
+1	98	È necessario avere il livello 30 per poter pescare?
+1	99	È necessario avere il livello 30 per potersi sposare?
+1	100	Da Yang-Shin è possibile acquistare un Piccone?
+1	101	Puoi utilizzare il Bracciale di perla a partire dal livello 28?
+1	102	È possibile per tutti i personaggi sopra il livello 40 entrare nella Torre dei Demoni?
+1	103	Bokjung appartiene al Regno Shinsoo? 
+1	104	Il Campo Serpi è una mappa neutrale?
+1	105	Nella Valle di Seungryong c'è un boss di livello 55?
+1	106	È possibile per un personaggio con il livello 51 predare i Papiri consacrati dai mostri ?
+1	107	Nel Bosco Fantasma c'è un boss di livello 80?
+1	108	Si può far cadere la Corazza d'acciaio blu +9?
+1	109	Il Vestito del Drago viene creato dalla Corazza d'acciaio nero+9?
+1	110	È possibile far cadere 1000 Yang?
+1	111	Il Vestito del Drago viene creato dal Vestito Nero+9?
+1	112	Nel mondo di Metin2 compare, di norma, il Drago rosso?
+1	113	Nella quest 'Ricerca del biologo 8' si riceve un bonus permanente pari a un 8%% di danno contro gli altri giocatori?
+1	114	Per la quest 'La ricerca del biologo 6' è necessario portare a Chaegirab 30 Tavole di Tugyi?
+1	115	La Corazza Hwang è acquistabile nel gioco?
+1	116	La Corazza d'acciaio blu viene creata dalla Corazza d'acciaio nero+9?
+1	117	Esiste un Teleporter nel Campo Serpi?
+1	118	Nella Terra dei Giganti esistono Rocce Metin di livello 75 e 80?
+1	119	L'ingresso alla Terra dei Giganti si trova sul Campo Serpi?
+1	120	È possibile razziare la Lama Mezzouomo da un Mille Guerrieri?
+1	121	La Terra dei Giganti confina con il Campo Serpi?
+1	122	L'Occhio volante del deserto ha a sua volta un occhio?
+1	123	Lo Scudo dei titani+9 ha una difesa maggiore degli Scudi+9 con il livello 61?
+1	124	Lo Scudo di Falco+9 ha un Valore di difesa pari a 153?
+1	125	Gli Orecchini di legno conferiscono un bonus HP?
+1	126	È possibile razziare la Guida Esoterica+ solo da Arahan Oscuro o dall'Evocatore Oscuro?
+1	127	La Spada di Ninfa ha una Velocità attacco maggiore della Spada da Battaglia? 
+1	128	La Strega del ghiaccio grande droppa Ematite?
+1	129	Beran-Setaou è un NPC?
+1	130	Il leone come cavalcatura aumenta di 200 punti il Valore di attacco?
+1	131	Ci si può teletrasportare verso il proprio coniuge, se questo si trova nel Sotterraneo dei Ragni 2?
+1	132	Huahn-So produce rugiada?
+1	133	Per avere un Anello di fidanzamento si devono sconfiggere 30 Jin-Hee?
+1	134	La Fede è commerciabile?
+1	135	Il Fabbro si fa pagare in Yang per il miglioramento degli item nella Torre dei Demoni?
+1	136	È possibile razziare una Pietra delle anime da Hae-Tae? 
+1	137	Nel mondo di Metin2 compare regolarmente Hae-Tae?
+1	138	Hae-Tae compare in occasione di un evento preciso?
+1	139	I mostri nella Grotta dell'Esilio 2 sono aggressivi?
+1	140	Taurean è un NPC? 
+1	141	È possibile razziare l'Erba scimmie difficili dal Lord Scimmia?
+1	142	Quando si legge una Pietra delle anime mentre si ha un rango negativo, si perde una quantità doppia di punti rango?
+1	143	È possibile ricevere una Pietra delle anime per la missione 'Esamina gli alberi fantasma'?
+1	144	È possibile ricevere una Pietra delle anime per la missione 'Il segreto della foresta fantasma'?
+1	145	È possibile razziare una Pietra Spirituale da un Metin dell'Assassino nella Torre dei Demoni?
+1	146	È possibile razziare Libri Abilità dalle Rocce Metin del livello 75 e 80?
+1	147	Droppano le Rocce Metin con i livelli 75 e 80 Pietre spirituali? 
+1	148	Droppano le Rocce Metin sotto il livello 40 Pietre delle anime? 
+1	149	È possibile teletrasporarsi direttamente alla Torre dei Demoni a partire dal livello 60?
+1	150	La Corazza d'acciaio blu+5 aumenta di 184 il Valore di difesa e riduce di -6 la velocità di movimento?
+1	151	È possibile droppare Ostriche in Metin2?
+1	152	È possibile droppare un Biglietto del passaggio nella Grotta dell'Esilio?
+1	153	È possibile razziare la Spada della luna piena da Jin-Hee?
+1	154	Il guerriero mentale può usare l'abilità Lancio di lampi?
+1	155	Il Cinghiale da Combattimento aumenta il Valore di difesa di 500?
+1	156	Il Metin della Malvagità droppa Pietre spirituali+4?
+1	157	Per il miglioramento della Corazza della tigre c'è bisogno di un'Uniforme nera+?
+1	158	L'item Incanta oggetto è commerciabile?
+1	159	È possibile razziare Pozione Blu(P) nel Sotterraneo dei Ragni?
+1	160	Nel mondo di Metin2 compare costantemente un Trasmettitore del contagio?
+1	161	È possibile trovare Bile d'orso nel Forziere dorato?
+1	162	È possibile estrarre Ebano pregiato da un Giacimento di Giada?
+1	163	Il Metin del Diavolo appare durante gli eventi? 
+1	164	Gli Orchi droppano il Bracciale di Platino?
+1	165	Nella Catacomba del Diavolo si devono sconfiggere tutti gli avversari?
+1	166	Azrael può sferrare un Colpo critico durante la lotta?
+1	167	È possibile acquistare la Collana di cristallo anime nell'Item Shop?
+1	168	La Vecchietta ha un'allergia alla polvere?
+1	169	Il Mercante d'Armi è innamorato della Bottegaia?
+1	170	Il Magazziniere ha Lingotti d'oro?
+1	171	Uriel è una donna?
+1	172	La Bottegaia ha una relazione con il Mercante d'Armature?
+1	173	Il piumino per la polvere della Vecchietta è fatto di pelliccia di Lupo Blu?
+1	174	Si può colpire la Tartaruga Deserto Grande solo con uno Spadone?
+1	175	È possibile utilizzare la Spada del mago a partire dal livello 50?
+1	176	Beran-Setaou ha ucciso Bahar-Taraji?
+1	177	È possibile trovare Beran-Setaou su una mappa del gioco?
+1	178	La Pozione Rossa (G) ricarica 650 HP?
+1	179	L'Elisir del Sole (P) contiene 2.000.000 HP?
+1	180	È possibile ricaricare resistenza con Pozioni gialle?
+1	181	Il veleno ha un effetto letale?
+1	182	L'Acqua sim ricrea subito 100 MP?
+1	183	La Rugiada rossa aumenta la Velocità attacco del 2%%-8%%?
+1	184	L'effetto della Rugiada dura massimo 20 minuti?
+1	185	L'effetto del Succo di fiori di pesco dura cinque minuti?
+1	186	La Rugiada blu aumenta il Valore di attacco?
+1	187	Chuk-Sal indossa una maschera?
+1	188	È possibile trovare il Palo Runico al quarto livello della Catacomba del Diavolo?
+1	189	Il Metin della Ritorsione ha il livello 80?
+1	190	Nella Stanza del Drago si trova lo Spirito di un Sura?
+1	191	I coniugi ricevono una Pozione rossa (M) dopo le nozze?
+1	192	È possibile all'ombra di un albero o di un edificio vedere la propria ombra?
+1	193	È possibile indossare il Vestito del Drago +6 a partire dal livello 84?
+1	194	È possibile utilizzare massimo due Pietre spirituali nella Campana Antica?
+1	195	Il Mantello mimetico attira mostri?
+1	196	È possibile utilizzare tutte le cavalcature a partire dal livello 1?
+1	197	Il Drago Blu droppa Perle?
+1	198	'Danni assorbiti da MP' è il bonus standard del Cappello anima?
+1	199	I mostri maledetti appaiono solo nel Territorio della gilda?
+1	200	Se si utilizza del Fuoco duraturo su un avversario morente, questo mantiene un HP?
+1	201	È possibile concludere la quest del Cavallo militare a partire dal livello 45?
+1	202	È possibile per un giocatore di livello 82 invitare un giocatore di livello 53 nel suo gruppo?
+1	203	I ninja possono utilizzare quattro Abilità del cavallo?
+1	204	È possibile trovare Giacimenti d'Argento solo nel primo villaggio?
+1	205	È possibile trovare il Metin Pung-Ma solo a Lungsam?
+1	206	È possibile entrare nella Stanza del Drago con la Testa ristretta?
+1	207	La Chiave a spirale è droppata dal Generale Huashin?
+1	208	Sul Monte Sohan c'è un boss?
+1	209	È possibile indossare le Scarpe con fili d'oro a partire dal livello 20?
+1	210	L'assistente all'evento porta i guanti?
+1	211	Baek-Go porta gli occhiali?
+1	212	Il Monumento Mok è rettangolare?
+1	213	L'Organizzatrice di matrimoni indossa un abito verde?
+1	214	Seon-Hae ha un bastone nella mano destra?
+1	215	Nella faretra di Yang-Shin ci sono tre frecce?
+1	216	Il Metin della Vendetta è celeste?
+1	217	Il Metin della ritorsione è la Roccia Metin di livello più alto?
+1	218	È possibile trovare il Metin dell'Anima nella Valle di Seungryong?
+1	219	È possibile scoprire un Giacimento di Giada nel Tempio Oscuro?
+1	220	È possibile estrarre del Minerale di Quarzo sul Monte Sohan?
+1	221	Beran-Setaou ha il livello 97? 
+1	222	Azrael ha un livello più alto di Beran-Setaou?
+1	223	La Strega del ghiaccio grande ha lo stesso livello di Tartaros?
+1	224	L'Attacco lampo è un'abilità dei ninja?
+1	225	La Pozione Rossa (M) ricarica 500 HP?
+1	226	La Corazza Yin Yang può essere indossata dai guerrieri?
+1	227	Il Guanto imperatore saggio raddoppia i punti karma ottenuti dalla vittoria sui mostri?
+1	228	Il diario di Uriel ha 20 pagine?
+1	229	È Chuk-Sal a condurre nella Grotta dell'Esilio?
+1	230	Bisogna essere al livello 75 per poter entrare nella Grotta dell'Esilio?
+1	231	Il Fabbro ha la barba?
+1	232	Nel recinto dello Stalliere ci sono quattro cavalli?
+1	233	Le calze viola fanno parte del Vestito Baronessa? 
+1	234	Il Giovane Uomo Scorpione possiede un'arma?
+1	235	Nove Code ha effettivamente nove code?
+1	236	Sul Monte Sohan c'è un Giacimento Lacrime di Cielo?
+1	237	Il Capobanda Oscuro ha il bonus possibilità di svenimento?
+1	238	Il Monumento Gum si trova dietro la Torre dei Demoni?
+1	239	La testa del Re Fiamme brucia?
+1	240	Il Re Fiamme indossa dei sandali?
+1	241	Hae-Tae è un mostro?
+1	242	L'Uomo Appestato indossa una sciarpa?
+1	243	Il Lord Scimmia ha la coda?
+1	244	Il Lord Scimmia ha uno scettro?
+1	245	Bogeyman ha un corno sulla fronte?
+1	246	Il Grande Albero Fantasma ha delle radici?
+1	247	Dryade ha le mani rosse?
+1	248	Il Mille Guerrieri ha due asce in mano? 
+1	249	Il Veggente Setaou ha il livello 88?
+1	250	Beran-Setaou è celeste?
+1	251	Aranyo è la moglie di Soon?
+1	252	Ariyoung si trova nel primo villaggio?
+1	253	Baek-Go prepara pozioni?
+1	254	Lo Spirito Maestro Spadaccino è blu? 
+1	255	L'Insetto di Ghiaccio ha dieci zampe? 
+1	256	La Trota di Torrente Grigliata rigenera 250 MP?
+1	257	Handu-Op porta un cappello viola a punta? 
+1	258	Nakajima va in giro sulla mappa?
+1	259	L'Abito Formiche Rosse+9 dona un bonus di difesa pari a 101?
+1	260	Harang ha le trecce?
+1	261	Deokbae ha un'ascia dorata in mano?
+1	262	La quest 'Le stalle sono in pericolo' inizia a partire dal livello 49?
+1	263	Uriel ha le braccia conserte?
+1	264	Il Lord Scimmia si trova a Hasun Dong?
+1	265	È possibile dar da mangiare al tuo cavallo premendo la combinazione standard Ctrl+B?
+1	266	Il Mercante d'Armature ha i baffi?
+1	267	Jungsun Dong è chiamato anche il Sotterraneo delle Scimmie difficile?
+1	268	La Rabbia del dio drago aumenta la probabilità di sferrare un colpo perforante?
+1	269	Aranyo ha una cassetta di frutta in mano?
+1	270	L'Insetto di ghiaccio ha 6 zampe?
+1	271	Nella Terra dei Giganti ci sono sei diversi tipi di mostri?
+1	272	La Lama di Ferro Rosso può essere utilizzata solo se si ha il livello 30? 
+1	273	Kuahklo Dong si trova nel deserto?
+1	274	Il Teleporter ha una chiazza sulla fronte?
+1	275	Il Metin della Lotta ha il livello 15? 
+1	276	Il Biologo Chaegirab porta gli occhiali?
+1	277	Serve una gemma per migliorare a +4 un'armatura di livello 26?
+1	278	È possibile comprare un'armatura di livello 26 da un NPC? 
+1	279	Il Cane Appestato si gratta dietro le orecchie? 
+1	280	L'Arciere Appestato Arrabbiato ha due teste? 
+1	281	Esiste una Roccia Chunjo?
+1	282	Esiste una Roccia Yongbi? 
+1	283	L'armatura di livello 42 a +7 ha una difesa di +97? 
+1	284	L'armatura di livello 42 a +7 ha una difesa di -97?
+1	285	Il Cacciatore Setaou si trova al livello 89, grado 2? 
+1	286	Il To-Su del Vento Oscuro si trova al livello 33, grado 2? 
+1	287	In Metin2 c'è l'Argilla?
+1	288	Vicino al cancello nei pressi dello stalliere ci sono 4 Pony? 
+1	289	Baek-Go porta gli occhiali? 
+1	290	Wonda-Rim è il nipote di Chaegirab? 
+1	291	Chaegirab è lo zio di Wonda-Rim? 
+1	292	Chaegirab è il papà di Wonda-Rim?
+1	293	Nella Mappa 2 c'è un dio degli animali? 
+1	294	Nella Mappa 2 ci sono tre pescatori? 
+1	295	I membri del team chiedono l'ID e la password? 
+1	296	Un GameMaster si riconosce dalla sigla [GM]? 
+1	297	Nella Mappa 2 c'è un cittadino ubriaco? 
+1	298	L'Occhio di Ragno è l'item di una quest? 
+1	299	In Metin2 ci sono Tinte per Capelli? 
+1	300	È possibile commerciare l'Olio di Muschio? 
+1	301	Aranyo ha qualcosa sulla schiena? 
+1	302	Aranyo è la moglie di Octavio? 
+1	303	Aranyo è la moglie di Soon? 
+1	304	Ci sono scheletri in Metin2? 
+1	305	Ci sono monumenti a Kuahlo Dong? 
+1	306	In Metin2 c'è un'arena dove allenarsi per i combattimenti? 
+1	307	Le Scarpe in pelle possono essere indossate da tutti? 
+1	308	La Spada dell'Esorcismo ha una velocità di attacco del 20%%? 
+1	309	Eun-Jung porta con sé un ventaglio? 
+1	310	Eun-Jung porta con sé un'arma? 
+1	311	Si possono lanciare per terra Lingotti d'Oro e di Argento?
+1	312	La velocità di attacco della Lama Elettromagnetica diminuisce ai livelli di miglioramento più alti? 
+1	313	La velocità di attacco della Lama Elettromagnetica aumenta ai livelli di miglioramento più alti?
+1	314	C'è una Maschera di Legno Oscura? 
+1	315	In Metin2 è possibile organizzare una grigliata? 
+1	316	Koe-Pung indossa una maschera? 
+1	317	La Pietra Spirituale Spettro del Bosco è l'item di una quest? 
+1	318	Il Vichingo Ogre ha un'arma nella sua mano sinistra? 
+1	319	Il sesso può essere cambiato ad ogni livello? 
+1	320	Ihma è la zona delle gilde del Regno Chunjo? 
+1	321	Ihma è la zona delle gilde del Regno Shinsoo?
+1	322	Ihma è la zona delle gilde del Regno Jinno? 
+1	323	Jungrang è un NPC di Metin2? 
+1	324	Yayang è la figlia di Soon? 
+1	325	L'interno di Jungsun Dong è in pietra verdognola?
+1	326	Lo Yang è la moneta di gioco di Metin2?
+1	327	Per le quest del livello 30 serve la Pietra Spirituale Jinunggyi? 
+1	328	Ci sono item di ricerca? 
+1	329	Si possono distillare pozioni presso Seon-Hae?
+1	330	In Metin2 ci sono zucche? 
+1	331	In Metin2 ci sono calze?
+1	332	Il fuoco nello Scrigno Oscuro è rosso? 
+1	333	Il Generale Scimmia si trova al livello 40, grado 4? 
+1	334	Qualsiasi classe può utilizzare la spada? 
+1	335	Nakajima è un NPC di Metin2? 
+1	336	Il Biglietto del passaggio può essere razziato dai mostri?
+1	337	La bottegaia vende 200 Pozioni Rosse (G) a 33.000 Yang? 
+1	338	I Ninja possono indossare l'Arco Finemente Decorato? 
+1	339	Chuong si trova sulla Mappa 1? 
+1	340	Il Metin del Dolore si trova al livello 10, grado 5?
+1	341	Ci sono Fuochi d'Artificio Natalizi? 
+1	342	Il Fuoco d'Artificio Cinese aumenta la velocità di movimento? 
+1	343	Il Fuoco d'Artificio Cinese aumenta la velocità di attacco?
+1	344	Il Fuoco d'Artificio Cinese aumenta la possibilità di svenimento? 
+1	345	Il Salmone Grigliato ripristina 350 punti HP? 
+1	346	Il Salmone Grigliato ripristina 350 punti Mana?

@@ -1,0 +1,286 @@
+quest event_mystery_box begin
+    state start begin
+        
+        function drop_box(operator, mob)
+            if game.get_event_flag("mystery_box_drop") != 1 then
+                return
+            end
+
+            local prob = game.get_event_flag("mystery_box_prob")
+            local box_vnum = game.get_event_flag("mystery_box_vnum")
+            local logging = game.get_event_flag("mystery_box_logging")
+            
+            if box_vnum == 0 then
+                return
+            end
+
+            prob = math.floor(prob*operator)
+
+            local s = number(1, prob)
+            if s == 1  then	
+                game.drop_item_with_ownership(box_vnum, 1)
+                if logging == 1 then
+                    char_log(mob, 'EVENT_MB_DROP_SUCCESS', box_vnum ..' box dropped with prob:'.. prob)
+                end
+            else
+                if logging == 1 then
+                    char_log(mob, 'EVENT_MB_DROP_FAIL', box_vnum ..' box not dropped with prob:'.. prob)
+                end
+            end
+        end
+        
+        when login or enter begin
+            set_state(go_sleep)
+        end
+    end
+
+    state go_sleep begin
+        
+        when login or enter with game.get_event_flag("mystery_box_drop") == 1 begin
+            set_state(run_state)
+        end
+
+    end
+
+    state run_state begin
+
+        when login or enter with game.get_event_flag("mystery_box_drop") != 1 begin
+            set_state(go_sleep)
+        end
+        
+        when 8001.kill with pc.get_level() >=1 and pc.get_level() <= 10 begin
+            local operator = 1
+            event_mystery_box.drop_box(operator,8001)
+        end
+        when 8002.kill with pc.get_level() >=5 and pc.get_level() <= 15 begin
+            local operator = 1
+            event_mystery_box.drop_box(operator,8002)
+        end
+        when 8003.kill with pc.get_level() >=10 and pc.get_level() <= 20 begin
+            local operator = 2.5
+            event_mystery_box.drop_box(operator,8003)
+        end
+        when 8004.kill with pc.get_level() >=15 and pc.get_level() <= 25 begin
+            local operator = 0.3
+            event_mystery_box.drop_box(operator,8004)
+        end
+        when 8005.kill with pc.get_level() >=20 and pc.get_level() <= 30 begin
+            local operator = 17
+            event_mystery_box.drop_box(operator,8005)
+        end
+        when 8006.kill with pc.get_level() >=25 and pc.get_level() <= 35 begin
+            local operator = 13
+            event_mystery_box.drop_box(operator,8006)
+        end
+        when 8007.kill with pc.get_level() >=30 and pc.get_level() <= 40 begin
+            local operator = 13
+            event_mystery_box.drop_box(operator,8007)
+        end
+        when 8008.kill with pc.get_level() >=35 and pc.get_level() <= 45 begin
+            local operator = 0.2
+            event_mystery_box.drop_box(operator,8008)
+        end
+        when 8009.kill with pc.get_level() >=40 and pc.get_level() <= 50 begin
+            local operator = 1
+            event_mystery_box.drop_box(operator,8009)
+        end
+        when 8010.kill with pc.get_level() >=45 and pc.get_level() <= 55 begin
+            local operator = 0.3
+            event_mystery_box.drop_box(operator,8010)
+        end
+        when 8011.kill with pc.get_level() >=50 and pc.get_level() <= 60 begin
+            local operator = 0.2
+            event_mystery_box.drop_box(operator,8011)
+        end
+        when 8012.kill with pc.get_level() >= 55 and pc.get_level() <= 65 begin
+            local operator = 100
+            event_mystery_box.drop_box(operator,8012)
+        end
+        when 8013.kill with pc.get_level() >= 60 and pc.get_level() <= 70 begin
+            local operator = 0.3
+            event_mystery_box.drop_box(operator,8013)
+        end
+        when 8014.kill with pc.get_level() >= 65 and pc.get_level() <= 75 begin
+            local operator = 0.25
+            event_mystery_box.drop_box(operator,8014)
+        end
+        when 8024.kill with pc.get_level() >=70 and pc.get_level() <= 80 begin
+            local operator = 0.3
+            event_mystery_box.drop_box(operator,8024)
+        end
+        when 8025.kill with pc.get_level() >=75 and pc.get_level() <= 85 begin
+            local operator = 0.3
+            event_mystery_box.drop_box(operator,8025)
+        end
+        when 8026.kill with pc.get_level() >=85 and pc.get_level() <= 95 begin
+            local operator = 0.5
+            event_mystery_box.drop_box(operator,8026)
+        end
+        when 8051.kill with pc.get_level() >=90 and pc.get_level() <= 100 begin
+            local operator = 2.5
+            event_mystery_box.drop_box(operator,8051)
+        end
+        when 8052.kill with pc.get_level() >=90 and pc.get_level() <= 100 begin
+            local operator = 2.5
+            event_mystery_box.drop_box(operator,8052)
+        end
+        when 8053.kill with pc.get_level() >=95 and pc.get_level() <= 105 begin
+            local operator = 2.5
+            event_mystery_box.drop_box(operator,8053)
+        end
+        when 8054.kill with pc.get_level() >=95 and pc.get_level() <= 105 begin
+            local operator = 2.5
+            event_mystery_box.drop_box(operator,8054)
+        end
+        when 8055.kill with pc.get_level() >=100 begin
+            local operator = 2.5
+            event_mystery_box.drop_box(operator,8055)
+        end
+        when 8056.kill with pc.get_level() >=100 begin
+            local operator = 2.5
+            event_mystery_box.drop_box(operator,8056)
+        end
+        when 8027.kill with pc.get_level() >=90 begin
+            local operator = 0.5
+            event_mystery_box.drop_box(operator,8027)
+        end
+        when 5161.kill with pc.get_level() <= 30 begin
+            local operator = 1
+            event_mystery_box.drop_box(operator,5161)
+        end
+        when 591.kill with pc.get_level() <= 35 begin
+            local operator = 1
+            event_mystery_box.drop_box(operator,591)
+        end
+        when 5162.kill with pc.get_level() <= 40 begin
+            local operator = 1
+            event_mystery_box.drop_box(operator,5162)
+        end
+        when 691.kill with pc.get_level() <= 45 begin
+            local operator = 1.25
+            event_mystery_box.drop_box(operator,691)
+        end
+        when 5163.kill with pc.get_level() <= 60 begin
+            local operator = 1
+            event_mystery_box.drop_box(operator,5163)
+        end
+        when 2091.kill with pc.get_level() <= 65 begin
+            local operator = 1.25
+            event_mystery_box.drop_box(operator,2091)
+        end
+        when 792.kill with pc.get_level() <= 65 begin
+            local operator = 0.5
+            event_mystery_box.drop_box(operator,792)
+        end
+        when 793.kill with pc.get_level() <= 75 begin
+            local operator = 0.5
+            event_mystery_box.drop_box(operator,793)
+        end
+        when 2191.kill with pc.get_level() <= 65 begin
+            local operator = 0.5
+            event_mystery_box.drop_box(operator,2191)
+        end
+        when 1901.kill with pc.get_level() <= 75 begin
+            local operator = 1
+            event_mystery_box.drop_box(operator,1901)
+        end
+        when 2206.kill with pc.get_level() <= 85 begin
+            local operator = 10
+            event_mystery_box.drop_box(operator,2206)
+        end
+        when 1091.kill with pc.get_level() <= 75 begin
+            local operator = 10
+            event_mystery_box.drop_box(operator,1091)
+        end
+        when 1092.kill with pc.get_level() <= 75 begin
+            local operator = 10
+            event_mystery_box.drop_box(operator,1092)
+        end
+        when 1304.kill with pc.get_level() <= 80 begin
+            local operator = 0.5
+            event_mystery_box.drop_box(operator,1304)
+        end
+        when 1093.kill with pc.get_level() <= 95 begin
+            local operator = 0.2
+            event_mystery_box.drop_box(operator,1093)
+        end
+        
+        
+        
+        -- now the bosses
+        when 5002.kill begin
+            local operator = 2
+            event_mystery_box.drop_box(operator,5002)
+        end
+        when 2092.kill begin
+            local operator = 2
+            event_mystery_box.drop_box(operator,2092)
+        end
+        when 1192.kill begin
+            local operator = 2
+            event_mystery_box.drop_box(operator,1192)
+        end
+        when 2291.kill begin
+            local operator = 2.5
+            event_mystery_box.drop_box(operator,2291)
+        end
+        when 2307.kill begin
+            local operator = 2
+            event_mystery_box.drop_box(operator,2307)
+        end
+        when 2306.kill begin
+            local operator = 15
+            event_mystery_box.drop_box(operator,2306)
+        end
+        
+        when 3091.kill begin
+            local operator = 2
+            event_mystery_box.drop_box(operator,3091)
+        end
+        
+        when 3191.kill begin
+            local operator = 2
+            event_mystery_box.drop_box(operator,3191)
+        end
+        
+        when 3291.kill begin
+            local operator = 2
+            event_mystery_box.drop_box(operator,3291)
+        end
+        
+        when 3391.kill begin
+            local operator = 2
+            event_mystery_box.drop_box(operator,3391)
+        end
+        
+        when 3491.kill begin
+            local operator = 2
+            event_mystery_box.drop_box(operator,3491)
+        end
+        
+        when 3591.kill begin
+            local operator = 2
+            event_mystery_box.drop_box(operator,3591)
+        end
+        
+        when 3595.kill begin
+            local operator = 2
+            event_mystery_box.drop_box(operator,3595)
+        end
+        
+        when 3691.kill begin
+            local operator = 2
+            event_mystery_box.drop_box(operator,3691)
+        end
+        
+        when 3791.kill begin
+            local operator = 2
+            event_mystery_box.drop_box(operator,3791)
+        end
+        
+        when 3891.kill begin
+            local operator = 2
+            event_mystery_box.drop_box(operator,3891)
+        end
+	end
+end

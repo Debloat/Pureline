@@ -1,0 +1,156 @@
+quest olympic_event_box begin
+	state start begin
+		function set_settings()
+			local settings = {}
+			-- reward items when giving a normal item
+			if game.get_event_flag("olympia_costume_2") >= 1 then
+                settings.male_items = {
+                    {41031, 3}, 
+                    {41033, 1}, 
+                    {41035, 1}, 
+                    {41037, 1}, 
+                    {41039, 3}, 
+                    {41041, 1}, 
+                    {41043, 1}, 
+                    {41045, 1},
+                    {41047, 3},
+                    {41049, 1},
+                    {41051, 1},
+                    {41053, 1},
+                    {41085, 1},
+                    {41087, 1},
+                    {41089, 1},
+                    {41091, 1},
+                    {41093, 1},
+                    {41095, 1},
+                    {41097, 1},
+                    {41099, 1},
+                    {41101, 1},
+                    {41103, 1},
+                    {41105, 1},
+                    {41107, 1},
+                    {41109, 1},
+                    {41111, 1},
+                    {41113, 1}
+                }
+                settings.female_items = {
+                    {41032, 3}, 
+                    {41034, 1}, 
+                    {41036, 1}, 
+                    {41038, 1}, 
+                    {41040, 3}, 
+                    {41042, 1}, 
+                    {41044, 1}, 
+                    {41046, 1},
+                    {41048, 3},
+                    {41050, 1},
+                    {41052, 1},
+                    {41054, 1},
+                    {41086, 1},
+                    {41088, 1},
+                    {41090, 1},
+                    {41092, 1},
+                    {41094, 1},
+                    {41096, 1},
+                    {41098, 1},
+                    {41100, 1},
+                    {41102, 1},
+                    {41104, 1},
+                    {41106, 1},
+                    {41108, 1},
+                    {41110, 1},
+                    {41112, 1},
+                    {41114, 1}
+                }
+            else 
+                settings.male_items = {
+                    {41031, 2}, 
+                    {41033, 1}, 
+                    {41035, 1}, 
+                    {41037, 1}, 
+                    {41039, 2}, 
+                    {41041, 1}, 
+                    {41043, 1}, 
+                    {41045, 1},
+                    {41047, 2},
+                    {41049, 1}, 
+                    {41051, 1}, 
+                    {41053, 1}
+                }
+                settings.female_items = {
+                    {41032, 2}, 
+                    {41034, 1}, 
+                    {41036, 1}, 
+                    {41038, 1}, 
+                    {41040, 2}, 
+                    {41042, 1}, 
+                    {41044, 1}, 
+                    {41046, 1},
+                    {41048, 2},
+                    {41050, 1}, 
+                    {41052, 1}, 
+                    {41054, 1}
+                }
+            end
+            
+            return settings
+		end
+	
+		function give_costume_item()
+			local settings = olympic_event_box.set_settings()
+			-- sex = 0 = male
+			if pc.get_sex() == 0 then
+				costume_vnum = get_random_vnum_from_table(settings.male_items)
+			else
+				costume_vnum = get_random_vnum_from_table(settings.female_items)
+			end
+			
+			-- provide the new costume
+			local remain_time = 86400*(7+number(0,7))
+			pc.give_item2_select(costume_vnum,1)
+			item.set_socket(0, get_global_time()+remain_time)
+		end
+
+		
+		when 50130.use begin
+			local n = number (1,100)
+			if n <= 30 then
+				if game.get_event_flag("medal_part_drop") >= 1 then
+					olympic_event_box.give_costume_item()
+				else
+					if n <= 12 then
+						pc.give_item2(38100,1)
+					elseif n <= 17 then
+						pc.give_item2(70024,1)
+					elseif n <= 23 then
+						pc.give_item2(71130,5)
+					elseif n <= 29 then
+						pc.give_item2(71035,4)
+					else
+						pc.give_item2(71107,1)
+					end
+				end
+			elseif n <= 40 then
+				pc.give_item2(27115,10)
+			elseif n <= 50 then
+				pc.give_item2(27112,10)
+			elseif n <= 61 then
+				pc.give_item2(71108,5)
+			elseif n <= 66 then
+				pc.give_item2(72723,1)
+			elseif n <= 71 then
+				pc.give_item2(72727,1)
+			elseif n <= 76 then
+				pc.give_item2(71004,5)
+			elseif n <= 88 then
+				pc.give_item2(71094,1)
+			else
+				pc.give_item2(70102,1)
+			end
+			
+			pc.remove_item(50130,1)
+		end
+
+	end
+end
+

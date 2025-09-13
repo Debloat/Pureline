@@ -1,0 +1,173 @@
+quest subquest_18 begin
+	state start begin
+		when login or levelup with pc.level >= 10 and pc.level <=12  begin
+			set_state(information)
+		end
+	end
+
+	state information begin
+		when letter begin
+			local v=find_npc_by_vnum(20002)
+			if 0!=v then
+			target.vid("__TARGET__", v, gameforge.subquest_18._10_targetVid)
+			end
+		end
+		when __TARGET__.target.click or	20002.chat.gameforge.subquest_18._10_targetVid  begin
+			target.delete("__TARGET__")
+			say_title(gameforge.subquest_18._20_sayTitle)
+			say(gameforge.subquest_18._30_say)
+
+			local s=select(
+				gameforge.subquest_18._33_select,
+				gameforge.subquest_18._37_select
+				)
+
+			if 2==s then
+				say(gameforge.subquest_18._40_say)
+				local a=  select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
+				if 2==a then
+					
+					say_title(gameforge.subquest_18._20_sayTitle)
+					say(gameforge.subquest_18._50_say)
+					return
+				end
+					say_title(gameforge.subquest_18._20_sayTitle)
+					say(gameforge.subquest_18._60_say)
+				set_state(__GIVEUP__)
+				return
+			end
+				say_title(gameforge.subquest_18._20_sayTitle)
+				say(gameforge.subquest_18._70_say)
+			set_state(find_soonyougil)
+
+		end
+	end
+	state find_soonyougil begin
+		when letter begin
+			send_letter(gameforge.subquest_18._80_sendLetter)
+			
+			local v=find_npc_by_vnum(20023)
+			if 0!=v then
+				target.vid("__TARGET2_", v, gameforge.subquest_18._80_sendLetter)
+			end
+
+		end
+		when button or info begin
+			say_title(gameforge.subquest_18._90_sayTitle)
+			say(gameforge.subquest_18._100_say)
+		end
+		when 20002.chat.gameforge.subquest_18._110_npcChat  begin
+			say_title(gameforge.subquest_18._20_sayTitle)
+			say(gameforge.subquest_18._120_say)
+		end
+		when  __TARGET2__target.click or	20023.chat.gameforge.subquest_18._130_npcChat  begin
+			target.delete("__TARGET2_")
+			say_title(gameforge.buy_fishrod._210_sayTitle)
+			say(gameforge.subquest_18._140_say)
+			wait()
+			say_title(gameforge.subquest_05._30_sayTitle)
+			say(gameforge.subquest_18._150_say)
+			local s=select(
+				gameforge.subquest_18._153_select,
+				gameforge.subquest_18._157_select
+				)
+			
+			if 1==s then
+				say_title(gameforge.subquest_05._30_sayTitle)
+				say(gameforge.subquest_18._160_say)
+				set_state(report_true)
+			elseif 2==s then
+				say_title(gameforge.subquest_05._30_sayTitle)
+				say(gameforge.subquest_18._170_say)
+				set_state(report_false)
+			end
+		end
+	end
+	state report_false begin
+		when letter begin
+			send_letter(gameforge.subquest_18._180_sendLetter)
+			local v=find_npc_by_vnum(20002)
+			if v!=0 then
+				target.npc("__TARGET__", v, gameforge.subquest_18._180_sendLetter)
+			end
+		end
+		when button or info begin
+			say_title(gameforge.subquest_18._180_sendLetter)
+			say(gameforge.subquest_18._190_say)
+		end
+
+		when __TARGET__.target.click or	20002.chat.gameforge.subquest_18._200_npcChat begin
+			target.delete("__TARGET__")
+			say_title(gameforge.subquest_18._20_sayTitle)
+			say(gameforge.subquest_18._210_say)
+			set_state(come_back)	
+		end
+	end
+	state come_back begin
+		when letter begin
+			send_letter(gameforge.subquest_18._220_sendLetter)
+			local v=find_npc_by_vnum(20023)
+			if v!=0 then
+				target.npc("__TARGET__", v, gameforge.subquest_18._220_sendLetter)
+			end
+		end
+		when button or info begin
+			say_title(gameforge.subquest_18._220_sendLetter)
+			say(gameforge.subquest_18._230_say)
+		end
+		when __TARGET__.target.click or	20023.chat.gameforge.subquest_18._240_npcChat begin
+		   	target.delete("__TARGET__")
+			say_title(gameforge.subquest_05._30_sayTitle)
+			say(gameforge.subquest_18._250_say)
+			say_title(gameforge.locale.reward)
+						say_reward(gameforge.subquest_18._260_sayReward)
+			pc.give_exp2(7000)
+			say_reward(gameforge.subquest_18._270_sayReward)
+			pc.change_money(10000)
+
+			clear_letter()
+			set_state(__COMPLETE__)
+		end
+	end
+
+	state report_true begin
+		when letter begin
+			send_letter(gameforge.subquest_18._180_sendLetter)
+			local v=find_npc_by_vnum(20002)
+			if v!=0 then
+				target.npc("__TARGET__", v, gameforge.subquest_18._180_sendLetter)
+			end
+		end
+		
+		when button or info begin
+			say_title(gameforge.subquest_18._180_sendLetter)
+			say(gameforge.subquest_18._280_say)
+		end
+		when 20023.chat.gameforge.subquest_18._290_npcChat begin 
+			say_title(gameforge.subquest_05._30_sayTitle)
+			say(gameforge.subquest_18._300_say)
+		end
+		when __TARGET__.target.click or	20002.chat.gameforge.subquest_18._310_npcChat begin
+			target.delete("__TARGET__")
+			say_title(gameforge.npc_talk._630_sayTitle)
+			say(gameforge.subquest_18._320_say)
+			say_title(gameforge.locale.reward)
+						say_reward(gameforge.subquest_18._260_sayReward)
+			pc.give_exp2(7000)
+			say_reward(gameforge.subquest_18._270_sayReward)
+			pc.change_money(10000)
+		
+			clear_letter()
+			set_state(__COMPLETE__)
+		end
+	end
+				
+	state __GIVEUP__ begin
+	end
+	state __COMPLETE__ begin
+		when enter begin
+			q.done()
+		end
+	end
+
+end

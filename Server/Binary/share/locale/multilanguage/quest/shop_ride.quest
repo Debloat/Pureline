@@ -1,0 +1,68 @@
+quest shop_ride begin
+	state start begin
+		function Ride( vnum, remain_time )
+			ride_info = {
+				[711151] = { 20110,	item.get_socket(2)*60,	apply.DEF_GRADE_BONUS,	45,	45,	false	},
+				[711152] = { 20110,	item.get_socket(2)*60,	apply.DEF_GRADE_BONUS,	60,	60,	false	},
+				[711153] = { 20110,	item.get_socket(2)*60,	apply.DEF_GRADE_BONUS,	75,	75,	false	},
+				[711154] = { 20110,	item.get_socket(2)*60,	apply.DEF_GRADE_BONUS,	90,	90,	false	},
+				[711171] = { 20110,	item.get_socket(2)*60,	apply.DEF_GRADE_BONUS,	50,	45,	false	},
+				[711172] = { 20111,	item.get_socket(2)*60,	apply.DEF_GRADE_BONUS,	70,	60,	false	},
+				[711173] = { 20111,	item.get_socket(2)*60,	apply.DEF_GRADE_BONUS,	90,	75,	false	},
+				[711174] = { 20111,	item.get_socket(2)*60,	apply.DEF_GRADE_BONUS,	105,	90,	false	},
+				[711191] = { 20112,	item.get_socket(2)*60,	apply.DAMAGE_SP_RECOVER,	5,	75,	false	},
+				[711192] = { 20112,	item.get_socket(2)*60,	apply.DAMAGE_SP_RECOVER,	7,	80,	false	},
+				[711193] = { 20112,	item.get_socket(2)*60,	apply.DAMAGE_SP_RECOVER,	10,	85,	false	},
+				[711194] = { 20112,	item.get_socket(2)*60,	apply.DAMAGE_SP_RECOVER,	10,	90,	false	},
+				[711211] = { 20113,	item.get_socket(2)*60,	apply.ATT_GRADE_BONUS,	50,	75,	false	},
+				[711212] = { 20113,	item.get_socket(2)*60,	apply.ATT_GRADE_BONUS,	100,	80,	false	},
+				[711213] = { 20113,	item.get_socket(2)*60,	apply.ATT_GRADE_BONUS,	150,	85,	false	},
+				[711214] = { 20113,	item.get_socket(2)*60,	apply.ATT_GRADE_BONUS,	200,	90,	false	}
+				}
+				
+			if pc.level < ride_info[vnum][5] then
+				say("")
+				say(gameforge.ride._010_say)
+				say("")
+			else
+				if ride_info[vnum][2] == 0 and remain_time != 0 then
+					pc.mount( ride_info[vnum][1], remain_time*60 )
+					pc.mount_bonus( ride_info[vnum][3], ride_info[vnum][4], remain_time*60 )
+				else
+					pc.mount( ride_info[vnum][1], ride_info[vnum][2] )
+					pc.mount_bonus( ride_info[vnum][3], ride_info[vnum][4], ride_info[vnum][2] )
+				end
+
+				if true == ride_info[vnum][6] then
+					pc.remove_item(vnum, 1)
+				end	
+			end	
+		end
+
+		when login begin
+			local vnum, remain_time = pc.get_special_ride_vnum()
+
+			if 0 != vnum then
+				shop_ride.Ride(vnum, remain_time)
+			end
+		end
+
+		when 711151.use or 711152.use or 711153.use or 711154.use or 711171.use or 711172.use or 711173.use or 711174.use or 
+			711191.use or 711192.use or 711193.use or 711194.use or 711121.use or 711122.use or 711123.use or 711124.use begin
+			 if pc.is_polymorphed() then
+				 say("")
+				 say(gameforge.ride._020_say)
+				 say("")
+			elseif false == pc.is_riding() then
+			 	if true == horse.is_summon() then
+					horse.unsummon()
+				end
+				 ride.Ride(item.vnum, 0)
+			 else
+				say("")
+				 say(gameforge.ride._030_say)
+				 say("")
+			 end
+		end
+	end
+end

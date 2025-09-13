@@ -1,0 +1,79 @@
+--test
+--real 순서
+--define santa 20031
+define santa 20126
+--define xmas_sock 8000
+define xmas_sock 50010
+--define baby_dear_ticket 8003
+define baby_dear_ticket 53007
+define GIFTBOX 71144
+quest new_christmas_2012_sock begin
+	state start begin
+	end
+	state baby_dear_give begin
+		when santa.chat.gameforge.new_christmas_sock._010_npcChat begin
+			say_title(mob_name(santa))
+			say (gameforge.new_christmas_sock._020_say)
+			wait()
+			say_title(mob_name(santa))
+			say (gameforge.new_christmas_sock._030_say)
+			wait()
+			say_title(mob_name(santa))
+			say (gameforge.new_christmas_sock._040_say)
+			wait()
+			say_title(mob_name(santa))
+			pc.give_item2_select (baby_dear_ticket, 1)
+			item.set_socket (0, get_global_time() + 7200)
+			pc.setqf ("last_reindeer_give_time", get_global_time())
+			set_state(sock_take)
+		end
+	end
+	state sock_take begin
+		when santa.chat.gameforge.new_christmas_sock._080_npcChat begin
+			if get_global_time() - pc.getqf ("last_reindeer_give_time") < 86400 then
+				say_title (mob_name (santa))
+                say (gameforge.new_christmas_sock._090_say)
+			else
+				say_title (mob_name (santa))
+                say (gameforge.new_christmas_sock._040_say)
+				pc.give_item2_select (baby_dear_ticket, 1)
+				item.set_socket (0, get_global_time() + 7200)
+				pc.setqf ("last_reindeer_give_time", get_global_time())
+			end
+		end
+		
+		when santa.chat."reset flags / reindeer, socks" with is_test_server() begin
+			pc.setqf ("last_reindeer_give_time", 0)
+			pc.setqf("last_sock_cooldown_time", 0) 
+		end
+		
+		when santa.chat.gameforge.new_christmas_sock._050_npcChat begin
+			if get_time() < pc.getqf("last_sock_cooldown_time") then
+				say_title (mob_name(santa))
+				say (gameforge.new_christmas_sock._100_say)
+			else
+				local n = pc.count_item(xmas_sock)
+				if n < 5 then
+					say_title(mob_name(santa))
+					say (gameforge.new_christmas_sock._060_say)
+					wait()
+				else
+					say_title(mob_name(santa))
+					say (gameforge.new_christmas_sock._070_say)
+					wait()
+					pc.remove_item (xmas_sock, 5)
+					say_title(locale.reward)
+					
+					pc.give_item2(GIFTBOX)
+					say_reward (string.format("%s : 1%s",item_name(GIFTBOX), locale.count_postfix))
+					
+					if is_test_server() then 
+						pc.setqf("last_sock_cooldown_time", get_time() + 20) 
+					else
+						pc.setqf("last_sock_cooldown_time", get_time()+60*60*24) -----------------------------------24 stunden nun
+					end
+				end
+			end
+		end
+	end
+end

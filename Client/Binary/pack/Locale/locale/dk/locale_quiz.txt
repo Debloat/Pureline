@@ -1,0 +1,346 @@
+1	1	Har handelsmandens rygsæk en lås?
+1	2	Kan du plyndre en forvandlingskugle i kæmpernes land? 
+1	3	Dropper Forbandet alpha-blåulv ulveskind? 
+1	4	Dropper Yetien Yetiskind? 
+1	5	Kan du kun plyndre Iskugler på Bjerget Sohan? 
+1	6	Kan du kun modtage Gudinde tåre fra kister? 
+1	7	Forøger en level 3 hastighedssten, bevægelseshastighed med 30? 
+1	8	Giver Perler normalt INT bonus? 
+1	9	Er der en rustning der starter ved level 12? 
+1	10	Er der Jade-åre i Hwang-Tempel? 
+1	11	Er der 22 broer i Seungryong Dalen? 
+1	12	Er der otte klasser i Metin2? 
+1	13	Er der krydsfiner i Metin2? 
+1	14	Er der en genstand som hedder 'smykke'?
+1	15	Er der en færdighed der hedder 'Aura Igle'?
+1	16	Eksistere Heal bonus? 
+1	17	Er der en koreansk fyrværker? 
+1	18	Er der en medium Missionsbog? 
+1	19	Er der en Kvarts-åre? 
+1	20	Er der et særligt kort til trænings kampe? 
+1	21	Er der en fugl der sidder på Teleporterens højre skulder?
+1	22	Er der en træ rustning? 
+1	23	Er der en Ild Føniks? 
+1	24	Er der en fægte lærer? 
+1	25	Er der orker? 
+1	26	Er der fiskere på kort 2?
+1	27	Er der altid kun en Stald-dreng pr. nation? 
+1	28	Kan du holde kæledyr i Metin2? 
+1	29	Er der hunde i Metin2? 
+1	30	Er der det samme antal fiskere i alle nationer? 
+1	31	Er der Riskager i Metin2? 
+1	32	Er der en Markedsplads i kort 2? 
+1	33	Er der Pante saft i Metin2? 
+1	34	Findes forbandede dyr kun i ordens området?
+1	35	Angriber Bera af egen vilje? 
+1	36	Dræbte Beran-Steaou sin egen søster? 
+1	37	Har inventaret 90 lagerpladser?
+1	38	Har Bambuspil en Angrebs værdi på 10?
+1	39	Er den Brutale Arahan level 53?
+1	40	Er Sulten vildhund level 1? 
+1	41	Har Lagerforvalteren et blåt pandebånd på? 
+1	42	Har Smeden et forklæde på? 
+1	43	Er Høstmand 'Boss' level? 
+1	44	Har stolt ork-general en kæde på med seks vedhæng? 
+1	45	Har den Gamle dame en søster? 
+1	46	Har Metin2 et forum? 
+1	47	Har Mirine sorte øjne? 
+1	48	Opholder Høstmanden sig i Dæmon tårnet? 
+1	49	Kaldes Sura ånden i grotte 2 Akurma? 
+1	50	Er Bahar-Taraji den yngste af de guddommelige søskende? 
+1	51	Er Bahar-Taraji gudinde for balance? 
+1	52	Er Baljit-Elvedin den ældste af de guddommelige søskende? 
+1	53	Er Baljit-Elvedin gud for balance? 
+1	54	Er monstret Hae-Tae en Boss? 
+1	55	Er Stolt mørk kriger level 54?
+1	56	Kan den Forbandede Røde Vildsvin findes i syv forskellige områder?
+1	57	Kan kobberklokke tages på fra level 5? 
+1	58	Er Rød Hwang rustning til krigere? 
+1	59	Er det lyst i ørkenen om natten?
+1	60	Er Soon en bogorm? 
+1	61	Kan Smeden ødelægge våben når han forbedre dem? 
+1	62	Kan Stor ørken-skildpadde findes på kort 2? 
+1	63	Kan du udvinde diamanter? 
+1	64	Kan du blive gift i Metin2? 
+1	65	Kan du danse i Metin2? 
+1	66	Kan man være GM i en alder af 16?
+1	67	Kan du bruge 'råb' chat fra level 15? 
+1	68	Kan du nå din første mester med level 17? 
+1	69	Kan du have 3 Mester med level 52? 
+1	70	Kan du få en level 5 Metin til at droppe noget når du er level 55? 
+1	71	Kan du bruge heste skills med en ganger levelled til level 9?
+1	72	Kan du frigive dit kæledyr til et dyrehjem? 
+1	73	Kan du hænge sokker på et træ?
+1	74	Kan du opgradere Åndestenen?
+1	75	Dropper alle monstre Forvandlingskugler? 
+1	76	Kan alle grøn Eliksir i spillet droppes? 
+1	77	Kan Tue-svamp udelukkende arbejdes på af Huahn-So? 
+1	78	Leveler GM spillere op? 
+1	79	Er der et lig i Seugryong Dalen? 
+1	80	Skal du samle 16 bogsider i missionen 'Den legendariskes dagbog'?
+1	81	Bruger Konge bælte +5 6 slots i dit inventar? 
+1	82	Ser Heuk-Young ud som en kriger? 
+1	83	Er Forvredet nøgle omsættelig? 
+1	84	Er der 42 lig i Kæmpernes land? 
+1	85	Er der en Teleporter i ordens området? 
+1	86	Er der en Teleporter i Kæmpernes land? 
+1	87	Forbruger en spiller med negativ rang 4500 point ved succesfuld læsning af Sjælesten fra G5 til G6? 
+1	88	Forbruger en spiller med positiv rang 3000 point ved succesfuld læsning af Sjælesten fra G5 til G6? 
+1	89	Sælger Våben-handelsmand stål pile? 
+1	90	Skifter broerne i Ork dalen placering? 
+1	91	1KK Yang er nødvendig for ensidig adskillelse? 
+1	92	Bliver Tranevingens vifter droppet af ulve? 
+1	93	Er et brudekjole nødvendig til et bryllup? 
+1	94	Virker 'Stærk mod djævel' bonus på Underjordisk Yeti? 
+1	95	Er den Nihalede level 73?
+1	96	Er Bakra en by i Jinno Nationen? 
+1	97	Er Taurean placeret i den første by? 
+1	98	Skal du være mindst level 30 for at være istand til at fiske? 
+1	99	Skal du være mindst level 30 for at blive gift? 
+1	100	Kan du købe en hakke af Yang-Shin?
+1	101	Kan du bruge Perle armbånd fra level 28? 
+1	102	Kan karakterer over level 40 træde ind i Dæmon tårnet? 
+1	103	Er Bokjung en del af Shinsoon riget? 
+1	104	Er slangeområde et neutralt kort? 
+1	105	Er der en level 55 Boss i Seugryong Dalen? 
+1	106	Kan en level 51 karakter plyndre Velsignelses dok. fra monstre? 
+1	107	Er der en level 80 boss i Åndeskoven? 
+1	108	Kan du smide Blåståls Rustning +9?
+1	109	Produceres drageklæde ud af Sortstål rustning +9? 
+1	110	Kan du smide 1000 Yang?
+1	111	Produceres Drageklæde ud af Sort påklædning +9? 
+1	112	Spawner Rød drage til hverdag i Metin2? 
+1	113	Modtager du en permanent bonus på 8%% mere skade på andre spillere når du færdiggøre 'Biologens forskning' mission? 
+1	114	Skal du bringe Chegirab 30 Tugyis tavler som en del af 'Biologens forsknings' missionen?
+1	115	Kan Hwang rustning købes i spillet? 
+1	116	Produceres Blåståls Rustning af Sortstål rustning +9?
+1	117	Er der en Teleporter i Slangeområde? 
+1	118	Er level 75 og 80 Metin Sten i Kæmpernes land? 
+1	119	Er der en indgang til Kæmpernes land placeret i Slangeområdet? 
+1	120	Kan du plyndre Halvmenneskets klinge fra Tusind kriger? 
+1	121	Grænser Kæmpernes land op til Slangeområdet? 
+1	122	Har Flyvende Ørkenøje dens eget øje?
+1	123	Har Titan skjold +9 et højere forsvar end et level 6 skjold +9? 
+1	124	Har Falke skjold +9 en forsvars værdi på 153? 
+1	125	Giver Træ øreringe en HP bonus?
+1	126	Kan du kun plyndre Esoteriks ABC+ fra Mørk Arahan og Mørk besværger? 
+1	127	Har Nymfesværd en højere angrbshastighed end Slagsværd? 
+1	128	Dropper Stor is-heks Blodsten? 
+1	129	Er Beran-Setaou en NPC? 
+1	130	Som ganger, forøger løven din angrebsværdi med 200 points? 
+1	131	Kan du teleportere til ægtefæller som er lokaliseret i Edderkoppe grotten? 
+1	132	Producere Huahn-So dug?
+1	133	Skal du besejre 30 Jin-Hees for at få en Forlovelsesring? 
+1	134	Er vielsesringe omsættelige? 
+1	135	Tager Smeden i Dæmon Tårnet Yang for at forbedre genstandene?
+1	136	Kan du plyndre en Sjælesten fra Hae-Tae? 
+1	137	Spawner Hae-Tae i metin2 verdenen hver dag? 
+1	138	Optræder Hae-Tae kun i specifikke events? 
+1	139	Er monstrene i Forbandelsens grotte 2 aggressive? 
+1	140	Er Taurean en NPC? 
+1	141	Kan du plyndre De store abers urt fra Abe-lord? 
+1	142	Vil den dobbelte mænge highscore point blive fratrukket når du læser en sjælesten med negativ rang? 
+1	143	Kan du modtage en sjælesten som belønning for 'Undersøgelserne af åndetræerne' missionen? 
+1	144	Kan du modtage en sjælesten som belønning for 'Hemmeligheden om spøgelsesskoven' missionen? 
+1	145	Kan du plyndre Åndesten fra Drabets Metin i Dæmon Tårnet? 
+1	146	Kan du plyndre færdighedsbøger fra level 75 og 80 Metin-sten?
+1	147	Dropper level 75 og 80 Metin Sten Åndesten? 
+1	148	Dropper Metin Sten under level 40 sjælesten? 
+1	149	Kan du teleportere direkte ind i Dæmon tårnet ved level 60? 
+1	150	Forøger Blåståls rustning +5 forsvar med 184 og reducere bevægelseshastighed med 6? 
+1	151	Kan du droppe muslinger i Metin2? 
+1	152	Er det muligt at droppe et Passage dokument i Forbandelsens grotte? 
+1	153	Kan du plyndre Fuldmånens sværd fra Jin-Hee? 
+1	154	Kan Mentalstyrke Krigeren bruge Lynkast færdigheden?
+1	155	Forøger Krigs-Vildsvin forsvar med 500? 
+1	156	Dropper Skumlens Metin Åndesten? 
+1	157	Skal du bruge en sort uniform+ for at forbedre Tiger-pladerustning? 
+1	158	Er 'Fortrylle genstand' omsættelig? 
+1	159	Kan du plyndre Blå eliksir(s) i Edderkoppe-grotte? 
+1	160	Spawner pest-bærer i metin2 hver dag? 
+1	161	Kan du finde bjørnegalde i guld skattekiste? 
+1	162	Kan du udvinde raffineret Ibentræ fra Jade-åre? 
+1	163	Spawner Djævlens Metin ved events? 
+1	164	Dropper Orker Hvidgulds armbånd? 
+1	165	Skal du besejre alle modstandere i Djævelens katakombe? 
+1	166	Kan Azrael lande et kritisk slag i kamp? 
+1	167	Kan du købe en sjæle-krystal Halskæde i Item shop? 
+1	168	Har Gammel dame støv allergi? 
+1	169	Er våben-handelsmand forelsket i Handelsdame? 
+1	170	Har lagerforvalter guld bare? 
+1	171	Er Uriel en kvinde? 
+1	172	Er Rustnings-handelsmanden i et forhold med Handelsdamen? 
+1	173	Er den Gamle dames støv kost lavet af pels fra en Blåulv? 
+1	174	Kan du kun slå Stor ørken-skildpadde med et tohånds sværd? 
+1	175	Kan Troldmadssværd bruges fra level 50? 
+1	176	Dræbte Beran-Setaou Bahar-Taraji? 
+1	177	Kan Beran-Setaou kun findes på et kort i spillet? 
+1	178	Genfylder Rød eliksir(S) 650 HP?
+1	179	Indeholder Sol Eliksir(L) 2,000,000 HP?
+1	180	Kan udholdenhed genopfyldes med gul eliksir? 
+1	181	Er gift dødelig? 
+1	182	Genopretter Sim-vand 100 MP med det samme? 
+1	183	Forøger Rød dug angrebs hastigheden med 2%% til 8%%?
+1	184	Vare effekten af dug maksimum 20 minutter? 
+1	185	Vare effekten af Ferskenblomst saft i fem minutter? 
+1	186	Forøger blå dug angrebs værdien? 
+1	187	Har Chuk-Sal maske på? 
+1	188	Kan du finde en runebunke på fjerde level i Djævlens katakombe? 
+1	189	Er Gengældelsens Metin level 80? 
+1	190	Er der en ånd af en Sura i Dragens Tempel? 
+1	191	Modtager folk der gifter sig Røde Eliksirer (M) ved slutningen af deres bryllup?
+1	192	Kan du se din egen skygge i skyggen af et træ eller en bygning? 
+1	193	Kan du have Drageklæde +6 på fra level 84?
+1	194	Kan du maksimalt sætte to Åndesten i en Antik klokke? 
+1	195	Tiltrækker Hemmelighedens Kappe monstrene?
+1	196	Kan alle gangere i spillet bruges fra level 1? 
+1	197	Dropper den blå drage perler? 
+1	198	Er 'skade absorberet af MP' standard bonusens på Sjæleplints Hat? 
+1	199	Optræder forbandede monstre kun i ordens området? 
+1	200	Hvis du bruger forbrænding på en modstander, vil de bibeholde en HP?
+1	201	Kan Militærhests missionen færdiggøres fra level 45? 
+1	202	Kan en level 82 spiller invitere en spiller med level 53 ind i deres gruppe? 
+1	203	Kan Ninjaer bruge fire heste færdigheder? 
+1	204	Er sølv-åre kun i den første by? 
+1	205	Er Metin Pung-Ma kun i Lungsam? 
+1	206	Kan du træde ind i Dragens Tempel ved hjælp af skrumpe-hoved? 
+1	207	Droppes Forvredet nøgle af General Huashin? 
+1	208	Er der en boss modstander i Mount Sohan? 
+1	209	Kan man have guldbelagte sko på fra level 20? 
+1	210	Har event hjælper handsker på? 
+1	211	Har Baek-Go briller? 
+1	212	Har Mok minde en rektangulær form? 
+1	213	Har bryllupsplanlæggeren en grøn kjole på? 
+1	214	Har Seon-Hae en pind i sin højre hånd? 
+1	215	Har Tang-Shin tre pile i sit pilekogger? 
+1	216	Er Hævnens Metin himmel blå? 
+1	217	Er gengældelsens Metin den Metin sten der har det højeste level? 
+1	218	Er Sjælens Metin placeret i Seungryong Dalen? 
+1	219	Can du finde Jade-åre i Mørkets tempel?
+1	220	Kan du udvinde Kvartsmalm på Bjerget Sohan? 
+1	221	Er Beran-Setaou level 97? 
+1	222	Har Azrael et højere level end Beran-Setaou? 
+1	223	Har Stor is-heks samme level som Tartaros? 
+1	224	Er lynangreb en Ninja færdighed? 
+1	225	Genopfylder Rød Eliksir(M) 500 HP? 
+1	226	Kan YanYang-pladerustning benyttes af en kriger? 
+1	227	Fordobler Den Viise Kejser Handske modtaget Highscore point når du besejre monstre? 
+1	228	Har Uriels dagbog 20 sider? 
+1	229	Ledes du til Forbandelsens grotte af Chuk-Sal? 
+1	230	Skal du være level 75 for at kunne træde ind i Forbandelsens grotte? 
+1	231	Har smeden skæg? 
+1	232	Er der fire heste i Stald-drengens indhegning?
+1	233	Er violette sokker en del af Baronesse påklædning? 
+1	234	Har Ung skorpion mand våben? 
+1	235	Har den nihalede faktisk ni haler? 
+1	236	Er der Himmeltåre-åre på Bjerget Sohan? 
+1	237	Har den Mørke Leder besvimelses chance bonussen?
+1	238	Er Gum minde placeret bag ved Dæmon tårnet? 
+1	239	Brænder Flamme-kongens hoved? 
+1	240	Har Flamme-konge sendaler på? 
+1	241	Er Hae-Tae et monster? 
+1	242	Har Pest-Mand et halstørklæde på? 
+1	243	Har Abe-lord en hale? 
+1	244	Har Abe-lord et scepter? 
+1	245	Har fjols et horn i panden? 
+1	246	Har Kæmpe åndetræ rødder? 
+1	247	Er Dryadens hænder røde? 
+1	248	Holder Tusind kriger to økser i hans hænder? 
+1	249	Er Setaou Mystiker level 88? 
+1	250	Er Beran-Setaou himmel blå? 
+1	251	Er Aranyo Soons kone? 
+1	252	Er Ariyoung placeret i den første by? 
+1	253	Brygger Baek-Go eliksirer? 
+1	254	Er Ånde sværdmester blå? 
+1	255	Har Is Insektet ti ben?
+1	256	Regenerere Stegt tynd bækørred 250 MP? 
+1	257	Har Handu-UP en spidst lille hat? 
+1	258	Vandre Nakajima rundt på kortet? 
+1	259	Giver Rød myredragt+9 i forsvars bonus af 101? 
+1	260	Har Harang sit hår sat i hestehale? 
+1	261	Holder Deokbae en gylden økse? 
+1	262	Starter 'Vores stald har problemer' opgaven fra level 49? 
+1	263	Har Uriel hans arme krydsede? 
+1	264	Kan Abe-lord findes i Hasun Dong? 
+1	265	Kan du fodre din hest med standard kommandoen Ctrl + B?
+1	266	Har Rustnings-handlesmanden et skæg? 
+1	267	Er den hårde abe-grotte også kendt som Jungsun Dong? 
+1	268	Forøger Dragegudens vrede chancen for et gennemtrængende slag? 
+1	269	Bære Aranyo på en frugtkurv? 
+1	270	Har Is Insektet 6 ben?
+1	271	Er der seks forskellige typer monstre i Kæmpernes land? 
+1	272	Kan Rødjernsklinge kun bruges med level 30? 
+1	273	Er Kuahlo Dong placeret i ørkenen? 
+1	274	Har Teleporter et mærke på deres hoved? 
+1	275	Er Kampens Metin level 15?
+1	276	Har biologen Chaegirab briller på? 
+1	277	Har du brug for en perle for at forbedre level 26 rustning til +4?
+1	278	Kan du købe level 26 rustning fra en NPC?
+1	279	Klør pest hunden sig bag øret?
+1	280	Har den Vilde pest-bueskytte 2 hoveder?
+1	281	Findes der en Chunjo-fels?
+1	282	Findes der en Yongbi-sten?
+1	283	Har en level 42 rustning i +7 et forsvar på +97?
+1	284	Har en level 42 rustning i +7 et forsvar på -97?
+1	285	Er Setaou Jægeren level 89, niveau 2?
+1	286	Er Sortvind-To-Su level 33, niveau 2?
+1	287	Har Metin2 ler?
+1	288	Er der 4 ponyer ved Stald-drengen ?
+1	289	Har Baek-Go briller?
+1	290	Er Wonda-Rim Chaegirabs nevø?
+1	291	Er Chaegirab Wonda-Rims onkel?
+1	292	Er Chaegirab Wonda-Rims far?
+1	293	Er der en dyre-gud i kort 2?
+1	294	Er der tre fiskere på kort 2?
+1	295	Spørger teamet dig om dit bruger-ID og din kode?
+1	296	Kan du genkende en GameMaster [GM]?
+1	297	Er den berusede borger på kort 2?
+1	298	Er Edderkops øje en missions genstand?
+1	299	Findes der 5 hårfarver i Metin2?
+1	300	Kan man give Moskus olie til andre spillere?
+1	301	Har Aranyo noget på hendes ryg?
+1	302	Er Aranyo Octavios kone?
+1	303	Er Aranyo Soons kone?
+1	304	Er der skeletter i Metin2?
+1	305	Er der minder i Kuahlo Dong?
+1	306	Er der trænings-kampe i Metin2?
+1	307	Kan læder sko bruges af alle?
+1	308	Har Eksorcismesværd en angrebs-hastighed på 20%%?
+1	309	Bærer Eun-Jung en vifte?
+1	310	Bærer Eun-Jung et våben?
+1	311	Kan man smide guld- og sølvbarrer på jorden?
+1	312	er angrebs-hastigheden på Magnetisk klinge reduceret ved højere opgraderings niveauer?
+1	313	Øges angrebs-hastigheden på Magnetisk klinge ved højere opgraderings niveauer?
+1	314	Findes der en dyster træmaske?
+1	315	Kan man lave barbecue i Metin2?
+1	316	Bærer Koe-Pung en maske?
+1	317	Er der en Skovspøgelses-sjælesten missions genstand??
+1	318	Bærer Oger berserkeren et våben i hans venstre hånd?
+1	319	Kan dit køn skiftes ved hvert level?
+1	320	Er Imha Ordens-området til Chunjo riget?
+1	321	Er Imha Ordens-området til Shinsoo riget?
+1	322	Er Imha Ordens-området til Jinno riget?
+1	323	Er Jungrang en NPC i Metin2?
+1	324	Er Yayang Soons datter?
+1	325	Er det indvendige af Jungsun Dong lavet af grøn-farvede sten?
+1	326	Er Yang Metin2s valuta?
+1	327	Behøver man Jinunggyis sjæle-sten til en level 30 mission?
+1	328	Findes der forsknings genstande?
+1	329	Kan man brygge eliksirer hos Seon-Hae
+1	330	Findes der græskar i Metin2?
+1	331	Findes der sokker i Metin2?
+1	332	Er ilden i den mørke helligdom rød?
+1	333	Er Abe-generalen level 40, niveau 4?
+1	334	Kan alle karakterer bruge sværd?
+1	335	Er Nakajima en Metin2 NPC?
+1	336	Kan monstre plyndre passage dokumentet?
+1	337	Koster 200 Røde Eliksirer(S) 33,000 Yang hos Handelsdamen?
+1	338	Kan den overdådigt dekorerede bue bæres af Ninjaer?
+1	339	Er Choung på 1. kort?
+1	340	Er Sorgens Metin level 10, niveau 5?
+1	341	Findes der Jule-fyrværkeri?
+1	342	Øger kinesisk fyrværkeri bevægelseshastigheden?
+1	343	Øger kinesisk fyrværkeri angrebshastigheden?
+1	344	Øger det Kinesiske Fyrværkeri chancen for at besvime?
+1	345	Gendanner stegt laks 350 livspoint?
+1	346	Gendanner Stegt laks 350 mana point?

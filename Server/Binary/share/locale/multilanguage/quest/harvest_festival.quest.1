@@ -1,0 +1,829 @@
+-- Chuseok Events
+quest harvest_festival begin
+    state start begin
+
+				function get_random_rice()
+					if (pc.get_level() >= 56) then
+                    random_rice = number(4, 7)
+               elseif (pc.get_level() >= 40) then
+                    random_rice = number(3, 7)
+                elseif (pc.get_level() > 30) then
+                    random_rice = number(3, 5)
+                else
+                    random_rice = number(2, 3)
+                end -- end of if
+					return random_rice
+
+				end
+
+        when login with pc.get_level() > 0 begin
+            set_state(information)
+            pc.setqf("harvest_festival_count", 0)
+            pc.setqf("harvest_festival_mob_complete", 0)
+            pc.setqf("cake_count", 0)
+            pc.setqf("rice_count", 0)
+      end -- end of when
+  end -- end of state
+
+    
+    -- Event Start
+    state information begin	
+        when letter with game.get_event_flag("harvest_festival")>0  begin
+            local v= find_npc_by_vnum(20086)
+            if 0==v then
+            else
+                target.vid("__TARGET__", v, "Wondarim")
+            end
+        end
+
+
+        -- Glutinous rice in exchange for a gift
+        when 20087.chat."Glutinous Rice Gets Lost?" with game.get_event_flag("harvest_festival")>0 begin
+            local rice_count = pc.getqf("rice_count")
+
+            say("Handueop: ")
+            say("You have "..rice_count.." Glutinous rice!")
+            say("")
+            say("Not all of them are good, some are sticky!")
+            say("")
+
+            local reward_set = select("I値l try it!","I値l get used glutinous rice raseo..")
+
+            if reward_set == 2 then
+                say("Handueop: ")
+                say("You can come back again when you change your mind..")
+                say("")
+
+                return
+            end -- end of if	
+        
+            say("Handueop: ")
+            say("glutinous rice can give different gifts..")
+            say("Would you like to exchange it for something?")
+            say("")
+
+            local harvest_item_set = select("15x Glut",  "15x Gl","35x Perle","35x Gluttrank","35x Gltes","Maybe later")
+            
+            if harvest_item_set == 6 then
+                say("Handueop: ")
+                say("Come back when you made up your mind.")
+                say("")
+
+                return
+            end -- end of if
+
+            local harvest_item_name = ""
+            local harvest_rice_count = 0
+            
+
+            if harvest_item_set == 1 then
+                harvest_item_name = " Thief Gloves (10h)"
+                harvest_rice_count = 15 
+            elseif harvest_item_set == 2 then
+                harvest_item_name = " Experience Ring (10h)"
+                harvest_rice_count = 15 
+            elseif harvest_item_set == 3 then
+                harvest_item_name = "1x Weiﾟe Perle "
+                harvest_rice_count = 35
+            elseif harvest_item_set == 4 then
+                harvest_item_name = "10x Geschwindigkeitstrank "
+                harvest_rice_count = 35
+            elseif harvest_item_set == 5 then
+                harvest_item_name = "200x Schriftrolle des Ortes "
+                harvest_rice_count = 35 
+            end -- end of if	
+
+            -- Check glutinous rice amount
+            if rice_count < harvest_rice_count then
+                say("Handueop: ")
+                say("You dont have enough glutinous rice..")
+                say("Please collect more!")
+                say("")
+                
+                return
+            end -- end of if	
+
+            say("Handueop: ")
+            say("You choose a good gift..")
+            say("")
+            say("Want to trade "..harvest_rice_count.." for "..harvest_item_name)
+            say("Do you want to make the exchange?")
+            say("")
+
+            local item_get_set = select("Exchange the rice for the gifts!", "Ill come back later..")
+
+            if item_get_set == 2 then
+                return
+            end -- end of if
+
+            -- System to hand out the items
+            if harvest_item_set == 1 then
+                pc.setqf("rice_count", rice_count - harvest_rice_count)	
+                pc.give_item2("72004", 1)
+            elseif harvest_item_set == 2 then
+                pc.setqf("rice_count", rice_count - harvest_rice_count)	
+                pc.give_item2("72001", 1)
+            elseif harvest_item_set == 3 then
+                pc.setqf("rice_count", rice_count - harvest_rice_count)	
+                pc.give_item2("27992", 1)
+            elseif harvest_item_set == 4 then
+                pc.setqf("rice_count", rice_count - harvest_rice_count)	
+                pc.give_item2("71050", 10)
+            elseif harvest_item_set == 5 then
+                pc.setqf("rice_count", rice_count - harvest_rice_count)	
+                pc.give_item2("22010", 200)
+            end -- end of if
+
+            say_reward(harvest_item_name.." was the item that you got!")
+            say("")
+            say("I like this gift..")
+            say("You should come back when you collect more rice !!")
+            say("")
+            
+        end -- end of when	
+        when 20086.chat."Harvest Event Commands" with pc.get_gm_level() == 5 begin
+
+            if game.get_event_flag("harvest_festival") == 0 then
+             
+                say("Current Status: ThanksGiving Event Results")
+                say("")
+
+                local s = select("Start Event", "Cancel")
+                if 1==s then
+
+                    game.set_event_flag("harvest_festival", 1) 
+                return
+            end
+            else
+
+                say("Current Status: The event is currently active")
+                say("")
+                local s = select("Stop the Event", "Cancel")
+                if 1==s then
+
+                    game.set_event_flag("harvest_festival", 0) 
+                return
+                end
+            end
+        end
+
+        when 20086.chat."Find the lost Rice Cake!" with game.get_event_flag("harvest_festival")>0 begin
+            target.delete("__TARGET__")
+            local quest_count = pc.getqf("harvest_festival_count")
+            local quest_complete = pc.getqf("harvest_festival_mob_complete")
+
+            -- When you finished all the quests
+            if quest_count >= 10 then
+                say("Wondarim: ")
+                say("Thank you for bringing me this dish")
+                say("")
+                say("Have a good Thanksgiving..")
+                say("")
+
+                return
+            end -- end of if	
+
+            -- If you came back for this dish
+            if quest_complete == 1 then
+                pc.setqf("harvest_festival_count", quest_count + 1)
+                pc.setqf("harvest_festival_mob_complete", 0)
+                pc.setqf("mob_kill1_count", 0)
+                pc.setqf("mob_kill2_count", 0)
+                
+                local quest_count = pc.getqf("harvest_festival_count")
+                
+                say("Wondarim: ")
+                say("Oh, got to stop getting this dish back!!")
+                say("")
+                wait()
+
+                -- Getting the Glutinous Rice
+                local rice_count = pc.getqf("rice_count")
+                local cake_count = pc.getqf("cake_count")
+                pc.setqf("rice_count", rice_count + cake_count)
+                pc.setqf("cake_count", 0)
+
+                say_title("You have "..cake_count.."Glutinous Rice!")
+                say("")
+                say("Wondarim: ")
+                say("In return for this dish, I'm here..")
+                say("Glutinous am here..")
+                say("Uncle reportedly handueop ")
+                say("Glutinous Rice told me seek...")
+                say("Please visit again later ")
+                say("")
+                
+                wait()
+
+                if quest_count >= 10 then
+                    char_log(0, "EVENT_RECORD", "harvest_festival clear")
+                    
+                    say("Wondarim: ")
+                    say("Meanwhile, Been so many things...")
+                    say("I think the occasion gonna stay enough")
+                    say("")
+
+                    return
+                else
+                    say("Wondarim: ")
+                    say("By the way ... I ")
+                    say("Still, the lack otto..")
+                    say("Thank you once again do not think?")
+                    say("")
+                end -- end of if
+
+                local replay_set = select("WHILE you're starting to help him continue to UD..","I値l help you later")
+
+                if replay_set == 2 then
+                    return
+                end	-- end of if
+
+                local current_count = quest_count + 1
+
+                say("Wondarim: ")
+                say("I believe I'm going to wait.!")
+                say("Please get you back ~")
+                say("")
+                say("Current Progress"..current_count)
+                say("")
+                say("Info> This quest can be repeated 10x.")
+                say("")
+
+                set_state(mob_kill1)
+
+                return
+            end -- end of if
+
+            -- If you stop and do the quest again
+            if quest_count > 0 then
+                say("Wondarim: ")
+                say("By the way ... I ")
+                say("Dish, still lacks ")
+                say("Would you mind once again keep up the excellent work?")
+                say("")
+                say("Please gather more..")
+                say("")
+                
+                local replay_set = select("Continue to help him..","I値l help you later")
+                    
+                if replay_set == 2 then
+                    return
+                end	-- end of if
+
+                local current_count = quest_count + 1
+
+                say("Wondarim: ")
+                say("I believe I'm going to wait.!")
+                say("Please get you back")
+                say("")
+                say("Current Progress"..current_count)
+                say("")
+                say("Info> This quest can be repeated 10x.")
+                say("")
+                set_state(mob_kill1)
+
+                return
+            end -- end of if
+
+            -- When you start for the 1st time
+            say("Wondarim: ")
+            say("Could you please do me a favor?")
+            say("")
+            say("The tigers came back to the village on the past days.")
+            say("They have stolen all ingredients for our meal")
+            say("")
+            say("With those ingredients, we would be able to do our famous dish,")
+            say("we can give you a little bit as a reward..")
+            say("")
+            say("Will you help us?")
+            say("")
+
+            local main_set = select("Of course!.. I値l find it!!","I知 very busy. Have a nice Thanks Giving day.")
+            if main_set == 2 then
+                say("Wondarim:")
+                say("Oh, ok.")
+                say("Thank you and nice Thanksgiving day")
+                return
+            end -- end of if
+            
+            if pc.get_level() < 20 then
+                say("Wondarim: ")
+                say("You need to improve your power before..")
+                say("")
+                say("You will need more than 20 minutes to solve our mistake.")
+                say("")
+                return
+            end -- end of if
+
+            local current_count = quest_count + 1
+
+            say("Wondarim: ")
+            say("I think Im going to wait!")
+            say("Please, return")
+      say(current_count.." Quest Progress")
+       set_state(mob_kill1)
+
+        end -- end of when
+    end -- end of state
+
+    
+    state mob_kill1 begin
+            when letter begin
+        send_letter("Please, get the dish back!")
+       end -- end of when
+
+      when info or button begin
+        say(locale.NOTICE_COLOR.." Get the dish back from the tigers!"..locale.NORMAL_COLOR)
+            say("")
+            say("Slay tigers to recover")
+            say("30 rice cakes and deliver them to Wondarim!")
+            say("")
+
+            local gogo_set = select("Accept!","Give up!")
+
+            if gogo_set == 2 then
+                clear_letter()
+                set_state(information)
+            end -- end of if	
+
+        end -- end of when
+
+        when 20086.click with game.get_event_flag("harvest_festival")>0 begin
+            say("Wondarim:")
+            say("Please, get the dish back..")
+            say("")
+        end	-- end of when
+        
+        when 20087.click with game.get_event_flag("harvest_festival")>0 begin
+            say("Handueop:")
+            say("I want to make glutinous rice cakes..")
+            say("")
+            say("Help out Wondarim to find the rice cakes")
+            say("And she will reward you accordingly!")
+            say("")
+        end	-- end of when
+
+        
+        when 114.kill begin
+            local kill_count = pc.getqf("mob_kill1_count") + 1
+            local random_rice = 0
+            pc.setqf("mob_kill1_count", kill_count)
+
+            if kill_count < 0 then
+                return
+            end	-- end of if
+        
+            q.set_counter("tigers_remaining", 30 - kill_count);
+
+            if kill_count >= 30 or kill_count < 0 then
+
+                if (pc.get_level() >= 56) then
+                    random_rice = number(2, 3)
+                elseif (pc.get_level() >= 40) then
+                    random_rice = number(1, 3)
+                elseif (pc.get_level() > 30) then
+                    random_rice = number(1, 2)
+                else
+                    random_rice = 1
+                end -- end of if	
+
+                local mob2_name = ""
+
+                if pc.get_level() >= 91 then
+                    pc.setqf("mob2_info", 8)
+          mob2_name = "Setaou-Seherin (2403)"
+                elseif pc.get_level() >= 81 then
+                    pc.setqf("mob2_info", 7)
+          mob2_name = "Setaou-K舂pfer (2401)"
+                elseif pc.get_level() >= 71 then
+                    pc.setqf("mob2_info", 6)
+                    mob2_name = "Flame Warrior"
+                elseif pc.get_level() >= 61 then	
+                    pc.setqf("mob2_info", 5)
+                    mob2_name = "Bullfrog General"
+                elseif pc.get_level() >= 51 then	
+                    pc.setqf("mob2_info", 4)
+                    mob2_name = "Dark Summoner"
+                elseif pc.get_level() >= 41 then	
+                    pc.setqf("mob2_info", 3)
+                    mob2_name = "Esoteric Arahan Fighter"
+                elseif pc.get_level() >= 31 then	
+                    pc.setqf("mob2_info", 2)
+                    mob2_name = "Savage Minion"
+                elseif pc.get_level() >= 20 then	
+                    pc.setqf("mob2_info", 1)
+                    mob2_name = "Brown Bear"
+                end -- end of if
+                
+                say("Tiger: ")
+                say("What was the name ...")
+                say("of the monster that attacked us...")
+                say("not so long ago?"..mob2_name.."!!")
+                say("It looked very menacing...")
+                say("And they took most of the rice cakes!")
+                say("")
+                say("And I couldn稚 do much since I知 alone..")
+                say("")
+                wait()
+
+                -- How many dishes are needed
+                pc.setqf("cake_count", random_rice)
+
+                -- Check the second monster hunt
+                say_title("The tigers looted everything, including "..random_rice.."!")
+                say("")
+                say("Hum.. I think someone is tricking us..")
+                say("")
+                say("Catch some"..mob2_name)
+                say("To get one more dish..")
+                say("")
+                
+                local sub_set = select("Return to find more Rice Cakes..","Give it to Wondarim..")	
+
+                pc.setqf("harvest_festival_mob_complete", 1)
+
+                if sub_set == 2	then
+                    say_pc_name()
+                    say("Return to Wondarim with the dish")
+                    say("I値l replace it with glutinous rice")
+                    say("That will bring us good luck for Thanksgiving..")
+                    say("")
+                    set_state(information)
+                    return
+                end
+                say("Tiger: ")
+                say("Go now for "..mob2_name.."!")
+                say("Find a party..")
+                say("")
+                say("Dont understand this")
+                say("")
+
+                set_state(mob_kill2)
+            end		
+        end -- end of when
+
+        
+    end -- end of state
+
+
+    state mob_kill2 begin
+
+        when letter begin
+            local mob2_info = pc.getqf("mob2_info")
+                        if mob2_info == 8 then
+                             mob2_name = "Fvdfdf"
+                        elseif mob2_info == 7 then
+                             mob2_name = "ibla"
+            elseif mob2_info == 6 then
+                mob2_name = "Flame Warrior"
+            elseif mob2_info == 5 then
+                mob2_name = "Bullfrog General"
+            elseif mob2_info == 4 then
+                mob2_name = "Dark Summoner"
+            elseif mob2_info == 3 then
+                mob2_name = "Esoteric Arahan Fighter"
+            elseif mob2_info == 2 then
+                mob2_name = "Savage Minion"
+            elseif mob2_info == 1 then
+                mob2_name = "Brown Bear"
+            end -- end of if	
+
+            send_letter("??? ???!")
+      end -- end of when
+       when info or button begin
+            local mob2_info = pc.getqf("mob2_info")
+            
+            if mob2_info == 8 then
+                mob2_name = "BlaBloub"
+            elseif mob2_info == 7 then
+                mob2_name = "faaa"
+            elseif mob2_info == 6 then
+                mob2_name = "Flame Warrior"
+            elseif mob2_info == 5 then
+                mob2_name = "Bullfrog General"
+            elseif mob2_info == 4 then
+                mob2_name = "Dark Summoner"
+            elseif mob2_info == 3 then
+                mob2_name = "Esoteric Arahan Fighter"
+            elseif mob2_info == 2 then
+                mob2_name = "Savage Minion"
+            elseif mob2_info == 1 then
+                mob2_name = "Brown Bear"
+            end -- end of if	
+
+            say_title("Recover the dish!")
+            say("")
+            say("Slay 60 "..mob2_name)
+            say("Recover the rice cake for Wondarim!")
+            say("")
+
+            if party.is_party() then
+                say("It was a good idea to form a party..")
+                say("")
+            else
+                say("It is a condition to form up a party")
+                say("As we talked previously, you値l have to find party members..")
+                say("")
+            end -- end of if
+
+            local gogo_set = select("I will continue!","I will give up!")
+
+            if gogo_set == 2 then
+                clear_letter()
+                set_state(information)
+            end -- end of if
+
+        end -- end of when
+     
+     
+        when 20086.chat."Find it" with game.get_event_flag("harvest_festival")>0 begin
+
+            local quest_count = pc.getqf("harvest_festival_count")
+            local quest_complete = pc.getqf("harvest_festival_mob_complete")
+
+            -- When you have finished all the quests
+            if quest_count >= 10 then
+                say("Wondarim: ")
+                say("Thank you for comming back with the dishes")
+                say("Enjoy your Thanksgiving..")
+
+                set_state(information)
+                return
+            end -- end of if
+
+            -- If you come back for the dish
+            if quest_complete == 1 then
+                pc.setqf("harvest_festival_count", quest_count + 1)
+                pc.setqf("harvest_festival_mob_complete", 0)
+                pc.setqf("mob_kill1_count", 0)
+                pc.setqf("mob_kill2_count", 0)
+                
+                local quest_count = pc.getqf("harvest_festival_count")
+                
+                say("Wondarim: ")
+                say("Oh, you have to stop returning this dish!")
+                wait()
+
+                -- Getting Glutinous Rice
+                local rice_count = pc.getqf("rice_count")
+                local cake_count = pc.getqf("cake_count")
+                pc.setqf("rice_count", rice_count + cake_count)
+                pc.setqf("cake_count", 0)
+
+                say_title("I致e got "..cake_count.." glutinous rice!")
+                say("Wondarim: ")
+                say("I知 here so that you can return this dish.")
+                wait()
+                
+                if quest_count >= 10 then
+                    char_log(0, "EVENT_RECORD", "harvest_festival clear")
+                    
+                    say("Wondarim: ")
+                    say("You致e already so many things...")
+                    say("I think that for now it is enough?")
+
+                    set_state(information)
+                    return
+                else
+                    say("Wondarim: ")
+                    say("We still need for you to do some things..")
+                    say("Would you mind the trouble once again?")
+                end -- end of if
+
+                local replay_set = select("Continue helping","Il help you later")
+
+                if replay_set == 2 then
+                    set_state(information)
+                    return
+                end	-- end of if
+
+                local current_count = quest_count + 1
+
+                say("Wondarim: ")
+                say("I believe I知 going to wait!")
+                say("Please come back later")
+                say("Quest Progress: "..current_count..". ")
+                say("tip This quest can be finished up to 10 times.")
+
+                set_state(mob_kill1)
+                return
+            end -- end of if
+        end -- end of when
+        
+        when 20087.click with game.get_event_flag("harvest_festival")>0 begin
+            say("Handueop:")
+            say("I知 looking to create Glutinous rice cakes..")
+            say("As a favor to Wondarim")
+            say("I will get your glutinous rice... since it is the good stuff!!")
+        end -- end of when
+
+        when 113.kill with pc.getf("harvest_festival","mob2_info") == 1 and party.is_party() begin
+            local kill_count = pc.getqf("mob_kill2_count") + 1
+            local random_rice = harvest_festival.get_random_rice()
+            pc.setqf("mob_kill2_count", kill_count)
+
+            if kill_count < 0 then
+                return
+            end	-- end of if
+        
+            q.set_counter("remaining_113", 60 - kill_count);
+
+            if kill_count >= 60 or kill_count < 0 then
+
+                notice_multiline(string.format("You have defeated the target Mob, you receive %s rice.[ENTER]Go back with this dish and tell Wondarim", random_rice), notice)
+                -- Getting the rice cake
+                local cake_count = pc.getqf("cake_count") + random_rice
+                pc.setqf("cake_count", cake_count)
+
+                pc.setqf("harvest_festival_mob_complete", 1)
+                clear_letter()
+                set_state(information)
+
+            end -- end of if
+        end -- end of when	
+
+        when 502.kill with pc.getf("harvest_festival","mob2_info") == 2  and party.is_party() begin
+            local kill_count = pc.getqf("mob_kill2_count") + 1
+            local random_rice = harvest_festival.get_random_rice() 
+            pc.setqf("mob_kill2_count", kill_count)
+
+            if kill_count < 0 then
+                return
+            end	-- end of if
+        
+            q.set_counter("remaining_502", 60 - kill_count);
+
+            if kill_count >= 60 or kill_count < 0 then
+
+
+                notice_multiline(string.format("You have defeated the target Mob, you receive %s rice.[ENTER]Go back with this dish and tell Wondarim", random_rice), notice)
+                -- Getting the rice cake
+                local cake_count = pc.getqf("cake_count") + random_rice
+                pc.setqf("cake_count", cake_count)
+
+                pc.setqf("harvest_festival_mob_complete", 1)
+                clear_letter()
+                set_state(information)
+
+            end -- end of if
+        end -- end of when	
+
+        when 703.kill with pc.getf("harvest_festival","mob2_info") == 3 and party.is_party()  begin
+            local kill_count = pc.getqf("mob_kill2_count") + 1
+            local random_rice = harvest_festival.get_random_rice() 
+            pc.setqf("mob_kill2_count", kill_count)
+
+            if kill_count < 0 then
+                return
+            end	-- end of if
+        
+            q.set_counter("remaining_703", 60 - kill_count);
+
+            if kill_count >= 60 or kill_count < 0 then
+
+                notice_multiline(string.format("You have defeated the target Mob, you receive %s rice.[ENTER]Go back with this dish and tell Wondarim", random_rice), notice)
+                -- Getting the rice cake
+                local cake_count = pc.getqf("cake_count") + random_rice
+                pc.setqf("cake_count", cake_count)
+
+                pc.setqf("harvest_festival_mob_complete", 1)
+                clear_letter()
+                set_state(information)
+
+            end -- end of if
+        end -- end of when	
+
+        when 707.kill with pc.getf("harvest_festival","mob2_info") == 4 and party.is_party()  begin
+            local kill_count = pc.getqf("mob_kill2_count") + 1
+            local random_rice = harvest_festival.get_random_rice() 
+            pc.setqf("mob_kill2_count", kill_count)
+
+            if kill_count < 0 then
+                return
+            end	-- end of if
+        
+            q.set_counter("remaining_707", 60 - kill_count);
+
+            if kill_count >= 60 or kill_count < 0 then
+
+
+                notice_multiline(string.format("You have defeated the target Mob, you receive %s rice.[ENTER]Go back with this dish and tell Wondarim", random_rice), notice)
+
+                -- Getting the rice cake
+                local cake_count = pc.getqf("cake_count") + random_rice
+                pc.setqf("cake_count", cake_count)
+
+                pc.setqf("harvest_festival_mob_complete", 1)
+                clear_letter()
+                set_state(information)
+
+            end -- end of if
+        end -- end of when	
+            
+        when 1305.kill with pc.getf("harvest_festival","mob2_info") == 5 and party.is_party()  begin
+            local kill_count = pc.getqf("mob_kill2_count") + 1
+            local random_rice = harvest_festival.get_random_rice()
+            pc.setqf("mob_kill2_count", kill_count)
+
+            if kill_count < 0 then
+                return
+            end	-- end of if
+        
+            q.set_counter("remaining_1305", 60 - kill_count);
+
+            if kill_count >= 60 or kill_count < 0 then
+
+
+                notice_multiline(string.format("You have defeated the target Mob, you receive %s rice.[ENTER]Go back with this dish and tell Wondarim", random_rice), notice)
+                -- Getting the rice cake
+                local cake_count = pc.getqf("cake_count") + random_rice
+                pc.setqf("cake_count", cake_count)
+
+                pc.setqf("harvest_festival_mob_complete", 1)
+                clear_letter()
+                set_state(information)
+
+            end -- end of if
+        end -- end of when	
+        
+        when 2205.kill with pc.getf("harvest_festival","mob2_info") == 6  and party.is_party() begin
+            local kill_count = pc.getqf("mob_kill2_count") + 1
+            local random_rice = harvest_festival.get_random_rice() 
+            pc.setqf("mob_kill2_count", kill_count)
+
+            if kill_count < 0 then
+                return
+            end	-- end of if
+        
+            q.set_counter("remaining_2205", 60 - kill_count);
+
+            if kill_count >= 60 or kill_count < 0 then
+
+
+                notice_multiline(string.format("You have defeated the target Mob, you receive %s rice.[ENTER]Go back with this dish and tell Wondarim", random_rice), notice)
+                -- Getting the rice cake
+                local cake_count = pc.getqf("cake_count") + random_rice
+                pc.setqf("cake_count", cake_count)
+
+                pc.setqf("harvest_festival_mob_complete", 1)
+                clear_letter()
+                set_state(information)
+
+            end -- end of if
+        end -- end of when	
+        
+   when 2401.kill with pc.getf("harvest_festival","mob2_info") == 7  and party.is_party() begin
+            local kill_count = pc.getqf("mob_kill2_count") + 1
+            local random_rice = harvest_festival.get_random_rice()
+            pc.setqf("mob_kill2_count", kill_count)
+
+            if kill_count < 0 then
+                return
+            end	-- end of if
+        
+            q.set_counter("remaining_2401", 60 - kill_count);
+
+            if kill_count >= 60 or kill_count < 0 then
+
+
+                notice_multiline(string.format("You have defeated the target Mob, you receive %s rice.[ENTER]Go back with this dish and tell Wondarim", random_rice), notice)
+                -- Getting the rice cake
+                local cake_count = pc.getqf("cake_count") + random_rice
+                pc.setqf("cake_count", cake_count)
+
+                pc.setqf("harvest_festival_mob_complete", 1)
+                clear_letter()
+                set_state(information)
+
+            end -- end of if
+        end -- end of when	
+
+        when 2403.kill with pc.getf("harvest_festival","mob2_info") == 8  and party.is_party() begin
+            local kill_count = pc.getqf("mob_kill2_count") + 1
+            local random_rice = harvest_festival.get_random_rice()
+            pc.setqf("mob_kill2_count", kill_count)
+
+            if kill_count < 0 then
+                return
+            end	-- end of if
+        
+            q.set_counter("remaining_2403", 60 - kill_count);
+
+            if kill_count >= 60 or kill_count < 0 then
+
+	
+                notice_multiline(string.format("You have defeated the target Mob, you receive %s rice.[ENTER]Go back with this dish and tell Wondarim", random_rice), notice)
+                
+                -- Getting the rice cake
+                local cake_count = pc.getqf("cake_count") + random_rice
+                pc.setqf("cake_count", cake_count)
+
+                pc.setqf("harvest_festival_mob_complete", 1)
+                clear_letter()
+                set_state(information)
+
+            end -- end of if
+        end -- end of when	
+    end -- end of state	
+end -- end of quest
+

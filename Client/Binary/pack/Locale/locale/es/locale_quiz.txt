@@ -1,0 +1,346 @@
+1	1	¿Tiene la mochila de Peddler un castillo?
+1	2	¿Se pueden conseguir Bolas Polimorfas en la Tierra de Gigantes?
+1	3	¿Deja Piel de Lobo el Lobo Alfa Azul Maldito?
+1	4	¿Deja el Yeti Piel de Yeti?
+1	5	¿Solo se pueden conseguir Bolas de Hielo en el Monte Sohan?
+1	6	¿Las Lágrimas de Diosa se consiguen solo en los baúles?
+1	7	¿Aumenta la Piedra de Rapidez en nivel 3 la Velocidad de movimiento en 30?
+1	8	¿Dan todas las Perlas una bonificación de INT?
+1	9	¿Hay alguna armadura que se pueda equipar a partir de nivel 12?
+1	10	¿Hay Vetas de Jade en el Templo Hwang?
+1	11	¿Hay 22 puentes en el Valle de los Orcos?
+1	12	¿Hay ocho clases en Metin2?
+1	13	¿Hay Chapeados en Metin2?
+1	14	¿Existe un objeto que se llama Pieza de Joyería?
+1	15	¿Existe la habilidad Aura en éxtasis?
+1	16	¿Existe la bonificación Curar?
+1	17	¿Hay fuegos artificiales coreanos?
+1	18	¿Hay un Libro de Misión intermedio?
+1	19	¿Hay una Veta de Amatista?
+1	20	¿Existe un mapa especial para practicar la lucha?
+1	21	¿Hay un pájaro sobre el hombro derecho del Teletransportador?
+1	22	¿Se pueden conseguir Armaduras de madera?
+1	23	¿Existe el Fénix de fuego?
+1	24	¿Hay un profesor del Arte de combate?
+1	25	¿Existen los Orcos?
+1	26	¿Está el Pescador en el mapa 2?
+1	27	¿Hay solo un Chico del Establo en cada Reino?
+1	28	¿Se puede tener mascotas en Metin2?
+1	29	¿Hay perros en Metin2?
+1	30	¿Hay el mismo número de pescadores en cada Reino?
+1	31	¿Hay Pastel de Arroz en Metin2?
+1	32	¿Hay un mercado en el segundo mapa?
+1	33	¿Hay Lechal en Metin2?
+1	34	¿Solo hay animales malditos en el Área del gremio?
+1	35	¿Ataca Bera por voluntad propia?
+1	36	¿Asesinó Beran-Setaou a su hermana?
+1	37	¿El inventario tiene 90 casillas?
+1	38	¿Tiene la Flecha de Bambú un Valor de ataque de 10?
+1	39	¿Tiene el Arahan Bestial nivel 53?
+1	40	¿Tiene el perro Callejero Hambriento nivel 1?
+1	41	¿Lleva el Encargado del almacén una cinta del pelo azul?
+1	42	¿Lleva el Herrero un delantal?
+1	43	¿Tiene el Segador de la Muerte el nivel de Jefe?
+1	44	¿Lleva el General Orco Élite una cadena con seis colgantes?
+1	45	¿Tiene la anciana una hermana?
+1	46	¿Tiene Metin2 un foro?
+1	47	¿Tiene Mirine los ojos negros?
+1	48	¿Malvive el Segador de la Muerte la Torre Demoníaca?
+1	49	¿El espíritu Sura en la segunda gruta se llama Akuma?
+1	50	¿Es Bahar-Taraji la más joven de los hermanos divinos?
+1	51	¿Es Bahar-Taraji la diosa del equilibrio?
+1	52	¿Es Baljit-Elvedin el mayor de los hermanos divinos?
+1	53	¿Es Baljit-Elvedin el dios del equilibrio?
+1	54	¿Es el monstruo Hae-Tae un jefe?
+1	55	¿Tiene el Luchador Oscuro Soberbio nivel 54?
+1	56	¿Puedes encontrarte al Jabalí Rojo Maldito en siete regiones distintas?
+1	57	¿Se puede equipar la Campana de Cobre a partir del nivel 5?
+1	58	¿Es la Armadura Roja Hwang un objeto para guerreros?
+1	59	En el desierto, ¿también clarea por la noche?
+1	60	¿Es Soon un ratón de biblioteca?
+1	61	¿Puede el Herrero destruir objetos al mejorarlos?
+1	62	¿Puede aparecer la Tortuga Gigante en el segundo mapa?
+1	63	¿Se puede fabricar Diamantes?
+1	64	¿Es posible casarse en Metin2?
+1	65	¿Es posible bailar en Metin2?
+1	66	¿Está permitido ser GM con 16 años?
+1	67	¿Se puede utilizar el Chat global a partir del nivel 15?
+1	68	¿Se puede conseguir el primer Maestro con nivel 17?
+1	69	¿Se pueden tener tres Maestros con nivel 52?
+1	70	Con nivel 55, ¿se puede obtener algo a partir de un Metin de nivel 5?
+1	71	¿Se puede utilizar las habilidades de montura con una montura de nivel 9?
+1	72	¿Se puede dejar a una mascota en un hotel para mascotas?
+1	73	¿Se pueden colgar calcetines de un árbol?
+1	74	¿Es posible mejorar las Piedras espíritu?
+1	75	¿Dejan todos los monstruos Bolas Polimorfas?
+1	76	¿Se puede obtener de monstruos todas las Pociones Verdes?
+1	77	¿Puede Huahn-So trabajar únicamente Fungicidas?
+1	78	¿Pueden los GM subir de nivel a los jugadores?
+1	79	¿Hay un cadáver en el Valle de Seungryong?
+1	80	En la misión 'Diario de una leyenda', ¿hay que reunir 16 páginas?
+1	81	¿Proporciona el Cinto real +5 seis ranuras en el inventario?
+1	82	¿Tiene Heuk-Young la apariencia de un guerrero?
+1	83	¿Son las Llaves en Espiral comerciables?
+1	84	¿Hay 42 cadáveres en la Tierra de Gigantes?
+1	85	¿Hay un Teletransportador en las Tierras del gremio?
+1	86	¿Hay un Teletransportador en la Tierra de Gigantes?
+1	87	¿Consume un jugador con clasificación negativa 4 500 puntos de clasificación si consigue leer una Piedra Alma de G5 a G6?
+1	88	¿Consume un jugador con clasificación positiva 3 000 puntos de clasificación si consigue leer una Piedra Alma de G5 a G6?
+1	89	¿Tiene el Vendedor de la Tienda de Armas Flechas de acero?
+1	90	¿Cambian de posición los puentes del valle de los orcos?
+1	91	¿Se necesitan 1kk Yang cuando un miembro del matrimonio quiere separarse?
+1	92	¿Dejan caer los lobos el Fan Ala Grulla?
+1	93	¿Se necesita un Vestido de Boda para casarse?
+1	94	¿Tiene efecto con los Yetis Infernales la bonificación 'Fuerza contra Demonio'?
+1	95	¿Tiene Nueve Colas nivel 73?
+1	96	¿Es Bakra una aldea del Reino de Jinno?
+1	97	¿Se encuentra Taurean en la primera aldea?
+1	98	¿Se necesita nivel 30 como mínimo para pescar?
+1	99	¿Se necesita nivel 30 como mínimo para casarse?
+1	100	¿Vende Yang-Shin Picos?
+1	101	¿Puedes utilizar el Brazalete de Perlas a partir del nivel 28?
+1	102	¿Pueden entrar en la Torre Demoníaca todos los personajes que tengan nivel 40 o superior?
+1	103	¿Pertenece Bokjung al Reino Shinsoo?
+1	104	¿Es el Campo Serpiente un mapa neutral?
+1	105	¿Hay un Jefe de nivel 55 en el Valle de Seungryong?
+1	106	¿Puede obtener un personaje de nivel 51 Pergaminos de Bendición de los monstruos?
+1	107	¿Hay un Jefe de nivel 80 en el Bosque fantasma?
+1	108	¿Se puede tirar la Armadura acero azul +9?
+1	109	¿Se puede hacer Ropaje del Dragón a partir de la Arm. de Acero Negro +9?
+1	110	¿Se pueden tirar 1000 Yang?
+1	111	¿Se puede hacer el Ropaje del Dragón a partir de la Túnica negra +9??
+1	112	¿Aparece el Dragón Rojo normalmente en el mundo de Metin2?
+1	113	¿Obtiene el jugador una bonificación permanente de un 8%% más de daños contra otros jugadores en la misión 'La investigación del Biólogo 8'?
+1	114	¿Hay que llevarle a Chaegirab 30 Paneles de Tugyi en la misión 'La investigación del Biólogo 6'?
+1	115	¿Se puede comprar la Armadura Hwang en el juego?
+1	116	¿Se puede hacer la Armadura Acero Azul a partir de la Arm. de Acero Negro +9?
+1	117	¿Ha un Teletransportador en el Campo Serpiente?
+1	118	¿Hay Piedras Metin de nivel 75 y 80 en la Tierra de Gigantes?
+1	119	¿Se encuentra la entrada a la Tierra de Gigantes en el Campo Serpiente?
+1	120	¿Se puede obtener la Hoja Roba Almas de un Luchador Milenario?
+1	121	¿Hace frontera el Campo Serpiente con la Tierra de Gigantes?
+1	122	¿Tiene el Ojo Volador del Desierto un ojo?
+1	123	¿Tiene el Escudo Titánico +9 más defensa que el Escudo +9 en nivel 61?
+1	124	¿Tiene el Escudo Halcón +9 un valor de defensa de 153?
+1	125	¿Los Pendientes de madera otorgan una bonificación de HP?
+1	126	La Cartilla Esotérica+, ¿se obtiene solo de Arahan Oscuro y Requeridor Oscuro?
+1	127	¿Tiene la Espada Ninfa mayor velocidad de ataque que la Espada de Batalla?
+1	128	¿Deja caer la Bruja de Hielo Poderosa Piedras de Sangre?
+1	129	¿Es Beran-Setaou un PNJ?
+1	130	¿Aumenta el León como montura el valor de ataque en 200 puntos?
+1	131	¿Puede un jugador teletransportarse a donde está su pareja si se encuentra en la Mazmorra de Arañas 2?
+1	132	¿Produce Rocío Huahn-So?
+1	133	¿Hay que vencer a 30 Jin-Hees para conseguir un Anillo de Compromiso?
+1	134	¿Es comerciable el Anillo de Boda?
+1	135	¿Pide el Herrero en la Torre Demoníaca Yang por mejorar objetos?
+1	136	¿Se puede obtener una Piedra Alma de Hae-Tae?
+1	137	¿Aparecen Hae-Tae normalmente en el mundo de Metin2?
+1	138	¿Aparece Hae-Tae en un evento concreto?
+1	139	¿Son los monstruos de la Gruta del Exilio 2 agresivos?
+1	140	¿Es Taurean un PNJ?
+1	141	¿Se obtiene la Hierba Monos Difíciles del Señor Mono?
+1	142	¿Se pierde el doble de la cantidad de Puntos de Clasificación al leer una Piedra Alma con clasificación negativa?
+1	143	¿Se puede obtener una Piedra Alma como recompensa en la misión 'Examina los árboles fantasma'?
+1	144	¿Se puede obtener como recompensa una Piedra Alma en la misión 'El secreto del bosque fantasma'?
+1	145	¿Se obtienen Piedras Espíritu del Metin de Asesino en la Torre Demoníaca?
+1	146	¿Se pueden obtener Manuales de Habilidad de las Piedras Metin de nivel 75 y 80?
+1	147	¿Dejan caer las Piedras Metin de nivel 75 y 80 Piedras Espíritu?
+1	148	¿Dejan caer las Piedras Metin de menos de nivel 40 Piedras Alma?
+1	149	¿Se puede teletransportar un personaje a partir de nivel 60 directamente a la Torre Demoníaca?
+1	150	¿Aumenta la Armadura Acero Azul +5 el valor de defensa en 184 y disminuye la velocidad de movimiento en -6?
+1	151	¿Se puede dejar caer Almejas en Metin2?
+1	152	¿Se puede obtener un Tique de entrada en la Gruta del Exilio?
+1	153	¿Se puede obtener la Espada Luna Llena de Jin-Hee?
+1	154	¿El Guerrero mental puede utilizar la habilidad Tiro relámpago?
+1	155	¿Aumenta el Jabalí de Combate el valor de defensa en 500?
+1	156	¿Deja caer el Metin Negro Piedras Espíritu +4?
+1	157	¿Se necesita un Uniforme Negro+ para mejorar la Arm. Placas de Tigre?
+1	158	¿Es comerciable el Objeto Encantado?
+1	159	¿Se puede obtener la Poción Azul(P) en la Mazmorra de Arañas?
+1	160	¿Hay normalmente portadores Plaga en el mundo de Metin2?
+1	161	¿Se puede encontrar una Bilis de oso en la Caja del tesoro dorada?
+1	162	¿Se puede obtener Ébano refinado de una Veta de Jade?
+1	163	¿Aparece el Metin de Demonio en los eventos?
+1	164	¿Dejan los orcos caer el brazalete de oro blanco?
+1	165	¿Hay que vencer a todos los enemigos en la Catacumba del Diablo?
+1	166	¿Puede Azrael asestar un Golpe Crítico durante la lucha?
+1	167	¿Se puede comprar el Collar Cristal del Alma en la tienda de objetos?
+1	168	¿Tiene la Anciana alergia al polvo?
+1	169	¿Está el vendedor de la Tienda de Armas enamorado de la vendedora de la Tienda General?
+1	170	¿Tiene el encargado del almacén barras de oro?
+1	171	¿Es Uriel una mujer?
+1	172	¿Tiene la vendedora de la Tienda General una relación con el vendedor de la Tienda de armaduras?
+1	173	¿Está hecho el plumero de la Anciana de piel de lobos azules?
+1	174	¿Solo se puede golpear a la Tortuga Gigante con la espada a dos manos?
+1	175	¿Se puede utilizar la Espada Brujo Volador a partir del nivel 50?
+1	176	¿Ha matado Beran-Setaou a Bahar-Taraji?
+1	177	¿Está Beran-Setaou únicamente en un mapa del juego?
+1	178	¿Otorga 650 HP la Poción Roja (G)?
+1	179	¿Contiene 2 000 000 HP el Elixir del Sol (P)?
+1	180	¿Se puede aumentar la resistencia con pociones amarillas?
+1	181	¿Es mortal el veneno?
+1	182	¿Devuelve 100 SP el Agua Sim de forma inmediata?
+1	183	¿Aumenta el Rocío rojo la velocidad de ataque de 2%% a 8%%?
+1	184	¿Dura el efecto del Rocío 20 minutos como máximo?
+1	185	¿Dura cinco minutos el efecto del Jugo Flor Melocotón?
+1	186	¿Aumenta el Rocío azul el valor de ataque?
+1	187	¿Chuk-Sal lleva máscara?
+1	188	¿Se encuentra el Piquete rúnico en el cuarto nivel de la Catacumba del Diablo?
+1	189	¿Dispone el Metin de la Retribución de nivel 80?
+1	190	¿Hay un Espíritu de un Sura en el Templo del Dragón?
+1	191	¿Los cónyuges reciben Pociones rojas (M) al final de la boda?
+1	192	¿Se puede ver la sombra de uno mismo a la sombra de un árbol o un edificio?
+1	193	¿Se puede llevar el Ropaje del Dragón +6 a partir del nivel 84?
+1	194	¿Admite la Campana Antigua un máximo de dos Piedras Espíritu?
+1	195	¿Atrae la Capa de camuflaje a los monstruos?
+1	196	¿Pueden utilizarse todas las monturas en el juego a partir del nivel 1?
+1	197	¿Deja caer perlas el Dragón Azul?
+1	198	¿Es la 'absorción de daños mediante SP' el bonus estándar del Sombrero Alma Rota?
+1	199	¿Aparecen los monstruos malditos solo en el territorio del gremio?
+1	200	Si se utiliza Fuego permanente sobre un enemigo moribundo, ¿conserva este su HP?
+1	201	¿Se puede completar la misión del Caballo Militar a partir del nivel 45?
+1	202	¿Puede invitar un jugador de nivel 82 a uno de nivel 53 a su grupo?
+1	203	¿Pueden utilizar los ninjas cuatro habilidades de montura?
+1	204	¿Solo hay Vetas de Plata en la primera aldea?
+1	205	¿Se encuentra el Metin Pung-Ma únicamente en Lungsam?
+1	206	¿Se puede entrar en el Templo del Dragón con Cabezas reducidas?
+1	207	¿Deja caer el General Huashin la Llave en Espiral?
+1	208	¿Hay un Jefe enemigo en el Monte Sohan?
+1	209	¿Se pueden llevar Zapatos Adorno Oro a partir del nivel 20?
+1	210	¿Lleva guantes la Ayudante de Eventos?
+1	211	¿Baek-Go lleva gafas?
+1	212	¿El Monumento Mok es de forma rectangular?
+1	213	¿Lleva la Casamentera un vestido verde?
+1	214	¿Lleva Seon-Hae un bastón en su mano derecha?
+1	215	¿Tiene Yang-Shin tres flechas en su carcaj?
+1	216	¿El Metin de la Venganza es de color azul cielo?
+1	217	¿Es el Metin de la Retribución la Piedra Metin de mayor nivel?
+1	218	¿Puedes encontrar el Metin de Alma en el Valle de Seungryong?
+1	219	¿Hay una Veta de Jade en el Templo de la Oscuridad?
+1	220	¿Se puede extraer Mineral de Amatista del Monte Sohan?
+1	221	¿Tiene Beran-Setaou nivel 97?
+1	222	¿Dispone Azrael de un nivel superior al de Beran-Setaou?
+1	223	¿Tiene la Bruja de Hielo Poderosa el mismo nivel que Tártaro?
+1	224	¿Es el Ataque Rápido la habilidad de un ninja?
+1	225	¿Repone 500 HP la Poción Roja (M)?
+1	226	¿Pueden los guerreros llevar Armadura Yin-Yang?
+1	227	¿Duplica el Guante del Rey Sabio los puntos de clasificación obtenidos al vencer a los monstruos?
+1	228	¿Consta de 20 páginas el diario de Uriel?
+1	229	¿Ejerce Chuk-Sal de guía en la Gruta del Exilio?
+1	230	¿Hay que tener nivel 75 para poder entrar en la Gruta del Exilio?
+1	231	¿Tiene barba el Herrero?
+1	232	¿Hay cuatro caballos cercados en el establo?
+1	233	¿Los calcetines violetas son parte del Vestido de Baronesa?
+1	234	¿Tiene el Hombre Escorpión Joven un arma?
+1	235	¿El Nueve Colas dispone de nueve colas en realidad?
+1	236	¿Hay una Veta de Lágrima de Cielo en el Monte Sohan?
+1	237	¿Dispone el Líder Oscuro del bonus de probabilidad de apagón?
+1	238	¿El Monumento Gum se encuentra tras la Torre Demoníaca?
+1	239	¿Arde la cabeza del Rey Llama?
+1	240	¿Lleva el Rey Llama sandalias?
+1	241	¿Es Hae-Tae un monstruo?
+1	242	¿Lleva el Hombre Plaga una bufanda?
+1	243	¿Tiene cola el Señor Mono?
+1	244	¿Tiene el Señor Mono un cetro?
+1	245	¿Tiene el Hombre del saco un cuerno en la frente?
+1	246	¿Tiene raíces el Árbol Fantasma Gigante?
+1	247	¿Son rojas las manos de la Dríada?
+1	248	¿Tiene el Luchador Milenario dos hachas en las manos?
+1	249	¿Tiene la Profetisa Setaou nivel 88?
+1	250	¿Es Beran-Setaou de color azul cielo?
+1	251	¿Es Aranyo la mujer de Soon?
+1	252	¿Está Ariyoung en el primer pueblo?
+1	253	¿Prepara Baek-Go pociones?
+1	254	¿Es azul el Maestro Espada Fantasma?
+1	255	¿Tiene el Bicho de Hielo diez patas?
+1	256	¿Otorga 250 SP la Trucha de Río Asada?
+1	257	¿Lleva Handu-Up un sombrero de pico violeta?
+1	258	¿Nakajima vaga por el mapa?
+1	259	¿Otorga el Traje de Hormiga Roja +9 un bonus de defensa de 101?
+1	260	¿Lleva Harang el pelo recogido en trenzas?
+1	261	¿Tiene Deokbae un hacha dorada en la mano?
+1	262	¿Empieza la misión 'Los establos están en dificultades' a partir del nivel 49?
+1	263	¿Está Uriel de brazos cruzados?
+1	264	¿El Señor Mono se encuentra en Hasun Dong?
+1	265	¿Se le puede dar de comer al caballo pulsando Ctrl+B?
+1	266	¿Tiene bigote el Vendedor Tienda Armadura?
+1	267	¿Se conoce Jungsun Dong como la Mazmorra de monos difícil?
+1	268	¿Es posible atravesar de un golpe mediante la Ira del Dios Dragón?
+1	269	¿Lleva Aranyo una cesta de fruta en la mano?
+1	270	¿El Bicho de Hielo tiene 6 patas?
+1	271	¿Hay seis tipos distintos de monstruo en la Tierra de Gigantes?
+1	272	¿Solo se puede utilizar el Hierro Rojo con nivel 30?
+1	273	¿Está Kuahlo Dong en el desierto?
+1	274	¿El Teletransportador tiene un lunar en la frente?
+1	275	¿Tiene el Metin de Combate nivel 15?
+1	276	¿Chaegirab lleva gafas?
+1	277	¿Necesitas una gema para mejorar la armadura de nivel 26 a +4?
+1	278	¿Puedes comprar una armadura de nivel 26 en el NPC?
+1	279	¿El Perro Plaga se rasca detrás de la oreja?
+1	280	¿El Arquero Plaga Furioso tiene 2 cabezas?
+1	281	¿Hay una Roca Chunjo?
+1	282	¿Hay una Roca Yongbi?
+1	283	¿La armadura de nivel 42 +7 tiene una defensa de +97?
+1	284	¿La armadura de nivel 42 +7 tiene una defensa de -97?
+1	285	¿El Cazador Setaou es nivel 89, rango 2?
+1	286	¿El To-Su Viento Negro es nivel 33, rango 2?
+1	287	¿El Metin2 tiene arcilla?
+1	288	¿Hay 4 Ponies en la puerta con el Chico del Establo?
+1	289	¿Baek-Go lleva gafas?
+1	290	¿Wonda-Rim es el sobrino de Chaegirab?
+1	291	¿Chaegirab es el tío de Wonda-Rim?
+1	292	¿Chaegirab es el padre de Wonda-Rim?
+1	293	¿Hay un dios animal en el segundo mapa?
+1	294	¿Hay tres pescadores en el segundo mapa?
+1	295	¿Los miembros del team piden tu ID y contraseña?
+1	296	¿Puedes identificar a un GameMaster [GM]?
+1	297	¿Está el Peatón Lamentable en el segundo mapa?
+1	298	¿Es el Ojo de una Araña un objeto de misión?
+1	299	¿Hay 5 tintes de pelo en Metin2?
+1	300	¿El Almizcle es comerciable?
+1	301	¿Aranyo tiene algo en su espalda?
+1	302	¿Aranyo es la mujer de Octavio?
+1	303	¿Aranyo es la mujer de Soon?
+1	304	¿Hay esqueletos en Metin2?
+1	305	¿Hay Monumentos en Kuahlo Dong?
+1	306	¿Hay combates de entrenamiento en Metin2?
+1	307	¿Los Zapatos de Cuero pueden ser llevados por cualquiera?
+1	308	¿La Espada Exorcismo tiene una velocidad de ataque de 20%%?
+1	309	¿Eun-Jung lleva un fan?
+1	310	¿Eun-Jung lleva un arma?
+1	311	¿Puedes tirar al suelo barras de oro y plata?
+1	312	¿Se reduce la velocidad de ataque de la Espada Electromagnética al mejorarla?
+1	313	¿Se aumenta la velocidad de ataque de la Espada Electromagnética al mejorarla?
+1	314	¿Existe la Máscara Sombría de Madera?
+1	315	¿Puedes asar en Metin2?
+1	316	¿Koe-Pung lleva una máscara?
+1	317	¿La Piedra Espíritu Bosque es un objeto de misión?
+1	318	¿El Ogro Frenético lleva un arma en su mano izquierda?
+1	319	¿Puedes cambiar tu sexo en cualquier nivel?
+1	320	¿Imha es el Área de Gremio del Reino Chunjo?
+1	321	¿Imha es el Área de Gremio del Reino Shinsoo?
+1	322	¿Imha es el Área de Gremio del Reino Jinno?
+1	323	¿Jungrang es un NPC en Metin2?
+1	324	¿Yayang es la hija de Soon?
+1	325	¿Es el interior de Jungsun Dong de piedra verdosa?
+1	326	¿El Yang es la divisa de Metin2?
+1	327	¿Se necesita la Piedra Alma de Jinunggyi para la misión de nivel 30?
+1	328	¿Hay objetos de investigación?
+1	329	¿Puedes preparar pociones con Seon-Hae?
+1	330	¿Hay Calabazas en Metin2?
+1	331	¿Hay Calcetines en Metin2?
+1	332	¿El fuego del Altar Oscuro es rojo?
+1	333	¿El General Mono tiene nivel 40, rango 4?
+1	334	¿Puede ser utilizada la Espada por cualquier clase? 
+1	335	¿Nakajima es un NPC de Metin2?
+1	336	¿Pueden robar los monstruos el Tique de entrada?
+1	337	¿200 Pociones Rojas(G) cuestan 33.000 Yang en la Tienda General?
+1	338	¿El Arco Espléndidamente Adornado puede ser usado por Ninjas?
+1	339	¿Chuong está en el primer mapa?
+1	340	¿El Metin de Dolor tiene nivel 10, rango 5?
+1	341	¿Existe el Petardo de Navidad?
+1	342	¿Los Petardos Chinos aumentan la velocidad de movimiento?
+1	343	¿Los Petardos Chinos aumentan la velocidad de ataque?
+1	344	¿Los Petardos Chinos aumentan la probabilidad de apagón?
+1	345	¿El Salmón Asado restablece 350 puntos de vida?
+1	346	¿El Salmón Asado restablece 350 puntos de Mana?

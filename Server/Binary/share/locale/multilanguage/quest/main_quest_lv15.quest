@@ -1,0 +1,137 @@
+quest main_quest_lv15 begin
+	state start begin
+	end
+	state run begin
+		when login or levelup or enter begin
+			if pc.get_level() >= 15 then
+				setstate(gotoboss)
+			end
+		end
+	end
+	state gotoboss begin
+		when letter begin
+			local v=find_npc_by_vnum(20355)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, gameforge.main_quest_lv10._180_targetVid)
+			end
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.main_quest_lv12._130_targetVid)
+			q.set_title(gameforge.main_quest_lv15._10_qSetTitle)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.main_quest_lv15._10_qSetTitle)
+			say(gameforge.main_quest_lv15._20_say)
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+			say_title(gameforge.main_quest_lv10._30_sayTitle)
+			say(gameforge.main_quest_lv15._30_say)
+			wait()
+			local empire = pc.getempire()
+			if empire == 1 then
+				say_title(gameforge.main_quest_lv10._30_sayTitle)
+				say(gameforge.main_quest_lv15._40_say)
+				wait()
+				say_title(gameforge.main_quest_lv10._30_sayTitle)
+				say(gameforge.main_quest_lv15._50_say)
+				wait()
+				say_title(gameforge.main_quest_lv10._30_sayTitle)
+				say(gameforge.main_quest_lv15._60_say)
+
+			elseif empire == 2 then
+				say_title(gameforge.main_quest_lv10._30_sayTitle)
+				say(gameforge.main_quest_lv15._70_say)
+				wait()
+				say_title(gameforge.main_quest_lv10._30_sayTitle)
+				say(gameforge.main_quest_lv15._80_say)
+				wait()
+				say_title(gameforge.main_quest_lv10._30_sayTitle)
+				say(gameforge.main_quest_lv15._90_say)
+
+			elseif empire == 3 then
+				say_title(gameforge.main_quest_lv10._30_sayTitle)
+				say(gameforge.main_quest_lv15._100_say)
+				wait()
+				say_title(gameforge.main_quest_lv10._30_sayTitle)
+				say(gameforge.main_quest_lv15._110_say)
+				wait()
+				say_title(gameforge.main_quest_lv10._30_sayTitle)
+				say(gameforge.main_quest_lv15._120_say)
+
+			end
+
+			set_state (gotomusition)
+			q.done()
+		end
+	end
+
+	state gotomusition begin
+		when letter begin
+			local v=find_npc_by_vnum(20017)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, gameforge.locale.yuhwan.find_label)
+			end
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.locale.yuhwan.find_label)
+			q.set_title(gameforge.locale.yuhwan.find_label)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.main_quest_lv15._140_sayTitle)
+			say(gameforge.main_quest_lv15._150_sayReward)
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+			say_title(gameforge.arena_manager._20_sayTitle)
+			say(gameforge.main_quest_lv15._160_say)
+			setstate(gotoboss2)
+			q.done()
+		end
+	end
+	state gotoboss2 begin
+		when letter begin
+			local v=find_npc_by_vnum(20355)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, gameforge.main_quest_lv10._180_targetVid)
+			end
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.main_quest_lv15._170_makequestbutton)
+			q.set_title(gameforge.main_quest_lv15._170_makequestbutton)
+			q.start()
+		end
+		when button or info begin
+			say_title(gameforge.main_quest_lv15._140_sayTitle)
+			say(gameforge.main_quest_lv15._175_say)
+		end
+		when __TARGET__.target.click begin
+			pc.give_exp2( 20000 )
+			pc.change_money( 10000 )
+			target.delete("__TARGET__")
+			say_title(gameforge.main_quest_lv10._30_sayTitle)
+			say(gameforge.main_quest_lv15._180_say)
+			say_title(gameforge.collect_herb_lv4._130_sayTitle)
+						say_reward(gameforge.main_quest_lv15._130_sayReward)
+
+			clear_letter()
+			q.done()
+			setstate(__COMPLETE__)
+			set_quest_state("main_quest_lv16","run")
+		end
+	end
+	state __COMPLETE__ begin
+		when enter begin
+			q.done()
+		end
+	end
+end
+

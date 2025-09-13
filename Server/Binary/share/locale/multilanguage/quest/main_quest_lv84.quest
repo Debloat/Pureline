@@ -1,0 +1,156 @@
+define mysterious_man 20369
+define devil_general 2591
+define devil_king 2597
+define devil_emperor 2598
+define sacred_stone 31008
+quest main_quest_lv84 begin
+	state start begin
+	end
+	state state_0 begin
+		when login or levelup or enter with pc.level >= 84 begin
+			set_state (state_1)
+		end
+	end
+	state state_1 begin
+		when letter begin
+			local v = find_npc_by_vnum (mysterious_man)
+			if v != 0 then
+				target.vid ("__TARGET__",v,"")
+			end
+			send_letter (gameforge.main_quest_lv84._10_sendLetter)
+		end
+		when button or info begin
+			say_title(gameforge.main_quest_lv84._10_sendLetter)
+			say(gameforge.main_quest_lv84._20_say)
+		end
+		when mysterious_man.chat.gameforge.main_quest_lv84._10_sendLetter begin
+			target.delete("__TARGET__")
+			say_title (gameforge.main_quest_lv66._300_sayTitle)
+			say(gameforge.main_quest_lv84._30_say)
+			wait()
+			say_title (gameforge.main_quest_lv66._300_sayTitle)
+			say(gameforge.main_quest_lv84._40_say)
+			wait()
+			say_title (gameforge.main_quest_lv66._300_sayTitle)
+			say(gameforge.main_quest_lv84._50_say)
+			pc.give_item2(31008) 
+			set_state (state_4)
+		end
+		
+	end
+	state state_4 begin
+		when letter begin
+			send_letter(gameforge.main_quest_lv84._60_sendLetter)
+		end
+		when button or info begin 
+			say_title(gameforge.main_quest_lv84._60_sendLetter)
+			say(gameforge.main_quest_lv84._70_say)
+		end
+
+		when sacred_stone.use with pc.get_map_index() >= 2160000 and pc.get_map_index() < 2170000 begin --and pc.getf("devilcatacomb_zone", "level") == 5 begin 
+			party.give_buff(303, POINT_ATT_SPEED, 20, 13, 1800, 0, true, true)
+			party.give_buff(303, POINT_MOV_SPEED, 20, 12, 1800, 0, true, true)
+			party.give_buff(303, POINT_CASTING_SPEED, 20, 0, 1800, 0, true, true)
+			party.give_buff(303, POINT_ATTBONUS_MONSTER, 30, 0, 1800, 0, true, true)
+			party.give_buff(303, POINT_MAX_HP_PCT, 10, 0, 1800, 0, true, true)
+			party.give_buff(303, POINT_MAX_SP_PCT, 10, 0, 1800, 0, true, true)
+
+			say(gameforge.main_quest_lv84._80_say)
+				
+		end
+
+		when devil_general.kill begin
+			say_title(locale.reward)
+			say_reward(string.format(gameforge.main_quest_lv60._190_sayReward, 63000000))
+			say_reward(string.format(gameforge.main_quest_lv60._210_sayReward, item_name(71026).." ".."2"..locale.count_postfix))
+			say_reward(string.format(gameforge.main_quest_lv60._210_sayReward, item_name(70051)))
+			say_reward(string.format(gameforge.main_quest_lv60._210_sayReward, item_name(70050)))
+
+			pc.give_exp2(63000000)
+			pc.change_money(250000)
+
+			pc.give_item2(71026) -- ÇöÃ¶
+			pc.give_item2(71026) -- ÇöÃ¶
+			pc.give_item2(70051) -- ¼±¿ÕÀÇ Àå°©
+			pc.give_item2(70050) -- ¼±¿ÕÀÇ ÁõÇ¥ 
+
+			set_state (state_2)
+		end
+	end
+	state state_2 begin
+		when letter begin
+			local v = find_npc_by_vnum (mysterious_man)
+			if v != 0 then
+				target.vid ("__TARGET__",v,"")
+			end
+			send_letter(gameforge.main_quest_lv84._90_sendLetter)
+		end
+		when button or info begin
+			say_title(gameforge.main_quest_lv84._90_sendLetter)
+			say (gameforge.main_quest_lv84._100_say)
+		end
+		when mysterious_man.chat.gameforge.main_quest_lv84._90_sendLetter begin
+			target.delete("__TARGET__")
+			say_title (gameforge.main_quest_lv66._300_sayTitle)
+			say(gameforge.main_quest_lv84._110_say)
+			wait()
+			say_title (gameforge.main_quest_lv66._300_sayTitle)
+			say(gameforge.main_quest_lv84._120_say)
+		end
+		when devil_king.kill begin
+			say_reward(gameforge.main_quest_lv84._130_sayReward)
+			say(gameforge.main_quest_lv84._140_say)
+			set_state (state_3)
+		end
+	end
+	state state_3 begin
+		when letter begin
+			local v = find_npc_by_vnum (mysterious_man)
+			if v != 0 then
+				target.vid ("__TARGET__",v,"")
+			end
+			send_letter(gameforge.main_quest_lv84._150_sendLetter)
+		end
+		when button or info begin
+			say_title(gameforge.main_quest_lv84._150_sendLetter)
+			say (gameforge.main_quest_lv84._160_say)
+		end
+		when mysterious_man.chat.gameforge.main_quest_lv84._150_sendLetter begin
+			target.delete("__TARGET__")
+			say_title (" ")
+			say(gameforge.main_quest_lv84._170_say)
+			wait()
+			say_title (gameforge.main_quest_lv66._300_sayTitle)
+			say(gameforge.main_quest_lv84._180_say)
+			wait()
+			say_title (gameforge.main_quest_lv66._300_sayTitle)
+			say(gameforge.main_quest_lv84._190_say)
+			wait()
+			say_title (gameforge.main_quest_lv66._300_sayTitle)
+			say(gameforge.main_quest_lv84._200_say)
+			wait()
+			say_title (gameforge.main_quest_lv66._300_sayTitle)
+			say(gameforge.main_quest_lv84._210_say)
+			wait()
+			say_title (locale.reward)
+			say_reward(string.format (gameforge.main_quest_lv60._190_sayReward, 84000000))
+			say_reward(string.format (gameforge.main_quest_lv60._200_sayReward, 250000))
+			say_reward(string.format (gameforge.main_quest_lv60._210_sayReward, item_name(71025).." ".."2"..locale.count_postfix))
+			say_reward(string.format (gameforge.main_quest_lv60._210_sayReward, item_name(70038)))
+			say_reward(string.format (gameforge.main_quest_lv60._210_sayReward, item_name(71107)))
+
+			pc.give_exp2(84000000)
+			pc.change_money(250000)
+
+			pc.give_item2(71025) -- ¾ß°ø¼®
+			pc.give_item2(71025) -- ¾ß°ø¼® 
+			pc.give_item2(70038) -- ¿ë±âÀÇ ¸ÁÅä
+			pc.give_item2(71107) -- Ãµµµº¹¼ş¾Æ
+			set_state (__COMPLETE__)
+		end
+	end
+
+	state __COMPLETE__ begin
+	end
+end
+

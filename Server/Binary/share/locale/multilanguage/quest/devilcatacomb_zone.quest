@@ -1,0 +1,557 @@
+quest devilcatacomb_zone begin
+	state start begin
+	
+	function is_closed()
+		return (game.get_event_flag("dc_closed") > 0)    --close dialog
+	end
+	
+	function setting()
+		return
+		{
+
+		["base"]={["x"] = 3072  , ["y"]= 12032 ,},
+		["floor1_s"] = { ["x"] = 20, ["y"] = 20, },
+		["floor1_e"] = { ["x"] = 500, ["y"] = 470,},
+		["floor2_s"] = { ["x"] = 510, ["y"] = 18, },
+		["floor2_e"] = { ["x"] = 978, ["y"] = 470,},
+		["floor1_entry"] = {["x"] = 73, ["y"] = 63,},
+		["floor2_entry"] = {["x"] = 550, ["y"] = 45,},
+		["floor3_entry"] = {["x"] = 1378, ["y"] = 249,},
+		["floor4_entry"] = {["x"] = 70, ["y"] = 592,},
+		["floor5_entry"] = {["x"] = 846, ["y"] = 898},
+		["floor6_entry"] = {["x"] = 1362, ["y"] = 666},
+		["floor7_entry"] = {["x"] = 73, ["y"] = 1156},
+
+		["map_idx"] = 216,
+		["rag"] = 30311,
+
+		["devil_king"] = 2591,
+
+		["reapers_credit1"] = 30319,
+		["reapers_credit2"] = 30320,
+		["reapers_credit3"] = 76002,
+
+		["floor3_stone"] = 8038,  
+		["floor3_stone_pos"] = {
+				{1366,	150},
+				{1366,	351},
+				{1234,	365},
+				{1234,	140},
+				{1150,	135},
+				{1130,	365},
+				{1135,	253}
+		},
+
+		["mob_regen_file_path"] = "data/dungeon/devilcatacomb/",
+		["floor4_regen_file"] = {"devilcatacomb_floor4_regen1.txt",
+		                       "devilcatacomb_floor4_regen2.txt",
+							   "devilcatacomb_floor4_regen3.txt",
+							   "devilcatacomb_floor4_regen4.txt",
+							   "devilcatacomb_floor4_regen5.txt"} ,
+
+		["credit_stone"] = 30101,
+		["credit_stone_pos"] = {307,323},
+		["floor2_stone"] = 30103,
+		["floor2_stone_pos"] = {741,217},
+		["floor2_merchant_npc"] = 20368,
+		["floor2_merchant_npc_pos"] = {734,214},
+		
+		["floor4_npc"] = 30104,
+		["floor4_npc_pos"] = {500, 717},
+
+		["devil_king_pos"] = {{673,829},{691,638},{848,568},{1026,642},{1008,862}},
+
+		["unlock_stone"] = 30312,
+		["floor5_stone"] = 30102,
+		["floor5_stone_pos"] = {848, 735},
+
+		["devil_great_king"] = 2597 ,
+		["devil_great_king_pos"] = {1303,704},
+		["devil_emperor"] = 2598,
+		["devil_emperor_pos"] = {74,1103},
+
+		["dc2_door_set_size"] = {4,2,3,2},
+		["dc2_door_set1"] = {
+								{{30111,    566,    117,    5},{30112,  562,    311,    5,},{30118, 663,    434,    7},{30119,  881,    434,    7}},
+								{{30116,    743,    390,    3},{30119,  612,    251,    1,}},
+								{{30113,    654,    211,    5},{30111,  707,    338,    7,},{30112, 775,    336,    7}},
+								{{30117,    733,    294,    3},{30113,  694,    271,    1,}}
+							},
+		["dc2_door_set2"] = {
+								{{30115,    942,    141,    5},{30116,  942,    245,    5},{30117,  942,    321,    5},{30115,  763,    64, 7}},
+								{{30118,    643,    116,    3},{30114,  900,    167,    1}},
+								{{30114,    850,    293,    5},{30113,  715,    164,    7},{30114,  817,    162,    7}},
+								{{30111,    802,    277,    1},{30112,  800,    241,    1}}
+							},
+		}
+	end
+		when login begin
+			local setting = devilcatacomb_zone.setting()
+			local idx = pc.get_map_index()
+			if idx >= (setting.map_idx * 10000) and idx < ((setting.map_idx + 1) * 10000) then
+--				pc.set_warp_location(65, 5914, 992)         -----------아귀동굴 좌표로
+				local level = d.getf("level")
+				-- warp location이 0,0 이면 시스템 상으로, 종료 시, 종료 위치를 시작 위치로 저장한다.
+				d.set_warp_location (0, 0, 0)
+					
+				if level == 2 then
+					say(gameforge.devilcatacomb_zone._10_say)
+					say(string.format(gameforge.devilcatacomb_zone._20_say, 60))
+				elseif level == pc.getqf ("level") then
+--					say ("낙오되지 않기 위해 동료들과 합류하십시오.")
+					say(gameforge.devilcatacomb_zone._30_say)
+				else
+					say(gameforge.devilcatacomb_zone._40_say)
+--					say ("당신은 낙오되었습니다. 용신의 힘을 빌어 잠시 뒤 동굴 밖으로 이동합니다.")
+					timer ("devilcatacomb_ban_timer", 5)
+				end
+			end
+			if idx == setting.map_idx then
+				pc.setf("devilcatacomb_zone","last_exit_time", get_global_time())
+				-- 2층이상이면, 쫓겨나
+				if pc.get_x() < setting.floor1_s.x + setting.base.x
+					or pc.get_y() < setting.floor1_s.y + setting.base.y
+					or pc.get_x() > setting.floor1_e.x + setting.base.x
+					or pc.get_y() > setting.floor1_e.y + setting.base.y
+				then
+					-- 아귀동굴 입구로
+--					if not is_test_server() then
+						say(gameforge.devilcatacomb_zone._40_say)
+						timer ("devilcatacomb_ban_timer", 5)
+--					end
+				else 
+					-- 아귀동굴 입구로
+--					pc.set_warp_location(65, 5914, 992)
+					say(gameforge.devilcatacomb_zone._50_say)
+				end
+			end
+		end
+
+		when logout begin
+			local idx = pc.get_map_index()
+			local setting = devilcatacomb_zone.setting()
+			if idx == setting.map_idx or idx >= (setting.map_idx * 10000) and idx < ((setting.map_idx + 1) * 10000) then
+				pc.setf("devilcatacomb_zone","last_exit_time", get_global_time())
+			end
+		end
+
+		when devilcatacomb_ban_timer.timer begin
+			pc.warp((5914)*100, (992)*100, 65)
+		end
+
+		when warp_timer.timer begin
+			local level = d.getf("level")
+			local level_switch = {
+				[3] = gameforge.devilcatacomb_zone._60_say,
+				[4] = gameforge.devilcatacomb_zone._70_say,
+				[5] = gameforge.devilcatacomb_zone._80_say,
+				[6] = gameforge.devilcatacomb_zone._90_say,
+			}
+			local t = 3600 -(get_global_time() - d.getf("enter_time"))
+			local t_r = math.mod (t, 60)
+			local t_m = (t - t_r) / 60
+			d.notice ( level_switch[level] )
+			d.notice(string.format(gameforge.devilcatacomb_zone._20_say, t_m))
+			d.set_warp_location (0, 0, 0)
+		end
+
+		when devilcatacomb_man.chat.gameforge.devilcatacomb_zone._100_npcChat with not devilcatacomb_zone.is_closed() begin
+			local setting = devilcatacomb_zone.setting()
+			if pc.get_level() < 75 then
+				say(gameforge.devilcatacomb_zone._110_say)
+			elseif pc.getf("deviltower_zone","9_done") == 0 then
+				say(gameforge.devilcatacomb_zone._120_say)
+			elseif ((get_global_time() - pc.getf("devilcatacomb_zone","last_exit_time")) < 1800) then
+				say(gameforge.devilcatacomb_zone._130_say)
+			else
+				say(gameforge.devilcatacomb_zone._140_say)
+				local s = select(gameforge.devilcatacomb_zone._150_select, gameforge.devilcatacomb_zone._160_select)
+				if s == 1 then
+					pc.warp ((setting.floor1_entry.x + setting.base.x )* 100, (setting.floor1_entry.y + setting.base.y) * 100)
+				end
+			end
+		end
+	
+		-- 몬스터가 죽으면 발생하는 이벤트.
+		when kill begin
+			local setting = devilcatacomb_zone.setting()
+			-- 아귀동굴 1층이면 1% 확률로 금시건을 드랍한다.
+			if pc.get_x() > setting.floor1_s.x + setting.base.x
+					and pc.get_y() > setting.floor1_s.y + setting.base.y
+					and pc.get_x() < setting.floor1_e.x + setting.base.x
+					and pc.get_y() < setting.floor1_e.y + setting.base.y then
+				local j = number(1, 100)
+				if j == 1 then
+					game.drop_item (setting.rag, 1)
+				end
+			end
+		end
+
+	function spawn_doors ()
+		local setting = devilcatacomb_zone.setting()
+		for i = 1, 4 do
+			local mob_set = setting.dc2_door_set1[i]
+			local set_size = setting.dc2_door_set_size[i]
+			for j = 1, set_size do
+				d.set_unique (i.."_1_"..j, d.spawn_mob_dir (mob_set[j][1], mob_set[j][2], mob_set[j][3], mob_set[j][4]))
+			end
+			mob_set = setting.dc2_door_set2[i]
+			for j = 1, set_size do
+				d.set_unique (i.."_2_"..j, d.spawn_mob_dir (mob_set[j][1], mob_set[j][2], mob_set[j][3], mob_set[j][4]))
+			end
+		end
+	end
+		-- 금시건을 나찰인증석에 드래그하면 2층으로 보낸다. 2층부터는 던전이다.
+		when devilcatacomb_credit_stone. take  begin
+			local setting = devilcatacomb_zone.setting()
+		
+			if item.vnum == setting.rag then 
+				if not party.is_party() then
+					say(gameforge.devilcatacomb_zone._170_say)
+					return
+				elseif party.is_in_dungeon() then
+					say(gameforge.devilcatacomb_zone._180_say)
+					return
+				end
+
+				item.remove()
+				say(gameforge.devilcatacomb_zone._190_say)
+				wait()
+				say(gameforge.devilcatacomb_zone._200_say)
+				wait()
+				d.new_jump_party (setting.map_idx, setting.floor2_entry.x + setting.base.x  , setting.floor2_entry.y + setting.base.y )
+				d.setqf2("devilcatacomb_zone","level", 2)
+				d.setf ("level",2)
+				d.regen_file (setting.mob_regen_file_path.."dc_2f_regen.txt")
+				
+				d.spawn_mob (setting.floor2_merchant_npc, setting.floor2_merchant_npc_pos[1], setting.floor2_merchant_npc_pos[2])
+				d.spawn_mob (setting.floor2_stone, setting.floor2_stone_pos[1], setting.floor2_stone_pos[2])
+				
+				devilcatacomb_zone.spawn_doors ()
+				server_timer('devilcatacomb_45m_left_timer',60 * 15, d.get_map_index())
+				d.setf("enter_time", get_global_time())
+			end	
+		end
+		
+		when devilcatacomb_45m_left_timer.server_timer begin
+			if d.select(get_server_timer_arg()) then
+				d.notice(string.format(gameforge.devilcatacomb_zone._20_say, 45))
+				server_timer('devilcatacomb_30m_left_timer', 60 * 15, get_server_timer_arg())
+			end
+		end
+
+		when devilcatacomb_30m_left_timer.server_timer begin
+			if d.select(get_server_timer_arg()) then
+				d.notice(string.format(gameforge.devilcatacomb_zone._20_say, 30))
+				server_timer('devilcatacomb_15m_left_timer', 60 * 15, get_server_timer_arg())
+			end
+		end
+	
+		when devilcatacomb_15m_left_timer.server_timer begin
+			if d.select(get_server_timer_arg()) then
+				d.notice(string.format(gameforge.devilcatacomb_zone._20_say, 15))
+				server_timer('devilcatacomb_5m_left_timer', 60 * 10, get_server_timer_arg())
+			end
+		end
+
+		when devilcatacomb_5m_left_timer.server_timer begin
+			if d.select(get_server_timer_arg()) then
+				d.notice(string.format(gameforge.devilcatacomb_zone._20_say, 5))
+				server_timer('devilcatacomb_1m_left_timer', 60 * 4, get_server_timer_arg())
+			end
+		end
+		
+		when devilcatacomb_1m_left_timer.server_timer begin
+			if d.select(get_server_timer_arg()) then
+				d.notice(string.format(gameforge.devilcatacomb_zone._20_say, 1))
+				server_timer ("devilcatacomb_0m_left_timer", 60 * 1, get_server_timer_arg())
+			end
+		end
+		
+		when devilcatacomb_0m_left_timer.server_timer begin
+			if d.select(get_server_timer_arg()) then
+				d.notice (gameforge.devilcatacomb_zone._210_dNotice)
+				d.set_warp_location (65, 5914, 992)
+				server_timer('devilcatacomb_exit_timer', 7, get_server_timer_arg())
+			end
+		end
+	
+	function is_dc2_doors_clear ()
+		local setting = devilcatacomb_zone.setting()
+		local clear = true
+		for i = 1, 4 do
+			local set_clear = true
+			local mob_set = setting.dc2_door_set1[i]
+			local set_size = setting.dc2_door_set_size[i]
+			for j = 1, set_size do
+				set_clear = set_clear and d.is_unique_dead (i.."_1_"..j)
+			end
+			if not set_clear then
+				set_clear = true
+				mob_set = setting.dc2_door_set2[i]
+				for j = 1, set_size do
+					set_clear = set_clear and d.is_unique_dead (i.."_2_"..j)
+				end
+			end
+			clear = clear and set_clear
+		end
+
+		return clear
+	end
+	
+		-- 현황석을 클릭하면 3층 진입 여부를 선택할 수 있고
+		-- 진입시 사신의증표를 검사한다.
+		-- 사신의 증표가 없다면 밖으로 워프된다.
+		when devilcatacomb_floor2_stone.click begin
+			local setting = devilcatacomb_zone.setting()
+			
+			if d.getf("devilcatacomb_floor2_stone_clicked") == 0 then
+				if not devilcatacomb_zone.is_dc2_doors_clear () then
+					say(gameforge.devilcatacomb_zone._220_say)
+					wait ()
+					return
+				end
+				say(gameforge.devilcatacomb_zone._230_say)
+				wait()
+				say(gameforge.devilcatacomb_zone._240_say)
+				wait()
+				local s = select(gameforge.devilcatacomb_zone._150_select, gameforge.devilcatacomb_zone._160_select)
+				if s == 1 then
+					if d.getf("devilcatacomb_floor2_stone_clicked") == 0 then
+						d.setf("devilcatacomb_floor2_stone_clicked", 1)
+						d.setqf2("devilcatacomb_zone","last_exit_time", get_global_time())
+						d.set_item_group ("reapers_credit", 3, setting.reapers_credit3, 1, setting.reapers_credit2, 1, setting.reapers_credit1, 1)
+						d.say_diff_by_item_group("reapers_credit", gameforge.devilcatacomb_zone._250_say, gameforge.devilcatacomb_zone._260_say)
+						timer ("devilcatacomb_floor3_enter_timer", 7)
+					end
+				end
+			else
+				say(gameforge.devilcatacomb_zone._270_say)
+			end
+		end
+		
+		when devilcatacomb_floor3_enter_timer.timer begin
+			local setting = devilcatacomb_zone.setting()
+			d.set_warp_location (65, 5914, 992)
+			d.exit_all_by_item_group ("reapers_credit")
+			d.delete_item_in_item_group_from_all ("reapers_credit")
+			d.purge ()
+			d.jump_all (setting.floor3_entry.x + setting.base.x , setting.floor3_entry.y + setting.base.y)
+			d.setf("level",3)
+			d.setqf2("devilcatacomb_zone","level", 3)
+			d.regen_file (setting.mob_regen_file_path.."dc_3f_regen.txt")
+			timer("warp_timer",3)
+			
+			local position = setting.floor3_stone_pos
+		
+			local n = number(1,7)
+			for i = 1, 7 do
+				if (i != n)
+				then
+					d.set_unique("fake"..i, d.spawn_mob( setting.floor3_stone, position[i][1], position[i][2]))
+				end
+			end
+		
+			local vid = d.spawn_mob( setting.floor3_stone, position[n][1], position[n][2])
+			d.set_unique ("real",vid)
+			if (is_test_server()) then
+				-- real stone pos
+				chat (position[n][1],position[n][2])
+			end
+	
+		end
+
+		when devilcatacomb3_stone.kill begin
+			local setting = devilcatacomb_zone.setting()
+			-- 돌이 파괴되면 진짜가 죽었는지 확인해본다.
+			-- 진짜가 죽었으면 4층으로 이동한다.
+			if d.is_unique_dead("real") then
+				d.notice(gameforge.devilcatacomb_zone._280_dNotice)
+				
+				d.setf ("level",4)
+				d.setqf2("devilcatacomb_zone","level", 4)
+				timer ("devilcatacomb_floor4_enter_timer", 3)
+			else
+				d.notice(gameforge.devilcatacomb_zone._290_dNotice)
+			end
+		end
+
+		when devilcatacomb_floor4_enter_timer.timer begin
+			local setting = devilcatacomb_zone.setting()
+			local i = number (1, 5)
+			timer("warp_timer",3)
+			d.purge ()
+			d.jump_all (setting.floor4_entry.x + setting.base.x , setting.floor4_entry.y + setting.base.y)
+			d.regen_file (setting.mob_regen_file_path.."dc_4f_regen.txt")
+			d.regen_file (setting.mob_regen_file_path..setting.floor4_regen_file[i])
+			if (is_test_server()) then
+				d.notice (setting.floor4_regen_file[i])
+			end
+			d.spawn_mob (setting.floor4_npc, setting.floor4_npc_pos[1], setting.floor4_npc_pos[2])
+		end
+
+		-- devilcatacomb_floor4_stone는 클릭 시 4층에서 5층으로 이동시키는 npc이다.
+		when devilcatacomb_floor4_stone.click begin
+			local setting = devilcatacomb_zone.setting()
+			local n = number (1,5)
+			say(gameforge.devilcatacomb_zone._300_say)
+			wait()
+			if (is_test_server()) then
+				-- devil_king pos
+				chat (setting.devil_king_pos[n][1], setting.devil_king_pos[n][2])
+			end
+			d.purge ()
+			d.jump_all (setting.floor5_entry.x + setting.base.x, setting.floor5_entry.y + setting.base.y )
+			d.setf ("level",5)
+			d.setqf2("devilcatacomb_zone","level", 5)
+			timer("warp_timer",3)
+			d.regen_file (setting.mob_regen_file_path.."dc_5f_regen.txt")
+			d.spawn_mob (setting.devil_king, setting.devil_king_pos[n][1], setting.devil_king_pos[n][2])
+			d.spawn_mob (setting.floor5_stone, setting.floor5_stone_pos[1], setting.floor5_stone_pos[2])
+		end
+		
+		-- 아귀왕(2591)이 죽으면 봉인해체석 드랍
+		when devilcatacomb_devil_king.kill begin
+			local setting = devilcatacomb_zone.setting()
+			game.drop_item (setting.unlock_stone, 1)
+		end
+
+		-- 사신금제비(30102)에 금제해체석봉을 드래그하면 모든 몬스터를 죽이고
+		-- 6층으로 이동하는 타이머를 동작시킨다.
+		when devilcatacomb_floor5_stone.take begin
+			local setting = devilcatacomb_zone.setting()
+			if item.vnum == setting.unlock_stone then
+				item.remove ()
+				d.notice(gameforge.devilcatacomb_zone._310_dNotice)
+				-- 6층으로 이동
+				d.clear_regen()
+				d.purge()
+				timer("devilcatacomb_floor6_timer",2)
+			end
+		end
+
+		when devilcatacomb_floor6_timer.timer begin
+			local setting = devilcatacomb_zone.setting()
+			d.setf("level",6)
+			d.setqf2("devilcatacomb_zone","level", 6)
+			d.jump_all (setting.floor6_entry.x + setting.base.x, setting.floor6_entry.y + setting.base.y )
+			d.regen_file (setting.mob_regen_file_path.."dc_6f_regen.txt")
+			d.spawn_mob (setting.devil_great_king, setting.devil_great_king_pos[1], setting.devil_great_king_pos[2])
+			timer("warp_timer",3)
+		end
+		
+		-- 아걸(2597)이 죽으면, 6층의 타이머1이 동작한다.
+		when devilcatacomb_devil_great_king.kill begin
+			server_timer ("floor6_eli_check_timer_1", 5,d.get_map_index())
+		end
+
+		-- 6층의 타이머1은 던전의 모든 몬스터 숫자를 보고,
+		-- 0이면 7층으로 워프하는 타이머를 동작한다.
+		-- 바로 7층으로 가지 않는 이유는, 유저에게 준비할 시간을 주기 위해서이다.
+		-- 1이면 타이머2를 동작시킨다.
+		-- 타이머1을 recursive하게 동작시키지 않은 것은,
+		-- 그럴 경우 reset한 타이머1이 동작하지 않았기 때문이다.
+		when floor6_eli_check_timer_1.server_timer begin
+			if d.select(get_server_timer_arg()) then
+				if d.count_monster() == 0 then
+					say_in_map (get_server_timer_arg(), gameforge.devilcatacomb_zone._320_say)
+					server_timer ("devilcatacomb_floor7_timer", 3, get_server_timer_arg())
+				else
+					server_timer ("floor6_eli_check_timer_2", 5, get_server_timer_arg())
+				end
+			end
+		end
+
+		when floor6_eli_check_timer_2.server_timer begin
+			if d.select(get_server_timer_arg()) then
+				if d.count_monster() == 0 then
+					say_in_map (get_server_timer_arg(), gameforge.devilcatacomb_zone._320_say)
+					server_timer("devilcatacomb_floor7_timer", 3, get_server_timer_arg())
+				else
+					server_timer ("floor6_eli_check_timer_1", 5, get_server_timer_arg())
+				end
+			end
+		end
+		
+		when devilcatacomb_floor7_timer.server_timer begin
+			if d.select(get_server_timer_arg()) then
+				local setting = devilcatacomb_zone.setting()
+
+				d.setf("level",7)
+				d.setqf2("devilcatacomb_zone","level", 7)
+				d.jump_all (setting.floor7_entry.x + setting.base.x, setting.floor7_entry.y + setting.base.y )
+				d.regen_file (setting.mob_regen_file_path.."dc_7f_regen.txt")
+				d.spawn_mob (setting.devil_emperor, setting.devil_emperor_pos[1], setting.devil_emperor_pos[2])
+				server_timer ("devilcatacomb_floor7_say_timer", 2, get_server_timer_arg())
+			end	
+		end
+
+		when devilcatacomb_floor7_say_timer.server_timer begin
+			if d.select(get_server_timer_arg()) then
+
+				local t = 3600 -(get_global_time() - d.getf("enter_time"))
+				local t_r = math.mod (t, 60)
+				local t_m = (t - t_r) / 60
+				d.notice(gameforge.devilcatacomb_zone._330_dNotice)
+				d.notice(string.format(gameforge.devilcatacomb_zone._20_say, t_m))
+				d.set_warp_location (0, 0, 0)
+			end
+		end
+
+		-- 6층과 마찬가지로 사마휘(2598)이 죽으면
+		-- 7층의 타이머가 작동한다.
+		when devilcatacomb_devil_emperor.kill begin
+			server_timer ("floor7_eli_check_timer_1", 5, d.get_map_index())
+		end
+		
+		-- 7층의 타이머는 6층 타이머와 비슷하며,
+		-- 몬스터 숫자가 0이면 exit 타이머를 발생시킨다.
+		-- 바로 exit하지 않는 이유는, 유저들에게 준비할 시간을 주기 위해서이다.
+		when floor7_eli_check_timer_1.server_timer begin
+			if d.select(get_server_timer_arg()) then
+				if d.count_monster() == 0 then
+					d.set_warp_location (65, 5914, 992)
+					d.setqf2("devilcatacomb_zone","done", 1)
+					say_in_map (get_server_timer_arg(), gameforge.devilcatacomb_zone._340_say)
+					clear_server_timer ("devilcatacomb_0m_left_timer", get_server_timer_arg())
+					server_timer("devilcatacomb_exit_timer", 60, get_server_timer_arg())
+				else
+					server_timer ("floor7_eli_check_timer_2", 5, get_server_timer_arg())
+				end
+			end
+		end
+
+		when floor7_eli_check_timer_2.server_timer begin
+			if d.select(get_server_timer_arg()) then
+				if d.count_monster() == 0 then
+					d.set_warp_location (65, 5914, 992)
+					d.setqf2("devilcatacomb_zone","done", 1)
+					say_in_map (get_server_timer_arg(), gameforge.devilcatacomb_zone._340_say)
+					clear_server_timer ("devilcatacomb_0m_left_timer", get_server_timer_arg())
+					server_timer("devilcatacomb_exit_timer", 60, get_server_timer_arg())
+				else
+					server_timer ("floor7_eli_check_timer_1", 5, get_server_timer_arg())
+				end
+			end
+		end
+
+		when devilcatacomb_exit_timer.server_timer begin
+			if d.select(get_server_timer_arg()) then
+				d.setqf2("devilcatacomb_zone","level", 0)
+				d.setqf2("devilcatacomb_zone","last_exit_time", get_global_time())
+				clear_server_timer("devilcatacomb_5m_left_timer", get_server_timer_arg())
+				clear_server_timer("devilcatacomb_1m_left_timer", get_server_timer_arg())
+				clear_server_timer("devilcatacomb_0m_left_timer", get_server_timer_arg())
+				clear_server_timer("floor6_eli_check_timer_1", get_server_timer_arg())
+				clear_server_timer("floor6_eli_check_timer_2", get_server_timer_arg())
+				clear_server_timer("floor7_eli_check_timer_1", get_server_timer_arg())
+				clear_server_timer("floor7_eli_check_timer_2", get_server_timer_arg())
+				clear_server_timer("devilcatacomb_floor7_say_timer", get_server_timer_arg())
+				clear_server_timer("devilcatacomb_floor7_timer", 3, get_server_timer_arg())
+				d.clear_regen()
+				d.exit_all()
+			end
+		end
+	end  --state
+end   --quest
+

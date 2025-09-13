@@ -1,0 +1,185 @@
+quest new_quest_lv43 begin
+
+	state start begin
+		when login or levelup with pc.get_level() >= 43 begin
+			pc.setqf("collect_count_1", 1) -- this qf holds the ammount ouf items the character has to collect
+			set_state(information)
+		end
+	end
+	-- player asks wonda-rim, if his uncle chaegirab likes him now better -----------------------------------------
+	-- wonda-rim grew up without parent, wants get to know more about his ancestry -----------------------------------------
+	state information begin
+		when login or enter begin
+			send_letter(gameforge.new_quest_lv43._005_send_letter)
+			q.start()
+			q.set_title(gameforge.new_quest_lv43._005_send_letter)
+			local v=find_npc_by_vnum(20087) -- Wonda-Rim
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, gameforge.new_quest_lv43._010_target)
+			end
+		end
+		when button or info begin
+			say_title(gameforge.new_quest_lv43._005_send_letter)
+			say(gameforge.new_quest_lv43._011_say)
+			say("")
+			say(string.format(gameforge.new_quest_lv43._012_say, get_map_name_by_number(1)))
+		end
+		
+		when 20087.chat.gameforge.new_quest_lv43._005_send_letter begin
+			target.delete("__TARGET__")
+			say_title(gameforge.new_quest_lv43._021_say_title) -- yellow text headline
+			say(gameforge.new_quest_lv43._020_say)
+			say(gameforge.new_quest_lv43._022_say) -- white font text
+			wait()
+			say_title(gameforge.new_quest_lv43._021_say_title) -- yellow text headline
+			say(gameforge.new_quest_lv43._023_say_reward)
+			q.done()
+			local doquest = select(gameforge.new_quest_lv43._024_select, gameforge.subquest_12._50_select, gameforge.new_quest_lv75._290_2_select)
+			if doquest ==1 then 
+				set_state(ask_chaegirab)
+			elseif doquest == 3 then
+				say(gameforge.subquest_06._60_say)
+				local abortquest = select(gameforge.subquest_06._70_select, gameforge.subquest_06._80_select)
+				if abortquest == 1 then
+					pc.setqf("collect_count_1", 0) -- resetting collect counter -> to be deleated
+					set_state(__GIVEUP__)
+				else
+					say_title(gameforge.new_quest_lv43._021_say_title) -- yellow text headline
+					say(gameforge.subquest_11._80_say)
+					return
+				end
+			else
+				say_title(gameforge.new_quest_lv43._021_say_title) -- yellow text headline
+				say(gameforge.subquest_11._80_say)
+				return
+			end
+		end
+	end
+	-- player shall ask uncle chaegirab about wonda-rims ancestry -----------------------------------------
+	state ask_chaegirab begin
+		when enter or login begin
+			send_letter(gameforge.new_quest_lv43._006_send_letter)
+			q.start()
+			q.set_title(gameforge.new_quest_lv43._006_send_letter)
+			local v=find_npc_by_vnum(20084) --Chaegirab
+			if 0==v then
+			else
+				target.vid("__TARGET2__", v, gameforge.new_quest_lv43._030_target )
+			end
+		end
+		when button or info begin
+		say_title(gameforge.new_quest_lv43._006_send_letter)
+		say(gameforge.new_quest_lv43._025_say)
+		say("")
+		say(string.format(gameforge.new_quest_lv43._026_say, get_map_name_by_number(1)))
+		end
+		
+		when 20084.chat.gameforge.new_quest_lv43._006_send_letter begin
+			target.delete("__TARGET2__")
+			say_title(gameforge.new_quest_lv43._031_say_title) -- yellow text headline
+			say(gameforge.new_quest_lv43._032_say)
+		wait()
+			say_title(gameforge.new_quest_lv43._031_say_title)
+			say(gameforge.new_quest_lv43._033_say)
+		wait()
+			say_title(gameforge.new_quest_lv43._031_say_title)
+			say(gameforge.new_quest_lv43._034_say)
+			say_reward(gameforge.new_quest_lv43._035_say_reward)
+			q.done()
+			set_state(hunting)
+		end
+	end
+	-- because chaegirab found the foundling wonda-rim in the valley of seungryong, the player has to hunt orcs to get imfomation about wonda-rims parents -----------------------------------------
+	state hunting begin
+		when enter or login begin
+			new_quest_lv43_dropProb1 = 5
+			new_quest_lv43_drop1 = 30142 -- letter
+			send_letter(gameforge.new_quest_lv43._006_send_letter)
+			q.start()
+			q.set_title(gameforge.new_quest_lv43._006_send_letter)
+		end
+		-------------- the orc drops a letter from wonda-rims parents ------------------------------------------------------
+		-- kill a 603#Ork-Kämpfer
+		when 603.kill begin
+			if pc.getqf("collect_count_1") > 0 then
+				if math.random(1,100) <= new_quest_lv43_dropProb1 then -- probability if s.th. drops
+					local index = pc.getqf("collect_count_1") - 1
+					pc.setqf("collect_count_1",index) --you got one, so you would get -1 item to find
+					pc.give_item2(new_quest_lv43_drop1) -- letter
+					notice_multiline(gameforge.new_quest_lv43._043_notice, notice)
+					if pc.getqf("collect_count_1") == 0 then
+						q.done()
+						set_state(goto_wondarim)
+					end		
+				end
+			end
+		end
+		
+		when info or button begin
+			say_title(gameforge.new_quest_lv43._006_send_letter)
+			if pc.getqf("collect_count_1") != 0 then
+				say(gameforge.new_quest_lv43._041_say)
+			else
+				q.done()
+				set_state(goto_wondarim)
+			end
+		end
+		when 20084.chat.gameforge.new_quest_lv43._006_send_letter begin
+			say_title(gameforge.new_quest_lv43._006_send_letter)
+			say(gameforge.new_quest_lv43._045_say)
+		end
+	end
+	-------------- the letter contains imformation about wonda-rims parents and why the had to abandon him------------------------------------------------------
+	state goto_wondarim begin
+		when enter or login begin
+			new_quest_lv43_amountYang = 32000 
+			new_quest_lv43_amountXp = 1250000
+			send_letter(gameforge.new_quest_lv43._006_send_letter)
+			q.start()
+			q.set_title(gameforge.new_quest_lv43._006_send_letter)
+			local v=find_npc_by_vnum(20087) -- Wonda-Rim
+			if 0==v then
+			else
+				target.vid("__TARGET3__", v, gameforge.new_quest_lv43._010_target)
+			end
+		end
+		
+		when button or info begin
+			say_title(gameforge.new_quest_lv43._006_send_letter)
+			say(gameforge.new_quest_lv43._050_say)
+			say("")
+			say(string.format(gameforge.new_quest_lv43._012_say, get_map_name_by_number(1)))
+		end
+		
+		when 20087.chat.gameforge.new_quest_lv43._006_send_letter begin
+			say_title(gameforge.new_quest_lv43._021_say_title) -- yellow text headline
+			if pc.count_item(new_quest_lv43_drop1) == 1 and pc.getqf("collect_count_1") < 1 then
+				target.delete("__TARGET3__")
+				say(gameforge.new_quest_lv43._049_say) -- locakey needs to be reviewed. Should be a conversation and not a summery!
+				say(gameforge.new_quest_lv43._050_say) -- locakey needs to be reviewed.
+				say(gameforge.new_quest_lv43._051_say) -- locakey needs to be reviewed.
+				wait()
+				say_title(gameforge.new_quest_lv43._052_say_title) -- locakey needs to be reviewed.
+				say_reward(string.format(gameforge.new_quest_lv43._054_say_reward, new_quest_lv43_amountXp))
+				say_reward(string.format(gameforge.new_quest_lv43._053_say_reward, new_quest_lv43_amountYang))
+				pc.change_money(new_quest_lv43_amountYang)
+				pc.give_exp2(new_quest_lv43_amountXp)
+				pc.remove_item(30142)
+				q.done()
+				set_state(__COMPLETE__)
+			else
+				say(gameforge.new_quest_lv43._060_say)
+				set_state(start)
+				return
+			end
+		end
+	end
+	
+	------  give up ------------------------------------------------------------------------------------------------------
+	state __GIVEUP__ begin
+	end
+	------  complete ------------------------------------------------------------------------------------------------------
+	state __COMPLETE__ begin
+	end
+end 

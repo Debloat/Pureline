@@ -1,0 +1,26 @@
+quest pricing_lv9 begin
+    state start begin
+        when login or levelup with pc.get_level() == 9  begin -- Quest for level 9
+            set_state("mailorder")
+        end
+    end
+
+    state mailorder begin
+        when login or enter begin
+            send_letter(gameforge.pricing_lv9._10_send_letter)
+        end
+        when button or info begin
+            say_title(gameforge.pricing_lv9._20_say_title)
+            say(gameforge.pricing_lv9._30_say)
+            wait()
+            say(gameforge.pricing_lv9._40_say)
+            say_reward(gameforge.pricing_lv9._50_say_reward)
+            set_state(__COMPLETE__)
+        end
+    end
+    state __COMPLETE__ begin
+        when button or info begin
+            return
+        end
+    end
+end

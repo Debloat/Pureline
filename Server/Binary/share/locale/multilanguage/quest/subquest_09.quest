@@ -1,0 +1,104 @@
+quest subquest_9 begin
+	state start begin
+		when login or levelup with pc.level >= 16 and pc.level <= 21 begin
+			set_state(information)
+		end
+
+	end
+
+	state information begin
+		when letter begin
+			local v = find_npc_by_vnum(20016)
+
+			if v != 0 then
+				target.vid("__TARGET__", v, gameforge.subquest_09._10_targetVid)
+			end
+		end
+
+
+		when __TARGET__.target.click or	20016.chat.gameforge.subquest_09._20_npcChat with pc.level >= 16 begin
+			target.delete("__TARGET__")
+
+			say_title(gameforge.blacksmith._20_sayTitle)
+			say(gameforge.subquest_09._30_say)
+
+			local s= select(gameforge.find_brother_article._90_select, gameforge.find_brother_article._100_select)
+			if 2==s then
+				say_title(gameforge.blacksmith._20_sayTitle)
+				say(gameforge.subquest_09._40_say)
+				local a= select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
+				if  2==a then
+					say_title(gameforge.subquest_09._50_sayTitle)
+					say(gameforge.subquest_09._60_say)
+					return
+				end
+				say_title(gameforge.blacksmith._20_sayTitle)
+				say(gameforge.subquest_09._70_say)
+				set_state(__GIVEUP__)
+				return
+			end
+			say_title(gameforge.blacksmith._20_sayTitle)
+			say(gameforge.subquest_09._80_say)
+			set_state(hunt_for_goldenaxe)
+
+		end
+	end
+
+	state hunt_for_goldenaxe begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.subquest_09._90_makequestbutton)
+			q.set_title(gameforge.subquest_09._90_makequestbutton)
+			q.start()
+		end
+
+		when info or button begin
+			say_title(gameforge.subquest_09._90_makequestbutton)
+			say(gameforge.subquest_09._100_sayReward)
+		end
+
+		when 301.kill begin
+			local s = number(1, 100)
+			if s <= 5 and pc.count_item("30102")==0  then
+				pc.give_item2("30102", 1)
+				send_letter(gameforge.subquest_09._110_sendLetter)
+
+				local v=find_npc_by_vnum(20016)
+				if 0==v then
+				else
+					target.vid("__TARGET__",v, gameforge.subquest_06._490_targetVid)
+				end
+			end
+		end
+
+		when 20016.chat.gameforge.subquest_09._120_npcChat begin
+			target.delete("__TARGET__")
+			if pc.count_item("30102") >= 1 then
+				say_title(gameforge.blacksmith._20_sayTitle)
+				say(gameforge.subquest_09._130_say)
+
+				pc.remove_item("30102", 1)
+
+				pc.give_exp2(36000)
+				set_quest_state("levelup","run")
+				pc.change_money(10000)
+				pc.give_item2("30031", 1)
+
+				say_title(gameforge.collect_herb_lv4._130_sayTitle)
+								say_reward(gameforge.subquest_09._140_sayReward)
+				
+				clear_letter()
+				set_state(__COMPLETE__)
+				return
+			end 
+		end  
+	end  --state
+	state __GIVEUP__ begin
+	end
+
+	state __COMPLETE__ begin
+		when enter begin
+			q.done()
+		end
+	end
+end

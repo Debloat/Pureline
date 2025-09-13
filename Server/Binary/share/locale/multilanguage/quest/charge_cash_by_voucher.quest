@@ -1,0 +1,35 @@
+quest charge_cash_by_voucher begin
+	state start begin
+		function charge(amount, charge_type)
+			if charge_type == nil then 
+				charge_type = "cash"
+			end
+
+			if 0 < amount then
+				-- syntax : pc.charge_cash(amount, charge_type)
+				-- warning: 	1. 'charge_type' : "cash"(default) | "mileage"
+				-- 	   	2. 'amount' must be positive number.
+				local result = pc.charge_cash(amount, charge_type)
+
+				if true == result then
+					local item_id = item.get_id()
+					char_log(item_id, "CHARGE_CASH_BY_VOUCHER", amount)
+					syschat(string.format(gameforge.charge_cash_by_voucher._010_syschat, amount))
+
+					local flag_name = "total_" .. charge_type
+					pc.setqf(flag_name, pc.getqf(flag_name) + amount)
+
+					item.remove()
+				end
+			end
+
+			return false
+		end
+	
+		when 80014.use or 80015.use or 80016.use or 80017.use begin
+			local amount = item.get_value(0)
+
+			charge_cash_by_voucher.charge(amount, "cash")
+		end
+	end
+end

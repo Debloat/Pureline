@@ -1,0 +1,118 @@
+quest subquest_22 begin
+	state start begin
+		when login or levelup with pc.level >= 35  and pc.level <= 37 begin
+			set_state(information)
+		end
+	end
+
+	state information begin
+		when letter begin
+			local v=find_npc_by_vnum(20015)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, gameforge.subquest_22._10_targetVid)
+			end
+		end
+
+
+		when __TARGET__.target.click or	20015.chat.gameforge.subquest_22._20_npcChat begin
+			target.delete("__TARGET__")
+			say_title(gameforge.subquest_22._30_sayTitle)
+			say(gameforge.subquest_22._40_say)
+			wait()
+			say_title(gameforge.subquest_22._30_sayTitle)
+			say(gameforge.subquest_22._50_say)
+			local s= select(gameforge.subquest_01._50_select, gameforge.subquest_22._60_select)
+			if 2==s then
+				say(gameforge.subquest_22._70_say)
+				local a= select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
+				if  2==a then
+					say_title(gameforge.subquest_22._30_sayTitle)
+					say(gameforge.subquest_22._80_say)
+					return
+				end
+				say_title(gameforge.subquest_22._30_sayTitle)
+				say(gameforge.subquest_22._90_say)
+				set_state(__GIVEUP__)
+				return
+			end
+			say_title(gameforge.subquest_22._30_sayTitle)
+			say(gameforge.subquest_22._100_say)
+
+		set_state(hunt_for_goldaxe)
+		end
+	end
+
+
+
+
+	state hunt_for_goldaxe begin
+		when letter begin
+			send_letter(gameforge.subquest_22._10_targetVid)
+
+			if pc.count_item(30102)>0 then
+				local v=find_npc_by_vnum(20015)
+				if 0==v then
+				else
+					target.vid("__TARGET__",v, gameforge.subquest_22._110_targetVid)
+				end
+			end
+
+		end
+		when info or  button begin
+			if pc.count_item(30102)>0 then
+				say_title(gameforge.subquest_22._120_sayTitle)
+				say(gameforge.subquest_22._130_say)
+				return
+			end
+			say_title(gameforge.subquest_22._140_sayTitle)
+			say(gameforge.subquest_22._150_say)
+		end
+
+
+
+		when 504.kill  begin
+			local s = number(1, 100)
+			if s <= 5 and pc.count_item("30102")==0  then
+				pc.give_item2("30102", 1)
+
+				local v=find_npc_by_vnum(20015)
+				if 0==v then
+				else
+					target.vid("__TARGET__",v, gameforge.subquest_22._110_targetVid)
+				end
+			end
+		end
+
+
+
+		when 20015.chat.gameforge.subquest_22._160_npcChat with pc.count_item("30102")>=1 begin
+			target.delete("__TARGET__")
+			say_title(gameforge.subquest_22._170_sayTitle)
+			say(gameforge.subquest_22._180_say)
+			pc.remove_item("30102",1)
+
+			say_reward(gameforge.subquest_22._190_sayReward)
+			pc.give_exp2(400000)
+
+			say_reward(gameforge.subquest_22._200_sayReward)
+			pc.change_money(30000)
+
+			set_state(__COMPLETE__)
+			clear_letter()
+		end
+	end
+
+
+        state __GIVEUP__ begin
+        end
+
+        state __COMPLETE__ begin
+                when enter begin
+                        q.done()
+                end
+        end
+
+
+end
+

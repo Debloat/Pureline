@@ -1,0 +1,536 @@
+quest larbor_day begin
+    state start begin
+	when 20041.chat."GM: Die Veranstaltung des Arbeitstag" with pc.is_gm() begin
+	    say(string.format("Die Suche des Arbeitstag : %d", game.get_event_flag("larbor_day_quest")))
+	end
+	when 20041.chat."GM: Durchfuhrung der Veranstaltung des Arbeitstag" with pc.is_gm() and game.get_event_flag("larbor_day_quest")==0 begin
+		say("Möchtest Du die Veranstaltung des Arbeitstag annehmen?")
+		local s=select("Ja", "Nein")
+		if s==1 then
+		    game.set_event_flag("larbor_day_quest", 1)
+		end
+	end
+	when 20041.chat."GM: Beenden der Veranstaltung des Arbeitstag" with pc.is_gm() and game.get_event_flag("larbor_day_quest")==1 begin
+		say("Möchtest Du die Veranstaltung des Arbeitstag abbrechen?")
+		local s=select("Abbrechen", "Schliessen")
+		if s==1 then
+		    game.set_event_flag("larbor_day_quest", 0)
+		end
+	end
+	when 20041.chat."Ha Ha! Nun ist es der Tag des Fleißes" with game.get_event_flag("larbor_day_quest")==1 begin
+	    say_pc_name()
+	    ----"12345678901234567890123456789012345678901234567890"|
+	    say("")
+	    say("Hey Du! Was treibst Du dich hier")
+	    say("herum? Sieh dich nur mal an! ")
+	    say("Du trägst die Kleider eines Bettlers.")
+	    say("")
+	    wait()
+	    say_title("Wanderer:")
+	    say("")
+	    say("Ich ein Bettler? Bewerte nicht mein Äußeres! Ich")
+	    say("achte nur nicht so auf meine Kleidung wie aufs")
+	    say("Essen. Ich arbeite hart für mein Brot. Wie kann")
+	    say("man mich da einen Bettler nennen?")
+	    say("")
+	    local s=select("Entschuldigen", "Schliessen")
+	    if s==1 then
+		say_pc_name()
+		say("")
+		say("Oh!!! Bitte verzeih, das ich so vorschnell")
+		say(" urteilte! Um meinen Fehler wieder")
+		say(" gutzumachen, möchte ich gerne etwas für dich")
+		say(" tun. Kann ich Dir bei etwas helfen?")
+		say("")
+		wait()
+		say_title("Der Wanderer:")
+		say("")
+		say("Ich könnte wohl gerade etwas Hilfe brauchen...")
+		say("Hm. Lass mal sehen  wie gut du bist.")
+		say("Töte zuerst 20 Wildhunde. Sie stören die ")
+		say("friedlichen Leute.")
+		say("")
+		----"12345678901234567890123456789012345678901234567890"|
+		local s=select("OK", "Nein")
+		if 1==s then
+		    say("Das ist nicht schwer! Ich werde bald zurück")
+		    say("sein.")
+		    say("")
+		elseif 2==s then
+		    say("Was soll denn das!? Ich soll Wildhunde")
+		    say(" jagen? Es ist besser dich einfach zu")
+		    say(" ignorieren.")
+		end
+		set_state(mission1)
+	    elseif s==2 then
+	    end
+	end
+    end
+    state report begin
+	when letter begin
+	    send_letter("Suche den Wanderer auf!")
+	end
+	when button or info begin
+	    say_title("Suche nach dem Wanderer")
+	    say("")
+	    say("Finde den Wanderer und berichte ihm")
+	    say(" das du die Wildhunde getötet hast.")
+	    say("")
+	end
+	when 20041.chat."Die Aufgabe erledigt" begin
+	    say_title("Der Wanderer:")
+	    say("")
+	    say("Super. Gute Arbeit!")
+	    say("Ich bin eigentlich ein Beamter des Arbeitsamtes.")
+	    say("Nun gebe ich dem Jemand, ")
+	    say("der sehr fleissig arbeitet, einen Preis")
+	    say("bitte behalte die Tatsache geheim")
+	    say("und viel Spass damit.")
+	    say("")
+	    wait()
+	    say_title("Gewinn des Preis der Fleißigkeit")
+	    say("Aus der fleißigen Arbeit hast du von dem Beamten")
+	    say("den Preis der Fleissigkeit bekommenden")
+	    say_item("Der Preis der Fleissigkeit", 70004, "")
+	    say_reward("Du erhälst den Preis der Fleißigkeit")
+	    say("Kleidung +4, aber beachte: Einmal angezogen") 
+	    say_reward("kannst Du sie nicht wieder ablegen.")
+	    say("")
+
+	    set_state(complete2)
+	    pc.give_item2(70004, 1);
+	end
+    end
+    state complete2 begin
+	when enter begin
+	    test_chat("Die Suche des Arbeitstag is beendet")
+	end
+    end
+    state complete begin
+	when letter begin
+	    send_letter("Der Wiederversuch der Suche des Arbeitstag")
+	end
+	when button or info begin
+	    say_title("Der Wiederversuch der Suche des Arbeitstag")
+	    say("")
+	    say("Die falsche Funktion des Sucheartikel! Nun die Suche")
+	    say("weiter machen.")
+	    say("")
+	    say("Entschuldige mich")
+	    say("")
+	    local s=select("WiederBeginn mit der Suche", "Behaltung der Suche")
+	    if s==1 then
+		say_title("Der Wiederversuch des Suche ser Arbeitstag")
+		say("Wenn man eine Wanderer anredet, wird die Suche wieder beginnen")
+		say("beginnen")
+		set_state(start)
+	    end
+	end
+    end
+    state mission1 begin
+	when letter begin
+	    send_letter("Test des Wanderers #1")
+	end
+	when button or info begin
+	    say_title("Ein Test vom Wanderer #1")
+	    say("")
+	    say("Du hattest den Wanderer beleidigt und als")
+	    say("Entschuldigung deine Hilfe angeboten. So bat er")
+	    say("dich 20 Wildhunde zu töten um die Dorfbewohner")
+	    say("von der Plage zu befreien und dein können")
+	    say("zu testen.")
+	    say("")
+	    say_reward("Töte 20 Wildhunde")
+	    say("")
+	end
+	when enter begin
+	    pc.setqf("kill_count", 0)
+	end
+	when leave begin
+	    pc.setqf("kill_count", 0)
+	    q.done()
+	end
+	when letter begin
+	    q.set_counter("Noch zu fangende Wildhunde", larbor_day.mission1_get_rest_count());
+	end
+	when 101.kill begin
+	    local kill_count=pc.getqf("kill_count")+1
+	    pc.setqf("kill_count", kill_count)
+	    q.set_counter("Noch zu fangende Wildhunde", larbor_day.mission1_get_rest_count());
+
+	    if larbor_day.mission1_is_end() then
+	        ----"12345678901234567890123456789012345678901234567890"|
+	        say_title("Alle Wildhunde getötet")
+		say("")
+		say("Du hast alle Wildhunde getötet und die Dorfbewohner")
+		say("von der Plage befreit. Gehe nun zum Wanderer und ")
+		say("berichte ihm.")
+		say("")
+	    end
+	end
+	when 20041.chat."Nach der Aufgabe fragen" with not larbor_day.mission1_is_completed() begin
+	    say("Der Wanderer:")
+	    say("")
+	    say("Da Du so geschickt bist, fange mir bitte noch")
+            say("30 Keiler")
+	    say("Das wird dir sicher nicht schwer fallen.")
+	    say("")
+	end
+	when 20041.chat."Die Aufgabe erledigt." with larbor_day.mission1_is_completed() begin
+	    say_title("Der Wanderer:")
+	    say("")
+	    ----"12345678901234567890123456789012345678901234567890"|
+	    say("Sehr gut! Du scheinst sehr gewand zu sein.")
+	    say("Ich war in meiner Jugend auch voller Tatendrang.")
+	    say("")
+	    wait()
+	    say_pc_name()
+	    say("VERDAMMT !! Das Alter weißt Du?")
+	    say("Meine alten Knochen wollen nicht mehr so wie ich.")
+	    say("")
+	    wait()
+	    ----"12345678901234567890123456789012345678901234567890"|
+	    say_title("Der Wanderer:")
+	    say("")
+	    say("Du schaust gelangweilt aus. Ah, ich verstehe!")
+	    say("Weil der Test so einfach war?")
+	    say("Die Keiler machen die Wiesen und Wege kaputt. Es ")
+	    say("wäre nett von Dir, wenn Du sie vertreibst.")
+	    say("Würdest Du das tun?")
+	    say("")
+	    local s=select("Ja", "Nein")
+	    if 1==s then
+		----"12345678901234567890123456789012345678901234567890"|
+		say("Der Wanderer:")
+		say("")
+		say("Gut! Lauf schnell!")
+		say("Bevor die Keiler noch mehr Schaden anrichten")
+		say("")
+		set_state(mission2)
+	    elseif 2==s then
+		say("Der Wanderer:")
+		say("")
+		say("Er ist sicher zu beschäftigt um mir weiter")
+		say("zu helfen.Da kann man nichts machen.")
+		say("")
+		set_state(complete2)
+	    end
+	end
+	function mission1_get_max_count()
+	    return 20
+	end
+	function mission1_get_rest_count()
+	    return math.max(0, larbor_day.mission1_get_max_count()-pc.getqf("kill_count"))
+	end
+	function mission1_is_completed()
+	    return pc.getqf("kill_count")>=larbor_day.mission1_get_max_count()
+	end
+	function mission1_is_end()
+	    return pc.getqf("kill_count")==larbor_day.mission1_get_max_count()
+	end
+    end
+    state mission2 begin
+	when letter begin
+	    send_letter("Test des Wanderers #2")
+	end
+	when button or info begin
+	    say_title("Test des Wanderers #2")
+	    ----"12345678901234567890123456789012345678901234567890"|
+	    say("")
+	    say("Da ich den Wanderer beleidigt hatte, wollte ")
+	    say("ich ihm eine Bitte erfüllen. Nun")
+	    say("soll ich noch die Keiler vertreiben.")
+	    say("")
+	    say_reward("Töte die Keiler 30 ")
+	end
+	when enter begin
+	    pc.setqf("kill_count", 0)
+	end
+	when leave begin
+	    pc.setqf("kill_count", 0)
+	    q.done()
+	end
+	when letter begin
+	    q.set_counter("Töte Keiler", larbor_day.mission2_get_rest_count());
+	end
+	when 108.kill begin
+	    local kill_count=pc.getqf("kill_count")+1
+	    pc.setqf("kill_count", kill_count)
+	    q.set_counter("Noch zu tötende Keiler", larbor_day.mission2_get_rest_count());
+
+	    if larbor_day.mission2_is_end() then
+		say_title("Alle Keiler getötet")
+		----"12345678901234567890123456789012345678901234567890"|
+		say("")
+		say("Suche erneut den Wanderer auf und überbringe im")
+		say("die freudige Nachricht, das Du die Keiler")
+		say("vertrieben hast.")
+		say("")
+	    end
+	end
+
+	when 20041.chat."Die Aufgabe erledigt" with larbor_day.mission2_is_completed() begin
+	    say_title("Ein Wanderer:")
+	    say("")
+	    say("Hm. Das habe ich nicht erwartet. Ich habe gedacht,")
+	    say("dass Du sie schneller vertreiben kannst.")
+	    say("Du bist schlechter als ich erwartet habe. Aber")
+	    say("wenn Du 50 Bären tötest, werde ich darüber")
+	    ----"12345678901234567890123456789012345678901234567890"|
+	    say("hinweg sehen. Es ist so, dass die Bären den")
+	    say("ganzen Honig von den Bienen verzehren so das für")
+	    say("uns Menschen nichts mehr übrig bleibt")
+	    say("Es ist deine letzte Chance! Geb dir Mühe!!")
+	    say("")
+	    local s=select("OK", "Absagen")
+	    if 1==s then
+		say_pc_name()
+		say("")
+		say("Nichts leichter als das!")
+		say("Die Bären kann ich blitzschnell jagen")
+		say("")
+		set_state(mission3)
+	    elseif 2==s then
+		say_pc_name()
+		say("")
+		say("Was? Deine Aufgaben werden immer schwerer!")
+		say("Tut mir leid. Ich kann es nicht!")
+		say("")
+		set_state(complete2)
+	    end
+	end
+	function mission2_get_max_count()
+	    return 30
+	end
+	function mission2_get_rest_count()
+	    return math.max(0, larbor_day.mission2_get_max_count()-pc.getqf("kill_count"))
+	end
+	function mission2_is_completed()
+	    return pc.getqf("kill_count")>=larbor_day.mission2_get_max_count()
+	end
+	function mission2_is_end()
+	    return pc.getqf("kill_count")==larbor_day.mission2_get_max_count()
+	end
+    end
+    state mission3 begin
+	when letter begin
+	    send_letter("Test des Wanderers #3")
+	end
+	when button or info begin
+	    say_title("Test des Wanderers #3")
+	    say("")
+	    say("Heute ist alles egal!")
+	    say("Da ich ihn beleidigt hatte, wollte ich seine Bitte")
+	    say("annehmen. Erst Wildhunde, dann Keiler töten nun")
+	    say("auch noch Bären!")
+	    say("Man sagt,diese Aufgabe ist der letzte Test.")
+	    say("Also werde ich es schnell erledigen.")
+	    say("")
+	    say_reward("Töte 50 Bären")
+	end
+	when enter begin
+	    pc.setqf("kill_count", 0)
+	end when leave begin
+	    pc.setqf("kill_count", 0)
+	    q.done()
+	end
+	when letter begin
+	    q.set_counter("Töte Bären", larbor_day.mission3_get_rest_count());
+	end
+	when 110.kill begin
+	    local kill_count=pc.getqf("kill_count")+1
+	    pc.setqf("kill_count", kill_count)
+	    q.set_counter("Töte Bären", larbor_day.mission3_get_rest_count());
+
+	    if larbor_day.mission3_is_end() then
+		say_title("Bären getötet")
+		say("")
+		say("Ha ha. Das war so einfach!")
+		say("Nun schnell zum Wanderer. ")
+		say("")
+	    end
+	end
+	when 20041.chat."Nach der Aufgabe fragen" with not larbor_day.mission3_is_completed() begin
+	    say_title("Der Wanderer:")
+	    say("")
+	    say("Du hast ja keine Angst vor Bären - oder? ")
+	    say("Dann geh und töte sie. ")
+	    say("")
+	end
+	when 20041.chat."Die Aufgabe erledigt." with larbor_day.mission3_is_completed() begin
+	    say_title("Der Wanderer:")
+	    say("")
+	    ----"12345678901234567890123456789012345678901234567890"|
+	    say("Gut. Sehr gut. ")
+	    say("Endlich kann ich mir wieder ein Honigbrot machen.")
+	    say("Ich vergesse einfach die Sache mit den Wildhunden")
+	    say("Eine letzte Bitte....")
+	    say("Könntest Du die Räuber in der Nähe vom Dorf")
+	    say("verjagen? ")
+	    say("")
+	    wait()
+	    say_pc_name()
+	    say("")
+	    say("Die Räuber sind sehr frech!")
+	    say("Sie haben mich überfallen und mir mein schönstes")
+	    say("Weinglas aus meiner Sammlung zerbrochen.")
+	    say("")
+	    wait()
+	    say_title("Der Wanderer:")
+	    say("")
+	    say("Ha Ha. Die werden sich umgucken, wenn Du kommst.")
+	    say("Beseitige die Brut die strebsame Leute von der")
+	    say("Arbeit abhalten und ehrbare Bürger berauben.")
+	    say("Zeig es ihnen! Beseitige sie alle!")
+	    say("")
+
+	    local s=select("OK", "Absagen")
+	    if 1==s then
+		say_pc_name()
+		say("")
+		say("Keine leichte Aufgabe, aber ich schaffe das schon.")
+		say("")
+		set_state(mission4)
+	    elseif 2==s then
+		say_pc_name()
+		say("")
+		say("Will er mich reinlegen?")
+		say("Langsam reichts!!!")
+		say("Ich höre auf.")
+		say("")
+		set_state(complete2)
+	    end
+	end
+	function mission3_get_max_count()
+	    return 50
+	end
+	function mission3_get_rest_count()
+	    return math.max(0, larbor_day.mission3_get_max_count()-pc.getqf("kill_count"))
+	end
+	function mission3_is_completed()
+	    return pc.getqf("kill_count")>=larbor_day.mission3_get_max_count()
+	end
+	function mission3_is_end()
+	    return pc.getqf("kill_count")==larbor_day.mission3_get_max_count()
+	end
+    end
+    state mission4 begin
+	when letter begin
+	    send_letter("Die Beseitigung der Weißer-Eid-Soldaten")
+	end
+	when button or info begin
+	    say_title("Die Beseitigung der Weißer-Eid-Soldaten")
+	    say("")
+	    say("Es ist viel Zeit vergangen seit ich die")
+	    say("Testaufgaben vom Wanderer bekam. Nun denkt er ich")
+	    say("kann ihm helfen. Die Beseitigung der")
+	    say("Weißer-Eid-Soldaten und die Schwarzwindsoldaten!")
+	    say("Irgendwie glaube ich das er mich aus privaten ")
+	    say("Gründen gebeten hat. Nun, ich wollte es so ")
+	    say("und werde seiner Bitte ohne zu fragen nachkommen. ")
+	    say("")
+	    say_reward("Beseitige die Weißer-Eid-Soldaten 100 Stück.")
+	end
+	when enter begin
+	    pc.setqf("kill_count", 0)
+	end
+	when leave begin
+	    pc.setqf("kill_count", 0)
+	    q.done()
+	end
+	when letter begin
+	    q.set_counter("Die Zahl des Weißer-Eid-Soldat", larbor_day.mission4_get_rest_count());
+	end
+	when 20041.chat."Nach der Aufgabe fragen" begin
+	    say("Der Wanderer:")
+	    say("")
+	    say("Nach Erledigung werde ich Dich wahrscheinlich")
+	    say("gut belohnen.")
+	    say("Toi toi toi! Nun geh.")
+	    say("")
+	end
+	when 301.kill begin
+	    local kill_count=pc.getqf("kill_count")+1
+	    pc.setqf("kill_count", kill_count)
+	    q.set_counter("Die übrige Zahl der Weißer-Eid-Soldat", larbor_day.mission4_get_rest_count());
+
+	    if larbor_day.mission4_is_end() then
+		say_title("Alle Weißer-Eid-Soldaten habe ich beseitigt")
+		say("Dann ist die Vernichtung der Schwarzwindsoldaten 100...")
+		say("")
+		set_state(mission5)
+	    end
+	end
+	function mission4_get_max_count()
+	    return 100
+	end
+	function mission4_get_rest_count()
+	    return math.max(0, larbor_day.mission4_get_max_count()-pc.getqf("kill_count"))
+	end
+	function mission4_is_completed()
+	    return pc.getqf("kill_count")>=larbor_day.mission4_get_max_count()
+	end
+	function mission4_is_end()
+	    return pc.getqf("kill_count")==larbor_day.mission4_get_max_count()
+	end
+    end
+    state mission5 begin
+	when letter begin
+	    send_letter("Vernichtung der Schwarzwindsoldaten")
+	end
+	when button or info begin
+            say_title("Vernichtung der Schwarzwindsoldaten")
+	    say("")
+	    say("Nach einem langen Test und der Beseitigung der")
+	    say("Weißer-Eid-Soldaten, soll ich noch die")
+	    say("Schwarzwindsoldaten vernichten.")
+	    say("")
+	    say_reward("Beseitige die Weißer-Eid-Soldaten 100 (erledigt)")
+	    say_reward("Vernichte die Schwarzwindsoldaten(Progress)")
+	end
+	when enter begin
+	    pc.setqf("kill_count", 0)
+	end
+	when leave begin
+	    pc.setqf("kill_count", 0)
+	    q.done()
+	end
+	when letter begin
+	    q.set_counter("Noch zu vernichtende Schwarzwindsoldaten", larbor_day.mission5_get_rest_count());
+	end
+	when 20041.chat."Nach die Aufgabe fragen" begin
+	    say("Der Wanderer:")
+	    say("")
+	    say("Eile Dich!! Es bleibt nicht viel Zeit.")
+	    say("Wenn du alles erledigt hast, komme")
+	    say("vorbei. Es wird gutes geschehen.")
+	    say("")
+	end
+	when 401.kill begin
+	    local kill_count=pc.getqf("kill_count")+1
+	    pc.setqf("kill_count", kill_count)
+	    q.set_counter("Noch zu vernichtende Schwarzwindsoldaten", larbor_day.mission5_get_rest_count());
+
+	    ---if laten larbor_day.mission5_is_end() then
+		---say_title("Vernichtung der Schwarzwindsoldaten erledigt")
+		---say("Nun muss ich zum Wanderer zurückkehren!")
+		---say("Ich habe mir die größte Mühe gegeben und daher kann ich ")
+		---say("schon gute Belohnung erwarten!")
+		---say("")
+		---set_state(report)
+	    ---end
+	end
+	function mission5_get_max_count()
+	    return 100
+	end
+	function mission5_get_rest_count()
+	    return math.max(0, larbor_day.mission5_get_max_count()-pc.getqf("kill_count"))
+	end
+	function mission5_is_completed()
+	    return pc.getqf("kill_count")>=larbor_day.mission5_get_max_count()
+	end
+	function mission5_is_end()
+	    return pc.getqf("kill_count")==larbor_day.mission5_get_max_count()
+	end
+    end
+end

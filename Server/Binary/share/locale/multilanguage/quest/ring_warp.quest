@@ -1,0 +1,95 @@
+quest ring_warp begin
+	state start begin
+		when 10031.sig_use begin
+		--	if pc.get_level() < item.get_value (0) then
+		--		say("·¹º§ÀÌ ³·¾Æ ¸ø°¡³×")
+		--		say("")
+		--		return
+		--	end
+		
+
+      local empire = pc.get_empire()
+
+			local max_use = item.get_value(0)
+			local n = item.get_socket (0)
+			if n >= max_use then
+				say (gameforge.ring_warp._010_say)
+				return
+			end
+			
+			local t = item.get_socket(1)
+			if t > get_global_time() then
+				say (string.format(gameforge.ring_warp._020_say, (t - get_global_time()) / 60 ))
+				return 
+			end
+			say(string.format(gameforge.ring_warp._030_say, max_use -n))
+			local sub_set = 0
+			
+			local town1={
+					gameforge.functions._100_say,
+					gameforge.functions._110_say,
+					gameforge.functions._120_say,
+				}
+			
+			local town2={
+					gameforge.functions._130_say,
+					gameforge.functions._140_say,
+					gameforge.functions._150_say,
+				}
+			sub_set = select(town1[empire],town2[empire],locale.map_name[64], locale.map_name[63], locale.map_name[61],locale.map_name[62],gameforge.locale.cancel)
+			if sub_set == 7 then -- ´Ý±â
+				return
+			end
+			
+			local warp = {
+				{ -- empire town -1
+				
+					{ 474300 , 954800 },
+					{ 63800 , 166400 },
+					{ 959900 , 269200 },
+				},
+				{ -- empire town -2
+					{ 353100 , 882900},
+					{ 145500 , 240000 },
+					{ 863900 , 246000 },
+					
+				},
+				-- 64 map_n_threeway
+				{
+					{ 402100, 673900 },
+					{ 270400, 739900 },
+					{ 321300, 808000 },
+				},
+				-- 63 metin2_map_n_desert_01
+				{
+					{ 217800, 627200 },
+					{ 221900, 502700 },
+					{ 344000, 502500 },
+				},
+				-- 61 map_n_snowm_01
+				{
+					{ 434200, 290600 },
+					{ 375200, 174900 },
+					{ 491800, 173600 },
+				},
+				-- 62 metin2_map_n_flame_01
+				{
+					{ 599400, 756300 },
+					{ 597800, 622200 },
+					{ 730700, 689800 },
+				},
+			}
+
+			if not pc.warp(warp[sub_set][empire][1], warp[sub_set][empire][2]) then
+				return
+			end
+
+			item.set_socket(1, get_global_time() + item.get_value(1))
+			if n == max_use - 1 then
+				item.remove()
+			else
+				item.set_socket(0, n + 1)
+			end
+		end --when
+ 	end -- end_of_state
+end -- end_of_quest

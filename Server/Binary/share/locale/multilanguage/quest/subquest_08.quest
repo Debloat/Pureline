@@ -1,0 +1,254 @@
+quest subquest_8 begin
+	state start begin
+		when login or levelup with pc.level >= 15 and pc.level <= 20 begin
+			set_state(information)
+		end
+
+	end
+
+	state information begin
+		when letter begin
+
+			local v = find_npc_by_vnum(20003)
+
+			if v != 0 then
+				target.vid("__TARGET__", v, gameforge.subquest_08._10_targetVid)
+			end
+		end
+
+
+		when __TARGET__.target.click or	20003.chat.gameforge.subquest_08._10_targetVid with pc.level >= 15 begin
+			target.delete("__TARGET__")
+
+			say_title(gameforge.npc_talk._580_sayTitle)
+			say(gameforge.subquest_08._20_say)
+
+			local s= select(gameforge.subquest_08._30_select, gameforge.find_brother_article._100_select)
+			if 2==s then
+				say(gameforge.subquest_08._40_say)
+				local a= select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
+				if  2==a then
+					say_title(gameforge.npc_talk._580_sayTitle)
+					say(gameforge.subquest_08._50_say)
+					return
+				end
+                                say_title(gameforge.npc_talk._580_sayTitle)
+				say(gameforge.subquest_08._60_say)
+				set_state(__GIVEUP__)
+				return
+			end
+			say_title(gameforge.npc_talk._580_sayTitle)
+			say(gameforge.subquest_08._70_say)
+			set_state(ask_for_ricecake)
+
+		end
+	end
+
+	state ask_for_ricecake begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.subquest_08._80_makequestbutton)
+			q.set_title(gameforge.subquest_08._80_makequestbutton)
+			q.start()
+
+			local v=find_npc_by_vnum(9001)
+			if 0==v then
+			else
+				target.vid("__TARGET__",v, gameforge.subquest_08._90_targetVid)
+			end
+
+		end
+
+		when info or button begin
+			say_title(gameforge.subquest_08._80_makequestbutton)
+						say_reward(gameforge.subquest_08._100_sayReward)
+					end
+
+		when __TARGET__.target.click or	9001.chat.gameforge.subquest_08._110_npcChat begin
+			target.delete("__TARGET__")
+			say_title(gameforge.subquest_08._120_sayTitle)
+			say(gameforge.subquest_08._130_say)
+
+			set_state(ask_for_ricecake2)
+		end
+	end
+
+	state ask_for_ricecake2 begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.subquest_08._140_makequestbutton)
+			q.set_title(gameforge.subquest_08._140_makequestbutton)
+			q.start()
+
+			local v= find_npc_by_vnum(20008)
+			if 0==v then
+			else
+				target.vid("__TARGET__",v, gameforge.subquest_08._140_makequestbutton)
+			end
+
+		end
+
+		when info or button begin
+			say_title(gameforge.subquest_08._140_makequestbutton)
+						say_reward(gameforge.subquest_08._150_sayReward)
+					end
+
+		when __TARGET__.target.click or	20008.chat.gameforge.subquest_08._110_npcChat begin
+			target.delete("__TARGET__")
+			say_title(gameforge.subquest_06._320_sayTitle)
+			say(gameforge.subquest_08._160_say)
+			local s= select(gameforge.subquest_05._70_select, gameforge.subquest_08._170_select)
+			if 2==s then
+				say(gameforge.subquest_01._360_say)
+				local a= select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
+				if  2==a then
+					say_title(gameforge.subquest_06._320_sayTitle)
+					say(gameforge.subquest_08._180_say)
+					return
+				end
+				say_title(gameforge.subquest_06._320_sayTitle)
+				say(gameforge.subquest_08._190_say)
+				set_state(__GIVEUP__)
+				return
+			end
+
+			say_title(gameforge.subquest_06._320_sayTitle)
+			say(gameforge.subquest_08._200_say)
+			set_state(ask_for_ricecake3)
+		end
+	end
+
+	state ask_for_ricecake3 begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.subquest_08._210_makequestbutton)
+			q.set_title(gameforge.subquest_08._210_makequestbutton)
+			q.start()
+
+			local v=find_npc_by_vnum(20012)
+			if 0==v then
+			else
+				target.vid("__TARGET__",v, gameforge.subquest_08._220_targetVid)
+			end
+
+		end
+
+		when info or button begin
+			say_title(gameforge.subquest_08._210_makequestbutton)
+						say(gameforge.subquest_08._230_sayReward)
+					end
+
+		when __TARGET__.target.click or	20012.chat.gameforge.subquest_08._110_npcChat begin
+			target.delete("__TARGET__")
+			say_title(gameforge.subquest_08._240_sayTitle)
+			say(gameforge.subquest_08._250_say)
+
+			set_state(ask_for_ricecake4)
+		end
+	end
+
+	state ask_for_ricecake4 begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.subquest_08._260_makequestbutton)
+			q.set_title(gameforge.subquest_08._260_makequestbutton)
+			q.start()
+
+			local v=find_npc_by_vnum(20014)
+			if 0==v then
+			else
+				target.vid("__TARGET__",v, gameforge.subquest_08._260_makequestbutton)
+			end
+
+		end
+
+		when info or button begin
+			say_title(gameforge.subquest_08._260_makequestbutton)
+            say(gameforge.subquest_08._270_sayReward)
+		end
+
+
+		when __TARGET__.target.click or	20014.chat.gameforge.subquest_08._280_npcChat begin
+			target.delete("__TARGET__")
+			say_title(gameforge.npc_talk._680_sayTitle)
+			say(gameforge.subquest_08._290_say)
+
+			set_state(report_to_girl)
+		end
+	end
+
+	state report_to_girl begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.subquest_08._300_makequestbutton)
+			q.set_title(gameforge.subquest_08._300_makequestbutton)
+			q.start()
+
+			local v=find_npc_by_vnum(20012)
+			if 0==v then
+			else
+				target.vid("__TARGET__",v, gameforge.subquest_08._310_targetVid)
+			end
+
+		end
+
+		when info or button begin
+			say_title(gameforge.subquest_08._300_makequestbutton)
+            say(gameforge.subquest_08._320_sayReward)
+		end
+
+
+		when __TARGET__.target.click or	20012.chat.gameforge.subquest_08._110_npcChat begin
+			target.delete("__TARGET__")
+			say_title(gameforge.subquest_08._240_sayTitle)
+			say(gameforge.subquest_08._330_say)
+
+			set_state(reward_go)
+		end
+	end
+
+	state reward_go begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.subquest_08._340_makequestbutton)
+			q.set_title(gameforge.subquest_08._340_makequestbutton)
+			q.start()
+
+			local v=find_npc_by_vnum(20003)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, gameforge.subquest_08._350_targetVid)
+			end
+
+		end
+
+		when info or button begin
+			say_title(gameforge.subquest_08._340_makequestbutton)
+            say(gameforge.subquest_08._360_sayReward)
+		end
+
+		when __TARGET__target.click or	20003.chat.gameforge.subquest_08._370_npcChat begin
+			target.delete("__TARGET__")
+			say_title(gameforge.npc_talk._580_sayTitle)
+			say(gameforge.subquest_08._380_say)
+
+			pc.give_exp2(26000)
+			set_quest_state("levelup","run")
+			pc.change_money(10000)
+
+                        say_title(gameforge.collect_herb_lv4._130_sayTitle)
+                        			say_reward(gameforge.subquest_08._390_sayReward)
+			
+			clear_letter()
+			set_state(__COMPLETE__)
+		end
+	end
+	state __GIVEUP__ begin
+	end
+
+	state __COMPLETE__ begin
+		when enter begin
+			q.done()
+		end
+	end
+end

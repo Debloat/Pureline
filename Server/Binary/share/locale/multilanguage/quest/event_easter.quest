@@ -1,0 +1,452 @@
+quest event_easter begin
+	state start begin
+		function is_running()
+			return (game.get_event_flag("easter_drop") > 0)
+		end
+		
+		function has_rabbit()
+			return (game.get_event_flag("easter_rabbit") > 0)
+		end
+	
+		function get_settings()
+			local spawnPromille = game.get_event_flag("easter_spawn_chance")
+			if spawnPromille <= 0 then
+				spawnPromille = 5
+			end
+			return {
+				["eggvnums"] = {
+					["first"] = 50160,
+					["last"] = 50179,
+				},
+				["baskets"] = {
+					["full"] = 50181,
+					["empty"] = 50180,
+				},
+				["metins"] = {
+					[8041] = 10,
+					[8042] = 20,
+					[8043] = 30,
+					[8044] = 40,
+					[8045] = 50,
+					[8046] = 60,
+					[8047] = 70,
+					[8048] = 80,
+					[8049] = 90,
+					[8050] = 95
+				},
+				["max_level_difference"] = 15,
+				["rabbit"] = 30129,
+				["spawn"] = {
+					["kill"] = 50,
+					["cooldown"] = 3600, 
+					["promille"] = spawnPromille,
+					["maps"] = {
+						[1] = {
+							[10] = {1, 3, 4, 69},
+							[20] = {1, 3, 4, 5, 69},
+							[30] = {3, 4, 5, 63, 64, 108},
+							[40] = {63, 64, 108, 65},
+							[50] = {63, 64, 108, 65, 61, 107, 109},
+							[60] = {65, 61, 107, 109, 62, 67, 69, 71, 70},
+							[70] = {65, 61, 62, 67, 69, 71, 70, 68, 72, 73},
+							[80] = {67, 69, 70, 68, 72},
+							[90] = {70, 68, 72, 73},
+							[95] = {70, 68, 73},
+						},
+						[2] = {
+							[10] = {21, 23, 24, 69},
+							[20] = {21, 23, 24, 25, 69},
+							[30] = {23, 24, 25, 63, 64, 108},
+							[40] = {63, 64, 108, 65},
+							[50] = {63, 64, 108, 65, 61, 107, 109},
+							[60] = {65, 61, 107, 109, 62, 67, 69, 71, 70},
+							[70] = {65, 61, 62, 67, 69, 71, 70, 68, 72, 73},
+							[80] = {67, 69, 70, 68, 72},
+							[90] = {70, 68, 72, 73},
+							[95] = {70, 68, 73},
+
+						},
+						[3] = {
+							[10] = {41, 43, 44, 69},
+							[20] = {41, 43, 44, 45, 69},
+							[30] = {43, 44, 45, 63, 64, 108},
+							[40] = {63, 64, 108, 65},
+							[50] = {63, 64, 108, 65, 61, 107, 109},
+							[60] = {65, 61, 107, 109, 62, 67, 69, 71, 70},
+							[70] = {65, 61, 62, 67, 69, 71, 70, 68, 72, 73},
+							[80] = {67, 69, 70, 68, 72},
+							[90] = {70, 68, 72, 73},
+							[95] = {70, 68, 73},
+						},
+					},
+				},
+			}
+		end
+
+		function get_reward_table_for_item()
+			-- for each level range there is a different reward
+			local playerlevel = pc.get_level()
+			if playerlevel <= 18 then
+				return {
+					{27002, 13},
+					{27005, 13},
+					{27100, 8},
+					{27103, 8},
+					{50721, 4},
+					{30053, 9, 20},
+					{30073, 9, 20},
+					{30033, 9, 20},
+					{30010, 9, 20},
+					{30031, 9, 20},
+					{30032, 9, 20}
+				}
+			elseif playerlevel > 18 and playerlevel <= 30 then
+				return {
+					{27002, 18},
+					{27005, 18},
+					{27100, 7},
+					{27103, 7},
+					{27101, 3},
+					{27104, 3},
+					{50721, 8},
+					{50722, 8},
+					{50723, 8},
+					{50724, 8},
+					{50300, 2, 20},
+					{30196, 5, 20},
+					{30090, 5, 20}
+				}
+			elseif playerlevel > 30 and playerlevel <= 52 then
+				return {
+					{27101, 8},
+					{27104, 8},
+					{27003, 17},
+					{27006, 17},
+					{27102, 3},
+					{27105, 3},
+					{50721, 5},
+					{50722, 5},
+					{50723, 5},
+					{50724, 5},
+					{50725, 5},
+					{50726, 5},
+					{50727, 5},
+					{50728, 5},
+					{50300, 1, 20},
+					{30195, 4, 20},
+					{30197, 4, 20},
+					{30193, 3, 20}
+				} 
+			elseif playerlevel > 53 and playerlevel <= 74 then
+				return {
+					{27003, 14},
+					{27006, 14},
+					{27102, 9},
+					{27105, 9},
+					{50721, 5},
+					{50722, 5},
+					{50723, 5},
+					{50724, 5},
+					{50725, 5},
+					{50726, 5},
+					{50727, 5},
+					{50728, 5},
+					{50300, 1, 20},
+					{30198, 4, 20},
+					{30199, 4, 20},
+					{08005, 3},
+				}
+			else
+				return {
+					{27102, 11},
+					{27105, 11},
+					{50091, 15},
+					{50092, 15},
+					{50093, 15},
+					{50094, 15},
+					{50300, 4, 20},
+					{50060, 6, 20},
+					{08005, 4},
+					{30196, 2, 20},
+					{30090, 2, 20},
+					{30195, 2, 20},
+					{30197, 2, 20},
+					{30198, 2, 20},
+					{30199, 2, 20}
+				}
+			end
+		end
+		
+		function get_reward_for_basket()
+			local reward_table = {
+				{70102, 6},
+				{27808, 12},
+				{27816, 12},
+				{27992, 8},
+				{27993, 6},
+				{27994, 4},
+				{27987, 8},
+				{72018, 3},
+				{71113, 4},
+				{71004, 3},
+				{71012, 3},
+				{71083, 3},
+				{70035, 4},
+				{70038, 2},
+				{71029, 6},
+				{71030, 6},
+				{71094, 5},
+				{25040, 5}
+			}
+			return get_random_vnum_from_table(reward_table)
+		end
+		
+		function get_reward_amount_for_vnum(reward_table, vnum_to_search)
+			local amount_needed = 1
+			table.foreachi(reward_table, 
+				function(index, item)
+					local itemVnum = item[1]
+					if itemVnum == vnum_to_search then
+						if table.getn(item) > 2 then
+							amount_needed = item[3]
+						else
+							amount_needed = 1
+						end
+						return
+					end
+				end
+			)
+			return amount_needed
+		end
+		
+		function get_number_of_eggs()
+			local settings = event_easter.get_settings()
+			return count_item_range(settings.eggvnums.first, settings.eggvnums.last) 
+		end
+	
+		function get_random_reward_vnum(reward_table)
+			local temp_table = {}
+			local easterEggCount = event_easter.get_number_of_eggs()
+			table.foreachi(reward_table, 
+				function(index, item)
+					local itemProbability = item[2]
+					local itemVnum = item[1]
+					local meetsAmountLimit = true
+					-- check if we need more than one easter egg
+					if table.getn(item) > 2 then 
+						if easterEggCount < item[3] then
+							-- player does not have enough eggs for this item
+							meetsAmountLimit = false
+						end
+					end
+					if meetsAmountLimit then
+						for amount = 1, itemProbability do
+							table.insert(temp_table, itemVnum)
+						end
+					end
+				end
+			)
+			return temp_table[math.random(table.getn(temp_table))]
+		end
+		
+		function spawn_metin(level, empire)
+			if pc.is_gm() then
+				return
+			end
+			
+			local settings = event_easter.get_settings()
+			if level >= 10 and level < 95 then
+				level = math.floor(level / 10) * 10
+			elseif level >= 95 then
+				level = 95
+			else
+				return
+			end
+			local randomMap = math.random(table.getn(settings.spawn.maps[empire][level]))
+			local mapNumber = settings.spawn.maps[empire][level][randomMap]
+			regen_in_map(mapNumber, "locale/_master/map/easter/metin_regen_level" .. level .. ".txt")
+			
+			-- We have show a notice when logging is enabled (1)
+			local logging = game.get_event_flag("easter_logging")
+			if logging == 1 then
+				notice(string.format("metin spawn in map %d, level: %d", mapNumber, level))
+			end
+		end
+		
+		function spawn_metin_at_login()
+			local settings = event_easter.get_settings()
+			
+			local timestamp = get_global_time()
+			local cooldownRemaining = pc.getqf("cooldown") + settings.spawn.cooldown - timestamp
+			if cooldownRemaining <= 0 then
+				pc.setqf("cooldown", timestamp)
+				if cooldownRemaining > -43200 then 
+					if math.random(1000) <= settings.spawn.promille then
+						event_easter.spawn_metin(pc.get_level(), pc.get_empire())
+					end
+				end
+			end
+		end
+		
+		
+		function metin_killed(vnum)
+			local settings = event_easter.get_settings()
+			local level = settings.metins[vnum]
+			event_easter.spawn_metin_at_login()
+			if level < pc.get_level() - settings.max_level_difference then
+				-- don't drop an egg when the player who killed the easter egg is more than 15 levels higher
+				event_easter.spawn_metin(level, pc.get_empire())
+			else
+				game.drop_item_with_ownership(settings.baskets.full, 1) -- full basket
+				if math.random(1, 100) <= settings.spawn.kill then
+					event_easter.spawn_metin(level, pc.get_empire())
+				end
+			end
+		end
+		
+		when login or enter with event_easter.has_rabbit() begin
+			-- spawn rabbit if he is not there
+			local settings = event_easter.get_settings()
+			local mapIndex = pc.get_map_index()
+			if mapIndex == 1 or mapIndex == 21 or mapIndex == 41 then
+				if find_npc_by_vnum(settings.rabbit) == 0 then
+					if mapIndex == 1 then
+						mob.spawn(settings.rabbit, 591, 472, 1, 1, 1)
+					elseif mapIndex == 21 then
+						mob.spawn(settings.rabbit, 517, 742, 1, 1, 1)
+					elseif mapIndex == 41 then
+						mob.spawn(settings.rabbit, 306, 828, 1, 1, 1)
+					end
+				end
+			end
+		end
+		
+		when login or enter with event_easter.is_running() begin
+			
+			event_easter.spawn_metin_at_login()			
+		end
+
+		-- "Was machst du hier?"
+		--when 30129.chat.gameforge.event_easter._010_chat with event_easter.get_number_of_eggs() == 0 begin
+		when 30129.chat.gameforge.main_quest_lv2._10_npcChat with event_easter.get_number_of_eggs() == 0 begin
+			event_easter.spawn_metin_at_login()
+			say_title(gameforge.event_easter._020_sayTitle) -- "Osterhase: "
+			say(gameforge.event_easter._030_say) -- "Ich verstecke Ostereier. Wenn du welche findest und mir zurück bringst, belohne ich dich toll!"
+			say(gameforge.event_easter._035_say)
+			if not event_easter.has_rabbit() then
+				-- purge the rabbit if the event has finished
+				npc.purge()
+			end
+		end
+		
+		 -- "Ich hab Eier gefunden!"
+		when 30129.chat.gameforge.event_easter._040_chat with event_easter.get_number_of_eggs() > 0 begin
+			event_easter.spawn_metin_at_login()
+			local settings = event_easter.get_settings()
+			
+			local reward_table = event_easter.get_reward_table_for_item()
+			local amount_to_remove = 0
+			local amount_to_give = 0
+			local vnum_to_give = 0
+			local number_of_eggs = event_easter.get_number_of_eggs()
+			local wants_items = 2
+			while wants_items == 2 do
+				say_title(gameforge.event_easter._020_sayTitle) -- "Osterhase: "
+				vnum_to_give = event_easter.get_random_reward_vnum(reward_table)
+				local amount_needed = event_easter.get_reward_amount_for_vnum(reward_table, vnum_to_give)
+				if amount_needed == 20 then
+					amount_to_remove = 20
+					amount_to_give = 1
+					say(string.format(gameforge.event_easter._050_say, amount_to_give)) -- "Ich gebe dir %d hiervon:"
+					say_item_vnum(vnum_to_give)
+					say(string.format(gameforge.event_easter._065_say, amount_to_remove)) -- "Dafür musst du mir %d Eier geben! Möchtest du das tun?"
+					say("")
+					-- "Okay, das nehme ich!" / "Nein, das will ich nicht!"
+					wants_items = select(gameforge.event_easter._070_select, gameforge.event_easter._071_select)
+				else
+					if number_of_eggs > 20 then
+						amount_to_remove = 20
+					else
+						amount_to_remove = number_of_eggs
+					end
+					if vnum_to_give < 27200 then
+						amount_to_give = amount_to_remove * 3
+					else
+						amount_to_give = amount_to_remove * 5
+					end
+					say(string.format(gameforge.event_easter._050_say, amount_to_give)) -- "Ich gebe dir %d hiervon:"
+					say_item_vnum(vnum_to_give)
+					say(string.format(gameforge.event_easter._060_say, amount_to_remove)) -- "Dafür musst du mir %d Eier geben!"
+					wants_items = 1
+				end
+				
+			end
+			if (remove_item_range(amount_to_remove, settings.eggvnums.first, settings.eggvnums.last)) then
+				pc.give_item2(vnum_to_give, amount_to_give)
+			end
+			say_title(gameforge.event_easter._020_sayTitle) -- "Osterhase: "
+			say(gameforge.event_easter._080_say) -- "Danke für die Eier, ich hoffe du hast Spaß mit dem was du bekommen hast"
+			
+			if not event_easter.has_rabbit() then
+				-- purge the rabbit if the event has finished
+				npc.purge()
+			end
+		end
+		
+		when 8041.kill begin
+			event_easter.metin_killed(8041)
+		end
+		when 8042.kill begin
+			event_easter.metin_killed(8042)
+		end
+		when 8043.kill begin
+			event_easter.metin_killed(8043)
+		end
+		when 8044.kill begin
+			event_easter.metin_killed(8044)
+		end
+		when 8045.kill begin
+			event_easter.metin_killed(8045)
+		end
+		when 8046.kill begin
+			event_easter.metin_killed(8046)
+		end
+		when 8047.kill begin
+			event_easter.metin_killed(8047)
+		end
+		when 8048.kill begin
+			event_easter.metin_killed(8048)
+		end
+		when 8049.kill begin
+			event_easter.metin_killed(8049)
+		end
+		when 8050.kill begin
+			event_easter.metin_killed(8050)
+		end
+		
+		-- empty basket, not the right vnum right now
+		when 50180.use begin
+			event_easter.spawn_metin_at_login()
+			if event_easter.get_number_of_eggs() > 0 then
+				local settings = event_easter.get_settings()
+				-- remove one easter egg and the empty basket and give player a full basket
+				if (remove_item_range(1, settings.eggvnums.first, settings.eggvnums.last)) then
+					pc.remove_item(settings.baskets.empty)
+					pc.give_item2(settings.baskets.full, 1)
+				end
+			else
+				say_title(gameforge.event_easter._090_sayTitle) -- "Leerer Korb: "
+				say(gameforge.event_easter._100_say) -- "Du hast kein Osterei, das du in den Korb legen könntest."
+			end
+		end
+		
+		-- full basket, not the right
+		when 50181.use begin
+			event_easter.spawn_metin_at_login()
+			local settings = event_easter.get_settings()
+			pc.remove_item(settings.baskets.full)
+			pc.give_item2(event_easter.get_reward_for_basket(), 1)
+		end
+		
+	end
+end

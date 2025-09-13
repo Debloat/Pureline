@@ -1,0 +1,553 @@
+--2013.02.12 김용욱
+
+--퀘스트 진행 npc
+define YACKHWAN 	20377 -- 약령도장 약환
+define SCHOLAR 		20380 -- 학자
+define ALCHEMIST 	20001 -- 연금술사
+define BLACKSMITH 	20016 -- 대장장이
+define YUHWAN		20017 -- 유환
+
+define MOB1_1 6091 -- 염왕 야마천
+define DUNGEON_MAP_INDEX 351
+
+quest main_quest_flame_lv105 begin
+	state start begin
+	end
+	state state0 begin
+		when login or levelup or enter with pc.level >= 105 begin
+			set_state (state1_1)
+		end
+	end
+	
+	-- 격전의 시작
+	state state1_1 begin 
+		when letter begin 
+			send_letter(gameforge.main_quest_flame_lv105._010_sendLetter) 
+ 			--npc 타겟 
+			local v = find_npc_by_vnum(YACKHWAN) 
+			if 0 != v then
+				target.vid("__TARGET__", v, mob_name(YACKHWAN))
+			end
+		end
+
+		when button or info begin 
+			say_title(gameforge.main_quest_flame_lv105._010_sendLetter) 
+			say(gameforge.main_quest_flame_lv105._020_say) 
+			--npc 타겟 안내문
+			--say_reward(locale.target_npc_info) 
+		end
+
+		when YACKHWAN.chat.gameforge.main_quest_flame_lv105._010_sendLetter begin 
+			target.delete("__TARGET__") 
+			pc.remove_item(31083, 3)
+			say_title(mob_name(YACKHWAN)) 
+			say(gameforge.main_quest_flame_lv105._030_say) 
+			wait()--추가 대화 
+
+			say_title(pc.getname()) 
+			say(gameforge.main_quest_flame_lv105._040_say) 
+			wait()--추가 대화 
+
+			say_title(mob_name(YACKHWAN)) 
+			say(gameforge.main_quest_flame_lv105._050_say) 
+			wait()--추가 대화 
+
+			say_title(mob_name(YACKHWAN)) 
+			say(gameforge.main_quest_flame_lv105._060_say) 
+			wait()--추가 대화 
+
+			say_title(pc.getname()) 
+			say(gameforge.main_quest_flame_lv105._070_say) 
+			--다음 스테이트로
+			set_state (state1_2)
+		end
+
+		when leave begin 
+			--q.done()
+		end
+	end
+	state state1_2 begin 
+		when enter begin 
+			--몬스터 처치 수 설정
+			pc.setqf("kill_count_1", 0)
+			pc.setqf("kill_count_2", 0)
+			pc.setqf("kill_count_3", 0)
+			pc.setqf("kill_count_4", 0)
+			pc.setqf("kill_count_5", 0)
+			-- notice 설정
+			notice_multiline(gameforge.main_quest_flame_lv105._080_notice,notice)
+		end
+
+		when letter begin 
+			send_letter(gameforge.main_quest_flame_lv105._010_sendLetter) 
+ 			--남은 처치 수 안내문 
+			q.set_counter_name(gameforge.main_quest_lv98._680_counterName)
+			main_quest_flame_lv105.kill_count_state1_2() 
+		end
+
+		when button or info begin 
+			say_title(gameforge.main_quest_flame_lv105._090_sayTitle) 
+			say(gameforge.main_quest_flame_lv105._100_say) 
+			--남은 처치 수 안내문
+			say(gameforge.main_quest_lv98._680_counterName)
+			local remain1 = 10 - pc.getqf("kill_count_1")
+			if remain1 < 0 then
+				remain1 = 0
+			end
+			local remain2 = 10 - pc.getqf("kill_count_2")
+			if remain2 < 0 then
+				remain2 = 0
+			end
+			local remain3 = 10 - pc.getqf("kill_count_3")
+			if remain3 < 0 then
+				remain3 = 0
+			end
+			local remain4 = 10 - pc.getqf("kill_count_4")
+			if remain4 < 0 then
+				remain4 = 0
+			end
+			local remain5 = 10 - pc.getqf("kill_count_5")
+			if remain5 < 0 then
+				remain5 = 0
+			end
+			say(string.format(gameforge.main_quest_lv98._690_sayReward ,mob_name(6005), remain1,mob_name(6006), remain2))
+			say(string.format(gameforge.main_quest_lv98._690_sayReward ,mob_name(6007), remain3,mob_name(6008), remain4))
+			say(string.format(gameforge.main_quest_lv98._670_sayReward,mob_name(6009), remain5))
+			say_reward(gameforge.main_quest_flame_lv105._110_sayReward)
+		end
+
+		when YACKHWAN.chat.gameforge.main_quest_flame_lv105._010_sendLetter begin 
+			say_title(mob_name(YACKHWAN)) 
+			say(gameforge.main_quest_flame_lv105._120_say) 
+		end
+
+		when 6005.kill begin
+			local kill_count = pc.getqf("kill_count_1")
+			pc.setqf("kill_count_1", kill_count+1)
+			main_quest_flame_lv105.kill_count_state1_2() 
+		end
+
+		when 6006.kill begin
+			local kill_count = pc.getqf("kill_count_2")
+			pc.setqf("kill_count_2", kill_count+1)
+			main_quest_flame_lv105.kill_count_state1_2() 
+		end
+
+		when 6007.kill begin
+			local kill_count = pc.getqf("kill_count_3")
+			pc.setqf("kill_count_3", kill_count+1)
+			main_quest_flame_lv105.kill_count_state1_2() 
+		end
+
+		when 6008.kill begin
+			local kill_count = pc.getqf("kill_count_4")
+			pc.setqf("kill_count_4", kill_count+1)
+			main_quest_flame_lv105.kill_count_state1_2() 
+		end
+
+		when 6009.kill begin
+			local kill_count = pc.getqf("kill_count_5")
+			pc.setqf("kill_count_5", kill_count+1)
+			main_quest_flame_lv105.kill_count_state1_2() 
+		end
+
+		function kill_count_state1_2()
+			local total_remain = 0
+			local remain1 = 10 - pc.getqf("kill_count_1")
+			if remain1 < 0 then
+				remain1 = 0
+			end
+			total_remain = total_remain + remain1
+			local remain2 = 10 - pc.getqf("kill_count_2")
+			if remain2 < 0 then
+				remain2 = 0
+			end
+			total_remain = total_remain + remain2
+			local remain3 = 10 - pc.getqf("kill_count_3")
+			if remain3 < 0 then
+				remain3 = 0
+			end
+			total_remain = total_remain + remain3
+			local remain4 = 10 - pc.getqf("kill_count_4")
+			if remain4 < 0 then
+				remain4 = 0
+			end
+			total_remain = total_remain + remain4
+			local remain5 = 10 - pc.getqf("kill_count_5")
+			if remain5 < 0 then
+				remain5 = 0
+			end
+			total_remain = total_remain + remain5
+			q.set_counter_value(total_remain)
+			if total_remain == 0 then
+				set_state ("state1_3")
+			end
+		end
+
+		when leave begin 
+			pc.setqf("kill_count_1", 0)
+			pc.setqf("kill_count_2", 0)
+			pc.setqf("kill_count_3", 0)
+			pc.setqf("kill_count_4", 0)
+			pc.setqf("kill_count_5", 0)
+			--q.done()
+		end
+	end
+	state state1_3 begin 
+		when enter begin 
+			-- notice 설정
+			notice_multiline(gameforge.main_quest_flame_lv105._130_notice,notice)
+		end
+
+		when letter begin 
+			send_letter(gameforge.main_quest_flame_lv105._010_sendLetter) 
+ 			--npc 타겟 
+			local v = find_npc_by_vnum(YACKHWAN) 
+			if 0 != v then
+				target.vid("__TARGET__", v, mob_name(YACKHWAN))
+			end
+		end
+
+		when button or info begin 
+			say_title(gameforge.main_quest_flame_lv105._010_sendLetter) 
+			say(gameforge.main_quest_flame_lv105._140_say) 
+			--npc 타겟 안내문
+			--say_reward(locale.target_npc_info) 
+		end
+
+		when YACKHWAN.chat.gameforge.main_quest_flame_lv105._010_sendLetter begin 
+			target.delete("__TARGET__") 
+			say_title(mob_name(YACKHWAN)) 
+			say(gameforge.main_quest_flame_lv105._150_say) 
+			--보상
+			wait()--reward
+
+			say_reward(string.format(gameforge.main_quest_lv60._190_sayReward, 48584000))
+			pc.give_exp2(48584000)
+			say_reward(string.format(gameforge.main_quest_lv60._200_sayReward, 174000))
+			pc.change_money(174000)
+			say_reward(string.format(gameforge.main_quest_lv60._210_sayReward, item_name(71095),1))
+			pc.give_item2(71095, 1)
+			say_reward(string.format(gameforge.main_quest_lv60._210_sayReward, item_name(30033),3)) --	깨진 사기그릇
+			pc.give_item2(30033, 3)
+			say()
+			--다음 스테이트로
+			set_state (state2_1)
+		end
+
+		when leave begin 
+			--q.done()
+		end
+	end
+	
+	-- 은원
+	state state2_1 begin 
+		when letter begin 
+			send_letter(gameforge.main_quest_flame_lv105._160_sendLetter) 
+ 			--npc 타겟 
+			local v = find_npc_by_vnum(YACKHWAN) 
+			if 0 != v then
+				target.vid("__TARGET__", v, mob_name(YACKHWAN))
+			end
+		end
+
+		when button or info begin 
+			say_title(gameforge.main_quest_flame_lv105._160_sendLetter) 
+			say(gameforge.main_quest_flame_lv105._020_say) 
+			--npc 타겟 안내문
+			--say_reward(locale.target_npc_info) 
+		end
+
+		when YACKHWAN.chat.gameforge.main_quest_flame_lv105._160_sendLetter begin 
+			target.delete("__TARGET__") 
+			say_title(mob_name(YACKHWAN)) 
+			say(gameforge.main_quest_flame_lv105._170_say) 
+			wait()--추가 대화 
+
+			say_title(mob_name(YACKHWAN)) 
+			say(gameforge.main_quest_flame_lv105._180_say) 
+			wait()--추가 대화 
+
+			say_title(pc.getname()) 
+			say(gameforge.main_quest_flame_lv105._070_say) 
+			--다음 스테이트로
+			set_state (state2_2)
+		end
+
+		when leave begin 
+			--q.done()
+		end
+	end
+	state state2_2 begin 
+		when enter begin 
+			--몬스터 처치 수 설정
+			pc.setqf("kill_count_1", 0)
+			-- notice 설정
+			notice_multiline(gameforge.main_quest_flame_lv105._190_notice,notice)
+		end
+
+		when letter begin 
+			send_letter(gameforge.main_quest_flame_lv105._160_sendLetter) 
+ 			--남은 처치 수 안내문 
+			q.set_counter_name(gameforge.main_quest_lv98._680_counterName)
+			
+			-- 파티원에 의해 야마천을 잡았을 때, 퀘스트가 클리어 되도록 하는 코드.
+			if party.is_party() then
+				local map_index = pc.get_map_index()
+				-- 적룡성에 입장했다는 것을 기록함.
+				if map_index >= DUNGEON_MAP_INDEX * 10000 and  map_index < (DUNGEON_MAP_INDEX + 1) *10000 then
+					pc.setqf("in_dungeon", 1)
+				else -- 적룡성으로 부터 나왔을때, 보스를 잡고 나왔으면 퀘스트를 클리어 해준다.
+					if pc.getqf("in_dungeon") == 1 then
+						if party.getf("flame_dungeon_boss_kill_count") == 1 then
+							set_state (state2_3)
+						end
+						pc.setqf("in_dungeon", 0)
+					end
+				end
+			end
+			
+			main_quest_flame_lv105.kill_count_state2_2() 
+		end
+		
+		when logout begin 
+			if party.is_party() then
+				if party.getf("flame_dungeon_boss_kill_count") == 0 then
+					pc.setqf("in_dungeon", 0)
+				end
+			end
+		end
+
+		when button or info begin 
+			say_title(gameforge.main_quest_flame_lv105._200_sayTitle) 
+			say(gameforge.main_quest_flame_lv105._210_say) 
+			--남은 처치 수 안내문
+			say(gameforge.main_quest_lv98._680_counterName)
+			say(string.format(gameforge.main_quest_lv98._670_sayReward,mob_name(MOB1_1), 1 - pc.getqf("kill_count_1")))
+			say_reward(gameforge.main_quest_flame_lv105._110_sayReward)
+		end
+
+		when YACKHWAN.chat.gameforge.main_quest_flame_lv105._160_sendLetter begin 
+			say_title(mob_name(YACKHWAN)) 
+			say(gameforge.main_quest_flame_lv105._220_say) 
+		end
+
+		when MOB1_1.kill begin
+			local kill_count = pc.getqf("kill_count_1")
+			pc.setqf("kill_count_1", kill_count+1)
+			main_quest_flame_lv105.kill_count_state2_2() 
+		end
+
+		function kill_count_state2_2() 
+			local total_remain = 0
+			local remain1 = 1 - pc.getqf("kill_count_1")
+			if remain1 < 0 then
+				remain1 = 0
+			end
+			total_remain = total_remain + remain1
+			q.set_counter_value(total_remain)
+			if total_remain == 0 then
+				set_state ("state2_3")
+			end
+		end
+
+		when leave begin 
+			pc.setqf("kill_count_1", 0)
+			pc.setqf("in_dungeon", 0)
+			--q.done()
+		end
+	end
+	state state2_3 begin 
+		when enter begin 
+			-- notice 설정
+			notice_multiline(gameforge.main_quest_flame_lv105._230_notice,notice)
+		end
+
+		when letter begin 
+			send_letter(gameforge.main_quest_flame_lv105._160_sendLetter) 
+ 			--npc 타겟 
+			local v = find_npc_by_vnum(YACKHWAN) 
+			if 0 != v then
+				target.vid("__TARGET__", v, mob_name(YACKHWAN))
+			end
+		end
+
+		when button or info begin 
+			say_title(gameforge.main_quest_flame_lv105._160_sendLetter) 
+			say(gameforge.main_quest_flame_lv105._140_say) 
+			--npc 타겟 안내문
+			--say_reward(locale.target_npc_info) 
+		end
+
+		when YACKHWAN.chat.gameforge.main_quest_flame_lv105._160_sendLetter begin 
+			target.delete("__TARGET__") 
+			say_title(mob_name(YACKHWAN)) 
+			say(gameforge.main_quest_flame_lv105._240_say) 
+			--보상
+			wait()--reward
+
+			say_reward(string.format(gameforge.main_quest_lv60._190_sayReward, 60583000))
+			pc.give_exp2(60583000)
+			say_reward(string.format(gameforge.main_quest_lv60._200_sayReward, 175000))
+			pc.change_money(175000)
+			say_reward(string.format(gameforge.main_quest_lv60._210_sayReward, item_name(71095),1))
+			pc.give_item2(71095, 1)
+			say_reward(string.format(gameforge.main_quest_lv60._210_sayReward, item_name(71026),1)) -- 현철
+			pc.give_item2(71026, 1)
+			say_reward(string.format(gameforge.main_quest_lv60._210_sayReward, item_name(71025),2)) -- 야공석
+			pc.give_item2(71025, 1)
+			pc.give_item2(71025, 1)
+			say_reward(string.format(gameforge.main_quest_lv60._210_sayReward, item_name(72001),1)) -- 경험의 반지
+			pc.give_item2_select(72001)
+			item.set_socket(2, 60)
+			say()
+			--다음 스테이트로
+			set_state (state3_1)
+		end
+
+		when leave begin 
+			--q.done()
+		end
+	end
+	
+	-- 적룡의 금제
+	state state3_1 begin 
+		when letter begin 
+			send_letter(gameforge.main_quest_flame_lv105._250_sendLetter) 
+ 			--npc 타겟 
+			local v = find_npc_by_vnum(YACKHWAN) 
+			if 0 != v then
+				target.vid("__TARGET__", v, mob_name(YACKHWAN))
+			end
+		end
+
+		when button or info begin 
+			say_title(gameforge.main_quest_flame_lv105._250_sendLetter) 
+			say(gameforge.main_quest_flame_lv105._020_say) 
+			--npc 타겟 안내문
+			--say_reward(locale.target_npc_info) 
+		end
+
+		when YACKHWAN.chat.gameforge.main_quest_flame_lv105._250_sendLetter begin 
+			target.delete("__TARGET__") 
+			say_title(mob_name(YACKHWAN)) 
+			say(gameforge.main_quest_flame_lv105._260_say) 
+			wait()--추가 대화 
+
+			say_title(mob_name(YACKHWAN)) 
+			say(gameforge.main_quest_flame_lv105._270_say) 
+			wait()--추가 대화 
+
+			say_title(pc.getname()) 
+			say(gameforge.main_quest_flame_lv105._070_say) 
+			--다음 스테이트로
+			say_reward(string.format(gameforge.main_quest_lv60._210_sayReward, item_name(31083),1))
+			pc.give_item2(31083, 1)
+			set_state (state3_2)
+		end
+
+		when leave begin 
+			--q.done()
+		end
+	end
+	state state3_2 begin 
+		when enter begin 
+			-- notice 설정
+			notice_multiline(gameforge.main_quest_flame_lv105._280_notice,notice)
+		end
+
+		when letter begin 
+			send_letter(gameforge.main_quest_flame_lv105._250_sendLetter) 
+			q.set_counter_name(gameforge.main_quest_flame_lv105._290_say)
+		end
+
+		when button or info begin 
+			say_title(gameforge.main_quest_flame_lv105._300_sayTitle) 
+			say(gameforge.main_quest_flame_lv105._310_say) 
+			
+			say_title(gameforge.main_quest_flame_lv105._290_say)
+			say(gameforge.main_quest_flame_lv105._320_say)
+			say()
+			say_reward(gameforge.main_quest_flame_lv105._110_sayReward)
+		end
+
+		when 20390.take with item.vnum == 31083 begin 
+			item.remove()
+			say_title(gameforge.main_quest_flame_lv105._330_sayTitle) 
+			say(gameforge.main_quest_flame_lv105._340_say) 
+			--다음 스테이트로
+			set_state (state3_3)
+		end
+
+		when leave begin 
+			--q.done()
+		end
+	end
+	state state3_3 begin 
+		when enter begin 
+			-- notice 설정
+			notice_multiline(gameforge.main_quest_flame_lv105._350_notice,notice)
+		end
+
+		when letter begin 
+			send_letter(gameforge.main_quest_flame_lv105._250_sendLetter) 
+ 			--npc 타겟 
+			local v = find_npc_by_vnum(YACKHWAN) 
+			if 0 != v then
+				target.vid("__TARGET__", v, mob_name(YACKHWAN))
+			end
+		end
+
+		when button or info begin 
+			say_title(gameforge.main_quest_flame_lv105._250_sendLetter) 
+			say(gameforge.main_quest_flame_lv105._140_say) 
+			--npc 타겟 안내문
+			--say_reward(locale.target_npc_info) 
+		end
+
+		when YACKHWAN.chat.gameforge.main_quest_flame_lv105._250_sendLetter begin 
+			target.delete("__TARGET__") 
+			say_title(mob_name(YACKHWAN)) 
+			say(gameforge.main_quest_flame_lv105._360_say) 
+			wait()--추가 대화 
+
+			say_title(pc.getname()) 
+			say(gameforge.main_quest_flame_lv105._370_say) 
+			wait()--추가 대화 
+
+			say_title(mob_name(YACKHWAN)) 
+			say(gameforge.main_quest_flame_lv105._380_say) 
+			--보상
+			wait()--reward
+
+			say_reward(string.format(gameforge.main_quest_lv60._190_sayReward, 48584000))
+			pc.give_exp2(177000)
+			say_reward(string.format(gameforge.main_quest_lv60._200_sayReward, 177000))
+			pc.change_money(177000)
+			say_reward(string.format(gameforge.main_quest_lv60._210_sayReward, item_name(72024),1))  -- 행운의 금화
+			pc.give_item2_select(72024)
+			item.set_socket(2, 180)
+			say_reward(string.format(gameforge.main_quest_lv60._210_sayReward, item_name(71094),1)) -- 선인의 교훈
+			pc.give_item2(71094, 1)
+			say_reward(string.format(gameforge.main_quest_lv60._210_sayReward, item_name(71001),5)) --	주안술서
+			pc.give_item2(71001, 5)
+			say()
+			--다음 스테이트로
+			set_state (__COMPLETE__)
+		end
+
+		when leave begin 
+			--q.done()
+		end
+	end
+	
+	
+	state __COMPLETE__ begin
+		when enter begin
+			--q.done()
+		end
+	end	
+	
+	
+	
+end

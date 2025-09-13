@@ -1,0 +1,28 @@
+quest heavens_cave_escape begin
+	state start begin
+		when login or levelup with pc.level >=75 begin
+			set_state(heavens_cave_escape)
+		end
+	end
+		
+	state heavens_cave_escape begin
+		when 20090.chat.gameforge.heavens_cave_escape._010_npcChat with pc.get_map_index() == 72 begin
+			say_title(gameforge.heavens_cave_escape._020_say_title)
+
+			say(gameforge.heavens_cave_escape._030_say)
+			local a= select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
+			if 1==a then
+				say_title(gameforge.heavens_cave_escape._020_say_title)
+
+				say(gameforge.heavens_cave_escape._040_say)
+				wait()
+				
+				pc.warp(284460, 810495)
+				return
+			end
+
+			say_title(gameforge.heavens_cave_escape._020_say_title)
+			say(gameforge.heavens_cave_escape._050_say)
+		end
+	end
+end

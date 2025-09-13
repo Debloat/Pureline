@@ -1,0 +1,12 @@
+#define LOCALE_SERVICE_EUROPE           // ½Ì°¡Æú
+#define ENABLE_COSTUME_SYSTEM
+#define ENABLE_ENERGY_SYSTEM
+#define ENABLE_DRAGON_SOUL_SYSTEM
+#define ENABLE_NEW_EQUIPMENT_SYSTEM
+//#define ENABLE_DISCORD_RPC
+
+//#define LSS_SECURITY_KEY        "1234abcd5678efgh"
+
+//#define CHECK_LATEST_DATA_FILES
+
+//#define USE_OPENID

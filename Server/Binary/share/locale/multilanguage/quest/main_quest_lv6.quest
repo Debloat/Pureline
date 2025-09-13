@@ -1,0 +1,150 @@
+quest main_quest_lv6 begin
+	state start begin
+	end
+	state run begin
+		when login or levelup or enter with pc.get_level() >= 6 begin
+			set_state ( gototeacher )		
+		end
+	end
+	state gototeacher begin
+		when letter begin
+			local v=find_npc_by_vnum(20354)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, gameforge.main_quest_lv6._10_targetVid)
+			end
+		end
+		when letter begin
+			send_letter(gameforge.main_quest_lv6._10_targetVid)
+		end
+		when button or info begin
+			say_title(gameforge.main_quest_lv6._10_targetVid)
+			say(gameforge.main_quest_lv6._20_sayReward)
+			say_item_vnum(30070)
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+
+			say_title(gameforge.main_quest_lv1._60_sayTitle)
+			say(gameforge.main_quest_lv6._30_say)
+			wait()
+			say_title(gameforge.main_quest_lv1._60_sayTitle)
+			say(gameforge.main_quest_lv6._40_say)
+			wait()
+			say_title(gameforge.buy_fishrod._210_sayTitle)
+			say_reward(gameforge.main_quest_lv6._50_sayReward)
+			say_reward(string.format(gameforge.main_quest_lv6._60_sayReward, 1300))
+			say_reward(string.format(gameforge.main_quest_lv6._70_sayReward, 1500))
+			say_reward(string.format(gameforge.main_quest_lv27._140_sayReward, item_name(30070)))
+			say_item_vnum(30070)
+
+			set_state ( gotosmith )
+		end
+	end
+
+
+	state gotosmith begin
+		when letter begin
+			local v=find_npc_by_vnum(20016)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, gameforge.main_quest_lv6._80_targetVid)
+			end
+		end
+		when letter begin
+			send_letter(gameforge.main_quest_lv6._90_sendLetter)
+		end
+		when button or info begin
+			say_title(gameforge.main_quest_lv6._90_sendLetter)
+			say(gameforge.main_quest_lv6._100_sayReward)
+		end
+
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+
+			say_title(gameforge.blacksmith._20_sayTitle)
+			say(gameforge.main_quest_lv6._110_say)
+			wait()
+			say_title(gameforge.blacksmith._20_sayTitle)
+			say(gameforge.main_quest_lv6._120_say)
+			say_item_vnum(30003)
+						set_state ( gotowarehousekeeper )
+
+		end
+	end
+	state gotowarehousekeeper begin
+		when letter begin
+			local v=find_npc_by_vnum(9005)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, gameforge.main_quest_lv6._130_targetVid)
+			end
+		end
+		when letter begin
+			send_letter(gameforge.main_quest_lv6._140_sendLetter)
+		end
+		when button or info begin
+			say_title(gameforge.main_quest_lv6._140_sendLetter)
+			say(gameforge.main_quest_lv6._150_sayReward)
+			say_item_vnum(30003)
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+
+			say_title(gameforge.main_quest_lv6._160_sayTitle)
+			say(gameforge.main_quest_lv6._170_say)
+			wait()
+			say_title(gameforge.main_quest_lv6._160_sayTitle)
+			say(gameforge.main_quest_lv6._180_say)
+			say_item_vnum(30003)
+			say(gameforge.main_quest_lv6._190_say)
+			set_state ( gotosmith2 )
+		end
+	end
+	state gotosmith2 begin
+		when letter begin
+			local v=find_npc_by_vnum(20016)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, gameforge.main_quest_lv6._80_targetVid)
+			end
+		end
+		when letter begin
+			send_letter(gameforge.main_quest_lv6._200_sendLetter)
+		end
+		when button or info begin
+			say_title(gameforge.main_quest_lv6._200_sendLetter)
+			say(gameforge.main_quest_lv6._210_sayReward)
+			say_item_vnum(30003)
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+
+			say_title(gameforge.blacksmith._20_sayTitle)
+			say(gameforge.main_quest_lv6._220_say)
+			wait()
+			say_title(gameforge.blacksmith._20_sayTitle)
+			say(gameforge.main_quest_lv6._230_say)
+			wait()
+			say_title(gameforge.blacksmith._20_sayTitle)
+			say(gameforge.main_quest_lv6._240_say)
+			wait()
+			say_title(gameforge.locale.reward)
+			say_reward(string.format(gameforge.main_quest_lv6._60_sayReward, 1300))
+			say_reward(string.format(gameforge.main_quest_lv6._70_sayReward, 1500))
+			say_reward(string.format(gameforge.main_quest_lv27._140_sayReward, item_name(30070)))
+			say_item_vnum(30070)
+			pc.give_exp2(5000)
+			pc.change_money(1500)
+			pc.give_item2(30070 , 1) 
+
+			clear_letter()
+			set_state (__COMPLETE__)
+			set_quest_state("main_quest_lv7", "run")
+
+		end
+	end
+	state __COMPLETE__ begin
+	end
+
+end

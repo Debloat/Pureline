@@ -1,0 +1,19 @@
+quest x_bernhard begin
+	state start begin
+	when login begin
+		notice("x_bernhard")
+		set_state ( yahoo )
+	end
+	end
+	state yahoo begin
+
+	when login begin
+		set_state( google ) 
+	end
+	end
+	state google begin
+	when 8001.kill with game.get_event_flag("mystery_box_drop") == 1 begin	
+		send_letter("bbbbbb")
+	end
+end
+end

@@ -1,0 +1,196 @@
+quest subquest_12 begin
+	state start begin
+		when login or levelup with pc.level >= 20  and pc.level <= 25 begin
+			set_state(information)
+		end
+
+	end
+
+	state information begin
+		when letter begin
+			
+			local vnum=0
+
+			if pc.get_empire() == 1 then
+				vnum=11000
+			elseif pc.get_empire() == 2 then
+				vnum=11002
+			elseif pc.get_empire() == 3 then
+				vnum=11004
+			end
+
+			local v = find_npc_by_vnum(vnum)
+
+			if v != 0 then
+				target.vid("__TARGET__", v, gameforge.subquest_12._10_targetVid)
+			end
+		end
+
+		
+		when __TARGET__.target.click or	11000.chat.gameforge.subquest_12._10_targetVid with pc.level >= 20 begin
+			target.delete("__TARGET__")
+
+			say_title(gameforge.find_squareguard._30_sayTitle)
+
+			say(gameforge.subquest_12._20_say)
+			wait()
+
+			say_title(gameforge.find_squareguard._30_sayTitle)
+
+			say(gameforge.subquest_12._30_say)
+			local s= select(gameforge.subquest_12._40_select, gameforge.subquest_12._50_select)
+			if 2==s then
+				say_title(gameforge.find_squareguard._30_sayTitle)
+				say(gameforge.subquest_12._60_say)
+				local a= select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
+				if  2==a then
+					say_title(gameforge.find_squareguard._30_sayTitle)
+					say(gameforge.subquest_12._70_say)
+					return
+				end
+				say_title(gameforge.find_squareguard._30_sayTitle)
+				say(gameforge.subquest_12._80_say)
+				set_state(__GIVEUP__)
+				return
+			end
+			set_state(hunt_mijung)
+		
+		end
+		when __TARGET__.target.click or	11002.chat.gameforge.subquest_12._10_targetVid with pc.level >= 20 begin
+			target.delete("__TARGET__")
+
+			say_title(gameforge.find_squareguard._30_sayTitle)
+
+			say(gameforge.subquest_12._20_say)
+			wait()
+
+			say_title(gameforge.find_squareguard._30_sayTitle)
+
+			say(gameforge.subquest_12._30_say)
+			local s= select(gameforge.subquest_12._40_select, gameforge.subquest_12._50_select)
+			if 2==s then
+				say_title(gameforge.find_squareguard._30_sayTitle)
+				say(gameforge.subquest_12._60_say)
+				local a= select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
+				if  2==a then
+					say_title(gameforge.find_squareguard._30_sayTitle)
+					say(gameforge.subquest_12._70_say)
+					return
+				end
+				say_title(gameforge.find_squareguard._30_sayTitle)
+				say(gameforge.subquest_12._80_say)
+				set_state(__GIVEUP__)
+				return
+			end
+						set_state(hunt_mijung)
+		
+		end
+		when __TARGET__.target.click or	11004.chat.gameforge.subquest_12._10_targetVid with pc.level >= 20 begin
+			target.delete("__TARGET__")
+
+			say_title(gameforge.find_squareguard._30_sayTitle)
+
+			say(gameforge.subquest_12._20_say)
+			wait()
+
+			say_title(gameforge.find_squareguard._30_sayTitle)
+
+			say(gameforge.subquest_12._30_say)
+			local s= select(gameforge.subquest_12._40_select, gameforge.subquest_12._50_select)
+			if 2==s then
+				say_title(gameforge.find_squareguard._30_sayTitle)
+				say(gameforge.subquest_12._90_say)
+				local a= select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
+				if  2==a then
+					say_title(gameforge.find_squareguard._30_sayTitle)
+					say(gameforge.subquest_12._70_say)
+					return
+				end
+				say_title(gameforge.find_squareguard._30_sayTitle)
+				say(gameforge.subquest_12._80_say)
+				set_state(__GIVEUP__)
+				return
+			end
+			set_state(hunt_mijung)
+		
+		end
+
+	end
+
+	state hunt_mijung begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.subquest_12._10_targetVid)
+			q.set_title(gameforge.subquest_12._100_qSetTitle)
+			say_reward(gameforge.subquest_12._110_sayReward)
+			q.start()
+		end
+
+		when info or button begin
+			say_title(gameforge.subquest_12._120_sayTitle)
+			say(gameforge.subquest_12._130_sayReward)
+		end
+		
+		when 391.kill begin
+			set_state(hunt_reward)
+		end
+	end
+
+	state hunt_reward begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.subquest_12._10_targetVid)
+			q.set_title(gameforge.subquest_12._10_targetVid)
+			q.start()
+		
+			local vnum=0
+
+			if pc.get_empire() == 1 then
+				vnum=11000
+			elseif pc.get_empire() == 2 then
+				vnum=11002
+			elseif pc.get_empire() == 3 then
+				vnum=11004
+			end
+
+			local v=find_npc_by_vnum(vnum)
+			if 0==v then
+			else
+				target.vid("__TARGET__",v, gameforge.subquest_12._140_targetVid)
+			end
+		end
+		
+		when info or button begin
+			say_title(gameforge.subquest_12._150_sayTitle)
+			say(gameforge.subquest_12._160_sayReward)
+		end
+		
+		when __TARGET__.target.click or	11000.chat.gameforge.subquest_12._170_npcChat or	11002.chat.gameforge.subquest_12._170_npcChat or	11004.chat.gameforge.subquest_12._170_npcChat begin 
+			target.delete("__TARGET__")
+			say_title(gameforge.find_squareguard._30_sayTitle)
+
+			say(gameforge.subquest_12._180_say)
+			pc.give_exp2(122000)
+			pc.change_money(20000)
+			pc.give_item2("14040", 1)
+
+			say_title(gameforge.collect_herb_lv4._130_sayTitle)
+						say_reward(gameforge.subquest_12._190_sayReward)
+
+						clear_letter()
+			set_state(__COMPLETE__)
+		
+		end
+
+
+	end
+	state __GIVEUP__ begin
+	end
+	state __COMPLETE__ begin
+		when enter begin
+			q.done()
+		end
+	end
+end
+
+

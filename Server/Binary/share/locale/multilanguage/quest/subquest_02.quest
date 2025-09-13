@@ -1,0 +1,124 @@
+quest subquest_2 begin
+	state start begin
+		when login or levelup with pc.level >= 7 and pc.level <= 12 begin
+			set_state(information)
+		end	
+	end
+	state information begin
+		when letter begin
+			local v = find_npc_by_vnum(9003)
+
+			if v!= 0 then
+				target.vid("__TARGET__", v, gameforge.subquest_02._10_targetVid)
+			end
+		end	
+		
+	
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+			say_title(gameforge.find_squareguard._130_sayTitle)
+
+			say(gameforge.subquest_02._20_say)
+			set_state(ask_dinner)
+		end
+	end
+
+	state ask_dinner begin
+		when letter begin
+			local v=find_npc_by_vnum(9002)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, gameforge.main_quest_lv3._130_targetVid)
+			end
+		end
+		when letter begin
+			send_letter(gameforge.main_quest_lv3._130_targetVid)
+		end
+		when button or info begin
+            say_title(gameforge.buy_fishrod._210_sayTitle)
+						say_reward(gameforge.subquest_02._30_sayReward)
+						say_reward(gameforge.subquest_02._40_sayReward)
+					end
+
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+
+			say_title(gameforge.main_quest_lv3._160_sayTitle)
+			say(gameforge.subquest_02._50_say)
+			wait()
+			say_title(gameforge.main_quest_lv3._160_sayTitle)
+
+			say(gameforge.subquest_02._60_say)
+			set_state(report)
+		end
+	end
+
+	state report begin
+		when letter begin
+			local v = find_npc_by_vnum(9003)
+			if v!= 0 then
+				target.vid("__TARGET__", v, gameforge.subquest_02._70_targetVid)
+			end
+		end	
+
+		when letter begin
+			send_letter(gameforge.subquest_02._10_targetVid)
+		end
+
+		when button or info begin
+			say_title(gameforge.subquest_02._10_targetVid)
+						say_reward(gameforge.subquest_02._80_sayReward)
+						say_reward(gameforge.subquest_02._90_sayReward)
+					end
+
+		when 9002.chat.gameforge.subquest_02._70_targetVid begin
+			
+			say_title(gameforge.subquest_02._100_sayTitle)
+			say(gameforge.subquest_02._110_say)
+		end
+
+
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+
+			say_title(gameforge.find_squareguard._130_sayTitle)
+
+			say(gameforge.subquest_02._120_say)
+			local s = select( 
+				gameforge.subquest_02._121_select,
+				gameforge.subquest_02._122_select,
+				gameforge.subquest_02._123_select,
+				gameforge.subquest_02._124_select
+				)
+
+			if s == 3 then
+				say_title(gameforge.find_squareguard._130_sayTitle)
+
+				say(gameforge.subquest_02._130_say)
+				say_title(gameforge.collect_herb_lv4._130_sayTitle)
+								say_reward(gameforge.subquest_02._140_sayReward)
+
+								pc.give_exp2(1000)
+				set_quest_state("levelup","run")
+				pc.change_money( 1500 )
+
+				clear_letter()
+				set_state(__COMPLETE__)
+			elseif s == 4 then
+
+				say(gameforge.subquest_02._150_say)
+				set_state(ask_dinner)
+
+			else
+
+				say(gameforge.subquest_02._160_say)
+				set_state(ask_dinner)
+			end
+		end
+	end
+
+	state __COMPLETE__ begin
+	end
+end
+
+	

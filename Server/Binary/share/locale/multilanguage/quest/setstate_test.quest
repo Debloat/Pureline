@@ -1,0 +1,21 @@
+quest setstate_test begin
+	state start begin
+	end
+	state hunt begin
+		when login begin
+			notice("You killed: " .. pc.getqf("killed") .. " wild dogs")
+		end
+		when login or enter begin
+			q.set_title("kill dogs")
+			q.set_counter("Killed dogs: ", pc.getqf("killed"))
+			q.start()
+		end
+		
+		when 101.kill begin
+			local killed = pc.getqf("killed")+1
+			notice("You killed: " .. killed)
+			pc.setqf("killed", killed)
+			q.set_counter("Killed dogs: ", killed)
+		end
+	end
+end

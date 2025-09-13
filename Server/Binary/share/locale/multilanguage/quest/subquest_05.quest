@@ -1,0 +1,164 @@
+quest subquest_5 begin
+	state start begin
+		when login or levelup with pc.level >= 10 and pc.level <= 15 begin
+			set_state(information)
+		end
+	end
+
+	state information begin
+		when letter begin
+			local v = find_npc_by_vnum(20023)
+			if v != 0 then
+				target.vid("__TARGET__", v, gameforge.subquest_05._10_targetVid)
+			end
+		end
+
+		when __TARGET__.target.click or	20023.chat.gameforge.subquest_05._20_npcChat with pc.level >= 10 begin
+			target.delete("__TARGET__")
+			say_title(gameforge.subquest_05._30_sayTitle)
+			say(gameforge.subquest_05._40_say)
+
+		     wait()
+
+			 say_title(gameforge.subquest_05._30_sayTitle)
+			 say(gameforge.subquest_05._50_say)
+			 wait()
+
+			 say_title(gameforge.subquest_05._30_sayTitle)
+			 say(gameforge.subquest_05._60_say)
+			local s= select(gameforge.subquest_05._70_select, gameforge.subquest_05._80_select)
+			if 2==s then
+				say(gameforge.subquest_05._90_say)
+				local a= select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
+					if  2==a then
+						say_title(gameforge.subquest_05._30_sayTitle)
+						say(gameforge.subquest_05._100_say)
+						return
+					end
+				say_title(gameforge.subquest_05._30_sayTitle)
+				say(gameforge.subquest_05._110_say)
+
+				clear_letter()
+				set_state(__GIVEUP__)
+				return
+			end
+			say_title(gameforge.subquest_05._30_sayTitle)
+			say(gameforge.subquest_05._120_say)
+
+			set_state(ask_to)
+
+		end
+	end
+
+	state ask_to begin
+		when info or button begin
+			say_title(gameforge.subquest_05._130_sayTitle)
+                        			say_reward(gameforge.subquest_05._140_sayReward)
+					end
+
+		when letter begin
+			send_letter(gameforge.subquest_05._130_sayTitle)
+		end
+
+
+
+		when __TARGET__.target.click or	20011.chat.gameforge.subquest_05._150_npcChat begin
+			target.delete("__TARGET__")
+
+			say_title(gameforge.main_quest_lv30._40_sayTitle)
+			say(gameforge.subquest_05._160_say)
+			wait()
+
+           say_title(gameforge.main_quest_lv30._40_sayTitle)
+			say(gameforge.subquest_05._170_say)
+
+			set_state(return_to)
+		end
+	end
+
+	state return_to begin
+		when letter begin
+			send_letter(gameforge.subquest_05._180_sendLetter)
+		end
+
+
+		when info or button begin
+			say_title(gameforge.subquest_05._190_sayTitle)
+			say_reward(gameforge.subquest_05._200_sayReward)
+		end
+
+		when __TARGET__.target.click or	20023.chat.gameforge.subquest_05._150_npcChat begin
+			target.delete("__TARGET__")
+			say_title(gameforge.subquest_05._30_sayTitle)
+			say(gameforge.subquest_05._210_say)
+
+			local s = select(
+				gameforge.subquest_05._211_select,
+				gameforge.subquest_05._212_select,
+				gameforge.subquest_05._213_select,
+				gameforge.subquest_05._214_select
+			)
+
+			if s == 2 then
+				say_title(gameforge.subquest_05._30_sayTitle)
+				say(gameforge.subquest_05._220_say)
+
+				pc.give_exp2(6000)
+				set_quest_state("levelup","run")
+				pc.change_money(2000)
+
+                say_title(gameforge.collect_herb_lv4._130_sayTitle)
+				say_reward(gameforge.subquest_05._230_sayReward)
+				
+				clear_letter()
+
+				set_state(__COMPLETE__)
+
+			elseif s==4 then
+				say_title(gameforge.subquest_05._30_sayTitle)
+				say(gameforge.subquest_05._240_say)
+				local s= select(gameforge.subquest_05._250_select, gameforge.subquest_05._260_select)
+				if 2==s then
+					say(gameforge.subquest_04._210_say)
+					local a= select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
+					if  2==a then
+						say_title(gameforge.subquest_05._30_sayTitle)
+						say(gameforge.gameforge.subquest_05._100_say)
+						return
+					end
+					say_title(gameforge.subquest_05._30_sayTitle)
+					say(gameforge.subquest_05._110_say)
+					set_state(__GIVEUP__)
+				end
+				say_title(gameforge.subquest_05._30_sayTitle)
+				say(gameforge.subquest_05._290_say)
+				set_state(ask_to)
+
+			else
+				say_title(gameforge.subquest_05._30_sayTitle)
+				say(gameforge.subquest_05._300_say)
+				local s= select(gameforge.subquest_05._310_select, gameforge.subquest_05._320_select)
+				if 2==s then
+					say(gameforge.subquest_04._210_say)
+					local a= select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
+						if  2==a then
+							say_title(gameforge.subquest_05._30_sayTitle)
+							say(gameforge.subquest_05._100_say)
+							return
+						end
+					say_title(gameforge.subquest_05._30_sayTitle)
+					say(gameforge.subquest_05._110_say)
+					set_state(__GIVEUP__)
+				end
+				say_title(gameforge.subquest_05._30_sayTitle)
+				say(gameforge.subquest_05._350_say)
+				set_state(ask_to)
+			end
+		end
+	end
+
+	state __GIVEUP__ begin
+	end
+	state __COMPLETE__ begin
+	end
+end

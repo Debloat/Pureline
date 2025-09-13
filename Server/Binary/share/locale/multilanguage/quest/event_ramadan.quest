@@ -1,0 +1,315 @@
+quest event_ramadan begin
+	state start begin
+		function is_running()
+			return (game.get_event_flag("ramadan_drop") > 0)    --npc spawn
+		end
+		function reward_period()
+			return (game.get_event_flag("ramadan_reward") > 0)    --reward menu appear
+		end
+
+			
+		function setting()
+			return {  
+			["bread"]	= 30315,
+			["candy"]	= 50183,
+			["plate"]	= 30316,
+			["iftar"]	= 30317,
+			["fruit"]	= 30318,
+			["box"]	    = 50182,
+			["horse1"]	= 71131,
+			["horse2"]	= 71132,
+			["horse3"]	= 71133,
+			["horse4"]	= 71134,
+			["historian"]	= 33002,
+			["beggar1"]	    = 33003, 
+			["beggar2"]	    = 33004,
+			["beggar3"]	    = 33005, 
+			["beggar4"]	    = 33006, 
+			["beggar5"]	    = 33007 
+			}
+		end
+		
+		when login or enter with event_ramadan.is_running() begin
+			local setting = event_ramadan.setting()
+			local mapIndex = pc.get_map_index()
+			if mapIndex == 1 or mapIndex == 21 or mapIndex == 41 then
+				if find_npc_by_vnum(setting.historian) == 0 then  
+					if mapIndex == 1 then
+						mob.spawn(setting.historian, 608, 617, 1, 1, 1)
+					elseif mapIndex == 21 then
+						mob.spawn(setting.historian, 596, 610, 1, 1, 1)
+					elseif mapIndex == 41 then
+						mob.spawn(setting.historian, 357, 743, 1, 1, 1)
+					end
+				end
+
+				if find_npc_by_vnum(setting.beggar1) == 0 then 
+				if mapIndex == 1 then
+						mob.spawn(setting.beggar1, 619, 701, 1, 1, 1)
+					elseif mapIndex == 21 then
+						mob.spawn(setting.beggar1, 564, 613, 1, 1, 1)
+					elseif mapIndex == 41 then
+						mob.spawn(setting.beggar1, 344, 723, 1, 1, 1)
+					end
+				end
+				if  find_npc_by_vnum(setting.beggar2) == 0 then 
+					if mapIndex == 1 then
+						mob.spawn(setting.beggar2, 697, 580, 1, 1, 1)
+					elseif mapIndex == 21 then
+						mob.spawn(setting.beggar2, 699, 658, 1, 1, 1)
+					elseif mapIndex == 41 then
+						mob.spawn(setting.beggar2, 443, 733, 1, 1, 1)
+					end
+				end	
+				if   find_npc_by_vnum(setting.beggar3) == 0  then
+					if mapIndex == 1 then
+						mob.spawn(setting.beggar3, 646, 515, 1, 1, 1)
+					elseif mapIndex == 21 then
+						mob.spawn(setting.beggar3, 613, 715, 1, 1, 1)
+					elseif mapIndex == 41 then
+						mob.spawn(setting.beggar3, 428, 651, 1, 1, 1)
+					end
+				end
+				if  find_npc_by_vnum(setting.beggar4) == 0 then
+					if mapIndex == 1 then
+						mob.spawn(setting.beggar4, 554, 550, 1, 1, 1)
+					elseif mapIndex == 21 then
+						mob.spawn(setting.beggar4, 635, 539, 1, 1, 1)
+					elseif mapIndex == 41 then
+						mob.spawn(setting.beggar4, 303, 587, 1, 1, 1)
+					end
+				end
+				if  find_npc_by_vnum(setting.beggar5) == 0 then
+					if mapIndex == 1 then
+						mob.spawn(setting.beggar5, 702, 629, 1, 1, 1)
+					elseif mapIndex == 21 then
+						mob.spawn(setting.beggar5, 529, 547, 1, 1, 1)
+					elseif mapIndex == 41 then
+						mob.spawn(setting.beggar5, 456, 673, 1, 1, 1)
+					end
+				end
+		end   --if
+		end --when
+		
+		--gameforge.event_ramadan._010_npcChat	Historiker? 
+		-- (Referenz 33002 Mob)
+		when 33002.chat.gameforge.event_ramadan._010_npcChat with pc.getf("event_ramadan","first_notice")==0  begin
+			local setting = event_ramadan.setting()
+			--gameforge.event_ramadan._020_sayTitle	Historiker: (referenz auf mob: 33002)
+			say_title(gameforge.event_ramadan._020_sayTitle)
+			-- gameforge.event_ramadan._030_say	review the old and learn the new! why do you find me ?
+			say("")
+			say(gameforge.event_ramadan._030_say)
+			wait()
+
+			say_pc_name()
+			-- gameforge.event_ramadan._040_say	Tut mir leid, kennen wir uns?
+			say(gameforge.event_ramadan._040_say)
+			wait()
+
+			say_title(gameforge.event_ramadan._020_sayTitle)
+			--gameforge.event_ramadan._050_say	Entschuldige, ich vergaß mich vorzustellen. Ich bin der viel gereiste Historiker. 
+			--									Wenn du Fragen zur Geschichte hast scheue dich nicht mich zu fragen.
+			say(gameforge.event_ramadan._050_say)
+			wait()
+			
+			say_pc_name()
+			-- gameforge.event_ramadan._060_say	Es ehrt mich dich kennen zu lernen. Ich sollte dich öfter aufsuchen
+			say(gameforge.event_ramadan._060_say)
+			
+
+			pc.setqf("first_notice",1)
+		end  
+	
+	-- Brot: Brotkringel
+	-- Süßigkeit: Haloa, baklawa, irgendwas süßes (ihr wisst bescheid)
+	-- gameforge.event_ramadan._070_npcChat	Was Süßes
+	when 33002.chat.gameforge.event_ramadan._070_npcChat with pc.getf("event_ramadan","first_notice")==1 begin
+		
+		local setting = event_ramadan.setting()
+		if pc.count_item(setting.bread) == 0  then
+			say_title(gameforge.event_ramadan._020_sayTitle)
+			-- gameforge.event_ramadan._80_say	Kennst du dich mit Süßigkeiten aus? Es wird Baklava (bitte absprechen und referenz auf item: 50183) genannt.
+			say(gameforge.event_ramadan._80_say)
+			-- gameforge.event_ramadan._90_select_1	Ja, das kenne ich
+			-- gameforge.event_ramadan._90_select_2	Nein, tut mir leid
+			local s=select(gameforge.event_ramadan._90_select_1 ,gameforge.event_ramadan._90_select_2)
+			if 2==s then
+				--gameforge.event_ramadan._020_sayTitle	Historiker:
+				say_title(gameforge.event_ramadan._020_sayTitle)
+				--gameforge.event_ramadan._100_say	Schade, bis zum nächsten mal.
+				say(gameforge.event_ramadan._100_say)
+				return
+			end
+			say_title(gameforge.event_ramadan._020_sayTitle)
+			--gameforge.event_ramadan._110_say	Dann weißt du ja was ich meine. Wenn ein solches erhalten willst bringe mir bitte ein Brot (bitte abspreche und referenz auf item: 30315).
+			say(gameforge.event_ramadan._110_say)
+			wait()
+			say_title(gameforge.event_ramadan._020_sayTitle)
+			-- gameforge.event_ramadan._120_say	Ich würde dir gerne ein Baklava (item: 50183) für 10 Brote (item: 30315) geben. Bist du damit einverstanden?
+			say(gameforge.event_ramadan._120_say)
+			-- gameforge.event_ramadan._130_select_1	Gerne
+			-- gameforge.event_ramadan._130_select_2	Hab keine Zeit
+			local s=select(gameforge.event_ramadan._130_select_1,gameforge.event_ramadan._130_select_2)
+			if 2==s then
+				say_title(gameforge.event_ramadan._020_sayTitle)
+				say(gameforge.event_ramadan._100_say)
+			return
+			end
+			say_title(gameforge.event_ramadan._020_sayTitle)
+			-- gameforge.event_ramadan._140_say	Ich würde dir gerne ein Baklava (item: 50183) für 10 Brote (item: 30315) geben. Bist du damit einverstanden?
+			say(gameforge.event_ramadan._140_say)
+		elseif	pc.count_item(setting.bread) > 0 and  pc.count_item(setting.bread) < 10  then
+			say_title(gameforge.event_ramadan._020_sayTitle)
+			-- gameforge.event_ramadan._150_say	Das sind zu wenig Brote, ich kann damit nicht viel anfangen.
+			say(gameforge.event_ramadan._150_say)
+		elseif	pc.count_item(setting.bread) >= 10  then
+			say_title(gameforge.event_ramadan._020_sayTitle)
+			-- gameforge.event_ramadan._160_say	Das sind genug Brote, dafür kann ich dir gerne das Baklava geben.
+			say(gameforge.event_ramadan._160_say)
+			wait()	
+			say_title(gameforge.event_ramadan._020_sayTitle)
+			-- gameforge.event_ramadan._170_say	Sammle mehr und ich kann dir mehr davon bereiten
+			say(gameforge.event_ramadan._170_say)
+			pc.give_item2(setting.candy,1)
+			pc.remove_item(setting.bread,10)
+		end  --if
+		if not event_ramadan.is_running() then
+			npc.purge()
+		end
+	end	  --when
+		-- gameforge.event_ramadan._180_npcChat	Leckeres Brot (item: 30315)
+		when 33002.chat.gameforge.event_ramadan._180_npcChat with pc.getqf("first_notice")== 1 begin
+			local setting = event_ramadan.setting()
+			say_title(gameforge.event_ramadan._020_sayTitle)
+			-- gameforge.event_ramadan._180_say	Ich bin gesättigt mit dem leckeren Brot das du mir brachtest
+			say(gameforge.event_ramadan._180_say)
+			-- gameforge.event_ramadan._190_say	Hast du gewusst das es viele Bettler gibt die Hunger haben? Es wäre schön wenn du auch mit Ihnen das Fastenbrechen begehen würdest
+			say(gameforge.event_ramadan._190_say)
+			-- gameforge.event_ramadan._200_say	Bringe es Ihnen am besten auf einem Teller (bitte absprechen und refernz auf item:30316)
+			say(gameforge.event_ramadan._200_say)
+			say_item_vnum(setting.plate)
+			wait()
+			say_title(gameforge.event_ramadan._020_sayTitle)
+			-- gameforge.event_ramadan._210_say	Danke für dein Brot es ist gut. So eine weise Person sollte auch Barmherzig sein. Man wird es dir vergelten.
+			say(gameforge.event_ramadan._210_say)
+		end	
+		-- gameforge.event_ramadan._220_npcChat	Hunger ...
+		when 33003.chat.gameforge.event_ramadan._220_npcChat or 33004.chat.gameforge.event_ramadan._220_npcChat or 33005.chat.gameforge.event_ramadan._220_npcChat or 33006.chat.gameforge.event_ramadan._220_npcChat or 33007.chat.gameforge.event_ramadan._220_npcChat begin
+			local setting = event_ramadan.setting()
+			if pc.count_item(setting.iftar) == 0  then 
+				-- gameforge.event_ramadan._230_sayTitle	Bettler: (referenz auf Mob: 33003~33007)
+				say_title(gameforge.event_ramadan._230_sayTitle)
+				say("")
+				-- gameforge.event_ramadan._240_say	Ich bin wirklich hungrig. Habe erbarmen und bringe mir ein Iftar (bitte mit Abdel absprechen und referenz auf item: 30317). Bitte bringe es mir, damit ich nicht verhungere.
+				say(gameforge.event_ramadan._240_say)
+
+			elseif pc.count_item(setting.iftar) > 0  then 
+				
+				say_title(gameforge.event_ramadan._230_sayTitle)
+				say("")
+				-- gameforge.event_ramadan._250_say	Das ist doch ein Iftar (referenz: 30317)? Ein warmes leckeres Brot (referenz entsprechend). Willst du diese mir geben? Es wäre mir wertvoll!
+				say(gameforge.event_ramadan._250_say)
+				-- gameforge.event_ramadan._260_select_1	Nimm du Hungriger
+				-- gameforge.event_ramadan._260_select_2	Nein, ich behalte es
+				local s = select(gameforge.event_ramadan._260_select_1,gameforge.event_ramadan._260_select_2)
+				if 2==s then
+					say_title(gameforge.event_ramadan._230_sayTitle)
+					say("")
+					-- gameforge.event_ramadan._270_say	Du Unbarmherziger sei nicht so geizig mit deinem Essen. Falls du deine Meinung änderst, weißt du wo du mich findest.
+					say(gameforge.event_ramadan._270_say)
+					return
+				end
+				-- reward
+				say_title(gameforge.event_ramadan._230_sayTitle)
+				say("")
+				-- gameforge.event_ramadan._280_say	Es sei dir gedankt. Du bist wahrlich eine weise Person. Möge deine gute Tat hiermit belohnt sein.
+				say(gameforge.event_ramadan._280_say)
+				
+				pc.give_item2(setting.box,1)
+				pc.remove_item(setting.iftar,1)
+				end --if
+
+				if not event_ramadan.is_running() then
+					npc.purge()
+				end
+			end	
+		
+		-- gameforge.event_ramadan._290_npcChat	Die Frucht des Segens
+		when 33002.chat.gameforge.event_ramadan._290_npcChat with  pc.getf("event_ramadan","fig_exchange")==0 begin
+			local setting = event_ramadan.setting()
+			if get_time() > pc.getqf("duration") then
+				say_title(gameforge.event_ramadan._020_sayTitle)
+				say("")
+				-- gameforge.event_ramadan._300_say	Ich hab auf meinen Reisen die "Frucht des Segens" (bitte Item: 30318 referenzien und ändern) kennen gelernt. Diese Frucht belohnt den Fleißigen der regelmäßig zur selben Stunde wiederkehrt.
+				say(gameforge.event_ramadan._300_say)
+				pc.give_item2(setting.fruit)
+				pc.setqf("duration",get_time()+60*60*24) 			--24h
+			else	
+				say_title(gameforge.event_ramadan._020_sayTitle)
+				-- gameforge.event_ramadan._310_say	Entschuldige, dich hab ich heute gesehen und du wurdest schon belohnt. Denk daran: Nur der wahrlich geduldige erreicht sein Ziel.
+				say(gameforge.event_ramadan._310_say)
+			end
+		end
+		-- gameforge.event_ramadan._320_npcChat	Das Glück des Tüchtigen
+		when 33002.chat.gameforge.event_ramadan._320_npcChat with event_ramadan.reward_period() and  pc.getf("event_ramadan","fig_exchange")==0 begin
+			local setting = event_ramadan.setting()
+			say_title(gameforge.event_ramadan._020_sayTitle)
+			say("")
+			-- gameforge.event_ramadan._330_say	Ich habe dich schon erwartet. Meine Zeit hier geht zu Ende und ich ziehe in die Welt um neue Geschichten zu lernen.
+			say(gameforge.event_ramadan._330_say)
+			wait()
+			if  pc.count_item(setting.fruit)>= 5 then		--more than 5
+				say_title(gameforge.event_ramadan._020_sayTitle)
+				say("")
+				-- gameforge.event_ramadan._340_say	Du hast %d Früchte des Segens (Item: 30318) für mich verwahrt.
+				say(string.format(gameforge.event_ramadan._340_say, pc.count_item(setting.fruit)))
+				-- gameforge.event_ramadan._350_say	Würdest du mir diese geben für meine Reise? Ich will es dir auch entlohnen.
+				say(gameforge.event_ramadan._350_say)
+				-- gameforge.event_ramadan._360_select_1	Hier nimm
+				-- gameforge.event_ramadan._360_select_2	Nein
+				local s=select(gameforge.event_ramadan._360_select_1, gameforge.event_ramadan._360_select_2)
+				if 2==s then 
+					say_title(gameforge.event_ramadan._020_sayTitle)
+					say("")
+					-- gameforge.event_ramadan._370_say	Überlege es dir und ich warte auch dich.
+					say(gameforge.event_ramadan._370_say)
+					return
+				end
+				say_title(gameforge.event_ramadan._020_sayTitle)
+				say("")
+				-- gameforge.event_ramadan._380_say	Danke für deine Großzügigkeit und deinen Fleiß. Bitte nehme dieses:
+				say(gameforge.event_ramadan._380_say)
+				-- Item: Siegel des Rappen
+				-- gameforge.event_ramadan._390_sayReward	Siegel des Rappen (referenz auf items:71131~4)
+				say_reward(gameforge.event_ramadan._390_sayReward)
+				say("")
+				if pc.count_item(setting.fruit)>= 5 and pc.count_item(setting.fruit)<= 10 then
+					pc.give_item2(setting.horse1,1)
+				elseif pc.count_item(setting.fruit)>= 11 and pc.count_item(setting.fruit)<= 19 then
+					pc.give_item2(setting.horse2,1)
+				elseif pc.count_item(setting.fruit)>= 20 and pc.count_item(setting.fruit)<= 27 then
+					pc.give_item2(setting.horse3,1)
+				elseif pc.count_item(setting.fruit)>= 28 then
+					pc.give_item2(setting.horse4,1)
+				end
+				pc.remove_item(setting.fruit,pc.count_item(setting.fruit))
+				pc.setqf("fig_exchange",1)
+			else										--less  than  5
+				say_title(gameforge.event_ramadan._020_sayTitle)
+				say("")
+				-- gameforge.event_ramadan._400_say	Du hast weniger als 5? Schade damit kann ich nicht viel anfangen. Vielleicht beim nächsten mal.
+				say(gameforge.event_ramadan._400_say)
+			end
+	end
+	when 30316.use begin
+		local setting = event_ramadan.setting()
+		if pc.count_item(setting.bread) >= 10 then
+			pc.remove_item(setting.bread, 10)
+			pc.remove_item(setting.plate, 1)
+			pc.give_item2(setting.iftar, 1)
+		end
+	end
+
+	end --state
+end		--quest

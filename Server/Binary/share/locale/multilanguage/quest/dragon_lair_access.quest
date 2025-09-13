@@ -1,0 +1,330 @@
+quest dragon_lair_access begin
+	state start begin
+
+		function get_settings()
+			local settings = {}
+			settings.cooldown_time = 3600 -- when can the dragon be killed again?
+			settings.group_time = 300 -- how long can players enter after the first one is in the dragon's lair?
+			settings.access_item = 30179 -- "Dragon God Symbols"
+			settings.dragon_vnum = 2430
+
+			settings.spawn = {}
+			settings.spawn.x = 181
+			settings.spawn.y = 173
+
+			settings.warp_in = {}
+			settings.warp_in.first = {}
+			settings.warp_in.last = {}
+			settings.warp_in.first.x = 843677
+			settings.warp_in.first.y = 1066206
+			settings.warp_in.last.x = 844027
+			settings.warp_in.last.y = 1067599
+
+			settings.warp_out = {}
+			settings.warp_out.first = {}
+			settings.warp_out.last = {}
+			settings.warp_out.first.x = 9200
+			settings.warp_out.first.y = 1206400
+			settings.warp_out.last.x = 10900
+			settings.warp_out.last.y = 1209100
+
+			settings.room_area = {}
+			settings.room_area.first = {}
+			settings.room_area.last = {}
+			settings.room_area.first.x = 833000
+			settings.room_area.first.y = 1062500
+			settings.room_area.last.x = 844100
+			settings.room_area.last.y = 1071500
+
+			settings.access_item_amount = game.get_event_flag("dragon_lair_amount")
+			if (settings.access_item_amount == 0) then
+				settings.access_item_amount = 3 -- default value when event flag is not set
+			elseif (settings.access_item_amount == -1) then
+				settings.access_item_amount = 0 -- no dragon marks needed when event flag -1 (special case)
+			end
+
+			return settings
+		end
+
+		function get_random_point(area_coordinates)
+			return math.random(area_coordinates.first.x, area_coordinates.last.x), math.random(area_coordinates.first.y, area_coordinates.last.y)
+		end
+
+		function warp_to_lair()
+			local settings = dragon_lair_access.get_settings()
+			local x, y = dragon_lair_access.get_random_point(settings.warp_in)
+			char_log(pc.get_player_id(), 'LAIR', pc.get_channel_id() ..' WARPTOLAIR: x:'.. x ..', y:' .. y)
+			pc.warp(x,y)
+		end
+
+		function warp_from_lair()
+			local settings = dragon_lair_access.get_settings()
+			local x, y = dragon_lair_access.get_random_point(settings.warp_out)
+			char_log(pc.get_player_id(), 'LAIR', pc.get_channel_id() ..' WARPFROMLAIR: x:'.. x ..', y:' .. y)
+			pc.warp(x,y)
+		end
+
+		function warp_all_from_lair()
+			local settings = dragon_lair_access.get_settings()
+			warp_all_in_area_to_area(settings.room_area.first.x, settings.room_area.first.y, settings.room_area.last.x, settings.room_area.last.y, settings.warp_out.first.x, settings.warp_out.first.y, settings.warp_out.last.x, settings.warp_out.last.y)
+			game.set_event_flag("dragon_lair_alive", 0) -- dragon is dead
+			char_log(0, 'LAIR', 'WARP ALL')
+		end
+
+		function get_time_remaining()
+			local settings = dragon_lair_access.get_settings()
+			return (game.get_event_flag("dragon_lair_time") + settings.cooldown_time - get_global_time())
+		end
+
+		function give_item_to_ghost()
+			local settings = dragon_lair_access.get_settings()
+			say_title(gameforge.ghost_story._010_sayTitle)
+			say(gameforge.dragon_lair_access._130_say)
+			say(settings.access_item_amount.."x: ")
+			say_item_vnum(settings.access_item)
+			local give_item = select(gameforge.dragon_lair_access._140_select, gameforge.locale.cancel)
+			if give_item == 1 then
+				pc.remove_item(settings.access_item, settings.access_item_amount)
+				char_log(pc.get_player_id(), 'LAIR', pc.get_channel_id() ..' GIVE ITEM')
+				return true
+			else
+				return false
+			end
+		end
+
+		function show_time_remaining(time_remaining)
+			q.set_title(gameforge.dragon_lair_access._165_sendLetter)
+			send_letter(gameforge.dragon_lair_access._165_sendLetter)
+			q.set_clock(gameforge.locale.monkey_dungeon.quest_rest_time, time_remaining)
+			timer("dragon_lair_timer", time_remaining)
+			notice_multiline(string.format(gameforge.dragon_lair_access._170_notice, time_remaining / 60), notice)
+			q.start()
+		end
+
+		when enter or login begin
+			pc.setqf("is_leader", 0)
+			q.done()
+			if pc.get_map_index() == 208 and not pc.is_gm() then
+				dragon_lair_access.warp_from_lair()
+			end
+		end
+
+		when blue_dragon_timer.server_timer begin
+			game.set_event_flag("dragon_lair_timer_used", 0)
+			if game.get_event_flag("dragon_lair_alive") == 1 then
+				notice_multiline(gameforge.dragon_lair_access._150_notice, notice_all)
+			else
+				notice_multiline(gameforge.dragon_lair_access._160_notice, notice_all)
+			end
+			dragon_lair_access.warp_all_from_lair()
+		end
+
+		when 30121.chat.gameforge.dragon_lair_access._010_npcChat with pc.get_map_index() != 208 begin
+			
+			local starttime = game.get_event_flag("dragon_lair_time")
+			local current_time = get_global_time()
+			local settings = dragon_lair_access.get_settings()
+			local time_remaining = dragon_lair_access.get_time_remaining()
+
+			if pc.count_item(settings.access_item) >= settings.access_item_amount then
+				if starttime + settings.group_time >= current_time then
+					local password_input;
+					repeat
+						say_title(gameforge.ghost_story._010_sayTitle)
+						say(gameforge.dragon_lair_access._020_say)
+						password_input = tonumber(input())
+						if password_input != game.get_event_flag("dragon_lair_password") then
+							say_title(gameforge.ghost_story._010_sayTitle)
+							say(gameforge.dragon_lair_access._030_say)
+							local again = select(gameforge.dragon_lair_access._040_select, gameforge.locale.cancel)
+							if again == 2 then
+								return
+							end
+						end
+					until password_input == game.get_event_flag("dragon_lair_password")
+					if not dragon_lair_access.give_item_to_ghost() then
+						return
+					end
+					
+					-- right password
+					pc.setqf("time", starttime)
+					dragon_lair_access.warp_to_lair()
+					set_state(kill_dragon)
+				elseif time_remaining < 0 and npc.lock() then -- it is the first player talking with the ghost
+					say_title(gameforge.ghost_story._010_sayTitle)
+					say(gameforge.dragon_lair_access._050_say)
+					local abort = select(gameforge.dragon_lair_access._060_select, gameforge.locale.cancel)
+
+					if abort == 2 then
+						npc.unlock()
+						return
+					end
+					local password_number;
+					repeat
+						say_title(gameforge.ghost_story._010_sayTitle)
+						say(gameforge.dragon_lair_access._070_say)
+						password_number = tonumber(input())
+						local again;
+						if type(password_number) != 'number' then
+							say_title(gameforge.ghost_story._010_sayTitle)
+							say(gameforge.dragon_lair_access._080_say)
+							again = select(gameforge.dragon_lair_access._040_select, gameforge.locale.cancel)
+							if again == 2 then
+								npc.unlock()
+								return
+							end
+						end
+					until type(password_number) == 'number'
+
+					if not dragon_lair_access.give_item_to_ghost() then
+						npc.unlock()
+						return
+					end
+					
+					if dragon_lair_access.get_time_remaining() > 0 then
+						pc.give_item2(settings.access_item, settings.access_item_amount)
+						npc.unlock()
+						say_title(gameforge.ghost_story._010_sayTitle)
+						say(gameforge.dragon_lair_access._120_say)
+						return
+					end
+					
+					pc.setqf("password", password_number)
+					timer("dragon_lair_warptimer", pc.get_channel_id()*2)
+					
+					npc.unlock()
+				else
+					say_title(gameforge.ghost_story._010_sayTitle)
+					say(gameforge.dragon_lair_access._120_say)
+					return
+				end
+
+			else
+				say_title(gameforge.ghost_story._010_sayTitle)
+				say(gameforge.dragon_lair_access._100_say)
+				say(gameforge.dragon_lair_access._105_say)
+				say(settings.access_item_amount.."x: ")
+				say_item_vnum(settings.access_item)
+				return
+			end
+		end
+
+		when 30121.chat.gameforge.dragon_lair_access._110_npcChat with pc.get_map_index() == 208 begin
+			say_title(gameforge.ghost_story._010_sayTitle)
+			say(gameforge.dragon_lair_access._115_say)
+			local warp = select(gameforge.dragon_lair_access._116_select, gameforge.dragon_lair_access._117_select)
+			if warp == 1 then
+				dragon_lair_access.warp_from_lair() -- so that GMs get ported out, too
+				set_state(start)
+			end
+		end
+		
+		when dragon_lair_warptimer.timer begin
+			local settings = dragon_lair_access.get_settings()
+			if dragon_lair_access.get_time_remaining() < 0 then
+				local starttime = get_global_time()
+				game.set_event_flag("dragon_lair_time", starttime) -- set start time
+				char_log(pc.get_player_id(), 'LAIR', pc.get_channel_id() ..' SET STARTTIME: ' .. starttime)
+				pc.setqf("time", starttime)
+				
+				pc.setqf("is_leader", 1)
+				game.set_event_flag("dragon_lair_password", pc.getqf("password")) -- set password
+				char_log(pc.get_player_id(), 'LAIR', pc.get_channel_id() ..' SET PASSWORD: '.. pc.getqf("password"))
+				
+				server_timer("blue_dragon_timer", settings.cooldown_time)
+				
+				dragon_lair_access.warp_to_lair()
+				set_state(spawn_dragon)
+			else
+				pc.give_item2(settings.access_item, settings.access_item_amount)
+				say_title(gameforge.ghost_story._010_sayTitle)
+				say(gameforge.dragon_lair_access._120_say)
+			end
+			pc.setqf("password", 0)
+		end
+	end
+
+	state spawn_dragon begin
+		when login begin
+			local settings = dragon_lair_access.get_settings()
+			purge_area(settings.room_area.first.x, settings.room_area.first.y, settings.room_area.last.x, settings.room_area.last.y)
+			notice_multiline(string.format(gameforge.dragon_lair_access._090_notice, pc.name), notice_all)
+			
+			-- spawn all mobs needed
+			regen_in_map(208, "locale/_master/map/metin2_map_skipia_dungeon_boss/regen.txt")
+			mob.spawn_group(settings.dragon_vnum, settings.spawn.x, settings.spawn.y, 1, 1, 1) -- spawn the dragon
+			
+			
+			game.set_event_flag("dragon_lair_alive", 1) -- dragon is alive
+			char_log(pc.get_player_id(), 'LAIR', pc.get_channel_id() ..' SPAWN DRAGON')
+			
+			notice_multiline(string.format(gameforge.dragon_lair_access._145_notice, game.get_event_flag("dragon_lair_password")), notice)
+			dragon_lair_access.show_time_remaining(settings.cooldown_time)
+			
+			set_state(kill_dragon)
+		end
+
+		when 30121.chat.gameforge.dragon_lair_access._110_npcChat with pc.get_map_index() == 208 begin
+			say_title(gameforge.ghost_story._010_sayTitle)
+			say(gameforge.dragon_lair_access._115_say)
+			local warp = select(gameforge.dragon_lair_access._116_select, gameforge.dragon_lair_access._117_select)
+			if warp == 1 then
+				dragon_lair_access.warp_from_lair()
+				set_state(start)
+			end
+		end
+		
+	end
+
+	state kill_dragon begin
+
+		when dragon_lair_timer.timer begin
+			set_state(start)
+		end
+
+		when login begin
+			if pc.getqf("time") != game.get_event_flag("dragon_lair_time") or dragon_lair_access.get_time_remaining() <= 0 then
+				set_state(start)
+			else
+				dragon_lair_access.show_time_remaining(dragon_lair_access.get_time_remaining())
+			end
+		end
+		
+		when button or info begin
+			notice_multiline(string.format(gameforge.dragon_lair_access._170_notice, dragon_lair_access.get_time_remaining() / 60), notice)
+			local settings = dragon_lair_access.get_settings()
+			if (pc.getqf("is_leader") == 1 and settings.cooldown_time-dragon_lair_access.get_time_remaining() < settings.group_time) then
+				notice_multiline(string.format(gameforge.dragon_lair_access._145_notice, game.get_event_flag("dragon_lair_password")), notice)
+			end
+		end
+
+		when 30121.chat.gameforge.dragon_lair_access._110_npcChat with pc.get_map_index() == 208 begin
+			say_title(gameforge.ghost_story._010_sayTitle)
+			say(gameforge.dragon_lair_access._115_say)
+			local warp = select(gameforge.dragon_lair_access._116_select, gameforge.dragon_lair_access._117_select)
+			if warp == 1 then
+				dragon_lair_access.warp_from_lair()
+				set_state(start)
+			end
+		end
+
+		when 20009.chat.gameforge.dragon_lair_access._190_npcChat or 9012.chat.gameforge.dragon_lair_access._190_npcChat or 30121.chat.gameforge.dragon_lair_access._190_npcChat with pc.get_map_index() != 208  begin
+			if pc.getqf("time") > 0 and pc.getqf("time") == game.get_event_flag("dragon_lair_time") then
+				dragon_lair_access.warp_to_lair()
+			else
+				say_title(gameforge.neutral_warp._20_sayTitle)
+				say(gameforge.dragon_lair_access._120_say)
+				set_state(start)
+			end
+		end
+		when 2493.kill with pc.get_map_index() == 208 begin
+			char_log(pc.get_player_id(), 'LAIR', pc.get_channel_id() ..' DRAGON KILLED')
+			game.set_event_flag("dragon_lair_alive", 0) -- dragon is dead
+			game.drop_item_with_ownership(71123, 1) -- dropping dragon scale
+			game.drop_item_with_ownership(71129, 1) -- dropping toe nail
+			notice_multiline(string.format(gameforge.dragon_lair_access._180_notice, pc.name), notice_all) -- the dragon has been killed by <name>!
+			local settings = dragon_lair_access.get_settings()
+			purge_area(settings.room_area.first.x, settings.room_area.first.y, settings.room_area.last.x, settings.room_area.last.y)
+		end
+	end
+end

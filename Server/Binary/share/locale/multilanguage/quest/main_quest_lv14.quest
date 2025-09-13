@@ -1,0 +1,90 @@
+quest main_quest_lv14 begin
+	state start begin
+	end
+	state run begin
+		when login or levelup or enter with pc.get_level() >= 14 begin
+		set_state ( gotoboss )
+		end
+	end
+
+	state gotoboss begin
+		when letter begin
+			send_letter(gameforge.main_quest_lv10._10_sendLetter)
+			local v=find_npc_by_vnum(20355)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, gameforge.main_quest_lv10._10_sendLetter)
+			end
+		end
+		when button or info begin
+			say_title(gameforge.main_quest_lv10._10_sendLetter)
+			say(gameforge.main_quest_lv14._10_sayReward)
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+			say_title(gameforge.main_quest_lv10._30_sayTitle)
+			say(gameforge.main_quest_lv14._20_say)
+			wait()
+
+                        say_title(gameforge.main_quest_lv10._30_sayTitle)
+                                                ---                                                   l
+			say(gameforge.main_quest_lv14._30_say)
+			wait()
+			say_title(gameforge.collect_herb_lv4._130_sayTitle)
+                        			say_reward(gameforge.main_quest_lv14._40_sayReward)
+			set_state ( killmetinstone )
+		end
+	end
+
+	state killmetinstone begin
+		when letter begin
+			send_letter(gameforge.main_quest_lv14._50_sendLetter)
+		end
+		when button or info begin
+			say_title(gameforge.main_quest_lv14._50_sendLetter)
+			say(gameforge.main_quest_lv14._60_sayReward)
+		end
+		when 8003.kill begin
+			say_title(gameforge.main_quest_lv14._70_sayTitle)
+			say(gameforge.main_quest_lv14._80_sayReward)
+			set_state (gotoboss2)
+		end
+	end
+	state gotoboss2 begin
+		when letter begin
+			send_letter(gameforge.main_quest_lv14._90_sendLetter)
+			local v=find_npc_by_vnum(20355)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, gameforge.main_quest_lv10._180_targetVid)
+			end
+		end
+		when button or info begin
+			say_title(gameforge.main_quest_lv14._100_sayTitle)
+			say(gameforge.main_quest_lv14._110_sayReward)
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+			
+			local stones = { 28030,28130,28230 }
+			local i = stones[number( 1, 3 )];
+			local stone =  (i+number(1,14)-1)
+			say_title(gameforge.main_quest_lv10._30_sayTitle)
+			say(gameforge.main_quest_lv14._120_say)
+			say_title(gameforge.collect_herb_lv4._130_sayTitle)
+                        			say_reward(gameforge.main_quest_lv14._130_sayReward)
+say_reward(string.format(gameforge.main_quest_lv14._140_sayReward, item_name(stone)))
+			
+			pc.give_exp2( stone )
+			pc.change_money( 10000 )
+			pc.give_item2( stone,1 )
+			
+			clear_letter()
+			set_state (__COMPLETE__)
+			set_quest_state("main_quest_lv15", "run")
+			
+		end
+	end
+	state __COMPLETE__ begin
+	end
+end

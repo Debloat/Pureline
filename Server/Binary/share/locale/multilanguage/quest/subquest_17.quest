@@ -1,0 +1,205 @@
+quest subquest_17 begin
+	state start begin
+		when login or levelup with pc.level >= 27  and pc.level <=30 begin
+			set_state(information)
+		end
+	end
+
+	state information begin
+		when letter begin
+			local v=find_npc_by_vnum(20021)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, gameforge.subquest_17._10_targetVid)
+			end
+		end
+
+		when __TARGET__.target.click or	20021.chat.gameforge.subquest_17._10_targetVid  begin
+			target.delete("__TARGET__")
+			say_title(gameforge.hair_shop._20_sayTitle)
+			say(gameforge.subquest_17._20_say)
+			wait()
+			say_title(gameforge.hair_shop._20_sayTitle)
+			say(gameforge.subquest_17._30_say)
+			local s= select(gameforge.subquest_17._40_select, gameforge.subquest_17._50_select)
+			if 2==s then
+				say(gameforge.subquest_17._60_say)
+				local a= select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
+				if  2==a then
+					say_title(gameforge.hair_shop._20_sayTitle)
+					say(gameforge.subquest_17._70_say)
+					return
+				end
+				say_title(gameforge.hair_shop._20_sayTitle)
+				say(gameforge.subquest_17._80_say)
+				set_state(__GIVEUP__)
+				return
+			end
+			say_title(gameforge.hair_shop._20_sayTitle)
+			say(gameforge.subquest_17._90_say)
+			set_state(to_itemmall_owner)
+			
+		end	
+		
+	end
+		
+	state to_itemmall_owner begin
+		when letter begin
+			local v=find_npc_by_vnum(9003)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, gameforge.subquest_17._100_targetVid)
+			end
+			
+			send_letter(gameforge.subquest_17._100_targetVid)
+		end
+		when info or button begin
+			say_title(gameforge.subquest_17._100_targetVid)
+			say(gameforge.subquest_17._110_say)
+		end
+
+
+		
+		when __TARGET__.target.click or	9003.chat.gameforge.subquest_17._120_npcChat  begin
+			target.delete("__TARGET__")
+			say_title(gameforge.subquest_01._100_sayTitle)
+			say(gameforge.subquest_17._130_say)
+			wait()
+			say_title(gameforge.subquest_01._100_sayTitle)
+			say(gameforge.subquest_17._140_say)
+			set_state(find_ariyoung)
+		end
+	end
+	state find_ariyoung begin
+		when letter begin
+			local v=find_npc_by_vnum(20021)
+			if 0!=v then
+				target.vid("__TARGET__",v, gameforge.subquest_17._150_targetVid)
+			end
+
+			send_letter(gameforge.subquest_17._150_targetVid)
+		end
+		
+		when info or  button begin
+			say_title(gameforge.subquest_17._160_sayTitle)
+			say(gameforge.subquest_17._170_say)
+		end
+		
+		when __TARGET__.target.click or	20021.chat.gameforge.subquest_17._180_npcChat begin
+			target.delete("__TARGET__")
+			say_title(gameforge.subquest_17._160_sayTitle)
+			say(gameforge.subquest_17._190_say)
+			wait()
+			say_title(gameforge.subquest_17._160_sayTitle)
+			say(gameforge.subquest_17._200_say)
+			local s= select(gameforge.subquest_17._210_select, gameforge.subquest_06._50_select)
+			if 2==s then
+				say(gameforge.subquest_17._60_say)
+				local a= select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
+				if 2==a then
+					say_title(gameforge.subquest_17._160_sayTitle)
+					say(gameforge.subquest_17._220_say)
+					return
+				end
+				say_title(gameforge.subquest_17._160_sayTitle)
+				say(gameforge.subquest_17._230_say)
+				set_state(__GIVEUP__)
+				return
+			end
+			say_title(gameforge.subquest_17._160_sayTitle)
+			say(gameforge.subquest_17._240_say)
+			set_state(hunt)
+		end	
+	end	
+	
+	state hunt begin
+		when letter begin
+			send_letter(gameforge.subquest_17._250_sendLetter)
+		end
+		when info or  button begin
+			say_title(gameforge.subquest_17._250_sendLetter)
+			say(gameforge.subquest_17._260_say)
+		end
+		when 20021.chat.gameforge.subquest_17._270_npcChat begin
+			say_title(gameforge.subquest_17._160_sayTitle)
+			say(gameforge.subquest_17._280_say)
+		
+			local s= select(gameforge.subquest_17._290_select, gameforge.subquest_17._50_select)
+			if 2==s then
+				say_title(gameforge.subquest_17._160_sayTitle)
+				say(gameforge.subquest_17._60_say)
+				local a= select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
+				if 2==a then
+					say_title(gameforge.subquest_17._160_sayTitle)
+					say(gameforge.subquest_17._300_say)
+					return
+				end
+				say_title(gameforge.subquest_17._160_sayTitle)
+				say(gameforge.subquest_17._310_say)
+				set_state(__GIVEUP__)
+				return
+			end
+			say_title(gameforge.subquest_17._160_sayTitle)
+			say(gameforge.subquest_17._320_say)
+		end
+		
+		when 493.kill begin
+			local s = number(1, 100)
+			if s <= 10 and pc.count_item("30101")==0 then
+				pc.give_item2("30101")        
+				set_state(discover_ring)
+			end
+		end
+		
+	end
+	state discover_ring begin
+		when letter begin
+			send_letter(gameforge.subquest_17._330_sendLetter)
+			
+			local v=find_npc_by_vnum(20021)
+			if 0!=v then
+				target.vid("__TARGET__",v, gameforge.subquest_17._340_targetVid)
+
+			end
+		end
+		when info or button begin
+			say_title(gameforge.subquest_17._350_sayTitle)
+			say(gameforge.subquest_17._360_say)
+		end
+		
+		when __TARGET__.target.click or	20021.chat.gameforge.subquest_17._370_npcChat with pc.count_item("30101")>= 1  begin   
+			target.delete("__TARGET__")
+			say_title(gameforge.subquest_17._160_sayTitle)
+			say(gameforge.subquest_17._380_say)
+			set_state(reward)
+			pc.remove_item("30101")
+		end
+	end
+	state reward begin
+		when letter begin
+			send_letter(gameforge.subquest_17._390_sendLetter)
+		end
+		when info or button begin
+			say_title(gameforge.subquest_17._390_sendLetter)
+			say(gameforge.subquest_17._400_say)
+			say_reward(gameforge.subquest_17._410_sayReward)
+			pc.give_exp2(300000)
+			
+			say_reward(gameforge.subquest_17._420_sayReward)
+			pc.change_money(10000)
+			
+			clear_letter()
+			
+			set_state(__COMPLETE__)
+		end
+	end
+
+	state __GIVEUP__ begin
+	end
+		
+	state __COMPLETE__ begin
+		when enter begin
+			q.done()
+		end
+	end
+end

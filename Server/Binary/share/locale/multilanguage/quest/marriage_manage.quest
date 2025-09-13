@@ -1,0 +1,544 @@
+quest marriage_manage begin
+    state start begin
+	when oldwoman.chat.gameforge.marriage_manage._10_npcChat with not pc.is_engaged_or_married() begin
+	    if not npc.lock() then
+		say_title(gameforge.fortune_telling._100_sayTitle)
+		say(gameforge.marriage_manage._20_say)
+		return
+	    end
+	    if pc.level < 25 then
+			say_title(gameforge.couple_ring._20_sayTitle)
+			say(gameforge.marriage_manage._30_say)
+			say_title(gameforge.marriage_manage._40_sayTitle)
+			say_reward(gameforge.marriage_manage._50_sayReward)
+				npc.unlock()
+		return
+	    end
+
+	    local m_ring_num = pc.countitem(70301)
+	    local m_has_ring = m_ring_num > 0
+	    if not m_has_ring then
+		say_title(gameforge.couple_ring._20_sayTitle)
+		say(gameforge.marriage_manage._60_say)
+		say_item(gameforge.marriage_manage._70_sayItem, 70301, "")
+		say(gameforge.marriage_manage._80_say)
+		npc.unlock()
+
+		return
+	    end
+
+	    local m_sex = pc.get_sex()
+		local m_nationality= pc.get_empire()
+	    if not marriage_manage.is_equip_wedding_dress() then
+		say_title(gameforge.couple_ring._20_sayTitle)
+		say(gameforge.marriage_manage._90_say)
+
+		if m_sex==0 then
+		    say_item(gameforge.marriage_manage._100_sayItem, marriage_manage.get_wedding_dress(m_sex), "")
+		    say_reward(gameforge.marriage_manage._110_sayReward)
+		else
+		    say_item(gameforge.marriage_manage._120_sayItem, marriage_manage.get_wedding_dress(m_sex), "")
+		    say_reward(gameforge.marriage_manage._130_sayReward)
+		end
+				npc.unlock()
+		return
+	    end
+
+	    local NEED_MONEY = 1000000
+	    if pc.get_money() < NEED_MONEY then
+		say_title(gameforge.couple_ring._20_sayTitle)
+		say(gameforge.marriage_manage._140_say)
+		say_reward(gameforge.marriage_manage._150_sayReward)
+		npc.unlock()
+		return
+	    end
+
+	    say_title(gameforge.couple_ring._20_sayTitle)
+	    say(gameforge.marriage_manage._160_say)
+	    say_reward(gameforge.marriage_manage._170_sayReward)
+
+	    local sname = input()
+	    if sname == "" then
+		say_title(gameforge.couple_ring._20_sayTitle)
+		say(gameforge.marriage_manage._180_say)
+		npc.unlock()
+		return
+	    end
+
+	    local u_vid = find_pc_by_name(sname)
+	    local m_vid = pc.get_vid()
+	    if u_vid == 0 then
+		say_title(gameforge.couple_ring._20_sayTitle)
+		say(gameforge.marriage_manage._190_say)
+		say_reward(string.format(gameforge.marriage_manage._200_sayReward, sname))
+				npc.unlock()
+		return
+	    end
+
+	    if not npc.is_near_vid(u_vid, 10) then
+		say_title(gameforge.couple_ring._20_sayTitle)
+		say(gameforge.marriage_manage._210_say)
+		say_reward(string.format(gameforge.marriage_manage._220_sayReward, sname))
+				npc.unlock()
+		return
+	    end
+
+	    local old = pc.select(u_vid)
+	    local u_level = pc.get_level()
+	    local u_job = pc.get_job()
+	    local u_sex = pc.get_sex()
+		local u_nationality= pc.get_empire()
+	    local u_name = pc.name
+	    local u_gold = pc.get_money()
+	    local u_married = pc.is_married()
+	    local u_has_ring = pc.countitem(70301) > 0
+	    local u_wear = marriage_manage.is_equip_wedding_dress()
+	    pc.select(old)
+	    local m_level = pc.get_level()
+
+	    if u_vid == m_vid then
+		say_title(gameforge.couple_ring._20_sayTitle)
+		say(gameforge.marriage_manage._230_say)
+		say_reward(gameforge.marriage_manage._240_sayReward)
+				npc.unlock()
+		return
+	    end
+
+	    if u_sex == m_sex then
+		say_title(gameforge.couple_ring._20_sayTitle)
+		say(gameforge.marriage_manage._250_say)
+		npc.unlock()
+		return
+	    end
+
+	    if u_nationality != m_nationality then
+		say_title(gameforge.couple_ring._20_sayTitle)
+		say(gameforge.marriage_manage._260_say)
+		npc.unlock()
+		return
+	    end
+	    if u_married then
+		say_title(gameforge.couple_ring._20_sayTitle)
+		say(gameforge.marriage_manage._270_say)
+say_reward(string.format(gameforge.marriage_manage._280_sayReward, sname))
+				npc.unlock()
+		return
+	    end
+
+	    if u_level < 25 then
+		say_title(gameforge.couple_ring._20_sayTitle)
+		say(gameforge.marriage_manage._290_say)
+		npc.unlock()
+		return
+	    end
+
+	    if m_level - u_level > 15 or u_level - m_level > 15 then
+		say_title(gameforge.couple_ring._20_sayTitle)
+		say(gameforge.marriage_manage._300_say)
+		npc.unlock()
+		return
+	    end
+
+	    if not u_has_ring then
+		if m_ring_num >= 2 then
+		    say_title(gameforge.couple_ring._20_sayTitle)
+		    say(gameforge.marriage_manage._310_say)
+		else
+		    say(gameforge.marriage_manage._320_say)
+		end
+
+		say_item(gameforge.marriage_manage._70_sayItem, 70301, "")
+		say_title(gameforge.couple_ring._20_sayTitle)
+		say(gameforge.marriage_manage._330_say)
+		npc.unlock()
+		return
+	    end
+
+	    if not u_wear then
+		say_title(gameforge.couple_ring._20_sayTitle)
+		say(gameforge.marriage_manage._340_say)
+		if u_sex==0 then
+		    say_title(gameforge.couple_ring._20_sayTitle)
+			say_item(gameforge.marriage_manage._100_sayItem, marriage_manage.get_wedding_dress(u_sex), "")
+		    say(gameforge.marriage_manage._350_say)
+		else
+		    say_title(gameforge.couple_ring._20_sayTitle)
+		    say_item(gameforge.marriage_manage._120_sayItem, marriage_manage.get_wedding_dress(u_sex), "")
+		    say(gameforge.marriage_manage._360_say)
+		end
+			npc.unlock()
+		return
+	    end
+
+	    local ok_sign = confirm(u_vid, string.format(gameforge.marriage_manage._365_confirm_chat,pc.name), 30) 
+
+	    if ok_sign == CONFIRM_OK then
+		local m_name = pc.name
+		if pc.get_gold()>=NEED_MONEY then
+		    pc.change_gold(-NEED_MONEY)
+
+		    pc.removeitem(70301, 1)
+		    pc.give_item2(70302, 1)
+		    local old = pc.select(u_vid)
+		    pc.removeitem(70301, 1)
+		    pc.give_item2(70302, 1)
+		    pc.select(old)
+
+		    say_title(gameforge.couple_ring._20_sayTitle)
+		    say(gameforge.marriage_manage._370_say)
+		    wait()
+		    setskin(NOWINDOW)
+		    marriage.engage_to(u_vid)
+		end
+	    else
+		say_title(gameforge.couple_ring._20_sayTitle)
+		say(gameforge.marriage_manage._380_say)
+	    end
+	    	    npc.unlock()
+	end
+	
+	when oldwoman.chat.gameforge.marriage_manage._390_npcChat with pc.is_engaged() begin
+	    say_title(gameforge.couple_ring._20_sayTitle)
+	    say(gameforge.marriage_manage._400_say)
+	    wait()
+	    setskin(NOWINDOW)
+	    marriage.warp_to_my_marriage_map()
+	end
+
+
+	when 9011.chat.gameforge.marriage_manage._410_npcChat with pc.is_engaged() and marriage.in_my_wedding() begin
+	    if not npc.lock() then
+		say_title(gameforge.marriage_manage._420_sayTitle)
+		say(gameforge.marriage_manage._430_say)
+		return
+	    end
+	    say_title(gameforge.marriage_manage._420_sayTitle)
+	    say(gameforge.marriage_manage._440_say)
+
+	    local sname = input()
+	    local u_vid = find_pc_by_name(sname)
+	    local m_vid = pc.get_vid()
+
+	    if u_vid == 0 then
+			say_title(gameforge.marriage_manage._420_sayTitle)
+			say(gameforge.marriage_manage._450_say)
+			say_reward(string.format(gameforge.marriage_manage._200_sayReward, sname))
+			npc.unlock()
+		return
+	    end
+
+	    if not npc.is_near_vid(u_vid, 10) then
+			say_title(gameforge.marriage_manage._420_sayTitle)
+			say(gameforge.marriage_manage._460_say)
+			say_reward(string.format(gameforge.marriage_manage._470_sayReward, sname))
+			npc.unlock()
+		return
+	    end
+
+	    if u_vid == m_vid then
+		say_title(gameforge.marriage_manage._420_sayTitle)
+		say(gameforge.marriage_manage._480_say)
+		npc.unlock()
+		return
+	    end
+
+	    if u_vid != marriage.find_married_vid() then
+		say_title(gameforge.marriage_manage._490_sayTitle)
+		say(gameforge.marriage_manage._500_say)
+		npc.unlock()
+		return
+	    end
+
+	    local ok_sign = confirm(u_vid, string.format(gameforge.marriage_manage._365_confirm_chat,pc.name), 30)
+	    if ok_sign != CONFIRM_OK then
+			say_title(gameforge.marriage_manage._490_sayTitle)
+			say(gameforge.marriage_manage._510_say)
+			npc.unlock()
+			return
+	    end
+		say_title(gameforge.marriage_manage._420_sayTitle)
+		say(gameforge.marriage_manage._520_say)
+		marriage.set_to_marriage()
+	    say(gameforge.marriage_manage._530_say)
+	    npc.unlock()
+	end
+
+	function give_wedding_gift()
+	    local male_item = {71072, 71073, 71074}
+	    local female_item = {71069, 71070, 71071} 
+	    if pc.get_sex() == MALE then
+		pc.give_item2(male_item[number(1, 3)], 1)
+	    else
+		pc.give_item2(female_item[number(1, 3)], 1)
+	    end
+	end
+
+	when 9011.chat.gameforge.marriage_manage._540_npcChat with 
+	    	(pc.is_engaged() or pc.is_married()) and 
+		marriage.in_my_wedding() and
+		not marriage.wedding_is_playing_music() begin
+	    marriage.wedding_music(true, "wedding.mp3")
+	    setskin(NOWINDOW)
+	end
+	when 9011.chat.gameforge.marriage_manage._550_npcChat with 
+	    	(pc.is_engaged() or pc.is_married()) and 
+		marriage.in_my_wedding() and
+		marriage.wedding_is_playing_music() begin
+	    marriage.wedding_music(false, "default")
+	    setskin(NOWINDOW)
+	end
+	when 9011.chat.gameforge.marriage_manage._560_npcChat with 
+	    pc.is_married() and 
+	    marriage.in_my_wedding() begin
+	    marriage.wedding_dark(true)
+	    setskin(NOWINDOW)
+	end
+
+	when 9011.chat.gameforge.marriage_manage._570_npcChat with pc.is_married() and marriage.in_my_wedding() begin
+	    marriage.wedding_snow(true)
+	    setskin(NOWINDOW)
+	end
+
+	when 9011.chat.gameforge.marriage_manage._580_npcChat with pc.is_married() and marriage.in_my_wedding() begin
+	    if not npc.lock() then
+		say_title(gameforge.marriage_manage._490_sayTitle)
+		say(gameforge.marriage_manage._590_say)
+		return
+	    end
+
+	    say_title(gameforge.marriage_manage._420_sayTitle)
+	    say(gameforge.marriage_manage._600_say)
+	    local s =  select(gameforge.marriage_manage._610_select, gameforge.marriage_manage._620_select)
+	    if s == 2 then
+				local u_vid = marriage.find_married_vid()
+				if u_vid == 0 then
+			    say_title(gameforge.marriage_manage._420_sayTitle)
+		  	  say(gameforge.marriage_manage._630_say)
+			    npc.unlock()
+		    return
+		end
+		say_title(gameforge.marriage_manage._420_sayTitle)
+		say(gameforge.marriage_manage._640_say)
+		local ok_sign = confirm(u_vid, gameforge.marriage_manage._650_confirm_chat, 30)
+		if ok_sign == CONFIRM_OK then
+		    marriage.end_wedding()
+		else
+		    say_title(gameforge.marriage_manage._490_sayTitle)
+		    say(gameforge.marriage_manage._660_say)
+		end
+
+	    end
+		npc.unlock()
+	end
+
+	
+	when 	11000.chat.gameforge.marriage_manage._670_npcChat or
+	    	11002.chat.gameforge.marriage_manage._680_npcChat or
+		11004.chat.gameforge.marriage_manage._680_npcChat with pc.is_married() begin
+
+	    if not marriage_manage.check_divorce_time() then
+		return
+	    end
+
+	    local u_vid = marriage.find_married_vid()
+	    if u_vid == 0 or not npc.is_near_vid(u_vid, 10) then
+		say_title(gameforge.find_squareguard._30_sayTitle)
+		say(gameforge.marriage_manage._690_say)
+		return
+	    end
+
+	    say_title(gameforge.find_squareguard._30_sayTitle)
+	    say(gameforge.marriage_manage._700_say)
+
+	    local MONEY_NEED_FOR_ONE = 500000
+	    local s =  select(gameforge.horse_upgrade2._180_select, gameforge.marriage_manage._710_select)
+
+	    if s == 1 then
+		local m_enough_money = pc.gold > MONEY_NEED_FOR_ONE
+		local m_have_ring = pc.countitem(70302) > 0
+
+		local old = pc.select(u_vid)
+		local u_enough_money = pc.gold > MONEY_NEED_FOR_ONE
+		local u_have_ring = pc.countitem(70302) > 0
+		pc.select(old)
+
+		if not m_have_ring then
+		    say(gameforge.marriage_manage._720_say)
+		    return;
+		end
+		if not u_have_ring then
+		    say(gameforge.marriage_manage._730_say)
+		    return;
+		end
+
+		if not m_enough_money then
+		    say_title(gameforge.find_squareguard._30_sayTitle)
+		    say(gameforge.marriage_manage._740_say)
+			say_reward(string.format(gameforge.marriage_manage._750_sayReward, MONEY_NEED_FOR_ONE/10000))
+		    return;
+		end
+		if not u_enough_money then
+		    say_title(gameforge.find_squareguard._30_sayTitle)
+		    say(gameforge.marriage_manage._740_say)
+		    say_reward(gameforge.marriage_manage._760_sayReward)
+		    		    return;
+		end
+		say_title(gameforge.find_squareguard._30_sayTitle)
+		say(gameforge.marriage_manage._770_say)
+
+		local c= select(gameforge.horse_upgrade2._180_select, gameforge.marriage_manage._780_select)
+		if 2 == c then
+		    say_pc_name()
+		    say(gameforge.marriage_manage._790_say)
+		    wait()
+		    say_title(gameforge.find_squareguard._30_sayTitle)
+		    say(gameforge.marriage_manage._800_say)
+		    say_reward(gameforge.marriage_manage._810_sayReward)
+		    		    return
+		end
+
+		local ok_sign = confirm(u_vid, pc.name..gameforge.marriage_manage._815_confirm_chat, 30)
+		if ok_sign == CONFIRM_OK then
+
+		    local m_enough_money = pc.gold > MONEY_NEED_FOR_ONE
+		    local m_have_ring = pc.countitem(70302) > 0
+
+		    local old = pc.select(u_vid)
+		    local u_enough_money = pc.gold > MONEY_NEED_FOR_ONE
+		    local u_have_ring = pc.countitem(70302) > 0
+		    pc.select(old)
+
+		    if m_have_ring and m_enough_money and u_have_ring and u_enough_money then
+			pc.removeitem(70302, 1)
+			pc.change_money(-MONEY_NEED_FOR_ONE)
+
+			local old = pc.select(u_vid)
+			pc.removeitem(70302, 1)
+			pc.change_money(-MONEY_NEED_FOR_ONE)
+			pc.select(old)
+
+			say_title(gameforge.find_squareguard._30_sayTitle)
+			say(gameforge.marriage_manage._820_say)
+			say_reward(gameforge.marriage_manage._810_sayReward)
+						marriage.remove()
+		    else
+			say_title(gameforge.find_squareguard._30_sayTitle)
+			say(gameforge.marriage_manage._830_say)
+			say_reward(gameforge.marriage_manage._840_sayReward)
+					    end
+		else
+		    say_title(gameforge.find_squareguard._30_sayTitle)
+		    say(gameforge.marriage_manage._850_say)
+		    say_reward(gameforge.marriage_manage._840_sayReward)
+		    		end
+	    end
+	end
+
+	when 	11000.chat.gameforge.marriage_manage._860_npcChat or
+	    	11002.chat.gameforge.marriage_manage._870_npcChat or
+		11004.chat.gameforge.marriage_manage._870_npcChat with 
+			not pc.is_married() 	and 
+			pc.count_item(70302)>0
+			begin
+		say_title(gameforge.find_squareguard._30_sayTitle)
+		say(gameforge.marriage_manage._880_say)
+		say_reward(gameforge.marriage_manage._890_sayReward)
+		pc.remove_item(70302)
+	end
+
+	when 	11000.chat.gameforge.marriage_manage._900_npcChat or
+	    	11002.chat.gameforge.marriage_manage._900_npcChat or
+		11004.chat.gameforge.marriage_manage._900_npcChat with pc.is_married() begin
+
+	    if not marriage_manage.check_divorce_time() then
+		return
+	    end
+
+	    say_title(gameforge.marriage_manage._910_sayTitle)
+	    say(gameforge.marriage_manage._920_say)
+
+	    local s =  select(gameforge.horse_upgrade2._180_select, gameforge.marriage_manage._930_select)
+
+	    local NEED_MONEY = 1000000
+	    if s == 2 then
+		return
+	    end
+
+	    if pc.money < NEED_MONEY then
+		say_title(gameforge.find_squareguard._30_sayTitle)
+		say(gameforge.marriage_manage._940_say)
+		return
+	    end
+
+	    say_title(gameforge.find_squareguard._30_sayTitle)
+	    say(gameforge.marriage_manage._950_say)
+
+	    local c =  select(gameforge.marriage_manage._960_select, gameforge.marriage_manage._970_select)
+
+	    if c == 2 then
+		say_title(gameforge.find_squareguard._30_sayTitle)
+		say(gameforge.marriage_manage._980_say)
+		return
+	    end
+
+	    pc.removeitem(70302, 1)
+	    pc.change_gold(-NEED_MONEY)
+
+	    marriage.remove()
+
+	    say_title(gameforge.find_squareguard._30_sayTitle)
+	    say(gameforge.marriage_manage._990_say)
+	end
+
+	when oldwoman.chat.gameforge.marriage_manage._1000_npcChat with not pc.is_engaged() begin
+	    local t = marriage.get_wedding_list()
+	    if table.getn(t) == 0 then
+		say_title(gameforge.couple_ring._20_sayTitle)
+		say(gameforge.marriage_manage._1010_say)
+	    else
+		local wedding_names = {}
+		table.foreachi(t, function(n, p) wedding_names[n] = string.format(gameforge.marriage_manage._1015_foreach,p[3],p[4]) end)
+		wedding_names[table.getn(t)+1] = locale.confirm
+		local s = select_table(wedding_names)
+
+		if s != table.getn(wedding_names) then
+		    marriage.join_wedding(t[s][1], t[s][2])
+		end
+	    end
+	end
+	when 9011.click with not pc.is_engaged() and not pc.is_married() begin
+	    say_title(gameforge.marriage_manage._420_sayTitle)
+	    say(gameforge.marriage_manage._1020_say)
+	end
+
+	function check_divorce_time()
+
+	    local DIVORCE_LIMIT_TIME = 86400
+
+	    if is_test_server() then
+		DIVORCE_LIMIT_TIME = 60
+	    end
+
+	    if marriage.get_married_time() < DIVORCE_LIMIT_TIME then 
+		say_title(gameforge.find_squareguard._30_sayTitle)
+		say(gameforge.marriage_manage._1030_say)
+		return false
+	    end
+
+	    return true
+	end
+
+	function is_equip_wedding_dress()
+	    local a = pc.get_armor()
+	    return a >= 11901 and a <= 11904
+	end
+	function get_wedding_dress(pc_sex)
+		if 0==pc_sex then
+		    return 11901
+		else
+		    return 11903
+		end
+	end
+    end
+end
+

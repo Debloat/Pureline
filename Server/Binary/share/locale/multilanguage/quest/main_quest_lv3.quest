@@ -1,0 +1,107 @@
+quest main_quest_lv3 begin
+	state start begin
+
+	end
+	state run begin
+		when login or levelup or enter with pc.get_level() >= 3 begin
+			set_state ( gototeacher )
+		end
+		when 20354.chat.gameforge.main_quest_lv3._10_npcChat begin
+			say_title(gameforge.main_quest_lv1._60_sayTitle)
+			say(gameforge.main_quest_lv3._20_say)
+		end
+	end
+	state gototeacher begin
+		when letter begin
+			send_letter(gameforge.main_quest_lv3._30_sendLetter)
+			local v=find_npc_by_vnum(20354)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, gameforge.main_quest_lv2._40_targetVid)
+			end
+		end
+		when button or info begin
+			say_title(gameforge.main_quest_lv3._30_sendLetter)
+			say(gameforge.main_quest_lv3._40_sayReward)
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+			say_title(gameforge.main_quest_lv1._60_sayTitle)
+			say(gameforge.main_quest_lv3._50_say)
+			wait()
+			say_title(gameforge.main_quest_lv1._60_sayTitle)
+			say(gameforge.main_quest_lv3._60_say)
+			wait()
+			set_state ( gotogood )
+		end
+	end
+
+	state gotogood begin
+		when letter begin
+			local v=find_npc_by_vnum(9003)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, gameforge.main_quest_lv3._70_targetVid)
+			end
+		end
+		when letter begin
+			send_letter(gameforge.main_quest_lv3._80_sendLetter)
+		end
+		when button or info begin
+			say_title(gameforge.main_quest_lv3._80_sendLetter)
+						say_reward(gameforge.main_quest_lv3._90_sayReward)
+					end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+			say_title(gameforge.find_squareguard._130_sayTitle)
+			say(gameforge.main_quest_lv3._100_say)
+			wait()
+			say_title(gameforge.find_squareguard._130_sayTitle)
+			say(gameforge.main_quest_lv3._110_say)
+			say_item(gameforge.main_quest_lv3._120_sayItem, 69000, "")
+			set_state ( gotodefend )
+		end
+	end
+
+	state gotodefend begin
+		when letter begin
+			local v=find_npc_by_vnum(9002)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, gameforge.main_quest_lv3._130_targetVid)
+			end
+		end
+		when letter begin
+			send_letter(gameforge.main_quest_lv3._140_sendLetter)
+		end
+		when button or info begin
+			say_title(gameforge.main_quest_lv3._140_sendLetter)
+			say(gameforge.main_quest_lv3._150_sayReward)
+			say_item(gameforge.main_quest_lv3._120_sayItem, 69000, "")
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+
+			say_title(gameforge.main_quest_lv3._160_sayTitle)
+			say(gameforge.main_quest_lv3._170_say)
+			say_item(gameforge.main_quest_lv3._120_sayItem, 69000, "")
+			say(gameforge.main_quest_lv3._180_say)
+			wait()
+			say_title(gameforge.main_quest_lv3._160_sayTitle)
+			say(gameforge.main_quest_lv3._190_say)
+			wait("")
+			say_title(gameforge.collect_herb_lv4._130_sayTitle)
+						say_reward(gameforge.main_quest_lv3._200_sayReward)
+
+						pc.give_exp2( 450 )
+			pc.change_money( 5000 )
+			pc.give_item2( 27004 ,20 )
+						
+			clear_letter()
+			set_state (__COMPLETE__)
+			set_quest_state("main_quest_lv6","run")
+		end
+	end
+	state __COMPLETE__ begin
+	end
+end

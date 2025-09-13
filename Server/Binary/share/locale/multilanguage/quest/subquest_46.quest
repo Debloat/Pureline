@@ -1,0 +1,151 @@
+
+quest subquest_46 begin
+	state start begin
+		when login  or levelup with pc.level >= 53 and pc.level <= 56 begin
+			set_state(information)
+		end
+	end
+
+	state information begin
+		when letter begin
+
+			local v = find_npc_by_vnum(20005)
+
+			if v != 0 then
+				target.vid("__TARGET__", v, gameforge.subquest_46._10_targetVid)
+			end
+		end
+
+
+
+		when __TARGET__.target.click or	20005.chat.gameforge.subquest_46._10_targetVid begin
+			target.delete("__TARGET__")
+			say_title(gameforge.subquest_01._140_sayTitle)
+			say(gameforge.subquest_46._20_say)
+			wait()
+			say_title(gameforge.subquest_01._140_sayTitle)
+			say(gameforge.subquest_46._30_say)
+			wait()
+			say_title(gameforge.subquest_01._140_sayTitle)
+			say(gameforge.subquest_46._40_say)
+
+			local s= select(gameforge.subquest_46._50_select, gameforge.subquest_46._60_select)
+			if 2==s then
+				say(gameforge.subquest_46._70_say)
+				local a= select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
+				if  2==a then
+					say_title(gameforge.subquest_01._140_sayTitle)
+					say(gameforge.subquest_46._80_say)
+					return
+				end
+				say_title(gameforge.subquest_01._140_sayTitle)
+				say(gameforge.subquest_46._90_say)
+				set_state(__GIVEUP__)
+				return
+			end
+			say_title(gameforge.subquest_01._140_sayTitle)
+			say(gameforge.subquest_46._100_say)
+			set_state(to_get_material)
+		end
+
+	end
+
+
+	state to_get_material begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton(gameforge.subquest_46._110_makequestbutton)
+			q.set_title(gameforge.subquest_46._120_qSetTitle)
+			q.start()
+
+			if pc.count_item("50611")>0 and pc.count_item("30138")>0 and pc.count_item("30137")>0 then
+				local v = find_npc_by_vnum(20005)
+
+				if v != 0 then
+					target.vid("__TARGET__", v, gameforge.subquest_46._10_targetVid)
+				end
+			end
+
+
+		end
+
+		when button or info begin
+			if pc.count_item("50611") >= 1  and  pc.count_item("30137") >= 1 and pc.count_item("30138") >= 1 then
+				say_title(gameforge.subquest_46._10_targetVid)
+				say(gameforge.subquest_46._130_say)
+				return
+			end
+
+			say_title(gameforge.subquest_46._10_targetVid)
+			say(gameforge.subquest_46._140_say)
+
+
+		end
+
+
+
+		when 2108.kill  begin	--der zugellose Mensch in der Wuste
+			local s = number(1, 100)
+			if s <= 5 and pc.count_item("30138")==0  then
+				pc.give_item2("30138", 1)
+
+				if pc.count_item("50611")>0 and pc.count_item("30137")>0 then
+					local v = find_npc_by_vnum(20005)
+					if v != 0 then
+						target.vid("__TARGET__", v, gameforge.subquest_46._150_targetVid)
+					end
+				end
+			end
+
+		end
+
+
+		when 5125.kill or 5126.kill  begin --Der Gewinn der Affeblut
+			local s = number(1, 100)
+			if s <= 5 and pc.count_item("30137")==0  then
+				pc.give_item2("30137", 1)
+
+				if pc.count_item("50611")>0 and pc.count_item("30138")>0 then
+					local v = find_npc_by_vnum(20005)
+
+					if v != 0 then
+						target.vid("__TARGET__", v, gameforge.subquest_46._10_targetVid)
+					end
+				end
+
+			end
+		end
+
+
+		when __TARGET__.target.click or	20005.chat.gameforge.subquest_46._160_npcChat with  pc.count_item("50611") >= 1  and  pc.count_item("30137") >= 1 and pc.count_item("30138") >= 1 begin
+				target.delete("__TARGET__")
+				say_title(gameforge.subquest_01._140_sayTitle)
+				say(gameforge.subquest_46._170_say)
+
+				pc.remove_item("50611",1)
+				pc.remove_item("30137",1)
+				pc.remove_item("30138",1)
+
+				say_reward(gameforge.subquest_46._180_sayReward)
+				pc.give_exp2(3000000)
+				set_quest_state("levelup","run")
+
+				say_reward(gameforge.subquest_46._190_sayReward)
+				pc.change_money(30000)
+
+				clear_letter()
+				set_state(__THEEND__)
+
+
+
+	end
+end
+	state __GIVEUP__ begin
+	end
+	state __THEEND__ begin
+		when enter begin
+		end
+	end
+end
+
+
