@@ -12,7 +12,6 @@
 #include "../EterPack/EterPackManager.h"
 #include "../EterLib/Util.h"
 #include "../CWebBrowser/CWebBrowser.h"
-#include "../EterBase/CPostIt.h"
 
 #include "CheckLatestFiles.h"
 

@@ -1087,7 +1087,7 @@ void CInstanceBase::DismountHorse()
 void CInstanceBase::GetInfo (std::string* pstInfo)
 {
     char szInfo[256];
-    sprintf (szInfo, "Inst - UC %d, RC %d Pool - %d ",
+    sprintf (szInfo, "Inst - UC %d, RC %d Pool - %zd ",
              ms_dwUpdateCounter,
              ms_dwRenderCounter,
              ms_kPool.GetCapacity()

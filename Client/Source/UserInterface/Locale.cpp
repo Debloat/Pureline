@@ -359,7 +359,7 @@ LRESULT CALLBACK SelectDlgProc (HWND hDlg, UINT uMsg, WPARAM wParam, LPARAM lPar
             for (int i = 0; gs_stLocaleData[i].szServiceName; i++)
             {
                 sprintf (szLocalePath, "locale/%s/item_proto", gs_stLocaleData[i].szLocaleName);
-                if (CEterPackManager::Instance().isExist (szLocalePath))
+                if (CEterPackManager::Instance().IsExist (szLocalePath))
                 {
                     sprintf (szDisplayName, "%s (%s, %d)", gs_stLocaleData[i].szLocaleName, gs_stLocaleData[i].szServiceName, gs_stLocaleData[i].wCodePage);
                     int iIndex = ListBox_AddString (GetDlgItem (hDlg, IDC_LOCALE_LIST), szDisplayName);
@@ -411,7 +411,7 @@ bool LocaleService_LoadGlobal (HINSTANCE hInstance)
     for (int i = 0; gs_stLocaleData[i].szServiceName; i++)
     {
         sprintf (szLocalePath, "locale/%s/item_proto", gs_stLocaleData[i].szLocaleName);
-        if (CEterPackManager::Instance().isExist (szLocalePath))
+        if (CEterPackManager::Instance().IsExist (szLocalePath))
         {
             nFoundLocales++;
             if (gs_iLocale == -1)

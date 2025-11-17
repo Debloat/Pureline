@@ -8,7 +8,7 @@ void CEffectManager::GetInfo (std::string* pstInfo)
 {
     char szInfo[256];
 
-    sprintf (szInfo, "Effect: Inst - ED %d, EI %d Pool - PSI %d, MI %d, LI %d, PI %d, EI %d, ED %d, PSD %d, EM %d, LD %d",
+    sprintf(szInfo, "Effect: Inst - ED %zd, EI %zd Pool - PSI %zd, MI %zd, LI %zd, PI %zd, EI %zd, ED %zd, PSD %zd, EM %zd, LD %zd",
              m_kEftDataMap.size(),
              m_kEftInstMap.size(),
              CParticleSystemInstance::ms_kPool.GetCapacity(),
