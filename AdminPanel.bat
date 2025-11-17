@@ -606,6 +606,14 @@ for %%F in (Debug Release) do (
     )
 )
 
+cd "../../Server/Source"
+for /d /r %%D in (Debug Release) do (
+    if exist "%%D" (
+        echo Deleting %%D...
+        rmdir /s /q "%%D"
+    )
+)
+
 echo Build folders cleared.
 
 cd "../../Tools/EPack32"
