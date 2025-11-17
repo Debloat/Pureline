@@ -42,7 +42,7 @@ CGraphicText* ms_pFont = nullptr;
 void CPythonTextTail::GetInfo (std::string* pstInfo)
 {
     char szInfo[256];
-    sprintf (szInfo, "TextTail: ChatTail %d, ChrTail (Map %d, List %d), ItemTail (Map %d, List %d), Pool %d",
+    sprintf (szInfo, "TextTail: ChatTail %zd, ChrTail (Map %zd, List %zd), ItemTail (Map %zd, List %zd), Pool %zd",
              m_ChatTailMap.size(),
              m_CharacterTextTailMap.size(), m_CharacterTextTailList.size(),
              m_ItemTextTailMap.size(), m_ItemTextTailList.size(),

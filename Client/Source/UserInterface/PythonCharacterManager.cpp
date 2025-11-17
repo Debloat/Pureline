@@ -139,7 +139,7 @@ void CPythonCharacterManager::GetInfo (std::string* pstInfo)
     CInstanceBase::GetInfo (pstInfo);
 
     char szInfo[256];
-    sprintf (szInfo, "Container - Live %d, Dead %d", m_kAliveInstMap.size(), m_kDeadInstList.size());
+    sprintf (szInfo, "Container - Live %zd, Dead %zd", m_kAliveInstMap.size(), m_kDeadInstList.size());
     pstInfo->append (szInfo);
 }
 

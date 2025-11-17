@@ -88,7 +88,7 @@ class CDynamicPool
             m_kVct_pkFree = m_kVct_pkData;
         }
 
-        DWORD GetCapacity()
+        size_t GetCapacity()
         {
             return m_kVct_pkData.size();
         }

@@ -15,7 +15,7 @@ std::string CPythonItem::TGroundItemInstance::ms_astDropSoundFileName[DROPSOUND_
 void CPythonItem::GetInfo (std::string* pstInfo)
 {
     char szInfo[256];
-    sprintf (szInfo, "Item: Inst %d, Pool %d", m_GroundItemInstanceMap.size(), m_GroundItemInstancePool.GetCapacity());
+    sprintf (szInfo, "Item: Inst %zd, Pool %zd", m_GroundItemInstanceMap.size(), m_GroundItemInstancePool.GetCapacity());
 
     pstInfo->append (szInfo);
 }

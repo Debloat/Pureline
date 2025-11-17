@@ -1,5 +1,0 @@
-#define LOCALE_SERVICE_BRAZIL               // ºê¶óÁú
-
-#define ENABLE_COSTUME_SYSTEM
-#define ENABLE_ENERGY_SYSTEM
-#define ENABLE_DRAGON_SOUL_SYSTEM
