@@ -79,9 +79,9 @@
       <LanguageStandard_C>stdc17</LanguageStandard_C>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>mysqlclient.lib;ws2_32.lib;DevIL-1.7.8d.lib;DevILU-1.7.8d.lib;DevILUT-1.7.8d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>mysqlclient_$(Configuration).lib;ws2_32.lib;DevIL-1.7.8d.lib;DevILU-1.7.8d.lib;DevILUT-1.7.8d.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
-      <AdditionalLibraryDirectories>$(ProjectDir)../libmysql/6.0.2/win32/lib/$(Configuration);$(ProjectDir)../libdevil/win32/lib;$(SolutionDir)Extern\Common\library;$(SolutionDir)Extern\Server\openssl\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\libmysql\6.0.2\win32\lib\;$(ProjectDir)../libdevil/win32/lib;$(SolutionDir)Extern\Common\library;$(SolutionDir)Extern\Server\openssl\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <TargetMachine>MachineX86</TargetMachine>
@@ -108,8 +108,8 @@
       <LanguageStandard_C>stdc17</LanguageStandard_C>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>mysqlclient.lib;ws2_32.lib;DevIL-1.7.8.lib;DevILU-1.7.8.lib;DevILUT-1.7.8.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(ProjectDir)../libmysql/6.0.2/win32/lib/$(Configuration);$(ProjectDir)../libdevil/win32/lib;$(SolutionDir)Extern\Common\library;$(SolutionDir)Extern\Server\openssl\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>mysqlclient_$(Configuration).lib;ws2_32.lib;DevIL-1.7.8.lib;DevILU-1.7.8.lib;DevILUT-1.7.8.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\libmysql\6.0.2\win32\lib\;$(ProjectDir)../libdevil/win32/lib;$(SolutionDir)Extern\Common\library;$(SolutionDir)Extern\Server\openssl\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
