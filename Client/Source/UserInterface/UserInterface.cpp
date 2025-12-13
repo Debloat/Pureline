@@ -58,10 +58,6 @@ bool __IS_TEST_SERVER_MODE__ = false;
 
 extern bool SetDefaultCodePage(DWORD codePage);
 
-#ifdef USE_OPENID
-    extern int openid_test;
-#endif
-
 static const char* sc_apszPythonLibraryFilenames[] =
 {
     "UserDict.pyc",
@@ -522,20 +518,6 @@ bool __IsLocaleVersion(LPSTR lpCmdLine)
     return (strcmp(lpCmdLine, "--perforce-revision") == 0);
 }
 
-#ifdef USE_OPENID
-//2012.07.16 김용욱
-//일본 OpenID 지원. 인증키 인자 추가
-bool __IsOpenIDAuthKeyOption(LPSTR lpCmdLine)
-{
-    return (strcmp(lpCmdLine, "--openid-authkey") == 0);
-}
-
-bool __IsOpenIDTestOption(LPSTR lpCmdLine)  //클라이언트에서 로그인이 가능하다.
-{
-    return (strcmp(lpCmdLine, "--openid-test") == 0);
-}
-#endif /* USE_OPENID */
-
 int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
     #ifdef _DEBUG
@@ -556,7 +538,6 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
     #endif
 
     bool bQuit = false;
-    bool bAuthKeyChecked = false;   //OpenID 버전에서 인증키가 들어왔는지 알기 위한 인자.
     int nArgc = 0;
     PCHAR* szArgv = CommandLineToArgv(lpCmdLine, &nArgc);
 
@@ -608,43 +589,7 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
 
             LocaleService_ForceSetLocale(localeName, localePath);
         }
-        #ifdef USE_OPENID
-        else if (__IsOpenIDAuthKeyOption(szArgv[i]))    //2012.07.16 OpenID : 김용욱
-        {
-            // 인증키 설정엔 인자가 한 개 더 필요함 (인증키)
-            if (nArgc <= i + 1)
-            {
-                MessageBox(NULL, "Invalid arguments", ApplicationStringTable_GetStringz(IDS_APP_NAME, "APP_NAME"), MB_ICONSTOP);
-                goto Clean;
-            }
-
-            const char* authKey = szArgv[++i];
-
-            //ongoing (2012.07.16)
-            //인증키 저장하는 부분
-            LocaleService_SetOpenIDAuthKey(authKey);
-
-            bAuthKeyChecked = true;
-        }
-        else if (__IsOpenIDTestOption(szArgv[i]))
-        {
-            openid_test = 1;
-
-        }
-        #endif /* USE_OPENID */
     }
-
-    #ifdef USE_OPENID
-    //OpenID
-    //OpenID 클라이언트의 경우인증키를 받아오지 않을 경우 (웹을 제외하고 실행 시) 클라이언트 종료.
-
-    if (false == bAuthKeyChecked && !openid_test)
-    {
-        MessageBox(NULL, "Invalid execution", ApplicationStringTable_GetStringz(IDS_APP_NAME, "APP_NAME"), MB_ICONSTOP);
-        goto Clean;
-    }
-    #endif /* USE_OPENID */
-
 
     if (bQuit)
     {

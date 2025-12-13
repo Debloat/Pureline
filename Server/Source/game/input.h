@@ -252,7 +252,6 @@ class CInputDB : public CInputProcessor
         void        ChangeName(LPDESC d, const char* data);
 
         void        AuthLogin(LPDESC d, const char* c_pData);
-        void        AuthLoginOpenID(LPDESC d, const char* c_pData);
         void        ItemAward(const char* c_pData);
 
         void        ChangeEmpirePriv(const char* c_pData);
@@ -382,11 +381,9 @@ class CInputAuth : public CInputProcessor
 
     protected:
         virtual int Analyze(LPDESC d, BYTE bHeader, const char* c_pData);
-        int auth_OpenID(const char* authKey, const char* ipAddr, char* rID);
 
     public:
         void        Login(LPDESC d, const char* c_pData);
-        void        LoginOpenID(LPDESC d, const char* c_pData);         //2012.07.19 OpenID : ±è¿ë¿í
 
 };
 #endif /* __INC_METIN_II_GAME_INPUT_PROCESSOR__ */

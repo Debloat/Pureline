@@ -92,8 +92,6 @@ enum
     HEADER_CG_SCRIPT_SELECT_ITEM                = 114,
     // END_OF_SCRIPT_SELECT_ITEM
 
-    HEADER_CG_LOGIN5_OPENID                     = 116,  //OpenID : 클라이언트로부터 OpenID 인증키를 받는다.
-
     //NOTE : 이런 개XXX 정말 이거 Packet설계한 사람은 누구냐. 이렇게 코딩하고 밥이 넘어가나.
     //enum을 별도로 구별을 하던가. 아님 namepsace로 구별을 하던가..
     //정말 packet generator까지는 바라지도 않는다. 이런 씨XX
@@ -266,8 +264,6 @@ enum
     HEADER_GC_HYBRIDCRYPT_KEYS                  = 152,
     HEADER_GC_HYBRIDCRYPT_SDB                   = 153, // SDB means Supplmentary Data Blocks
     //HYBRID CRYPT
-
-    HEADER_GC_AUTH_SUCCESS_OPENID               = 154,
 
     HEADER_GC_SPECIFIC_EFFECT                   = 208,
 
@@ -500,13 +496,6 @@ using TPacketCGLogin3 = struct command_login3
     BYTE    header;
     char    login[LOGIN_MAX_LEN + 1];
     char    passwd[PASSWD_MAX_LEN + 1];
-    DWORD   adwClientKey[4];
-};
-
-using TPacketCGLogin5 = struct command_login5
-{
-    BYTE    header;
-    char    authKey[OPENID_AUTHKEY_LEN + 1];
     DWORD   adwClientKey[4];
 };
 
@@ -839,14 +828,6 @@ using TPacketGCAuthSuccess = struct packet_auth_success
     BYTE    bHeader;
     DWORD   dwLoginKey;
     BYTE    bResult;
-};
-
-using TPacketGCAuthSuccessOpenID = struct packet_auth_success_openid
-{
-    BYTE    bHeader;
-    DWORD   dwLoginKey;
-    BYTE    bResult;
-    char    login[LOGIN_MAX_LEN + 1];
 };
 
 using TPacketGCLoginFailure = struct packet_login_failure

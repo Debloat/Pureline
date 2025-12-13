@@ -22,8 +22,3 @@ int         LocaleService_GetSkillPower(unsigned level);
 void        LocaleService_SetCHEONMA(bool isEnable);
 bool        LocaleService_IsCHEONMA();
 // END_OF_CHEONMA
-
-#ifdef USE_OPENID
-    void LocaleService_SetOpenIDAuthKey(const char* authKey);
-    const char* LocaleService_GetOpenIDAuthKey();
-#endif

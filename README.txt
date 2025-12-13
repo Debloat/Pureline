@@ -61,6 +61,7 @@
 | matrix_card                       | YES    | YES    | YES  |
 | Monarch + Castle / Siege          | YES    | NO     | NO   |
 | Threeway_War                      | YES    | NO     | NO   |
+| OpenID                            | YES    | YES    | YES  |
 |                                   |        |        |      |
 +-----------------------------------+--------+--------+------+
 

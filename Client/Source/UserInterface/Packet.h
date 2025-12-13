@@ -124,7 +124,6 @@ enum
     HEADER_CG_GUILD_SYMBOL_CRC                  = 113,
     HEADER_CG_SCRIPT_SELECT_ITEM                = 114,
     HEADER_CG_LOGIN4                            = 115,
-    HEADER_CG_LOGIN5_OPENID                     = 116,  //OpenID : 실행시 받은 인증키를 서버에 보냄.
 
     HEADER_CG_DRAGON_SOUL_REFINE            = 205,
     HEADER_CG_STATE_CHECKER                 = 206,
@@ -300,8 +299,6 @@ enum
     HEADER_GC_HYBRIDCRYPT_SDB                   = 153, // SDB means Supplmentary Data Blocks
     //HYBRID CRYPT
 
-    HEADER_GC_AUTH_SUCCESS_OPENID               = 154,
-
     #if defined(GAIDEN)
     HEADER_GC_ONTIME                            = 204,
     HEADER_GC_RESET_ONTIME                      = 205,
@@ -374,8 +371,6 @@ enum
     REFINE_MATERIAL_MAX_NUM = 5,
 
     WEAR_MAX_NUM = 11,
-
-    OPENID_AUTHKEY_LEN = 32,
 
     SHOP_TAB_NAME_MAX = 32,
     SHOP_TAB_COUNT_MAX = 3,
@@ -509,13 +504,6 @@ using TPacketCGLogin3 = struct command_login3
     BYTE    header;
     char    name[ID_MAX_NUM + 1];
     char    pwd[PASS_MAX_NUM + 1];
-    DWORD   adwClientKey[4];
-};
-
-using TPacketCGLogin5 = struct command_login5
-{
-    BYTE    header;
-    char    authKey[OPENID_AUTHKEY_LEN + 1];
     DWORD   adwClientKey[4];
 };
 // end - 권한 서버 접속을 위한 패킷들
@@ -2370,14 +2358,6 @@ using TPacketGCAuthSuccess = struct packet_auth_success
     BYTE        bHeader;
     DWORD       dwLoginKey;
     BYTE        bResult;
-};
-
-using TPacketGCAuthSuccessOpenID = struct packet_auth_success_openid
-{
-    BYTE        bHeader;
-    DWORD       dwLoginKey;
-    BYTE        bResult;
-    char        login[ID_MAX_NUM + 1];
 };
 
 using TPacketGCChannel = struct packet_channel

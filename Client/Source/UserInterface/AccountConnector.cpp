@@ -10,10 +10,6 @@ extern DWORD g_adwEncryptKey[4];
 extern DWORD g_adwDecryptKey[4];
 // END_OF_CHINA_CRYPT_KEY
 
-#ifdef USE_OPENID
-    extern int openid_test;
-#endif
-
 void CAccountConnector::SetHandler(PyObject* poHandler)
 {
     m_poHandler = poHandler;
@@ -152,13 +148,6 @@ bool CAccountConnector::__AuthState_Process()
         return true;
     }
 
-    #ifdef USE_OPENID
-    if (!__AnalyzePacket(HEADER_GC_AUTH_SUCCESS_OPENID, sizeof(TPacketGCAuthSuccess), &CAccountConnector::__AuthState_RecvAuthSuccess_OpenID))
-    {
-        return true;
-    }
-    #endif /* USE_OPENID */
-
     if (!__AnalyzePacket(HEADER_GC_LOGIN_FAILURE, sizeof(TPacketGCAuthSuccess), &CAccountConnector::__AuthState_RecvAuthFailure))
     {
         return true;
@@ -221,71 +210,6 @@ bool CAccountConnector::__AuthState_RecvPhase()
         SetSecurityMode(true, key);
         #endif
 
-        #ifdef USE_OPENID
-        if (!openid_test)
-        {
-            //2012.07.19 OpenID : 김용욱
-            //Ongoing : 오픈 아이디 경우-> TPacketCGLogin5
-            //클라가 가지고 있는 인증키만을 서버에 보내도록.
-
-            //const char* tempAuthKey = "d4025bc1f752b64fe5d51ae575ec4730"; //하드코딩 길이 32
-            TPacketCGLogin5 LoginPacket;
-            LoginPacket.header = HEADER_CG_LOGIN5_OPENID;
-
-            strncpy(LoginPacket.authKey, LocaleService_GetOpenIDAuthKey(), OPENID_AUTHKEY_LEN);
-            LoginPacket.authKey[OPENID_AUTHKEY_LEN] = '\0';
-
-            for (DWORD i = 0; i < 4; ++i)
-            {
-                LoginPacket.adwClientKey[i] = g_adwEncryptKey[i];
-            }
-
-            if (!Send(sizeof(LoginPacket), &LoginPacket))
-            {
-                Tracen(" CAccountConnector::__AuthState_RecvPhase - SendLogin5 Error");
-                return false;
-            }
-
-            if (!SendSequence())
-            {
-                return false;
-            }
-        }
-        else
-        {
-            TPacketCGLogin3 LoginPacket;
-            LoginPacket.header = HEADER_CG_LOGIN3;
-
-            strncpy(LoginPacket.name, m_strID.c_str(), ID_MAX_NUM);
-            strncpy(LoginPacket.pwd, m_strPassword.c_str(), PASS_MAX_NUM);
-            LoginPacket.name[ID_MAX_NUM] = '\0';
-            LoginPacket.pwd[PASS_MAX_NUM] = '\0';
-
-            // 비밀번호를 메모리에 계속 갖고 있는 문제가 있어서, 사용 즉시 날리는 것으로 변경
-            ClearLoginInfo();
-            CPythonNetworkStream& rkNetStream = CPythonNetworkStream::Instance();
-            rkNetStream.ClearLoginInfo();
-
-            m_strPassword = "";
-
-            for (DWORD i = 0; i < 4; ++i)
-            {
-                LoginPacket.adwClientKey[i] = g_adwEncryptKey[i];
-            }
-
-            if (!Send(sizeof(LoginPacket), &LoginPacket))
-            {
-                Tracen(" CAccountConnector::__AuthState_RecvPhase - SendLogin3 Error");
-                return false;
-            }
-
-            if (!SendSequence())
-            {
-                return false;
-            }
-        }
-        #else /* USE_OPENID */
-
         TPacketCGLogin3 LoginPacket;
         LoginPacket.header = HEADER_CG_LOGIN3;
 
@@ -316,7 +240,6 @@ bool CAccountConnector::__AuthState_RecvPhase()
         {
             return false;
         }
-        #endif /* USE_OPENID */
 
         __AuthState_Set();
     }
@@ -469,41 +392,6 @@ bool CAccountConnector::__AuthState_RecvAuthSuccess()
 
     return true;
 }
-
-#ifdef USE_OPENID
-bool CAccountConnector::__AuthState_RecvAuthSuccess_OpenID()
-{
-    TPacketGCAuthSuccessOpenID kAuthSuccessOpenIDPacket;
-    if (!Recv(sizeof(kAuthSuccessOpenIDPacket), &kAuthSuccessOpenIDPacket))
-    {
-        return false;
-    }
-
-    if (!kAuthSuccessOpenIDPacket.bResult)
-    {
-        if (m_poHandler)
-        {
-            PyCallClassMemberFunc(m_poHandler, "OnLoginFailure", Py_BuildValue("(s)", "BESAMEKEY"));
-        }
-    }
-    else
-    {
-        DWORD dwPanamaKey = kAuthSuccessOpenIDPacket.dwLoginKey ^ g_adwEncryptKey[0] ^ g_adwEncryptKey[1] ^ g_adwEncryptKey[2] ^ g_adwEncryptKey[3];
-        CEterPackManager::instance().DecryptPackIV(dwPanamaKey);
-
-        CPythonNetworkStream & rkNet = CPythonNetworkStream::Instance();
-        rkNet.SetLoginInfo(kAuthSuccessOpenIDPacket.login, "0000");         //OpenID 인증 과정에서 비밀번호는 사용되지 않는다.
-        rkNet.SetLoginKey(kAuthSuccessOpenIDPacket.dwLoginKey);
-        rkNet.Connect(m_strAddr.c_str(), m_iPort);
-    }
-
-    Disconnect();
-    __OfflineState_Set();
-
-    return true;
-}
-#endif /* USE_OPENID */
-
 
 bool CAccountConnector::__AuthState_RecvAuthFailure()
 {

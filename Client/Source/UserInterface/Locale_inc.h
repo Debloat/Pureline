@@ -8,5 +8,3 @@
 //#define LSS_SECURITY_KEY        "1234abcd5678efgh"
 
 //#define CHECK_LATEST_DATA_FILES
-
-//#define USE_OPENID
