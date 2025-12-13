@@ -277,9 +277,6 @@
     <ClCompile Include="motion.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="over9refine.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="OXEvent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -685,9 +682,6 @@
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="motion.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="over9refine.h">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="OXEvent.h">

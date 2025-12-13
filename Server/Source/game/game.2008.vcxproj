@@ -214,7 +214,6 @@
     <ClCompile Include="mining.cpp" />
     <ClCompile Include="mob_manager.cpp" />
     <ClCompile Include="motion.cpp" />
-    <ClCompile Include="over9refine.cpp" />
     <ClCompile Include="OXEvent.cpp" />
     <ClCompile Include="p2p.cpp" />
     <ClCompile Include="packet_info.cpp" />
@@ -351,7 +350,6 @@
     <ClInclude Include="mining.h" />
     <ClInclude Include="mob_manager.h" />
     <ClInclude Include="motion.h" />
-    <ClInclude Include="over9refine.h" />
     <ClInclude Include="OXEvent.h" />
     <ClInclude Include="p2p.h" />
     <ClInclude Include="packet.h" />

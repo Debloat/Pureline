@@ -64,6 +64,7 @@
 | OpenID                            | YES    | YES    | YES  |
 | Sequence                          | YES    | YES    | YES  |
 | Vcard                             | YES    | NO     | NO   |
+| Over9Refine                       | YES    | NO     | NO   |
 |                                   |        |        |      |
 +-----------------------------------+--------+--------+------+
 
