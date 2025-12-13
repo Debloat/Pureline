@@ -2090,7 +2090,8 @@ ACMD(do_setskillother)
 
 ACMD(do_setskill)
 {
-    char arg1[256], arg2[256];
+    char arg1[256];
+    char arg2[256];
     two_arguments(argument, arg1, sizeof(arg1), arg2, sizeof(arg2));
 
     if (!*arg1 || !*arg2 || !isdigit(*arg2))
@@ -2175,7 +2176,7 @@ ACMD(do_reload)
 
             case 'p':
                 ch->ChatPacket(CHAT_TYPE_INFO, "Reloading prototype tables,");
-                db_clientdesc->DBPacket(HEADER_GD_RELOAD_PROTO, 0, NULL, 0);
+                db_clientdesc->DBPacket(HEADER_GD_RELOAD_PROTO, 0, nullptr, 0);
                 break;
 
             case 's':
@@ -2195,7 +2196,7 @@ ACMD(do_reload)
             //RELOAD_ADMIN
             case 'a':
                 ch->ChatPacket(CHAT_TYPE_INFO, "Reloading Admin infomation.");
-                db_clientdesc->DBPacket(HEADER_GD_RELOAD_ADMIN, 0, NULL, 0);
+                db_clientdesc->DBPacket(HEADER_GD_RELOAD_ADMIN, 0, nullptr, 0);
                 sys_log(0, "Reloading admin infomation.");
                 break;
             //END_RELOAD_ADMIN
@@ -2250,7 +2251,8 @@ ACMD(do_gwlist)
 
 ACMD(do_stop_guild_war)
 {
-    char arg1[256], arg2[256];
+    char arg1[256];
+    char arg2[256];
     two_arguments(argument, arg1, sizeof(arg1), arg2, sizeof(arg2));
 
     if (!*arg1 || !*arg2)
@@ -2258,7 +2260,8 @@ ACMD(do_stop_guild_war)
         return;
     }
 
-    int id1 = 0, id2 = 0;
+    int id1 = 0;
+    int id2 = 0;
 
     str_to_number(id1, arg1);
     str_to_number(id2, arg2);
@@ -2735,7 +2738,8 @@ ACMD(do_observer)
 
 ACMD(do_socket_item)
 {
-    char arg1[256], arg2[256];
+    char arg1[256];
+    char arg2[256];
     two_arguments(argument, arg1, sizeof(arg1), arg2, sizeof(arg2));
 
     if (*arg1)
@@ -2815,7 +2819,7 @@ ACMD(do_block_chat_list)
         return;
     }
 
-    DBManager::instance().ReturnQuery(QID_BLOCK_CHAT_LIST, ch->GetPlayerID(), NULL,
+    DBManager::instance().ReturnQuery(QID_BLOCK_CHAT_LIST, ch->GetPlayerID(), nullptr,
                                       "SELECT p.name, a.lDuration FROM affect%s as a, player%s as p WHERE a.bType = %d AND a.dwPID = p.id",
                                       get_table_postfix(), get_table_postfix(), AFFECT_BLOCK_CHAT);
 }

@@ -162,12 +162,9 @@ void YosunAdminPanel::RenderAnisotropy(bool* p_open) const
             };
 
             // Render in one row
-            choose_level("2x", 2);
-            ImGui::SameLine();
-            choose_level("4x", 4);
-            ImGui::SameLine();
-            choose_level("8x", 8);
-            ImGui::SameLine();
+            choose_level("2x", 2); ImGui::SameLine();
+            choose_level("4x", 4); ImGui::SameLine();
+            choose_level("8x", 8); ImGui::SameLine();
             choose_level("16x", 16);
         }
         ImGui::SeparatorText("Enable Anisotropy");
@@ -419,14 +416,19 @@ void YosunAdminPanel::GMCommandsList() const
         const char* label;
         const char* cmd;
     };
-    static constexpr std::array<Action, 4> actions =
-    {
-        {
-            { "Invisibility",          "/invisible" },
-            { "Purge inventory",       "/ipurge"    },
-            { "Purge nearby entities", "/purge"     },
-            { "Weaken nearby monsters", "/weak"      }
-        }
+
+    static constexpr std::array actions{
+        Action{ "Invisibility",           "/invisible"     },
+        Action{ "Purge inventory",        "/ipurge"        },
+        Action{ "Purge nearby entities",  "/purge"         },
+        Action{ "Weaken nearby monsters", "/weak"          },
+        Action{ "GM Full Set",            "/full_set"      },
+        Action{ "Item Full Set",          "/item_full_set" },
+        Action{ "Attribute Full Set",     "/attr_full_set" },
+        Action{ "Call Horse",             "/horse_summon"  },
+        Action{ "HP/SP Full",             "/reset"         },
+        Action{ "Walk Mode",              "/set_walk_mode" },
+        Action{ "Run Mode",               "/set_run_mode"  }
     };
 
     static int action_idx = 0;
