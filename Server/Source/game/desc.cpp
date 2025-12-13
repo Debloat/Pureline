@@ -11,7 +11,6 @@
 #include "sectree_manager.h"
 #include "p2p.h"
 #include "buffer_manager.h"
-#include "sequence.h"
 #include "guild.h"
 #include "guild_manager.h"
 #include "TrafficProfiler.h"
@@ -76,8 +75,6 @@ void DESC::Initialize()
     m_bPong = true;
     m_bChannelStatusRequested = false;
 
-    m_iCurrentSequence = 0;
-
     m_pkLoginKey = nullptr;
     m_dwLoginKey = 0;
     m_dwPanamaKey = 0;
@@ -99,8 +96,6 @@ void DESC::Initialize()
     m_offtime = 0;
 
     m_pkDisconnectEvent = nullptr;
-
-    m_seq_vector.clear();
 }
 
 void DESC::Destroy()
@@ -165,8 +160,6 @@ void DESC::Destroy()
         socket_close(m_sock);
         m_sock = INVALID_SOCKET;
     }
-
-    m_seq_vector.clear();
 }
 
 EVENTFUNC(ping_event)
@@ -949,19 +942,6 @@ bool DESC::IsAdminMode() const
     return m_bAdminMode;
 }
 
-BYTE DESC::GetSequence() const
-{
-    return gc_abSequence[m_iCurrentSequence];
-}
-
-void DESC::SetNextSequence()
-{
-    if (++m_iCurrentSequence == SEQUENCE_MAX_NUM)
-    {
-        m_iCurrentSequence = 0;
-    }
-}
-
 void DESC::SendLoginSuccessPacket()
 {
     TAccountTable & rTable = GetAccountTable();
@@ -1110,17 +1090,6 @@ void DESC::SetBillingExpireSecond(DWORD dwSec)
 DWORD DESC::GetBillingExpireSecond() const
 {
     return m_dwBillingExpireSecond;
-}
-
-void DESC::push_seq(BYTE hdr, BYTE seq)
-{
-    if (m_seq_vector.size() >= 20)
-    {
-        m_seq_vector.erase(m_seq_vector.begin());
-    }
-
-    seq_t info = { hdr, seq };
-    m_seq_vector.push_back(info);
 }
 
 BYTE DESC::GetEmpire() const

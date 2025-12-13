@@ -236,11 +236,6 @@ bool CAccountConnector::__AuthState_RecvPhase()
             return false;
         }
 
-        if (!SendSequence())
-        {
-            return false;
-        }
-
         __AuthState_Set();
     }
 
@@ -356,7 +351,7 @@ bool CAccountConnector::__AuthState_SendPong()
 
     if (IsSecurityMode())
     {
-        return SendSequence();
+        return true;
     }
 
     return true;

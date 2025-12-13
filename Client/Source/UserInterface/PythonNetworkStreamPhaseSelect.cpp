@@ -183,7 +183,7 @@ bool CPythonNetworkStream::SendSelectEmpirePacket(DWORD dwEmpireID)
     }
 
     SetEmpireID(dwEmpireID);
-    return SendSequence();
+    return true;
 }
 
 bool CPythonNetworkStream::SendSelectCharacterPacket(BYTE Index)
@@ -199,7 +199,7 @@ bool CPythonNetworkStream::SendSelectCharacterPacket(BYTE Index)
         return false;
     }
 
-    return SendSequence();
+    return true;
 }
 
 bool CPythonNetworkStream::SendDestroyCharacterPacket(BYTE index, const char* szPrivateCode)
@@ -216,7 +216,7 @@ bool CPythonNetworkStream::SendDestroyCharacterPacket(BYTE index, const char* sz
         return false;
     }
 
-    return SendSequence();
+    return true;
 }
 
 bool CPythonNetworkStream::SendCreateCharacterPacket(BYTE index, const char* name, BYTE job, BYTE shape, BYTE byCON, BYTE byINT, BYTE bySTR, BYTE byDEX)
@@ -239,7 +239,7 @@ bool CPythonNetworkStream::SendCreateCharacterPacket(BYTE index, const char* nam
         return false;
     }
 
-    return SendSequence();
+    return true;
 }
 
 bool CPythonNetworkStream::SendChangeNamePacket(BYTE index, const char* name)
@@ -255,7 +255,7 @@ bool CPythonNetworkStream::SendChangeNamePacket(BYTE index, const char* name)
         return false;
     }
 
-    return SendSequence();
+    return true;
 }
 
 bool CPythonNetworkStream::__RecvPlayerCreateSuccessPacket()

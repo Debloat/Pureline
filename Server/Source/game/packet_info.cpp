@@ -17,7 +17,7 @@ CPacketInfo::~CPacketInfo()
     }
 }
 
-void CPacketInfo::Set(int header, int iSize, const char* c_pszName, bool bSeq)
+void CPacketInfo::Set(int header, int iSize, const char* c_pszName)
 {
     if (m_pPacketMap.contains(header))
     {
@@ -30,13 +30,6 @@ void CPacketInfo::Set(int header, int iSize, const char* c_pszName, bool bSeq)
     element->stName.assign(c_pszName);
     element->iCalled = 0;
     element->dwLoad = 0;
-
-    element->bSequencePacket = bSeq;
-
-    if (element->bSequencePacket)
-    {
-        element->iSize += sizeof(BYTE);
-    }
 
     m_pPacketMap.insert(std::map<int, TPacketElement*>::value_type(header, element));
 }
@@ -55,37 +48,6 @@ bool CPacketInfo::Get(int header, int* size, const char** c_ppszName)
 
     m_pCurrentPacket = it->second;
     return true;
-}
-
-bool CPacketInfo::IsSequence(int header)
-{
-    TPacketElement * pkElement = GetElement(header);
-    return pkElement ? pkElement->bSequencePacket : false;
-}
-
-void CPacketInfo::SetSequence(int header, bool bSeq)
-{
-    TPacketElement * pkElem = GetElement(header);
-
-    if (pkElem)
-    {
-        if (bSeq)
-        {
-            if (!pkElem->bSequencePacket)
-            {
-                pkElem->iSize++;
-            }
-        }
-        else
-        {
-            if (pkElem->bSequencePacket)
-            {
-                pkElem->iSize--;
-            }
-        }
-
-        pkElem->bSequencePacket = bSeq;
-    }
 }
 
 TPacketElement* CPacketInfo::GetElement(int header)
@@ -145,99 +107,98 @@ void CPacketInfo::Log(const char* c_pszFileName)
 
 CPacketInfoCG::CPacketInfoCG()
 {
-    Set(HEADER_CG_TEXT, sizeof(TPacketCGText), "Text", false);
-    Set(HEADER_CG_HANDSHAKE, sizeof(TPacketCGHandshake), "Handshake", false);
-    Set(HEADER_CG_TIME_SYNC, sizeof(TPacketCGHandshake), "TimeSync", true);
-    Set(HEADER_CG_MARK_LOGIN, sizeof(TPacketCGMarkLogin), "MarkLogin", false);
-    Set(HEADER_CG_MARK_IDXLIST, sizeof(TPacketCGMarkIDXList), "MarkIdxList", false);
-    Set(HEADER_CG_MARK_CRCLIST, sizeof(TPacketCGMarkCRCList), "MarkCrcList", false);
-    Set(HEADER_CG_MARK_UPLOAD, sizeof(TPacketCGMarkUpload), "MarkUpload", false);
+    Set(HEADER_CG_TEXT, sizeof(TPacketCGText), "Text");
+    Set(HEADER_CG_HANDSHAKE, sizeof(TPacketCGHandshake), "Handshake");
+    Set(HEADER_CG_TIME_SYNC, sizeof(TPacketCGHandshake), "TimeSync");
+    Set(HEADER_CG_MARK_LOGIN, sizeof(TPacketCGMarkLogin), "MarkLogin");
+    Set(HEADER_CG_MARK_IDXLIST, sizeof(TPacketCGMarkIDXList), "MarkIdxList");
+    Set(HEADER_CG_MARK_CRCLIST, sizeof(TPacketCGMarkCRCList), "MarkCrcList");
+    Set(HEADER_CG_MARK_UPLOAD, sizeof(TPacketCGMarkUpload), "MarkUpload");
     #ifdef _IMPROVED_PACKET_ENCRYPTION_
-    Set(HEADER_CG_KEY_AGREEMENT, sizeof(TPacketKeyAgreement), "KeyAgreement", false);
+    Set(HEADER_CG_KEY_AGREEMENT, sizeof(TPacketKeyAgreement), "KeyAgreement");
     #endif
 
-    Set(HEADER_CG_GUILD_SYMBOL_UPLOAD, sizeof(TPacketCGGuildSymbolUpload), "SymbolUpload", false);
-    Set(HEADER_CG_SYMBOL_CRC, sizeof(TPacketCGSymbolCRC), "SymbolCRC", false);
-    Set(HEADER_CG_LOGIN, sizeof(TPacketCGLogin), "Login", true);
-    Set(HEADER_CG_LOGIN2, sizeof(TPacketCGLogin2), "Login2", true);
-    Set(HEADER_CG_LOGIN3, sizeof(TPacketCGLogin3), "Login3", true);
-    Set(HEADER_CG_ATTACK, sizeof(TPacketCGAttack), "Attack", true);
-    Set(HEADER_CG_CHAT, sizeof(TPacketCGChat), "Chat", true);
-    Set(HEADER_CG_WHISPER, sizeof(TPacketCGWhisper), "Whisper", true);
+    Set(HEADER_CG_GUILD_SYMBOL_UPLOAD, sizeof(TPacketCGGuildSymbolUpload), "SymbolUpload");
+    Set(HEADER_CG_SYMBOL_CRC, sizeof(TPacketCGSymbolCRC), "SymbolCRC");
+    Set(HEADER_CG_LOGIN, sizeof(TPacketCGLogin), "Login");
+    Set(HEADER_CG_LOGIN2, sizeof(TPacketCGLogin2), "Login2");
+    Set(HEADER_CG_LOGIN3, sizeof(TPacketCGLogin3), "Login3");
+    Set(HEADER_CG_ATTACK, sizeof(TPacketCGAttack), "Attack");
+    Set(HEADER_CG_CHAT, sizeof(TPacketCGChat), "Chat");
+    Set(HEADER_CG_WHISPER, sizeof(TPacketCGWhisper), "Whisper");
 
-    Set(HEADER_CG_CHARACTER_SELECT, sizeof(TPacketCGPlayerSelect), "Select", true);
-    Set(HEADER_CG_CHARACTER_CREATE, sizeof(TPacketCGPlayerCreate), "Create", true);
-    Set(HEADER_CG_CHARACTER_DELETE, sizeof(TPacketCGPlayerDelete), "Delete", true);
-    Set(HEADER_CG_ENTERGAME, sizeof(TPacketCGEnterGame), "EnterGame", true);
+    Set(HEADER_CG_CHARACTER_SELECT, sizeof(TPacketCGPlayerSelect), "Select");
+    Set(HEADER_CG_CHARACTER_CREATE, sizeof(TPacketCGPlayerCreate), "Create");
+    Set(HEADER_CG_CHARACTER_DELETE, sizeof(TPacketCGPlayerDelete), "Delete");
+    Set(HEADER_CG_ENTERGAME, sizeof(TPacketCGEnterGame), "EnterGame");
 
-    Set(HEADER_CG_ITEM_USE, sizeof(TPacketCGItemUse), "ItemUse", true);
-    Set(HEADER_CG_ITEM_DROP, sizeof(TPacketCGItemDrop), "ItemDrop", true);
-    Set(HEADER_CG_ITEM_DROP2, sizeof(TPacketCGItemDrop2), "ItemDrop2", true);
-    Set(HEADER_CG_ITEM_MOVE, sizeof(TPacketCGItemMove), "ItemMove", true);
-    Set(HEADER_CG_ITEM_PICKUP, sizeof(TPacketCGItemPickup), "ItemPickup", true);
+    Set(HEADER_CG_ITEM_USE, sizeof(TPacketCGItemUse), "ItemUse");
+    Set(HEADER_CG_ITEM_DROP, sizeof(TPacketCGItemDrop), "ItemDrop");
+    Set(HEADER_CG_ITEM_DROP2, sizeof(TPacketCGItemDrop2), "ItemDrop2");
+    Set(HEADER_CG_ITEM_MOVE, sizeof(TPacketCGItemMove), "ItemMove");
+    Set(HEADER_CG_ITEM_PICKUP, sizeof(TPacketCGItemPickup), "ItemPickup");
 
-    Set(HEADER_CG_QUICKSLOT_ADD, sizeof(TPacketCGQuickslotAdd), "QuickslotAdd", true);
-    Set(HEADER_CG_QUICKSLOT_DEL, sizeof(TPacketCGQuickslotDel), "QuickslotDel", true);
-    Set(HEADER_CG_QUICKSLOT_SWAP, sizeof(TPacketCGQuickslotSwap), "QuickslotSwap", true);
+    Set(HEADER_CG_QUICKSLOT_ADD, sizeof(TPacketCGQuickslotAdd), "QuickslotAdd");
+    Set(HEADER_CG_QUICKSLOT_DEL, sizeof(TPacketCGQuickslotDel), "QuickslotDel");
+    Set(HEADER_CG_QUICKSLOT_SWAP, sizeof(TPacketCGQuickslotSwap), "QuickslotSwap");
 
-    Set(HEADER_CG_SHOP, sizeof(TPacketCGShop), "Shop", true);
+    Set(HEADER_CG_SHOP, sizeof(TPacketCGShop), "Shop");
 
-    Set(HEADER_CG_ON_CLICK, sizeof(TPacketCGOnClick), "OnClick", true);
-    Set(HEADER_CG_EXCHANGE, sizeof(TPacketCGExchange), "Exchange", true);
-    Set(HEADER_CG_CHARACTER_POSITION, sizeof(TPacketCGPosition), "Position", true);
-    Set(HEADER_CG_SCRIPT_ANSWER, sizeof(TPacketCGScriptAnswer), "ScriptAnswer", true);
-    Set(HEADER_CG_SCRIPT_BUTTON, sizeof(TPacketCGScriptButton), "ScriptButton", true);
-    Set(HEADER_CG_QUEST_INPUT_STRING, sizeof(TPacketCGQuestInputString), "QuestInputString", true);
-    Set(HEADER_CG_QUEST_CONFIRM, sizeof(TPacketCGQuestConfirm), "QuestConfirm", true);
+    Set(HEADER_CG_ON_CLICK, sizeof(TPacketCGOnClick), "OnClick");
+    Set(HEADER_CG_EXCHANGE, sizeof(TPacketCGExchange), "Exchange");
+    Set(HEADER_CG_CHARACTER_POSITION, sizeof(TPacketCGPosition), "Position");
+    Set(HEADER_CG_SCRIPT_ANSWER, sizeof(TPacketCGScriptAnswer), "ScriptAnswer");
+    Set(HEADER_CG_SCRIPT_BUTTON, sizeof(TPacketCGScriptButton), "ScriptButton");
+    Set(HEADER_CG_QUEST_INPUT_STRING, sizeof(TPacketCGQuestInputString), "QuestInputString");
+    Set(HEADER_CG_QUEST_CONFIRM, sizeof(TPacketCGQuestConfirm), "QuestConfirm");
 
-    Set(HEADER_CG_MOVE, sizeof(TPacketCGMove), "Move", true);
-    Set(HEADER_CG_SYNC_POSITION, sizeof(TPacketCGSyncPosition), "SyncPosition", true);
+    Set(HEADER_CG_MOVE, sizeof(TPacketCGMove), "Move");
+    Set(HEADER_CG_SYNC_POSITION, sizeof(TPacketCGSyncPosition), "SyncPosition");
 
-    Set(HEADER_CG_FLY_TARGETING, sizeof(TPacketCGFlyTargeting), "FlyTarget", true);
-    Set(HEADER_CG_ADD_FLY_TARGETING, sizeof(TPacketCGFlyTargeting), "AddFlyTarget", true);
-    Set(HEADER_CG_SHOOT, sizeof(TPacketCGShoot), "Shoot", true);
+    Set(HEADER_CG_FLY_TARGETING, sizeof(TPacketCGFlyTargeting), "FlyTarget");
+    Set(HEADER_CG_ADD_FLY_TARGETING, sizeof(TPacketCGFlyTargeting), "AddFlyTarget");
+    Set(HEADER_CG_SHOOT, sizeof(TPacketCGShoot), "Shoot");
 
-    Set(HEADER_CG_USE_SKILL, sizeof(TPacketCGUseSkill), "UseSkill", true);
+    Set(HEADER_CG_USE_SKILL, sizeof(TPacketCGUseSkill), "UseSkill");
 
-    Set(HEADER_CG_ITEM_USE_TO_ITEM, sizeof(TPacketCGItemUseToItem), "UseItemToItem", true);
-    Set(HEADER_CG_TARGET, sizeof(TPacketCGTarget), "Target", true);
-    Set(HEADER_CG_WARP, sizeof(TPacketCGWarp), "Warp", true);
-    Set(HEADER_CG_MESSENGER, sizeof(TPacketCGMessenger), "Messenger", true);
+    Set(HEADER_CG_ITEM_USE_TO_ITEM, sizeof(TPacketCGItemUseToItem), "UseItemToItem");
+    Set(HEADER_CG_TARGET, sizeof(TPacketCGTarget), "Target");
+    Set(HEADER_CG_WARP, sizeof(TPacketCGWarp), "Warp");
+    Set(HEADER_CG_MESSENGER, sizeof(TPacketCGMessenger), "Messenger");
 
-    Set(HEADER_CG_PARTY_REMOVE, sizeof(TPacketCGPartyRemove), "PartyRemove", true);
-    Set(HEADER_CG_PARTY_INVITE, sizeof(TPacketCGPartyInvite), "PartyInvite", true);
-    Set(HEADER_CG_PARTY_INVITE_ANSWER, sizeof(TPacketCGPartyInviteAnswer), "PartyInviteAnswer", true);
-    Set(HEADER_CG_PARTY_SET_STATE, sizeof(TPacketCGPartySetState), "PartySetState", true);
-    Set(HEADER_CG_PARTY_USE_SKILL, sizeof(TPacketCGPartyUseSkill), "PartyUseSkill", true);
-    Set(HEADER_CG_PARTY_PARAMETER, sizeof(TPacketCGPartyParameter), "PartyParam", true);
+    Set(HEADER_CG_PARTY_REMOVE, sizeof(TPacketCGPartyRemove), "PartyRemove");
+    Set(HEADER_CG_PARTY_INVITE, sizeof(TPacketCGPartyInvite), "PartyInvite");
+    Set(HEADER_CG_PARTY_INVITE_ANSWER, sizeof(TPacketCGPartyInviteAnswer), "PartyInviteAnswer");
+    Set(HEADER_CG_PARTY_SET_STATE, sizeof(TPacketCGPartySetState), "PartySetState");
+    Set(HEADER_CG_PARTY_USE_SKILL, sizeof(TPacketCGPartyUseSkill), "PartyUseSkill");
+    Set(HEADER_CG_PARTY_PARAMETER, sizeof(TPacketCGPartyParameter), "PartyParam");
 
-    Set(HEADER_CG_EMPIRE, sizeof(TPacketCGEmpire), "Empire", true);
-    Set(HEADER_CG_SAFEBOX_CHECKOUT, sizeof(TPacketCGSafeboxCheckout), "SafeboxCheckout", true);
-    Set(HEADER_CG_SAFEBOX_CHECKIN, sizeof(TPacketCGSafeboxCheckin), "SafeboxCheckin", true);
+    Set(HEADER_CG_EMPIRE, sizeof(TPacketCGEmpire), "Empire");
+    Set(HEADER_CG_SAFEBOX_CHECKOUT, sizeof(TPacketCGSafeboxCheckout), "SafeboxCheckout");
+    Set(HEADER_CG_SAFEBOX_CHECKIN, sizeof(TPacketCGSafeboxCheckin), "SafeboxCheckin");
 
-    Set(HEADER_CG_SAFEBOX_ITEM_MOVE, sizeof(TPacketCGItemMove), "SafeboxItemMove", true);
+    Set(HEADER_CG_SAFEBOX_ITEM_MOVE, sizeof(TPacketCGItemMove), "SafeboxItemMove");
 
-    Set(HEADER_CG_GUILD, sizeof(TPacketCGGuild), "Guild", true);
-    Set(HEADER_CG_ANSWER_MAKE_GUILD, sizeof(TPacketCGAnswerMakeGuild), "AnswerMakeGuild", true);
+    Set(HEADER_CG_GUILD, sizeof(TPacketCGGuild), "Guild");
+    Set(HEADER_CG_ANSWER_MAKE_GUILD, sizeof(TPacketCGAnswerMakeGuild), "AnswerMakeGuild");
 
-    Set(HEADER_CG_FISHING, sizeof(TPacketCGFishing), "Fishing", true);
-    Set(HEADER_CG_ITEM_GIVE, sizeof(TPacketCGGiveItem), "ItemGive", true);
-    Set(HEADER_CG_HACK, sizeof(TPacketCGHack), "Hack", true);
-    Set(HEADER_CG_MYSHOP, sizeof(TPacketCGMyShop), "MyShop", true);
+    Set(HEADER_CG_FISHING, sizeof(TPacketCGFishing), "Fishing");
+    Set(HEADER_CG_ITEM_GIVE, sizeof(TPacketCGGiveItem), "ItemGive");
+    Set(HEADER_CG_HACK, sizeof(TPacketCGHack), "Hack");
+    Set(HEADER_CG_MYSHOP, sizeof(TPacketCGMyShop), "MyShop");
 
-    Set(HEADER_CG_REFINE, sizeof(TPacketCGRefine), "Refine", true);
-    Set(HEADER_CG_CHANGE_NAME, sizeof(TPacketCGChangeName), "ChangeName", true);
+    Set(HEADER_CG_REFINE, sizeof(TPacketCGRefine), "Refine");
+    Set(HEADER_CG_CHANGE_NAME, sizeof(TPacketCGChangeName), "ChangeName");
 
-    Set(HEADER_CG_CLIENT_VERSION, sizeof(TPacketCGClientVersion), "Version", true);
-    Set(HEADER_CG_CLIENT_VERSION2, sizeof(TPacketCGClientVersion2), "Version", true);
-    Set(HEADER_CG_PONG, sizeof(BYTE), "Pong", true);
-    Set(HEADER_CG_MALL_CHECKOUT, sizeof(TPacketCGSafeboxCheckout), "MallCheckout", true);
+    Set(HEADER_CG_CLIENT_VERSION, sizeof(TPacketCGClientVersion), "Version");
+    Set(HEADER_CG_CLIENT_VERSION2, sizeof(TPacketCGClientVersion2), "Version");
+    Set(HEADER_CG_PONG, sizeof(BYTE), "Pong");
+    Set(HEADER_CG_MALL_CHECKOUT, sizeof(TPacketCGSafeboxCheckout), "MallCheckout");
 
-    Set(HEADER_CG_SCRIPT_SELECT_ITEM, sizeof(TPacketCGScriptSelectItem), "ScriptSelectItem", true);
+    Set(HEADER_CG_SCRIPT_SELECT_ITEM, sizeof(TPacketCGScriptSelectItem), "ScriptSelectItem");
 
-    Set(HEADER_CG_DRAGON_SOUL_REFINE, sizeof(TPacketCGDragonSoulRefine), "DragonSoulRefine", false);
-    Set(HEADER_CG_STATE_CHECKER, sizeof(BYTE), "ServerStateCheck", false);
-
+    Set(HEADER_CG_DRAGON_SOUL_REFINE, sizeof(TPacketCGDragonSoulRefine), "DragonSoulRefine");
+    Set(HEADER_CG_STATE_CHECKER, sizeof(BYTE), "ServerStateCheck");
 }
 
 CPacketInfoCG::~CPacketInfoCG()
@@ -248,32 +209,32 @@ CPacketInfoCG::~CPacketInfoCG()
 ////////////////////////////////////////////////////////////////////////////////
 CPacketInfoGG::CPacketInfoGG()
 {
-    Set(HEADER_GG_SETUP,       sizeof(TPacketGGSetup),        "Setup", false);
-    Set(HEADER_GG_LOGIN,       sizeof(TPacketGGLogin),        "Login", false);
-    Set(HEADER_GG_LOGOUT,      sizeof(TPacketGGLogout),   "Logout", false);
-    Set(HEADER_GG_RELAY,       sizeof(TPacketGGRelay),        "Relay", false);
-    Set(HEADER_GG_NOTICE,      sizeof(TPacketGGNotice),   "Notice", false);
-    Set(HEADER_GG_SHUTDOWN,        sizeof(TPacketGGShutdown), "Shutdown", false);
-    Set(HEADER_GG_GUILD,       sizeof(TPacketGGGuild),        "Guild", false);
-    Set(HEADER_GG_SHOUT,       sizeof(TPacketGGShout),        "Shout", false);
-    Set(HEADER_GG_DISCONNECT,          sizeof(TPacketGGDisconnect),   "Disconnect", false);
-    Set(HEADER_GG_MESSENGER_ADD,   sizeof(TPacketGGMessenger),    "MessengerAdd", false);
-    Set(HEADER_GG_MESSENGER_REMOVE,    sizeof(TPacketGGMessenger),    "MessengerRemove", false);
-    Set(HEADER_GG_FIND_POSITION,   sizeof(TPacketGGFindPosition), "FindPosition", false);
-    Set(HEADER_GG_WARP_CHARACTER,  sizeof(TPacketGGWarpCharacter),    "WarpCharacter", false);
-    Set(HEADER_GG_GUILD_WAR_ZONE_MAP_INDEX, sizeof(TPacketGGGuildWarMapIndex), "GuildWarMapIndex", false);
-    Set(HEADER_GG_TRANSFER,        sizeof(TPacketGGTransfer), "Transfer", false);
-    Set(HEADER_GG_XMAS_WARP_SANTA, sizeof(TPacketGGXmasWarpSanta),    "XmasWarpSanta", false);
-    Set(HEADER_GG_XMAS_WARP_SANTA_REPLY, sizeof(TPacketGGXmasWarpSantaReply), "XmasWarpSantaReply", false);
-    Set(HEADER_GG_RELOAD_CRC_LIST, sizeof(BYTE),          "ReloadCRCList", false);
-    Set(HEADER_GG_CHECK_CLIENT_VERSION, sizeof(BYTE),         "CheckClientVersion", false);
-    Set(HEADER_GG_LOGIN_PING,      sizeof(TPacketGGLoginPing),    "LoginPing", false);
+    Set(HEADER_GG_SETUP,       sizeof(TPacketGGSetup),        "Setup");
+    Set(HEADER_GG_LOGIN,       sizeof(TPacketGGLogin),        "Login");
+    Set(HEADER_GG_LOGOUT,      sizeof(TPacketGGLogout),   "Logout");
+    Set(HEADER_GG_RELAY,       sizeof(TPacketGGRelay),        "Relay");
+    Set(HEADER_GG_NOTICE,      sizeof(TPacketGGNotice),   "Notice");
+    Set(HEADER_GG_SHUTDOWN,        sizeof(TPacketGGShutdown), "Shutdown");
+    Set(HEADER_GG_GUILD,       sizeof(TPacketGGGuild),        "Guild");
+    Set(HEADER_GG_SHOUT,       sizeof(TPacketGGShout),        "Shout");
+    Set(HEADER_GG_DISCONNECT,          sizeof(TPacketGGDisconnect),   "Disconnect");
+    Set(HEADER_GG_MESSENGER_ADD,   sizeof(TPacketGGMessenger),    "MessengerAdd");
+    Set(HEADER_GG_MESSENGER_REMOVE,    sizeof(TPacketGGMessenger),    "MessengerRemove");
+    Set(HEADER_GG_FIND_POSITION,   sizeof(TPacketGGFindPosition), "FindPosition");
+    Set(HEADER_GG_WARP_CHARACTER,  sizeof(TPacketGGWarpCharacter),    "WarpCharacter");
+    Set(HEADER_GG_GUILD_WAR_ZONE_MAP_INDEX, sizeof(TPacketGGGuildWarMapIndex), "GuildWarMapIndex");
+    Set(HEADER_GG_TRANSFER,        sizeof(TPacketGGTransfer), "Transfer");
+    Set(HEADER_GG_XMAS_WARP_SANTA, sizeof(TPacketGGXmasWarpSanta),    "XmasWarpSanta");
+    Set(HEADER_GG_XMAS_WARP_SANTA_REPLY, sizeof(TPacketGGXmasWarpSantaReply), "XmasWarpSantaReply");
+    Set(HEADER_GG_RELOAD_CRC_LIST, sizeof(BYTE),          "ReloadCRCList");
+    Set(HEADER_GG_CHECK_CLIENT_VERSION, sizeof(BYTE),         "CheckClientVersion");
+    Set(HEADER_GG_LOGIN_PING,      sizeof(TPacketGGLoginPing),    "LoginPing");
 
     // BLOCK_CHAT
-    Set(HEADER_GG_BLOCK_CHAT,      sizeof(TPacketGGBlockChat),    "BlockChat", false);
+    Set(HEADER_GG_BLOCK_CHAT,      sizeof(TPacketGGBlockChat),    "BlockChat");
     // END_OF_BLOCK_CHAT
 
-    Set(HEADER_GG_CHECK_AWAKENESS,     sizeof(TPacketGGCheckAwakeness),   "CheckAwakeness",       false);
+    Set(HEADER_GG_CHECK_AWAKENESS,     sizeof(TPacketGGCheckAwakeness),   "CheckAwakeness");
 }
 
 CPacketInfoGG::~CPacketInfoGG()

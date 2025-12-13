@@ -403,9 +403,6 @@
     <ClCompile Include="sectree_manager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="sequence.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="shop.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -763,9 +760,6 @@
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="sectree_manager.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="sequence.h">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="shop.h">

@@ -256,7 +256,6 @@
     <ClCompile Include="safebox.cpp" />
     <ClCompile Include="sectree.cpp" />
     <ClCompile Include="sectree_manager.cpp" />
-    <ClCompile Include="sequence.cpp" />
     <ClCompile Include="shop.cpp" />
     <ClCompile Include="shopEx.cpp" />
     <ClCompile Include="shop_manager.cpp" />
@@ -377,7 +376,6 @@
     <ClInclude Include="safebox.h" />
     <ClInclude Include="sectree.h" />
     <ClInclude Include="sectree_manager.h" />
-    <ClInclude Include="sequence.h" />
     <ClInclude Include="shop.h" />
     <ClInclude Include="shopEx.h" />
     <ClInclude Include="shop_manager.h" />

@@ -23,7 +23,7 @@ bool CPythonNetworkStream::SendSafeBoxMoneyPacket(BYTE byState, DWORD dwMoney)
     //  if (!Send(sizeof(kSafeboxMoney), &kSafeboxMoney))
     //      return false;
     //
-    //  return SendSequence();
+    //  return true;
 }
 
 bool CPythonNetworkStream::SendSafeBoxCheckinPacket(TItemPos InventoryPos, BYTE bySafeBoxPos)
@@ -39,7 +39,7 @@ bool CPythonNetworkStream::SendSafeBoxCheckinPacket(TItemPos InventoryPos, BYTE 
         return false;
     }
 
-    return SendSequence();
+    return true;
 }
 
 bool CPythonNetworkStream::SendSafeBoxCheckoutPacket(BYTE bySafeBoxPos, TItemPos InventoryPos)
@@ -55,7 +55,7 @@ bool CPythonNetworkStream::SendSafeBoxCheckoutPacket(BYTE bySafeBoxPos, TItemPos
         return false;
     }
 
-    return SendSequence();
+    return true;
 }
 
 bool CPythonNetworkStream::SendSafeBoxItemMovePacket(BYTE bySourcePos, BYTE byTargetPos, BYTE byCount)
@@ -72,7 +72,7 @@ bool CPythonNetworkStream::SendSafeBoxItemMovePacket(BYTE bySourcePos, BYTE byTa
         return false;
     }
 
-    return SendSequence();
+    return true;
 }
 
 bool CPythonNetworkStream::RecvSafeBoxSetPacket()
@@ -179,7 +179,7 @@ bool CPythonNetworkStream::SendMallCheckoutPacket(BYTE byMallPos, TItemPos Inven
         return false;
     }
 
-    return SendSequence();
+    return true;
 }
 
 bool CPythonNetworkStream::RecvMallOpenPacket()
@@ -462,7 +462,7 @@ bool CPythonNetworkStream::SendShopEndPacket()
         return false;
     }
 
-    return SendSequence();
+    return true;
 }
 
 bool CPythonNetworkStream::SendShopBuyPacket(BYTE bPos)
@@ -495,7 +495,7 @@ bool CPythonNetworkStream::SendShopBuyPacket(BYTE bPos)
         return false;
     }
 
-    return SendSequence();
+    return true;
 }
 
 bool CPythonNetworkStream::SendShopSellPacket(BYTE bySlot)
@@ -520,7 +520,7 @@ bool CPythonNetworkStream::SendShopSellPacket(BYTE bySlot)
         return false;
     }
 
-    return SendSequence();
+    return true;
 }
 
 bool CPythonNetworkStream::SendShopSellPacketNew(BYTE bySlot, BYTE byCount)
@@ -552,7 +552,7 @@ bool CPythonNetworkStream::SendShopSellPacketNew(BYTE bySlot, BYTE byCount)
 
     Tracef(" SendShopSellPacketNew(bySlot=%d, byCount=%d)\n", bySlot, byCount);
 
-    return SendSequence();
+    return true;
 }
 
 // Send
@@ -595,7 +595,7 @@ bool CPythonNetworkStream::SendItemUsePacket(TItemPos pos)
         return false;
     }
 
-    return SendSequence();
+    return true;
 }
 
 bool CPythonNetworkStream::SendItemUseToItemPacket(TItemPos source_pos, TItemPos target_pos)
@@ -620,7 +620,7 @@ bool CPythonNetworkStream::SendItemUseToItemPacket(TItemPos source_pos, TItemPos
     Tracef(" << SendItemUseToItemPacket(src=%d, dst=%d)\n", source_pos, target_pos);
     #endif
 
-    return SendSequence();
+    return true;
 }
 
 bool CPythonNetworkStream::SendItemDropPacket(TItemPos pos, DWORD elk)
@@ -641,7 +641,7 @@ bool CPythonNetworkStream::SendItemDropPacket(TItemPos pos, DWORD elk)
         return false;
     }
 
-    return SendSequence();
+    return true;
 }
 
 bool CPythonNetworkStream::SendItemDropPacketNew(TItemPos pos, DWORD elk, DWORD count)
@@ -663,7 +663,7 @@ bool CPythonNetworkStream::SendItemDropPacketNew(TItemPos pos, DWORD elk, DWORD 
         return false;
     }
 
-    return SendSequence();
+    return true;
 }
 
 bool CPythonNetworkStream::__IsEquipItemInSlot(TItemPos uSlotPos)
@@ -774,7 +774,7 @@ bool CPythonNetworkStream::SendItemMovePacket(TItemPos pos, TItemPos change_pos,
         return false;
     }
 
-    return SendSequence();
+    return true;
 }
 
 bool CPythonNetworkStream::SendItemPickUpPacket(DWORD vid)
@@ -794,7 +794,7 @@ bool CPythonNetworkStream::SendItemPickUpPacket(DWORD vid)
         return false;
     }
 
-    return SendSequence();
+    return true;
 }
 
 
@@ -818,7 +818,7 @@ bool CPythonNetworkStream::SendQuickSlotAddPacket(BYTE wpos, BYTE type, BYTE pos
         return false;
     }
 
-    return SendSequence();
+    return true;
 }
 
 bool CPythonNetworkStream::SendQuickSlotDelPacket(BYTE pos)
@@ -839,7 +839,7 @@ bool CPythonNetworkStream::SendQuickSlotDelPacket(BYTE pos)
         return false;
     }
 
-    return SendSequence();
+    return true;
 }
 
 bool CPythonNetworkStream::SendQuickSlotMovePacket(BYTE pos, BYTE change_pos)
@@ -861,7 +861,7 @@ bool CPythonNetworkStream::SendQuickSlotMovePacket(BYTE pos, BYTE change_pos)
         return false;
     }
 
-    return SendSequence();
+    return true;
 }
 
 bool CPythonNetworkStream::RecvSpecialEffect()

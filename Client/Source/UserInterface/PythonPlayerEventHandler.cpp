@@ -226,7 +226,6 @@ void CPythonPlayerEventHandler::FlushVictimList()
         rkStream.SendSyncPositionElementPacket(rkVictim.m_dwVID, rkVictim.m_lPixelX, rkVictim.m_lPixelY);
     }
 
-    rkStream.SendSequence();
     m_kVctkVictim.clear();
 }
 

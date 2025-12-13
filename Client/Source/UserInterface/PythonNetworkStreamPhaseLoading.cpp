@@ -403,11 +403,6 @@ bool CPythonNetworkStream::SendEnterGame()
         return false;
     }
 
-    if (!SendSequence())
-    {
-        return false;
-    }
-
     __SendInternalBuffer();
     return true;
 }

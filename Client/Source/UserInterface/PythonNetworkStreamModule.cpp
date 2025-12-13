@@ -1895,16 +1895,6 @@ PyObject* netSendSelectItemPacket(PyObject* poSelf, PyObject* poArgs)
     return Py_BuildNone();
 }
 
-PyObject* netSetPacketSequenceMode(PyObject* poSelf, PyObject* poArgs)
-{
-    CPythonNetworkStream& rns = CPythonNetworkStream::Instance();
-    CAccountConnector & rkAccountConnector = CAccountConnector::Instance();
-    rns.SetPacketSequenceMode(true);
-    rkAccountConnector.SetPacketSequenceMode(true);
-
-    return Py_BuildNone();
-}
-
 PyObject* netSetEmpireLanguageMode(PyObject* poSelf, PyObject* poArgs)
 {
     int iMode;
@@ -2173,7 +2163,6 @@ void initnet()
         { "SendSelectItemPacket",                   netSendSelectItemPacket,                    METH_VARARGS },
 
         // SYSTEM
-        { "SetPacketSequenceMode",                  netSetPacketSequenceMode,                   METH_VARARGS },
         { "SetEmpireLanguageMode",                  netSetEmpireLanguageMode,                   METH_VARARGS },
 
         // For Test

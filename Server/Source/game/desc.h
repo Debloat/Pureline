@@ -46,15 +46,6 @@ class CLoginKey
 };
 
 
-// sequence 버그 찾기용 데이타
-struct seq_t
-{
-    BYTE    hdr;
-    BYTE    seq;
-};
-typedef std::vector<seq_t>  seq_vector_t;
-// sequence 버그 찾기용 데이타
-
 class DESC
 {
     public:
@@ -210,9 +201,6 @@ class DESC
         void            SetPong(bool b);
         bool            IsPong() const;
 
-        BYTE            GetSequence() const;
-        void            SetNextSequence();
-
         void            SendLoginSuccessPacket();
         //void          SendServerStatePacket(int nIndex);
 
@@ -303,8 +291,6 @@ class DESC
         bool            m_bAdminMode; // Handshake 에서 어드민 명령을 쓸수있나?
         bool            m_bPong;
 
-        int         m_iCurrentSequence;
-
         CLoginKey*      m_pkLoginKey;
         DWORD           m_dwLoginKey;
         DWORD           m_dwPanamaKey;
@@ -366,12 +352,6 @@ class DESC
 
         void RawPacket(const void* c_pvData, int iSize);
         void ChatPacket(BYTE type, const char* format, ...);
-
-        /* 시퀀스 버그 찾기용 코드 */
-    public:
-        seq_vector_t    m_seq_vector;
-        void            push_seq(BYTE hdr, BYTE seq);
-
 };
 
 #endif

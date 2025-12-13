@@ -39,7 +39,7 @@ struct ServerStateChecker_ResponsePacket
 
 CPacketInfoUDP::CPacketInfoUDP()
 {
-    Set(1, sizeof(ServerStateChecker_RequestPacket), "ServerStateRequest", false);
+    Set(1, sizeof(ServerStateChecker_RequestPacket), "ServerStateRequest");
 }
 
 CPacketInfoUDP::~CPacketInfoUDP()

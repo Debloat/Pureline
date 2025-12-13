@@ -9,7 +9,6 @@ typedef struct SPacketElement
     std::string stName;
     int     iCalled;
     DWORD   dwLoad;
-    bool    bSequencePacket;
 } TPacketElement;
 
 class CPacketInfo
@@ -18,16 +17,13 @@ class CPacketInfo
         CPacketInfo();
         virtual ~CPacketInfo();
 
-        void Set(int header, int size, const char* c_pszName, bool bSeq = false);
+        void Set(int header, int size, const char* c_pszName);
         bool Get(int header, int* size, const char** c_ppszName);
 
         void Start();
         void End();
 
         void Log(const char* c_pszFileName);
-
-        bool IsSequence(int header);
-        void SetSequence(int header, bool bSeq);
 
     private:
         TPacketElement* GetElement(int header);

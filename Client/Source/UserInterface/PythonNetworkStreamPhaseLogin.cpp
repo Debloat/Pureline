@@ -260,7 +260,7 @@ bool CPythonNetworkStream::SendDirectEnterPacket(const char* c_szID, const char*
         return false;
     }
 
-    return SendSequence();
+    return true;
 }
 
 bool CPythonNetworkStream::SendLoginPacket(const char* c_szName, const char* c_szPassword)
@@ -280,7 +280,7 @@ bool CPythonNetworkStream::SendLoginPacket(const char* c_szName, const char* c_s
         return false;
     }
 
-    return SendSequence();
+    return true;
 }
 
 bool CPythonNetworkStream::SendLoginPacketNew(const char* c_szName, const char* c_szPassword)
@@ -300,12 +300,6 @@ bool CPythonNetworkStream::SendLoginPacketNew(const char* c_szName, const char* 
     }
 
     if (!Send(sizeof(LoginPacket), &LoginPacket))
-    {
-        Tracen("SendLogin Error");
-        return false;
-    }
-
-    if (!SendSequence())
     {
         Tracen("SendLogin Error");
         return false;

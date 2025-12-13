@@ -436,10 +436,6 @@ bool CGuildMarkUploader::__LoginState_RecvPing()
 
     if (IsSecurityMode())
     {
-        return SendSequence();
-    }
-    else
-    {
         return true;
     }
 }

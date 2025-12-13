@@ -150,8 +150,6 @@ bool CPythonNetworkStream::RecvHandshakePacket()
         return false;
     }
 
-    SendSequence();
-
     return true;
 }
 

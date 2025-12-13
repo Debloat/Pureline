@@ -260,10 +260,6 @@ bool CGuildMarkDownloader::__LoginState_RecvPing()
 
     if (IsSecurityMode())
     {
-        return SendSequence();
-    }
-    else
-    {
         return true;
     }
 }

@@ -447,10 +447,6 @@ class LoginWindow(ui.ScriptWindow):
 		return 1
 
 	def Connect(self, id, pwd):
-
-		if constInfo.SEQUENCE_PACKET_ENABLE:
-			net.SetPacketSequenceMode()
-
 		if IsLoginDelay():
 			loginDelay = GetLoginDelay()
 			self.connectingDialog = ConnectingDialog()

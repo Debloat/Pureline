@@ -690,10 +690,6 @@ bool CPythonNetworkStream::RecvPingPacket()
 
     if (IsSecurityMode())
     {
-        return SendSequence();
-    }
-    else
-    {
         return true;
     }
 }
