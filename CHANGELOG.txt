@@ -6,6 +6,7 @@
 +------------+
 ~ Removed OpenID
 ~ Removed Sequence
+~ Removed AlphaFog
 
 +------------+
 | 25.11.2025 |

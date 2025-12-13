@@ -74,6 +74,7 @@
 | Roulette                          | YES    | NO     | NO   |
 | VIETNAM_CONVERT_WEAPON_VNUM       | NO     | NO     | NO   |
 | Hotbackup                         | YES    | NO     | NO   |
+| AlphaFog                          | NO     | YES    | NO   |
 |                                   |        |        |      |
 +-----------------------------------+--------+--------+------+
 

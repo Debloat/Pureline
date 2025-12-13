@@ -73,10 +73,8 @@ struct FGetPickingPoint
 
 CMapOutdoor::CMapOutdoor()
 {
-    auto * pAlphaFogImage = (CGraphicImage*) CResourceManager::Instance().GetResourcePointer("D:/ymir work/special/fog.tga");
     auto * pAttrImage = (CGraphicImage*)CResourceManager::Instance().GetResourcePointer("d:/ymir work/special/white.dds");
     auto * pBuildTransparentImage = (CGraphicImage*)CResourceManager::Instance().GetResourcePointer("d:/ymir Work/special/PCBlockerAlpha.dds");
-    m_AlphaFogImageInstance.SetImagePointer(pAlphaFogImage);
     m_attrImageInstance.SetImagePointer(pAttrImage);
     m_BuildingTransparentImageInstance.SetImagePointer(pBuildTransparentImage);
 
@@ -174,7 +172,6 @@ bool CMapOutdoor::Initialize()
 
     D3DXMatrixIdentity(&m_matWorldForCommonUse);
 
-    InitializeFog();
     InitializeVisibleParts();
 
     m_dwBaseX = 0;
@@ -218,7 +215,6 @@ bool CMapOutdoor::Destroy()
 
     m_rkList_kGuildArea.clear();
     m_kPool_kMonsterAreaInfo.Destroy();
-    m_AlphaFogImageInstance.Destroy();
 
     CSpeedTreeForestDirectX9::Instance().Clear();
 
@@ -1151,39 +1147,6 @@ BOOL CMapOutdoor::GetTerrainPointer(const BYTE c_byTerrainNum, CTerrain** ppTerr
     *ppTerrain = m_pTerrain[c_byTerrainNum];
     return TRUE;
 }
-
-void CMapOutdoor::InitializeFog()
-{
-    memset(&m_matAlphaFogTexture, 0, sizeof(D3DXMATRIX));
-    m_matAlphaFogTexture._31 = -0.001f;
-    m_matAlphaFogTexture._41 = -7.0f;
-    m_matAlphaFogTexture._42 = 0.5f;
-}
-
-void CMapOutdoor::SaveAlphaFogOperation()
-{
-    STATEMANAGER.SetTextureStageState(1, D3DTSS_COLORARG1, D3DTA_CURRENT);
-    STATEMANAGER.SetTextureStageState(1, D3DTSS_COLOROP,   D3DTOP_SELECTARG1);
-    STATEMANAGER.SetTextureStageState(1, D3DTSS_ALPHAARG1, D3DTA_CURRENT);
-    STATEMANAGER.SetTextureStageState(1, D3DTSS_ALPHAARG2, D3DTA_TEXTURE);
-    STATEMANAGER.SetTextureStageState(1, D3DTSS_ALPHAOP,   D3DTOP_MODULATE);
-    STATEMANAGER.SetTextureStageState(1, D3DTSS_TEXTURETRANSFORMFLAGS, D3DTTFF_COUNT2);
-    STATEMANAGER.SetTextureStageState(1, D3DTSS_TEXCOORDINDEX, D3DTSS_TCI_CAMERASPACEPOSITION);
-    STATEMANAGER.SetSamplerState(1, D3DSAMP_ADDRESSU, D3DTADDRESS_CLAMP);
-    STATEMANAGER.SetSamplerState(1, D3DSAMP_ADDRESSV, D3DTADDRESS_CLAMP);
-
-    STATEMANAGER.SetTransform(D3DTS_TEXTURE1, &m_matAlphaFogTexture);
-    STATEMANAGER.SaveRenderState(D3DRS_ALPHABLENDENABLE, TRUE);
-    STATEMANAGER.SetTexture(1, m_AlphaFogImageInstance.GetTexturePointer()->GetD3DTexture());
-}
-
-void CMapOutdoor::RestoreAlphaFogOperation()
-{
-    STATEMANAGER.SetTextureStageState(1, D3DTSS_TEXTURETRANSFORMFLAGS, D3DTTFF_DISABLE);
-    STATEMANAGER.SetTextureStageState(1, D3DTSS_TEXCOORDINDEX, 1);
-    STATEMANAGER.RestoreRenderState(D3DRS_ALPHABLENDENABLE);
-}
-
 
 void CMapOutdoor::SetDrawShadow(bool bDrawShadow)
 {

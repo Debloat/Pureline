@@ -71,7 +71,6 @@ class CMapOutdoor : public CMapBase
 
     protected:
         bool            Initialize();
-        void            InitializeFog();
 
         virtual bool    Destroy();
         virtual void    OnSetEnvironmentDataPtr();
@@ -166,9 +165,6 @@ class CMapOutdoor : public CMapBase
         bool            isAreaLoaded(WORD wX, WORD wY);
 
         void            AssignTerrainPtr();             // 현재 좌표에서 주위(ex. 3x3)에 있는 것들의 포인터를 연결한다. (업데이트 시 불려짐)
-
-        void            SaveAlphaFogOperation();
-        void            RestoreAlphaFogOperation();
 
         //////////////////////////////////////////////////////////////////////////
         // New
@@ -448,13 +444,6 @@ class CMapOutdoor : public CMapBase
         void                    LoadWaterTexture();
         void                    UnloadWaterTexture();
         //Water
-        //////////////////////////////////////////////////////////////////////////
-
-        //////////////////////////////////////////////////////////////////////////
-        // Alpha Fog
-        CGraphicImageInstance   m_AlphaFogImageInstance;
-        D3DXMATRIX              m_matAlphaFogTexture;
-        // Alpha Fog
         //////////////////////////////////////////////////////////////////////////
 
         //////////////////////////////////////////////////////////////////////////
