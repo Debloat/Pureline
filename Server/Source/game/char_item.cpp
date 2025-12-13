@@ -4038,11 +4038,6 @@ bool CHARACTER::UseItemEx(LPITEM item, TItemPos DestCell)
                             item->SetCount(item->GetCount() - 1);
                             break;
 
-                        case 90008: // VCARD
-                        case 90009: // VCARD
-                            VCardUse(this, this, item);
-                            break;
-
                         case ITEM_ELK_VNUM: // µ·²Ù·¯¹Ì
                         {
                             int iGold = item->GetSocket(0);

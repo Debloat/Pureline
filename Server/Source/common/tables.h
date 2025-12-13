@@ -99,7 +99,6 @@ enum
     HEADER_GD_AUTH_LOGIN        = 100,
     HEADER_GD_LOGIN_BY_KEY      = 101,
     HEADER_GD_BILLING_EXPIRE    = 104,
-    HEADER_GD_VCARD             = 105,
     HEADER_GD_BILLING_CHECK     = 106,
     HEADER_GD_MALL_LOAD         = 107,
 
@@ -214,7 +213,6 @@ enum
     HEADER_DG_BILLING_REPAIR        = 128,
     HEADER_DG_BILLING_EXPIRE        = 129,
     HEADER_DG_BILLING_LOGIN     = 130,
-    HEADER_DG_VCARD         = 131,
     HEADER_DG_BILLING_CHECK     = 132,
 
     HEADER_DG_CREATE_OBJECT     = 140,
@@ -1132,15 +1130,6 @@ typedef struct SPacketGDCreateObject
     float   yRot;
     float   zRot;
 } TPacketGDCreateObject;
-
-typedef struct SPacketGDVCard
-{
-    DWORD   dwID;
-    char    szSellCharacter[CHARACTER_NAME_MAX_LEN + 1];
-    char    szSellAccount[LOGIN_MAX_LEN + 1];
-    char    szBuyCharacter[CHARACTER_NAME_MAX_LEN + 1];
-    char    szBuyAccount[LOGIN_MAX_LEN + 1];
-} TPacketGDVCard;
 
 typedef struct SGuildReserve
 {

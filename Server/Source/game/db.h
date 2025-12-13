@@ -177,8 +177,6 @@ typedef struct SHighscoreRegisterQueryInfo
 } THighscoreRegisterQueryInfo;
 
 extern void SendBillingExpire(const char* c_pszLogin, BYTE bBillType, int iSecs, CLoginData * pkLD);
-extern void VCardUse(LPCHARACTER CardOwner, LPCHARACTER CardTaker, LPITEM item);
-
 
 // ACCOUNT_DB
 class AccountDB : public singleton<AccountDB>

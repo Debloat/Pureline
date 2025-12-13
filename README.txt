@@ -63,6 +63,7 @@
 | Threeway_War                      | YES    | NO     | NO   |
 | OpenID                            | YES    | YES    | YES  |
 | Sequence                          | YES    | YES    | YES  |
+| Vcard                             | YES    | NO     | NO   |
 |                                   |        |        |      |
 +-----------------------------------+--------+--------+------+
 

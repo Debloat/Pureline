@@ -2163,30 +2163,6 @@ void CClientManager::UpdateLand(DWORD * pdw)
     }
 }
 
-void CClientManager::VCard(TPacketGDVCard * p)
-{
-    sys_log(0, "VCARD: %u %s %s %s %s",
-            p->dwID, p->szSellCharacter, p->szSellAccount, p->szBuyCharacter, p->szBuyAccount);
-
-    m_queue_vcard.push(*p);
-}
-
-void CClientManager::VCardProcess()
-{
-    if (!m_pkAuthPeer)
-    {
-        return;
-    }
-
-    while (!m_queue_vcard.empty())
-    {
-        m_pkAuthPeer->EncodeHeader(HEADER_DG_VCARD, 0, sizeof(TPacketGDVCard));
-        m_pkAuthPeer->Encode(&m_queue_vcard.front(), sizeof(TPacketGDVCard));
-
-        m_queue_vcard.pop();
-    }
-}
-
 // BLOCK_CHAT
 void CClientManager::BlockChat(TPacketBlockChat* p)
 {
@@ -2627,10 +2603,6 @@ void CClientManager::ProcessPackets(CPeer * peer)
 
             case HEADER_GD_UPDATE_LAND:
                 UpdateLand((DWORD*) data);
-                break;
-
-            case HEADER_GD_VCARD:
-                VCard((TPacketGDVCard*) data);
                 break;
 
             case HEADER_GD_MARRIAGE_ADD:
@@ -3220,7 +3192,6 @@ int CClientManager::Process()
     }
     #endif
 
-    VCardProcess();
     return 1;
 }
 
