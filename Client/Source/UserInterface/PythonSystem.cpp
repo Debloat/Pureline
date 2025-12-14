@@ -17,7 +17,7 @@ void CPythonSystem::SetInterfaceHandler(PyObject * poHandler)
 
 void CPythonSystem::DestroyInterfaceHandler()
 {
-    m_poInterfaceHandler = NULL;
+    m_poInterfaceHandler = nullptr;
 }
 
 void CPythonSystem::SaveWindowStatus(int iIndex, int iVisible, int iMinimized, int ix, int iy, int iHeight)
@@ -119,12 +119,12 @@ void CPythonSystem::GetDisplaySettings()
     }
 }
 
-int CPythonSystem::GetResolutionCount()
+int CPythonSystem::GetResolutionCount() const
 {
     return m_ResolutionCount;
 }
 
-int CPythonSystem::GetFrequencyCount(int index)
+int CPythonSystem::GetFrequencyCount(int index) const
 {
     if (index >= m_ResolutionCount)
     {
@@ -134,7 +134,7 @@ int CPythonSystem::GetFrequencyCount(int index)
     return m_ResolutionList[index].frequency_count;
 }
 
-bool CPythonSystem::GetResolution(int index, OUT DWORD *width, OUT DWORD *height)
+bool CPythonSystem::GetResolution(int index, OUT DWORD *width, OUT DWORD *height) const
 {
     if (index >= m_ResolutionCount)
     {
@@ -146,7 +146,7 @@ bool CPythonSystem::GetResolution(int index, OUT DWORD *width, OUT DWORD *height
     return true;
 }
 
-bool CPythonSystem::GetFrequency(int index, int freq_index, OUT DWORD *frequncy)
+bool CPythonSystem::GetFrequency(int index, int freq_index, OUT DWORD *frequncy) const
 {
     if (index >= m_ResolutionCount)
     {
@@ -162,9 +162,10 @@ bool CPythonSystem::GetFrequency(int index, int freq_index, OUT DWORD *frequncy)
     return true;
 }
 
-int CPythonSystem::GetResolutionIndex(DWORD width, DWORD height)
+int CPythonSystem::GetResolutionIndex(DWORD width, DWORD height) const
 {
-    DWORD re_width, re_height;
+    DWORD re_width;
+    DWORD re_height;
     int i = 0;
 
     while (GetResolution(i, &re_width, &re_height))
@@ -180,7 +181,7 @@ int CPythonSystem::GetResolutionIndex(DWORD width, DWORD height)
     return 0;
 }
 
-int CPythonSystem::GetFrequencyIndex(int res_index, DWORD frequency)
+int CPythonSystem::GetFrequencyIndex(int res_index, DWORD frequency) const
 {
     DWORD re_frequency;
     int i = 0;
@@ -198,36 +199,36 @@ int CPythonSystem::GetFrequencyIndex(int res_index, DWORD frequency)
     return 0;
 }
 
-DWORD CPythonSystem::GetWidth()
+DWORD CPythonSystem::GetWidth() const
 {
     return m_Config.width;
 }
 
-DWORD CPythonSystem::GetHeight()
+DWORD CPythonSystem::GetHeight() const
 {
     return m_Config.height;
 }
-DWORD CPythonSystem::GetFrequency()
+DWORD CPythonSystem::GetFrequency() const
 {
     return m_Config.frequency;
 }
 
-bool CPythonSystem::IsNoSoundCard()
+bool CPythonSystem::IsNoSoundCard() const
 {
     return m_Config.bNoSoundCard;
 }
 
-bool CPythonSystem::IsSoftwareCursor()
+bool CPythonSystem::IsSoftwareCursor() const
 {
     return m_Config.is_software_cursor;
 }
 
-float CPythonSystem::GetMusicVolume()
+float CPythonSystem::GetMusicVolume() const
 {
     return m_Config.music_volume;
 }
 
-int CPythonSystem::GetSoundVolume()
+int CPythonSystem::GetSoundVolume() const
 {
     return m_Config.voice_volume;
 }
@@ -242,12 +243,12 @@ void CPythonSystem::SetSoundVolumef(float fVolume)
     m_Config.voice_volume = int (5 * fVolume);
 }
 
-int CPythonSystem::GetDistance()
+int CPythonSystem::GetDistance() const
 {
     return m_Config.iDistance;
 }
 
-int CPythonSystem::GetShadowLevel()
+int CPythonSystem::GetShadowLevel() const
 {
     return m_Config.iShadowLevel;
 }
@@ -258,7 +259,7 @@ void CPythonSystem::SetShadowLevel(unsigned int level)
     CPythonBackground::instance().RefreshShadowLevel();
 }
 
-int CPythonSystem::IsSaveID()
+int CPythonSystem::IsSaveID() const
 {
     return m_Config.isSaveID;
 }
@@ -268,7 +269,7 @@ const char* CPythonSystem::GetSaveID()
     return m_Config.SaveID;
 }
 
-bool CPythonSystem::isViewCulling()
+bool CPythonSystem::isViewCulling() const
 {
     return m_Config.is_object_culling;
 }
@@ -307,7 +308,7 @@ void CPythonSystem::SetDefaultConfig()
     m_Config.iDistance          = 3;
 
     m_Config.gamma              = 3;
-    m_Config.music_volume       = 0.1f;
+    m_Config.music_volume       = 0.0f;
     m_Config.voice_volume       = 3;
 
     m_Config.bDecompressDDS     = 0;
@@ -322,12 +323,12 @@ void CPythonSystem::SetDefaultConfig()
     /* ----------------------------------------------------- */
 }
 
-bool CPythonSystem::IsWindowed()
+bool CPythonSystem::IsWindowed() const
 {
     return m_Config.bWindowed;
 }
 
-bool CPythonSystem::IsViewChat()
+bool CPythonSystem::IsViewChat() const
 {
     return m_Config.bViewChat;
 }
@@ -337,7 +338,7 @@ void CPythonSystem::SetViewChatFlag(int iFlag)
     m_Config.bViewChat = iFlag == 1 ? true : false;
 }
 
-bool CPythonSystem::IsAlwaysShowName()
+bool CPythonSystem::IsAlwaysShowName() const
 {
     return m_Config.bAlwaysShowName;
 }
@@ -347,7 +348,7 @@ void CPythonSystem::SetAlwaysShowNameFlag(int iFlag)
     m_Config.bAlwaysShowName = iFlag == 1 ? true : false;
 }
 
-bool CPythonSystem::IsShowDamage()
+bool CPythonSystem::IsShowDamage() const
 {
     return m_Config.bShowDamage;
 }
@@ -357,7 +358,7 @@ void CPythonSystem::SetShowDamageFlag(int iFlag)
     m_Config.bShowDamage = iFlag == 1 ? true : false;
 }
 
-bool CPythonSystem::IsShowSalesText()
+bool CPythonSystem::IsShowSalesText() const
 {
     return m_Config.bShowSalesText;
 }
@@ -367,7 +368,7 @@ void CPythonSystem::SetShowSalesTextFlag(int iFlag)
     m_Config.bShowSalesText = iFlag == 1 ? true : false;
 }
 
-bool CPythonSystem::IsUseDefaultIME()
+bool CPythonSystem::IsUseDefaultIME() const
 {
     return m_Config.bUseDefaultIME;
 }
@@ -386,9 +387,9 @@ BYTE CPythonSystem::GetCameraMode() const
 
 bool CPythonSystem::LoadConfig()
 {
-    FILE * fp = NULL;
+    FILE * fp = nullptr;
 
-    if (NULL == (fp = fopen("metin2.cfg", "rt")))
+    if (nullptr == (fp = fopen("metin2.cfg", "rt")))
     {
         return false;
     }
@@ -543,7 +544,7 @@ bool CPythonSystem::SaveConfig()
 {
     FILE *fp;
 
-    if (NULL == (fp = fopen("metin2.cfg", "wt")))
+    if (nullptr == (fp = fopen("metin2.cfg", "wt")))
     {
         return false;
     }
@@ -617,7 +618,7 @@ void CPythonSystem::SaveInterfaceStatus()
     fclose(File);
 }
 
-bool CPythonSystem::isInterfaceConfig()
+bool CPythonSystem::isInterfaceConfig() const
 {
     return m_isInterfaceConfig;
 }
@@ -703,14 +704,14 @@ void CPythonSystem::ChangeSystem()
 
 void CPythonSystem::Clear()
 {
-    SetInterfaceHandler(NULL);
+    SetInterfaceHandler(nullptr);
 }
 
 CPythonSystem::CPythonSystem()
 {
     memset(&m_Config, 0, sizeof(TConfig));
 
-    m_poInterfaceHandler = NULL;
+    m_poInterfaceHandler = nullptr;
 
     SetDefaultConfig();
 

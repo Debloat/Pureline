@@ -17,8 +17,3 @@ void        LocaleService_LoadConfig(const char* fileName);
 bool        LocaleService_LoadGlobal(HINSTANCE hInstance);
 unsigned    LocaleService_GetLastExp(int level);
 int         LocaleService_GetSkillPower(unsigned level);
-
-// CHEONMA
-void        LocaleService_SetCHEONMA(bool isEnable);
-bool        LocaleService_IsCHEONMA();
-// END_OF_CHEONMA

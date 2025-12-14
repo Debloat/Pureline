@@ -99,20 +99,20 @@ class CPythonSystem : public CSingleton<CPythonSystem>
         // Interface
         bool                            LoadInterfaceStatus();
         void                            SaveInterfaceStatus();
-        bool                            isInterfaceConfig();
+        bool                            isInterfaceConfig() const;
         const TWindowStatus&            GetWindowStatusReference(int iIndex);
 
-        DWORD                           GetWidth();
-        DWORD                           GetHeight();
-        DWORD                           GetFrequency();
-        bool                            IsSoftwareCursor();
-        bool                            IsWindowed();
-        bool                            IsViewChat();
-        bool                            IsAlwaysShowName();
-        bool                            IsShowDamage();
-        bool                            IsShowSalesText();
-        bool                            IsUseDefaultIME();
-        bool                            IsNoSoundCard();
+        DWORD                           GetWidth() const;
+        DWORD                           GetHeight() const;
+        DWORD                           GetFrequency() const;
+        bool                            IsSoftwareCursor() const;
+        bool                            IsWindowed() const;
+        bool                            IsViewChat() const;
+        bool                            IsAlwaysShowName() const;
+        bool                            IsShowDamage() const;
+        bool                            IsShowSalesText() const;
+        bool                            IsUseDefaultIME() const;
+        bool                            IsNoSoundCard() const;
         void                            SetViewChatFlag(int iFlag);
         void                            SetAlwaysShowNameFlag(int iFlag);
         void                            SetShowDamageFlag(int iFlag);
@@ -122,29 +122,29 @@ class CPythonSystem : public CSingleton<CPythonSystem>
         void                            SaveWindowStatus(int iIndex, int iVisible, int iMinimized, int ix, int iy, int iHeight);
 
         // SaveID
-        int                             IsSaveID();
+        int                             IsSaveID() const;
         const char*                     GetSaveID();
         void                            SetSaveID(int iValue, const char* c_szSaveID);
 
         /// Display
         void                            GetDisplaySettings();
 
-        int                             GetResolutionCount();
-        int                             GetFrequencyCount(int index);
-        bool                            GetResolution(int index, OUT DWORD *width, OUT DWORD *height);
-        bool                            GetFrequency(int index, int freq_index, OUT DWORD *frequncy);
-        int                             GetResolutionIndex(DWORD width, DWORD height);
-        int                             GetFrequencyIndex(int res_index, DWORD frequency);
-        bool                            isViewCulling();
+        int                             GetResolutionCount() const;
+        int                             GetFrequencyCount(int index) const;
+        bool                            GetResolution(int index, OUT DWORD *width, OUT DWORD *height) const;
+        bool                            GetFrequency(int index, int freq_index, OUT DWORD *frequncy) const;
+        int                             GetResolutionIndex(DWORD width, DWORD height) const;
+        int                             GetFrequencyIndex(int res_index, DWORD frequency) const;
+        bool                            isViewCulling() const;
 
         // Sound
-        float                           GetMusicVolume();
-        int                             GetSoundVolume();
+        float                           GetMusicVolume() const;
+        int                             GetSoundVolume() const;
         void                            SetMusicVolume(float fVolume);
         void                            SetSoundVolumef(float fVolume);
 
-        int                             GetDistance();
-        int                             GetShadowLevel();
+        int                             GetDistance() const;
+        int                             GetShadowLevel() const;
         void                            SetShadowLevel(unsigned int level);
 
         /* - SAVE_CAMERA_MODE ---------------------------------- */
