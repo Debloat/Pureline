@@ -65,6 +65,7 @@
 | Sequence                          | YES    | YES    | YES  |
 | Vcard                             | YES    | NO     | NO   |
 | Over9Refine                       | YES    | NO     | NO   |
+| SpeedServer                       | YES    | NO     | NO   |
 |                                   |        |        |      |
 +-----------------------------------+--------+--------+------+
 

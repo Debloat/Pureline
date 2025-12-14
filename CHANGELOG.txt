@@ -9,6 +9,7 @@
 ~ Removed AlphaFog
 ~ Removed Vcard
 ~ Removed Over9Refine
+~ Removed SpeedServer
 
 +------------+
 | 25.11.2025 |

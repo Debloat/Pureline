@@ -245,7 +245,6 @@
     <ClCompile Include="questlua_pc.cpp" />
     <ClCompile Include="questlua_pet.cpp" />
     <ClCompile Include="questlua_quest.cpp" />
-    <ClCompile Include="questlua_speedserver.cpp" />
     <ClCompile Include="questlua_target.cpp" />
     <ClCompile Include="questmanager.cpp" />
     <ClCompile Include="questnpc.cpp" />
@@ -260,7 +259,6 @@
     <ClCompile Include="shop_manager.cpp" />
     <ClCompile Include="skill.cpp" />
     <ClCompile Include="skill_power.cpp" />
-    <ClCompile Include="SpeedServer.cpp" />
     <ClCompile Include="start_position.cpp" />
     <ClCompile Include="target.cpp" />
     <ClCompile Include="text_file_loader.cpp" />
@@ -380,7 +378,6 @@
     <ClInclude Include="skill.h" />
     <ClInclude Include="skill_power.h" />
     <ClInclude Include="spam.h" />
-    <ClInclude Include="SpeedServer.h" />
     <ClInclude Include="stable_priority_queue.h" />
     <ClInclude Include="start_position.h" />
     <ClInclude Include="state.h" />
