@@ -131,7 +131,6 @@ static void __LocaleService_Init_Korea()
     g_setQuestObjectDir.emplace("locale/korea/quest/object");
 
     g_iUseLocale = TRUE;
-    exp_table = exp_table_euckr;
 }
 
 static void __LocaleService_Init_UK()
@@ -200,8 +199,6 @@ static void __LocaleService_Init_YMIR()
     g_setQuestObjectDir.insert(g_stQuestDir + "/object");
 
     PK_PROTECT_LEVEL = 30;
-
-    exp_table = exp_table_euckr;
 }
 
 static void __LocaleService_Init_Arabia()
