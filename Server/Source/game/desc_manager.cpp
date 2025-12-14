@@ -12,7 +12,6 @@
 #include "p2p.h"
 #include "ip_ban.h"
 #include "dev_log.h"
-#include "ClientPackageCryptInfo.h"
 
 struct valid_ip
 {
@@ -60,14 +59,11 @@ DESC_MANAGER::DESC_MANAGER() : m_bDestroyed(false)
 {
     Initialize();
     //NOTE : Destroy 끝에서 Initialize 를 부르는건 또 무슨 짓이냐..-_-; 정말
-
-    m_pPackageCrypt = new CClientPackageCryptInfo;
 }
 
 DESC_MANAGER::~DESC_MANAGER()
 {
     Destroy();
-    delete m_pPackageCrypt;
 }
 
 void DESC_MANAGER::Initialize()
@@ -553,57 +549,3 @@ void DESC_MANAGER::ProcessExpiredLoginKey()
         }
     }
 }
-
-bool DESC_MANAGER::LoadClientPackageCryptInfo(const char* pDirName)
-{
-    return m_pPackageCrypt->LoadPackageCryptInfo(pDirName);
-}
-#ifdef __FreeBSD__
-void DESC_MANAGER::NotifyClientPackageFileChanged(const std::string& dirName, eFileUpdatedOptions eUpdateOption)
-{
-    Instance().LoadClientPackageCryptInfo(dirName.c_str());
-}
-#endif
-
-
-void DESC_MANAGER::SendClientPackageCryptKey(LPDESC desc)
-{
-    if (!desc)
-    {
-        return;
-    }
-
-    TPacketGCHybridCryptKeys packet;
-    {
-        packet.bHeader = HEADER_GC_HYBRIDCRYPT_KEYS;
-        m_pPackageCrypt->GetPackageCryptKeys(& (packet.pDataKeyStream), packet.KeyStreamLen);
-    }
-
-    if (packet.KeyStreamLen > 0)
-    {
-        desc->Packet(packet.GetStreamData(), packet.GetStreamSize());
-    }
-}
-
-void DESC_MANAGER::SendClientPackageSDBToLoadMap(LPDESC desc, const char* pMapName)
-{
-    if (!desc)
-    {
-        return;
-    }
-
-    TPacketGCPackageSDB packet;
-    {
-        packet.bHeader      = HEADER_GC_HYBRIDCRYPT_SDB;
-        if (!m_pPackageCrypt->GetRelatedMapSDBStreams(pMapName, & (packet.m_pDataSDBStream), packet.iStreamLen))
-        {
-            return;
-        }
-    }
-
-    if (packet.iStreamLen > 0)
-    {
-        desc->Packet(packet.GetStreamData(), packet.GetStreamSize());
-    }
-}
-

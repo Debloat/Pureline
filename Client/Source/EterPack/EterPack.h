@@ -37,9 +37,7 @@ enum EEterPackTypes
     COMPRESSED_TYPE_NONE = 0,
     COMPRESSED_TYPE_COMPRESS = 1,
     COMPRESSED_TYPE_SECURITY = 2,
-    COMPRESSED_TYPE_HYBRIDCRYPT = 3,
-    COMPRESSED_TYPE_HYBRIDCRYPT_WITHSDB = 4,
-    COMPRESSED_TYPE_COUNT = 5,
+    COMPRESSED_TYPE_COUNT = 3,
 };
 
 #pragma pack(push, 4)
@@ -99,8 +97,6 @@ class CEterFileDict
         TDict m_dict;
 };
 
-class EterPackPolicy_CSHybridCrypt;
-
 class CEterPack
 {
     public:
@@ -140,8 +136,6 @@ class CEterPack
         DWORD               DeleteUnreferencedData();   // 몇개가 삭제 되었는지 리턴 한다.
 
         bool                GetNames(std::vector<std::string>* retNames);
-
-        EterPackPolicy_CSHybridCrypt* GetPackPolicy_HybridCrypt() const;
 
     private:
         bool                __BuildIndex(CEterFileDict& rkFileDict);
@@ -183,9 +177,6 @@ class CEterPack
 
         std::string             m_stDataFileName;
         std::string             m_stPathName;
-
-
-        EterPackPolicy_CSHybridCrypt* m_pCSHybridCryptPolicy;
 
     private:
         //  bool                m_bIsDataLoaded;

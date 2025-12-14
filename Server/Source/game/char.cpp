@@ -5529,24 +5529,6 @@ bool CHARACTER::WarpSet(long x, long y, long lPrivateMapIndex)
         return false;
     }
 
-    //Send Supplementary Data Block if new map requires security packages in loading this map
-    {
-        long lCurAddr;
-        long lCurMapIndex = 0;
-        WORD wCurPort;
-
-        CMapLocation::instance().Get(GetX(), GetY(), lCurMapIndex, lCurAddr, wCurPort);
-
-        //do not send SDB files if char is in the same map
-        if (lCurMapIndex != lMapIndex)
-        {
-            const TMapRegion * rMapRgn = SECTREE_MANAGER::instance().GetMapRegion(lMapIndex);
-            {
-                DESC_MANAGER::instance().SendClientPackageSDBToLoadMap(GetDesc(), rMapRgn->strMapName.c_str());
-            }
-        }
-    }
-
     if (lPrivateMapIndex >= 10000)
     {
         if (lPrivateMapIndex / 10000 != lMapIndex)

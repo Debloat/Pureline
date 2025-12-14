@@ -258,11 +258,6 @@ enum
 
     HEADER_GC_AUTH_SUCCESS                      = 150,
 
-    //HYBRID CRYPT
-    HEADER_GC_HYBRIDCRYPT_KEYS                  = 152,
-    HEADER_GC_HYBRIDCRYPT_SDB                   = 153, // SDB means Supplmentary Data Blocks
-    //HYBRID CRYPT
-
     HEADER_GC_SPECIFIC_EFFECT                   = 208,
 
     HEADER_GC_DRAGON_SOUL_REFINE                = 209,
@@ -2062,111 +2057,6 @@ using TPacketGCDamageInfo = struct packet_damage_info
 using TPacketGGCheckAwakeness = struct SPacketGGCheckAwakeness
 {
     BYTE bHeader;
-};
-
-//TODO :  아우 짱나..가변패킷 사이즈 받아들일수 있게 패킷 핸들러 Refactoring 하자.
-using TPacketGCHybridCryptKeys = struct SPacketGCHybridCryptKeys
-{
-        SPacketGCHybridCryptKeys() : m_pStream(NULL) {}
-        ~SPacketGCHybridCryptKeys()
-        {
-            //GCC 에선 NULL delete 해도 괜찮나? 일단 안전하게 NULL 체크 하자. ( 근데 이거 C++ 표준아니었나 --a )
-            if (m_pStream)
-            {
-                delete[] m_pStream;
-                m_pStream = NULL;
-            }
-        }
-
-        DWORD GetStreamSize()
-        {
-            return sizeof(bHeader) + sizeof(WORD) + sizeof(int) + KeyStreamLen;
-        }
-
-        BYTE* GetStreamData()
-        {
-            if (m_pStream)
-            {
-                delete[] m_pStream;
-            }
-
-            uDynamicPacketSize = (WORD)GetStreamSize();
-
-            m_pStream = new BYTE[uDynamicPacketSize];
-
-            memcpy(m_pStream, &bHeader, 1);
-            memcpy(m_pStream + 1, &uDynamicPacketSize, 2);
-            memcpy(m_pStream + 3, &KeyStreamLen, 4);
-
-            if (KeyStreamLen > 0)
-            {
-                memcpy(m_pStream + 7, pDataKeyStream, KeyStreamLen);
-            }
-
-            return m_pStream;
-        }
-
-        BYTE    bHeader;
-        WORD    uDynamicPacketSize; // 빌어먹을 클라  DynamicPacketHeader 구조때문에 맞춰줘야한다 -_-;
-        int     KeyStreamLen;
-        BYTE*   pDataKeyStream;
-
-    private:
-        BYTE* m_pStream;
-
-
-};
-
-
-using TPacketGCPackageSDB = struct SPacketGCPackageSDB
-{
-        SPacketGCPackageSDB() : m_pDataSDBStream(NULL), m_pStream(NULL) {}
-        ~SPacketGCPackageSDB()
-        {
-            if (m_pStream)
-            {
-                delete[] m_pStream;
-                m_pStream = NULL;
-            }
-        }
-
-        DWORD GetStreamSize()
-        {
-            return sizeof(bHeader) + sizeof(WORD) + sizeof(int) + iStreamLen;
-        }
-
-        BYTE* GetStreamData()
-        {
-            if (m_pStream)
-            {
-                delete[] m_pStream;
-            }
-
-            uDynamicPacketSize =  GetStreamSize();
-
-            m_pStream = new BYTE[uDynamicPacketSize];
-
-            memcpy(m_pStream, &bHeader, 1);
-            memcpy(m_pStream + 1, &uDynamicPacketSize, 2);
-            memcpy(m_pStream + 3, &iStreamLen, 4);
-
-            if (iStreamLen > 0)
-            {
-                memcpy(m_pStream + 7, m_pDataSDBStream, iStreamLen);
-            }
-
-            return m_pStream;
-        }
-
-        BYTE    bHeader;
-        WORD    uDynamicPacketSize; // 빌어먹을 클라  DynamicPacketHeader 구조때문에 맞춰줘야한다 -_-;
-        int     iStreamLen;
-        BYTE*   m_pDataSDBStream;
-
-    private:
-        BYTE* m_pStream;
-
-
 };
 
 #ifdef _IMPROVED_PACKET_ENCRYPTION_

@@ -120,7 +120,6 @@
     <ClInclude Include="EterPack.h" />
     <ClInclude Include="EterPackCursor.h" />
     <ClInclude Include="EterPackManager.h" />
-    <ClInclude Include="EterPackPolicy_CSHybridCrypt.h" />
     <ClInclude Include="Inline.h" />
     <ClInclude Include="md5.h" />
     <ClInclude Include="StdAfx.h" />
@@ -129,7 +128,6 @@
     <ClCompile Include="EterPack.cpp" />
     <ClCompile Include="EterPackCursor.cpp" />
     <ClCompile Include="EterPackManager.cpp" />
-    <ClCompile Include="EterPackPolicy_CSHybridCrypt.cpp" />
     <ClCompile Include="md5.c" />
     <ClCompile Include="StdAfx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>

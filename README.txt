@@ -67,6 +67,7 @@
 | Over9Refine                       | YES    | NO     | NO   |
 | SpeedServer                       | YES    | NO     | NO   |
 | Panama                            | YES    | YES    | NO   |
+| CSHybridCrypt                     | YES    | YES    | NO   |
 |                                   |        |        |      |
 +-----------------------------------+--------+--------+------+
 

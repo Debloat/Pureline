@@ -182,17 +182,6 @@ void CPythonNetworkStream::LoadingPhase()
             }
             break;
 
-        case HEADER_GC_HYBRIDCRYPT_KEYS:
-            RecvHybridCryptKeyPacket();
-            return;
-            break;
-
-        case HEADER_GC_HYBRIDCRYPT_SDB:
-            RecvHybridCryptSDBPacket();
-            return;
-            break;
-
-
         default:
             GamePhase();
             return;

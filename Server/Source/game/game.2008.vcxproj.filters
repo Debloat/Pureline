@@ -82,9 +82,6 @@
     <ClCompile Include="cipher.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ClientPackageCryptInfo.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="cmd.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -502,9 +499,6 @@
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="cipher.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ClientPackageCryptInfo.h">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="cmd.h">

@@ -48,27 +48,7 @@ using TStrMap = std::unordered_map<string, BYTE, stringhash>;
 TStrMap g_PackTypeByExtNameMap;
 std::string g_strFolderName = "pack/";
 
-static BYTE s_IV[32];
-
-using MapNameToSDBFile = std::unordered_map<string, string, stringhash>;
-
-MapNameToSDBFile g_map_SDBFileList;
 int              iCompressTexQuality = 0;
-
-bool IsSDBSupportRequired(const std::string& strFile, std::string& strMapName)
-{
-    MapNameToSDBFile::const_iterator cit = g_map_SDBFileList.find(strFile);
-
-    if (cit != g_map_SDBFileList.end())
-    {
-        strMapName = cit->second;
-        return true;
-    }
-
-    return false;
-}
-
-//#define __ADD_CSHYBRID_ENCRYPT__
 
 bool LoadList(const char* fileName, vector<string>* pvec_stLine)
 {
@@ -296,7 +276,7 @@ void RecursivePack(CEterPack& pack, const char* filename, std::vector<std::strin
                 bool bSuccessCompTexture = false;
 
                 #ifdef REDUCIO
-                if (!CFileNameHelper::GetExtension(ext).compare("dds") && iCompressTexQuality > 0 /* && !IsSDBSupportRequired(temp, strRelatedMap)*/)
+                if (!CFileNameHelper::GetExtension(ext).compare("dds") && iCompressTexQuality > 0)
                 {
                     Reducio::ImageHandle h = Reducio::CreateImageStreamHandle();
 
@@ -338,11 +318,6 @@ void RecursivePack(CEterPack& pack, const char* filename, std::vector<std::strin
                 }
 
                 std::string strRelatedMapName;
-
-                if (packType == COMPRESSED_TYPE_HYBRIDCRYPT && IsSDBSupportRequired(temp, strRelatedMapName))
-                {
-                    packType = COMPRESSED_TYPE_HYBRIDCRYPT_WITHSDB;
-                }
 
                 if (pack.Put(temp, NULL, packType, strRelatedMapName))
                 {
@@ -421,7 +396,7 @@ bool MakePackFiles(const std::vector<std::string>& filePaths, CEterPackManager* 
     CEterFileDict fileDict;
     CEterPack* pPack = new CEterPack;
 
-    if (!pPack->Create(fileDict, st_packFilePath.c_str(), g_strFolderName.c_str(), false, s_IV))
+    if (!pPack->Create(fileDict, st_packFilePath.c_str(), g_strFolderName.c_str(), false))
     {
         return false;
     }
@@ -461,7 +436,7 @@ bool MakePackFiles(const std::vector<std::string>& filePaths, CEterPackManager* 
         }
 
         #ifdef REDUCIO
-        if (!ext.compare("dds") && iCompressTexQuality > 0 /* && !IsSDBSupportRequired(temp, strRelatedMap)*/)
+        if (!ext.compare("dds") && iCompressTexQuality > 0)
         {
             Reducio::ImageHandle h = Reducio::CreateImageStreamHandle();
 
@@ -503,15 +478,6 @@ bool MakePackFiles(const std::vector<std::string>& filePaths, CEterPackManager* 
             if (g_PackTypeByExtNameMap.end() != it)
             {
                 packType = it->second;
-            }
-        }
-
-        if (packType == COMPRESSED_TYPE_HYBRIDCRYPT)
-        {
-            bAddToIndex = true;
-            if (IsSDBSupportRequired(temp, strRelatedMap))
-            {
-                packType = COMPRESSED_TYPE_HYBRIDCRYPT_WITHSDB;
             }
         }
 
@@ -562,7 +528,7 @@ void MakePack(const char* c_szPackName, const char* c_szDirectory, CEterPackMana
     CEterFileDict fileDict;
     CEterPack* pPack = new CEterPack;
 
-    if (!pPack->Create(fileDict, st_packFilePath.c_str(), g_strFolderName.c_str(), false, s_IV))
+    if (!pPack->Create(fileDict, st_packFilePath.c_str(), g_strFolderName.c_str(), false))
     {
         return;
     }
@@ -608,7 +574,7 @@ bool MakeRecursivePack(const char* c_szPackName, CTextFileLoader& rTextFileLoade
     std::vector<std::string> vecCompressedTextures;
     std::vector<int>         vecCompressedTexMipMaps;
 
-    if (!pPack->Create(fileDict, st_packFilePath.c_str(), g_strFolderName.c_str(), false, s_IV))
+    if (!pPack->Create(fileDict, st_packFilePath.c_str(), g_strFolderName.c_str(), false))
     {
         return false;
     }
@@ -775,7 +741,7 @@ int main(int argc, char** argv)
         CEterPack pack;
         CEterFileDict dict;
 
-        if (pack.Create(dict, argv[2], "", true, iv))
+        if (pack.Create(dict, argv[2], "", true))
         {
 
             pack.Extract();
@@ -948,38 +914,6 @@ int main(int argc, char** argv)
         }
     }
 
-    std::string stIVFileName;
-
-    if (TextFileLoader.GetTokenString("iv", &stIVFileName))
-    {
-        CMappedFile mappedFile;
-        BYTE* pIV;
-
-        if (mappedFile.Create(stIVFileName.c_str(), (const void**)&pIV, 0, 32))
-        {
-            memcpy(s_IV, pIV, 32);
-        }
-        else
-        {
-            TraceError("IV open error: %s", stIVFileName.c_str());
-            return 1;
-        }
-    }
-
-    if (TextFileLoader.GetTokenVector("cshybridencryptexenamelist", &pTokenVector))
-    {
-        CMakePackLog::GetSingleton().Writef("\n - C/S Hybrid Encrypt ExtNameList\n");
-
-        auto itor = pTokenVector->begin();
-        for (; pTokenVector->end() != itor; ++itor)
-        {
-            std::string& rstrName = *itor;
-            CMakePackLog::GetSingleton().Writef(" %s\n", rstrName.c_str());
-
-            RegisterPackTypeByExtName(rstrName.c_str(), COMPRESSED_TYPE_HYBRIDCRYPT, true);
-        }
-    }
-
     if (TextFileLoader.SetChildNode("rootpackitemlist"))
     {
         CMakePackLog::GetSingleton().Writef("\n + Making RootPack\n");
@@ -1042,37 +976,6 @@ int main(int argc, char** argv)
         }
     }
 
-    // SDB ( Supplementary Data Block Required File List )
-    if (TextFileLoader.GetTokenVector("sdbfilelist", &pTokenVector))
-    {
-        auto itor = pTokenVector->begin();
-        for (; pTokenVector->end() != itor; ++itor)
-        {
-            std::string& rstrName = *itor;
-
-            std::string rstrNameLower = rstrName;
-            stl_lowers(rstrNameLower);
-
-            std::vector<std::string> strs = split(rstrNameLower, "?");
-            //mapname:sdbfilename
-
-            if (strs.size() == 1)
-            {
-                strs.push_back(strs[0]);
-                strs[0] = "none";
-            }
-
-            if (strs.size() != 2)
-            {
-                CMakePackLog::GetSingleton().Writef("\n SDB File Usage: MapName:SDBFileName \n");
-                return -1;
-            }
-
-            StringPath(strs[1]);
-            g_map_SDBFileList[strs[1]] = strs[0];
-        }
-    }
-
     // filelist에 섹션에 입력되어 있는 모든 파일을 팩하기
     if (TextFileLoader.GetTokenVector("filelist", &pTokenVector))
     {
@@ -1095,11 +998,6 @@ int main(int argc, char** argv)
             return -1;
         }
     }
-
-    //make key file for CS hybrid crypt
-    std::string strCryptFileName = g_strFolderName + "/" + "cshybridcrypt_" + g_st_packName + ".dat";
-
-    packMgr->WriteHybridCryptPackInfo(strCryptFileName.c_str());
 
     std::string strOldIndexFileName = g_strFolderName + "Index";
 

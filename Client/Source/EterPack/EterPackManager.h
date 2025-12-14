@@ -53,15 +53,6 @@ class CEterPackManager : public CSingleton<CEterPackManager>
 
         const char* GetRootPackFileName();
 
-        //for hybridcrypt
-        //THEMIDA
-        void WriteHybridCryptPackInfo(const char* pFileName);
-
-        //THEMIDA
-        void RetrieveHybridCryptPackKeys(const BYTE* pStream);
-        //THEMIDA
-        void RetrieveHybridCryptPackSDB(const BYTE* pStream);
-
         // 메모리에 매핑된 팩들 가운데, 정리해야할 것들 정리.
     public:
         void ArrangeMemoryMappedPack();

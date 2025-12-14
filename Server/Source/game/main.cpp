@@ -433,19 +433,6 @@ int main(int argc, char** argv)
         TrafficProfiler::instance().Initialize(TRAFFIC_PROFILE_FLUSH_CYCLE, "ProfileLog");
     }
 
-    // Client PackageCrypt
-
-    //TODO : make it config
-    if (const std::string strPackageCryptInfoDir = "package/"; !desc_manager.LoadClientPackageCryptInfo(strPackageCryptInfoDir.c_str()))
-    {
-        sys_err("Failed to Load ClientPackageCryptInfo File(%s)", strPackageCryptInfoDir.c_str());
-    }
-
-    #if defined (__FreeBSD__) && defined(__FILEMONITOR__)
-    PFN_FileChangeListener pPackageNotifyFunc =  & (DESC_MANAGER::NotifyClientPackageFileChanged);
-    //FileMonitorFreeBSD::Instance().AddWatch( strPackageCryptInfoName, pPackageNotifyFunc );
-    #endif
-
     while (idle());
 
     sys_log(0, "<shutdown> Starting...");

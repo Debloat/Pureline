@@ -63,16 +63,6 @@ void CPythonNetworkStream::LoginPhase()
             }
             break;
 
-        case HEADER_GC_HYBRIDCRYPT_KEYS:
-            RecvHybridCryptKeyPacket();
-            return;
-            break;
-
-        case HEADER_GC_HYBRIDCRYPT_SDB:
-            RecvHybridCryptSDBPacket();
-            return;
-            break;
-
         default:
             if (RecvDefaultPacket(header))
             {

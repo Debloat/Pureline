@@ -92,7 +92,7 @@ CPPFILE = BattleArena.cpp FSM.cpp MarkConvert.cpp MarkImage.cpp MarkManager.cpp 
 		  wedding.cpp xmas_event.cpp version.cpp map_location.cpp\
 		  BlueDragon.cpp BlueDragon_Binder.cpp DragonLair.cpp questlua_dragonlair.cpp\
 		  skill_power.cpp affect.cpp\
-		  FileMonitor_FreeBSD.cpp ClientPackageCryptInfo.cpp cipher.cpp\
+		  FileMonitor_FreeBSD.cpp cipher.cpp\
 		  buff_on_attributes.cpp dragon_soul_table.cpp DragonSoul.cpp\
 		  group_text_parse_tree.cpp char_dragonsoul.cpp questlua_dragonsoul.cpp\
 		  shop_manager.cpp shopEx.cpp item_manager_read_tables.cpp

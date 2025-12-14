@@ -269,8 +269,6 @@ class CPythonNetworkStream : public CNetworkStream, public CSingleton<CPythonNet
         bool RecvHandshakePacket();
         bool RecvHandshakeOKPacket();
 
-        bool RecvHybridCryptKeyPacket();
-        bool RecvHybridCryptSDBPacket();
         #ifdef _IMPROVED_PACKET_ENCRYPTION_
         bool RecvKeyAgreementPacket();
         bool RecvKeyAgreementCompletedPacket();

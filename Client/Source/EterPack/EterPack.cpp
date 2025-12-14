@@ -7,7 +7,6 @@
 
 #include "EterPack.h"
 #include "Inline.h"
-#include "EterPackPolicy_CSHybridCrypt.h"
 
 #pragma warning(push, 3)
 #include <cryptopp/cryptlib.h>
@@ -224,16 +223,11 @@ void CMakePackLog::FlushError()
 ///////////////////////////////////////////////////////////////////////////////
 CEterPack::CEterPack() : m_indexCount(0), m_indexData(NULL), m_FragmentSize(0), m_bEncrypted(false), m_bReadOnly(false)
 {
-    m_pCSHybridCryptPolicy = new EterPackPolicy_CSHybridCrypt;
-
 }
 
 CEterPack::~CEterPack()
 {
     Destroy();
-
-    delete m_pCSHybridCryptPolicy;
-    m_pCSHybridCryptPolicy = NULL;
 }
 
 void CEterPack::Destroy()
@@ -584,42 +578,6 @@ bool CEterPack::Get(CMappedFile& out_file, const char* filename, LPCVOID * data)
         out_file.BindLZObject(zObj);
         *data = zObj->GetBuffer();
     }
-    else if (COMPRESSED_TYPE_HYBRIDCRYPT == index->compressed_type || COMPRESSED_TYPE_HYBRIDCRYPT_WITHSDB == index->compressed_type)
-    {
-        #ifdef __THEMIDA__
-        VM_START
-        #endif
-
-        CLZObject * zObj = new CLZObject;
-        auto ssvv = std::string(filename);
-        if (!m_pCSHybridCryptPolicy->DecryptMemory(ssvv, static_cast<const BYTE*> (*data), index->data_size, *zObj))
-        {
-            delete zObj;
-            return false;
-        }
-
-        out_file.BindLZObjectWithBufferedSize(zObj);
-        if (COMPRESSED_TYPE_HYBRIDCRYPT_WITHSDB == index->compressed_type)
-        {
-            BYTE* pSDBData;
-            int   iSDBSize;
-
-            if (!m_pCSHybridCryptPolicy->GetSupplementaryDataBlock(ssvv, pSDBData, iSDBSize))
-            {
-                delete zObj;
-                return false;
-            }
-
-            *data = out_file.AppendDataBlock(pSDBData, iSDBSize);
-        }
-        else
-        {
-            *data = zObj->GetBuffer();
-        }
-        #ifdef __THEMIDA__
-        VM_END
-        #endif
-    }
     return true;
 }
 
@@ -690,42 +648,6 @@ bool CEterPack::Get2(CMappedFile& out_file, const char* filename, TEterPackIndex
 
         out_file.BindLZObject(zObj);
         *data = zObj->GetBuffer();
-    }
-    else if (COMPRESSED_TYPE_HYBRIDCRYPT == index->compressed_type || COMPRESSED_TYPE_HYBRIDCRYPT_WITHSDB == index->compressed_type)
-    {
-        #ifdef __THEMIDA__
-        VM_START
-        #endif
-
-        CLZObject * zObj = new CLZObject;
-        auto ssvv = std::string(filename);
-        if (!m_pCSHybridCryptPolicy->DecryptMemory(ssvv, static_cast<const BYTE*> (*data), index->data_size, *zObj))
-        {
-            delete zObj;
-            return false;
-        }
-
-        out_file.BindLZObjectWithBufferedSize(zObj);
-
-        if (COMPRESSED_TYPE_HYBRIDCRYPT_WITHSDB == index->compressed_type)
-        {
-            BYTE* pSDBData;
-            int   iSDBSize;
-
-            if (!m_pCSHybridCryptPolicy->GetSupplementaryDataBlock(ssvv, pSDBData, iSDBSize))
-            {
-                return false;
-            }
-
-            *data = out_file.AppendDataBlock(pSDBData, iSDBSize);
-        }
-        else
-        {
-            *data = zObj->GetBuffer();
-        }
-        #ifdef __THEMIDA__
-        VM_END
-        #endif
     }
 
     return true;
@@ -804,41 +726,6 @@ bool CEterPack::Extract()
             writeFile.Write(zObj.GetBuffer(), zObj.GetSize());
             zObj.Clear();
         }
-        else if (COMPRESSED_TYPE_HYBRIDCRYPT == index->compressed_type || COMPRESSED_TYPE_HYBRIDCRYPT_WITHSDB == index->compressed_type)
-        {
-            #ifdef __THEMIDA__
-            VM_START
-            #endif
-            auto ssvv = std::string(index->filename);
-            if (!m_pCSHybridCryptPolicy->DecryptMemory(ssvv, (const BYTE*) data + index->data_position, index->data_size, zObj))
-            {
-                return false;
-            }
-
-            if (COMPRESSED_TYPE_HYBRIDCRYPT_WITHSDB == index->compressed_type)
-            {
-                dataMapFile.BindLZObjectWithBufferedSize(&zObj);
-
-                BYTE* pSDBData;
-                int   iSDBSize;
-
-                if (!m_pCSHybridCryptPolicy->GetSupplementaryDataBlock(ssvv, pSDBData, iSDBSize))
-                {
-                    return false;
-                }
-
-                dataMapFile.AppendDataBlock(pSDBData, iSDBSize);
-                writeFile.Write(dataMapFile.AppendDataBlock(pSDBData, iSDBSize), dataMapFile.Size());
-            }
-            else
-            {
-                writeFile.Write(zObj.GetBuffer(), zObj.GetBufferSize());
-            }
-            zObj.Clear();
-            #ifdef __THEMIDA__
-            VM_END
-            #endif
-        }
         else if (COMPRESSED_TYPE_NONE == index->compressed_type)
         {
             writeFile.Write((const char*) data + index->data_position, index->data_size);
@@ -893,26 +780,6 @@ bool CEterPack::Put(const char* filename, const char* sourceFilename, BYTE packT
 
     BYTE*  pMappedData    = (BYTE*)data;
     int    iMappedDataSize = mapFile.Size();
-
-    if (packType == COMPRESSED_TYPE_HYBRIDCRYPT || packType == COMPRESSED_TYPE_HYBRIDCRYPT_WITHSDB)
-    {
-        #ifdef __THEMIDA__
-        VM_START
-        #endif
-        auto ssvvv = std::string(filename);
-        m_pCSHybridCryptPolicy->GenerateCryptKey(ssvvv);
-
-        if (packType == COMPRESSED_TYPE_HYBRIDCRYPT_WITHSDB)
-        {
-            if (!m_pCSHybridCryptPolicy->GenerateSupplementaryDataBlock(ssvvv, strRelateMapName, (const BYTE*)data, mapFile.Size(), pMappedData, iMappedDataSize))
-            {
-                return false;
-            }
-        }
-        #ifdef __THEMIDA__
-        VM_END
-        #endif
-    }
 
     return Put(filename, pMappedData, iMappedDataSize, packType);
 }
@@ -990,26 +857,6 @@ bool CEterPack::Put(const char* filename, LPCVOID data, long len, BYTE packType)
         data = zObj.GetBuffer();
         len = zObj.GetSize();
     }
-    else if (packType == COMPRESSED_TYPE_HYBRIDCRYPT || packType == COMPRESSED_TYPE_HYBRIDCRYPT_WITHSDB)
-    {
-        #ifdef __THEMIDA__
-        VM_START
-        #endif
-
-        auto ssvv = std::string(filename);
-        if (!m_pCSHybridCryptPolicy->EncryptMemory(ssvv, (const BYTE*)data, len, zObj))
-        {
-            return false;
-        }
-
-        data = zObj.GetBuffer();
-        len = zObj.GetBufferSize();
-        #ifdef __THEMIDA__
-        VM_END
-        #endif
-
-    }
-
 
     #ifdef CHECKSUM_CHECK_MD5
     MD5_CTX context;
@@ -1377,12 +1224,6 @@ const char* CEterPack::GetDBName()
 {
     return m_dbName;
 }
-
-EterPackPolicy_CSHybridCrypt* CEterPack::GetPackPolicy_HybridCrypt() const
-{
-    return  m_pCSHybridCryptPolicy;
-}
-
 
 /////////////////////////
 

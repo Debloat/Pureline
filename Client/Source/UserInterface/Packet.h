@@ -293,11 +293,6 @@ enum
 
     HEADER_GC_AUTH_SUCCESS                      = 150,
 
-    //HYBRID CRYPT
-    HEADER_GC_HYBRIDCRYPT_KEYS                  = 152,
-    HEADER_GC_HYBRIDCRYPT_SDB                   = 153, // SDB means Supplmentary Data Blocks
-    //HYBRID CRYPT
-
     #if defined(GAIDEN)
     HEADER_GC_ONTIME                            = 204,
     HEADER_GC_RESET_ONTIME                      = 205,
@@ -2491,63 +2486,6 @@ using TPacketGCResetOnTime = struct SPacketGCResetOnTime
     BYTE header;
 };
 
-using TPacketGCHybridCryptKeys = struct SPacketGCHybridCryptKeys
-{
-    private:
-        SPacketGCHybridCryptKeys() : m_pStream(nullptr) {}
-
-    public:
-        SPacketGCHybridCryptKeys(int iStreamSize) : iKeyStreamLen(iStreamSize)
-        {
-            m_pStream = new BYTE[iStreamSize];
-        }
-        ~SPacketGCHybridCryptKeys()
-        {
-            if (m_pStream)
-            {
-                delete[] m_pStream;
-                m_pStream = nullptr;
-            }
-        }
-        static int GetFixedHeaderSize()
-        {
-            return sizeof(BYTE) + sizeof(WORD) + sizeof(int);
-        }
-
-        BYTE    bHeader;
-        WORD    wDynamicPacketSize;
-        int     iKeyStreamLen;
-        BYTE*   m_pStream;
-
-};
-
-
-using TPacketGCHybridSDB = struct SPacketGCHybridSDB
-{
-    private:
-        SPacketGCHybridSDB() : m_pStream(nullptr) {}
-
-    public:
-        SPacketGCHybridSDB(int iStreamSize) : iSDBStreamLen(iStreamSize)
-        {
-            m_pStream = new BYTE[iStreamSize];
-        }
-        ~SPacketGCHybridSDB()
-        {
-            delete[] m_pStream;
-            m_pStream = nullptr;
-        }
-        static int GetFixedHeaderSize()
-        {
-            return sizeof(BYTE) + sizeof(WORD) + sizeof(int);
-        }
-
-        BYTE    bHeader;
-        WORD    wDynamicPacketSize;
-        int     iSDBStreamLen;
-        BYTE*   m_pStream;
-
-};
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Client To Client
 

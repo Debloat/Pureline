@@ -8,7 +8,6 @@
 #include "IFileMonitor.h"
 
 class CLoginKey;
-class CClientPackageCryptInfo;
 
 class DESC_MANAGER : public singleton<DESC_MANAGER>
 {
@@ -74,14 +73,6 @@ class DESC_MANAGER : public singleton<DESC_MANAGER>
 
         bool            IsP2PDescExist(const char* szHost, WORD wPort);
 
-        // for C/S hybrid crypt
-        bool            LoadClientPackageCryptInfo(const char* pDirName);
-        void            SendClientPackageCryptKey(LPDESC desc);
-        void            SendClientPackageSDBToLoadMap(LPDESC desc, const char* pMapName);
-        #ifdef __FreeBSD__
-        static void     NotifyClientPackageFileChanged(const std::string& fileName, eFileUpdatedOptions eUpdateOption);
-        #endif
-
     private:
         bool                m_bDisconnectInvalidCRC;
 
@@ -104,8 +95,6 @@ class DESC_MANAGER : public singleton<DESC_MANAGER>
         int             m_aiEmpireUserCount[EMPIRE_MAX_NUM];
 
         bool            m_bDestroyed;
-
-        CClientPackageCryptInfo*    m_pPackageCrypt;
 };
 
 #endif

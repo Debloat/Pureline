@@ -100,17 +100,6 @@ bool CAccountConnector::__HandshakeState_Process()
         return false;
     }
 
-    //  TODO :  차후 서버와 동일하게 가변길이 data serialize & deserialize  작업해야 한다.
-    if (!__AnalyzeVarSizePacket(HEADER_GC_HYBRIDCRYPT_KEYS, &CAccountConnector::__AuthState_RecvHybridCryptKeys))
-    {
-        return false;
-    }
-
-    if (!__AnalyzeVarSizePacket(HEADER_GC_HYBRIDCRYPT_SDB, &CAccountConnector::__AuthState_RecvHybridCryptSDB))
-    {
-        return false;
-    }
-
     #ifdef _IMPROVED_PACKET_ENCRYPTION_
     if (!__AnalyzePacket(HEADER_GC_KEY_AGREEMENT, sizeof(TPacketKeyAgreement), &CAccountConnector::__AuthState_RecvKeyAgreement))
     {
@@ -164,17 +153,6 @@ bool CAccountConnector::__AuthState_Process()
         return false;
     }
     #endif
-
-    //  TODO :  차후 서버와 동일하게 가변길이 data serialize & deserialize  작업해야 한다.
-    if (!__AnalyzeVarSizePacket(HEADER_GC_HYBRIDCRYPT_KEYS, &CAccountConnector::__AuthState_RecvHybridCryptKeys))
-    {
-        return false;
-    }
-
-    if (!__AnalyzeVarSizePacket(HEADER_GC_HYBRIDCRYPT_SDB, &CAccountConnector::__AuthState_RecvHybridCryptSDB))
-    {
-        return false;
-    }
 
     return true;
 }
@@ -268,47 +246,6 @@ bool CAccountConnector::__AuthState_RecvHandshake()
 
     return true;
 }
-
-bool CAccountConnector::__AuthState_RecvHybridCryptKeys(int iTotalSize)
-{
-    int iFixedHeaderSize = TPacketGCHybridCryptKeys::GetFixedHeaderSize();
-
-    TPacketGCHybridCryptKeys kPacket(iTotalSize - iFixedHeaderSize);
-
-    if (!Recv(iFixedHeaderSize, &kPacket))
-    {
-        return false;
-    }
-
-    if (!Recv(kPacket.iKeyStreamLen, kPacket.m_pStream))
-    {
-        return false;
-    }
-
-    CEterPackManager::Instance().RetrieveHybridCryptPackKeys(kPacket.m_pStream);
-    return true;
-}
-
-bool CAccountConnector::__AuthState_RecvHybridCryptSDB(int iTotalSize)
-{
-    int iFixedHeaderSize = TPacketGCHybridSDB::GetFixedHeaderSize();
-
-    TPacketGCHybridSDB kPacket(iTotalSize - iFixedHeaderSize);
-
-    if (!Recv(iFixedHeaderSize, &kPacket))
-    {
-        return false;
-    }
-
-    if (!Recv(kPacket.iSDBStreamLen, kPacket.m_pStream))
-    {
-        return false;
-    }
-
-    CEterPackManager::Instance().RetrieveHybridCryptPackSDB(kPacket.m_pStream);
-    return true;
-}
-
 
 bool CAccountConnector::__AuthState_RecvPing()
 {
