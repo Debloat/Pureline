@@ -307,12 +307,6 @@ namespace quest
         return 1;
     }
 
-    int _is_speed_server(lua_State * L)
-    {
-        lua_pushboolean(L, speed_server);
-        return 1;
-    }
-
     int _raw_script(lua_State* L)
     {
         if (test_server)
@@ -1471,7 +1465,6 @@ namespace quest
             {   "cleartimer",               _clear_named_timer      },
             {   "getnpcid",                 _getnpcid               },
             {   "is_test_server",           _is_test_server         },
-            {   "is_speed_server",          _is_speed_server        },
             {   "raw_script",               _raw_script             },
             {   "number",                   _number                 },
 
