@@ -12,6 +12,7 @@
 ~ Removed SpeedServer
 ~ Removed Panama
 ~ Removed CSHybridCrypt
+~ Removed ChinaEventServer
 
 +------------+
 | 25.11.2025 |
