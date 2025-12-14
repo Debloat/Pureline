@@ -19,6 +19,7 @@
     * ChinaEventServer
     * distribution_test_server
     * DBString / GreetMessage
+    * Themida
     * more locale specific code
 
 +------------+

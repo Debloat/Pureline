@@ -24,10 +24,6 @@
 #include "../EterBase/Debug.h"
 #include "../EterBase/CRC32.h"
 
-#ifdef __THEMIDA__
-    #include <ThemidaSDK.h>
-#endif
-
 #include <iostream>
 #include <fstream>
 
@@ -47,21 +43,21 @@ CMakePackLog& CMakePackLog::GetSingleton()
 
 CMakePackLog::CMakePackLog()
 {
-    m_fp = NULL;
-    m_fp_err = NULL;
+    m_fp = nullptr;
+    m_fp_err = nullptr;
 }
 
 CMakePackLog::~CMakePackLog()
 {
-    if (NULL != m_fp)
+    if (nullptr != m_fp)
     {
         fclose(m_fp);
-        m_fp = NULL;
+        m_fp = nullptr;
     }
-    if (NULL != m_fp_err)
+    if (nullptr != m_fp_err)
     {
         fclose(m_fp_err);
-        m_fp_err = NULL;
+        m_fp_err = nullptr;
     }
 }
 
@@ -192,7 +188,7 @@ void CMakePackLog::__WriteError(const char* c_szBuf, int nBufLen)
         return;
     }
 
-    if (NULL == m_fp_err)
+    if (nullptr == m_fp_err)
     {
         m_fp_err = fopen(m_stErrorFileName.c_str(), "w");
     }
@@ -221,7 +217,7 @@ void CMakePackLog::FlushError()
     FILE* CEterPack::ms_PackLogFile = NULL;
 #endif
 ///////////////////////////////////////////////////////////////////////////////
-CEterPack::CEterPack() : m_indexCount(0), m_indexData(NULL), m_FragmentSize(0), m_bEncrypted(false), m_bReadOnly(false)
+CEterPack::CEterPack() : m_indexCount(0), m_bEncrypted(false), m_indexData(nullptr), m_FragmentSize(0), m_bReadOnly(false)
 {
 }
 
@@ -527,9 +523,7 @@ bool CEterPack::Get(CMappedFile& out_file, const char* filename, LPCVOID * data)
     // 이제는 요청이 오면, 필요한 부분만 memory map에 올리고, 요청이 끝나면 해제하게 함.
     out_file.Create(m_stDataFileName.c_str(), data, index->data_position, index->data_size);
 
-    bool bIsSecurityCheckRequired = (index->compressed_type == COMPRESSED_TYPE_SECURITY);
-
-    if (bIsSecurityCheckRequired)
+    if (bool bIsSecurityCheckRequired = (index->compressed_type == COMPRESSED_TYPE_SECURITY))
     {
         #ifdef CHECKSUM_CHECK_MD5
         MD5_CTX context;
@@ -552,7 +546,7 @@ bool CEterPack::Get(CMappedFile& out_file, const char* filename, LPCVOID * data)
 
     if (COMPRESSED_TYPE_COMPRESS == index->compressed_type)
     {
-        CLZObject * zObj = new CLZObject;
+        auto * zObj = new CLZObject;
 
         if (!CLZO::Instance().Decompress(*zObj, static_cast<const BYTE*> (*data)))
         {
@@ -566,7 +560,7 @@ bool CEterPack::Get(CMappedFile& out_file, const char* filename, LPCVOID * data)
     }
     else if (COMPRESSED_TYPE_SECURITY == index->compressed_type)
     {
-        CLZObject * zObj = new CLZObject;
+        auto * zObj = new CLZObject;
 
         if (!CLZO::Instance().Decompress(*zObj, static_cast<const BYTE*> (*data), s_adwEterPackSecurityKey))
         {
@@ -598,9 +592,7 @@ bool CEterPack::Get2(CMappedFile& out_file, const char* filename, TEterPackIndex
     //}
     out_file.Create(m_stDataFileName.c_str(), data, index->data_position, index->data_size);
 
-    bool bIsSecurityCheckRequired = (index->compressed_type == COMPRESSED_TYPE_SECURITY);
-
-    if (bIsSecurityCheckRequired)
+    if (bool bIsSecurityCheckRequired = (index->compressed_type == COMPRESSED_TYPE_SECURITY))
     {
         #ifdef CHECKSUM_CHECK_MD5
         MD5_CTX context;
@@ -623,7 +615,7 @@ bool CEterPack::Get2(CMappedFile& out_file, const char* filename, TEterPackIndex
 
     if (COMPRESSED_TYPE_COMPRESS == index->compressed_type)
     {
-        CLZObject * zObj = new CLZObject;
+        auto * zObj = new CLZObject;
 
         if (!CLZO::Instance().Decompress(*zObj, static_cast<const BYTE*> (*data)))
         {
@@ -637,7 +629,7 @@ bool CEterPack::Get2(CMappedFile& out_file, const char* filename, TEterPackIndex
     }
     else if (COMPRESSED_TYPE_SECURITY == index->compressed_type)
     {
-        CLZObject * zObj = new CLZObject;
+        auto * zObj = new CLZObject;
 
         if (!CLZO::Instance().Decompress(*zObj, static_cast<const BYTE*> (*data), s_adwEterPackSecurityKey))
         {
@@ -692,7 +684,7 @@ bool CEterPack::Extract()
 
     CLZObject zObj;
 
-    for (TDataPositionMap::iterator i = m_DataPositionMap.begin();
+    for (auto i = m_DataPositionMap.begin();
          i != m_DataPositionMap.end();
          ++i)
     {
@@ -739,16 +731,15 @@ bool CEterPack::Extract()
 bool CEterPack::GetNames(std::vector<std::string>* retNames)
 {
     CMappedFile dataMapFile;
-    LPCVOID     data;
 
-    if (!dataMapFile.Create(m_stDataFileName.c_str(), &data, 0, 0))
+    if (LPCVOID     data; !dataMapFile.Create(m_stDataFileName.c_str(), &data, 0, 0))
     {
         return false;
     }
 
     CLZObject zObj;
 
-    for (TDataPositionMap::iterator i = m_DataPositionMap.begin();
+    for (auto i = m_DataPositionMap.begin();
          i != m_DataPositionMap.end();
          ++i)
     {
@@ -946,17 +937,17 @@ bool CEterPack::Put(const char* filename, LPCVOID data, long len, BYTE packType)
     return true;
 }
 
-long CEterPack::GetFragmentSize()
+long CEterPack::GetFragmentSize() const
 {
     return m_FragmentSize;
 }
 
 // Private methods
-bool CEterPack::CreateIndexFile()
+bool CEterPack::CreateIndexFile() const
 {
     FILE * fp;
 
-    if (NULL != (fp = fopen(m_indexFileName, "rb")))
+    if (nullptr != (fp = fopen(m_indexFileName, "rb")))
     {
         fclose(fp);
         return true;
@@ -1019,9 +1010,7 @@ void CEterPack::PushFreeIndex(TEterPackIndex* index)
 {
     if (index->filename_crc != 0)
     {
-        TDataPositionMap::iterator i = m_DataPositionMap.find(index->filename_crc);
-
-        if (i != m_DataPositionMap.end())
+        if (TDataPositionMap::iterator i = m_DataPositionMap.find(index->filename_crc); i != m_DataPositionMap.end())
         {
             m_DataPositionMap.erase(i);
         }
@@ -1045,14 +1034,14 @@ long CEterPack::GetNewIndexPosition(CFileBase & file)
 
 TEterPackIndex* CEterPack::NewIndex(CFileBase& file, const char* filename, long size)
 {
-    TEterPackIndex* index = NULL;
+    TEterPackIndex* index = nullptr;
     int block_size = size + (DATA_BLOCK_SIZE - (size % DATA_BLOCK_SIZE));
     //  if ((index = FindIndex(filename))) // 이미 인덱스가 존재하는지 확인
     //      return index;
 
     int blockidx = GetFreeBlockIndex(block_size);
 
-    for (TFreeIndexList::iterator i = m_FreeIndexList[blockidx].begin();
+    for (auto i = m_FreeIndexList[blockidx].begin();
          i != m_FreeIndexList[blockidx].end();
          ++i)
     {
@@ -1094,7 +1083,7 @@ TEterPackIndex* CEterPack::FindIndex(const char* filename)
 
     if (i == m_DataPositionMap.end())
     {
-        return NULL;
+        return nullptr;
     }
 
     return (i->second);
@@ -1109,7 +1098,7 @@ bool CEterPack::CreateDataFile()
 {
     FILE * fp;
 
-    if (NULL != (fp = fopen(m_stDataFileName.c_str(), "rb")))
+    if (nullptr != (fp = fopen(m_stDataFileName.c_str(), "rb")))
     {
         fclose(fp);
         return true;
@@ -1183,7 +1172,7 @@ bool CEterPack::WriteNewData(CFileBase& file, TEterPackIndex* index, LPCVOID dat
         return true;
     }
 
-    char* empty_buf = (char*) calloc(empty_size, sizeof(char));
+    auto* empty_buf = (char*) calloc(empty_size, sizeof(char));
 
     if (!file.Write(empty_buf, empty_size))
     {
@@ -1202,7 +1191,7 @@ TDataPositionMap& CEterPack::GetIndexMap()
 
 DWORD CEterPack::DeleteUnreferencedData()
 {
-    TDataPositionMap::iterator i = m_DataPositionMap.begin();
+    auto i = m_DataPositionMap.begin();
     DWORD dwCount = 0;
 
     while (i != m_DataPositionMap.end())
@@ -1271,9 +1260,7 @@ CEterFileDict::Item* CEterFileDict::GetItem(DWORD dwFileNameHash, const char* c_
 
     while (iter != iter_pair.second)
     {
-        Item& item = iter->second;
-
-        if (0 == strcmp(c_pszFileName, item.pkInfo->filename))
+        if (Item& item = iter->second; 0 == strcmp(c_pszFileName, item.pkInfo->filename))
         {
             return &item;
         }
@@ -1281,5 +1268,5 @@ CEterFileDict::Item* CEterFileDict::GetItem(DWORD dwFileNameHash, const char* c_
         ++iter;
     }
 
-    return NULL;
+    return nullptr;
 }

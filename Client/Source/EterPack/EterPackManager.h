@@ -36,13 +36,10 @@ class CEterPackManager : public CSingleton<CEterPackManager>
         void SetSearchMode(bool bPackFirst);
         int GetSearchMode();
 
-        //THEMIDA
         bool Get(CMappedFile & rMappedFile, const char* c_szFileName, LPCVOID * pData);
 
-        //THEMIDA
         bool GetFromPack(CMappedFile & rMappedFile, const char* c_szFileName, LPCVOID * pData);
 
-        //THEMIDA
         bool GetFromFile(CMappedFile & rMappedFile, const char* c_szFileName, LPCVOID * pData);
         bool isExist(const char* c_szFileName);
         bool isExistInPack(const char* c_szFileName);
