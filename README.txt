@@ -81,6 +81,7 @@
 | Hotbackup                         | YES    | NO     | NO   |
 | AlphaFog                          | NO     | YES    | NO   |
 | ChinaEventServer                  | YES    | NO     | NO   |
+| distribution_test_server          | YES    | NO     | NO   |
 |                                   |        |        |      |
 +-----------------------------------+--------+--------+------+
 
