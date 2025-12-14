@@ -657,7 +657,7 @@ const char* GetRecvHeaderName(BYTE header)
         stringList[30] = "HEADER_GC_QUICKSLOT_SWAP";
         stringList[31] = "HEADER_GC_ITEM_OWNERSHIP";
         stringList[33] = "HEADER_GC_ITEM_UNBIND_TIME";
-        stringList[34] = "HEADER_GC_WHISPER	";
+        stringList[34] = "HEADER_GC_WHISPER";
         stringList[35] = "HEADER_GC_ALERT";
         stringList[36] = "HEADER_GC_MOTION";
         stringList[38] = "HEADER_GC_SHOP";
@@ -734,7 +734,7 @@ const char* GetRecvHeaderName(BYTE header)
         stringList[134] = "HEADER_GC_DIG_MOTION";
         stringList[135] = "HEADER_GC_DAMAGE_INFO";
         stringList[136] = "HEADER_GC_CHAR_ADDITIONAL_INFO";
-        stringList[150] = "HEADER_GC_AUTH_SUCCESS"
+        stringList[150] = "HEADER_GC_AUTH_SUCCESS";
         #ifdef _IMPROVED_PACKET_ENCRYPTION_
         stringList[0xfa] = "HEADER_GC_KEY_AGREEMENT_COMPLETED";
         stringList[0xfb] = "HEADER_GC_KEY_AGREEMENT";
