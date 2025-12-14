@@ -17,7 +17,6 @@
 #include <cryptopp/sha.h>
 #include <cryptopp/ripemd.h>
 #include <cryptopp/whrlpool.h>
-#include <cryptopp/panama.h>
 
 #include <cryptopp/cryptoppLibLink.h>
 #pragma warning(pop)
@@ -223,7 +222,7 @@ void CMakePackLog::FlushError()
     FILE* CEterPack::ms_PackLogFile = NULL;
 #endif
 ///////////////////////////////////////////////////////////////////////////////
-CEterPack::CEterPack() : m_indexCount(0), m_indexData(NULL), m_FragmentSize(0), m_bEncrypted(false), m_bReadOnly(false), m_bDecrypedIV(false)
+CEterPack::CEterPack() : m_indexCount(0), m_indexData(NULL), m_FragmentSize(0), m_bEncrypted(false), m_bReadOnly(false)
 {
     m_pCSHybridCryptPolicy = new EterPackPolicy_CSHybridCrypt;
 
@@ -262,14 +261,8 @@ const std::string& CEterPack::GetPathName()
     return m_stPathName;
 }
 
-bool CEterPack::Create(CEterFileDict& rkFileDict, const char* dbname, const char* pathName, bool bReadOnly, const BYTE* iv)
+bool CEterPack::Create(CEterFileDict& rkFileDict, const char* dbname, const char* pathName, bool bReadOnly)
 {
-    if (iv)
-    {
-        m_stIV_Panama.assign((const char*) iv, 32);
-        m_bDecrypedIV = false;
-    }
-
     m_stPathName = pathName;
 
     strncpy(m_dbName, dbname, DBNAME_MAX_LEN);
@@ -293,8 +286,7 @@ bool CEterPack::Create(CEterFileDict& rkFileDict, const char* dbname, const char
         return false;
     }
 
-    bool bOverwrite = (iv != NULL);
-    __BuildIndex(rkFileDict, bOverwrite);
+    __BuildIndex(rkFileDict);
 
     if (m_bReadOnly)
     {
@@ -307,28 +299,6 @@ bool CEterPack::Create(CEterFileDict& rkFileDict, const char* dbname, const char
         DecryptIndexFile();
     }
 
-    return true;
-}
-
-bool CEterPack::DecryptIV(DWORD dwPanamaKey)
-{
-    if (m_stIV_Panama.length() != 32)
-    {
-        return false;
-    }
-
-    if (m_bDecrypedIV) // 이미 암호화가 풀렸으면 다시 처리 안함
-    {
-        return true;
-    }
-
-    DWORD* ivs = (DWORD*)&m_stIV_Panama[0];
-    for (int i = 0; i != m_stIV_Panama.length() / sizeof(DWORD); ++i)
-    {
-        ivs[i] ^= dwPanamaKey + i * 16777619;
-    }
-
-    m_bDecrypedIV = true;
     return true;
 }
 
@@ -426,7 +396,7 @@ bool CEterPack::EncryptIndexFile()
     return true;
 }
 
-bool CEterPack::__BuildIndex(CEterFileDict& rkFileDict, bool bOverwrite)
+bool CEterPack::__BuildIndex(CEterFileDict& rkFileDict)
 {
     //DWORD dwBeginTime = ELTimer_GetMSec();
     CMappedFile file;
@@ -520,14 +490,7 @@ bool CEterPack::__BuildIndex(CEterFileDict& rkFileDict, bool bOverwrite)
 
             m_DataPositionMap.insert(TDataPositionMap::value_type(index->filename_crc, index));
 
-            if (bOverwrite) // 서버 연동 패킹 파일은 나중에 들어오지만 최상위로 등록해야한다
-            {
-                rkFileDict.UpdateItem(this, index);
-            }
-            else
-            {
-                rkFileDict.InsertItem(this, index);
-            }
+            rkFileDict.InsertItem(this, index);
         }
     }
 
@@ -570,8 +533,7 @@ bool CEterPack::Get(CMappedFile& out_file, const char* filename, LPCVOID * data)
     // 이제는 요청이 오면, 필요한 부분만 memory map에 올리고, 요청이 끝나면 해제하게 함.
     out_file.Create(m_stDataFileName.c_str(), data, index->data_position, index->data_size);
 
-    bool bIsSecurityCheckRequired = (index->compressed_type == COMPRESSED_TYPE_SECURITY ||
-    index->compressed_type == COMPRESSED_TYPE_PANAMA);
+    bool bIsSecurityCheckRequired = (index->compressed_type == COMPRESSED_TYPE_SECURITY);
 
     if (bIsSecurityCheckRequired)
     {
@@ -620,18 +582,6 @@ bool CEterPack::Get(CMappedFile& out_file, const char* filename, LPCVOID * data)
         }
 
         out_file.BindLZObject(zObj);
-        *data = zObj->GetBuffer();
-    }
-    else if (COMPRESSED_TYPE_PANAMA == index->compressed_type)
-    {
-        CLZObject* zObj = new CLZObject;
-        if (!__Decrypt_Panama(filename, static_cast<const BYTE*> (*data), index->data_size, *zObj))
-        {
-            delete zObj;
-            return false;
-        }
-
-        out_file.BindLZObjectWithBufferedSize(zObj);
         *data = zObj->GetBuffer();
     }
     else if (COMPRESSED_TYPE_HYBRIDCRYPT == index->compressed_type || COMPRESSED_TYPE_HYBRIDCRYPT_WITHSDB == index->compressed_type)
@@ -690,8 +640,7 @@ bool CEterPack::Get2(CMappedFile& out_file, const char* filename, TEterPackIndex
     //}
     out_file.Create(m_stDataFileName.c_str(), data, index->data_position, index->data_size);
 
-    bool bIsSecurityCheckRequired = (index->compressed_type == COMPRESSED_TYPE_SECURITY ||
-    index->compressed_type == COMPRESSED_TYPE_PANAMA);
+    bool bIsSecurityCheckRequired = (index->compressed_type == COMPRESSED_TYPE_SECURITY);
 
     if (bIsSecurityCheckRequired)
     {
@@ -740,13 +689,6 @@ bool CEterPack::Get2(CMappedFile& out_file, const char* filename, TEterPackIndex
         }
 
         out_file.BindLZObject(zObj);
-        *data = zObj->GetBuffer();
-    }
-    else if (COMPRESSED_TYPE_PANAMA == index->compressed_type)
-    {
-        CLZObject * zObj = new CLZObject;
-        __Decrypt_Panama(filename, static_cast<const BYTE*> (*data), index->data_size, *zObj);
-        out_file.BindLZObjectWithBufferedSize(zObj);
         *data = zObj->GetBuffer();
     }
     else if (COMPRESSED_TYPE_HYBRIDCRYPT == index->compressed_type || COMPRESSED_TYPE_HYBRIDCRYPT_WITHSDB == index->compressed_type)
@@ -860,12 +802,6 @@ bool CEterPack::Extract()
             }
 
             writeFile.Write(zObj.GetBuffer(), zObj.GetSize());
-            zObj.Clear();
-        }
-        else if (COMPRESSED_TYPE_PANAMA == index->compressed_type)
-        {
-            __Decrypt_Panama(index->filename, (const BYTE*) data + index->data_position, index->data_size, zObj);
-            writeFile.Write(zObj.GetBuffer(), zObj.GetBufferSize());
             zObj.Clear();
         }
         else if (COMPRESSED_TYPE_HYBRIDCRYPT == index->compressed_type || COMPRESSED_TYPE_HYBRIDCRYPT_WITHSDB == index->compressed_type)
@@ -1053,16 +989,6 @@ bool CEterPack::Put(const char* filename, LPCVOID data, long len, BYTE packType)
 
         data = zObj.GetBuffer();
         len = zObj.GetSize();
-    }
-    else if (packType == COMPRESSED_TYPE_PANAMA)
-    {
-        if (!__Encrypt_Panama(filename, (const BYTE*) data, len, zObj))
-        {
-            return false;
-        }
-
-        data = zObj.GetBuffer();
-        len = zObj.GetBufferSize();
     }
     else if (packType == COMPRESSED_TYPE_HYBRIDCRYPT || packType == COMPRESSED_TYPE_HYBRIDCRYPT_WITHSDB)
     {
@@ -1450,194 +1376,6 @@ DWORD CEterPack::DeleteUnreferencedData()
 const char* CEterPack::GetDBName()
 {
     return m_dbName;
-}
-
-void CEterPack::__CreateFileNameKey_Panama(const char* filename, BYTE * key, unsigned int keySize)
-{
-    // 키 암호화
-    if (keySize != 32)
-    {
-        return;
-    }
-
-    std::string SrcStringForKey(filename);
-    unsigned int idx = GetCRC32(SrcStringForKey.c_str(), SrcStringForKey.length()) & 3;
-
-    CryptoPP::HashTransformation* hm1 = NULL;
-    CryptoPP::HashTransformation* hm2 = NULL;
-
-    static CryptoPP::Tiger tiger;
-    static CryptoPP::SHA1 sha1;
-    static CryptoPP::RIPEMD128 ripemd128;
-    static CryptoPP::Whirlpool whirlpool;
-
-    switch (idx & 3)
-    {
-        case 0:
-            hm1 = &whirlpool;
-            break;
-
-        case 1:
-            hm1 = &tiger;
-            break;
-
-        case 2:
-            hm1 = &sha1;
-            break;
-
-        case 3:
-            hm1 = &ripemd128;
-            break;
-    }
-
-    CryptoPP::StringSource(SrcStringForKey, true,
-                           new CryptoPP::HashFilter(*hm1,
-                                                    //new CryptoPP::HexEncoder(
-                                                    new CryptoPP::ArraySink(key, 16)
-                                                    //) // HexEncoder
-                                                   ) // HashFilter
-                          ); // StringSource
-
-    // 만들어진 키의 첫번째 4바이트로 다음 16바이트 키 생성 알고리즘 선택
-    unsigned int idx2 = * (unsigned int*) key;
-
-    switch (idx2 & 3)
-    {
-        case 0:
-            hm2 = &sha1;
-            break;
-
-        case 1:
-            hm2 = &ripemd128;
-            break;
-
-        case 2:
-            hm2 = &whirlpool;
-            break;
-
-        case 3:
-            hm2 = &tiger;
-            break;
-    }
-
-    CryptoPP::StringSource(SrcStringForKey, true,
-                           new CryptoPP::HashFilter(*hm2,
-                                                    //new CryptoPP::HexEncoder(
-                                                    new CryptoPP::ArraySink(key + 16, 16)
-                                                    //) // HexEncoder
-                                                   ) // HashFilter
-                          ); // StringSource
-    // 키 생성 완료
-}
-
-bool CEterPack::__Encrypt_Panama(const char* filename, const BYTE* data, SIZE_T dataSize, CLZObject& zObj)
-{
-    if (32 != m_stIV_Panama.length())
-    {
-        // 해커가 이 메세지를 보면 힌트를 얻을까봐 디버그에서만 출력
-        #ifdef _DEBUG
-        TraceError("IV not set (filename: %s)", filename);
-        #endif
-        return false;
-    }
-
-    CryptoPP::PanamaCipher<CryptoPP::LittleEndian>::Encryption Encryptor;
-
-    if (dataSize < Encryptor.MandatoryBlockSize())
-    {
-        #ifdef _DEBUG
-        TraceError("Type 3 pack file must be bigger than %u bytes (filename: %s)", Encryptor.MandatoryBlockSize(), filename);
-        #endif
-        return false;
-    }
-
-    BYTE key[32];
-
-    __CreateFileNameKey_Panama(filename, key, sizeof(key));
-    Encryptor.SetKeyWithIV(key, sizeof(key), (const BYTE*) m_stIV_Panama.c_str(), 32);
-
-    // MandatoryBlockSize에 나누어 떨어지게 만들고 최대 2048 바이트만
-    DWORD cryptSize = dataSize - (dataSize % Encryptor.MandatoryBlockSize());
-    cryptSize = cryptSize > 2048 ? 2048 : cryptSize;
-
-    std::string tmp;
-
-    tmp.reserve(cryptSize);
-
-    CryptoPP::ArraySource(data, cryptSize, true,
-                          new CryptoPP::StreamTransformationFilter(Encryptor,
-                                                                   new CryptoPP::StringSink(tmp)
-                                                                  )
-                         );
-
-    if (tmp.length() != cryptSize)
-    {
-        #ifdef _DEBUG
-        TraceError("Type 3 pack crypt buffer size error (out %u should be %u)", tmp.length(), cryptSize);
-        #endif
-        return false;
-    }
-
-    zObj.AllocBuffer(dataSize);
-    memcpy(zObj.GetBuffer(), tmp.c_str(), cryptSize);
-
-    if (dataSize - cryptSize > 0)
-    {
-        memcpy(zObj.GetBuffer() + cryptSize, data + cryptSize, dataSize - cryptSize);
-    }
-
-    return true;
-}
-
-bool CEterPack::__Decrypt_Panama(const char* filename, const BYTE* data, SIZE_T dataSize, CLZObject& zObj)
-{
-    if (32 != m_stIV_Panama.length())
-    {
-        // 해커가 이 메세지를 보면 힌트를 얻을까봐 디버그에서만 출력
-        #ifdef _DEBUG
-        TraceError("IV not set (filename: %s)", filename);
-        #endif
-        return false;
-    }
-
-    CryptoPP::PanamaCipher<CryptoPP::LittleEndian>::Decryption Decryptor;
-
-    BYTE key[32];
-
-    __CreateFileNameKey_Panama(filename, key, sizeof(key));
-    Decryptor.SetKeyWithIV(key, sizeof(key), (const BYTE*) m_stIV_Panama.c_str(), 32);
-
-    // MandatoryBlockSize에 나누어 떨어지게 만들고 최대 2048 바이트만
-    DWORD cryptSize = dataSize - (dataSize % Decryptor.MandatoryBlockSize());
-    cryptSize = cryptSize > 2048 ? 2048 : cryptSize;
-
-    std::string tmp;
-
-    tmp.reserve(cryptSize);
-
-    CryptoPP::ArraySource(data, cryptSize, true,
-                          new CryptoPP::StreamTransformationFilter(Decryptor,
-                                                                   new CryptoPP::StringSink(tmp)
-                                                                  )
-                         );
-
-    if (tmp.length() != cryptSize)
-    {
-        #ifdef _DEBUG
-        TraceError("Type 3 pack crypt buffer size error (out %u should be %u)", tmp.length(), cryptSize);
-        #endif
-        return false;
-    }
-
-    zObj.AllocBuffer(dataSize);
-    memcpy(zObj.GetBuffer(), tmp.c_str(), cryptSize);
-
-    if (dataSize - cryptSize > 0)
-    {
-        memcpy(zObj.GetBuffer() + cryptSize, data + cryptSize, dataSize - cryptSize);
-    }
-
-    return true;
 }
 
 EterPackPolicy_CSHybridCrypt* CEterPack::GetPackPolicy_HybridCrypt() const

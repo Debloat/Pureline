@@ -292,7 +292,6 @@ enum
     // END_OF_SUPPORT_BGM
 
     HEADER_GC_AUTH_SUCCESS                      = 150,
-    HEADER_GC_PANAMA_PACK                       = 151,
 
     //HYBRID CRYPT
     HEADER_GC_HYBRIDCRYPT_KEYS                  = 152,
@@ -2490,13 +2489,6 @@ using TPacketGCOnTime = struct SPacketGCOnTime
 using TPacketGCResetOnTime = struct SPacketGCResetOnTime
 {
     BYTE header;
-};
-
-using TPacketGCPanamaPack = struct SPacketGCPanamaPack
-{
-    BYTE    bHeader;
-    char    szPackName[256];
-    BYTE    abIV[32];
 };
 
 using TPacketGCHybridCryptKeys = struct SPacketGCHybridCryptKeys

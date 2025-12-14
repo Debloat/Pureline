@@ -966,21 +966,6 @@ int main(int argc, char** argv)
         }
     }
 
-    // PanamaExtNameList - 새로운 암호화
-    if (TextFileLoader.GetTokenVector("panamaextnamelist", &pTokenVector))
-    {
-        CMakePackLog::GetSingleton().Writef("\n - PanamaExtNameList\n");
-
-        auto itor = pTokenVector->begin();
-        for (; pTokenVector->end() != itor; ++itor)
-        {
-            std::string& rstrName = *itor;
-            CMakePackLog::GetSingleton().Writef(" %s\n", rstrName.c_str());
-
-            RegisterPackTypeByExtName(rstrName.c_str(), COMPRESSED_TYPE_PANAMA, true);
-        }
-    }
-
     if (TextFileLoader.GetTokenVector("cshybridencryptexenamelist", &pTokenVector))
     {
         CMakePackLog::GetSingleton().Writef("\n - C/S Hybrid Encrypt ExtNameList\n");

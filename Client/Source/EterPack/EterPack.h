@@ -37,10 +37,9 @@ enum EEterPackTypes
     COMPRESSED_TYPE_NONE = 0,
     COMPRESSED_TYPE_COMPRESS = 1,
     COMPRESSED_TYPE_SECURITY = 2,
-    COMPRESSED_TYPE_PANAMA = 3,
-    COMPRESSED_TYPE_HYBRIDCRYPT = 4,
-    COMPRESSED_TYPE_HYBRIDCRYPT_WITHSDB = 5,
-    COMPRESSED_TYPE_COUNT = 6,
+    COMPRESSED_TYPE_HYBRIDCRYPT = 3,
+    COMPRESSED_TYPE_HYBRIDCRYPT_WITHSDB = 4,
+    COMPRESSED_TYPE_COUNT = 5,
 };
 
 #pragma pack(push, 4)
@@ -109,8 +108,7 @@ class CEterPack
         virtual ~CEterPack();
 
         void                Destroy();
-        bool                Create(CEterFileDict& rkFileDict, const char* dbname, const char* pathName, bool bReadOnly = true, const BYTE* iv = NULL);
-        bool                DecryptIV(DWORD dwPanamaKey);
+        bool                Create(CEterFileDict& rkFileDict, const char* dbname, const char* pathName, bool bReadOnly = true);
 
         const std::string&  GetPathName();
         const char*         GetDBName();
@@ -146,7 +144,7 @@ class CEterPack
         EterPackPolicy_CSHybridCrypt* GetPackPolicy_HybridCrypt() const;
 
     private:
-        bool                __BuildIndex(CEterFileDict& rkFileDict, bool bOverwirte = false);
+        bool                __BuildIndex(CEterFileDict& rkFileDict);
 
         bool                CreateIndexFile();
         TEterPackIndex*     FindIndex(const char* filename);
@@ -178,7 +176,6 @@ class CEterPack
         TEterPackIndex*         m_indexData;
         long                    m_FragmentSize;
         bool                    m_bReadOnly;
-        bool                    m_bDecrypedIV;
 
         std::unordered_map<DWORD, DWORD> m_map_indexRefCount;
         TDataPositionMap        m_DataPositionMap;
@@ -191,12 +188,6 @@ class CEterPack
         EterPackPolicy_CSHybridCrypt* m_pCSHybridCryptPolicy;
 
     private:
-        void                __CreateFileNameKey_Panama(const char* filename, BYTE * key, unsigned int keySize);
-        bool                __Decrypt_Panama(const char* filename, const BYTE* data, SIZE_T dataSize, CLZObject& zObj);
-        bool                __Encrypt_Panama(const char* filename, const BYTE* data, SIZE_T dataSize, CLZObject& zObj);
-        std::string         m_stIV_Panama;
-
-        //private:
         //  bool                m_bIsDataLoaded;
         //  // 그냥 time_t를 쓰면, 32bit time_t를 사용하는 소스에서는,
         //  // CEterPack의 size를 실제 size - 4로 인식하기 때문에 문제가 발생할 수 있다.

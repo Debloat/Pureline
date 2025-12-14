@@ -286,9 +286,6 @@
     <ClCompile Include="packet_info.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="panama.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="party.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -688,9 +685,6 @@
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="packet_info.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="panama.h">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="party.h">

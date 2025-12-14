@@ -10,6 +10,7 @@
 ~ Removed Vcard
 ~ Removed Over9Refine
 ~ Removed SpeedServer
+~ Removed Panama
 
 +------------+
 | 25.11.2025 |

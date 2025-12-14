@@ -133,10 +133,8 @@ void CInputAuth::Login(LPDESC d, const char* c_pData)
     }
 
     DWORD dwKey = DESC_MANAGER::instance().CreateLoginKey(d);
-    DWORD dwPanamaKey = dwKey ^ pinfo->adwClientKey[0] ^ pinfo->adwClientKey[1] ^ pinfo->adwClientKey[2] ^ pinfo->adwClientKey[3];
-    d->SetPanamaKey(dwPanamaKey);
 
-    sys_log(0, "InputAuth::Login : key %u:0x%x login %s", dwKey, dwPanamaKey, login);
+    sys_log(0, "InputAuth::Login : key %u login %s", dwKey, login);
 
     auto * p = M2_NEW TPacketCGLogin3;
     thecore_memcpy(p, pinfo, sizeof(TPacketCGLogin3));

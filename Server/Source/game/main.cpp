@@ -49,7 +49,6 @@
 #include "horsename_manager.h"
 #include "MarkManager.h"
 #include "spam.h"
-#include "panama.h"
 #include "DragonLair.h"
 #include "skill_power.h"
 #include "DragonSoul.h"
@@ -428,7 +427,6 @@ int main(int argc, char** argv)
     Cube_init();
     Blend_Item_init();
     ani_init();
-    PanamaLoad();
 
     if (g_bTrafficProfileOn)
     {

@@ -326,17 +326,6 @@ const char* CEterPackManager::GetRootPackFileName()
     return m_RootPack.GetDBName();
 }
 
-bool CEterPackManager::DecryptPackIV(DWORD dwPanamaKey)
-{
-    auto itor = m_PackMap.begin();
-    while (itor != m_PackMap.end())
-    {
-        itor->second->DecryptIV(dwPanamaKey);
-        itor++;
-    }
-    return true;
-}
-
 bool CEterPackManager::RegisterPackWhenPackMaking(const char* c_szName, const char* c_szDirectory, CEterPack* pPack)
 {
     m_PackMap.try_emplace(c_szName, pPack);
@@ -347,7 +336,7 @@ bool CEterPackManager::RegisterPackWhenPackMaking(const char* c_szName, const ch
 }
 
 
-bool CEterPackManager::RegisterPack(const char* c_szName, const char* c_szDirectory, const BYTE* c_pbIV)
+bool CEterPackManager::RegisterPack(const char* c_szName, const char* c_szDirectory)
 {
     CEterPack * pEterPack = nullptr;
     {
@@ -358,7 +347,7 @@ bool CEterPackManager::RegisterPack(const char* c_szName, const char* c_szDirect
             bool bReadOnly = true;
 
             pEterPack = new CEterPack;
-            if (pEterPack->Create(m_FileDict, c_szName, c_szDirectory, bReadOnly, c_pbIV))
+            if (pEterPack->Create(m_FileDict, c_szName, c_szDirectory, bReadOnly))
             {
                 m_PackMap.try_emplace(c_szName, pEterPack);
             }

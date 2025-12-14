@@ -77,7 +77,6 @@ void DESC::Initialize()
 
     m_pkLoginKey = nullptr;
     m_dwLoginKey = 0;
-    m_dwPanamaKey = 0;
 
     #ifndef _IMPROVED_PACKET_ENCRYPTION_
     memset(m_adwDecryptionKey, 0, sizeof(m_adwDecryptionKey));
