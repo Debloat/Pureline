@@ -4,18 +4,22 @@
 +------------+
 | 14.12.2025 |
 +------------+
-~ Removed OpenID
-~ Removed Sequence
-~ Removed AlphaFog
-~ Removed Vcard
-~ Removed Over9Refine
-~ Removed SpeedServer
-~ Removed Panama
-~ Removed CSHybridCrypt
-~ Removed ChinaEventServer
-~ Removed distribution_test_server
-~ Removed DBString / GreetMessage
-~ Removed exp_table_euckr
+~ Switched to Speedtree GPU Wind and GPU Leaf Placement methods.
+    * BUG: Now dynamic tree shadows follow leaf billboards.
+
+~ Removed some code.
+    * OpenID
+    * Sequence
+    * AlphaFog
+    * Vcard
+    * Over9Refine
+    * SpeedServer
+    * Panama
+    * CSHybridCrypt
+    * ChinaEventServer
+    * distribution_test_server
+    * DBString / GreetMessage
+    * more locale specific code
 
 +------------+
 | 25.11.2025 |
