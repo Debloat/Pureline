@@ -82,6 +82,7 @@
 | AlphaFog                          | NO     | YES    | NO   |
 | ChinaEventServer                  | YES    | NO     | NO   |
 | distribution_test_server          | YES    | NO     | NO   |
+| DBString / GreetMessage           | YES    | NO     | NO   |
 |                                   |        |        |      |
 +-----------------------------------+--------+--------+------+
 

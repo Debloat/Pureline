@@ -2418,19 +2418,3 @@ INSERT INTO `skill_proto` VALUES (259, '??¹?¹ü?§200½º?³', 0, 1, 1, 0, 'HP
 INSERT INTO `skill_proto` VALUES (260, 'CURSH400½º?³', 0, 1, 1, 0, 'HP', '-5*k*atk', '', '', '', '12', '', '', 'ATTACK,USE_MELEE_DAMAGE,SPLASH,CRUSH', '', 'NONE', '', '', '', '', '', '', '', 0, 0, 'MELEE', 0, '1', 0, 600);
 INSERT INTO `skill_proto` VALUES (261, 'µ¶250½º?³', 0, 1, 1, 0, 'HP', '-5*k*atk', '', '', '', '10', '', '', 'ATTACK,USE_MELEE_DAMAGE,SPLASH,ATTACK_POISON', '', 'NONE', '80', '', '', '', '', '', '', 0, 0, 'MELEE', 0, '1', 0, 375);
 INSERT INTO `skill_proto` VALUES (262, 'SLOW300½º?³', 0, 1, 1, 0, 'HP', '-5*k*atk', '', '', '', '14', '', '', 'ATTACK,USE_MELEE_DAMAGE,SPLASH', '', 'MOV_SPEED', '-20', '10', '', '', '', '', '', 0, 0, 'MELEE', 0, '1', 0, 450);
-
--- ----------------------------
--- Table structure for string
--- ----------------------------
-DROP TABLE IF EXISTS `string`;
-CREATE TABLE `string`  (
-  `name` varchar(64) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL DEFAULT '',
-  `text` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
-  PRIMARY KEY (`name`) USING BTREE
-) ENGINE = MyISAM CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = DYNAMIC;
-
--- ----------------------------
--- Records of string
--- ----------------------------
-
-SET FOREIGN_KEY_CHECKS = 1;

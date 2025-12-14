@@ -438,7 +438,6 @@ int CInputHandshake::Analyze(LPDESC d, BYTE bHeader, const char* c_pData)
                     {
                         LoadStateUserCount();
                         db_clientdesc->DBPacket(HEADER_GD_RELOAD_PROTO, 0, NULL, 0);
-                        DBManager::instance().LoadDBString();
                     }
                     else
                     {
@@ -452,10 +451,6 @@ int CInputHandshake::Analyze(LPDESC d, BYTE bHeader, const char* c_pData)
 
                             case 'p':
                                 db_clientdesc->DBPacket(HEADER_GD_RELOAD_PROTO, 0, NULL, 0);
-                                break;
-
-                            case 's':
-                                DBManager::instance().LoadDBString();
                                 break;
 
                             case 'q':

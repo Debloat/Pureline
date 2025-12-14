@@ -14,6 +14,7 @@
 ~ Removed CSHybridCrypt
 ~ Removed ChinaEventServer
 ~ Removed distribution_test_server
+~ Removed DBString / GreetMessage
 
 +------------+
 | 25.11.2025 |
