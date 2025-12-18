@@ -9,6 +9,8 @@
 #pragma warning(disable:4245)
 #pragma warning(disable:4995)
 
+#define _USE_32BIT_TIME_T
+
 #include "../EterLib/StdAfx.h"
 #include "../EterPythonLib/StdAfx.h"
 #include "../GameLib/StdAfx.h"
