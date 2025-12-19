@@ -46,8 +46,7 @@ public:
         {
             // This should NEVER happen during normal operation.
             // It strongly suggests memory corruption or logging during static initialization.
-            fprintf(m_fp, "ERROR: localtime_s failed! ct=%lld (UTC seconds)\n",
-                static_cast<long long> (ct));
+            fprintf(m_fp, "ERROR: localtime_s failed! ct=%lld (UTC seconds)\n", ct);
 
             fflush(m_fp);
             return;

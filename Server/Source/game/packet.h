@@ -886,26 +886,6 @@ using TPacketGCCharacterAdditionalInfo = struct packet_char_additional_info
     DWORD   dwMountVnum;
 };
 
-/*
-   typedef struct packet_update_char_old
-   {
-   BYTE header;
-   DWORD    dwVID;
-
-   WORD        awPart[CHR_EQUIPPART_NUM];
-   BYTE bMovingSpeed;
-   BYTE bAttackSpeed;
-
-   BYTE bStateFlag;
-   DWORD    dwAffectFlag[2];
-
-   DWORD    dwGuildID;
-   short    sAlignment;
-   BYTE bPKMode;
-   DWORD    dwMountVnum;
-   } TPacketGCCharacterUpdateOld;
- */
-
 using TPacketGCCharacterUpdate = struct packet_update_char
 {
     BYTE    header;
@@ -964,7 +944,9 @@ using TPacketGCMainCharacter = struct packet_main_character
     DWORD   dwVID;
     WORD    wRaceNum;
     char    szName[CHARACTER_NAME_MAX_LEN + 1];
-    long    lx, ly, lz;
+    long    lx;
+    long ly;
+    long lz;
     BYTE    empire;
     BYTE    skill_group;
 };
@@ -982,7 +964,9 @@ using TPacketGCMainCharacter3_BGM = struct packet_main_character3_bgm
     WORD    wRaceNum;
     char    szChrName[CHARACTER_NAME_MAX_LEN + 1];
     char    szBGMName[MUSIC_NAME_LEN + 1];
-    long    lx, ly, lz;
+    long    lx;
+    long ly;
+    long lz;
     BYTE    empire;
     BYTE    skill_group;
 };
@@ -1000,7 +984,9 @@ using TPacketGCMainCharacter4_BGM_VOL = struct packet_main_character4_bgm_vol
     char    szChrName[CHARACTER_NAME_MAX_LEN + 1];
     char    szBGMName[MUSIC_NAME_LEN + 1];
     float   fBGMVol;
-    long    lx, ly, lz;
+    long    lx;
+    long ly;
+    long lz;
     BYTE    empire;
     BYTE    skill_group;
 };
@@ -1096,7 +1082,9 @@ using TPacketGCItemUpdate = struct packet_item_update
 using TPacketGCItemGroundAdd = struct packet_item_ground_add
 {
     BYTE    bHeader;
-    long    x, y, z;
+    long    x;
+    long y;
+    long z;
     DWORD   dwVID;
     DWORD   dwVnum;
 };
@@ -1176,12 +1164,12 @@ using TPacketGCShopStart = struct packet_shop_start
 
 using TPacketGCShopStartEx = struct packet_shop_start_ex // 다음에 TSubPacketShopTab* shop_tabs 이 따라옴.
 {
-    typedef struct sub_packet_shop_tab
+    using TSubPacketShopTab = struct sub_packet_shop_tab
     {
         char name[SHOP_TAB_NAME_MAX];
         BYTE coin_type;
         packet_shop_item items[SHOP_HOST_ITEM_MAX_NUM];
-    } TSubPacketShopTab;
+    };
     DWORD owner_vid;
     BYTE shop_tab_count;
 };
@@ -1261,7 +1249,8 @@ struct packet_mount
     DWORD   vid;
     DWORD   mount_vid;
     BYTE    pos;
-    DWORD   x, y;
+    DWORD   x;
+    DWORD y;
 };
 
 using TPacketGCMove = struct packet_move
@@ -1312,7 +1301,8 @@ using TPacketCGFlyTargeting = struct command_fly_targeting
 {
     BYTE        bHeader;
     DWORD       dwTargetVID;
-    long        x, y;
+    long        x;
+    long y;
 };
 
 using TPacketGCFlyTargeting = struct packet_fly_targeting
@@ -1320,7 +1310,8 @@ using TPacketGCFlyTargeting = struct packet_fly_targeting
     BYTE        bHeader;
     DWORD       dwShooterVID;
     DWORD       dwTargetVID;
-    long        x, y;
+    long        x;
+    long y;
 };
 
 using TPacketCGShoot = struct packet_shoot
@@ -1969,8 +1960,10 @@ using TPacketViewEquip = struct pakcet_view_equip
 using TLandPacketElement = struct
 {
     DWORD   dwID;
-    long    x, y;
-    long    width, height;
+    long    x;
+    long y;
+    long    width;
+    long height;
     DWORD   dwGuildID;
 };
 
@@ -1993,7 +1986,8 @@ using TPacketGCTargetUpdate = struct
 {
     BYTE    bHeader;
     long    lID;
-    long    lX, lY;
+    long    lX;
+    long lY;
 };
 
 using TPacketGCTargetDelete = struct

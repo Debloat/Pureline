@@ -2,7 +2,7 @@
 
 #include "../GameLib/RaceData.h"
 
-typedef BYTE TPacketHeader;
+using TPacketHeader = BYTE;
 
 enum
 {
